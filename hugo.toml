@@ -22,11 +22,14 @@ pagination.pagerSize = 10
 
   [params.homeInfoParams]
     Title = "Hi, I'm Evgenia 👋"
-    Content = "I write about machine learning and the mathematics behind it — transformers, generative models, and more."
+    Content = "I write about machine learning and mathematics — transformers, generative models, and math in its own right (Fourier analysis posts coming). Find me on Telegram: [@evg3307](https://t.me/evg3307)."
 
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/jen1995"
+  [[params.socialIcons]]
+    name = "telegram"
+    url = "https://t.me/evg3307"
 
 [menu]
   [[menu.main]]
