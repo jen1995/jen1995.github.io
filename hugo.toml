@@ -1,0 +1,69 @@
+baseURL = "https://jen1995.github.io/my_blog/"
+locale = "en-US"
+title = "Evgenia Elistarova — ML & Math"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+enableEmoji = true
+
+pagination.pagerSize = 10
+
+[params]
+  description = "Notes on machine learning and mathematics: transformers, generative models, and the math behind them."
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  math = true
+
+  [params.homeInfoParams]
+    Title = "Hi, I'm Evgenia 👋"
+    Content = "I write about machine learning and the mathematics behind it — transformers, generative models, and more."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/jen1995"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 40
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [["\\[", "\\]"], ["$$", "$$"]]
+          inline = [["\\(", "\\)"], ["$", "$"]]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = false
