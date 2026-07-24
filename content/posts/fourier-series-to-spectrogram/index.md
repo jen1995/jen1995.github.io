@@ -80,10 +80,17 @@ frequency axis rather than the time axis, and it is called the **spectrum**.
 > periodic building blocks describe such signals with a handful of
 > coefficients, while a polynomial cannot even be periodic (it must run off to
 > infinity) and needs ever more terms for every extra period. Second, and
-> deeper: the physical world plays along. Feed a sinusoid into a string, a
-> column of air, a room, a microphone or a filter — and the same sinusoid
-> comes out, only scaled and shifted; systems like these cannot invent new
-> frequencies. That is *why* sound is built out of sinusoids in the first
+> deeper: the physical world plays along. Put a speaker in one corner of a
+> room, play a pure 440 Hz tone through it, and record with a microphone in
+> the opposite corner. The walls reflect the sound, echoes pile on top of each
+> other — yet the recording is still a 440 Hz tone: louder or quieter, shifted
+> in time, but at the same frequency. The reason is one line of trigonometry:
+> echoes are delayed, scaled copies, and a sum of sinusoids of one frequency —
+> whatever their amplitudes and shifts — is again a sinusoid of that
+> frequency. The same holds for a vibrating string, a microphone membrane, an
+> electronic filter: none of them can invent new frequencies. (A distortion
+> pedal *can* — precisely because it is not linear; that is what its "dirty"
+> sound is made of.) That is *why* sound is built out of sinusoids in the first
 > place, and the quasi-periodicity of the previous argument is not a lucky
 > accident but physics. (Why this happens — and why it earns sinusoids the
 > grand title of *eigenfunctions of linear time-invariant systems* — deserves
