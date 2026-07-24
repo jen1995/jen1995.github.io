@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="1200" height="400" rx="16" fill="#fcfcfb"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#8a8983"/></marker></defs>
+<line x1="80" y1="120" x2="80" y2="280" stroke="#0b0b0b" stroke-width="3"/>
+<path d="M 90 130 C 98 200, 98 200, 90 270" fill="none" stroke="#0b0b0b" stroke-width="2" opacity="0.5"/>
+<path d="M 70 130 C 62 200, 62 200, 70 270" fill="none" stroke="#0b0b0b" stroke-width="2" opacity="0.5"/>
+<path d="M 98 130 C 106 200, 106 200, 98 270" fill="none" stroke="#0b0b0b" stroke-width="2" opacity="0.25"/>
+<path d="M 62 130 C 54 200, 54 200, 62 270" fill="none" stroke="#0b0b0b" stroke-width="2" opacity="0.25"/>
+<text x="80" y="320" text-anchor="middle" font-size="17" fill="#52514e">a vibrating string</text>
+<line x1="150.0" y1="140" x2="150.0" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="162.0" y1="140" x2="162.0" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="171.9" y1="140" x2="171.9" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="181.0" y1="140" x2="181.0" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="189.7" y1="140" x2="189.7" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="198.3" y1="140" x2="198.3" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="207.0" y1="140" x2="207.0" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="216.1" y1="140" x2="216.1" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="225.9" y1="140" x2="225.9" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="237.3" y1="140" x2="237.3" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="251.9" y1="140" x2="251.9" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="275.7" y1="140" x2="275.7" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="308.0" y1="140" x2="308.0" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="319.9" y1="140" x2="319.9" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="329.9" y1="140" x2="329.9" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="338.9" y1="140" x2="338.9" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="347.6" y1="140" x2="347.6" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="356.2" y1="140" x2="356.2" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="364.9" y1="140" x2="364.9" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="374.0" y1="140" x2="374.0" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="383.8" y1="140" x2="383.8" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="395.2" y1="140" x2="395.2" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="410.0" y1="140" x2="410.0" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="434.1" y1="140" x2="434.1" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="465.8" y1="140" x2="465.8" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="477.7" y1="140" x2="477.7" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="487.6" y1="140" x2="487.6" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="496.7" y1="140" x2="496.7" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="505.3" y1="140" x2="505.3" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="513.9" y1="140" x2="513.9" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="522.6" y1="140" x2="522.6" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="531.7" y1="140" x2="531.7" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="541.6" y1="140" x2="541.6" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<line x1="553.0" y1="140" x2="553.0" y2="260" stroke="#2a78d6" stroke-width="2" opacity="0.55"/>
+<text x="240" y="120" text-anchor="middle" font-size="16" fill="#52514e">compression</text>
+<text x="345" y="120" text-anchor="middle" font-size="16" fill="#52514e">rarefaction</text>
+<text x="355" y="320" text-anchor="middle" font-size="17" fill="#52514e">a pressure wave in the air</text>
+<line x1="580" y1="200" x2="640" y2="200" stroke="#8a8983" stroke-width="2.5" marker-end="url(#arr)"/>
+<rect x="655" y="160" width="80" height="80" rx="18" fill="#f1f0ee" stroke="#52514e" stroke-width="2"/>
+<circle cx="695" cy="200" r="22" fill="none" stroke="#52514e" stroke-width="2"/>
+<circle cx="695" cy="200" r="10" fill="none" stroke="#52514e" stroke-width="1.5"/>
+<text x="695" y="320" text-anchor="middle" font-size="17" fill="#52514e">a microphone</text>
+<line x1="750" y1="200" x2="810" y2="200" stroke="#8a8983" stroke-width="2.5" marker-end="url(#arr)"/>
+<line x1="825" y1="200" x2="1150" y2="200" stroke="#c9c8c2" stroke-width="1.2"/>
+<path d="M 830.0 189.6 L 831.9 183.4 L 833.9 178.2 L 835.8 174.0 L 837.8 170.8 L 839.7 168.7 L 841.6 167.4 L 843.6 166.8 L 845.5 166.8 L 847.4 167.1 L 849.4 167.4 L 851.3 167.7 L 853.2 167.6 L 855.2 167.2 L 857.1 166.2 L 859.1 164.9 L 861.0 163.2 L 862.9 161.2 L 864.9 159.2 L 866.8 157.4 L 868.8 155.9 L 870.7 155.1 L 872.6 155.1 L 874.6 156.2 L 876.5 158.4 L 878.4 161.8 L 880.4 166.4 L 882.3 172.1 L 884.2 178.8 L 886.2 186.2 L 888.1 194.2 L 890.1 202.3 L 892.0 210.3 L 893.9 218.0 L 895.9 224.9 L 897.8 231.0 L 899.8 236.0 L 901.7 239.8 L 903.6 242.5 L 905.6 243.9 L 907.5 244.3 L 909.4 243.8 L 911.4 242.6 L 913.3 241.0 L 915.2 239.1 L 917.2 237.3 L 919.1 235.6 L 921.1 234.2 L 923.0 233.3 L 924.9 232.8 L 926.9 232.8 L 928.8 233.0 L 930.8 233.5 L 932.7 233.9 L 934.6 234.0 L 936.6 233.7 L 938.5 232.8 L 940.4 230.9 L 942.4 228.1 L 944.3 224.3 L 946.2 219.4 L 948.2 213.5 L 950.1 206.8 L 952.1 199.4 L 954.0 191.6 L 955.9 183.7 L 957.9 176.0 L 959.8 168.7 L 961.8 162.2 L 963.7 156.8 L 965.6 152.4 L 967.6 149.4 L 969.5 147.7 L 971.4 147.3 L 973.4 148.1 L 975.3 149.9 L 977.2 152.5 L 979.2 155.7 L 981.1 159.2 L 983.1 162.8 L 985.0 166.2 L 986.9 169.3 L 988.9 172.0 L 990.8 174.2 L 992.8 175.8 L 994.7 177.0 L 996.6 177.9 L 998.6 178.7 L 1000.5 179.5 L 1002.4 180.5 L 1004.4 182.1 L 1006.3 184.2 L 1008.2 187.2 L 1010.2 191.0 L 1012.1 195.7 L 1014.1 201.3 L 1016.0 207.5 L 1017.9 214.3 L 1019.9 221.5 L 1021.8 228.6 L 1023.8 235.5 L 1025.7 241.9 L 1027.6 247.4 L 1029.6 252.0 L 1031.5 255.2 L 1033.4 257.2 L 1035.4 257.7 L 1037.3 256.8 L 1039.2 254.7 L 1041.2 251.5 L 1043.1 247.4 L 1045.1 242.7 L 1047.0 237.6 L 1048.9 232.4 L 1050.9 227.3 L 1052.8 222.6 L 1054.8 218.4 L 1056.7 214.8 L 1058.6 211.9 L 1060.6 209.5 L 1062.5 207.7 L 1064.4 206.2 L 1066.4 204.8 L 1068.3 203.5 L 1070.2 201.9 L 1072.2 199.9 L 1074.1 197.3 L 1076.1 194.0 L 1078.0 190.0 L 1079.9 185.3 L 1081.9 180.0 L 1083.8 174.2 L 1085.8 168.2 L 1087.7 162.3 L 1089.6 156.6 L 1091.6 151.4 L 1093.5 147.1 L 1095.4 143.9 L 1097.4 141.8 L 1099.3 141.2 L 1101.2 142.0 L 1103.2 144.1 L 1105.1 147.6 L 1107.1 152.1 L 1109.0 157.6 L 1110.9 163.7 L 1112.9 170.2 L 1114.8 176.8 L 1116.8 183.1 L 1118.7 189.1 L 1120.6 194.4 L 1122.6 199.0 L 1124.5 202.8 L 1126.4 205.9 L 1128.4 208.2 L 1130.3 210.0 L 1132.2 211.4 L 1134.2 212.6 L 1136.1 213.7 L 1138.1 215.1 L 1140.0 216.9" fill="none" stroke="#eb6834" stroke-width="2.4"/>
+<text x="985" y="290" text-anchor="middle" font-size="16" fill="#52514e">pressure − atmospheric baseline, over time</text>
+<text x="985" y="320" text-anchor="middle" font-size="17" fill="#eb6834" font-weight="600">the waveform</text>
+</svg>
