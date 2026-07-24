@@ -181,8 +181,9 @@ this much.*
 > $\phi_n + 2\pi \frac{n}{P} \tau$. The Taylor description — the derivatives
 > at the reference point — has no such luck: every new coefficient becomes a
 > mixture of *all* the old higher-order ones. The cleanest example: $\sin t$
-> and $\cos t$ are one signal shifted by a quarter period, yet one has only
-> odd-degree terms and the other only even-degree ones. A note sounds the same
+> and $\cos t$ are one signal shifted by a quarter period, yet [one has only
+> odd-degree terms and the other only even-degree
+> ones](https://en.wikipedia.org/wiki/Taylor_series#Trigonometric_functions). A note sounds the same
 > whenever you play it, and the magnitude spectrum agrees; the Taylor
 > coefficients do not. (It is the room argument again, in disguise: a time
 > shift leaves every sinusoid being itself, just rotated — while it smears
