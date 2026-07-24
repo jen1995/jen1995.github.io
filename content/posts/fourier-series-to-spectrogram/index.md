@@ -71,6 +71,8 @@ Instead of asking "what is the pressure at each moment of time?", we ask "how
 much of each frequency does this signal contain?" The answer lives on the
 frequency axis rather than the time axis, and it is called the **spectrum**.
 
+![A C-major chord: three notes in time, three peaks in frequency](chord_decomposition.png)
+
 > 💡 **Why sinusoids, of all things?** Mathematics knows plenty of ways to
 > decompose a function — why not, say, a Taylor series, with polynomials as the
 > building blocks? Several reasons stack on top of each other. First, the shape
@@ -92,7 +94,6 @@ frequency axis rather than the time axis, and it is called the **spectrum**.
 > *is* frequency. The coefficient of $t^{17}$ means nothing to your hearing;
 > the amplitude at 440 Hz is the note A.
 
-![A C-major chord: three notes in time, three peaks in frequency](chord_decomposition.png)
 
 Two things make this representation valuable in practice:
 
