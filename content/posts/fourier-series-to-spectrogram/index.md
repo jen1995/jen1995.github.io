@@ -187,10 +187,7 @@ this much.*
 > whenever you play it, and the magnitude spectrum agrees; the Taylor
 > coefficients do not. (It is the room argument again, in disguise: a time
 > shift leaves every sinusoid being itself, just rotated — while it smears
-> each monomial $t^k$ across all the degrees below it.) And finally, perception: the cochlea
-> in your ear performs an approximate frequency analysis of its own — pitch
-> *is* frequency. The coefficient of $t^{17}$ means nothing to your hearing;
-> the amplitude at 440 Hz is the note A.
+> each monomial $t^k$ across all the degrees below it.)
 
 ### The exponential form
 
