@@ -42,9 +42,16 @@ and you get the most honest picture of sound there is: the **waveform**.
 
 ## Analog → digital
 
-The microphone's output is an analog signal: continuous in time and in value. A
-computer needs numbers, and the Analog-to-Digital Converter produces them by
-discretizing along both axes:
+The microphone's output is an **analog** signal — and the word is more literal
+than it sounds: the voltage on the microphone's wire is an *analogue* of the
+air pressure, one physical quantity tracing the shape of another. Nothing has
+been measured yet; the signal has merely changed its carrier — from pressure
+to voltage — and is still continuous in time and in value.
+
+![From pressure to voltage to numbers](analog_digital_chain.svg)
+
+A computer, however, needs numbers, and the Analog-to-Digital Converter
+produces them by discretizing along both axes:
 
 - **sampling** — measure the signal at regular moments, $f_s$ times per second
   (time discretization);
