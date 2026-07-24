@@ -73,41 +73,13 @@ frequency axis rather than the time axis, and it is called the **spectrum**.
 
 ![A C-major chord: three notes in time, three peaks in frequency](chord_decomposition.png)
 
-> 💡 **Why sinusoids, of all things?** Mathematics knows plenty of ways to
-> decompose a function — why not, say, a Taylor series, with polynomials as the
-> building blocks? Several reasons stack on top of each other. First, the shape
-> of the data: sound is locally *quasi-periodic* — a guitar note, a vowel — and
-> periodic building blocks describe such signals with a handful of
-> coefficients, while a polynomial cannot even be periodic (it must run off to
-> infinity) and needs ever more terms for every extra period. Second, and
-> deeper: the physical world plays along. Put a speaker in one corner of a
-> room, play a pure 440 Hz tone through it, and record with a microphone in
-> the opposite corner. The walls reflect the sound, echoes pile on top of each
-> other — yet the recording is still a 440 Hz tone: louder or quieter, shifted
-> in time, but at the same frequency. The reason is one line of trigonometry:
-> echoes are delayed, scaled copies, and a sum of sinusoids of one frequency —
-> whatever their amplitudes and shifts — is again a sinusoid of that
-> frequency.
->
-> ![A room as a system: echoes are delayed scaled copies; the output tone keeps the input frequency](room_echoes.svg)
->
-> The same holds for a vibrating string, a microphone membrane, an
-> electronic filter: none of them can invent new frequencies. (A [distortion
-> pedal](https://en.wikipedia.org/wiki/Distortion_(music)) *can* — precisely because it is not linear; that is what its "dirty"
-> sound is made of.) That is *why* sound is built out of sinusoids in the first
-> place, and the quasi-periodicity of the previous argument is not a lucky
-> accident but physics. (Why this happens — and why it earns sinusoids the
-> grand title of *eigenfunctions of linear time-invariant systems* — deserves
-> its own discussion later in this series; for a very accessible standalone
-> account, see [chapter 5 of The Scientist and Engineer's Guide to
-> DSP](https://www.dspguide.com/ch5.htm).) Third, stability: shift a recording in time and every
-> Taylor coefficient changes beyond recognition, while the Fourier magnitudes
-> stay put — only the phases rotate. A note sounds the same whenever you play
-> it, and its magnitude spectrum agrees. And finally, perception: the cochlea
-> in your ear performs an approximate frequency analysis of its own — pitch
-> *is* frequency. The coefficient of $t^{17}$ means nothing to your hearing;
-> the amplitude at 440 Hz is the note A.
-
+If decomposing sound into frequencies feels like an arbitrary idea, think of
+a piano. Pressing a key produces an oscillation at a known frequency — the
+keyboard is literally a frequency axis, laid out left to right. Playing music
+is easy in this direction: choose which keys to press, how hard, and when —
+frequencies in, melody out. Fourier analysis asks for the reverse: given only
+the recorded sound, can we recover which keys were pressed and how hard? Most
+of this post is the machinery that turns this "can we?" into "here is how".
 
 Two things make this representation valuable in practice:
 
@@ -159,6 +131,41 @@ mind: *a periodic signal is a recipe — this much of this frequency, shifted by
 this much.*
 
 ![Partial sums of the Fourier series of a square wave](fourier_partial_sums.png)
+
+> 💡 **Why sinusoids, of all things?** Mathematics knows plenty of ways to
+> decompose a function — why not, say, a Taylor series, with polynomials as the
+> building blocks? Several reasons stack on top of each other. First, the shape
+> of the data: sound is locally *quasi-periodic* — a guitar note, a vowel — and
+> periodic building blocks describe such signals with a handful of
+> coefficients, while a polynomial cannot even be periodic (it must run off to
+> infinity) and needs ever more terms for every extra period. Second, and
+> deeper: the physical world plays along. Put a speaker in one corner of a
+> room, play a pure 440 Hz tone through it, and record with a microphone in
+> the opposite corner. The walls reflect the sound, echoes pile on top of each
+> other — yet the recording is still a 440 Hz tone: louder or quieter, shifted
+> in time, but at the same frequency. The reason is one line of trigonometry:
+> echoes are delayed, scaled copies, and a sum of sinusoids of one frequency —
+> whatever their amplitudes and shifts — is again a sinusoid of that
+> frequency.
+>
+> ![A room as a system: echoes are delayed scaled copies; the output tone keeps the input frequency](room_echoes.svg)
+>
+> The same holds for a vibrating string, a microphone membrane, an
+> electronic filter: none of them can invent new frequencies. (A [distortion
+> pedal](https://en.wikipedia.org/wiki/Distortion_(music)) *can* — precisely because it is not linear; that is what its "dirty"
+> sound is made of.) That is *why* sound is built out of sinusoids in the first
+> place, and the quasi-periodicity of the previous argument is not a lucky
+> accident but physics. (Why this happens — and why it earns sinusoids the
+> grand title of *eigenfunctions of linear time-invariant systems* — deserves
+> its own discussion later in this series; for a very accessible standalone
+> account, see [chapter 5 of The Scientist and Engineer's Guide to
+> DSP](https://www.dspguide.com/ch5.htm).) Third, stability: shift a recording in time and every
+> Taylor coefficient changes beyond recognition, while the Fourier magnitudes
+> stay put — only the phases rotate. A note sounds the same whenever you play
+> it, and its magnitude spectrum agrees. And finally, perception: the cochlea
+> in your ear performs an approximate frequency analysis of its own — pitch
+> *is* frequency. The coefficient of $t^{17}$ means nothing to your hearing;
+> the amplitude at 440 Hz is the note A.
 
 ### The exponential form
 
