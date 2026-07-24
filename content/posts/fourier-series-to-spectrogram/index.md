@@ -174,9 +174,11 @@ this much.*
 > account, see [chapter 5 of The Scientist and Engineer's Guide to
 > DSP](https://www.dspguide.com/ch5.htm).) Third, stability. To compare fairly, fix the
 > reference point — the moment you press "record" — and delay the signal past
-> it by $\tau$. The Fourier description barely notices: each coefficient
-> keeps its magnitude, only its phase rotates ($c_n \mapsto c_n e^{-2\pi i n \tau / P}$ —
-> the formulas are coming shortly). The Taylor description — the derivatives
+> it by $\tau$. The Fourier description barely notices: delaying the
+> signal turns each harmonic $A_n \cos(2\pi \frac{n}{P} t - \phi_n)$ into
+> $A_n \cos(2\pi \frac{n}{P} (t - \tau) - \phi_n)$ — which is the same
+> cosine with the same magnitude $A_n$, only its phase nudged to
+> $\phi_n + 2\pi \frac{n}{P} \tau$. The Taylor description — the derivatives
 > at the reference point — has no such luck: every new coefficient becomes a
 > mixture of *all* the old higher-order ones. The cleanest example: $\sin t$
 > and $\cos t$ are one signal shifted by a quarter period, yet one has only
