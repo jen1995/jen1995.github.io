@@ -81,13 +81,20 @@ frequencies in, melody out. Fourier analysis asks for the reverse: given only
 the recorded sound, can we recover which keys were pressed and how hard? Most
 of this post is the machinery that turns this "can we?" into "here is how".
 
-Two things make this representation valuable in practice:
+Two things make this representation valuable in practice. First, it is
+**compact**: a long sequence of time samples collapses into a handful of
+meaningful frequency components. The wiggly curve below takes hundreds of
+numbers to store — and just three frequency components to describe:
 
-- it is **compact**: a long sequence of time samples collapses into a handful
-  of meaningful frequency components;
-- it is **actionable**: frequencies can be inspected and *edited* — want to
-  remove the 50 Hz power-line hum? Zero out that component and reassemble the
-  signal.
+![Hundreds of samples versus three spectral components](compact_spectrum.png)
+
+Second, it is **actionable**: frequencies can be inspected and *edited*. Say a
+recording picked up the 50 Hz hum of the power line. In the time domain the hum
+is smeared over every sample and there is nothing to grab; in the frequency
+domain it is one column. Transform, erase that column, transform back — the
+melody survives untouched, the hum is gone:
+
+![Removing power-line hum by zeroing one spectral column](remove_hum.png)
 
 ## The Fourier series
 
