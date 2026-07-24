@@ -211,9 +211,7 @@ lets us split every cosine into two complex exponentials — one rotating
 "forward" and one "backward":
 
 $$
-\cos\!\left( 2 \pi \tfrac{n}{P} t - \phi_n \right)
-= \tfrac{1}{2} e^{-i \phi_n} e^{2 \pi i \frac{n}{P} t}
-+ \tfrac{1}{2} e^{i \phi_n} e^{-2 \pi i \frac{n}{P} t}.
+\cos\!\left( 2 \pi \tfrac{n}{P} t - \phi_n \right) = \tfrac{1}{2} e^{-i \phi_n} e^{2 \pi i \frac{n}{P} t} + \tfrac{1}{2} e^{i \phi_n} e^{-2 \pi i \frac{n}{P} t}.
 $$
 
 Absorbing the magnitudes and phases into complex coefficients, the whole
