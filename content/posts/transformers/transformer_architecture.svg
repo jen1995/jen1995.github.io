@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 1200 830" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
   <defs>
     <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
       <path d="M 0 1 L 9 5 L 0 9 z" fill="#8a8983"/>
     </marker>
   </defs>
-  <rect x="0" y="0" width="1200" height="900" rx="16" fill="#fcfcfb"/>
+  <rect x="0" y="100" width="1200" height="830" rx="16" fill="#fcfcfb"/>
 
   <!-- ================== ENCODER TOWER ================== -->
   <!-- container -->
