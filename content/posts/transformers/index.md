@@ -1218,3 +1218,7 @@ The Transformer's win is not in FLOPs (there may even be more of them) but in th
 We have walked the whole path: from seq2seq and language models (Part 0), through the motivation of "why throw out the RNN" (Part 1) and the hand-assembly of every block with numpy checks (Part 2) — to a working model that trained, generates, and fits the formulas we derived (Part 3). The Transformer has stopped being a black box: it is a dozen small parts, each of which fits into 10–20 lines of code and one complexity formula.
 
 Where to go next if you want to dig deeper: BPE tokenization, decoder-only architectures (GPT), efficient attention (FlashAttention and relatives), quantization, and everything that makes inference cheap. But those are other stories.
+
+---
+
+**Acknowledgments.** The wonderful illustrations and animations in this series come from Lena Voita's magical [NLP Course For You](https://lena-voita.github.io/) — a course that inspired much of this series in the first place. If after these posts you want a broader and deeper dive into NLP, that is the place to go. Thank you, Lena! 💛
