@@ -1,0 +1,10 @@
+/* Pull collapsible <details> blocks (e.g. self-check answers) closer to the
+   preceding paragraph — by default the paragraph's bottom margin leaves a gap. */
+.post-content details {
+    margin-top: -0.8em;
+    margin-bottom: var(--content-gap);
+}
+
+.post-content details summary {
+    cursor: pointer;
+}
