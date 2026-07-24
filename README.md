@@ -58,6 +58,16 @@ Math is rendered client-side by KaTeX (configured in `layouts/partials/extend_he
 - Prefer `$$ ... $$` over bare `\begin{equation}` blocks — it is what the passthrough extension protects
 - Handy macros defined globally: `\R`, `\E`, `\KL`
 
+Three hard-won gotchas (Markdown parses the page before KaTeX sees it):
+
+1. Write `<` as `\lt` inside formulas — a raw `<` opens an HTML tag and eats
+   the markup (`z_{\lt i}`, not `z_{<i}`).
+2. Display math inside `>` blockquotes must be a single line: `> $$...$$` —
+   a multi-line block swallows the `> ` markers into the formula.
+3. Inside a multi-line `$$` block, never start a line with `+`, `-`, `*` or
+   `1.` — Markdown opens a list and tears the formula apart. Keep operators at
+   the end of the previous line, or join the formula into one line.
+
 Tables, `> 💡` callout quotes, `<details>` blocks and code fences all work — see the *Math rendering test* post, and delete it once real posts are up.
 
 ## Migrating source posts
