@@ -1082,7 +1082,17 @@ This can also be seen formally. If we fit a factorized $p(z)=\prod_i p_i(z_i)$ b
 
 What fixes this is precisely a *non*-factorized, autoregressive prior $p(z)=\prod_i p(z_i \mid z_{\lt i})$ (PixelCNN, and in DALL-E — the Transformer), which does capture the dependencies between positions.
 
-Incidentally, it is useful to notice where the correlations come from: the dVAE encoder predicts independent distributions over positions *for a fixed* $x$, but the dataset-aggregated distribution of codes $q(z) = \mathbb{E}_x\, q_\phi(z \mid x)$ is a mixture of such factorized distributions over all $x$, and a mixture of independent distributions is no longer independent. It is the mixing over the data that gives birth to the dependencies between positions, which the prior then has to model. This shows that discreteness as such is not the point: a continuous VAE with a latent grid would face the same issue and would also require a separate prior model — in fact, latent diffusion models (Stable Diffusion) do exactly that: they learn a distribution over the continuous latent grid of an autoencoder.
+Incidentally, it is useful to notice where the correlations come from — and first to spell out what exactly is contrasted with what. The whole grid of codes is a *single* latent variable $z = (z_1, \ldots, z_n)$: one sample from a categorical distribution over the (huge) space of all code combinations, and the dependencies we are discussing are dependencies between the components of this one $z$. For a fixed $x$, the dVAE encoder predicts a factorized distribution:
+
+$$q_\phi(z \mid x) = \prod_i q_\phi(z_i \mid x),$$
+
+but the dataset-aggregated distribution of codes $q(z) = \mathbb{E}_x\, q_\phi(z \mid x)$ is a mixture of such factorized distributions over all $x$, and a mixture of independent distributions is no longer independent:
+
+$$q(z) \ne \prod_i q(z_i)$$
+
+A toy example makes this immediate. Let there be two positions, two codes, and two kinds of images in equal proportion — cats and dogs. Suppose the trained encoder maps every cat to the pair $(0,0)$ and every dog to $(1,1)$ (for a fixed $x$ the distribution is degenerate, hence trivially independent). Now aggregate over the dataset: the marginals are $q(z_1{=}0) = q(z_2{=}0) = \tfrac12$, so if the positions were independent, the combination $(0,1)$ would have probability $\tfrac14$ — yet in fact $q(0,1) = 0$: "cat ears + dog tail" never occurs in the data. The correlation comes not from the encoder (which is independent given $x$), but from the mixing over the data: the code at position 1 reveals *which image* was encoded, and that, in turn, shifts the distribution of the code at position 2. A factorized prior would happily sample such chimeras — exactly the incoherent mosaic mentioned above; these dependencies are what the prior model has to capture.
+
+This also shows that discreteness as such is not the point: a continuous VAE with a latent grid would face the same issue and would also require a separate prior model — in fact, latent diffusion models (Stable Diffusion) do exactly that: they learn a distribution over the continuous latent grid of an autoencoder.
 
 </details>
 
