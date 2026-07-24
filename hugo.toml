@@ -9,7 +9,7 @@ enableEmoji = true
 pagination.pagerSize = 10
 
 [params]
-  description = "Cohomology Zero — a blog where we nerd out about machine learning and mathematics: transformers, generative models, Fourier analysis and more."
+  description = "Cohomology Zero — a blog where we nerd out about machine learning and mathematics: transformers, generative models and much more."
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
@@ -22,7 +22,7 @@ pagination.pagerSize = 10
 
   [params.homeInfoParams]
     Title = "Cohomology Zero 👋"
-    Content = "Hi, I'm Evgenia. Here we unapologetically nerd out about machine learning and mathematics — transformers, generative models, and math in its own right (Fourier analysis posts coming). The name is a nod to [this meme](https://youtu.be/mqAf5lOJZew): we're still waiting for the environment to answer — cohomology: zero?.. Find me on Telegram: [@evg3307](https://t.me/evg3307)."
+    Content = "Hi, I'm Evgenia. Here we unapologetically nerd out about machine learning and mathematics — transformers, generative models, and math for its own sake. The name is a nod to [this meme](https://youtu.be/mqAf5lOJZew): we're still waiting for the environment to answer — cohomology: zero?.. Find me on Telegram: [@evg3307](https://t.me/evg3307)."
 
   [[params.socialIcons]]
     name = "github"
