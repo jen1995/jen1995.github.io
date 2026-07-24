@@ -182,6 +182,8 @@ But one problem has not gone anywhere. Both the encoder and the decoder are stil
 
 Now let us look at attention from this angle. The scores $\mathrm{score}(h_t, s_k)$ for different $k$ do not depend on each other — they can all be computed at once. What does that look like concretely? For definiteness, take the simplest variant of the score — the dot product $\mathrm{score}(h_t, s_k) = h_t^\top s_k$ (in Bahdanau's work the score is a small neural network, but the idea is the same). Stack all encoder states into a matrix $S$ of size $m \times d$, one row per token — then all $m$ scores for the current decoder step are obtained by a single matrix-vector product: $S h_t$. Moreover, if all decoder states are known at once — stack them too, into a matrix $H$ of size $n \times d$ — then the entire score table, $n \times m$ numbers, is computed by a single matrix product $H S^\top$. Remember this construction: in the Transformer it will become the main character under the name $QK^\top$. Admittedly, as long as the decoder is an RNN, the states $h_t$ are still born one at a time, and the full power of this trick remains untapped. But attention itself requires no sequential computation.
 
+![Stacking vectors into matrices: H times S-transposed gives the whole score table](vectors_to_matrices.svg)
+
 ![RNNs vs Transformer](rnn_vs_transformer.svg)
 
 *Diagram after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
@@ -277,7 +279,7 @@ This is the plan for the next part: we will go through the list bottom-up and as
 
 In Part 1 we looked at the architecture from a bird's-eye view. Now let us come down to earth and assemble every block by hand. The format for every building block is the same: intuition → formula → PyTorch code → a reference implementation in pure numpy for cross-checking → an honest complexity count for that block.
 
-> All the code of this part can be run without assembling it cell by cell: a [ready-made notebook](https://github.com/yandexdataschool/ML-Handbook-materials/blob/main/chapters/nlp/transformer_blocks.ipynb) (in Russian) lives in the handbook materials repository and [opens in Colab](https://colab.research.google.com/github/yandexdataschool/ML-Handbook-materials/blob/main/chapters/nlp/transformer_blocks.ipynb) in one click; no GPU needed.
+> All the code of this part can be run without assembling it cell by cell: a [ready-made notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/transformer_blocks.ipynb) lives in this blog's repository and [opens in Colab](https://colab.research.google.com/github/jen1995/jen1995.github.io/blob/main/notebooks/transformer_blocks.ipynb) in one click; no GPU needed.
 
 Why a numpy reference? PyTorch modules are convenient, but they hide the details behind library calls. Implementing the same computations "by hand" in numpy leaves no room for misunderstanding: if two independent pieces of code produce the same numbers, we really do understand what happens inside. We will check every block via `np.allclose`.
 
@@ -768,7 +770,7 @@ In the next part we will assemble an encoder layer and a decoder layer out of th
 
 The building blocks of Part 2 are ready and checked against the references. In this part we will assemble a full model out of them, train it on a toy task (for real, on a CPU, in a couple of minutes), learn to generate answers — and pay off the main debt of the series: count the complexity of the Transformer as a whole, including memory and inference.
 
-> All the code of this part — including the training — can be run end to end: a [ready-made notebook](https://github.com/yandexdataschool/ML-Handbook-materials/blob/main/chapters/nlp/transformer_training.ipynb) (in Russian) lives in the handbook materials repository and [opens in Colab](https://colab.research.google.com/github/yandexdataschool/ML-Handbook-materials/blob/main/chapters/nlp/transformer_training.ipynb) in one click; no GPU needed.
+> All the code of this part — including the training — can be run end to end: a [ready-made notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/transformer_training.ipynb) lives in this blog's repository and [opens in Colab](https://colab.research.google.com/github/jen1995/jen1995.github.io/blob/main/notebooks/transformer_training.ipynb) in one click; no GPU needed.
 
 ### The blocks of Part 2 — now with batches
 
