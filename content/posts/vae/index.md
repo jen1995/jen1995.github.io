@@ -1162,7 +1162,7 @@ Inference: the text description is fed into the Transformer, which autoregressiv
 
 ## Practice
 
-The hands-on notebook accompanying this chapter lives in the handbook materials repository: [chapters/representation_learning/vae.ipynb](https://github.com/yandexdataschool/ML-Handbook-materials/blob/main/chapters/representation_learning/vae.ipynb). You can [open it in Colab](https://colab.research.google.com/github/yandexdataschool/ML-Handbook-materials/blob/main/chapters/representation_learning/vae.ipynb) — no GPU needed, everything runs on a CPU in a few minutes. (The notebook is in Russian, but the code speaks for itself.)
+The hands-on notebook accompanying this post lives right in this blog's repository: [notebooks/vae.ipynb](https://github.com/jen1995/my_blog/blob/main/notebooks/vae.ipynb). You can [open it in Colab](https://colab.research.google.com/github/jen1995/my_blog/blob/main/notebooks/vae.ipynb) — no GPU needed, everything runs on a CPU in a few minutes.
 
 In the notebook we build a VAE on MNIST from scratch and reproduce with our own hands all the key pictures of this chapter:
 
