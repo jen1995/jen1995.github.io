@@ -22,4 +22,6 @@
 <text x="695" y="560" font-size="18" fill="#52514e">of all examples. d normalizations,</text>
 <text x="695" y="584" font-size="18" fill="#52514e">b·n summands in each — every token</text>
 <text x="695" y="608" font-size="18" fill="#52514e">depends on its batch neighbors</text>
+<rect x="947" y="112" width="60" height="348" rx="10" fill="none" stroke="#eb6834" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="977" y="486" font-size="15" fill="#eb6834" text-anchor="middle" font-weight="600">one shared μ, σ²</text>
 </svg>
