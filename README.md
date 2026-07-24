@@ -1,15 +1,21 @@
-# my_blog
+# Cohomology Zero
 
-Personal blog about machine learning and mathematics, built with [Hugo](https://gohugo.io/) + [PaperMod](https://github.com/adityatelange/hugo-PaperMod), deployed to GitHub Pages.
+Blog about machine learning and mathematics, built with [Hugo](https://gohugo.io/) + [PaperMod](https://github.com/adityatelange/hugo-PaperMod), deployed to GitHub Pages.
 
-Live at: https://jen1995.github.io/my_blog/
+Live at: https://jen1995.github.io/
+
+## Repository layout
+
+- `content/posts/` — published posts (each post is a folder: `index.md` + its images)
+- `drafts/` — shared scratch space for work-in-progress; never published (see `drafts/README.md`)
+- `notebooks/` — hands-on notebooks referenced from posts
 
 ## Local development
 
 Hugo is installed at `~/.local/bin/hugo` (v0.164.0 extended).
 
 ```bash
-# live-preview at http://localhost:1313/my_blog/
+# live-preview at http://localhost:1313/
 ~/.local/bin/hugo server -D
 
 # production build into public/
@@ -67,9 +73,6 @@ When translating posts from `transformer_blog` / `ml-handbook`:
 
 Pushes to `main` trigger `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages.
 
-One-time setup after creating the GitHub repo:
-
-1. Push this repo to `https://github.com/jen1995/my_blog`.
-2. On GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+Pages is already configured (**Settings → Pages → Source: GitHub Actions**); nothing to set up.
 
 The PaperMod theme is a git submodule — clone with `git clone --recurse-submodules`, update with `git submodule update --remote --merge`.

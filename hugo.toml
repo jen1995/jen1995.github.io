@@ -1,6 +1,6 @@
-baseURL = "https://jen1995.github.io/my_blog/"
+baseURL = "https://jen1995.github.io/"
 locale = "en-US"
-title = "Evgenia Elistarova — ML & Math"
+title = "Cohomology Zero"
 theme = "PaperMod"
 
 enableRobotsTXT = true
@@ -9,7 +9,7 @@ enableEmoji = true
 pagination.pagerSize = 10
 
 [params]
-  description = "Notes on machine learning and mathematics: transformers, generative models, and the math behind them."
+  description = "Cohomology Zero — a blog where we nerd out about machine learning and mathematics: transformers, generative models, Fourier analysis and more."
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
@@ -21,8 +21,8 @@ pagination.pagerSize = 10
   math = true
 
   [params.homeInfoParams]
-    Title = "Hi, I'm Evgenia 👋"
-    Content = "I write about machine learning and mathematics — transformers, generative models, and math in its own right (Fourier analysis posts coming). Find me on Telegram: [@evg3307](https://t.me/evg3307)."
+    Title = "Cohomology Zero 👋"
+    Content = "Hi, I'm Evgenia. Here we unapologetically nerd out about machine learning and mathematics — transformers, generative models, and math in its own right (Fourier analysis posts coming). The name is a nod to [this meme](https://youtu.be/mqAf5lOJZew): we're still waiting for the environment to answer — cohomology: zero?.. Find me on Telegram: [@evg3307](https://t.me/evg3307)."
 
   [[params.socialIcons]]
     name = "github"
