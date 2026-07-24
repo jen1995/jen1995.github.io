@@ -172,10 +172,19 @@ this much.*
 > grand title of *eigenfunctions of linear time-invariant systems* — deserves
 > its own discussion later in this series; for a very accessible standalone
 > account, see [chapter 5 of The Scientist and Engineer's Guide to
-> DSP](https://www.dspguide.com/ch5.htm).) Third, stability: shift a recording in time and every
-> Taylor coefficient changes beyond recognition, while the Fourier magnitudes
-> stay put — only the phases rotate. A note sounds the same whenever you play
-> it, and its magnitude spectrum agrees. And finally, perception: the cochlea
+> DSP](https://www.dspguide.com/ch5.htm).) Third, stability. To compare fairly, fix the
+> reference point — the moment you press "record" — and delay the signal past
+> it by $\tau$. The Fourier description barely notices: each coefficient
+> keeps its magnitude, only its phase rotates ($c_n \mapsto c_n e^{-2\pi i n \tau / P}$ —
+> the formulas are coming shortly). The Taylor description — the derivatives
+> at the reference point — has no such luck: every new coefficient becomes a
+> mixture of *all* the old higher-order ones. The cleanest example: $\sin t$
+> and $\cos t$ are one signal shifted by a quarter period, yet one has only
+> odd-degree terms and the other only even-degree ones. A note sounds the same
+> whenever you play it, and the magnitude spectrum agrees; the Taylor
+> coefficients do not. (It is the room argument again, in disguise: a time
+> shift leaves every sinusoid being itself, just rotated — while it smears
+> each monomial $t^k$ across all the degrees below it.) And finally, perception: the cochlea
 > in your ear performs an approximate frequency analysis of its own — pitch
 > *is* frequency. The coefficient of $t^{17}$ means nothing to your hearing;
 > the amplitude at 440 Hz is the note A.
