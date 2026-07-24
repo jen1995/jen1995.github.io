@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#8a8983"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="660" rx="16" fill="#fcfcfb"/>
+
+  <!-- ===== ENCODER ===== -->
+  <rect x="90" y="330" width="270" height="110" rx="14" fill="#eaf2fb" stroke="#2a78d6" stroke-width="2.5"/>
+  <text x="225" y="396" text-anchor="middle" font-size="30" font-weight="600" fill="#0b0b0b">Encoder</text>
+
+  <g font-family="ui-monospace, Menlo, monospace" font-size="19">
+    <rect x="60"  y="520" width="38" height="38" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="79"  y="545" text-anchor="middle" fill="#0b0b0b">Я</text>
+    <rect x="106" y="520" width="76" height="38" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="144" y="545" text-anchor="middle" fill="#0b0b0b">видел</text>
+    <rect x="190" y="520" width="64" height="38" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="222" y="545" text-anchor="middle" fill="#0b0b0b">кота</text>
+    <rect x="262" y="520" width="38" height="38" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="281" y="545" text-anchor="middle" fill="#0b0b0b">на</text>
+    <rect x="308" y="520" width="64" height="38" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="340" y="545" text-anchor="middle" fill="#0b0b0b">мате</text>
+  </g>
+  <text x="216" y="600" text-anchor="middle" font-size="21" fill="#2a78d6" font-weight="600">source</text>
+  <line x1="216" y1="510" x2="220" y2="452" stroke="#8a8983" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- encoder -> decoder -->
+  <line x1="370" y1="385" x2="425" y2="385" stroke="#8a8983" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- ===== DECODER ===== -->
+  <rect x="436" y="330" width="270" height="110" rx="14" fill="#fdefe9" stroke="#eb6834" stroke-width="2.5"/>
+  <text x="571" y="396" text-anchor="middle" font-size="30" font-weight="600" fill="#0b0b0b">Decoder</text>
+
+  <g font-family="ui-monospace, Menlo, monospace" font-size="19">
+    <rect x="416" y="520" width="84" height="38" rx="8" fill="none" stroke="#8a8983" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="458" y="545" text-anchor="middle" fill="#52514e">&lt;bos&gt;</text>
+    <rect x="508" y="520" width="32" height="38" rx="8" fill="#fdefe9" stroke="#eb6834" stroke-width="1.5"/>
+    <text x="524" y="545" text-anchor="middle" fill="#0b0b0b">I</text>
+    <rect x="548" y="520" width="56" height="38" rx="8" fill="#fdefe9" stroke="#eb6834" stroke-width="1.5"/>
+    <text x="576" y="545" text-anchor="middle" fill="#0b0b0b">saw</text>
+    <rect x="612" y="520" width="32" height="38" rx="8" fill="#fdefe9" stroke="#eb6834" stroke-width="1.5"/>
+    <text x="628" y="545" text-anchor="middle" fill="#0b0b0b">a</text>
+    <rect x="652" y="520" width="56" height="38" rx="8" fill="#fdefe9" stroke="#eb6834" stroke-width="1.5"/>
+    <text x="680" y="545" text-anchor="middle" fill="#0b0b0b">cat</text>
+  </g>
+  <text x="562" y="600" text-anchor="middle" font-size="21" fill="#eb6834" font-weight="600">previous history</text>
+  <line x1="562" y1="510" x2="566" y2="452" stroke="#8a8983" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- ===== h vector ===== -->
+  <line x1="716" y1="385" x2="770" y2="385" stroke="#8a8983" stroke-width="2.5" marker-end="url(#arr)"/>
+  <rect x="781" y="345" width="46" height="80" rx="12" fill="#f1f0ee" stroke="#52514e" stroke-width="2"/>
+  <circle cx="804" cy="367" r="6" fill="#eb6834"/>
+  <circle cx="804" cy="385" r="6" fill="#52514e"/>
+  <circle cx="804" cy="403" r="6" fill="#2a78d6"/>
+  <text x="804" y="462" text-anchor="middle" font-size="21" fill="#52514e" font-family="ui-monospace, Menlo, monospace">h</text>
+  <text x="804" y="492" text-anchor="middle" font-size="20" fill="#52514e">context: source +</text>
+  <text x="804" y="516" text-anchor="middle" font-size="20" fill="#52514e">previous history</text>
+
+  <!-- ===== linear layer trapezoid ===== -->
+  <line x1="837" y1="385" x2="880" y2="385" stroke="#8a8983" stroke-width="2.5" marker-end="url(#arr)"/>
+  <polygon points="891,350 985,300 985,470 891,420" fill="#edebf7" stroke="#4a3aa7" stroke-width="2"/>
+  <text x="938" y="393" text-anchor="middle" font-size="20" fill="#0b0b0b" transform="rotate(-90 938 385)" font-weight="600">Linear</text>
+  <text x="938" y="505" text-anchor="middle" font-size="20" fill="#52514e">d → |V|</text>
+
+  <!-- ===== softmax + distribution ===== -->
+  <line x1="985" y1="385" x2="1030" y2="385" stroke="#8a8983" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="1046" y="330" font-size="20" fill="#52514e" text-anchor="start" transform="rotate(-90 1046 330)" font-family="ui-monospace, Menlo, monospace">softmax</text>
+
+  <g>
+    <rect x="1060" y="260" width="50"  height="22" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="1060" y="290" width="95"  height="22" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="1060" y="320" width="70"  height="22" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="1060" y="350" width="120" height="22" rx="4" fill="#fdefe9" stroke="#eb6834" stroke-width="2"/>
+    <rect x="1060" y="380" width="85"  height="22" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="1060" y="410" width="40"  height="22" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="1060" y="440" width="60"  height="22" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+  </g>
+  <text x="1060" y="505" font-size="20" fill="#52514e">distribution of</text>
+  <text x="1060" y="529" font-size="20" fill="#52514e">the next token</text>
+
+  <!-- ===== top formula ===== -->
+  <text x="600" y="80" text-anchor="middle" font-size="26" fill="#0b0b0b" font-family="ui-monospace, Menlo, monospace">p(* | <tspan fill="#eb6834">I saw a cat</tspan>, <tspan fill="#2a78d6">Я видел кота на мате</tspan>)</text>
+  <text x="600" y="120" text-anchor="middle" font-size="21" fill="#52514e">the conditional language model predicts the next token given both</text>
+  <text x="600" y="146" text-anchor="middle" font-size="21" fill="#52514e">the <tspan fill="#eb6834" font-weight="600">previous history</tspan> and the <tspan fill="#2a78d6" font-weight="600">source</tspan></text>
+</svg>

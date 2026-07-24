@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="560" rx="16" fill="#fcfcfb"/>
+
+  <!-- ===== top: one training step ===== -->
+  <text x="60" y="64" font-size="22" fill="#52514e">One training step:</text>
+
+  <g font-family="ui-monospace, Menlo, monospace" font-size="21">
+    <!-- prefix (context) -->
+    <rect x="380" y="36" width="34" height="40" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="397" y="63" text-anchor="middle" fill="#0b0b0b">I</text>
+    <rect x="422" y="36" width="56" height="40" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="450" y="63" text-anchor="middle" fill="#0b0b0b">saw</text>
+    <rect x="486" y="36" width="34" height="40" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="503" y="63" text-anchor="middle" fill="#0b0b0b">a</text>
+    <!-- token to predict -->
+    <rect x="528" y="36" width="56" height="40" rx="8" fill="#fdefe9" stroke="#eb6834" stroke-width="2.5"/>
+    <text x="556" y="63" text-anchor="middle" fill="#0b0b0b">cat</text>
+    <!-- future, greyed -->
+    <rect x="592" y="36" width="44" height="40" rx="8" fill="none" stroke="#c9c8c2" stroke-width="1.5"/>
+    <text x="614" y="63" text-anchor="middle" fill="#8a8983">on</text>
+    <rect x="644" y="36" width="34" height="40" rx="8" fill="none" stroke="#c9c8c2" stroke-width="1.5"/>
+    <text x="661" y="63" text-anchor="middle" fill="#8a8983">a</text>
+    <rect x="686" y="36" width="56" height="40" rx="8" fill="none" stroke="#c9c8c2" stroke-width="1.5"/>
+    <text x="714" y="63" text-anchor="middle" fill="#8a8983">mat</text>
+    <rect x="750" y="36" width="84" height="40" rx="8" fill="none" stroke="#c9c8c2" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="792" y="63" text-anchor="middle" fill="#8a8983">&lt;eos&gt;</text>
+  </g>
+
+  <!-- braces / annotations -->
+  <path d="M 382 90 L 382 100 L 518 100 L 518 90" fill="none" stroke="#2a78d6" stroke-width="2"/>
+  <text x="450" y="128" text-anchor="middle" font-size="20" fill="#2a78d6" font-weight="600">previous tokens</text>
+  <line x1="556" y1="90" x2="556" y2="112" stroke="#eb6834" stroke-width="2"/>
+  <text x="620" y="134" text-anchor="middle" font-size="20" fill="#eb6834" font-weight="600">predict this</text>
+
+  <!-- ===== bottom-left: prediction vs target ===== -->
+  <text x="60" y="204" font-size="22" fill="#52514e">Model prediction:</text>
+  <text x="60" y="232" font-family="ui-monospace, Menlo, monospace" font-size="19" fill="#0b0b0b">p(* | I saw a)</text>
+
+  <!-- prediction bars over vocabulary -->
+  <g>
+    <rect x="60"  y="258" width="60"  height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="60"  y="290" width="130" height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="60"  y="322" width="90"  height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="60"  y="354" width="210" height="24" rx="4" fill="#fdefe9" stroke="#eb6834" stroke-width="2"/>
+    <rect x="60"  y="386" width="110" height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="60"  y="418" width="45"  height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="60"  y="450" width="70"  height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+  </g>
+  <text x="285" y="372" font-size="20" fill="#eb6834" font-family="ui-monospace, Menlo, monospace">cat</text>
+  <text x="60" y="510" font-size="20" fill="#52514e">probability of each vocabulary token</text>
+
+  <!-- ===== middle: one-hot target ===== -->
+  <text x="562" y="204" font-size="22" fill="#52514e" text-anchor="middle">Target:</text>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="19" text-anchor="middle">
+    <rect x="540" y="222" width="44" height="252" rx="8" fill="#f1f0ee"/>
+    <text x="562" y="250" fill="#8a8983">0</text>
+    <text x="562" y="282" fill="#8a8983">0</text>
+    <text x="562" y="314" fill="#8a8983">0</text>
+    <rect x="544" y="326" width="36" height="30" rx="6" fill="#fdefe9" stroke="#eb6834" stroke-width="2"/>
+    <text x="562" y="348" fill="#0b0b0b" font-weight="700">1</text>
+    <text x="562" y="382" fill="#8a8983">0</text>
+    <text x="562" y="414" fill="#8a8983">0</text>
+    <text x="562" y="446" fill="#8a8983">0</text>
+  </g>
+  <line x1="330" y1="341" x2="530" y2="341" stroke="#8a8983" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <!-- ===== right: the loss ===== -->
+  <text x="700" y="204" font-size="22" fill="#52514e">The loss compares the two:</text>
+  <text x="700" y="250" font-size="26" fill="#0b0b0b" font-family="ui-monospace, Menlo, monospace">Loss = −log p(<tspan fill="#eb6834">cat</tspan>) → min</text>
+
+  <g>
+    <rect x="700" y="290" width="60"  height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="700" y="322" width="130" height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="700" y="354" width="210" height="24" rx="4" fill="#fdefe9" stroke="#eb6834" stroke-width="2"/>
+    <rect x="700" y="386" width="110" height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+    <rect x="700" y="418" width="45"  height="24" rx="4" fill="#f1f0ee" stroke="#c9c8c2"/>
+  </g>
+  <path d="M 940 302 L 950 302 L 950 346 L 940 346" fill="none" stroke="#8a8983" stroke-width="2"/>
+  <text x="965" y="330" font-size="20" fill="#52514e">push down</text>
+  <line x1="920" y1="366" x2="950" y2="366" stroke="#eb6834" stroke-width="2"/>
+  <text x="965" y="373" font-size="20" fill="#eb6834" font-weight="600">push up</text>
+  <path d="M 940 398 L 950 398 L 950 430 L 940 430" fill="none" stroke="#8a8983" stroke-width="2"/>
+  <text x="965" y="420" font-size="20" fill="#52514e">push down</text>
+
+  <text x="700" y="500" font-size="20" fill="#52514e">the higher p(cat), the smaller the loss —</text>
+  <text x="700" y="526" font-size="20" fill="#52514e">training raises the probability of the correct token</text>
+</svg>

@@ -32,9 +32,9 @@ One standard way to model such tasks is the **encoder-decoder** architecture. It
 
 For example, if the source sentence is «Я видел кота на мате», the encoder transforms it into a vector representation capturing the "overall meaning" of the input sentence, and the decoder generates the translation from this representation: "I saw a cat on a mat".
 
-![Encoder-decoder architecture](enc_dec.png)
+![Encoder-decoder architecture](enc_dec.svg)
 
-*Image source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*Diagram after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 We will see different models below, but they all rely on the same general scheme: first encode the input, then decode the output from this representation.
 
@@ -108,9 +108,9 @@ $$
 
 That is, at each step we minimize the negative log-probability of the correct next token. The higher the probability the model assigns to the correct token, the lower the loss.
 
-![One training step and the cross-entropy loss](lm_ce_training.png)
+![One training step and the cross-entropy loss](lm_ce_training.svg)
 
-*Image source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*Diagram after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 For the whole sequence, the loss is obtained by summing over all steps:
 
@@ -148,9 +148,9 @@ Since the only difference from ordinary language models is the presence of the s
 - obtain a vector representation of the context — both the source and the previous target history;
 - from this representation, predict the probability distribution of the next token.
 
-![A conditional language model with a linear output layer](conditional_lms.png)
+![A conditional language model with a linear output layer](conditional_lms.svg)
 
-*Image source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*Diagram after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 ### Bahdanau attention
 
@@ -158,9 +158,9 @@ Before turning to the mechanism itself, let us take a closer look at the encoder
 
 This is the problem solved by the attention mechanism, proposed in the paper [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) (Bahdanau et al., 2014). The core idea is to let the model "focus" on different parts of the input sequence at different decoding steps.
 
-![Bahdanau attention: general scheme](attention_bahdanau.png)
+![Bahdanau attention: general scheme](attention_bahdanau.svg)
 
-*Image source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*Diagram after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 At each decoder step, the attention mechanism:
 
@@ -182,9 +182,9 @@ But one problem has not gone anywhere. Both the encoder and the decoder are stil
 
 Now let us look at attention from this angle. The scores $\mathrm{score}(h_t, s_k)$ for different $k$ do not depend on each other — they can all be computed at once. What does that look like concretely? For definiteness, take the simplest variant of the score — the dot product $\mathrm{score}(h_t, s_k) = h_t^\top s_k$ (in Bahdanau's work the score is a small neural network, but the idea is the same). Stack all encoder states into a matrix $S$ of size $m \times d$, one row per token — then all $m$ scores for the current decoder step are obtained by a single matrix-vector product: $S h_t$. Moreover, if all decoder states are known at once — stack them too, into a matrix $H$ of size $n \times d$ — then the entire score table, $n \times m$ numbers, is computed by a single matrix product $H S^\top$. Remember this construction: in the Transformer it will become the main character under the name $QK^\top$. Admittedly, as long as the decoder is an RNN, the states $h_t$ are still born one at a time, and the full power of this trick remains untapped. But attention itself requires no sequential computation.
 
-![RNNs vs Transformer](rnn_vs_transformer.png)
+![RNNs vs Transformer](rnn_vs_transformer.svg)
 
-*Image source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*Diagram after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 Hence a daring thought: if attention is so good — maybe throw out the RNN entirely and keep *only* attention? That is exactly what the authors called the paper that started the Transformer: "Attention Is All You Need". How it works, what has to be added to the architecture once recurrence is removed, and why it changed the entire field — that is what the rest of this post is about.
 
@@ -222,11 +222,9 @@ Suppose we removed the RNN. But the attention from Part 0 operated *on top of* e
 
 The answer is **self-attention**: the same attention mechanism applied to a sequence *with itself* — and it is exactly what replaces recurrence. Previously, contextual token representations were built by an RNN passing information along a chain of states; now every token gathers information from all tokens of the same sequence directly (including itself), weighting them by relevance. The word "sitting" can directly ask: "who is the subject here?" — and receive a large weight on the token "cat".
 
-<video autoplay loop muted playsinline style="max-width:100%">
-  <source src="encoder_self_attention.mp4" type="video/mp4">
-</video>
+![Self-attention, animated](encoder_self_attention.svg)
 
-*Animation source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*Animation after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 Recall the matrix trick from the end of Part 0: all scores were computed by a single product $H S^\top$, where $H$ holds the decoder states and $S$ the encoder states. In self-attention both matrices are one and the same sequence $X$ of size $n \times d$: the everyone-with-everyone score table is, roughly speaking, $X X^\top$. One matrix multiplication — and all $n^2$ scores are ready. Nobody waits for anybody: the representations of all tokens are updated simultaneously.
 
@@ -260,9 +258,9 @@ Look closely at the first column: self-attention is quadratic in the sequence le
 
 So, here is what the authors assembled the model from, once left without an RNN.
 
-![Transformer architecture, annotated](transformer_architecture.png)
+![Transformer architecture, annotated](transformer_architecture.svg)
 
-*Annotated Figure 1 of [Vaswani et al., 2017](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf); image source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*After Figure 1 of [Vaswani et al., 2017](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) and [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 - **Embeddings + positional encoding.** Tokens are turned into vectors of dimension $d$, and information about position is mixed in — that very fix for self-attention's blindness to order.
 - **The encoder** is a stack of $N$ identical layers (in the paper $N = 6$). Each layer: self-attention (tokens exchange information) + a small fully connected network FFN (each token is processed independently), plus a few auxiliary mechanisms that stabilize the training of a deep stack of layers — we will cover those separately in Part 2.
@@ -401,9 +399,9 @@ The central block of the whole architecture.
 
 The analogy is a library search: the query is compared against the catalog cards (keys), and based on the comparison a mixture of books (values) is returned. Importantly, the "card" and the "book" are different objects: a token can be *found* by one feature and *hand over* entirely different information.
 
-![Query, key and value roles](queries_keys_values.png)
+![Query, key and value roles](queries_keys_values.svg)
 
-*Image source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*Diagram after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 In the diagram, each vector receives its three roles through three matrices $W^Q$, $W^K$, $W^V$ — these learnable projections will appear a bit below, in multi-head attention; the attention operation itself, which we are about to write, takes ready-made $Q$, $K$, $V$.
 
@@ -498,11 +496,9 @@ Total $O(n^2 \cdot d)$ — that very quadraticity in sequence length from Part 1
 
 **Intuition.** One attention — one "view" of the sequence: one weight table per pair of tokens. But tokens are related in several ways at once: syntactically, semantically, by coreference ("he" → "the cat"). The idea of multi-head: run $h$ small attentions in parallel, each in its own subspace of dimension $d/h$ — and let each head learn its own type of relations.
 
-<video autoplay loop muted playsinline style="max-width:100%">
-  <source src="multi_head.mp4" type="video/mp4">
-</video>
+![Multi-head attention, animated](multi_head.svg)
 
-*Animation source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*Animation after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 **Formula.** The input $X$ ($n \times d$) first passes through three learnable linear projections:
 
@@ -942,9 +938,9 @@ The cross-check is organized just like for the encoder — all the parts have al
 
 We assemble everything according to the scheme from Part 1 — here it is again as a reminder:
 
-![Transformer architecture, annotated](transformer_architecture.png)
+![Transformer architecture, annotated](transformer_architecture.svg)
 
-*Annotated Figure 1 of [Vaswani et al., 2017](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf); image source: [lena-voita.github.io](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
+*After Figure 1 of [Vaswani et al., 2017](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf) and [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
 Embeddings (multiplied by $\sqrt{d}$ — that debt from Part 2) + positional encoding, a stack of encoder layers, a stack of decoder layers, an output projection into the vocabulary size — we now have code for every element of the scheme.
 
@@ -1221,4 +1217,4 @@ Where to go next if you want to dig deeper: BPE tokenization, decoder-only archi
 
 ---
 
-**Acknowledgments.** The wonderful illustrations and animations in this series come from Lena Voita's magical [NLP Course For You](https://lena-voita.github.io/) — a course that inspired much of this series in the first place. If after these posts you want a broader and deeper dive into NLP, that is the place to go. Thank you, Lena! 💛
+**Acknowledgments.** The diagrams and animations in this series are redrawn after the wonderful illustrations in Lena Voita's magical [NLP Course For You](https://lena-voita.github.io/) — a course that inspired much of this series in the first place. If after these posts you want a broader and deeper dive into NLP, that is the place to go. Thank you, Lena! 💛

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1200" height="640" rx="16" fill="#fcfcfb"/>
+<text x="600" y="56" text-anchor="middle" font-size="23" fill="#52514e">Multi-head attention: h independent "views" in subspaces of dimension d/h, concatenated and projected</text>
+<rect x="70" y="150" width="220" height="170" rx="12" fill="#f7f6f4" stroke="#c9c8c2" stroke-width="1.5"/>
+<text x="180" y="354" text-anchor="middle" font-size="20" fill="#2a78d6" font-weight="700">head 1</text>
+<rect x="96" y="250" width="18" height="44" rx="3" fill="#2a78d6"/>
+<rect x="126" y="278" width="18" height="16" rx="3" fill="#2a78d6"/>
+<rect x="156" y="288" width="18" height="6" rx="3" fill="#2a78d6"/>
+<rect x="186" y="272" width="18" height="22" rx="3" fill="#2a78d6"/>
+<rect x="216" y="285" width="18" height="9" rx="3" fill="#2a78d6"/>
+<rect x="246" y="281" width="18" height="13" rx="3" fill="#2a78d6"/>
+<line x1="90" y1="294" x2="270" y2="294" stroke="#c9c8c2" stroke-width="1.4"/>
+<rect x="350" y="150" width="220" height="170" rx="12" fill="#f7f6f4" stroke="#c9c8c2" stroke-width="1.5"/>
+<text x="460" y="354" text-anchor="middle" font-size="20" fill="#eda100" font-weight="700">head 2</text>
+<rect x="376" y="285" width="18" height="9" rx="3" fill="#eda100"/>
+<rect x="406" y="244" width="18" height="50" rx="3" fill="#eda100"/>
+<rect x="436" y="286" width="18" height="8" rx="3" fill="#eda100"/>
+<rect x="466" y="272" width="18" height="22" rx="3" fill="#eda100"/>
+<rect x="496" y="283" width="18" height="11" rx="3" fill="#eda100"/>
+<rect x="526" y="283" width="18" height="11" rx="3" fill="#eda100"/>
+<line x1="370" y1="294" x2="550" y2="294" stroke="#c9c8c2" stroke-width="1.4"/>
+<rect x="630" y="150" width="220" height="170" rx="12" fill="#f7f6f4" stroke="#c9c8c2" stroke-width="1.5"/>
+<text x="740" y="354" text-anchor="middle" font-size="20" fill="#eb6834" font-weight="700">head 3</text>
+<rect x="656" y="287" width="18" height="7" rx="3" fill="#eb6834"/>
+<rect x="686" y="283" width="18" height="11" rx="3" fill="#eb6834"/>
+<rect x="716" y="285" width="18" height="9" rx="3" fill="#eb6834"/>
+<rect x="746" y="261" width="18" height="33" rx="3" fill="#eb6834"/>
+<rect x="776" y="283" width="18" height="11" rx="3" fill="#eb6834"/>
+<rect x="806" y="254" width="18" height="40" rx="3" fill="#eb6834"/>
+<line x1="650" y1="294" x2="830" y2="294" stroke="#c9c8c2" stroke-width="1.4"/>
+<rect x="910" y="150" width="220" height="170" rx="12" fill="#f7f6f4" stroke="#c9c8c2" stroke-width="1.5"/>
+<text x="1020" y="354" text-anchor="middle" font-size="20" fill="#4a3aa7" font-weight="700">head 4</text>
+<rect x="936" y="281" width="18" height="13" rx="3" fill="#4a3aa7"/>
+<rect x="966" y="279" width="18" height="15" rx="3" fill="#4a3aa7"/>
+<rect x="996" y="276" width="18" height="18" rx="3" fill="#4a3aa7"/>
+<rect x="1026" y="257" width="18" height="37" rx="3" fill="#4a3aa7"/>
+<rect x="1056" y="281" width="18" height="13" rx="3" fill="#4a3aa7"/>
+<rect x="1086" y="281" width="18" height="13" rx="3" fill="#4a3aa7"/>
+<line x1="930" y1="294" x2="1110" y2="294" stroke="#c9c8c2" stroke-width="1.4"/>
+<g opacity="0"><rect x="65" y="145" width="230" height="180" rx="15" fill="none" stroke="#2a78d6" stroke-width="3"/><text x="180" y="136" text-anchor="middle" font-size="18" fill="#2a78d6" font-weight="600">its own weights</text><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.2420;0.2500;1" values="1;1;0;0"/></g>
+<g opacity="0"><rect x="345" y="145" width="230" height="180" rx="15" fill="none" stroke="#eda100" stroke-width="3"/><text x="460" y="136" text-anchor="middle" font-size="18" fill="#eda100" font-weight="600">its own weights</text><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.2500;0.2580;0.4920;0.5000;1" values="0;0;1;1;0;0"/></g>
+<g opacity="0"><rect x="625" y="145" width="230" height="180" rx="15" fill="none" stroke="#eb6834" stroke-width="3"/><text x="740" y="136" text-anchor="middle" font-size="18" fill="#eb6834" font-weight="600">its own weights</text><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.5000;0.5080;0.7420;0.7500;1" values="0;0;1;1;0;0"/></g>
+<g opacity="0"><rect x="905" y="145" width="230" height="180" rx="15" fill="none" stroke="#4a3aa7" stroke-width="3"/><text x="1020" y="136" text-anchor="middle" font-size="18" fill="#4a3aa7" font-weight="600">its own weights</text><animate attributeName="opacity" dur="8.0s" repeatCount="indefinite" calcMode="discrete" keyTimes="0;0.7500;0.7580;1" values="0;0;1;1"/></g>
+<rect x="330" y="470" width="34" height="42" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="347" y="498" text-anchor="middle" font-size="21" font-family="ui-monospace, Menlo, monospace" fill="#0b0b0b">I</text>
+<rect x="388" y="470" width="56" height="42" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="416" y="498" text-anchor="middle" font-size="21" font-family="ui-monospace, Menlo, monospace" fill="#0b0b0b">saw</text>
+<rect x="468" y="470" width="34" height="42" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="485" y="498" text-anchor="middle" font-size="21" font-family="ui-monospace, Menlo, monospace" fill="#0b0b0b">a</text>
+<rect x="526" y="470" width="56" height="42" rx="8" fill="#fdefe9" stroke="#eb6834" stroke-width="2.4"/>
+<text x="554" y="498" text-anchor="middle" font-size="21" font-family="ui-monospace, Menlo, monospace" fill="#0b0b0b">cat</text>
+<rect x="606" y="470" width="44" height="42" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="628" y="498" text-anchor="middle" font-size="21" font-family="ui-monospace, Menlo, monospace" fill="#0b0b0b">on</text>
+<rect x="674" y="470" width="56" height="42" rx="8" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="702" y="498" text-anchor="middle" font-size="21" font-family="ui-monospace, Menlo, monospace" fill="#0b0b0b">mat</text>
+<text x="524" y="550" text-anchor="middle" font-size="19" fill="#52514e">the query position ("cat") is the same for all heads — the heads just look for different things</text>
+<rect x="880" y="452" width="180" height="52" rx="10" fill="#edebf7" stroke="#4a3aa7" stroke-width="2"/>
+<text x="970" y="479" text-anchor="middle" font-size="18" fill="#0b0b0b">concat heads</text>
+<text x="970" y="497" text-anchor="middle" font-size="17" fill="#52514e" font-family="ui-monospace, Menlo, monospace">× W<tspan dy="5" font-size="13">O</tspan></text>
+<line x1="800" y1="478" x2="872" y2="478" stroke="#8a8983" stroke-width="2"/>
+<path d="M 872 478 l -8 -4 v 8 z" fill="#8a8983"/>
+<rect x="1092" y="447" width="36" height="62" rx="10" fill="#f1f0ee" stroke="#52514e" stroke-width="2"/>
+<circle cx="1110" cy="464" r="4.5" fill="#52514e"/>
+<circle cx="1110" cy="478" r="4.5" fill="#52514e"/>
+<circle cx="1110" cy="492" r="4.5" fill="#52514e"/>
+<line x1="1062" y1="478" x2="1084" y2="478" stroke="#8a8983" stroke-width="2"/>
+<path d="M 1084 478 l -8 -4 v 8 z" fill="#8a8983"/>
+<text x="1110" y="540" text-anchor="middle" font-size="18" fill="#52514e">output</text>
+</svg>

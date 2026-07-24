@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#8a8983"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1200" height="620" rx="16" fill="#fcfcfb"/>
+
+  <!-- ===== the sentence ===== -->
+  <text x="600" y="66" text-anchor="middle" font-size="25" fill="#0b0b0b" font-family="ui-monospace, Menlo, monospace">I arrived at the <tspan fill="#eb6834" font-weight="700">bank</tspan> after crossing the …   <tspan fill="#52514e">…street? …river?</tspan></text>
+  <text x="600" y="104" text-anchor="middle" font-size="22" fill="#52514e">What does <tspan font-weight="600" fill="#0b0b0b">bank</tspan> mean in this sentence?</text>
+
+  <!-- ===================== RNN panel ===================== -->
+  <text x="300" y="180" text-anchor="middle" font-size="26" font-weight="700" fill="#0b0b0b">RNNs</text>
+
+  <!-- chain of tokens -->
+  <g font-family="ui-monospace, Menlo, monospace" font-size="17">
+    <rect x="60"  y="300" width="30" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="75"  y="324" text-anchor="middle" fill="#0b0b0b">I</text>
+    <rect x="118" y="300" width="94" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="165" y="324" text-anchor="middle" fill="#0b0b0b">arrived</text>
+    <rect x="240" y="300" width="42" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="261" y="324" text-anchor="middle" fill="#0b0b0b">at</text>
+    <rect x="310" y="300" width="54" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="337" y="324" text-anchor="middle" fill="#0b0b0b">the</text>
+    <rect x="392" y="300" width="64" height="36" rx="7" fill="#fdefe9" stroke="#eb6834" stroke-width="2.2"/>
+    <text x="424" y="324" text-anchor="middle" fill="#0b0b0b">bank</text>
+    <rect x="484" y="300" width="42" height="36" rx="7" fill="none" stroke="#c9c8c2" stroke-width="1.5"/>
+    <text x="505" y="324" text-anchor="middle" fill="#8a8983">…</text>
+  </g>
+  <!-- sequential arrows -->
+  <line x1="92"  y1="318" x2="112" y2="318" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="214" y1="318" x2="234" y2="318" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="284" y1="318" x2="304" y2="318" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="366" y1="318" x2="386" y2="318" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="458" y1="318" x2="478" y2="318" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- step counters -->
+  <g font-size="16" fill="#8a8983" text-anchor="middle">
+    <text x="75" y="285">step 1</text>
+    <text x="165" y="285">step 2</text>
+    <text x="261" y="285">step 3</text>
+    <text x="337" y="285">step 4</text>
+    <text x="424" y="285">step 5</text>
+  </g>
+
+  <!-- speech bubble -->
+  <rect x="120" y="380" width="360" height="64" rx="12" fill="#f1f0ee"/>
+  <path d="M 400 380 L 416 356 L 428 380 z" fill="#f1f0ee"/>
+  <text x="300" y="406" text-anchor="middle" font-size="19" fill="#52514e" font-style="italic">"No idea what bank means yet —</text>
+  <text x="300" y="430" text-anchor="middle" font-size="19" fill="#52514e" font-style="italic">I have to read to the end first"</text>
+
+  <text x="300" y="510" text-anchor="middle" font-size="21" fill="#52514e">O(N) sequential steps</text>
+  <text x="300" y="536" text-anchor="middle" font-size="21" fill="#52514e">for a sentence of length N</text>
+
+  <!-- divider -->
+  <line x1="600" y1="150" x2="600" y2="560" stroke="#e4e3df" stroke-width="1.5"/>
+
+  <!-- ===================== Transformer panel ===================== -->
+  <text x="900" y="180" text-anchor="middle" font-size="26" font-weight="700" fill="#0b0b0b">Transformer</text>
+
+  <!-- tokens -->
+  <g font-family="ui-monospace, Menlo, monospace" font-size="17">
+    <rect x="660" y="300" width="30" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="675" y="324" text-anchor="middle" fill="#0b0b0b">I</text>
+    <rect x="698" y="300" width="94" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="745" y="324" text-anchor="middle" fill="#0b0b0b">arrived</text>
+    <rect x="800" y="300" width="42" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="821" y="324" text-anchor="middle" fill="#0b0b0b">at</text>
+    <rect x="850" y="300" width="54" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="877" y="324" text-anchor="middle" fill="#0b0b0b">the</text>
+    <rect x="912" y="300" width="64" height="36" rx="7" fill="#fdefe9" stroke="#eb6834" stroke-width="2.2"/>
+    <text x="944" y="324" text-anchor="middle" fill="#0b0b0b">bank</text>
+    <rect x="984" y="300" width="70" height="36" rx="7" fill="#eaf2fb" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="1019" y="324" text-anchor="middle" fill="#0b0b0b">river</text>
+  </g>
+
+  <!-- bank attends to everything at once -->
+  <g stroke="#eda100" stroke-width="2">
+    <path d="M 944 296 C 900 240, 720 240, 675 294" fill="none"/>
+    <path d="M 944 296 C 910 250, 790 250, 745 294" fill="none"/>
+    <path d="M 944 296 C 920 260, 850 260, 821 294" fill="none"/>
+    <path d="M 944 296 C 930 272, 895 272, 877 294" fill="none"/>
+    <path d="M 944 296 C 966 270, 1000 270, 1016 294" fill="none"/>
+  </g>
+  <text x="864" y="222" text-anchor="middle" font-size="19" fill="#eda100" font-weight="600">all connections in one step</text>
+
+  <!-- speech bubble -->
+  <rect x="720" y="380" width="360" height="64" rx="12" fill="#f1f0ee"/>
+  <path d="M 920 380 L 936 356 L 948 380 z" fill="#f1f0ee"/>
+  <text x="900" y="406" text-anchor="middle" font-size="19" fill="#52514e" font-style="italic">"I don't need to wait —</text>
+  <text x="900" y="430" text-anchor="middle" font-size="19" fill="#52514e" font-style="italic">I see all the words at once!"</text>
+
+  <text x="900" y="510" text-anchor="middle" font-size="21" fill="#52514e">a constant number of steps</text>
+  <text x="900" y="536" text-anchor="middle" font-size="21" fill="#52514e">for a sentence of any length</text>
+</svg>
