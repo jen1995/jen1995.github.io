@@ -68,7 +68,7 @@ Three hard-won gotchas (Markdown parses the page before KaTeX sees it):
    `1.` — Markdown opens a list and tears the formula apart. Keep operators at
    the end of the previous line, or join the formula into one line.
 
-Tables, `> 💡` callout quotes, `<details>` blocks and code fences all work — see the *Math rendering test* post, and delete it once real posts are up.
+Tables, `> 💡` callout quotes, `<details>` blocks and code fences all work.
 
 ## Migrating source posts
 
