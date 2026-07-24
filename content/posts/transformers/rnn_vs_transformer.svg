@@ -50,8 +50,8 @@
   <text x="300" y="406" text-anchor="middle" font-size="19" fill="#52514e" font-style="italic">"No idea what bank means yet —</text>
   <text x="300" y="430" text-anchor="middle" font-size="19" fill="#52514e" font-style="italic">I have to read to the end first"</text>
 
-  <text x="300" y="510" text-anchor="middle" font-size="21" fill="#52514e">O(N) sequential steps</text>
-  <text x="300" y="536" text-anchor="middle" font-size="21" fill="#52514e">for a sentence of length N</text>
+  <text x="300" y="510" text-anchor="middle" font-size="21" fill="#52514e">O(N) sequential steps:</text>
+  <text x="300" y="536" text-anchor="middle" font-size="21" fill="#52514e">step k must wait for step k−1</text>
 
   <!-- divider -->
   <line x1="600" y1="150" x2="600" y2="560" stroke="#e4e3df" stroke-width="1.5"/>
@@ -91,6 +91,6 @@
   <text x="900" y="406" text-anchor="middle" font-size="19" fill="#52514e" font-style="italic">"I don't need to wait —</text>
   <text x="900" y="430" text-anchor="middle" font-size="19" fill="#52514e" font-style="italic">I see all the words at once!"</text>
 
-  <text x="900" y="510" text-anchor="middle" font-size="21" fill="#52514e">a constant number of steps</text>
-  <text x="900" y="536" text-anchor="middle" font-size="21" fill="#52514e">for a sentence of any length</text>
+  <text x="900" y="510" text-anchor="middle" font-size="21" fill="#52514e">a constant number of sequential stages (the layers):</text>
+  <text x="900" y="536" text-anchor="middle" font-size="21" fill="#52514e">each stage processes all tokens in parallel</text>
 </svg>

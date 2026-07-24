@@ -186,6 +186,8 @@ Now let us look at attention from this angle. The scores $\mathrm{score}(h_t, s_
 
 *Diagram after [Lena Voita's NLP Course](https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html)*
 
+A caveat on the word "steps": a Transformer stage — one layer — does *more* raw arithmetic than an RNN step, and that amount grows with the sentence length. What stays constant is the number of stages that must run *one after another*: within a layer no score waits for any other score, everything is computed in parallel, and the number of layers does not depend on the sentence length. FLOPs and sequential steps are different currencies — Part 1 makes this precise.
+
 Hence a daring thought: if attention is so good — maybe throw out the RNN entirely and keep *only* attention? That is exactly what the authors called the paper that started the Transformer: "Attention Is All You Need". How it works, what has to be added to the architecture once recurrence is removed, and why it changed the entire field — that is what the rest of this post is about.
 
 ## Part 1 — Why the Transformer at all
