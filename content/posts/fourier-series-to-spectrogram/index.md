@@ -71,6 +71,27 @@ Instead of asking "what is the pressure at each moment of time?", we ask "how
 much of each frequency does this signal contain?" The answer lives on the
 frequency axis rather than the time axis, and it is called the **spectrum**.
 
+> 💡 **Why sinusoids, of all things?** Mathematics knows plenty of ways to
+> decompose a function — why not, say, a Taylor series, with polynomials as the
+> building blocks? Several reasons stack on top of each other. First, the shape
+> of the data: sound is locally *quasi-periodic* — a guitar note, a vowel — and
+> periodic building blocks describe such signals with a handful of
+> coefficients, while a polynomial cannot even be periodic (it must run off to
+> infinity) and needs ever more terms for every extra period. Second, and
+> deeper: sinusoids are the **eigenfunctions of linear, time-invariant
+> systems** — feed a sinusoid into a string, a column of air, a room, a
+> microphone or a filter, and the same sinusoid comes out, only scaled and
+> shifted; frequencies never mix. That is *why* sound is built out of
+> sinusoids in the first place: the modes of the linear wave equation are
+> sinusoidal, so the quasi-periodicity of the previous argument is not a lucky
+> accident but physics. Third, stability: shift a recording in time and every
+> Taylor coefficient changes beyond recognition, while the Fourier magnitudes
+> stay put — only the phases rotate. A note sounds the same whenever you play
+> it, and its magnitude spectrum agrees. And finally, perception: the cochlea
+> in your ear performs an approximate frequency analysis of its own — pitch
+> *is* frequency. The coefficient of $t^{17}$ means nothing to your hearing;
+> the amplitude at 440 Hz is the note A.
+
 ![A C-major chord: three notes in time, three peaks in frequency](chord_decomposition.png)
 
 Two things make this representation valuable in practice:
