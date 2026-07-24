@@ -80,13 +80,16 @@ frequency axis rather than the time axis, and it is called the **spectrum**.
 > periodic building blocks describe such signals with a handful of
 > coefficients, while a polynomial cannot even be periodic (it must run off to
 > infinity) and needs ever more terms for every extra period. Second, and
-> deeper: sinusoids are the **eigenfunctions of linear, time-invariant
-> systems** — feed a sinusoid into a string, a column of air, a room, a
-> microphone or a filter, and the same sinusoid comes out, only scaled and
-> shifted; frequencies never mix. That is *why* sound is built out of
-> sinusoids in the first place: the modes of the linear wave equation are
-> sinusoidal, so the quasi-periodicity of the previous argument is not a lucky
-> accident but physics. Third, stability: shift a recording in time and every
+> deeper: the physical world plays along. Feed a sinusoid into a string, a
+> column of air, a room, a microphone or a filter — and the same sinusoid
+> comes out, only scaled and shifted; systems like these cannot invent new
+> frequencies. That is *why* sound is built out of sinusoids in the first
+> place, and the quasi-periodicity of the previous argument is not a lucky
+> accident but physics. (Why this happens — and why it earns sinusoids the
+> grand title of *eigenfunctions of linear time-invariant systems* — deserves
+> its own discussion later in this series; for a very accessible standalone
+> account, see [chapter 5 of The Scientist and Engineer's Guide to
+> DSP](https://www.dspguide.com/ch5.htm).) Third, stability: shift a recording in time and every
 > Taylor coefficient changes beyond recognition, while the Fourier magnitudes
 > stay put — only the phases rotate. A note sounds the same whenever you play
 > it, and its magnitude spectrum agrees. And finally, perception: the cochlea
