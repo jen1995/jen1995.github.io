@@ -87,9 +87,13 @@ frequency axis rather than the time axis, and it is called the **spectrum**.
 > in time, but at the same frequency. The reason is one line of trigonometry:
 > echoes are delayed, scaled copies, and a sum of sinusoids of one frequency —
 > whatever their amplitudes and shifts — is again a sinusoid of that
-> frequency. The same holds for a vibrating string, a microphone membrane, an
-> electronic filter: none of them can invent new frequencies. (A distortion
-> pedal *can* — precisely because it is not linear; that is what its "dirty"
+> frequency.
+>
+> ![A room as a system: echoes are delayed scaled copies; the output tone keeps the input frequency](room_echoes.svg)
+>
+> The same holds for a vibrating string, a microphone membrane, an
+> electronic filter: none of them can invent new frequencies. (A [distortion
+> pedal](https://en.wikipedia.org/wiki/Distortion_(music)) *can* — precisely because it is not linear; that is what its "dirty"
 > sound is made of.) That is *why* sound is built out of sinusoids in the first
 > place, and the quasi-periodicity of the previous argument is not a lucky
 > accident but physics. (Why this happens — and why it earns sinusoids the
