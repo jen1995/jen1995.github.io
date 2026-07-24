@@ -150,6 +150,12 @@ this much.*
 >
 > ![A room as a system: echoes are delayed scaled copies; the output tone keeps the input frequency](room_echoes.svg)
 >
+> (Can a room be an *anti-carpet* and make a frequency louder? It cannot add
+> energy — but it can concentrate it: when the copies arrive in phase, they add
+> up constructively. That is resonance, and it is exactly why your voice
+> blossoms in a tiled bathroom — at the room's resonant frequencies, the
+> echoes conspire in your favor.)
+>
 > The same holds for a vibrating string, a microphone membrane, an
 > electronic filter: none of them can invent new frequencies. (A [distortion
 > pedal](https://en.wikipedia.org/wiki/Distortion_(music)) *can* — precisely because it is not linear; that is what its "dirty"
