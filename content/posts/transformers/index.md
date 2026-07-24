@@ -417,15 +417,11 @@ Here $QK^\top$ is the score table "every query against every key", familiar from
 
 > 💡 **Why $\sqrt{d_k}$, and not $d_k$ or nothing?** The dot product of two random vectors with $d_k$ independent components of zero mean and unit variance has variance $d_k$ ([a careful derivation via the variance of a product of independent variables](https://ai.stackexchange.com/questions/21237/why-does-this-multiplication-of-q-and-k-have-a-variance-of-d-k-in-scaled)) — that is, the typical spread of the scores grows as $\sqrt{d_k}$. One might think the softmax cares not about scale but only about the relative magnitudes of the scores. Let us write out the formula and check: for a score vector $s = (s_1, \dots, s_n)$, the weight of the $i$-th element is
 >
-> $$
-> p_i = \mathrm{softmax}(s)_i = \frac{e^{s_i}}{\sum_{k=1}^{n} e^{s_k}}.
-> $$
+> $$p_i = \mathrm{softmax}(s)_i = \frac{e^{s_i}}{\sum_{k=1}^{n} e^{s_k}}.$$
 >
 > For a *shift* the intuition is correct: add a constant $c$ to all scores — the numerator and every term of the denominator get multiplied by $e^c$, the common factor cancels, the weights do not change. But *multiplying* the scores by a constant does not cancel: it stretches the differences between scores, which is what the softmax genuinely depends on — dividing $p_i$ by $p_j$, we see $p_i / p_j = e^{s_i - s_j}$. Variance $d_k$ means the typical difference between two scores is of order $\sqrt{d_k}$ in absolute value; at $d_k = 512$ that is tens, and already a logit difference of 20 gives a weight ratio of $e^{20} \approx 5 \cdot 10^8$. The sign of the difference does not matter. To see this, divide the numerator and denominator of the largest score's weight $s_{\max}$ by $e^{s_{\max}}$:
 >
-> $$
-> p_{\max} = \frac{e^{s_{\max}}}{\sum_{k} e^{s_k}} = \frac{1}{1 + \sum_{k \neq \max} e^{s_k - s_{\max}}}.
-> $$
+> $$p_{\max} = \frac{e^{s_{\max}}}{\sum_{k} e^{s_k}} = \frac{1}{1 + \sum_{k \neq \max} e^{s_k - s_{\max}}}.$$
 >
 > All the exponents $s_k - s_{\max}$ are negative, and if they are on the order of tens in absolute value, every term in the denominator is $\sim e^{-20} \approx 2 \cdot 10^{-9}$ — that is, $p_{\max} \approx 1$: the largest score takes almost all the weight. And there always is a largest one. That is the problem: at the start the weights are random, so attention "locks onto" a *random* token, and the gradients through the rest are practically zero — training can hardly fix an unlucky choice. Dividing by $\sqrt{d_k}$ returns the differences to a scale of order one. And why not divide by $d_k$? Then typical differences shrink to $1/\sqrt{d_k}$. The exponential is no longer scary on small arguments — it is linear there, $e^x \approx 1 + x$ — so the weight ratios are $p_i/p_j \approx 1 \pm 1/\sqrt{d_k}$: at $d_k = 512$ all weights are almost equal, differing by mere percents. The softmax becomes almost uniform, and attention does not choose — it just averages all the values. Note that this failure is milder than the previous one: the gradients here are alive, but the model would have to learn projections with larger norms, pulling the differences back to a scale of one against the imposed division. Dividing by $\sqrt{d_k}$ is the golden mean: differences of order 1, a softmax that is selective but not locked, and trainable in both directions. Let us check the variance experimentally:
 >
