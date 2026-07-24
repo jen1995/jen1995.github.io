@@ -30,7 +30,7 @@
   <text x="390" y="811" text-anchor="middle" font-size="17" fill="#52514e">+ Positional Encoding</text>
 
   <!-- spine -->
-  <line x1="390" y1="768" x2="390" y2="730" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="390" y1="768" x2="390" y2="746" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
   <line x1="390" y1="682" x2="390" y2="668" stroke="#8a8983" stroke-width="1.8"/>
   <line x1="390" y1="624" x2="390" y2="610" stroke="#8a8983" stroke-width="1.8"/>
   <line x1="390" y1="566" x2="390" y2="552" stroke="#8a8983" stroke-width="1.8"/>
@@ -75,7 +75,7 @@
   <text x="750" y="811" text-anchor="middle" font-size="17" fill="#52514e">+ Positional Encoding</text>
 
   <!-- spine -->
-  <line x1="750" y1="768" x2="750" y2="730" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="750" y1="768" x2="750" y2="746" stroke="#8a8983" stroke-width="2" marker-end="url(#arr)"/>
   <line x1="750" y1="682" x2="750" y2="668" stroke="#8a8983" stroke-width="1.8"/>
   <line x1="750" y1="624" x2="750" y2="610" stroke="#8a8983" stroke-width="1.8"/>
   <line x1="750" y1="566" x2="750" y2="552" stroke="#8a8983" stroke-width="1.8"/>
@@ -98,10 +98,11 @@
 
   <!-- ================== ANNOTATIONS ================== -->
   <!-- encoder self-attention -->
-  <text x="40" y="688" font-size="19" fill="#0b0b0b" font-weight="600">Encoder self-attention:</text>
-  <text x="40" y="712" font-size="18" fill="#52514e">tokens look at each other;</text>
-  <text x="40" y="734" font-size="18" fill="#52514e">q, k, v — from encoder states</text>
-  <line x1="262" y1="706" x2="286" y2="704" stroke="#c9c8c2" stroke-width="1.5"/>
+  <text x="40" y="666" font-size="19" fill="#0b0b0b" font-weight="600">Encoder self-attention:</text>
+  <text x="40" y="690" font-size="18" fill="#52514e">tokens look at each other</text>
+  <text x="40" y="712" font-size="18" fill="#52514e">q, k, v — from</text>
+  <text x="40" y="734" font-size="18" fill="#52514e">the encoder states</text>
+  <line x1="262" y1="700" x2="286" y2="702" stroke="#c9c8c2" stroke-width="1.5"/>
 
   <!-- FFN -->
   <text x="40" y="574" font-size="19" fill="#0b0b0b" font-weight="600">Feed-forward:</text>
