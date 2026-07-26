@@ -431,8 +431,8 @@ $h = \tau$ walks a single diagonal path through a double limit, and diagonals
 are not automatically legal. Here the diagonal happens to be right: with the
 mesh equal to the pulse width, the sum quietly replaces the average of $x$
 over the window by its value at the window's midpoint, and the error of that
-replacement dies with $\tau$ by continuity — which is exactly what the Bonus
-below proves properly.
+replacement dies with $\tau$ by continuity — which is exactly what the
+**Bonus** section below proves properly.
 
 **Step 3: one term survives.** The pulse $r_\tau$ is zero outside its window
 of width $\tau$ around zero — so of all the grid points $n\tau$, only $n = 0$
