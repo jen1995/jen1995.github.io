@@ -249,84 +249,99 @@ $n$-th harmonic: $|c_n| = A_n / 2$ and $\arg c_n = -\phi_n$ for $n \ge 1$.
 This is the part most explanations skip. Textbooks stop at the Fourier series
 for nice continuous functions; engineering tutorials *start* from the DFT
 formula, presented as an axiom. But the road between them is short, honest,
-and worth walking — it explains where the formula comes from, and every
-strange detail of the DFT (why exactly $N$ coefficients? why is the spectrum
-periodic?) falls out of the derivation for free.
+and worth walking — and it starts where honesty demands: by asking what a
+sampled signal even *is* as a mathematical object.
 
-### Step 1: make the samples periodic
+### An honest model of a discrete signal
 
-After the ADC, we hold $N$ numbers $x[0], x[1], \dots, x[N-1]$, measured every
-$T$ seconds. The Fourier series has two complaints about this input. First, it
-wants a *periodic* function — but our recording is time-limited. That one is
-easy to appease: extend the recording periodically, gluing copies of it end to
-end. The smallest period that works is $P = NT$ — the duration of the
-recording itself.
-
-![Periodic extension of N samples with period NT](periodic_extension.png)
-
-### Step 2: the naive attempt fails
-
-The second complaint is more serious: the series wants a *function defined for
-every $t$*, and we only have values at the grid points $t = nT$. The obvious
-fix — define a function that equals $x[n]$ at the grid points and $0$
-everywhere else — fails spectacularly. Plug it into the coefficient formula:
-
-$$
-c_k = \frac{1}{P} \int_{-P/2}^{P/2} x(t)\, e^{-2 \pi i \frac{k}{P} t}\, dt = 0
-\quad \text{for every } k.
-$$
-
-The integral is an area, and a function that is nonzero only at $N$ isolated
-points encloses no area at all — [the Riemann
+After the ADC we hold $N$ numbers $x[0], \dots, x[N-1]$, measured every $T$
+seconds. The tempting model — "a function that equals $x[n]$ at the grid
+points and $0$ everywhere else" — fails the moment we try to use it. All our
+tools are integrals (Fourier coefficients, energies, averages), and an
+integral is an area: a function that is nonzero only at isolated points
+encloses no area at all. [The Riemann
 integral](https://en.wikipedia.org/wiki/Riemann_integral) simply does not see
-it. Every coefficient comes out zero; our signal has vanished. The lesson:
-"a value at a point and zero elsewhere" is the wrong mathematical model of a
-sample.
+such a function — every integral of it, Fourier coefficients included, comes
+out zero, and our signal vanishes from the mathematics. We need a better
+model.
 
-### Step 3: what a sample really is
-
-Think about how a physical measurement works. No sensor reads the value *at*
-the instant $t_0$ — a measurement takes some time $\tau$, and what we get is
-the average over the measurement window:
+Physics shows the way (we follow the classic construction from ru.dsplib.org,
+[archived](https://web.archive.org/web/2026/https://ru.dsplib.org/content/discrete_introduction/discrete_introduction.html)).
+No instrument measures the value *at* an instant — a real ADC opens a gate
+for a short time $\tau$ and averages what it sees:
 
 $$
-\hat{x}(t_0) = \frac{1}{\tau} \int_{t_0}^{t_0 + \tau} x(t)\, dt.
+\hat{x}(nT) = \frac{1}{\tau} \int_{nT}^{nT + \tau} x(t)\, dt.
 $$
 
-Now make the equipment better: $\tau$ shrinks, and the averaging window
-becomes a rectangle that is ever narrower and ever taller — width $\tau$,
-height $\frac{1}{\tau}$, area always exactly $1$:
+For finite $\tau$ this is an estimate with an error — the signal keeps
+changing inside the window. Make the equipment better: $\tau$ shrinks, and
+the averaging window becomes a rectangle ever narrower and ever taller —
+width $\tau$, height $\frac{1}{\tau}$, area always exactly $1$:
 
 ![A shrinking averaging window becomes the Dirac impulse](delta_limit.png)
 
 The limit of this process is the [**Dirac
-impulse**](https://en.wikipedia.org/wiki/Dirac_delta_function) $\delta(t)$: an
-"infinitely narrow, infinitely tall" spike of unit area. It is not a function
-in the classical sense — it is *defined* by what it does inside an integral,
-namely the **sifting property**:
+impulse**](https://en.wikipedia.org/wiki/Dirac_delta_function) $\delta(t)$:
+an "infinitely narrow, infinitely tall" spike of unit area. It is not a
+function in the classical sense — it is *defined* by what it does inside an
+integral, namely the **sifting property**:
 
 $$
 \int_{-\infty}^{\infty} f(t)\, \delta(t - t_0)\, dt = f(t_0).
 $$
 
 The delta reaches into the integral and plucks out the value of $f$ at one
-point — exactly what "measuring at an instant" should mean. So the honest
-model of our sampled recording is not "values and zeros" but a **comb of
-impulses**, each carrying one sample as its weight:
+point — exactly what "measuring at an instant" should mean in the limit of a
+perfect instrument.
+
+Now place one impulse at every grid point. The infinite train of shifted
+deltas is called the **Dirac comb** (dsplib's «решетчатая функция», the
+lattice function):
 
 $$
-x_d(t) = \sum_{n=0}^{N-1} x[n]\, \delta(t - nT).
+\text{Ш}_T(t) = \sum_{n=-\infty}^{\infty} \delta(t - nT),
 $$
 
-This object *does* have nonzero integrals — each impulse contributes its
-weight — and the Riemann-integral objection dissolves.
+and the honest model of our sampled recording is the analog signal multiplied
+by the comb — each tooth carrying one sample as its weight:
 
-### Step 4: the integral collapses into a sum
+$$
+x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_{n} x[n]\, \delta(t - nT).
+$$
 
-Now feed the impulse comb (periodically extended, as in step 1) into the
-Fourier coefficient formula and let the sifting property do the work. Over one
-period, integrating against the comb just evaluates the exponential at the
-grid points $t = nT$:
+This object has nonzero integrals — each impulse contributes its weight via
+the sifting property — and, importantly, it is no longer an approximation:
+the estimate $\hat{x}$ with its finite-$\tau$ error stayed behind in the
+limit. This is the *exact* mathematical model of a discrete signal, the one
+the rest of the derivation stands on.
+
+> 💡 **Yes, that symbol is a Cyrillic letter.** The comb is traditionally
+> denoted by Ш — "sha" — and Western literature adopted both the symbol and
+> the name: the [*Shah function*](https://en.wikipedia.org/wiki/Dirac_comb).
+> It is quite possibly the only Cyrillic letter in standard mathematical
+> notation, chosen for the obvious reason: the letter looks like the comb.
+
+> 💡 **A units check** (a detail dsplib is careful about, and most sources
+> skip): $\delta(t)$ has dimension $1/\text{time}$ — its area over time is
+> the dimensionless $1$. So if $x(t)$ is in volts, the model $x_d(t)$ is in
+> volts *per second*: it is a **density**, not a value. The volts come back
+> when you integrate: $\int_{nT - \varepsilon}^{nT + \varepsilon} x_d(t)\,dt = x[n]$,
+> in volts again. Keep this in mind whenever a stray $T$ or $\frac{1}{T}$
+> appears in sampling formulas — it is usually this density speaking.
+
+### Now bring in the series
+
+The Fourier series has one more requirement: a *periodic* function. Our
+recording is time-limited — so extend it, gluing copies of the $N$-sample
+stretch end to end. The smallest period that works is $P = NT$, the duration
+of the recording itself:
+
+![Periodic extension of N samples with period NT](periodic_extension.png)
+
+Feed the periodically extended comb into the Fourier coefficient formula and
+let the sifting property do the work. Over one period, integrating against
+the comb just evaluates the exponential at the grid points $t = nT$:
 
 $$
 c_k = \frac{1}{NT} \int_{\text{period}} x_d(t)\, e^{-2 \pi i \frac{k}{NT} t}\, dt
@@ -334,11 +349,12 @@ c_k = \frac{1}{NT} \int_{\text{period}} x_d(t)\, e^{-2 \pi i \frac{k}{NT} t}\, d
     = \frac{1}{NT} \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{k n}{N}}.
 $$
 
-Look at what happened in the exponent: the sampling period $T$ **cancelled
-out**. The basis functions no longer care about seconds — only about the two
-integers $k$ and $n$. The continuous world has quietly left the stage.
+The dreaded integral has collapsed into a finite sum. And look at what
+happened in the exponent: the sampling period $T$ **cancelled out**. The
+basis functions no longer care about seconds — only about the two integers
+$k$ and $n$. The continuous world has quietly left the stage.
 
-### Step 5: only N distinct coefficients
+### Only N distinct coefficients
 
 The formula above is valid for any integer $k$ — but try shifting $k$ by $N$:
 
@@ -385,8 +401,8 @@ that makes everything downstream (including every spectrogram ever displayed)
 practical. [This video](https://www.youtube.com/watch?v=nreiTseFZQ0) is a
 beautiful walkthrough of the idea.
 
-So here is the road we promised: a periodic extension, an honest model of
-sampling, and the Fourier series *itself* handed us the DFT — no axioms
+So here is the road we promised: an honest model of sampling, a periodic
+extension, and the Fourier series *itself* handed us the DFT — no axioms
 required. The machinery for "which piano keys were pressed?" is built.
 
 ## 🚧 Under construction
