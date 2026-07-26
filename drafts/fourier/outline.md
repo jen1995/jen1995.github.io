@@ -20,9 +20,9 @@ Based on the DSP lecture (see `lecture_digest.md`; deck: [Google Slides](https:/
 - **Part 2: Reading the DFT** — **published 2026-07-26** ✔
   (`content/posts/fourier-series-to-spectrogram-part-2/`), with the
   companion notebook `notebooks/reading_the_dft.ipynb`.
-- **Part 3: from the DFT to the spectrogram** — windows, STFT, leakage
-  (teased in Part 2's "whole turns" section and notebook), the spectrogram,
-  mel scale (the perception/cochlea argument returns here). **Next up.**
+- **Part 3: From the DFT to the Spectrogram** — **published 2026-07-26** ✔
+  (`content/posts/fourier-series-to-spectrogram-part-3/`), with the
+  companion notebook `notebooks/building_the_spectrogram.ipynb`.
 
 ### Act two, post 1. Four Shades of Fourier
 Role in the series: introduces the **Fourier transform** proper (continuous
