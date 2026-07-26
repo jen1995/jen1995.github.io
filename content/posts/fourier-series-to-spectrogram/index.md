@@ -206,7 +206,7 @@ this much.*
 ### The exponential form
 
 One more rewrite, and the notation becomes so compact that every later formula
-in this series will use it. Euler's formula,
+in this series will use it. [Euler's formula](https://en.wikipedia.org/wiki/Euler%27s_formula),
 
 $$
 e^{i t} = \cos t + i \sin t
