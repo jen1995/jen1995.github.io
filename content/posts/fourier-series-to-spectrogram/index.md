@@ -50,8 +50,8 @@ to voltage — and is still continuous in time and in value.
 
 ![From pressure to voltage to numbers](analog_digital_chain.svg)
 
-A computer, however, needs numbers, and the Analog-to-Digital Converter
-produces them by discretizing along both axes:
+A computer, however, needs numbers, and the **Analog-to-Digital Converter
+(ADC)** produces them by discretizing along both axes:
 
 - **sampling** — measure the signal at regular moments, $f_s$ times per second
   (time discretization);
