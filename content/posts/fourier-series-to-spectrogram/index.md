@@ -154,7 +154,8 @@ this much.*
 ![Partial sums of the Fourier series of a square wave](fourier_partial_sums.png)
 
 > 💡 **Why sinusoids, of all things?** Mathematics knows plenty of ways to
-> decompose a function — why not, say, a Taylor series, with polynomials as the
+> decompose a function — why not, say, a [Taylor
+> series](https://en.wikipedia.org/wiki/Taylor_series), with polynomials as the
 > building blocks? Several reasons stack on top of each other. First, the shape
 > of the data: sound is locally *quasi-periodic* — a guitar note, a vowel — and
 > periodic building blocks describe such signals with a handful of
