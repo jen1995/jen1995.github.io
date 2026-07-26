@@ -230,8 +230,11 @@ more than a *hundred* bins of the right grid. And the column reports the
 truth: the frame genuinely contained all of those frequencies, so the fine
 grid faithfully resolves… a smear $435$ Hz wide. The sharper $\Delta f$
 bought a worse picture, because **frequency resolution is only resolution
-for signals that hold still for the whole window** — and a chirp, by
-definition, never does.
+for signals that hold still — whose spectral content stays the same — for
+the whole window.** This is the *quasi-stationarity* from the typical-numbers
+inset above, now seen from the other side: 25 ms is chosen precisely so
+that speech holds still within a frame. A chirp, by definition, holds
+still at no window length at all.
 
 There is no window length that wins both ways — only a choice matched to
 the signal. This is not an engineering shortcoming but mathematics: time
