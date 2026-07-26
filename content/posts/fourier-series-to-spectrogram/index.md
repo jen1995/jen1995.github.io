@@ -260,66 +260,116 @@ converter again:
 
 ![Reminder: the ADC turns a continuous signal into N numbers](adc_reminder.svg)
 
-The tempting model — "a function that equals $x[n]$ at the grid
-points and $0$ everywhere else" — fails the moment we try to use it. All our
-tools are integrals (Fourier coefficients, energies, averages), and an
-integral is an area: a function that is nonzero only at isolated points
-encloses no area at all. [The Riemann
-integral](https://en.wikipedia.org/wiki/Riemann_integral) simply does not see
-such a function — every integral of it, Fourier coefficients included, comes
-out zero, and our signal vanishes from the mathematics. We need a better
-model.
-
-Physics shows the way (we follow the classic construction from ru.dsplib.org,
-[archived](https://web.archive.org/web/2026/https://ru.dsplib.org/content/discrete_introduction/discrete_introduction.html)).
-No instrument measures the value *at* an instant — a real ADC opens a gate
-for a short time $\tau$ and averages what it sees:
+The Fourier series machinery wants a function of continuous time, so let us
+build one out of our samples in the most straightforward way imaginable:
+keep the measured values at the grid points, put zero everywhere else,
 
 $$
-\hat{x}(nT) = \frac{1}{\tau} \int_{nT}^{nT + \tau} x(t)\, dt.
+\tilde{x}(t) =
+\begin{cases}
+x(nT), & t = nT, \quad n = 0, \dots, N-1, \\
+0, & t \in [0, NT], \; t \neq nT,
+\end{cases}
 $$
 
-For finite $\tau$ this is an estimate with an error — the signal keeps
-changing inside the window. Make the equipment better: $\tau$ shrinks, and
-the averaging window becomes a rectangle ever narrower and ever taller —
-width $\tau$, height $\frac{1}{\tau}$, area always exactly $1$:
+extend $\tilde{x}$ periodically (the series insists), and compute the Fourier
+coefficients:
+
+$$
+c_k = \frac{1}{P} \int_{0}^{P} \tilde{x}(t)\, e^{-2 \pi i \frac{k}{P} t}\, dt \equiv 0
+\quad \text{for every } k.
+$$
+
+Every single coefficient is zero — our signal has vanished from the
+mathematics. Why? The integral is an area, and $\tilde{x}$ is nonzero only at
+$N$ isolated points: a set of columns of zero width encloses no area at all.
+[The Riemann integral](https://en.wikipedia.org/wiki/Riemann_integral)
+honestly reports what it sees — nothing. The verdict is not against Fourier;
+it is against our model: "a value at a point and zero elsewhere" is the wrong
+mathematical object for a sample.
+
+**So what is a sample, really?** Think about how the measurement is actually
+made. No instrument reads a value *at* an instant — a measurement takes some
+time $\tau$, and what the device reports is the *average* of the signal over
+the measurement window around $t = nT$:
+
+$$
+\hat{x}(nT) = \frac{1}{\tau} \int_{nT - \tau/2}^{nT + \tau/2} x(t)\, dt.
+$$
+
+It is useful to rewrite this average as an integral against a kernel. Let
+$r_\tau(t)$ be the rectangular pulse of width $\tau$ and unit height centered
+at zero; then
+
+$$
+\hat{x}(nT) = \int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t - nT)\, dt.
+$$
+
+The kernel $\frac{1}{\tau} r_\tau$ cuts a column of width $\tau$ out from
+under the graph of $x$ and reports its area, divided by the width — the
+average height of the graph inside the window. For finite $\tau$ this is an
+estimate with an error: the signal keeps changing inside the window.
+
+Now improve the instrument. As $\tau$ shrinks, the kernel becomes a rectangle
+ever narrower and ever taller — width $\tau$, height $\frac{1}{\tau}$, area
+always exactly $1$ — and the estimate sharpens:
 
 ![A shrinking averaging window becomes the Dirac impulse](delta_limit.png)
 
-The limit of this process is the [**Dirac
-impulse**](https://en.wikipedia.org/wiki/Dirac_delta_function) $\delta(t)$:
+The limit of this process,
+
+$$
+\delta(t) = \lim_{\tau \to 0} \tfrac{1}{\tau} r_\tau(t),
+$$
+
+is the [**Dirac impulse**](https://en.wikipedia.org/wiki/Dirac_delta_function):
 an "infinitely narrow, infinitely tall" spike of unit area. It is not a
 function in the classical sense — it is *defined* by what it does inside an
-integral, namely the **sifting property**:
+integral, namely the **sifting property**, the $\tau \to 0$ limit of our
+averaging:
 
 $$
-\int_{-\infty}^{\infty} f(t)\, \delta(t - t_0)\, dt = f(t_0).
+\int_{-\infty}^{\infty} x(t)\, \delta(t - t_0)\, dt = x(t_0)
 $$
 
-The delta reaches into the integral and plucks out the value of $f$ at one
-point — exactly what "measuring at an instant" should mean in the limit of a
-perfect instrument.
+— and any integration limits that enclose $t_0$ work just as well, since the
+spike carries all of its area at the single point $t_0$.
 
-Now place one impulse at every grid point. The infinite train of shifted
-deltas is called the **Dirac comb** (dsplib's «решетчатая функция», the
-lattice function):
+The perfect instrument, then, measures $x[n]$ by integrating $x$ against
+$\delta(t - nT)$. Place one impulse at every grid point — the infinite train
+of shifted deltas is called the **Dirac comb** (dsplib's «решетчатая
+функция», the lattice function):
 
 $$
 \text{Ш}_T(t) = \sum_{n=-\infty}^{\infty} \delta(t - nT),
 $$
 
-and the honest model of our sampled recording is the analog signal multiplied
-by the comb — each tooth carrying one sample as its weight:
+and the honest model of a discrete signal is the analog signal multiplied by
+the comb (we follow the construction from ru.dsplib.org,
+[archived](https://web.archive.org/web/2026/https://ru.dsplib.org/content/discrete_introduction/discrete_introduction.html)):
 
 $$
-x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_{n} x[n]\, \delta(t - nT).
+x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_{n} x(t)\, \delta(t - nT).
 $$
 
-This object has nonzero integrals — each impulse contributes its weight via
-the sifting property — and, importantly, it is no longer an approximation:
-the estimate $\hat{x}$ with its finite-$\tau$ error stayed behind in the
-limit. This is the *exact* mathematical model of a discrete signal, the one
-the rest of the derivation stands on.
+Note that nothing here is approximate anymore: the finite-$\tau$ estimate
+$\hat{x}$ with its error stayed behind in the limit. This is the *exact*
+mathematical model, the one the rest of the derivation stands on.
+
+**Did it fix the integration?** Let us check — integrate $x_d$ in a small
+neighborhood of a sampling point $t_0 = kT$, taking limits $kT \pm \tau$ with
+$\tau \lt T$ so that exactly one tooth of the comb falls inside:
+
+$$
+\int_{kT - \tau}^{kT + \tau} x(t) \left( \sum_{n} \delta(t - nT) \right) dt
+= \int_{kT - \tau}^{kT + \tau} x(t)\, \delta(t - kT)\, dt
+= x(kT),
+$$
+
+where the first equality holds because all the deltas except $n = k$ sit
+outside the integration limits. The integral no longer returns zero — it
+returns the sample. The sampling points survive integration, which is exactly
+what the naive model could not do.
 
 > 💡 **Yes, that symbol is a Cyrillic letter.** The comb is traditionally
 > denoted by Ш — "sha" — and Western literature adopted both the symbol and
@@ -331,9 +381,9 @@ the rest of the derivation stands on.
 > skip): $\delta(t)$ has dimension $1/\text{time}$ — its area over time is
 > the dimensionless $1$. So if $x(t)$ is in volts, the model $x_d(t)$ is in
 > volts *per second*: it is a **density**, not a value. The volts come back
-> when you integrate: $\int_{nT - \varepsilon}^{nT + \varepsilon} x_d(t)\,dt = x[n]$,
-> in volts again. Keep this in mind whenever a stray $T$ or $\frac{1}{T}$
-> appears in sampling formulas — it is usually this density speaking.
+> when you integrate — as we just saw. Keep this in mind whenever a stray $T$
+> or $\frac{1}{T}$ appears in sampling formulas — it is usually this density
+> speaking.
 
 ### Now bring in the series
 
