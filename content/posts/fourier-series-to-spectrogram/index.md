@@ -390,6 +390,8 @@ $$
 \int_{-\infty}^{\infty} f(t)\, dt = \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} f(n\tau)\, \tau.
 $$
 
+![The integral as a limit of rectangle areas with mesh tau](riemann_sum.png)
+
 Applying this to our integrand, the $\tau$ of the mesh cancels the
 $\frac{1}{\tau}$ of the kernel:
 
