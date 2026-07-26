@@ -326,13 +326,15 @@ $$
 
 It is useful to rewrite this average as an integral against a kernel. Let
 $r_\tau(t)$ be the rectangular pulse of width $\tau$ and unit height centered
-at zero; then
+at zero:
+
+![The rectangular pulse and the averaging kernel](rect_kernel.png)
+
+With the scaled pulse as the kernel, the average becomes
 
 $$
 \hat{x}(nT) = \int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t - nT)\, dt.
 $$
-
-![The rectangular pulse and the averaging kernel](rect_kernel.png)
 
 The kernel $\frac{1}{\tau} r_\tau$ cuts a column of width $\tau$ out from
 under the graph of $x$ and reports its area, divided by the width — the
