@@ -367,6 +367,60 @@ $$
 — and any integration limits that enclose $t_0$ work just as well, since the
 spike carries all of its area at the single point $t_0$.
 
+<details>
+<summary><b>Proof of the sifting property</b> (a physicist's proof: we swap limits and integrals without asking permission)</summary>
+
+**Step 1: the spike at zero.** Substitute the definition of $\delta$ as the
+limit of our rectangles and move the limit outside the integral:
+
+$$
+\langle x(t), \delta(t) \rangle
+= \int_{-\infty}^{\infty} x(t)\, \delta(t)\, dt
+= \int_{-\infty}^{\infty} x(t) \lim_{\tau \to 0} \tfrac{1}{\tau} r_\tau(t)\, dt
+= \lim_{\tau \to 0} \int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t)\, dt.
+$$
+
+**Step 2: the integral as a Riemann sum.** Write the integral as the limit of
+rectangle areas, choosing the mesh width to be the same $\tau$ as in the
+pulse:
+
+$$
+\int_{-\infty}^{\infty} f(t)\, dt = \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} f(n\tau)\, \tau.
+$$
+
+Applying this to our integrand, the $\tau$ of the mesh cancels the
+$\frac{1}{\tau}$ of the kernel:
+
+$$
+\langle x(t), \delta(t) \rangle
+= \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} x(n\tau)\, \tfrac{1}{\tau} r_\tau(n\tau)\, \tau
+= \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} x(n\tau)\, r_\tau(n\tau).
+$$
+
+**Step 3: one term survives.** The pulse $r_\tau$ is zero outside its window
+of width $\tau$ around zero — so of all the grid points $n\tau$, only $n = 0$
+lands inside. The infinite sum collapses to a single term:
+
+$$
+\langle x(t), \delta(t) \rangle
+= \lim_{\tau \to 0} x(0) \underbrace{r_\tau(0)}_{=\,1} = x(0).
+$$
+
+**Step 4: the shifted spike.** For $\delta(t - t_0)$, change variables
+$\xi = t - t_0$ (so $t = \xi + t_0$, $dt = d\xi$, and the infinite limits stay
+infinite):
+
+$$
+\int_{-\infty}^{\infty} x(t)\, \delta(t - t_0)\, dt
+= \int_{-\infty}^{\infty} x(\xi + t_0)\, \delta(\xi)\, d\xi
+= x(t_0)
+$$
+
+by the case we just proved — the spike always reports the value of $x$ at the
+point where it stands. $\blacksquare$
+
+</details>
+
 The perfect instrument, then, measures $x[n]$ by integrating $x$ against
 $\delta(t - nT)$. Place one impulse at every grid point — the infinite train
 of shifted deltas is called the **Dirac comb** (dsplib's «решетчатая
