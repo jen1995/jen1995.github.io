@@ -424,6 +424,16 @@ $$
 = \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} x(n\tau)\, r_\tau(n\tau).
 $$
 
+To be clear, *this* is where the genre's quiet cheat actually lives. Honestly
+there are two independent limits — a mesh $h \to 0$ that defines the integral
+at each fixed $\tau$, and only then $\tau \to 0$ for the pulse. Setting
+$h = \tau$ walks a single diagonal path through a double limit, and diagonals
+are not automatically legal. Here the diagonal happens to be right: with the
+mesh equal to the pulse width, the sum quietly replaces the average of $x$
+over the window by its value at the window's midpoint, and the error of that
+replacement dies with $\tau$ by continuity — which is exactly what the Bonus
+below proves properly.
+
 **Step 3: one term survives.** The pulse $r_\tau$ is zero outside its window
 of width $\tau$ around zero — so of all the grid points $n\tau$, only $n = 0$
 lands inside. The infinite sum collapses to a single term:
