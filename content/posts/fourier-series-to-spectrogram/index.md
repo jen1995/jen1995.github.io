@@ -470,8 +470,12 @@ sense, where a single point has measure zero), the integral of a function
 that is zero almost everywhere is $0$. Either way — nonexistent or zero — the
 left-hand side is certainly not $x(0)$, and any theorem permitting the swap
 would be proving nonsense. Accordingly, every
-hypothesis fails on purpose: the convergence is not uniform (the spikes grow
-as $\frac{1}{\tau}$), and no integrable dominating function exists — at a
+hypothesis fails on purpose. The convergence is not
+[uniform](https://en.wikipedia.org/wiki/Uniform_convergence) — uniformity
+would demand $\sup_t \big| \frac{1}{\tau} r_\tau(t) \big| \to 0$, the whole
+graph fitting into an ever-thinner tube around zero, whereas our supremum is
+$\frac{1}{\tau}$ and blows up instead. And no integrable dominating function
+exists — at a
 fixed $t$, the largest value of $\frac{1}{\tau} r_\tau(t)$ over all $\tau$ is
 $\frac{1}{2|t|}$, and $\frac{1}{2|t|}$ is not integrable near zero.
 
