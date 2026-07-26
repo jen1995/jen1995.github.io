@@ -255,7 +255,12 @@ sampled signal even *is* as a mathematical object.
 ### An honest model of a discrete signal
 
 After the ADC we hold $N$ numbers $x[0], \dots, x[N-1]$, measured every $T$
-seconds. The tempting model — "a function that equals $x[n]$ at the grid
+seconds — it has been a while since the digitization section, so here is the
+converter again:
+
+![Reminder: the ADC turns a continuous signal into N numbers](adc_reminder.svg)
+
+The tempting model — "a function that equals $x[n]$ at the grid
 points and $0$ everywhere else" — fails the moment we try to use it. All our
 tools are integrals (Fourier coefficients, energies, averages), and an
 integral is an area: a function that is nonzero only at isolated points
