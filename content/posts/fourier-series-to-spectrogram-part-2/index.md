@@ -319,7 +319,8 @@ the visible range under false names — **aliasing**, the theorem's dark
 twin. The proof of the theorem, the folded world of aliasing, and even the
 fine print hiding in the statement above (sticklers: a sinusoid at exactly
 $f$ needs care) are a story for the end of this Fourier journey — the
-theorem with three names will get a post of its own, and by then the
+theorem with three names (Kotelnikov, Shannon, Nyquist) will get a post of
+its own, and by then the
 machinery we keep building will have turned its proof into a single
 picture. Consider it teased.
 
