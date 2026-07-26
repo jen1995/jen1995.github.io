@@ -589,14 +589,20 @@ of the recording itself:
 
 ![Periodic extension of N samples with period NT](periodic_extension.png)
 
-Feed the periodically extended comb into the Fourier coefficient formula and
-let the sifting property do the work. Over one period, integrating against
-the comb just evaluates the exponential at the grid points $t = nT$:
+Feed the periodically extended comb into the Fourier coefficient formula.
+Over one period $[0, NT)$ exactly $N$ teeth of the comb fall inside, so
+under the integral sits a *finite* sum — and swapping a finite sum with an
+integral is plain linearity, no anxieties about interchanging limits this
+time. After the swap each summand is a sifting integral, and it evaluates
+the exponential at its grid point $t = nT$:
 
 $$
-c_k = \frac{1}{NT} \int_{\text{period}} x_d(t)\, e^{-2 \pi i \frac{k}{NT} t}\, dt
-    = \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k}{NT} \cdot nT}
-    = \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k n}{N}}.
+\begin{aligned}
+c_k &= \frac{1}{NT} \int_{0}^{NT} x_d(t)\, e^{-2 \pi i \frac{k}{NT} t}\, dt
+     = \frac{1}{NT} \sum_{n=0}^{N-1} \int_{0}^{NT} x(t)\, \delta(t - nT)\, e^{-2 \pi i \frac{k}{NT} t}\, dt \\
+    &= \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k}{NT} \cdot nT}
+     = \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k n}{N}}.
+\end{aligned}
 $$
 
 The dreaded integral has collapsed into a finite sum. And look at what
