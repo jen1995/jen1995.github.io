@@ -383,11 +383,7 @@ $$
 — the continuous cousin of the [dot product of
 vectors](https://en.wikipedia.org/wiki/Dot_product#Functions): multiply the
 two signals pointwise, then add everything up (with the sum, as usual by now,
-becoming an integral; complex signals conjugate the second factor). One
-honest caveat in our physicist's spirit: the delta itself is famously *not*
-square-integrable, so for it the angle brackets are a convenient notation for
-the pairing the formula suggests — making that fully rigorous is the job of
-[distribution theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)).
+becoming an integral; complex signals conjugate the second factor).
 In this notation, the sifting property reads
 $\langle x(t), \delta(t - t_0) \rangle = x(t_0)$.
 
@@ -443,6 +439,13 @@ $$
 
 by the case we just proved — the spike always reports the value of $x$ at the
 point where it stands. $\blacksquare$
+
+*A closing caveat in the same physicist's spirit: the delta itself is
+famously not square-integrable, so $\langle x, \delta \rangle$ is not a
+true $L^2$ inner product — the angle brackets are a convenient notation for
+the pairing our formulas suggest. Making all of this fully rigorous (including
+the limit-swapping above) is the job of [distribution
+theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)).*
 
 </details>
 
