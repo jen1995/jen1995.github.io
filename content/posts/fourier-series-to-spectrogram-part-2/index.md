@@ -18,11 +18,18 @@ $$
 $N$ numbers in, $N$ numbers out — and every trace of physical time gone: the
 formula sees only the two integers $k$ and $n$. That was a feature during the
 derivation, but it leaves us unable to answer the simplest practical question.
-Back in Part 1 we removed a power-line hum by "erasing one column of the
-spectrum" — well, *which* column? Which $k$ is 50 Hz? This part is about
-learning to read the DFT's output: matching indices to physical frequencies,
-seeing what the resolution of that matching costs, and discovering along the
-way why half of the output is a mirror image of the other half.
+Remember the hum? Back in Part 1, [arguing that the frequency view is worth
+having](/posts/fourier-series-to-spectrogram-part-1/#why-the-waveform-is-not-enough),
+we took a recording polluted by the 50 Hz buzz of the power line — hopeless
+to fix in the time domain, where the hum is smeared over every sample — and
+fixed it in the frequency domain, where the hum is a single column:
+transform, erase that column, transform back, and the melody survives while
+the buzz is gone. A fine trick — except that now, with the transform
+actually in our hands, try to perform it. *Which* column? Which $k$ is
+50 Hz? This part is about learning to read the DFT's output: matching
+indices to physical frequencies, seeing what the resolution of that matching
+costs, and discovering along the way why half of the output is a mirror
+image of the other half.
 
 ## What does X[k] measure?
 
