@@ -8,3 +8,10 @@
 .post-content details summary {
     cursor: pointer;
 }
+
+/* Wide display formulas scroll horizontally instead of being clipped. */
+.post-content .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 0;
+}

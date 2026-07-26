@@ -374,10 +374,12 @@ spike carries all of its area at the single point $t_0$.
 limit of our rectangles and move the limit outside the integral:
 
 $$
+\begin{aligned}
 \langle x(t), \delta(t) \rangle
-= \int_{-\infty}^{\infty} x(t)\, \delta(t)\, dt
-= \int_{-\infty}^{\infty} x(t) \lim_{\tau \to 0} \tfrac{1}{\tau} r_\tau(t)\, dt
-= \lim_{\tau \to 0} \int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t)\, dt.
+&= \int_{-\infty}^{\infty} x(t)\, \delta(t)\, dt
+= \int_{-\infty}^{\infty} x(t) \lim_{\tau \to 0} \tfrac{1}{\tau} r_\tau(t)\, dt \\
+&= \lim_{\tau \to 0} \int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t)\, dt.
+\end{aligned}
 $$
 
 **Step 2: the integral as a Riemann sum.** Write the integral as the limit of
