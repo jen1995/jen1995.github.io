@@ -208,7 +208,10 @@ resolution is one over the listening time. In the STFT, "listening time"
 is the window length, and the law becomes a genuine dilemma. A *short*
 window pins events precisely in time but smears them in frequency; a
 *long* window resolves frequencies finely but averages away the timing.
-Watch the law act on a **chirp** — a tone whose frequency climbs steadily:
+Watch the law act on a
+**[chirp](https://en.wikipedia.org/wiki/Chirp)** — a tone whose frequency
+climbs steadily (the name is honest: it is the sound of a bird call or a
+slide whistle):
 
 ![One chirp under a short and a long window](chirp_tradeoff.png)
 
