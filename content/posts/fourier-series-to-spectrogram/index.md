@@ -671,7 +671,7 @@ encode $N$ samples. And computing it is cheap: the naive sum costs $O(N^2)$
 operations, but the [**Fast Fourier Transform**](https://en.wikipedia.org/wiki/Fast_Fourier_transform)
 computes exactly the same $X[k]$ in $O(N \log N)$ — the algorithmic miracle
 that makes everything downstream (including every spectrogram ever displayed)
-practical. [This video](https://www.youtube.com/watch?v=nreiTseFZQ0) is a
+practical. [This video](https://www.youtube.com/watch?v=h7apO7q16V0) is a
 beautiful walkthrough of the idea.
 
 So here is the road we promised: an honest model of sampling, a periodic
