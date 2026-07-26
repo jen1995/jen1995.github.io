@@ -275,24 +275,25 @@ triangular filters, evenly spaced *in mel* — therefore narrow and dense at
 low frequencies, wide and sparse at high ones (bottom panel above). Now
 stack the triangles into a matrix $F$, **one filter per row**: each row is
 one triangle from the picture above, written out as its weights over all
-the frequency bins. With $60$ filters over the $257$ frequency rows of our
-spectrogram, $F$ is a $60 \times 257$ matrix:
+the frequency bins. With $80$ filters — the de-facto standard in speech
+synthesis; recognition systems often get by with $40$ — over the $257$
+frequency rows of our spectrogram, $F$ is an $80 \times 257$ matrix:
 
 ![The mel filter bank stacked into a matrix, one triangle per row](mel_matrix.png)
 
 The whole conversion is then a single matrix multiplication. One column of
 the spectrogram is a vector of $257$ magnitudes; multiplying by $F$ takes
-$60$ weighted sums of it — one sum per filter, each collecting the bins
+$80$ weighted sums of it — one sum per filter, each collecting the bins
 under its triangle. And multiplying $F$ by *all* the columns at once
 handles the entire recording in one stroke:
 
 $$
-M = F \cdot S, \qquad (60 \times 257) \cdot (257 \times T) = 60 \times T,
+M = F \cdot S, \qquad (80 \times 257) \cdot (257 \times T) = 80 \times T,
 $$
 
 where $T$ is the number of frames. A logarithm on top — the same dB story
 as before — and the result is the **mel-spectrogram**, every column
-squeezed from $257$ linear-frequency numbers into $60$ perceptually spaced
+squeezed from $257$ linear-frequency numbers into $80$ perceptually spaced
 ones:
 
 ![The spectrogram and its mel-compressed version](mel_spectrogram.png)
@@ -312,7 +313,7 @@ buy, in raw numbers? For our recording:
 |---|---|---|---|
 | waveform | $52\,225$ samples | $52\,225$ | $22\,050$ values per second |
 | spectrogram $S$ | $257 \times 405$ | $104\,085$ | $\approx 170$ columns per second |
-| mel-spectrogram $M$ | $60 \times 405$ | $24\,300$ | $\approx 170$ columns per second |
+| mel-spectrogram $M$ | $80 \times 405$ | $32\,400$ | $\approx 170$ columns per second |
 
 Two honest surprises in this table. First, the spectrogram is *not* a
 compression: overlapping frames see every sample about four times, so $S$
@@ -321,7 +322,8 @@ the *organization*: the time axis became $128$ times coarser — one column
 per hop instead of one value per sample — and in exchange each column
 spells out explicitly what the samples only implied: which frequencies are
 present at that moment. Second, the genuine shrinkage arrives only with the
-mel step: $M$ is less than half the raw waveform and a quarter of $S$ — and
+mel step: $M$ is about $60\%$ of the raw waveform and less than a third of
+$S$ — and
 yet, as the pictures show, still perfectly legible: the harmonics, the
 fricative bursts, the silences between words all survived. Fewer numbers,
 arranged so that the structure shows — that, in one line, is what audio
