@@ -166,7 +166,11 @@ $\Delta f = 8000 / 100 = 80$ Hz. That grid is too coarse to tell middle C
 (262 Hz) from the B just below it (247 Hz): both land in bin $k = 3$. To
 separate them you need $\Delta f$ around their 15 Hz gap — that is
 $N \approx 530$ samples, a fifteenth of a second. Music transcription from
-spectra is possible, but the resolution bill must be paid first.
+spectra is possible, but the resolution bill must be paid first. (A caveat
+for the careful: $\Delta f$ equal to the gap is the bare *threshold* — at
+that margin the two peaks only just stand apart, as the companion notebook
+at the end of this post shows; comfortable separation wants a finer grid
+still.)
 
 ![B3 and C4 on the frequency grid: one cell at N = 100, neighboring cells at N = 530](two_notes.png)
 
@@ -345,3 +349,13 @@ appear" is not the same as "which frequencies appear *when*". In **Part 3**
 we make the Fourier view local — slide a window along the recording, pay
 the resolution bill we just learned about at every stop, and stack the
 results into the picture this series is named after: the spectrogram.
+
+> Every computation of this part can be rerun and poked at: a [ready-made
+> notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/reading_the_dft.ipynb)
+> lives in this blog's repository and [opens in
+> Colab](https://colab.research.google.com/github/jen1995/jen1995.github.io/blob/main/notebooks/reading_the_dft.ipynb)
+> in one click. It also covers the corner cases the post glossed over: the
+> sine that vanishes at exactly the Nyquist frequency, what happens to the
+> Nyquist *bin* when $N$ is odd, and the factor-of-2 bookkeeping of
+> one-sided amplitude spectra (the same machinery scipy applies inside its
+> one-sided routines).
