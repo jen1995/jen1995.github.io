@@ -294,13 +294,34 @@ explains a number from Part 1: CD audio samples at 44.1 kHz because its
 ceiling must clear the ~20 kHz limit of human hearing, with a little
 engineering margin on top.
 
-One question this part leaves deliberately open: the ceiling is a statement
-about what the *grid* can represent — but the analog world does not consult
-our grid. What happens if the sound contained frequencies above $f_s/2$
-*before* sampling? They do not politely disappear; they fold back into the
-visible range under false names. That story — **aliasing**, and the theorem
-with three names that tells you exactly when you are safe from it — deserves
-a post of its own.
+In fact, the ceiling is the visible edge of one of the most celebrated
+results in all of signal processing — and we finally know enough to *state*
+it properly:
+
+> **The sampling theorem** (Kotelnikov, 1933; independently Shannon, 1949;
+> the frequency bears Nyquist's name — this theorem was discovered by
+> everyone). *A continuous signal containing no frequencies higher than $f$
+> Hz is **completely determined** by its samples taken $f_s = 2f$ times per
+> second.*
+
+Read the claim slowly, because it is startling. Between two neighboring
+samples, a continuous signal could seemingly wiggle any way it pleases —
+and the theorem says a band-limited one *cannot*: the samples pin down the
+entire continuous curve, exactly, nothing lost. This is the license behind
+everything we have done since Part 1 — the reason a list of numbers can
+honestly stand in for a sound wave, provided the wave had nothing above
+$f_s/2$ to begin with.
+
+And if it did? The ceiling is a statement about what the *grid* can
+represent — but the analog world does not consult our grid. Frequencies
+above $f_s/2$ do not politely disappear at sampling; they fold back into
+the visible range under false names — **aliasing**, the theorem's dark
+twin. The proof of the theorem, the folded world of aliasing, and even the
+fine print hiding in the statement above (sticklers: a sinusoid at exactly
+$f$ needs care) are a story for the end of this Fourier journey — the
+theorem with three names will get a post of its own, and by then the
+machinery we keep building will have turned its proof into a single
+picture. Consider it teased.
 
 ## Onward
 
