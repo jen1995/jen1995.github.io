@@ -370,7 +370,11 @@ spike carries all of its area at the single point $t_0$.
 <details>
 <summary><b>Proof of the sifting property</b> (a physicist's proof: we swap limits and integrals without asking permission)</summary>
 
-**Step 0: a notation.** For two signals, their **scalar (inner) product** is
+**Step 0: a notation.** For two real [square-integrable
+signals](https://en.wikipedia.org/wiki/Square-integrable_function) (the space
+$L^2$ — where the [Cauchy–Schwarz
+inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality)
+guarantees the integral below is finite), their **scalar (inner) product** is
 
 $$
 \langle f(t), g(t) \rangle = \int_{-\infty}^{\infty} f(t)\, g(t)\, dt
@@ -379,7 +383,12 @@ $$
 — the continuous cousin of the [dot product of
 vectors](https://en.wikipedia.org/wiki/Dot_product#Functions): multiply the
 two signals pointwise, then add everything up (with the sum, as usual by now,
-becoming an integral). In this notation, the sifting property reads
+becoming an integral; complex signals conjugate the second factor). One
+honest caveat in our physicist's spirit: the delta itself is famously *not*
+square-integrable, so for it the angle brackets are a convenient notation for
+the pairing the formula suggests — making that fully rigorous is the job of
+[distribution theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)).
+In this notation, the sifting property reads
 $\langle x(t), \delta(t - t_0) \rangle = x(t_0)$.
 
 **Step 1: the spike at zero.** Substitute the definition of $\delta$ as the
