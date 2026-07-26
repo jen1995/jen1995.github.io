@@ -192,7 +192,14 @@ second of signal.
 > $\Delta f = 40$ Hz grid. Why 25 ms? Short enough that speech barely
 > changes within one frame (quasi-stationarity), long enough to resolve
 > the harmonics of a typical voice. The next section is about why you
-> cannot have both at once.
+> cannot have both at once. And the third number, the sampling rate:
+> consumer audio's 44.1 kHz exists precisely so that the ceiling
+> [$f_s/2$ from Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
+> — here 22.05 kHz — clears the upper limit of the
+> [human hearing range](https://en.wikipedia.org/wiki/Hearing_range),
+> about 20 kHz. Speech systems, whose signal of interest ends far lower,
+> often settle for 16 kHz: an 8 kHz ceiling covers the voice comfortably
+> at a third of the samples.
 
 ## The trade-off you cannot escape
 
