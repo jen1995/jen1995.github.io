@@ -328,10 +328,20 @@ picture. Consider it teased.
 
 We can now read a spectrum: find any frequency's bin, trust the left half,
 ignore the mirror, and budget the resolution by the length of the recording.
-But notice what the DFT gives us: *one* spectrum for the *entire* signal.
-A chord is a fine thing to summarize with one spectrum — a melody is not:
-"which notes appear" is not the same as "which notes appear *when*". In
-**Part 3** we make the Fourier view local — slide a window along the
-recording, pay the resolution bill we just learned about at every stop, and
-stack the results into the picture this series is named after: the
-spectrogram.
+So let us read a *real* one. Here is a phrase of live speech — the title of
+this series, spoken aloud — and the magnitude spectrum of the entire
+recording:
+
+![A spoken phrase and the magnitude spectrum of the whole recording](speech_spectrum.png)
+
+Notice the asymmetry in what the two pictures know. In the waveform you can
+practically *count the words* — bursts of energy separated by silences —
+but no frequencies are visible. The spectrum knows all the frequencies: the
+tall peaks on the left are the voice and its harmonics. But it is *one*
+column of numbers for the whole phrase — every phoneme's frequencies
+stacked into the same bins, and *when* is gone entirely. A chord is a fine
+thing to summarize with one spectrum; a sentence is not: "which frequencies
+appear" is not the same as "which frequencies appear *when*". In **Part 3**
+we make the Fourier view local — slide a window along the recording, pay
+the resolution bill we just learned about at every stop, and stack the
+results into the picture this series is named after: the spectrogram.
