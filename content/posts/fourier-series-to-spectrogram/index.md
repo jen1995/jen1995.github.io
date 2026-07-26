@@ -519,8 +519,8 @@ systematic — for far rougher objects than continuous signals — is the job of
 
 The perfect instrument, then, measures $x[n]$ by integrating $x$ against
 $\delta(t - nT)$. Place one impulse at every grid point — the infinite train
-of shifted deltas is called the **Dirac comb** (dsplib's «решетчатая
-функция», the lattice function):
+of shifted deltas is called the **Dirac comb** (the Russian DSP literature
+knows it as the *lattice function*):
 
 $$
 \text{Ш}_T(t) = \sum_{n=-\infty}^{\infty} \delta(t - nT),
@@ -533,6 +533,8 @@ the comb (we follow the construction from ru.dsplib.org,
 $$
 x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_{n} x(t)\, \delta(t - nT).
 $$
+
+![Building the discrete signal: the analog signal, the Dirac comb, and their product](dirac_comb.png)
 
 Note that nothing here is approximate anymore: the finite-$\tau$ estimate
 $\hat{x}$ with its error stayed behind in the limit. This is the *exact*
