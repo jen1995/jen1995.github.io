@@ -101,8 +101,7 @@ in mind that the DFT's world is quantized to whole turns.
 > only the deviation.
 
 (For a lovely interactive treatment of these facts, see [chapter 5 of Brian
-McFee's *Digital Signals Theory*](https://brianmcfee.net/dstbook-site/content/ch05-fourier/DFT.html) —
-the source of several pictures this part reimagines.)
+McFee's *Digital Signals Theory*](https://brianmcfee.net/dstbook-site/content/ch05-fourier/DFT.html).)
 
 ## From the index to hertz
 
