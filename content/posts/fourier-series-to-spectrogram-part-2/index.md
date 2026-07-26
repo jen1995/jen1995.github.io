@@ -302,9 +302,9 @@ In fact, the ceiling is the visible edge of one of the most celebrated
 results in all of signal processing — and we finally know enough to *state*
 it properly:
 
-> **The sampling theorem** (Kotelnikov, 1933; independently Shannon, 1949;
-> the frequency bears Nyquist's name — this theorem was discovered by
-> everyone). *A continuous signal containing no frequencies higher than $f$
+> **[The sampling theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem)**
+> (Kotelnikov, 1933; independently Shannon, 1949; the frequency bears
+> Nyquist's name — this theorem was discovered by everyone). *A continuous signal containing no frequencies higher than $f$
 > Hz is **completely determined** by its samples taken $f_s = 2f$ times per
 > second.*
 
