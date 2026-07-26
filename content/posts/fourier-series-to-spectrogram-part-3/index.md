@@ -359,4 +359,4 @@ pitch and the cepstrum**. The four shades await.
 > built from scratch — and, as the finale, the signal reassembled *exactly*
 > from its complex STFT by overlap-add, with a note on why the
 > magnitude-only spectrogram cannot be inverted so easily (that is what
-> vocoders are for).
+> [vocoders](https://en.wikipedia.org/wiki/Vocoder) are for).
