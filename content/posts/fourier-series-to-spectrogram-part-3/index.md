@@ -181,8 +181,11 @@ second of signal.
 > dynamic range: the loud harmonics and the quiet fricative hiss differ by
 > factors of thousands; on a linear brightness scale everything but the
 > harmonics would be black. Second, the ear: loudness perception is itself
-> roughly logarithmic, so equal steps in dB feel like equal steps of
-> loudness. The picture is drawn the way it is heard.
+> roughly logarithmic — the
+> [Weber–Fechner law](https://en.wikipedia.org/wiki/Weber%E2%80%93Fechner_law):
+> what the senses register is the *relative* change of a stimulus, not the
+> absolute one — so equal steps in dB feel like equal steps of loudness.
+> The picture is drawn the way it is heard.
 
 > 💡 **Typical numbers for speech:** window $\approx 25$ ms, hop
 > $\approx 10$ ms — a hundred columns per second, each with a
