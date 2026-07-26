@@ -64,5 +64,12 @@ FFT (why O(n log n)), windowing and leakage, mel scale / mel-spectrograms
 ## Sources
 - The lecture deck + speaker notes (English, rich "fun facts")
 - `shades_draft.md` — Notion draft with the math skeleton
-- ru.dsplib.org is dead, but archived: https://web.archive.org/web/2024/https://ru.dsplib.org/
+- ru.dsplib.org is dead, but fully archived. Recipe: prepend
+  `https://web.archive.org/web/2026/` to any dsplib URL — the archive
+  redirects to the nearest snapshot. Verified working:
+  [discrete_introduction](http://web.archive.org/web/20260514053433/https://ru.dsplib.org/content/discrete_introduction/discrete_introduction.html)
+  (full text intact as of May 2026). Key chapters for the series: `content/dft/dft.html`,
+  `content/fourier_transform_delta_func/…`, `content/discrete_introduction/…`.
+  Consult and cite via archive links; do **not** copy the text into this
+  (public) repo — it is someone else's authored content.
 - Lena Voita of the Fourier world is yet to be found :)
