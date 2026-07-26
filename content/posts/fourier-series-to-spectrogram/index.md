@@ -479,9 +479,18 @@ exists — at a
 fixed $t$, the largest value of $\frac{1}{\tau} r_\tau(t)$ over all $\tau$ is
 $\frac{1}{2|t|}$, and $\frac{1}{2|t|}$ is not integrable near zero.
 
-The honest classical route runs in the opposite direction: take the limit of
-the integrals as the *definition* of the pairing, and compute it directly.
-For a fixed $\tau$ there is no delta anywhere in sight:
+The honest classical route runs in the opposite direction: swap the roles.
+Since "integrate the limit" is meaningless, we *declare* that the expression
+$\langle x(t), \delta(t) \rangle$ shall mean "the limit of the integrals":
+
+$$
+\langle x(t), \delta(t) \rangle \;\overset{\text{def}}{=}\; \lim_{\tau \to 0} \int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t)\, dt.
+$$
+
+At each fixed $\tau$ everything inside is classical — a bounded integrand,
+an ordinary integral — and only after integrating do we let $\tau \to 0$.
+This limit we can compute directly. For a fixed $\tau$ there is no delta
+anywhere in sight:
 
 $$
 \int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t)\, dt
