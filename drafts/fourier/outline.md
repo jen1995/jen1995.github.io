@@ -4,24 +4,32 @@ The angle that makes this series worth writing: **nobody walks the whole road fr
 the basic math to the spectrogram** — existing explanations all start from some
 intermediate point. We start from the very beginning and keep going.
 
-## Planned posts
+## The roadmap (order decided 2026-07-26)
 
-### 1. From the Fourier Series to the Spectrogram — split into three parts ✔
+Six posts in two acts. **Act one** — the three-part "From the Fourier Series
+to the Spectrogram". **Act two** — three follow-ups, in this order: Four
+Shades (introduces the Fourier *transform* and connects all four creatures)
+→ the Kotelnikov proof (pays the debt teased in Part 2) → F0 & the cepstrum
+(the finale: everything applied to the voice).
+
+### Act one. From the Fourier Series to the Spectrogram — three parts
 Based on the DSP lecture (see `lecture_digest.md`; deck: [Google Slides](https://docs.google.com/presentation/d/1Cte6w0t8yTJRFirde6GPxKB29VX3SrX1mhAkKYEN-n4/)).
-Decided 2026-07-26: three posts titled "…, Part 1/2/3" (Part 1 alone reached
-~5400 words).
 
-- **Part 1: From Sound to the DFT** — what is sound, analog → digital, why the
-  waveform is not enough, the Fourier series, the honest discrete-signal model
-  (deltas, sifting, comb), series → DFT. **Drafted in full**
-  (`content/posts/fourier-series-to-spectrogram-part-1/`), under review.
-- **Part 2: properties of the DFT** — what the $X[k]$ mean physically,
-  frequency resolution, conjugate symmetry, Nyquist. (Deck: DFT-properties
-  slides; roadmap in `post1_draft.md`.)
-- **Part 3: from the DFT to the spectrogram** — windows, STFT, leakage,
-  the spectrogram, mel scale (the perception/cochlea argument returns here).
+- **Part 1: From Sound to the DFT** — **published 2026-07-26** ✔
+  (`content/posts/fourier-series-to-spectrogram-part-1/`).
+- **Part 2: Reading the DFT** — **published 2026-07-26** ✔
+  (`content/posts/fourier-series-to-spectrogram-part-2/`), with the
+  companion notebook `notebooks/reading_the_dft.ipynb`.
+- **Part 3: from the DFT to the spectrogram** — windows, STFT, leakage
+  (teased in Part 2's "whole turns" section and notebook), the spectrogram,
+  mel scale (the perception/cochlea argument returns here). **Next up.**
 
-### 2. Four Shades of Fourier
+### Act two, post 1. Four Shades of Fourier
+Role in the series: introduces the **Fourier transform** proper (continuous
+time, continuous frequency — the one shade we have never defined) and builds
+the bridges between all four shades; the "discrete in one domain ⇔ periodic
+in the other" law, proved bottom-up for the DFT in Part 2, becomes the
+organizing principle of the whole 2×2 table.
 Title decided ✔ (Four/Fourier pun; the four shades are FS, FT, DTFT, DFT).
 Base text: `shades_draft.md` (from the Notion draft; formulas already in LaTeX).
 Centerpiece diagram (house SVG style): the 2×2 matrix —
@@ -39,7 +47,9 @@ TODOs inherited from the draft:
 - FT works for any integrable function — Zorich vol. II, p. 524
 - figures: redraw the YSDA speech-course screenshots in our style / regenerate in matplotlib
 
-### 3. The theorem with three names: Kotelnikov / Shannon–Nyquist
+### Act two, post 2. The theorem with three names: Kotelnikov / Shannon–Nyquist
+Promised explicitly in Part 2 (the theorem is stated there, with the
+"sinusoid at exactly $f$" fine print and aliasing both left as debts).
 Perfect reconstruction of a continuous signal from its samples, provided the
 spectrum is band-limited to $f_s/2$. Named differently in different
 traditions: Kotelnikov (1933), Shannon (1949), Nyquist (the critical rate),
@@ -51,7 +61,7 @@ don't overlap, the original spectrum is recoverable — cut one copy out, done)
 condition fails (wagon-wheel effect, why 44.1 kHz) → demos in matplotlib.
 Natural sequel to Four Shades: the periodized-spectrum picture *is* the proof.
 
-### 4. F0, pitch and the cepstrum: reading the voice
+### Act two, post 3 (the finale). F0, pitch and the cepstrum: reading the voice
 Source: TTS lecture deck ([Google Slides](https://docs.google.com/presentation/d/1hR4koanl61qFXNAk2SRp45gYcgxUAc5Xt6_UQJMJYmM/), slides 26–38; local copy in scratchpad).
 Arc: F0 & harmonics (Fourier series made flesh) → pitch as perception, the
 missing-fundamental effect → when F0 exists: voiced vs whispered/voiceless
