@@ -55,6 +55,15 @@ per period" rule wearing its discrete clothes: the DFT offers us $N$ probe
 frequencies — zero turns, one turn, two turns, … — and reports the signal's
 resemblance to each.
 
+These $N$ oscillations deserve a name, because they are more than measuring
+sticks: look back at the *inverse* DFT formula from Part 1 — it is
+$x[n] = \frac{1}{N} \sum_k X[k]\, w_k[n]$, the signal reassembled as a
+weighted sum of these very oscillations. So the set $w_0, \dots, w_{N-1}$
+is everything the DFT can *say*: the forward transform measures how much of
+each word the signal contains, the inverse composes the signal back out of
+the words. We will call this set the DFT's **vocabulary** — $N$ words, and
+nothing in between.
+
 Here is what the probes look like in the flesh — the beginning of the
 vocabulary, drawn over the same sampled signal for four different recording
 lengths:
