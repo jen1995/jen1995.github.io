@@ -620,10 +620,18 @@ $$
 
 so $c_{k+N} = c_k$: the coefficients repeat with period $N$. Of the infinitely
 many harmonics the Fourier series offered us, only $N$ are genuinely distinct.
-$N$ numbers in, $N$ numbers out — the books balance. And notice what we have
-just proved: *sampling in time made the spectrum periodic*. This is precisely
-the law from the Four Shades table at the top of the post — not an analogy, a
-theorem, and we walked into it bottom-up.
+$N$ numbers in, $N$ numbers out — the books balance.
+
+And notice that *both* laws from the Four Shades table at the top of the post
+have just fired, each with its own culprit. Our spectrum is **discrete** — a
+list of coefficients $c_k$ rather than a function of a continuous frequency —
+because we *periodized* the signal: that is the Fourier series' side of the
+bargain, baked in from the start. And the spectrum is **periodic** because
+the signal is *sampled*: look back at the computation — the whole proof of
+$c_{k+N} = c_k$ hangs on $e^{-2 \pi i n} = 1$, which is true only because $n$
+is an integer, i.e. because the signal lives on a grid. Periodic in time ⇒
+discrete in frequency; discrete in time ⇒ periodic in frequency. Not
+analogies — theorems, and we walked into both bottom-up.
 
 ### The Discrete Fourier Transform
 
