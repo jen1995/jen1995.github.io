@@ -1,7 +1,7 @@
 ---
 title: "From the Fourier Series to the Spectrogram, Part 1: From Sound to the DFT"
-date: 2026-07-24
-draft: true
+date: 2026-07-26
+draft: false
 tags: ["fourier", "dsp", "speech"]
 summary: "Part 1 of 3: from air pressure and a guitar string, through sampling and the Fourier series — to the DFT, derived honestly, delta functions and all."
 math: true
@@ -62,7 +62,7 @@ A computer, however, needs numbers, and the **Analog-to-Digital Converter
   (amplitude discretization).
 
 The result — a sequence of integers at a fixed rate — is **Pulse-Code
-Modulation (PCM)**, the format inside every WAV file. Two numbers fully describe
+Modulation (PCM)**, the format inside every `.wav` file. Two numbers fully describe
 the grid: the sampling rate (e.g. 44.1 kHz) and the bit depth (e.g. 16 bits).
 
 ![Sampling and quantization](sampling_quantization.png)
@@ -262,8 +262,8 @@ before all the mathematics? It is about to become the protagonist again:
 
 ![Reminder: the ADC turns a continuous signal into N numbers](adc_reminder.svg)
 
-This is what it left us with: $N$ numbers $x[0], \dots, x[N-1]$, measured
-every $T$ seconds. **Can we recover a spectrum from these points?** A spectrum
+This is what it left us with: $N$ numbers $x(0), x(T), \dots, x\big((N-1)T\big)$,
+measured every $T$ seconds. **Can we recover a spectrum from these points?** A spectrum
 means Fourier coefficients, and coefficients are integrals — so before
 computing anything, we owe the integral a well-definedness check. For a
 bounded function, the Riemann integral exists precisely when the function is
