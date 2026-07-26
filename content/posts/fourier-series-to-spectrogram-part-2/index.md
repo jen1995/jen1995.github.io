@@ -184,9 +184,16 @@ three twins), each component recoverable at a glance. This is the "hundreds
 of numbers → three meaningful ones" compression promised at the very start
 of Part 1 — delivered.
 
-What about the other half of the complex number? Each $X[k]$ carries a
-magnitude *and* a phase, and the phase stores where in its cycle the $k$-th
-oscillation starts — Part 1's $\phi_n$, one per harmonic. Much of speech
+What about the other half of the complex number? Write $X[k]$ in polar
+form — every complex number is a length times a direction:
+
+$$
+X[k] = |X[k]|\, e^{i \varphi_k}, \qquad \varphi_k = \arg X[k].
+$$
+
+The length $|X[k]|$ is the **magnitude** we have just been plotting; the
+angle $\varphi_k$ is the **phase**, and it stores where in its cycle the
+$k$-th oscillation starts — Part 1's $\phi_n$, one per harmonic. Much of speech
 processing works with magnitudes alone: what a vowel sounds like, which note
 was played, whether the hum is there — all of it lives in the magnitudes.
 The phase becomes essential the moment you need to rebuild the *waveform* —
