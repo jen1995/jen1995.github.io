@@ -45,6 +45,18 @@ callback to Four Shades) → limitations (subharmonics, voiced/unvoiced).
 Diagrams to draw: harmonic comb with period F0; cepstrum pipeline; missing
 fundamental illustration.
 
+### 4. The theorem with three names: Kotelnikov / Shannon–Nyquist
+Perfect reconstruction of a continuous signal from its samples, provided the
+spectrum is band-limited to $f_s/2$. Named differently in different
+traditions: Kotelnikov (1933), Shannon (1949), Nyquist (the critical rate),
+with Whittaker (1915) as the prequel — a naming story worth telling in itself.
+Arc: what "band-limited" means → the theorem statement → proof sketch through
+the Four Shades machinery (sampling makes the spectrum periodic; if the copies
+don't overlap, the original spectrum is recoverable — cut one copy out, done)
+→ sinc interpolation as the reconstruction formula → aliasing when the
+condition fails (wagon-wheel effect, why 44.1 kHz) → demos in matplotlib.
+Natural sequel to Four Shades: the periodized-spectrum picture *is* the proof.
+
 ### Later candidates
 FFT (why O(n log n)), windowing and leakage, mel scale / mel-spectrograms
 (bridge to the speech course), uncertainty principle.
