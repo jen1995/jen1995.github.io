@@ -276,9 +276,16 @@ f_{N/2} = \frac{N}{2} \cdot \frac{f_s}{N} = \frac{f_s}{2},
 $$
 
 is the **Nyquist frequency** — the ceiling of what a given sampling rate can
-represent, sitting always at exactly half of it. Everything above the
-ceiling and below $f_s$ is the mirror land we just mapped. So here is the
-full geography of the DFT's frequency axis on one picture:
+represent, sitting always at exactly half of it. Draw this axis onto the
+spectra from earlier, and the symmetry becomes something you can fold with
+your eyes:
+
+![The two spectra with the Nyquist mirror axis drawn in](nyquist_mirror.png)
+
+Everything above the ceiling and below $f_s$ is the mirror land we mapped in
+the previous section — present in the numbers, but carrying nothing new for
+a real signal. So here is the full geography of the DFT's frequency axis on
+one picture:
 
 ![The frequency axis of the DFT: resolution, Nyquist frequency, sampling rate](freq_axis_map.png)
 
