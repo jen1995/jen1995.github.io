@@ -86,8 +86,10 @@ $$
 
 The distribution $p(x)$ is obtained by marginalizing the joint distribution $p(x,z)$ over $z$:
 
-$$p(x) = \sum_{k=1}^K p(x,z=k) = \sum_{k=1}^K p(x \mid z=k) p(z=k) = \sum_{k=1}^K \lambda_k \mathcal{N}(\mu_k, \sigma_k^2)
-$$
+$$\begin{aligned}
+p(x) &= \sum_{k=1}^K p(x,z=k) = \sum_{k=1}^K p(x \mid z=k) p(z=k) \\
+     &= \sum_{k=1}^K \lambda_k \mathcal{N}(\mu_k, \sigma_k^2)
+\end{aligned}$$
 
 It turns out that $p(x)$ is described by a mixture of Gaussians and has a more complex form than $p(z)$ and $p(x \mid z)$:
 
@@ -117,8 +119,10 @@ That settles it. In the next section we continue with the optimization problem w
 
 Before trying to solve optimization problem $(1)$, let us think about how we could even compute such an integral. The first thing that comes to mind is to approximate it with the Monte Carlo method:
 
-$$p_\theta(x) = \int\limits_{Z^M} p_\theta(x \mid z) p_\theta(z) dz = \mathbb{E}_{z \sim p_\theta(z)} [p_\theta(x \mid z)] \approx \frac{1}{K} \sum_k p_\theta(x \mid z_k),
-$$
+$$\begin{aligned}
+p_\theta(x) &= \int\limits_{Z^M} p_\theta(x \mid z) p_\theta(z) dz = \mathbb{E}_{z \sim p_\theta(z)} [p_\theta(x \mid z)] \\
+            &\approx \frac{1}{K} \sum_k p_\theta(x \mid z_k),
+\end{aligned}$$
 
 where in the last step we use samples $z_k \sim p_\theta(z)$. However, if $z \in Z^M$ and $M$ is large enough, we run into the *curse of dimensionality* — the number of samples needed to cover $Z^M$ well grows exponentially with $M$:
 
@@ -159,8 +163,10 @@ $$
 $$= \mathbb{E}_{q_\phi(z \mid x)} \left[ \log \left( \frac{p_\theta(x,z)}{q_\phi(z \mid x)} \frac{q_\phi(z \mid x)}{p_\theta(z \mid x)} \right) \right] =
 $$
 
-$$= \underbrace{\mathbb{E}_{q_\phi(z \mid x)} \left[ \log \left( \frac{p_\theta(x,z)}{q_\phi(z \mid x)} \right) \right]}_{\mathcal{L}_{\theta,\phi}(x) \text{ (ELBO)}} + \underbrace{\mathbb{E}_{q_\phi(z \mid x)} \left[ \log \left( \frac{q_\phi(z \mid x)}{p_\theta(z \mid x)} \right) \right]}_{D_{KL}(q_\phi(z \mid x) \| p_\theta(z \mid x))}
-$$
+$$\begin{aligned}
+={} & \underbrace{\mathbb{E}_{q_\phi(z \mid x)} \left[ \log \left( \frac{p_\theta(x,z)}{q_\phi(z \mid x)} \right) \right]}_{\mathcal{L}_{\theta,\phi}(x) \text{ (ELBO)}} \\
+    & + \underbrace{\mathbb{E}_{q_\phi(z \mid x)} \left[ \log \left( \frac{q_\phi(z \mid x)}{p_\theta(z \mid x)} \right) \right]}_{D_{KL}(q_\phi(z \mid x) \| p_\theta(z \mid x))}
+\end{aligned}$$
 
 The second term in the last equality is the $KL$ divergence between $q_\phi(z \mid x)$ and $p_\theta(z \mid x)$, which, as is well known, is nonnegative:
 
@@ -211,8 +217,10 @@ So, suppose our task is to compute the expectation $\mu = \mathbb{E}_p[f(x)] = \
 
 Let $q$ be a probability density function, defined and positive on $\mathcal{D}$, that allows us to sample examples from some narrow subset of interest. Our task is to switch from sampling from $p$ to sampling from $q$ when estimating $\mu$. Since the mean $\mathbb{E}_q[f(x)]$ is, generally speaking, not equal to $\mu$, we write the following:
 
-$$\mu = \mathbb{E}_p[f(x)] = \int_{\mathcal{D}} f(x) p(x) dx = \int_{\mathcal{D}} \frac{f(x)p(x)}{q(x)} q(x) dx = \mathbb{E}_q \left[ \frac{f(x)p(x)}{q(x)} \right]
-$$
+$$\begin{aligned}
+\mu = \mathbb{E}_p[f(x)] &= \int_{\mathcal{D}} f(x) p(x) dx = \int_{\mathcal{D}} \frac{f(x)p(x)}{q(x)} q(x) dx \\
+                         &= \mathbb{E}_q \left[ \frac{f(x)p(x)}{q(x)} \right]
+\end{aligned}$$
 
 The original density $p$ is called the nominal distribution, and the density $q$ the importance distribution. The likelihood ratio $\frac{p(x)}{q(x)}$ compensates for the bias introduced when switching from $p$ to $q$.
 
@@ -438,8 +446,10 @@ $$
 
 If a Gaussian $\mathcal{N}(f_\theta(z), \sigma^2)$, then
 
-$$\log p_\theta(x \mid z) = \sum_{j=1}^D \log p_\theta(x_j \mid z) = \sum_{j=1}^D \log \left( \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x_j - f_{\theta,j}(z))^2}{2\sigma^2} \right) \right) =
-$$
+$$\begin{aligned}
+\log p_\theta(x \mid z) &= \sum_{j=1}^D \log p_\theta(x_j \mid z) \\
+&= \sum_{j=1}^D \log \left( \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x_j - f_{\theta,j}(z))^2}{2\sigma^2} \right) \right) =
+\end{aligned}$$
 
 $$= -\frac{D}{2} \log 2\pi - D \log \sigma - \frac{1}{2\sigma^2} \sum_{j=1}^D (x_j - f_{\theta,j}(z))^2
 $$
@@ -498,13 +508,17 @@ A noticeable transition is visible between dimensions 2 and 5; further increase 
 
 Sometimes we may want to generate not just an arbitrary object from the dataset, but one belonging to a particular group or class. Earlier we wrote out an equation for $\log p_\theta(x)$:
 
-$$\log p_\theta(x) = \mathbb{E}_{q_\phi(z \mid x)} [\log p_\theta(x \mid z)] - D_{KL}(q_\phi(z \mid x) \| p_\theta(z)) + D_{KL}(q_\phi(z \mid x) \| p_\theta(z \mid x))
-$$
+$$\begin{aligned}
+\log p_\theta(x) ={} & \mathbb{E}_{q_\phi(z \mid x)} [\log p_\theta(x \mid z)] \\
+& - D_{KL}(q_\phi(z \mid x) \| p_\theta(z)) + D_{KL}(q_\phi(z \mid x) \| p_\theta(z \mid x))
+\end{aligned}$$
 
 We can make all the distributions participating in this equation conditional on a variable $y$:
 
-$$\log p_\theta(x \mid y) = \mathbb{E}_{q_\phi(z \mid x, y)} [\log p_\theta(x \mid z, y)] - D_{KL}(q_\phi(z \mid x, y) \| p_\theta(z \mid y)) + D_{KL}(q_\phi(z \mid x, y) \| p_\theta(z \mid x, y))
-$$
+$$\begin{aligned}
+\log p_\theta(x \mid y) ={} & \mathbb{E}_{q_\phi(z \mid x, y)} [\log p_\theta(x \mid z, y)] \\
+& - D_{KL}(q_\phi(z \mid x, y) \| p_\theta(z \mid y)) + D_{KL}(q_\phi(z \mid x, y) \| p_\theta(z \mid x, y))
+\end{aligned}$$
 
 The variable $y$ can be the label of the object $x$, or an entirely arbitrary tensor characterizing $x$ in some way. Instead of a single $p_\theta(z)$ shared by all $x$ in the training set, there is now a separate prior distribution $p_\theta(z \mid y)$ for each value of $y$.
 
@@ -612,8 +626,10 @@ $$
 
 During training, a uniform distribution $p(z)=\frac 1K$ is used as the prior over the latent space, so the term $D_{KL}(q(z \mid x) \| p(z))$ turns out to be constant and equal to $\log K$:
 
-$$D_{KL}(q(z \mid x) \| p(z)) = -\sum_{k=1}^K q(z = k \mid x) \log \left( \frac{p(z)}{q(z = k \mid x)} \right) = \log K
-$$
+$$\begin{aligned}
+D_{KL}(q(z \mid x) \| p(z)) &= -\sum_{k=1}^K q(z = k \mid x) \log \left( \frac{p(z)}{q(z = k \mid x)} \right) \\
+&= \log K
+\end{aligned}$$
 
 At the points where $q(z = k \mid x) = 0$, the next-to-last expression is extended by zero by continuity. Thus, the ELBO for such distributions takes the form
 
@@ -1113,7 +1129,10 @@ The ELBO itself remains a valid lower bound on $\log p_\theta(x)$ — but for th
 
 Finally, training the prior in the second stage is not a departure from the ELBO either. For the two-stage model $p(x) = \sum_z p_\psi(z) p_\theta(x \mid z)$, with the encoder and decoder frozen,
 
-$$\log p(x) \ge \mathbb{E}_{q_\phi(z \mid x)} [\log p_\theta(x \mid z)] + \mathbb{E}_{q_\phi(z \mid x)} [\log p_\psi(z)] - \mathbb{E}_{q_\phi(z \mid x)} [\log q_\phi(z \mid x)],$$
+$$\begin{aligned}
+\log p(x) \ge{} & \mathbb{E}_{q_\phi(z \mid x)} [\log p_\theta(x \mid z)] + \mathbb{E}_{q_\phi(z \mid x)} [\log p_\psi(z)] \\
+& - \mathbb{E}_{q_\phi(z \mid x)} [\log q_\phi(z \mid x)],
+\end{aligned}$$
 
 and maximization over $\psi$ reduces to $\mathbb{E}_{q_\phi(z \mid x)}[\log p_\psi(z)] \to \max$ — that is, exactly to training PixelCNN or the Transformer by maximum likelihood on the codes produced by the encoder. So the two-stage scheme is coordinate ascent on a valid ELBO of the final model.
 

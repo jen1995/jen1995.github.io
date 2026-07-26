@@ -122,9 +122,11 @@ $$
 with the coefficients
 
 $$
-a_0 = \frac{1}{P} \int_{-P/2}^{P/2} x(t)\, dt, \qquad
+\begin{gathered}
+a_0 = \frac{1}{P} \int_{-P/2}^{P/2} x(t)\, dt, \\
 a_n = \frac{2}{P} \int_{-P/2}^{P/2} x(t) \cos\!\left(2 \pi \frac{n}{P} t \right) dt, \qquad
 b_n = \frac{2}{P} \int_{-P/2}^{P/2} x(t) \sin\!\left(2 \pi \frac{n}{P} t \right) dt.
+\end{gathered}
 $$
 
 The building blocks are sines and cosines whose frequencies are integer
@@ -144,9 +146,10 @@ disguise. Using the cosine-of-difference formula, the pair collapses into a
 single cosine with an amplitude and a shift:
 
 $$
-x(t) = a_0 + \sum_{n = 1}^\infty A_n \cos\!\left( 2 \pi \frac{n}{P} t - \phi_n\right),
-\qquad
-A_n = \sqrt{a_n^2 + b_n^2}, \quad \phi_n = \operatorname{atan2}(b_n, a_n).
+\begin{gathered}
+x(t) = a_0 + \sum_{n = 1}^\infty A_n \cos\!\left( 2 \pi \frac{n}{P} t - \phi_n\right), \\
+A_n = \sqrt{a_n^2 + b_n^2}, \qquad \phi_n = \operatorname{atan2}(b_n, a_n).
+\end{gathered}
 $$
 
 Here $A_n$ is the **magnitude** of the $n$-th harmonic, $\frac{n}{P}$ its
@@ -422,9 +425,11 @@ Applying this to our integrand, the $\tau$ of the mesh cancels the
 $\frac{1}{\tau}$ of the kernel:
 
 $$
+\begin{aligned}
 \langle x(t), \delta(t) \rangle
-= \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} x(n\tau)\, \tfrac{1}{\tau} r_\tau(n\tau)\, \tau
-= \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} x(n\tau)\, r_\tau(n\tau).
+&= \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} x(n\tau)\, \tfrac{1}{\tau} r_\tau(n\tau)\, \tau \\
+&= \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} x(n\tau)\, r_\tau(n\tau).
+\end{aligned}
 $$
 
 To be clear, *this* is where the genre's quiet cheat actually lives. Honestly
@@ -548,9 +553,11 @@ neighborhood of a sampling point $t_0 = kT$, taking limits $kT \pm \tau$ with
 $\tau \lt T$ so that exactly one tooth of the comb falls inside:
 
 $$
+\begin{aligned}
 \int_{kT - \tau}^{kT + \tau} x(t) \left( \sum_{n} \delta(t - nT) \right) dt
-= \int_{kT - \tau}^{kT + \tau} x(t)\, \delta(t - kT)\, dt
-= x(kT),
+&= \int_{kT - \tau}^{kT + \tau} x(t)\, \delta(t - kT)\, dt \\
+&= x(kT),
+\end{aligned}
 $$
 
 where the first equality holds because all the deltas except $n = k$ sit
@@ -601,8 +608,8 @@ the exponential at its grid point $t = nT$:
 
 $$
 \begin{aligned}
-c_k &= \frac{1}{NT} \int_{0}^{NT} x_d(t)\, e^{-2 \pi i \frac{k}{NT} t}\, dt
-     = \frac{1}{NT} \sum_{n=0}^{N-1} \int_{0}^{NT} x(t)\, \delta(t - nT)\, e^{-2 \pi i \frac{k}{NT} t}\, dt \\
+c_k &= \frac{1}{NT} \int_{0}^{NT} x_d(t)\, e^{-2 \pi i \frac{k}{NT} t}\, dt \\
+    &= \frac{1}{NT} \sum_{n=0}^{N-1} \int_{0}^{NT} x(t)\, \delta(t - nT)\, e^{-2 \pi i \frac{k}{NT} t}\, dt \\
     &= \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k}{NT} \cdot nT}
      = \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k n}{N}}.
 \end{aligned}

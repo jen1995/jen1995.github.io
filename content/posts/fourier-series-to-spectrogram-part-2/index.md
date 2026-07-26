@@ -146,9 +146,11 @@ bins? Compute the coefficient at index $N - k$ for a real-valued signal,
 using $e^{-2\pi i n} = 1$ one more time:
 
 $$
-X[N-k] = \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{(N-k) n}{N}}
-       = \sum_{n=0}^{N-1} x[n]\, e^{2 \pi i \frac{k n}{N}}
-       = \overline{X[k]}.
+\begin{aligned}
+X[N-k] &= \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{(N-k) n}{N}} \\
+       &= \sum_{n=0}^{N-1} x[n]\, e^{2 \pi i \frac{k n}{N}}
+        = \overline{X[k]}.
+\end{aligned}
 $$
 
 The second half of the spectrum is the complex conjugate of the first, read
