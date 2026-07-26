@@ -30,8 +30,13 @@ Slide a short **window** along the recording and take the DFT of each
 position separately. Each windowed stretch is called an **(acoustic)
 frame**, and two numbers govern the slicing: the **window length** $W$ —
 how many samples each frame holds — and the **hop length** $H$ — how far
-the window advances between frames. With $H \lt W$ the frames overlap,
-and every sample gets seen by several of them:
+the window advances between frames. With $H \lt W$ the frames overlap, and
+every sample gets seen by several of them. The overlap is not decoration:
+sounds do not schedule themselves to fit our slicing, and an event that
+falls on a frame boundary would otherwise be chopped in half — overlapping
+frames guarantee that every moment is also seen *whole*, near the middle of
+some frame. (A second, sneakier reason will surface when we meet window
+functions in a couple of sections.)
 
 ![A recording cut into overlapping frames](framing.png)
 
@@ -43,10 +48,16 @@ $$
 \mathrm{STFT}[m, k] = \sum_{n=0}^{W-1} x[m H + n]\; w[n]\; e^{-2 \pi i \frac{k n}{W}},
 $$
 
-where $w[n]$ is a **window function** whose job we are about to discover —
-for now, imagine $w[n] \equiv 1$, a plain rectangular cutout. The result is
-indexed by *two* integers: $k$ still means "which frequency", exactly as in
-Part 2, and the new index $m$ means "which moment". This is the whole idea;
+Unpack the ingredients. $W$ and $H$ are the window and hop lengths from the
+figure, both in samples; $x[mH + n]$ walks through the $m$-th frame — its
+first sample sits $m$ hops from the start of the recording. Note the two
+jobs $W$ does: it is the number of samples summed *and* the size of the DFT
+in the exponent — each frame gets the full Part 2 treatment as if it were
+an entire recording of length $W$. Finally, $w[n]$ is a **window function**
+whose job we are about to discover — for now, imagine $w[n] \equiv 1$, a
+plain rectangular cutout. The result is indexed by *two* integers: $k$
+still means "which frequency", exactly as in Part 2, and the new index $m$
+means "which moment". This is the whole idea;
 the rest of the post is fine print. But in signal processing, as we have
 learned twice already, the fine print is where the theorems live.
 
@@ -105,6 +116,15 @@ Windowing trades a little blur near the true frequency for enormous
 cleanliness far from it. (There is a whole zoo of windows — Hamming,
 Blackman, Kaiser — each choosing this trade slightly differently; the Hann
 window is the workhorse default in speech.)
+
+And here is the promised second reason for overlapping frames: a windowed
+frame is nearly *deaf at its own edges* — the taper multiplies the
+edge samples by almost zero. If the frames merely touched ($H = W$), the
+signal near every boundary would go essentially unheard. With enough
+overlap, what one frame tapers away sits at full volume near the middle of
+a neighboring frame; the classic choice $H = W/2$ makes the Hann windows
+sum to a constant, so every sample gets exactly its fair share of
+attention.
 
 ## The spectrogram
 
