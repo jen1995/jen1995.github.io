@@ -55,6 +55,18 @@ per period" rule wearing its discrete clothes: the DFT offers us $N$ probe
 frequencies — zero turns, one turn, two turns, … — and reports the signal's
 resemblance to each.
 
+Turn that around, and it becomes a restriction important enough to put in
+bold: **whole numbers of turns are all the DFT has.** Its basis contains the
+constant ($k = 0$) and the oscillations that fit a whole number of times
+into the recording — nothing else. A tone that completes, say, two and a
+half turns over our $N$ samples is simply not in the vocabulary: no single
+$X[k]$ is "its" coefficient. Real recordings contain such tones all the
+time, of course, and the DFT must express them *somehow* — smearing them
+across the whole-turn vocabulary it does have. The consequences of that
+smearing (it goes by the name *spectral leakage*) will matter a great deal
+when we build the spectrogram in Part 3; for now, keep in mind that the
+DFT's world is quantized to whole turns.
+
 Here is what a probe looks like in the flesh: the $k = 1$ basis oscillation,
 drawn in orange over the same sampled signal for four different recording
 lengths. One full turn per recording — *whatever the recording turns out to
