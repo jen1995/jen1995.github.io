@@ -35,6 +35,16 @@ TODOs inherited from the draft:
 - FT works for any integrable function — Zorich vol. II, p. 524
 - figures: redraw the YSDA speech-course screenshots in our style / regenerate in matplotlib
 
+### 3. F0, pitch and the cepstrum: reading the voice
+Source: TTS lecture deck ([Google Slides](https://docs.google.com/presentation/d/1hR4koanl61qFXNAk2SRp45gYcgxUAc5Xt6_UQJMJYmM/), slides 26–38; local copy in scratchpad).
+Arc: F0 & harmonics (Fourier series made flesh) → pitch as perception, the
+missing-fundamental effect → when F0 exists: voiced vs whispered/voiceless
+(reading spectrograms in practice) → finding F0: periodicity *of the spectrum*
+→ the cepstrum (FFT of the log-spectrum, quefrency; "T became 1/T" duality
+callback to Four Shades) → limitations (subharmonics, voiced/unvoiced).
+Diagrams to draw: harmonic comb with period F0; cepstrum pipeline; missing
+fundamental illustration.
+
 ### Later candidates
 FFT (why O(n log n)), windowing and leakage, mel scale / mel-spectrograms
 (bridge to the speech course), uncertainty principle.
