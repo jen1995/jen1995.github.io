@@ -167,6 +167,8 @@ separate them you need $\Delta f$ around their 15 Hz gap — that is
 $N \approx 530$ samples, a fifteenth of a second. Music transcription from
 spectra is possible, but the resolution bill must be paid first.
 
+![B3 and C4 on the frequency grid: one cell at N = 100, neighboring cells at N = 530](two_notes.png)
+
 ## The spectrum, at last
 
 We can now do properly what Part 1 could only preview: plot the magnitudes
