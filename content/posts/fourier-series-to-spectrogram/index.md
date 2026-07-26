@@ -564,10 +564,14 @@ what the naive model could not do.
 > 💡 **A units check** (a detail dsplib is careful about, and most sources
 > skip): $\delta(t)$ has dimension $1/\text{time}$ — its area over time is
 > the dimensionless $1$. So if $x(t)$ is in volts, the model $x_d(t)$ is in
-> volts *per second*: it is a **density**, not a value. The volts come back
-> when you integrate — as we just saw. Keep this in mind whenever a stray $T$
-> or $\frac{1}{T}$ appears in sampling formulas — it is usually this density
-> speaking.
+> volts *per second*: it is a **density**, not a value — in the same sense as
+> a probability density, whose pointwise values are not probabilities (they
+> can even exceed $1$); only its integrals are. Here too the pointwise values
+> of $x_d$ are useless — zero between the grid points, "infinite" on them —
+> and the sample lives in the impulse's *area*, not its height. The volts
+> come back when you integrate — as we just saw. Keep this in mind whenever
+> a stray $T$ or $\frac{1}{T}$ appears in sampling formulas — it is usually
+> this density speaking.
 
 ### Now bring in the series
 
