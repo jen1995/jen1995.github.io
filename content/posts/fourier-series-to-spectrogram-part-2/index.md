@@ -55,6 +55,13 @@ per period" rule wearing its discrete clothes: the DFT offers us $N$ probe
 frequencies — zero turns, one turn, two turns, … — and reports the signal's
 resemblance to each.
 
+Here is what a probe looks like in the flesh: the $k = 1$ basis oscillation,
+drawn in orange over the same sampled signal for four different recording
+lengths. One full turn per recording — *whatever the recording turns out to
+be*:
+
+![The k = 1 basis oscillation over a sampled signal, for four recording lengths](basis_stretch.png)
+
 > 💡 **The $k = 0$ probe** makes zero turns: $w_0[n] \equiv 1$, and
 > $X[0] = \sum_n x[n]$ is just $N$ times the *average* of the signal. Audio
 > engineers call it the **DC component** (from "direct current" — the
@@ -91,10 +98,8 @@ than $\Delta f$.
 Now, a question worth pausing on. The sampling rate is not really ours to
 choose — it is a property of the microphone and the ADC, fixed in hardware.
 The one knob we do control is $N$: how many samples we feed the transform.
-**What exactly does that knob turn?** Watch the $k = 1$ basis oscillation —
-"one turn per recording" — as $N$ grows at a fixed sampling rate:
-
-![The k = 1 basis stretches as N grows at a fixed sampling rate](basis_stretch.png)
+**What exactly does that knob turn?** Look again at the probe picture in the
+previous section — it holds the answer.
 
 The basis rides the *window*, not the clock: more samples at the same rate
 means a longer recording, and the one turn of $w_1$ spreads over it — its
