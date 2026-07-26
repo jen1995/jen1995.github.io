@@ -122,9 +122,26 @@ frame is nearly *deaf at its own edges* — the taper multiplies the
 edge samples by almost zero. If the frames merely touched ($H = W$), the
 signal near every boundary would go essentially unheard. With enough
 overlap, what one frame tapers away sits at full volume near the middle of
-a neighboring frame; the classic choice $H = W/2$ makes the Hann windows
-sum to a constant, so every sample gets exactly its fair share of
-attention.
+a neighboring frame — and the classic choice $H = W/2$ does something
+almost magical: the shifted Hann windows sum to *exactly* one. No magic,
+just a half-period shift flipping the sign of the cosine:
+
+$$
+\begin{aligned}
+w[n] + w\!\left[n + \tfrac{W}{2}\right]
+&= \tfrac{1}{2}\left(1 - \cos\tfrac{2\pi n}{W}\right) + \tfrac{1}{2}\left(1 + \cos\tfrac{2\pi n}{W}\right) \\
+&= 1.
+\end{aligned}
+$$
+
+![Shifted Hann windows and their sum: flat at hop W/2, rippling at hop 3W/4](hann_cola.png)
+
+Every sample gets exactly its fair share of attention — while at a lazier
+hop the sum ripples, and the signal near the seams is systematically
+underheard. (A technicality for the careful: exact constancy holds for the
+*periodic* variant of the Hann window, with $W$ rather than $W - 1$ in the
+denominator — a one-sample difference that matters only when you need to
+reconstruct the signal from its frames.)
 
 ## The spectrogram
 
