@@ -254,13 +254,14 @@ sampled signal even *is* as a mathematical object.
 
 ### An honest model of a discrete signal
 
-After the ADC we hold $N$ numbers $x[0], \dots, x[N-1]$, measured every $T$
-seconds — it has been a while since the digitization section, so here is the
-converter again:
+Remember the Analog-to-Digital Converter from the digitization section, back
+before all the mathematics? It is about to become the protagonist again:
 
 ![Reminder: the ADC turns a continuous signal into N numbers](adc_reminder.svg)
 
-The Fourier series machinery wants a function of continuous time, so let us
+This is what it left us with: $N$ numbers $x[0], \dots, x[N-1]$, measured
+every $T$ seconds. The Fourier series machinery wants a function of
+continuous time, so let us
 build one out of our samples in the most straightforward way imaginable:
 keep the measured values at the grid points, put zero everywhere else,
 
