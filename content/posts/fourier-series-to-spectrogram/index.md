@@ -575,7 +575,14 @@ what the naive model could not do.
 
 ### Now bring in the series
 
-The Fourier series has one more requirement: a *periodic* function. Our
+Time to cash in. Remember where this whole detour started: we had $N$
+samples out of the ADC and wanted their spectrum, but on the naive model the
+Fourier coefficient formula returned $c_k \equiv 0$ — the integrals looked
+straight through the isolated points. That is what sent us rebuilding the
+model. Now we hold $x_d$, whose integrals *do* see the samples — so this is
+attempt number two at the very same computation.
+
+The Fourier series has one more requirement, though: a *periodic* function. Our
 recording is time-limited — so extend it, gluing copies of the $N$-sample
 stretch end to end. The smallest period that works is $P = NT$, the duration
 of the recording itself:
