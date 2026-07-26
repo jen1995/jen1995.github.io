@@ -165,9 +165,9 @@ this much.*
 > the opposite corner. The walls reflect the sound, echoes pile on top of each
 > other — yet the recording is still a 440 Hz tone: louder or quieter, shifted
 > in time, but at the same frequency. The reason is one line of trigonometry:
-> echoes are delayed, scaled copies, and a sum of sinusoids of one frequency —
+> echoes are delayed, scaled copies, and [a sum of sinusoids of one frequency —
 > whatever their amplitudes and shifts — is again a sinusoid of that
-> frequency.
+> frequency](https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Linear_combinations).
 >
 > ![A room as a system: echoes are delayed scaled copies; the output tone keeps the input frequency](room_echoes.svg)
 >
