@@ -55,24 +55,34 @@ per period" rule wearing its discrete clothes: the DFT offers us $N$ probe
 frequencies — zero turns, one turn, two turns, … — and reports the signal's
 resemblance to each.
 
-Turn that around, and it becomes a restriction important enough to put in
-bold: **whole numbers of turns are all the DFT has.** Its basis contains the
-constant ($k = 0$) and the oscillations that fit a whole number of times
-into the recording — nothing else. A tone that completes, say, two and a
-half turns over our $N$ samples is simply not in the vocabulary: no single
-$X[k]$ is "its" coefficient. Real recordings contain such tones all the
-time, of course, and the DFT must express them *somehow* — smearing them
-across the whole-turn vocabulary it does have. The consequences of that
-smearing (it goes by the name *spectral leakage*) will matter a great deal
-when we build the spectrogram in Part 3; for now, keep in mind that the
-DFT's world is quantized to whole turns.
+Here is what the probes look like in the flesh — the beginning of the
+vocabulary, drawn over the same sampled signal for four different recording
+lengths:
 
-Here is what a probe looks like in the flesh: the $k = 1$ basis oscillation,
-drawn in orange over the same sampled signal for four different recording
-lengths. One full turn per recording — *whatever the recording turns out to
-be*:
+![The lowest DFT probes — k = 1, 2, 3 — over a sampled signal, for four recording lengths](basis_stretch.png)
 
-![The k = 1 basis oscillation over a sampled signal, for four recording lengths](basis_stretch.png)
+In every panel the bold orange curve is the $k = 1$ probe — **the lowest
+oscillating frequency the basis has**; the fainter curves behind it are
+$k = 2$ and $k = 3$, twice and three times faster. One full turn per
+recording, *whatever the recording turns out to be* — and that is worth
+staring at while $N$ is small. At $N = 4$ even the slowest word in the
+vocabulary races through its full turn before the signal has done anything
+at all: every probe the DFT owns is far too fast for this signal, and a good
+description is simply not on offer. Only as the recording grows does the
+vocabulary reach down to where the signal actually lives — by $N = 25$ the
+lowest probe finally oscillates at almost the signal's own pace.
+
+Turn the "whole turns" rule around, and it becomes a restriction important
+enough to put in bold: **whole numbers of turns are all the DFT has.** Its
+basis contains the constant ($k = 0$) and the oscillations that fit a whole
+number of times into the recording — nothing else. A tone that completes,
+say, two and a half turns over our $N$ samples is simply not in the
+vocabulary: no single $X[k]$ is "its" coefficient. Real recordings contain
+such tones all the time, of course, and the DFT must express them *somehow*
+— smearing them across the whole-turn vocabulary it does have. The
+consequences of that smearing (it goes by the name *spectral leakage*) will
+matter a great deal when we build the spectrogram in Part 3; for now, keep
+in mind that the DFT's world is quantized to whole turns.
 
 > 💡 **The $k = 0$ probe** makes zero turns: $w_0[n] \equiv 1$, and
 > $X[0] = \sum_n x[n]$ is just $N$ times the *average* of the signal. Audio
