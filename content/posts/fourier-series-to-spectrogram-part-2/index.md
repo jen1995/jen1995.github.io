@@ -267,7 +267,9 @@ $$
 
 — the sequence $+1, -1, +1, -1, \dots$, flipping sign at every single
 sample. No oscillation representable on the grid can flip faster: there is
-nothing between the samples to flip *in*. Its physical frequency,
+nothing between the samples to flip *in*. Its physical frequency comes from
+the bin-to-hertz formula $f_k = k \frac{f_s}{N}$ of the resolution section,
+with $k = N/2$ plugged in:
 
 $$
 f_{N/2} = \frac{N}{2} \cdot \frac{f_s}{N} = \frac{f_s}{2},
