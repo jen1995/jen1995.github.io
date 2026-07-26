@@ -184,10 +184,9 @@ this much.*
 > sound is made of.) That is *why* sound is built out of sinusoids in the first
 > place, and the quasi-periodicity of the previous argument is not a lucky
 > accident but physics. (Why this happens — and why it earns sinusoids the
-> grand title of *eigenfunctions of linear time-invariant systems* — deserves
-> its own discussion later in this series; for a very accessible standalone
-> account, see [chapter 5 of The Scientist and Engineer's Guide to
-> DSP](https://www.dspguide.com/ch5.htm).) Third, stability. To compare fairly, fix the
+> grand title of *eigenfunctions of linear time-invariant systems* — is a
+> story of its own; for a very accessible account, see [chapter 5 of The
+> Scientist and Engineer's Guide to DSP](https://www.dspguide.com/ch5.htm).) Third, stability. To compare fairly, fix the
 > reference point — the moment you press "record" — and delay the signal past
 > it by $\tau$. The Fourier description barely notices: delaying the
 > signal turns each harmonic $A_n \cos(2\pi \frac{n}{P} t - \phi_n)$ into

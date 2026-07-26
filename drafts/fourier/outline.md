@@ -59,7 +59,9 @@ fundamental illustration.
 
 ### Later candidates
 FFT (why O(n log n)), windowing and leakage, mel scale / mel-spectrograms
-(bridge to the speech course), uncertainty principle.
+(bridge to the speech course), uncertainty principle, LTI systems &
+convolution (sinusoids as eigenfunctions, why frequencies never mix — the
+post-1 inset links dspguide ch. 5 for now and deliberately makes no promise).
 
 ## Sources
 - The lecture deck + speaker notes (English, rich "fun facts")
