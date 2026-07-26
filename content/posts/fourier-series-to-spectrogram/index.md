@@ -260,21 +260,33 @@ before all the mathematics? It is about to become the protagonist again:
 ![Reminder: the ADC turns a continuous signal into N numbers](adc_reminder.svg)
 
 This is what it left us with: $N$ numbers $x[0], \dots, x[N-1]$, measured
-every $T$ seconds. The Fourier series machinery wants a function of
-continuous time, so let us
-build one out of our samples in the most straightforward way imaginable:
-keep the measured values at the grid points, put zero everywhere else,
+every $T$ seconds. **Can we recover a spectrum from these points?** A spectrum
+means Fourier coefficients, and coefficients are integrals — so before
+computing anything, we owe the integral a well-definedness check. For a
+bounded function, the Riemann integral exists precisely when the function is
+continuous *almost everywhere*: its discontinuities must form a set of measure
+zero — this is [Lebesgue's integrability
+criterion](https://en.wikipedia.org/wiki/Riemann_integral#Integrability).
+
+Our samples are not yet a function of continuous time, so let us complete
+them in the most straightforward way imaginable: keep the measured values at
+the grid points, put zero everywhere else,
 
 $$
 \tilde{x}(t) =
 \begin{cases}
 x(nT), & t = nT, \quad n = 0, \dots, N-1, \\
-0, & t \in [0, NT], \; t \neq nT,
+0, & t \in [0, NT], \; t \neq nT.
 \end{cases}
 $$
 
-extend $\tilde{x}$ periodically (the series insists), and compute the Fourier
-coefficients:
+![The naive completion: samples at the grid points, zero elsewhere](naive_completion.png)
+
+Does $\tilde{x}$ pass the check? It is bounded; and it is discontinuous only
+at the grid points — finitely many on one period, and still just countably
+many after the periodic extension that the series insists on. A countable set
+has measure zero — continuous almost everywhere, check. The coefficients are
+well-defined, and we may integrate with a clear conscience:
 
 $$
 c_k = \frac{1}{P} \int_{0}^{P} \tilde{x}(t)\, e^{-2 \pi i \frac{k}{P} t}\, dt \equiv 0
@@ -282,10 +294,15 @@ c_k = \frac{1}{P} \int_{0}^{P} \tilde{x}(t)\, e^{-2 \pi i \frac{k}{P} t}\, dt \e
 $$
 
 Every single coefficient is zero — our signal has vanished from the
-mathematics. Why? The integral is an area, and $\tilde{x}$ is nonzero only at
-$N$ isolated points: a set of columns of zero width encloses no area at all.
-[The Riemann integral](https://en.wikipedia.org/wiki/Riemann_integral)
-honestly reports what it sees — nothing. The verdict is not against Fourier;
+mathematics. To see why, watch the Riemann sums converge: each spike gets
+trapped in a rectangle of finite height and ever-shrinking width, so its
+contribution — height times width — dies together with the mesh. Countably
+many spikes stand against a continuum of zeros, and the zeros win:
+
+![Riemann sums of the naive model shrink to zero](riemann_zero.png)
+
+The integral honestly reports that $\tilde{x}$ is almost everywhere
+indistinguishable from the zero function. The verdict is not against Fourier;
 it is against our model: "a value at a point and zero elsewhere" is the wrong
 mathematical object for a sample.
 
