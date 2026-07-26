@@ -177,11 +177,12 @@ $|X[k]|$ against their physical frequencies $f_k$. This picture is the
 
 ![Two signals and their magnitude spectra](simple_spectra.png)
 
-A pure sine shows up as a single spike on an empty axis (well — *two*
-spikes; hold that thought), and a mix of three sines as three spikes with
-the right heights, each recoverable at a glance. This is the "hundreds of
-numbers → three meaningful ones" compression promised at the very start of
-Part 1 — delivered.
+A pure sine shows up as a sharp spike at its frequency — plus a curious
+twin at the far end of the axis, which will get its explanation in a moment
+— and a mix of three sines as three spikes with the right heights (and
+three twins), each component recoverable at a glance. This is the "hundreds
+of numbers → three meaningful ones" compression promised at the very start
+of Part 1 — delivered.
 
 What about the other half of the complex number? Each $X[k]$ carries a
 magnitude *and* a phase, and the phase stores where in its cycle the $k$-th
@@ -195,21 +196,35 @@ speech recognizer can throw it away.
 
 ## The mirror
 
-Now to the promised puzzle: why does a single 4 Hz sine light up *two*
-bins? Compute the coefficient at index $N - k$ for a real-valued signal,
-using $e^{-2\pi i n} = 1$ one more time:
+Look at the spectra again: the single 4 Hz sine lights up its own bin *and*
+a twin at 96 Hz, and in the three-sine mix the whole right half of the axis
+mirrors the left. This is not an artifact of the example — it is a theorem
+about every real-valued signal, and it takes four lines to prove. Compute
+the coefficient at index $N - k$:
 
 $$
 \begin{aligned}
 X[N-k] &= \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{(N-k) n}{N}} \\
-       &= \sum_{n=0}^{N-1} x[n]\, e^{2 \pi i \frac{k n}{N}}
-        = \overline{X[k]}.
+       &= \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i n}\, e^{2 \pi i \frac{k n}{N}} \\
+       &= \sum_{n=0}^{N-1} x[n]\, e^{2 \pi i \frac{k n}{N}} \\
+       &= \overline{\sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{k n}{N}}} = \overline{X[k]}.
 \end{aligned}
 $$
 
-The second half of the spectrum is the complex conjugate of the first, read
-backwards: $|X[N-k]| = |X[k]|$. Every spike below the middle has a twin
-above it, and the spectrum of any real signal is symmetric about $k = N/2$.
+One move per line. First, split the exponent: $\frac{N-k}{N} = 1 -
+\frac{k}{N}$, so the exponential factors into $e^{-2 \pi i n} \cdot
+e^{2 \pi i \frac{k n}{N}}$. Second, $e^{-2 \pi i n} = 1$ because $n$ is an
+integer — the same "signal lives on a grid" card we played to prove
+$c_{k+N} = c_k$ in Part 1. Third, recognize a conjugate: flipping the sign
+of the exponent conjugates each exponential, and the samples $x[n]$ are
+*real* — conjugation passes through them untouched — so the conjugation
+bar slides over the entire sum, and the sum under the bar is exactly the
+DFT formula for $X[k]$.
+
+The second half of the spectrum is therefore the complex conjugate of the
+first, read backwards — and conjugation does not change magnitudes:
+$|X[N-k]| = |X[k]|$. Every spike below the middle has a twin above it, and
+the magnitude spectrum of any real signal is symmetric about $k = N/2$.
 
 We have met this mirror before. Part 1's exponential form split every real
 oscillation into a forward- and a backward-rotating exponential, with
