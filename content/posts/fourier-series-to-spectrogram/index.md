@@ -461,9 +461,15 @@ hope: perhaps uniform convergence, or Lebesgue's dominated convergence,
 justifies moving the limit outside the integral? Here is the surprise —
 *no theorem can, because the equality they would justify is false*. The
 pointwise limit of $\frac{1}{\tau} r_\tau(t)$ is zero at every $t$ except
-the single point $t = 0$ (where it is $\infty$) — a function that is zero
-almost everywhere. So "the integral of the limit" is honestly $0$, not $x(0)$, and
-any theorem permitting the swap would prove $x(0) = 0$. Accordingly, every
+the single point $t = 0$, where it blows up to $\infty$. Strictly speaking,
+"the integral of the limit" therefore does not even exist: the limit function
+is unbounded, and the proper Riemann integral is defined only for bounded
+functions — the very criterion we checked earlier. And if we repair the lone
+point (assign any finite value at $t = 0$, or integrate in the Lebesgue
+sense, where a single point has measure zero), the integral of a function
+that is zero almost everywhere is $0$. Either way — nonexistent or zero — the
+left-hand side is certainly not $x(0)$, and any theorem permitting the swap
+would be proving nonsense. Accordingly, every
 hypothesis fails on purpose: the convergence is not uniform (the spikes grow
 as $\frac{1}{\tau}$), and no integrable dominating function exists — at a
 fixed $t$, the largest value of $\frac{1}{\tau} r_\tau(t)$ over all $\tau$ is
