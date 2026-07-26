@@ -332,9 +332,12 @@ $$
 \hat{x}(nT) = \int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t - nT)\, dt.
 $$
 
+![The rectangular pulse and the averaging kernel](rect_kernel.png)
+
 The kernel $\frac{1}{\tau} r_\tau$ cuts a column of width $\tau$ out from
 under the graph of $x$ and reports its area, divided by the width — the
-average height of the graph inside the window. For finite $\tau$ this is an
+average height of the graph inside the window. Remember this shape: it is
+about to have a famous limit. For finite $\tau$ this is an
 estimate with an error: the signal keeps changing inside the window.
 
 Now improve the instrument. As $\tau$ shrinks, the kernel becomes a rectangle
