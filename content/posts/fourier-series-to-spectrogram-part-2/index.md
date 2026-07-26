@@ -132,9 +132,19 @@ The one knob we do control is $N$: how many samples we feed the transform.
 previous section — it holds the answer.
 
 The basis rides the *window*, not the clock: more samples at the same rate
-means a longer recording, and the one turn of $w_1$ spreads over it — its
-physical frequency $\Delta f = \frac{1}{NT}$ drops. And since every other
-probe sits at a multiple of it, the whole frequency grid tightens:
+means a longer recording, and the one turn of $w_1$ spreads over it. Write
+$w_1$ out and walk it back from the index notation to physical time, exactly
+the way we did for a general $k$:
+
+$$
+w_1[n] = e^{2 \pi i \frac{n}{N}} = e^{2 \pi i \frac{1}{NT} \cdot nT}
+$$
+
+— the right-hand form is a sinusoid of physical frequency $\frac{1}{NT}$,
+caught at the moments $t = nT$. The $N$ sits in the denominator of the
+frequency: lengthen the recording, and the slowest probe slows down with it
+— $\Delta f = \frac{1}{NT}$ drops. And since every other probe sits at a
+multiple of it, the whole frequency grid tightens:
 
 ![Recording longer buys a finer frequency grid](freq_resolution.png)
 
