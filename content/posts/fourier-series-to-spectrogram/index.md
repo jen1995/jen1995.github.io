@@ -126,8 +126,15 @@ $$
 
 The building blocks are sines and cosines whose frequencies are integer
 multiples of $\frac{1}{P}$ — the **harmonics** of the base frequency. Nothing
-else is allowed: only oscillations that fit a whole number of times into the
-period.
+else is allowed: **only oscillations that fit a whole number of times into
+the period**. This restriction is easy to read past, and much of what follows
+grows out of it — so let us stare at it once, properly. A periodic function
+repeats: whatever happens on $[0, P]$ must glue seamlessly to its own copy on
+$[P, 2P]$. A harmonic with a whole number of oscillations arrives at the seam
+exactly where it started, so the copies join smoothly. An oscillation with a
+fractional count arrives somewhere else — and the glued copies tear:
+
+![Only whole numbers of oscillations fit a period](whole_oscillations.png)
 
 A pair $(a_n, b_n)$ at the same frequency is really one oscillation in
 disguise. Using the cosine-of-difference formula, the pair collapses into a
