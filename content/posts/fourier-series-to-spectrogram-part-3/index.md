@@ -215,13 +215,23 @@ slide whistle):
 
 ![One chirp under a short and a long window](chirp_tradeoff.png)
 
-The short window draws a crisp thin line: within each 32 ms frame the chirp
-is nearly a constant tone, and $\Delta f = 31$ Hz is plenty. The long
-window has $\Delta f = 3.9$ Hz — eight times sharper on paper — yet its
-picture is *worse*: during each 256 ms frame the chirp sweeps through
-hundreds of hertz, and the fine frequency grid resolves a smear. Sharper
-$\Delta f$ bought blurrier time, and for this signal time was where the
-action lived.
+First, note what the two pictures share and what they do not. The vertical
+axis is the same on both: it runs from $0$ to $f_s/2$, and that *range* is
+fixed by the sampling rate alone. What differs is the grid packed inside
+it: the left picture has $129$ rows spaced $31.2$ Hz apart, the right one
+$1025$ rows spaced $3.9$ Hz apart — eight times finer, on paper.
+
+Now the arithmetic of what each column actually sees. The chirp climbs at
+$(3600 - 200)/2 = 1700$ Hz per second. During one $32$ ms frame it sweeps
+through about $54$ Hz — a couple of bins of the left grid: the frame is
+nearly a constant tone, and the line comes out about as thin as $\Delta f$
+allows. During one $256$ ms frame the chirp sweeps through about $435$ Hz —
+more than a *hundred* bins of the right grid. And the column reports the
+truth: the frame genuinely contained all of those frequencies, so the fine
+grid faithfully resolves… a smear $435$ Hz wide. The sharper $\Delta f$
+bought a worse picture, because **frequency resolution is only resolution
+for signals that hold still for the whole window** — and a chirp, by
+definition, never does.
 
 There is no window length that wins both ways — only a choice matched to
 the signal. This is not an engineering shortcoming but mathematics: time
