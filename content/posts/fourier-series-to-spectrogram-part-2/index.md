@@ -1,7 +1,7 @@
 ---
 title: "From the Fourier Series to the Spectrogram, Part 2: Reading the DFT"
 date: 2026-07-26
-draft: true
+draft: false
 tags: ["fourier", "dsp", "speech"]
 summary: "Part 2 of 3: learning to read the DFT's output — which bin is which frequency, why resolution is one over duration, the mirror symmetry, and the Nyquist frequency."
 math: true

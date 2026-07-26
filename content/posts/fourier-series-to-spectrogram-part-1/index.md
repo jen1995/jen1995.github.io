@@ -688,7 +688,8 @@ So here is what this part promised: an honest model of sampling, a periodic
 extension, and the Fourier series *itself* handed us the DFT — no axioms
 required. The machinery for "which piano keys were pressed?" is built.
 
-In **Part 2** we put the machinery to work and learn to read its output:
+In **[Part 2](/posts/fourier-series-to-spectrogram-part-2/)** we put the
+machinery to work and learn to read its output:
 what the $N$ complex numbers $X[k]$ actually say about the sound, which
 physical frequencies they correspond to, why half of them mirror the other
 half, and what limits the frequency resolution. In **Part 3** the DFT starts
