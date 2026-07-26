@@ -36,7 +36,8 @@ image of the other half.
 Look at the DFT formula through the lens of the inner product we introduced
 while proving the sifting property in Part 1: multiply two signals pointwise,
 sum up — with the sum over a continuum becoming an integral, and, for complex
-signals, the second factor conjugated. The DFT sum is *exactly* that, in the
+signals, the second factor conjugated (that is what the overline over
+$w_k[n]$ below denotes). The DFT sum is *exactly* that, in the
 finite-dimensional case the notation came from:
 
 $$
@@ -207,7 +208,9 @@ Look at the spectra again: the single 4 Hz sine lights up its own bin *and*
 a twin at 96 Hz, and in the three-sine mix the whole right half of the axis
 mirrors the left. This is not an artifact of the example — it is a theorem
 about every real-valued signal, and it takes four lines to prove. Compute
-the coefficient at index $N - k$:
+the coefficient at index $N - k$ (the overline here and below is **complex
+conjugation**, $\overline{a + bi} = a - bi$ — the flip of the imaginary
+part's sign):
 
 $$
 \begin{aligned}
