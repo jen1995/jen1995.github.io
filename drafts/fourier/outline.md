@@ -6,16 +6,20 @@ intermediate point. We start from the very beginning and keep going.
 
 ## Planned posts
 
-### 1. From the Fourier Series to the Spectrogram
+### 1. From the Fourier Series to the Spectrogram — split into three parts ✔
 Based on the DSP lecture (see `lecture_digest.md`; deck: [Google Slides](https://docs.google.com/presentation/d/1Cte6w0t8yTJRFirde6GPxKB29VX3SrX1mhAkKYEN-n4/)).
-Rough arc, following the deck's agenda:
-1. What is sound — pressure waves, microphones (slides 3–4)
-2. Analog → digital: sampling & quantization, PCM, intensity/loudness, formats (5–9)
-3. Fourier analysis: why waveforms are not enough, series → spectrum (11–…)
-4. Properties of the DFT
-5. STFT and the spectrogram
+Decided 2026-07-26: three posts titled "…, Part 1/2/3" (Part 1 alone reached
+~5400 words).
 
-Open question: one long post (transformers-style) or split "sound & digitization" / "Fourier → spectrogram"? Decide after drafting section sizes.
+- **Part 1: From Sound to the DFT** — what is sound, analog → digital, why the
+  waveform is not enough, the Fourier series, the honest discrete-signal model
+  (deltas, sifting, comb), series → DFT. **Drafted in full**
+  (`content/posts/fourier-series-to-spectrogram-part-1/`), under review.
+- **Part 2: properties of the DFT** — what the $X[k]$ mean physically,
+  frequency resolution, conjugate symmetry, Nyquist. (Deck: DFT-properties
+  slides; roadmap in `post1_draft.md`.)
+- **Part 3: from the DFT to the spectrogram** — windows, STFT, leakage,
+  the spectrogram, mel scale (the perception/cochlea argument returns here).
 
 ### 2. Four Shades of Fourier
 Title decided ✔ (Four/Fourier pun; the four shades are FS, FT, DTFT, DFT).

@@ -1,9 +1,9 @@
 ---
-title: "From the Fourier Series to the Spectrogram"
+title: "From the Fourier Series to the Spectrogram, Part 1: From Sound to the DFT"
 date: 2026-07-24
 draft: true
 tags: ["fourier", "dsp", "speech"]
-summary: "The whole road, walked end to end: from air pressure and a guitar string, through sampling and the Fourier series, to the DFT and the spectrogram that speech models actually consume. First post of the Fourier world series."
+summary: "Part 1 of 3: from air pressure and a guitar string, through sampling and the Fourier series — to the DFT, derived honestly, delta functions and all."
 math: true
 ---
 
@@ -12,9 +12,12 @@ first five minutes — usually with a hand-wave: "we apply the Fourier transform
 sliding windows". Open a math textbook, and you will find the Fourier series in
 its full rigor — with no hint of why an ML engineer should care. The road between
 these two points is almost never walked end to end: every explanation starts
-somewhere in the middle. This post walks the whole road: from air pressure and a
-guitar string, through sampling and quantization, through the Fourier series and
-the DFT, to the spectrogram — the picture that speech models actually consume.
+somewhere in the middle. This series of three posts walks the whole road: from
+air pressure and a guitar string, through sampling and quantization, through
+the Fourier series and the DFT, to the spectrogram — the picture that speech
+models actually consume. In this first part we build the core machinery: we
+follow the sound wave into the computer and end with the DFT derived — honestly,
+delta functions and all — from the Fourier series itself.
 
 Along the way we will meet several *different* creatures that all answer to the
 name "Fourier": the Fourier **series**, the Fourier **transform**, its
@@ -24,7 +27,7 @@ own, which gets a separate post (and more): for now, one picture as a teaser.
 
 ![Four Shades of Fourier](four_shades_of_fourier.svg)
 
-*(a teaser of the next post — in this one we walk the bottom row: from the Fourier series to the discrete Fourier transform)*
+*(a teaser of a separate post to come — in this series we walk the bottom row: from the Fourier series to the discrete Fourier transform)*
 
 ## What is sound
 
@@ -674,12 +677,13 @@ that makes everything downstream (including every spectrogram ever displayed)
 practical. [This video](https://www.youtube.com/watch?v=h7apO7q16V0) is a
 beautiful walkthrough of the idea.
 
-So here is the road we promised: an honest model of sampling, a periodic
+So here is what this part promised: an honest model of sampling, a periodic
 extension, and the Fourier series *itself* handed us the DFT — no axioms
 required. The machinery for "which piano keys were pressed?" is built.
 
-## 🚧 Under construction
-
-Coming next in this draft: properties of the DFT (frequency resolution,
-symmetry, Nyquist) → STFT, windows and leakage → the spectrogram → the mel
-scale. Roadmap and slide pointers: `drafts/fourier/post1_draft.md`.
+In **Part 2** we put the machinery to work and learn to read its output:
+what the $N$ complex numbers $X[k]$ actually say about the sound, which
+physical frequencies they correspond to, why half of them mirror the other
+half, and what limits the frequency resolution. In **Part 3** the DFT starts
+sliding along the signal — windows, the short-time Fourier transform, and
+finally the spectrogram itself.
