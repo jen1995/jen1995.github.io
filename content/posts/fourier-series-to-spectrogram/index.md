@@ -517,7 +517,7 @@ systematic — for far rougher objects than continuous signals — is the job of
 
 </details>
 
-The perfect instrument, then, measures $x[n]$ by integrating $x$ against
+The perfect instrument, then, measures $x(nT)$ by integrating $x$ against
 $\delta(t - nT)$. Place one impulse at every grid point — the infinite train
 of shifted deltas is called the **Dirac comb** (the Russian DSP literature
 knows it as the *lattice function*):
@@ -595,8 +595,8 @@ the comb just evaluates the exponential at the grid points $t = nT$:
 
 $$
 c_k = \frac{1}{NT} \int_{\text{period}} x_d(t)\, e^{-2 \pi i \frac{k}{NT} t}\, dt
-    = \frac{1}{NT} \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{k}{NT} \cdot nT}
-    = \frac{1}{NT} \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{k n}{N}}.
+    = \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k}{NT} \cdot nT}
+    = \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k n}{N}}.
 $$
 
 The dreaded integral has collapsed into a finite sum. And look at what
@@ -621,9 +621,18 @@ theorem, and we walked into it bottom-up.
 
 ### The Discrete Fourier Transform
 
-One last cosmetic step. Strip the physical scale away — drop the overall
-$\frac{1}{NT}$ factor (a convention we will revisit in a second) and keep only
-the indices. What remains is the **Discrete Fourier Transform**:
+One last cosmetic step: new notation to mark the new attitude. The basis
+functions have forgotten about $T$, so let the signal forget it too — treat
+the input as a plain list of numbers and write
+
+$$
+x[n] \overset{\text{def}}{=} x(nT),
+$$
+
+where the square brackets signal "the $n$-th entry of a list", not "the
+value at a moment of time". Drop the overall $\frac{1}{NT}$ factor as well
+(a convention we will revisit in a second) and call what remains $X[k]$ —
+the **Discrete Fourier Transform**:
 
 $$
 X[k] = \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{k n}{N}}, \qquad k = 0, 1, \dots, N-1,
