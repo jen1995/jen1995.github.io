@@ -9,6 +9,7 @@ enableEmoji = true
 pagination.pagerSize = 10
 
 [params]
+  author = "Eugenia Elistratova"
   description = "Cohomology Zero — a blog where we nerd out about machine learning and mathematics: transformers, generative models and much more."
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -22,7 +23,7 @@ pagination.pagerSize = 10
 
   [params.homeInfoParams]
     Title = "Cohomology Zero 👋"
-    Content = "Hi, I'm Evgenia. Here we unapologetically nerd out about machine learning and mathematics — transformers, generative models, and math for its own sake. The name is a nod to [this meme](https://youtu.be/mqAf5lOJZew): we're still waiting for the environment to answer — cohomology: zero?.. Find me on Telegram: [@evg3307](https://t.me/evg3307)."
+    Content = "Hi, I'm Eugenia Elistratova. Here we unapologetically nerd out about machine learning and mathematics — transformers, generative models, and math for its own sake. The name is a nod to [this meme](https://youtu.be/mqAf5lOJZew): we're still waiting for the environment to answer — cohomology: zero?.. Find me on Telegram: [@evg3307](https://t.me/evg3307) or by email: [evg3307@yandex.ru](mailto:evg3307@yandex.ru)."
 
   [[params.socialIcons]]
     name = "github"
@@ -30,6 +31,9 @@ pagination.pagerSize = 10
   [[params.socialIcons]]
     name = "telegram"
     url = "https://t.me/evg3307"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:evg3307@yandex.ru"
 
 [menu]
   [[menu.main]]
