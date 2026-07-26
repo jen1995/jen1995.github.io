@@ -308,8 +308,17 @@ mathematical object for a sample.
 
 **So what is a sample, really?** Think about how the measurement is actually
 made. No instrument reads a value *at* an instant — a measurement takes some
-time $\tau$, and what the device reports is the *average* of the signal over
-the measurement window around $t = nT$:
+time $\tau$: around every grid point $t = nT$ the device opens its gate, and
+for $\tau$ seconds the signal pours in:
+
+![The measurement model: the signal, the gate pulses, and the slices the device sees](measurement_model.png)
+
+What single number should the device report for its window? It saw not one
+value but a continuum of them — everything the signal did between
+$nT - \tau/2$ and $nT + \tau/2$. The natural answer is the *average*. And
+what is the average of a continuum of values? For a handful of numbers the
+average is "add them up, divide by how many"; for a continuum, the sum
+becomes an integral and the count becomes the length of the window:
 
 $$
 \hat{x}(nT) = \frac{1}{\tau} \int_{nT - \tau/2}^{nT + \tau/2} x(t)\, dt.
