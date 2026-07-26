@@ -270,18 +270,30 @@ discriminates finely) and takes ever-larger strides up high:
 
 ![The mel curve and a mel filter bank](mel_scale.png)
 
-To convert a spectrogram, build a **mel filter bank** $F$: a few dozen
+To convert a spectrogram, build a **mel filter bank**: a few dozen
 triangular filters, evenly spaced *in mel* — therefore narrow and dense at
-low frequencies, wide and sparse at high ones (bottom panel above). Each
-filter takes a weighted sum of the spectrogram rows it covers, so the whole
-conversion is one matrix multiplication per column,
+low frequencies, wide and sparse at high ones (bottom panel above). Now
+stack the triangles into a matrix $F$, **one filter per row**: each row is
+one triangle from the picture above, written out as its weights over all
+the frequency bins. With $60$ filters over the $257$ frequency rows of our
+spectrogram, $F$ is a $60 \times 257$ matrix:
+
+![The mel filter bank stacked into a matrix, one triangle per row](mel_matrix.png)
+
+The whole conversion is then a single matrix multiplication. One column of
+the spectrogram is a vector of $257$ magnitudes; multiplying by $F$ takes
+$60$ weighted sums of it — one sum per filter, each collecting the bins
+under its triangle. And multiplying $F$ by *all* the columns at once
+handles the entire recording in one stroke:
 
 $$
-M = F \cdot S,
+M = F \cdot S, \qquad (60 \times 257) \cdot (257 \times T) = 60 \times T,
 $$
 
-followed by the same logarithm as before. The result is the
-**mel-spectrogram**:
+where $T$ is the number of frames. A logarithm on top — the same dB story
+as before — and the result is the **mel-spectrogram**, every column
+squeezed from $257$ linear-frequency numbers into $60$ perceptually spaced
+ones:
 
 ![The spectrogram and its mel-compressed version](mel_spectrogram.png)
 
@@ -292,6 +304,28 @@ compact, perceptually weighted, still laid out in time — is the actual
 input of most speech recognition and synthesis models: when a paper says
 "we feed the audio to the network", this matrix is almost always what is
 being fed.
+
+One last piece of accounting closes the story: what did the whole pipeline
+buy, in raw numbers? For our recording:
+
+| representation | shape | numbers total | the time axis |
+|---|---|---|---|
+| waveform | $52\,225$ samples | $52\,225$ | $22\,050$ values per second |
+| spectrogram $S$ | $257 \times 405$ | $104\,085$ | $\approx 170$ columns per second |
+| mel-spectrogram $M$ | $60 \times 405$ | $24\,300$ | $\approx 170$ columns per second |
+
+Two honest surprises in this table. First, the spectrogram is *not* a
+compression: overlapping frames see every sample about four times, so $S$
+holds twice as many numbers as the waveform it came from. What changed is
+the *organization*: the time axis became $128$ times coarser — one column
+per hop instead of one value per sample — and in exchange each column
+spells out explicitly what the samples only implied: which frequencies are
+present at that moment. Second, the genuine shrinkage arrives only with the
+mel step: $M$ is less than half the raw waveform and a quarter of $S$ — and
+yet, as the pictures show, still perfectly legible: the harmonics, the
+fricative bursts, the silences between words all survived. Fewer numbers,
+arranged so that the structure shows — that, in one line, is what audio
+feature extraction is for.
 
 ## The road, walked
 
