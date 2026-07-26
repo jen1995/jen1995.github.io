@@ -177,10 +177,10 @@ $|X[k]|$ against their physical frequencies $f_k$. This picture is the
 
 ![Two signals and their magnitude spectra](simple_spectra.png)
 
-A pure sine shows up as a sharp spike at its frequency — plus a curious
-twin at the far end of the axis, which will get its explanation in a moment
-— and a mix of three sines as three spikes with the right heights (and
-three twins), each component recoverable at a glance. This is the "hundreds
+A pure sine shows up as a sharp spike at its frequency — **plus a curious
+twin at the far end of the axis** (explained below, in [The
+mirror](#the-mirror)) — and a mix of three sines as three spikes with the
+right heights (and three twins), each component recoverable at a glance. This is the "hundreds
 of numbers → three meaningful ones" compression promised at the very start
 of Part 1 — delivered.
 
