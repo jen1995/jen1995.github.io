@@ -440,12 +440,45 @@ $$
 by the case we just proved — the spike always reports the value of $x$ at the
 point where it stands. $\blacksquare$
 
+**Bonus: can the limit swap in Step 1 be saved by a theorem?** A natural
+hope: perhaps uniform convergence, or Lebesgue's dominated convergence,
+justifies moving the limit outside the integral? Here is the surprise —
+*no theorem can, because the equality they would justify is false*. The
+pointwise limit of $\frac{1}{\tau} r_\tau(t)$ is zero for every $t \neq 0$
+(and $\infty$ at the single point $t = 0$) — a function that is zero almost
+everywhere. So "the integral of the limit" is honestly $0$, not $x(0)$, and
+any theorem permitting the swap would prove $x(0) = 0$. Accordingly, every
+hypothesis fails on purpose: the convergence is not uniform (the spikes grow
+as $\frac{1}{\tau}$), and no integrable dominating function exists — at a
+fixed $t$, the largest value of $\frac{1}{\tau} r_\tau(t)$ over all $\tau$ is
+$\frac{1}{2|t|}$, and $\frac{1}{2|t|}$ is not integrable near zero.
+
+The honest classical route runs in the opposite direction: take the limit of
+the integrals as the *definition* of the pairing, and compute it directly.
+For a fixed $\tau$ there is no delta anywhere in sight:
+
+$$
+\int_{-\infty}^{\infty} x(t)\, \tfrac{1}{\tau} r_\tau(t)\, dt
+= \frac{1}{\tau} \int_{-\tau/2}^{\tau/2} x(t)\, dt
+$$
+
+— the plain average of $x$ over the window. By the [mean value theorem for
+integrals](https://en.wikipedia.org/wiki/Mean_value_theorem#Mean_value_theorems_for_definite_integrals),
+for continuous $x$ this average equals $x(\xi_\tau)$ for some point
+$\xi_\tau$ inside the window; as $\tau \to 0$ the window collapses,
+$\xi_\tau \to 0$, and continuity gives $x(\xi_\tau) \to x(0)$. Fully
+rigorous — for continuous signals. Families like $\frac{1}{\tau} r_\tau$ are
+called [approximate identities, or
+mollifiers](https://en.wikipedia.org/wiki/Mollifier): they are how analysis
+makes the delta respectable without ever letting it exist as a function.
+
 *A closing caveat in the same physicist's spirit: the delta itself is
 famously not square-integrable, so $\langle x, \delta \rangle$ is not a
 true $L^2$ inner product — the angle brackets are a convenient notation for
-the pairing our formulas suggest. Making all of this fully rigorous (including
-the limit-swapping above) is the job of [distribution
-theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)).*
+the pairing our formulas suggest. The bonus above makes our particular
+computation honest for continuous $x$; making the whole delta calculus
+systematic — for far rougher objects than continuous signals — is the job of
+[distribution theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)).*
 
 </details>
 
