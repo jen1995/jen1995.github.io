@@ -348,3 +348,15 @@ we never defined — and the family bridges between all four shades are next.
 Then the **theorem with three names** gets its promised proof (one picture,
 as vowed in Part 2). And the finale reads the human voice itself: **F0,
 pitch and the cepstrum**. The four shades await.
+
+> Everything in this part runs in a [ready-made
+> notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/building_the_spectrogram.ipynb)
+> that [opens in
+> Colab](https://colab.research.google.com/github/jen1995/jen1995.github.io/blob/main/notebooks/building_the_spectrogram.ipynb)
+> in one click: the STFT in three lines of numpy, leakage measured in
+> percent, the Hann sum-to-one property verified to machine precision
+> (periodic vs symmetric variant included), a spectrogram and a mel bank
+> built from scratch — and, as the finale, the signal reassembled *exactly*
+> from its complex STFT by overlap-add, with a note on why the
+> magnitude-only spectrogram cannot be inverted so easily (that is what
+> vocoders are for).
