@@ -399,9 +399,15 @@ $$
 \end{aligned}
 $$
 
-**Step 2: the integral as a Riemann sum.** Write the integral as the limit of
-rectangle areas, choosing the mesh width to be the same $\tau$ as in the
-pulse:
+**Step 2: the integral as a Riemann sum.** Note what Step 1 bought us: a
+Riemann sum needs the *values* of the integrand at the grid points, and the
+original integrand contained $\delta(t)$ — which has no value at zero to
+sample. After the trade, for each fixed $\tau$ the integrand
+$x(t)\, \frac{1}{\tau} r_\tau(t)$ is an ordinary bounded function, and
+sampling it is legal. So write the integral as the limit of rectangle areas,
+choosing the mesh width to be the same $\tau$ as in the pulse (a shortcut of
+the genre: the mesh refinement and the pulse shrinkage merge into a single
+limit):
 
 $$
 \int_{-\infty}^{\infty} f(t)\, dt = \lim_{\tau \to 0} \sum_{n=-\infty}^{\infty} f(n\tau)\, \tau.
