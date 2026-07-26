@@ -345,7 +345,8 @@ tall peaks on the left are the voice and its harmonics. But it is *one*
 column of numbers for the whole phrase — every phoneme's frequencies
 stacked into the same bins, and *when* is gone entirely. A chord is a fine
 thing to summarize with one spectrum; a sentence is not: "which frequencies
-appear" is not the same as "which frequencies appear *when*". In **Part 3**
+appear" is not the same as "which frequencies appear *when*". In
+**[Part 3](/posts/fourier-series-to-spectrogram-part-3/)**
 we make the Fourier view local — slide a window along the recording, pay
 the resolution bill we just learned about at every stop, and stack the
 results into the picture this series is named after: the spectrogram.

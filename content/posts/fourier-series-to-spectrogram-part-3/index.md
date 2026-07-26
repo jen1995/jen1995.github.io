@@ -1,7 +1,7 @@
 ---
 title: "From the Fourier Series to the Spectrogram, Part 3: From the DFT to the Spectrogram"
 date: 2026-07-26
-draft: true
+draft: false
 tags: ["fourier", "dsp", "speech"]
 summary: "Part 3 of 3: cut the signal into frames, pay for the cut with leakage, patch it with windows, stack the columns — the spectrogram, and its mel-compressed cousin that speech models actually consume."
 math: true

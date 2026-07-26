@@ -692,6 +692,7 @@ In **[Part 2](/posts/fourier-series-to-spectrogram-part-2/)** we put the
 machinery to work and learn to read its output:
 what the $N$ complex numbers $X[k]$ actually say about the sound, which
 physical frequencies they correspond to, why half of them mirror the other
-half, and what limits the frequency resolution. In **Part 3** the DFT starts
+half, and what limits the frequency resolution. In
+**[Part 3](/posts/fourier-series-to-spectrogram-part-3/)** the DFT starts
 sliding along the signal — windows, the short-time Fourier transform, and
 finally the spectrogram itself.
