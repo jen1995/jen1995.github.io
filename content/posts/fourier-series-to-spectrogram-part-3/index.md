@@ -203,9 +203,18 @@ second of signal.
 
 ## The trade-off you cannot escape
 
-Part 2 proved a hard law: $\Delta f = 1/\text{duration}$ — frequency
-resolution is one over the listening time. In the STFT, "listening time"
-is the window length, and the law becomes a genuine dilemma. A *short*
+Part 2 [proved a hard law](/posts/fourier-series-to-spectrogram-part-2/#from-the-index-to-hertz):
+the DFT's probe frequencies form a grid whose step is set by nothing but
+the length of the recording,
+
+$$
+\Delta f = \frac{f_s}{N} = \frac{1}{NT} = \frac{1}{\text{duration}}
+$$
+
+— frequency resolution is one over the listening time. In the STFT the $N$
+of that formula is the window length $W$: each column listens for $W$
+samples — $W/f_s$ seconds — and no longer. So the law becomes a genuine
+dilemma. A *short*
 window pins events precisely in time but smears them in frequency; a
 *long* window resolves frequencies finely but averages away the timing.
 Watch the law act on a
