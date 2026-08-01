@@ -20,6 +20,13 @@ pagination.pagerSize = 10
   ShowToc = true
   TocOpen = false
   math = true
+  comments = true
+
+  [params.fuseOpts]
+    ignoreLocation = true
+    threshold = 0.2
+    minMatchCharLength = 3
+    keys = ["title", "summary", "content"]
 
   [params.homeInfoParams]
     Title = "Cohomology Zero 👋"

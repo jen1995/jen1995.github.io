@@ -5,6 +5,7 @@ url: "/about/"
 summary: "About me"
 ShowToc: false
 ShowReadingTime: false
+comments: false
 ---
 
 Hi! I'm Eugenia Elistratova. **Cohomology Zero** is a blog where I write about machine learning and about math for its own sake.
