@@ -125,6 +125,23 @@ $N = 25$ it is a faithful model of the window — and still a pure invention
 everywhere else. (This picture was suggested by a friend of the blog —
 thank you!)
 
+Zoom out, and the same experiment shows *when the invention comes true*.
+Everything depends on how the window relates to the signal's own period:
+
+![Zoomed out: the model when the window holds half, exactly one, and one and a half signal periods](dft_model_zoom.png)
+
+The middle panel is the special one. When the window holds **exactly one
+period** of the signal (or any whole number of them), the glued copies
+reproduce the signal — the model is correct not only inside the window but
+*everywhere, forever*. That is the DFT at its happiest: the signal's
+frequency coincides with one of the probes. In the other two panels the
+window holds half a period and one and a half: the model still passes
+through every sample it saw, but its periodic continuation has nothing to
+do with the real signal — the top one never even goes negative, the bottom
+one continues in counter-phase — and at every seam the curve kinks. Those
+kinks have a price in the spectrum, and Part 3 charges it under the name
+[spectral leakage](/posts/fourier-series-to-spectrogram-part-3/#the-price-of-cutting-spectral-leakage).
+
 Turn the "whole turns" rule around, and it becomes a restriction important
 enough to put in bold: **whole numbers of turns are all the DFT has.** Its
 basis contains the constant ($k = 0$) and the oscillations that fit a whole
