@@ -190,13 +190,24 @@ So far both shades live on continuous time. Enter the sampled world —
 through the honest gate built in Part 1: a discrete signal is the analog
 signal times the comb,
 $x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_n x(nT)\, \delta(t - nT)$.
-This object has a perfectly good Fourier transform — integrate it, let the
-sifting property collapse the integral exactly as in Part 1:
+This object has a perfectly good Fourier transform — compute it honestly,
+step by step:
 
 $$
-X_d(f) = \int_{-\infty}^{\infty} x_d(t)\, e^{-2 \pi i f t}\, dt
-       = \sum_{n=-\infty}^{\infty} x(nT)\, e^{-2 \pi i f n T}.
+\begin{aligned}
+X_d(f) &= \int_{-\infty}^{\infty} x_d(t)\, e^{-2 \pi i f t}\, dt
+        = \int_{-\infty}^{\infty} \left( \sum_{n=-\infty}^{\infty} x(t)\, \delta(t - nT) \right) e^{-2 \pi i f t}\, dt \\
+       &= \sum_{n=-\infty}^{\infty} \int_{-\infty}^{\infty} x(t)\, \delta(t - nT)\, e^{-2 \pi i f t}\, dt \\
+       &= \sum_{n=-\infty}^{\infty} x(nT)\, e^{-2 \pi i f n T}.
+\end{aligned}
 $$
+
+Three moves. First, substitute the comb model. Second, swap the sum with
+the integral — and note that this time the sum is *infinite*: in Part 1
+the matching swap held by plain linearity of finitely many terms, while
+here it is one of the physicist junctures flagged in the introduction.
+Third, sifting: each delta samples everything under its integral — the
+signal and the exponential alike — at its own grid instant $t = nT$.
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
