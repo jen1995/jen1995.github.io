@@ -271,10 +271,11 @@ however fine, can render thinner than it really is. Check this against the
 numbers: the left window catches $54$ Hz of drift on a grid of $31$ Hz
 bins — about two bins thick, nearly as thin as the axis allows; the right
 window catches $435$ Hz of drift on $3.9$ Hz bins — a hundred-bin-wide
-band, rendered in loving detail. This is the *quasi-stationarity* from the
-typical-numbers inset, now made quantitative: a long window serves a
-signal only if the signal's frequencies barely move for the whole of it.
-Speech within $25$ ms qualifies; a chirp, by definition, never does.
+band, rendered in loving detail. This is also what *quasi-stationarity* —
+the word from the typical-numbers inset — actually buys: if the signal's
+frequencies barely move during one window, its image stays sharp. Speech
+manages that within $25$ ms; a chirp, by definition, manages it at no
+window length.
 
 There is no window length that wins both ways — only a choice matched to
 the signal. This is not an engineering shortcoming but mathematics: time
