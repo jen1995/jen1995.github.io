@@ -220,13 +220,23 @@ window pins events precisely in time but smears them in frequency; a
 Watch the law act on a
 **[chirp](https://en.wikipedia.org/wiki/Chirp)** — a tone whose frequency
 climbs steadily (the name is honest: it is the sound of a bird call or a
-slide whistle):
+slide whistle). In the time domain a chirp looks like this — constant
+amplitude, ever-shrinking period:
+
+![A slow chirp in the time domain: the oscillation speeds up steadily](chirp_time.png)
+
+Our actual test chirp climbs from $200$ to $3600$ Hz over two seconds —
+thousands of oscillations, far too many to draw sample by sample; which is
+precisely the kind of signal you need a spectrogram to *see*. Here it is
+under two different window lengths:
 
 ![One chirp under a short and a long window](chirp_tradeoff.png)
 
 First, note what the two pictures share and what they do not. The vertical
-axis is the same on both: it runs from $0$ to $f_s/2$, and that *range* is
-fixed by the sampling rate alone. What differs is the grid packed inside
+axis is the same on both: it runs from $0$ to $f_s/2$ — the [Nyquist
+ceiling from Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency),
+the grid's edge that the Kotelnikov–Shannon–Nyquist sampling theorem is
+about — and that *range* is fixed by the sampling rate alone. What differs is the grid packed inside
 it: the left picture has $129$ rows spaced $31.2$ Hz apart, the right one
 $1025$ rows spaced $3.9$ Hz apart — eight times finer, on paper.
 
