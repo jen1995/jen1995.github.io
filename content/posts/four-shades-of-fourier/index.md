@@ -132,8 +132,12 @@ the limit hid. Take an *aperiodic* signal $x(t)$ of finite extent: zero
 outside $\left[ -\frac{\tau}{2}, \frac{\tau}{2} \right]$. It has a Fourier
 transform $X(f)$. Build its periodic extension $x_P(t)$ — copies every $P$,
 with $P \ge \tau$ so the copies do not overlap (the gluing of Part 1, now
-with breathing room). The extension is periodic, so it has a Fourier
-*series*; compute its coefficients:
+with breathing room):
+
+![A compact signal and its periodic extension, copies spaced P apart with gaps](periodize_gap.png)
+
+The extension is periodic, so it has a Fourier *series*; compute its
+coefficients:
 
 $$
 c_n = \frac{1}{P} \int_{-P/2}^{P/2} x_P(t)\, e^{-2 \pi i \frac{n}{P} t}\, dt
