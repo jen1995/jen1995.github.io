@@ -116,7 +116,31 @@ the signal the DFT actually believes in:
 
 Two things to see here. Inside the window, the green model passes through
 every blue sample *exactly* — $N$ numbers in, $N$ numbers out, the books
-balance as always. Outside the window, it does the only thing a sum of
+balance as always.
+
+<details>
+<summary><b>Why exactly, and not approximately?</b> (a two-line computation with a payoff)</summary>
+
+At a sample instant $t = nT$ the model's formula turns into the inverse
+DFT from Part 1, and the forward–inverse pair is an exact round trip. But
+the deeper reason deserves to be said out loud: as lists of $N$ values,
+the probes are **orthogonal** to one another. Compute their inner product:
+
+$$
+\langle w_j, w_k \rangle = \sum_{n=0}^{N-1} e^{2 \pi i \frac{(j - k) n}{N}}.
+$$
+
+For $j = k$ every term is $1$ and the sum is $N$. For $j \ne k$ it is a
+geometric series with ratio $q = e^{2 \pi i (j-k)/N}$, where $q \ne 1$ but
+$q^N = 1$ — so the sum, $\frac{q^N - 1}{q - 1}$, is exactly zero.
+
+Orthogonal vectors are linearly independent, so the $N$ probes form a
+genuine **basis** of the $N$-dimensional space of sample lists — the word
+we have been using all along, now earned. Every list of $N$ numbers is a
+weighted sum of probes in exactly one way; the interpolation is not luck
+but $N$ dimensions meeting $N$ basis vectors.
+
+</details> Outside the window, it does the only thing a sum of
 whole-turn oscillations can do: **repeats**, with the window's own period.
 The DFT never models your signal as it is — it models a periodic world
 assembled from your window, Part 1's glued copies meeting us yet again. At
