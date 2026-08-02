@@ -589,7 +589,19 @@ $$
 this polynomial takes at the $N$ roots of unity. The inverse DFT is *interpolation*:
 handed those $N$ values at those $N$ nodes, it recovers the one and only
 degree-$(N-1)$ polynomial through them — that is, the coefficients — that
-is, the samples. So on this side of the mirror the samples are not points
+is, the samples. As a formula it is the inverse transform, reread with the
+new glasses on:
+
+$$
+x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k n}{N}}
+     = \frac{1}{N} \sum_{k=0}^{N-1} p\!\left( \omega^{-k} \right) \omega^{k n}
+$$
+
+— the right-hand side consumes nothing but the polynomial's *values* at
+the nodes, and hands back its $n$-th *coefficient*. (Interpolation
+normally costs a Lagrange formula or a linear solve; the roots-of-unity
+nodes are so symmetric that the interpolation weights collapse into plain
+powers of $\omega$.) So on this side of the mirror the samples are not points
 to be hit: they are the *curve itself*, and the spectrum is the set of
 pins holding it in place. In the green-model pictures the roles were
 exactly reversed: there the *spectrum* supplied the coefficients, and the
