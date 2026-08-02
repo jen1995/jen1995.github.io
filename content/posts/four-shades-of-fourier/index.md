@@ -115,10 +115,13 @@ integrable (our rectangular pulse's transform will turn out to be a sinc,
 whose tails die like $\frac{1}{f}$ — too slowly), which is exactly why the
 Fourier integral needed the principal-value reading above, and the
 [inversion theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem)
-pins down exactly when it returns $x(t)$. The fine print lives in analysis
-textbooks — Zorich's *Mathematical Analysis II* treats it with full care —
-and holds under far weaker assumptions than our physicist's derivation
-used.
+pins down exactly when it returns $x(t)$ — under far weaker assumptions
+than our physicist's derivation used. The fine print lives in analysis
+textbooks; [Zorich's *Mathematical Analysis
+II*](https://matan.math.msu.su/media/uploads/2020/03/V.A.Zorich-Kniga-II-9-izdanie-Temp-Corr-3.pdf)
+makes exactly this pair of remarks with the bar of rigor raised — the
+principal-value definition and the absolute-convergence argument sit side
+by side on p. 524 of the 9th Russian edition.
 
 ## Bridge two: the transform is the envelope of the series
 
