@@ -452,26 +452,9 @@ and its output is the original samples. So at the grid instants the model
 has no freedom at all: it is contractually obliged to return $x[n]$.
 
 That pushes the question one step deeper: why does the *inverse formula*
-reproduce the samples exactly? Because, as lists of $N$ values, the probes
-are **orthogonal** to one another. Compute their inner product:
-
-$$
-\langle w_j, w_k \rangle = \sum_{n=0}^{N-1} e^{2 \pi i \frac{(j - k) n}{N}}.
-$$
-
-For $j = k$ every term is $1$ and the sum is $N$. For two *different*
-probes it is a geometric series with ratio $q = e^{2 \pi i (j-k)/N}$ — a
-ratio that is not $1$ itself, yet satisfies $q^N = 1$ — so the sum,
-$\frac{q^N - 1}{q - 1}$, is exactly zero.
-
-Orthogonal vectors are linearly independent, so the $N$ probes form a
-genuine **basis** of the $N$-dimensional space of sample lists — the word
-we have been using all along, now earned. Every list of $N$ numbers is a
-weighted sum of probes in exactly one way; the interpolation is not luck
-but $N$ dimensions meeting $N$ basis vectors.
-
-To see the same thing in vector language, start slow. The inverse DFT is
-one equation *per sample* — write them all out, one under another:
+reproduce the samples exactly? To see it, switch to vector language — and
+start slow. The inverse DFT is one equation *per sample* — write them all
+out, one under another:
 
 $$
 \begin{aligned}
@@ -505,16 +488,35 @@ $$
 X[k] = \langle \mathbf{x}, \mathbf{w}_k \rangle
 $$
 
-— the textbook expansion of a vector in an orthogonal basis: each
-coefficient is the inner product with the corresponding basis vector,
-divided by that vector's squared length. And the squared length is
-$\langle \mathbf{w}_k, \mathbf{w}_k \rangle = N$, as we just computed —
-which is where the $\frac{1}{N}$ of the inverse DFT has been hiding all
-along. (Part 1's convention inset told you where that factor is *put*;
-this is why it *exists*. And one step further, for the matrix-minded:
-stack the probes as the columns of an $N \times N$ matrix $W$;
-orthogonality reads $W^{*} W = N I$, so $W / \sqrt{N}$ is unitary — the
-DFT is, up to scale, a rotation of $\mathbb{C}^N$.)
+So the claim to be proved now reads: measure the resemblances
+$X[k] = \langle \mathbf{x}, \mathbf{w}_k \rangle$, use them as weights —
+and the weighted probes reassemble $\mathbf{x}$ itself. One property of
+the probes does all the work here: as vectors, they are **orthogonal** to
+one another. Compute their inner product:
+
+$$
+\langle w_j, w_k \rangle = \sum_{n=0}^{N-1} e^{2 \pi i \frac{(j - k) n}{N}}.
+$$
+
+For $j = k$ every term is $1$ and the sum is $N$. For two *different*
+probes it is a geometric series with ratio $q = e^{2 \pi i (j-k)/N}$ — a
+ratio that is not $1$ itself, yet satisfies $q^N = 1$ — so the sum,
+$\frac{q^N - 1}{q - 1}$, is exactly zero.
+
+That settles everything. Orthogonal vectors are linearly independent, so
+the $N$ probes form a genuine **basis** of the $N$-dimensional space of
+sample lists — the word we have been using all along, now earned — and
+every $\mathbf{x}$ is a weighted sum of probes in exactly one way. And
+for an *orthogonal* basis, the weights are given by the textbook formula:
+the inner product with the basis vector, divided by that vector's squared
+length. That is precisely our pair of formulas — with squared length
+$\langle \mathbf{w}_k, \mathbf{w}_k \rangle = N$, which is where the
+$\frac{1}{N}$ of the inverse DFT has been hiding all along. (Part 1's
+convention inset told you where that factor is *put*; this is why it
+*exists*. And one step further, for the matrix-minded: stack the probes
+as the columns of an $N \times N$ matrix $W$; orthogonality reads
+$W^{*} W = N I$, so $W / \sqrt{N}$ is unitary — the DFT is, up to scale,
+a rotation of $\mathbb{C}^N$.)
 
 ### One more name for the same matrix
 
