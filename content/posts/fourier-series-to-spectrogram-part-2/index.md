@@ -567,12 +567,26 @@ W = \begin{pmatrix}
 $$
 
 Nodes as distinct, and as symmetric, as $N$ points can be — and that
-special placement is what upgrades "invertible" to "unitary up to scale". Two consequences are worth savoring. First, our
-"the model passes through every sample" is now literally polynomial
-interpolation: the forward DFT *evaluates* the polynomial
-$p(z) = x[0] + x[1] z + \dots + x[N-1] z^{N-1}$ at all $N$ roots of unity
-(in our sign convention, at $z = \omega^{-k}$), and the inverse DFT
-*interpolates* the coefficients back from the values. Second, this
+special placement is what upgrades "invertible" to "unitary up to scale". Two consequences are worth savoring.
+
+First, the DFT becomes a story about one polynomial — with a careful note
+on who interpolates whom. Take the samples as *coefficients* and build
+
+$$
+p(z) = x[0] + x[1]\, z + \dots + x[N-1]\, z^{N-1}.
+$$
+
+The forward DFT is *evaluation*: $X[k] = p(\omega^{-k})$ (the minus is our
+sign convention) — the spectrum is the list of values this polynomial
+takes at the $N$ roots of unity. The inverse DFT is *interpolation*:
+handed those $N$ values at those $N$ nodes, it recovers the one and only
+degree-$(N-1)$ polynomial through them — that is, the coefficients — that
+is, the samples. So on this side of the mirror the samples are not points
+to be hit: they are the *curve itself*, and the spectrum is the set of
+pins holding it in place. In the green-model pictures the roles were
+exactly reversed: there the *spectrum* supplied the coefficients, and the
+curve was pinned to the *samples* at $t = nT$. Each domain is the other
+one's set of pins. Second, this
 evaluate–interpolate loop is exactly how the FFT multiplies polynomials
 fast — evaluate both factors at the roots of unity, multiply the values
 pointwise, interpolate the product back — the trick at the heart of
