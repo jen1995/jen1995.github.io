@@ -17,6 +17,8 @@ the payoff of that teaser: we meet the remaining shades — the Fourier
 build *every bridge between the four*. None of the four is an axiom; each
 is another one pushed through a limit, a sampling, or a periodization.
 
+<a id="the-square"></a>
+
 ![Four Shades of Fourier](four_shades_of_fourier.svg)
 
 Two conventions carried over from the trilogy: frequencies live in hertz
@@ -170,11 +172,14 @@ $\frac{n}{P}$. **Periodic in time ⇔ discrete in frequency**, and the
 period in one domain sets the grid step in the other: $P$ seconds of period
 — $\frac{1}{P}$ hertz between harmonics. [Part 2 met both faces of this
 law](/posts/fourier-series-to-spectrogram-part-2/) on what will become the
-*bottom edge* of our map — the road from the Fourier series to the DFT,
+*bottom edge* of [our map](#the-square) — the road from the Fourier series
+to the DFT,
 where a single derivation periodizes the signal (and the spectrum comes
-out discrete) and samples it (and the spectrum comes out periodic), each
-fact checked by direct computation before any general principle was in
-sight: two lines of $e^{-2 \pi i n} = 1$. The bridge we have just crossed
+out discrete — the series hands over coefficients on a grid by its very
+construction) and samples it (and the spectrum comes out periodic — one
+line: $c_{k+N} = c_k$ because $e^{-2 \pi i n} = 1$). Both facts arrived by
+direct computation, before any general principle was in sight. The bridge
+we have just crossed
 is the square's *left edge*, the same law between transform and series —
 and by the end of this post it will run every road on the map.
 
