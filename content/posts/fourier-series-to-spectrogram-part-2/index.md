@@ -72,6 +72,15 @@ the basis comes with it; the DFT then offers its $N$ probe frequencies —
 zero turns, one turn, two turns, … — and reports the signal's resemblance
 to each.
 
+(A detail worth a second look: in the picture, the curves run *past* the
+last sample, all the way to $t = NT$. That is not sloppiness — the window
+genuinely lasts $NT$ seconds: $N$ intervals of $T$ each, with a sample at
+the start of every interval. The last sample therefore sits at
+$n = N - 1$, while $t = NT$ is where the *next* period would begin — and a
+whole-turn probe arrives there exactly as it started. That endpoint
+belongs to the copy, not to this window; if we also sampled at $t = NT$,
+we would be counting the same point twice.)
+
 These $N$ oscillations deserve a name, because they are more than measuring
 sticks: look back at the *inverse* DFT formula from Part 1 — it is
 $x[n] = \frac{1}{N} \sum_k X[k]\, w_k[n]$, the signal reassembled as a
