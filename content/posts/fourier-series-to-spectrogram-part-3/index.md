@@ -230,7 +230,7 @@ thousands of oscillations, far too many to draw sample by sample; which is
 precisely the kind of signal you need a spectrogram to *see*. Here it is
 under two different window lengths:
 
-![One chirp under a short and a long window](chirp_tradeoff.png)
+![One chirp under a short and a long window, with pixel-level zooms of the same patch](chirp_tradeoff.png)
 
 First, note what the two pictures share and what they do not. The vertical
 axis is the same on both: it runs from $0$ to $f_s/2$ — the [Nyquist
@@ -238,7 +238,14 @@ ceiling from Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-fr
 the grid's edge that the Kotelnikov–Shannon–Nyquist sampling theorem is
 about — and that *range* is fixed by the sampling rate alone. What differs is the grid packed inside
 it: the left picture has $129$ rows spaced $31.2$ Hz apart, the right one
-$1025$ rows spaced $3.9$ Hz apart — eight times finer, on paper.
+$1025$ rows spaced $3.9$ Hz apart — eight times finer, on paper. The bottom
+row of the figure makes the grids visible: it re-plots the *same* green
+patch — $500$ Hz by a quarter of a second — from each picture, pixel for
+pixel. On the left the patch is spanned by $16$ chunky rows and $31$
+columns; on the right, by $128$ fine rows but only *three* columns. The
+long window's grid is finer along frequency and far coarser along time —
+and every pixel of a spectrogram is exactly one (frame, bin) cell of the
+STFT, so the pixels *are* the grid.
 
 Now the arithmetic of what each column actually sees. The chirp climbs at
 $(3600 - 200)/2 = 1700$ Hz per second. During one $32$ ms frame it sweeps
