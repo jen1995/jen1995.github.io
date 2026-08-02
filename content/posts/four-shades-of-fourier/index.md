@@ -131,8 +131,11 @@ Now walk the same bridge in the opposite direction — it reveals something
 the limit hid. Take an *aperiodic* signal $x(t)$ of finite extent: zero
 outside $\left[ -\frac{\tau}{2}, \frac{\tau}{2} \right]$. It has a Fourier
 transform $X(f)$. Build its periodic extension $x_P(t)$ — copies every $P$,
-with $P \ge \tau$ so the copies do not overlap (the gluing of Part 1, now
-with breathing room):
+with $P \ge \tau$ so the copies do not overlap. This is the same
+copy-gluing that Part 1 used to make a recording periodic, with one
+difference: there the copies stood back to back (the period equaled the
+recording), while here the period may exceed the support, leaving
+stretches of silence between the copies:
 
 ![A compact signal and its periodic extension, copies spaced P apart with gaps](periodize_gap.png)
 
