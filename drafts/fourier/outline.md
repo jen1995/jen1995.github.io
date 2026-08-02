@@ -24,7 +24,7 @@ Based on the DSP lecture (see `lecture_digest.md`; deck: [Google Slides](https:/
   (`content/posts/fourier-series-to-spectrogram-part-3/`), with the
   companion notebook `notebooks/building_the_spectrogram.ipynb`.
 
-### Act two, post 1. Four Shades of Fourier
+### Act two, post 1. Four Shades of Fourier — **drafted in full** (content/posts/four-shades-of-fourier/, draft:true), under review
 Role in the series: introduces the **Fourier transform** proper (continuous
 time, continuous frequency — the one shade we have never defined) and builds
 the bridges between all four shades; the "discrete in one domain ⇔ periodic
