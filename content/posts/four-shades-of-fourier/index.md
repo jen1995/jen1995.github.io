@@ -215,12 +215,16 @@ signal and the exponential alike — at its own grid instant $t = nT$.
 In two layers. For *honest
 functions* in place of deltas, swapping an infinite sum with an integral
 is licensed by the [Fubini–Tonelli
-theorem](https://en.wikipedia.org/wiki/Fubini%27s_theorem) — a sum is an
-integral over the [counting
-measure](https://en.wikipedia.org/wiki/Counting_measure), the measure that
-assigns to a set of indices simply the number of its elements, so that
-"integrating" against it means adding the terms up; the swap of the two
-integrals is then legal whenever the
+theorem](https://en.wikipedia.org/wiki/Fubini%27s_theorem). The theorem is
+stated for products of arbitrary *σ-finite measure spaces* — the Lebesgue
+measure on the line is only its most famous customer — and another
+customer is the [counting
+measure](https://en.wikipedia.org/wiki/Counting_measure) on the integers:
+the measure that assigns to a set of indices simply the number of its
+elements, so that "integrating" against it means adding the terms up. A
+sum is an integral over the counting measure; our sum-plus-integral is a
+double integral over a product of two measure spaces; and the swap of the
+two is legal whenever the
 total absolute mass $\sum_n \int |f_n|$ is finite; in our setting that
 becomes *absolute summability of the samples*, $\sum_n |x(nT)| \lt
 \infty$, which also makes the resulting series converge absolutely and
