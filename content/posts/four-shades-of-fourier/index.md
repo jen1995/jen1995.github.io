@@ -221,7 +221,12 @@ measure on the line is only its most famous customer — and another
 customer is the [counting
 measure](https://en.wikipedia.org/wiki/Counting_measure) on the integers:
 the measure that assigns to a set of indices simply the number of its
-elements, so that "integrating" against it means adding the terms up. A
+elements, so that "integrating" against it means adding the terms up.
+(Why: any integral is assembled from indicator blocks,
+$\int \mathbf{1}_A\, d\mu = \mu(A)$, and under the counting measure every
+single index carries mass exactly $1$ — so the block over $\{n\}$
+contributes $f(n) \cdot 1$, and accumulating the blocks *is* summing the
+values.) A
 sum is an integral over the counting measure; our sum-plus-integral is a
 double integral over a product of two measure spaces; and the swap of the
 two is legal whenever the
