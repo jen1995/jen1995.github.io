@@ -179,9 +179,9 @@ columns:
 
 $$
 \begin{pmatrix} x[0] \\ x[1] \\ \vdots \\ x[N-1] \end{pmatrix}
-= \frac{X[0]}{N} \begin{pmatrix} w_0[0] \\ w_0[1] \\ \vdots \\ w_0[N-1] \end{pmatrix}
-+ \dots
-+ \frac{X[N-1]}{N} \begin{pmatrix} w_{N-1}[0] \\ w_{N-1}[1] \\ \vdots \\ w_{N-1}[N-1] \end{pmatrix}.
+= \frac{X[0]}{N} \begin{pmatrix} w_0[0] \\ w_0[1] \\ \vdots \\ w_0[N-1] \end{pmatrix} +
+\dots +
+\frac{X[N-1]}{N} \begin{pmatrix} w_{N-1}[0] \\ w_{N-1}[1] \\ \vdots \\ w_{N-1}[N-1] \end{pmatrix}.
 $$
 
 Name the columns — $\mathbf{x}$ on the left, $\mathbf{w}_k$ for the $k$-th
