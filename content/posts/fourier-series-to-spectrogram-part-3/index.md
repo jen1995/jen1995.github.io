@@ -261,7 +261,7 @@ through $1700 \cdot 0.256 \approx 435$ Hz — more than a *hundred* bins of
 the right grid. And the column reports the
 truth: the frame genuinely contained all of those frequencies, so the fine
 grid faithfully resolves… a smear $435$ Hz wide. The sharper $\Delta f$
-bought a worse picture. Here is the lesson, stated carefully: **$\Delta f$
+bought a worse picture. Here is the lesson: **$\Delta f$
 measures the fineness of the frequency axis — not the thinness of what
 lands on it.** A tone's image is one bin thin only when the tone's
 frequency stays inside one bin — changes by less than $\Delta f$ — over
