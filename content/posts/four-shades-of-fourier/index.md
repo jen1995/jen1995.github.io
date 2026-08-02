@@ -176,9 +176,10 @@ law](/posts/fourier-series-to-spectrogram-part-2/) on what will become the
 to the DFT,
 where a single derivation periodizes the signal (and the spectrum comes
 out discrete — the series hands over coefficients on a grid by its very
-construction) and samples it (and the spectrum comes out periodic — one
-line: $c_{k+N} = c_k$ because $e^{-2 \pi i n} = 1$). Both facts arrived by
-direct computation, before any general principle was in sight. The bridge
+construction) and samples it (and the spectrum comes out periodic — [one
+line: $c_{k+N} = c_k$](/posts/fourier-series-to-spectrogram-part-1/#only-n-distinct-coefficients)).
+Both facts arrived by direct computation, before any general principle was
+in sight. The bridge
 we have just crossed
 is the square's *left edge*, the same law between transform and series —
 and by the end of this post it will run every road on the map.
