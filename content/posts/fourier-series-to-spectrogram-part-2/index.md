@@ -631,7 +631,8 @@ traced along the circle:
 
 ![The interpolation task on the unit circle, and the same task unrolled along time](interp_circle.png)
 
-(A footnote for the mirror-trained reader: traced literally with the
+(A footnote that leans on the [mirror symmetry](#the-mirror) from earlier
+in the post: traced literally with the
 frequencies $0, \dots, N-1$, the curve $q(e^{2 \pi i t/(NT)})$ is
 complex-valued *between* the samples. The drawn curve lets the mirror
 twins act as a conjugate pair instead: for $0 \lt k \lt N/2$ the
