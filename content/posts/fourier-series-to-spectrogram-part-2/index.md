@@ -570,11 +570,15 @@ Nodes as distinct, and as symmetric, as $N$ points can be — and that
 special placement is what upgrades "invertible" to "unitary up to scale". Two consequences are worth savoring.
 
 First, our sample-hitting model turns out to be a *polynomial
-interpolation* problem, posed the most natural way. Here are $N$ points to
-pass through: at the node $\omega^n$ — one root of unity per sample
-instant — hang the height $x[n]$. Now look for the degree-$(N-1)$
-polynomial $q(z) = c_0 + c_1 z + \dots + c_{N-1} z^{N-1}$ that passes
-through all of them:
+interpolation* problem, posed the most natural way: find the polynomial
+of degree $N-1$,
+
+$$
+q(z) = c_0 + c_1 z + \dots + c_{N-1} z^{N-1},
+$$
+
+whose values at the $N$ roots of unity are exactly our samples — one node
+per sample:
 
 $$
 q(\omega^n) = \sum_{k=0}^{N-1} c_k\, \omega^{k n} = x[n],
