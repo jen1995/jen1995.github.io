@@ -539,7 +539,9 @@ V = \begin{pmatrix}
 \end{pmatrix}.
 $$
 
-It is the matrix of *polynomial interpolation* — solving
+It is the matrix of *[polynomial
+interpolation](https://en.wikipedia.org/wiki/Polynomial_interpolation)* —
+solving
 $V \mathbf{c} = \mathbf{y}$ means finding a polynomial with coefficients
 $c_k$ that passes through the points $(z_j, y_j)$ — and its famous
 determinant,
