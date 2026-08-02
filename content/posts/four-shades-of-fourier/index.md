@@ -98,14 +98,23 @@ reassembled from a *continuum* of frequencies. Everything is as in the
 series, with the sum over a discrete grid of harmonics matured into an
 integral over all frequencies, and the coefficients $c_n$ matured into a
 *density* $X(f)$ (per unit of frequency — that is what the extra $P$ was
-doing). For this to make honest sense $x$ should be [absolutely
-integrable](https://en.wikipedia.org/wiki/Absolutely_integrable_function),
-and the integrals are read as
-[principal values](https://en.wikipedia.org/wiki/Cauchy_principal_value);
-the fine print lives in analysis textbooks (Zorich's *Mathematical
-Analysis II* treats it with full care), and the
+doing).
+
+Two remarks on honesty, because the two integrals are not equally
+innocent. The *defining* integral for $X(f)$ is a fully honest one:
+$\left| x(t)\, e^{-2 \pi i f t} \right| = |x(t)|$, so for an [absolutely
+integrable](https://en.wikipedia.org/wiki/Absolutely_integrable_function)
+signal it converges absolutely — no interpretation needed. The *inversion*
+integral is the delicate character: $X$ itself need not be absolutely
+integrable (our rectangular pulse's transform will turn out to be a sinc,
+whose tails die like $\frac{1}{f}$ — too slowly), so the Fourier integral
+is read as a symmetric limit, a [principal
+value](https://en.wikipedia.org/wiki/Cauchy_principal_value), and the
 [inversion theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem)
-holds under far weaker assumptions than our derivation used.
+pins down exactly when it returns $x(t)$. The fine print lives in analysis
+textbooks — Zorich's *Mathematical Analysis II* treats it with full care —
+and holds under far weaker assumptions than our physicist's derivation
+used.
 
 ## Bridge two: the transform is the envelope of the series
 
