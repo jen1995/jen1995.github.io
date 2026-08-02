@@ -107,6 +107,13 @@ description is simply not on offer. Only as the recording grows does the
 vocabulary reach down to where the signal actually lives — by $N = 25$ the
 lowest probe finally oscillates at almost the signal's own pace.
 
+(Keep one thing in mind while looking at these curves: they are drawn at
+phase zero, every one starting from its peak. In the true approximation
+each probe will additionally come with its own *phase shift* — the weights
+the DFT assigns are complex numbers, and a complex weight slides its probe
+in time. How exactly that works — and how peak-started cosines manage to
+assemble a zero-started signal — is a couple of pictures away.)
+
 And what does the vocabulary *say*, once every word gets its weight? Sum
 all $N$ probes with the coefficients the DFT assigns them — that is
 exactly the inverse DFT — and draw the sum as a continuous curve. This is
