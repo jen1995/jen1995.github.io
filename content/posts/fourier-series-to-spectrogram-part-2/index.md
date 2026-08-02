@@ -531,12 +531,7 @@ number. A matrix whose rows are geometric progressions of their own
 Written out in full, with one node per row:
 
 $$
-V = \begin{pmatrix}
-1 & z_0 & z_0^2 & \cdots & z_0^{N-1} \\
-1 & z_1 & z_1^2 & \cdots & z_1^{N-1} \\
-\vdots & \vdots & \vdots & & \vdots \\
-1 & z_{N-1} & z_{N-1}^2 & \cdots & z_{N-1}^{N-1}
-\end{pmatrix}.
+V = \begin{pmatrix} 1 & z_0 & z_0^2 & \cdots & z_0^{N-1} \\ 1 & z_1 & z_1^2 & \cdots & z_1^{N-1} \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & z_{N-1} & z_{N-1}^2 & \cdots & z_{N-1}^{N-1} \end{pmatrix}.
 $$
 
 It is the matrix of *[polynomial
@@ -557,13 +552,7 @@ the $N$-th roots of unity, $z_j = \omega^j$ — watch the rows fill in with
 powers of $\omega$:
 
 $$
-W = \begin{pmatrix}
-1 & 1 & 1 & \cdots & 1 \\
-1 & \omega & \omega^2 & \cdots & \omega^{N-1} \\
-1 & \omega^2 & \omega^4 & \cdots & \omega^{2(N-1)} \\
-\vdots & \vdots & \vdots & & \vdots \\
-1 & \omega^{N-1} & \omega^{2(N-1)} & \cdots & \omega^{(N-1)^2}
-\end{pmatrix}.
+W = \begin{pmatrix} 1 & 1 & 1 & \cdots & 1 \\ 1 & \omega & \omega^2 & \cdots & \omega^{N-1} \\ 1 & \omega^2 & \omega^4 & \cdots & \omega^{2(N-1)} \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & \omega^{N-1} & \omega^{2(N-1)} & \cdots & \omega^{(N-1)^2} \end{pmatrix}.
 $$
 
 Nodes as distinct, and as symmetric, as $N$ points can be — and that
@@ -591,29 +580,35 @@ the polynomial through the samples means solving
 $W \mathbf{c} = \mathbf{x}$ — written out in full:
 
 $$
-\underbrace{\begin{pmatrix}
-1 & 1 & \cdots & 1 \\
-1 & \omega & \cdots & \omega^{N-1} \\
-\vdots & \vdots & & \vdots \\
-1 & \omega^{N-1} & \cdots & \omega^{(N-1)^2}
-\end{pmatrix}}_{W}
-\underbrace{\begin{pmatrix} c_0 \\ c_1 \\ \vdots \\ c_{N-1} \end{pmatrix}}_{\mathbf{c}}
-=
+\underbrace{\begin{pmatrix} 1 & 1 & \cdots & 1 \\ 1 & \omega & \cdots & \omega^{N-1} \\ \vdots & \vdots & & \vdots \\ 1 & \omega^{N-1} & \cdots & \omega^{(N-1)^2} \end{pmatrix}}_{W}
+\underbrace{\begin{pmatrix} c_0 \\ c_1 \\ \vdots \\ c_{N-1} \end{pmatrix}}_{\mathbf{c}} =
 \underbrace{\begin{pmatrix} x[0] \\ x[1] \\ \vdots \\ x[N-1] \end{pmatrix}}_{\mathbf{x}}.
 $$
 
-And we have already solved it: compare the
-condition above with the inverse DFT,
-$x[n] = \tfrac{1}{N} \sum_k X[k]\, \omega^{k n}$, and the coefficients can
-be read off directly:
+And this system we can simply *solve*, because the inverse matrix costs
+nothing: a few paragraphs ago orthogonality gave us $W^{*} W = N I$, that
+is,
+
+$$
+W^{-1} = \frac{1}{N} W^{*},
+\qquad\text{so}\qquad
+\mathbf{c} = \frac{1}{N} W^{*} \mathbf{x}.
+$$
+
+Now look at what the product $W^{*} \mathbf{x}$ computes, row by row: the
+$k$-th row of $W^{*}$ holds the conjugated probe $\overline{w_k[n]} =
+\omega^{-k n}$, so the $k$-th entry of the product is
+$\sum_n x[n]\, \omega^{-k n}$ — the forward DFT, term for term. The
+solution of the interpolation system turns out to be our old coefficients:
 
 $$
 c_k = \frac{X[k]}{N}.
 $$
 
 To interpolate through the samples, run a forward DFT — that is the entire
-algorithm. (Interpolation normally costs solving a linear system; the
-roots-of-unity nodes are so symmetric that the solution is one transform.)
+algorithm. (Interpolation normally costs solving a linear system; this
+particular system's matrix inverts by mere conjugation, because its
+columns are orthogonal.)
 
 And the interpolating polynomial is an old friend. Substitute
 $z = e^{2 \pi i t / (NT)}$: as $t$ runs through the window, $z$ walks once
@@ -638,14 +633,18 @@ traced along the circle:
 
 (A footnote for the mirror-trained reader: traced literally with the
 frequencies $0, \dots, N-1$, the curve $q(e^{2 \pi i t/(NT)})$ is
-complex-valued *between* the samples. The drawn curve uses each probe at
-its *balanced* frequency — every $k$ beyond $N/2$ acting as the negative
-frequency $k - N$ — which is what keeps it real. At the samples themselves
-the two choices agree, because $e^{2 \pi i (k-N) n/N} = e^{2 \pi i k n/N}$
-— the periodicity $c_{k+N} = c_k$ yet again. And the dictionary also reads
-backwards: treat the samples as the *coefficients* of a polynomial, and
-the forward DFT computes that polynomial's *values* at the nodes —
-evaluation in one direction, interpolation in the other.)
+complex-valued *between* the samples. The drawn curve lets the mirror
+twins act as a conjugate pair instead: for $0 \lt k \lt N/2$ the
+coefficients $X[k]$ and $X[N-k] = \overline{X[k]}$ keep their full values,
+but the twin plays its *negative* frequency $k - N$ rather than $N - k$ —
+and the pair's two terms, now complex conjugates of each other, sum to the
+real quantity $2 \operatorname{Re}\!\left( X[k]\, e^{2 \pi i k t/(NT)}
+\right)$. No averaging happens there; the only coefficient literally split
+in half is the lone Nyquist one when $N$ is even — half of $X[N/2]$ goes
+to $+f_s/2$, half to $-f_s/2$, and the halves sum to a real cosine. At the
+sample instants every one of these choices is indistinguishable, because
+$e^{2 \pi i (k-N) n/N} = e^{2 \pi i k n/N}$ — the periodicity
+$c_{k+N} = c_k$ yet again.)
 
 Second, this coefficients-to-values dictionary, cheap in both directions,
 is exactly how the FFT multiplies polynomials fast — convert both factors

@@ -58,7 +58,7 @@ Math is rendered client-side by KaTeX (configured in `layouts/partials/extend_he
 - Prefer `$$ ... $$` over bare `\begin{equation}` blocks — it is what the passthrough extension protects
 - Handy macros defined globally: `\R`, `\E`, `\KL`
 
-Four hard-won gotchas (Markdown parses the page before KaTeX sees it):
+Six hard-won gotchas (Markdown parses the page before KaTeX sees it):
 
 1. Write `<` as `\lt` inside formulas — a raw `<` opens an HTML tag and eats
    the markup (`z_{\lt i}`, not `z_{<i}`).
@@ -67,7 +67,17 @@ Four hard-won gotchas (Markdown parses the page before KaTeX sees it):
 3. Inside a multi-line `$$` block, never start a line with `+`, `-`, `*` or
    `1.` — Markdown opens a list and tears the formula apart. Keep operators at
    the end of the previous line, or join the formula into one line.
-4. Display formulas must fit the ~720px content column without horizontal
+4. After a closing HTML block tag (e.g. `</details>`), leave a **blank
+   line** before Markdown text resumes — otherwise goldmark treats the rest
+   of the paragraph as part of the HTML block and stops rendering Markdown
+   (bold turns into literal asterisks).
+5. Inside a multi-line `$$` block, a line consisting of only `=` (or `-`)
+   turns the *previous* line into a setext heading and tears the block
+   apart — passthrough then loses its `$$` pairing and the damage cascades
+   into *other* formulas on the page. Keep `=` attached to a neighboring
+   line. For matrices, prefer writing the whole `\begin{pmatrix}…\end{pmatrix}`
+   on one source line: long lines are fine, torn blocks are not.
+6. Display formulas must fit the ~720px content column without horizontal
    scrolling (`overflow-x` in custom.css is a last-resort safety net, not a
    layout tool). Rules of thumb: at most **two `=` signs per line**, and never
    more than two integral/sum terms side by side; split longer chains with
