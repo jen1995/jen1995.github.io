@@ -569,45 +569,46 @@ $$
 Nodes as distinct, and as symmetric, as $N$ points can be — and that
 special placement is what upgrades "invertible" to "unitary up to scale". Two consequences are worth savoring.
 
-First, the DFT becomes a story about one polynomial — with a careful note
-on who interpolates whom. Take the samples as *coefficients* and build
+First, our sample-hitting model turns out to be a *polynomial
+interpolation* problem, posed the most natural way. Here are $N$ points to
+pass through: at the node $\omega^n$ — one root of unity per sample
+instant — hang the height $x[n]$. Now look for the degree-$(N-1)$
+polynomial $q(z) = c_0 + c_1 z + \dots + c_{N-1} z^{N-1}$ that passes
+through all of them:
 
 $$
-p(z) = x[0] + x[1]\, z + \dots + x[N-1]\, z^{N-1}.
+q(\omega^n) = \sum_{k=0}^{N-1} c_k\, \omega^{k n} = x[n],
+\qquad n = 0, \dots, N-1.
 $$
 
-The forward DFT is *evaluation* — group the exponential into a power of a
-single number and the DFT sum becomes the polynomial at work:
+Stare at this system of $N$ conditions: the matrix multiplying the unknown
+coefficients has entries $\omega^{nk}$ — it is *exactly* our $W$. Finding
+the polynomial through the samples means solving
+$W \mathbf{c} = \mathbf{x}$. And we have already solved it: compare the
+condition above with the inverse DFT,
+$x[n] = \tfrac{1}{N} \sum_k X[k]\, \omega^{k n}$, and the coefficients can
+be read off directly:
 
 $$
-X[k] = \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{k n}{N}}
-     = \sum_{n=0}^{N-1} x[n] \left( \omega^{-k} \right)^{n}
-     = p\!\left( \omega^{-k} \right)
+c_k = \frac{X[k]}{N}.
 $$
 
-(the minus is our sign convention) — the spectrum is the list of values
-this polynomial takes at the $N$ roots of unity. The inverse DFT is *interpolation*:
-handed those $N$ values at those $N$ nodes, it recovers the one and only
-degree-$(N-1)$ polynomial through them — that is, the coefficients — that
-is, the samples. As a formula it is the inverse transform, reread with the
-new glasses on:
+To interpolate through the samples, run a forward DFT — that is the entire
+algorithm. (Interpolation normally costs solving a linear system; the
+roots-of-unity nodes are so symmetric that the solution is one transform.)
 
-$$
-x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k n}{N}}
-     = \frac{1}{N} \sum_{k=0}^{N-1} p\!\left( \omega^{-k} \right) \omega^{k n}
-$$
+And the interpolating polynomial is an old friend. Substitute
+$z = e^{2 \pi i t / (NT)}$: as $t$ runs through the window, $z$ walks once
+around the unit circle, visiting the node $\omega^n$ exactly at the sample
+instant $t = nT$ — and $q(z)$ turns into $\tilde{x}(t)$, the green model
+from the pictures. The curve that hit every sample *was* this
+interpolating polynomial all along, traced along the circle. (The
+dictionary also reads backwards: treat the samples as the *coefficients*
+of a polynomial, and the forward DFT computes that polynomial's *values*
+at the nodes — evaluation in one direction, interpolation in the other.)
 
-— the right-hand side consumes nothing but the polynomial's *values* at
-the nodes, and hands back its $n$-th *coefficient*. (Interpolation
-normally costs a Lagrange formula or a linear solve; the roots-of-unity
-nodes are so symmetric that the interpolation weights collapse into plain
-powers of $\omega$.) So on this side of the mirror the samples are not points
-to be hit: they are the *curve itself*, and the spectrum is the set of
-pins holding it in place. In the green-model pictures the roles were
-exactly reversed: there the *spectrum* supplied the coefficients, and the
-curve was pinned to the *samples* at $t = nT$. Each domain is the other
-one's set of pins. Second, this
-evaluate–interpolate loop is exactly how the FFT multiplies polynomials
-fast — evaluate both factors at the roots of unity, multiply the values
-pointwise, interpolate the product back — the trick at the heart of
+Second, this coefficients-to-values dictionary, cheap in both directions,
+is exactly how the FFT multiplies polynomials fast — convert both factors
+to their values at the roots of unity, multiply the values pointwise,
+convert the product back to coefficients — the trick at the heart of
 big-integer arithmetic.
