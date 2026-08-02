@@ -526,6 +526,17 @@ $1, \omega^n, \omega^{2n}, \dots$ — the successive powers of a single
 number. A matrix whose rows are geometric progressions of their own
 "nodes", $V_{jk} = z_j^{\,k}$, has a classical name: the
 **[Vandermonde matrix](https://en.wikipedia.org/wiki/Vandermonde_matrix)**.
+Written out in full, with one node per row:
+
+$$
+V = \begin{pmatrix}
+1 & z_0 & z_0^2 & \cdots & z_0^{N-1} \\
+1 & z_1 & z_1^2 & \cdots & z_1^{N-1} \\
+\vdots & \vdots & \vdots & & \vdots \\
+1 & z_{N-1} & z_{N-1}^2 & \cdots & z_{N-1}^{N-1}
+\end{pmatrix}.
+$$
+
 It is the matrix of *polynomial interpolation* — solving
 $V \mathbf{c} = \mathbf{y}$ means finding a polynomial with coefficients
 $c_k$ that passes through the points $(z_j, y_j)$ — and its famous
@@ -538,9 +549,21 @@ $$
 says it is invertible exactly when all the nodes are distinct.
 
 The DFT matrix, then, is *the* Vandermonde matrix with its nodes placed at
-the $N$-th roots of unity — as distinct, and as symmetric, as $N$ points
-can be — and that special placement is what upgrades "invertible" to
-"unitary up to scale". Two consequences are worth savoring. First, our
+the $N$-th roots of unity, $z_j = \omega^j$ — watch the rows fill in with
+powers of $\omega$:
+
+$$
+W = \begin{pmatrix}
+1 & 1 & 1 & \cdots & 1 \\
+1 & \omega & \omega^2 & \cdots & \omega^{N-1} \\
+1 & \omega^2 & \omega^4 & \cdots & \omega^{2(N-1)} \\
+\vdots & \vdots & \vdots & & \vdots \\
+1 & \omega^{N-1} & \omega^{2(N-1)} & \cdots & \omega^{(N-1)^2}
+\end{pmatrix}.
+$$
+
+Nodes as distinct, and as symmetric, as $N$ points can be — and that
+special placement is what upgrades "invertible" to "unitary up to scale". Two consequences are worth savoring. First, our
 "the model passes through every sample" is now literally polynomial
 interpolation: the forward DFT *evaluates* the polynomial
 $p(z) = x[0] + x[1] z + \dots + x[N-1] z^{N-1}$ at all $N$ roots of unity
