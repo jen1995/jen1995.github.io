@@ -254,10 +254,11 @@ itself; the hop only chooses how densely you sample it.)
 
 Now the arithmetic of what each column actually sees. The chirp climbs at
 $(3600 - 200)/2 = 1700$ Hz per second. During one $32$ ms frame it sweeps
-through about $54$ Hz — a couple of bins of the left grid: the frame is
-nearly a constant tone, and the line comes out about as thin as $\Delta f$
-allows. During one $256$ ms frame the chirp sweeps through about $435$ Hz —
-more than a *hundred* bins of the right grid. And the column reports the
+through $1700 \cdot 0.032 \approx 54$ Hz — a couple of bins of the left
+grid: the frame is nearly a constant tone, and the line comes out about as
+thin as $\Delta f$ allows. During one $256$ ms frame the chirp sweeps
+through $1700 \cdot 0.256 \approx 435$ Hz — more than a *hundred* bins of
+the right grid. And the column reports the
 truth: the frame genuinely contained all of those frequencies, so the fine
 grid faithfully resolves… a smear $435$ Hz wide. The sharper $\Delta f$
 bought a worse picture, because **frequency resolution is only resolution
