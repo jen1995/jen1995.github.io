@@ -207,6 +207,42 @@ DFT is, up to scale, a rotation of $\mathbb{C}^N$.)
 
 </details>
 
+<details>
+<summary><b>One more name for the same matrix</b> (a reunion with a linear algebra classic)</summary>
+
+Look at the entries of $W$ once more: $(W)_{nk} = w_k[n] = \omega^{nk}$
+with $\omega = e^{2 \pi i / N}$, so the $n$-th row is
+$1, \omega^n, \omega^{2n}, \dots$ — the successive powers of a single
+number. A matrix whose rows are geometric progressions of their own
+"nodes", $V_{jk} = z_j^{\,k}$, has a classical name: the
+**[Vandermonde matrix](https://en.wikipedia.org/wiki/Vandermonde_matrix)**.
+It is the matrix of *polynomial interpolation* — solving
+$V \mathbf{c} = \mathbf{y}$ means finding a polynomial with coefficients
+$c_k$ that passes through the points $(z_j, y_j)$ — and its famous
+determinant,
+
+$$
+\det V = \prod_{0 \,\le\, i \,\lt\, j \,\le\, N-1} (z_j - z_i),
+$$
+
+says it is invertible exactly when all the nodes are distinct.
+
+The DFT matrix, then, is *the* Vandermonde matrix with its nodes placed at
+the $N$-th roots of unity — as distinct, and as symmetric, as $N$ points
+can be — and that special placement is what upgrades "invertible" to
+"unitary up to scale". Two consequences are worth savoring. First, our
+"the model passes through every sample" is now literally polynomial
+interpolation: the forward DFT *evaluates* the polynomial
+$p(z) = x[0] + x[1] z + \dots + x[N-1] z^{N-1}$ at all $N$ roots of unity
+(in our sign convention, at $z = \omega^{-k}$), and the inverse DFT
+*interpolates* the coefficients back from the values. Second, this
+evaluate–interpolate loop is exactly how the FFT multiplies polynomials
+fast — evaluate both factors at the roots of unity, multiply the values
+pointwise, interpolate the product back — the trick at the heart of
+big-integer arithmetic.
+
+</details>
+
 Outside the window, the model does the only thing a sum of
 whole-turn oscillations can do: **repeats**, with the window's own period.
 The DFT never models your signal as it is — it models a periodic world
