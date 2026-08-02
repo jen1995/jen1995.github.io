@@ -119,9 +119,9 @@ every blue sample *exactly* — $N$ numbers in, $N$ numbers out, the books
 balance as always.
 
 (Why *exactly*, and not merely very closely? That has a beautiful
-answer, but it deserves its own stretch of road — and gets one: see the
-[interlude below](#interlude-the-probes-are-a-basis), right after we
-finish reading the pictures.)
+answer, but it deserves its own stretch of road — and gets one: the
+[appendix at the end of the post](#appendix-the-probes-are-a-basis),
+for whenever the linear-algebra mood strikes.)
 
 Outside the window, the model does the only thing a sum of
 whole-turn oscillations can do: **repeats**, with the window's own period.
@@ -170,129 +170,6 @@ in mind that the DFT's world is quantized to whole turns.
 
 (For a lovely interactive treatment of these facts, see [chapter 5 of Brian
 McFee's *Digital Signals Theory*](https://brianmcfee.net/dstbook-site/content/ch05-fourier/DFT.html).)
-
-## Interlude: the probes are a basis
-
-The green model above hit every sample dead on, and that was promised
-to be no accident. This interlude pays the debt — a stretch of honest
-linear algebra, ending with a reunion with an old classic.
-
-First, write the model down. As a function of continuous time, the $k$-th
-probe is $e^{2 \pi i \frac{k}{NT} t}$ — the $k$-th grid frequency — so the
-weighted sum drawn in green is
-
-$$
-\tilde{x}(t) = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k}{NT} t}.
-$$
-
-Now put a sample instant $t = nT$ into it. The $T$ cancels in the
-exponent, and
-
-$$
-\tilde{x}(nT) = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k n}{N}} = x[n]
-$$
-
-— the right-hand side is *literally* the inverse DFT formula from Part 1,
-and its output is the original samples. So at the grid instants the model
-has no freedom at all: it is contractually obliged to return $x[n]$.
-
-That pushes the question one step deeper: why does the *inverse formula*
-reproduce the samples exactly? Because, as lists of $N$ values, the probes
-are **orthogonal** to one another. Compute their inner product:
-
-$$
-\langle w_j, w_k \rangle = \sum_{n=0}^{N-1} e^{2 \pi i \frac{(j - k) n}{N}}.
-$$
-
-For $j = k$ every term is $1$ and the sum is $N$. For two *different*
-probes it is a geometric series with ratio $q = e^{2 \pi i (j-k)/N}$ — a
-ratio that is not $1$ itself, yet satisfies $q^N = 1$ — so the sum,
-$\frac{q^N - 1}{q - 1}$, is exactly zero.
-
-Orthogonal vectors are linearly independent, so the $N$ probes form a
-genuine **basis** of the $N$-dimensional space of sample lists — the word
-we have been using all along, now earned. Every list of $N$ numbers is a
-weighted sum of probes in exactly one way; the interpolation is not luck
-but $N$ dimensions meeting $N$ basis vectors.
-
-To see the same thing in vector language, start slow. The inverse DFT is
-one equation *per sample* — write them all out, one under another:
-
-$$
-\begin{aligned}
-x[0] &= \tfrac{X[0]}{N}\, w_0[0] + \tfrac{X[1]}{N}\, w_1[0] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[0] \\
-x[1] &= \tfrac{X[0]}{N}\, w_0[1] + \tfrac{X[1]}{N}\, w_1[1] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[1] \\
-&\;\;\vdots \\
-x[N-1] &= \tfrac{X[0]}{N}\, w_0[N-1] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[N-1].
-\end{aligned}
-$$
-
-Now read this system by *columns* instead of rows. Every column carries
-one and the same scalar $\tfrac{X[k]}{N}$ — and the stack of numbers it
-multiplies, $w_k[0], w_k[1], \dots, w_k[N-1]$, is the $k$-th probe written
-out top to bottom. So the $N$ equations are really one equation between
-columns:
-
-$$
-\begin{pmatrix} x[0] \\ x[1] \\ \vdots \\ x[N-1] \end{pmatrix}
-= \frac{X[0]}{N} \begin{pmatrix} w_0[0] \\ w_0[1] \\ \vdots \\ w_0[N-1] \end{pmatrix} +
-\dots +
-\frac{X[N-1]}{N} \begin{pmatrix} w_{N-1}[0] \\ w_{N-1}[1] \\ \vdots \\ w_{N-1}[N-1] \end{pmatrix}.
-$$
-
-Name the columns — $\mathbf{x}$ on the left, $\mathbf{w}_k$ for the $k$-th
-one on the right — and the whole system collapses into one line, with the
-forward transform alongside it:
-
-$$
-\mathbf{x} = \sum_{k=0}^{N-1} \frac{X[k]}{N}\, \mathbf{w}_k,
-\qquad
-X[k] = \langle \mathbf{x}, \mathbf{w}_k \rangle
-$$
-
-— the textbook expansion of a vector in an orthogonal basis: each
-coefficient is the inner product with the corresponding basis vector,
-divided by that vector's squared length. And the squared length is
-$\langle \mathbf{w}_k, \mathbf{w}_k \rangle = N$, as we just computed —
-which is where the $\frac{1}{N}$ of the inverse DFT has been hiding all
-along. (Part 1's convention inset told you where that factor is *put*;
-this is why it *exists*. And one step further, for the matrix-minded:
-stack the probes as the columns of an $N \times N$ matrix $W$;
-orthogonality reads $W^{*} W = N I$, so $W / \sqrt{N}$ is unitary — the
-DFT is, up to scale, a rotation of $\mathbb{C}^N$.)
-
-### One more name for the same matrix
-
-Look at the entries of $W$ once more: $(W)_{nk} = w_k[n] = \omega^{nk}$
-with $\omega = e^{2 \pi i / N}$, so the $n$-th row is
-$1, \omega^n, \omega^{2n}, \dots$ — the successive powers of a single
-number. A matrix whose rows are geometric progressions of their own
-"nodes", $V_{jk} = z_j^{\,k}$, has a classical name: the
-**[Vandermonde matrix](https://en.wikipedia.org/wiki/Vandermonde_matrix)**.
-It is the matrix of *polynomial interpolation* — solving
-$V \mathbf{c} = \mathbf{y}$ means finding a polynomial with coefficients
-$c_k$ that passes through the points $(z_j, y_j)$ — and its famous
-determinant,
-
-$$
-\det V = \prod_{0 \,\le\, i \,\lt\, j \,\le\, N-1} (z_j - z_i),
-$$
-
-says it is invertible exactly when all the nodes are distinct.
-
-The DFT matrix, then, is *the* Vandermonde matrix with its nodes placed at
-the $N$-th roots of unity — as distinct, and as symmetric, as $N$ points
-can be — and that special placement is what upgrades "invertible" to
-"unitary up to scale". Two consequences are worth savoring. First, our
-"the model passes through every sample" is now literally polynomial
-interpolation: the forward DFT *evaluates* the polynomial
-$p(z) = x[0] + x[1] z + \dots + x[N-1] z^{N-1}$ at all $N$ roots of unity
-(in our sign convention, at $z = \omega^{-k}$), and the inverse DFT
-*interpolates* the coefficients back from the values. Second, this
-evaluate–interpolate loop is exactly how the FFT multiplies polynomials
-fast — evaluate both factors at the roots of unity, multiply the values
-pointwise, interpolate the product back — the trick at the heart of
-big-integer arithmetic.
 
 ## From the index to hertz
 
@@ -550,3 +427,127 @@ results into the picture this series is named after: the spectrogram.
 > Nyquist *bin* when $N$ is odd, and the factor-of-2 bookkeeping of
 > one-sided amplitude spectra (the same machinery scipy applies inside its
 > one-sided routines).
+
+## Appendix: the probes are a basis
+
+Back in [What does X[k] measure?](#what-does-xk-measure), the green
+model hit every sample dead on — and that was promised to be no
+accident. This interlude pays the debt — a stretch of honest
+linear algebra, ending with a reunion with an old classic.
+
+First, write the model down. As a function of continuous time, the $k$-th
+probe is $e^{2 \pi i \frac{k}{NT} t}$ — the $k$-th grid frequency — so the
+weighted sum drawn in green is
+
+$$
+\tilde{x}(t) = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k}{NT} t}.
+$$
+
+Now put a sample instant $t = nT$ into it. The $T$ cancels in the
+exponent, and
+
+$$
+\tilde{x}(nT) = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k n}{N}} = x[n]
+$$
+
+— the right-hand side is *literally* the inverse DFT formula from Part 1,
+and its output is the original samples. So at the grid instants the model
+has no freedom at all: it is contractually obliged to return $x[n]$.
+
+That pushes the question one step deeper: why does the *inverse formula*
+reproduce the samples exactly? Because, as lists of $N$ values, the probes
+are **orthogonal** to one another. Compute their inner product:
+
+$$
+\langle w_j, w_k \rangle = \sum_{n=0}^{N-1} e^{2 \pi i \frac{(j - k) n}{N}}.
+$$
+
+For $j = k$ every term is $1$ and the sum is $N$. For two *different*
+probes it is a geometric series with ratio $q = e^{2 \pi i (j-k)/N}$ — a
+ratio that is not $1$ itself, yet satisfies $q^N = 1$ — so the sum,
+$\frac{q^N - 1}{q - 1}$, is exactly zero.
+
+Orthogonal vectors are linearly independent, so the $N$ probes form a
+genuine **basis** of the $N$-dimensional space of sample lists — the word
+we have been using all along, now earned. Every list of $N$ numbers is a
+weighted sum of probes in exactly one way; the interpolation is not luck
+but $N$ dimensions meeting $N$ basis vectors.
+
+To see the same thing in vector language, start slow. The inverse DFT is
+one equation *per sample* — write them all out, one under another:
+
+$$
+\begin{aligned}
+x[0] &= \tfrac{X[0]}{N}\, w_0[0] + \tfrac{X[1]}{N}\, w_1[0] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[0] \\
+x[1] &= \tfrac{X[0]}{N}\, w_0[1] + \tfrac{X[1]}{N}\, w_1[1] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[1] \\
+&\;\;\vdots \\
+x[N-1] &= \tfrac{X[0]}{N}\, w_0[N-1] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[N-1].
+\end{aligned}
+$$
+
+Now read this system by *columns* instead of rows. Every column carries
+one and the same scalar $\tfrac{X[k]}{N}$ — and the stack of numbers it
+multiplies, $w_k[0], w_k[1], \dots, w_k[N-1]$, is the $k$-th probe written
+out top to bottom. So the $N$ equations are really one equation between
+columns:
+
+$$
+\begin{pmatrix} x[0] \\ x[1] \\ \vdots \\ x[N-1] \end{pmatrix}
+= \frac{X[0]}{N} \begin{pmatrix} w_0[0] \\ w_0[1] \\ \vdots \\ w_0[N-1] \end{pmatrix} +
+\dots +
+\frac{X[N-1]}{N} \begin{pmatrix} w_{N-1}[0] \\ w_{N-1}[1] \\ \vdots \\ w_{N-1}[N-1] \end{pmatrix}.
+$$
+
+Name the columns — $\mathbf{x}$ on the left, $\mathbf{w}_k$ for the $k$-th
+one on the right — and the whole system collapses into one line, with the
+forward transform alongside it:
+
+$$
+\mathbf{x} = \sum_{k=0}^{N-1} \frac{X[k]}{N}\, \mathbf{w}_k,
+\qquad
+X[k] = \langle \mathbf{x}, \mathbf{w}_k \rangle
+$$
+
+— the textbook expansion of a vector in an orthogonal basis: each
+coefficient is the inner product with the corresponding basis vector,
+divided by that vector's squared length. And the squared length is
+$\langle \mathbf{w}_k, \mathbf{w}_k \rangle = N$, as we just computed —
+which is where the $\frac{1}{N}$ of the inverse DFT has been hiding all
+along. (Part 1's convention inset told you where that factor is *put*;
+this is why it *exists*. And one step further, for the matrix-minded:
+stack the probes as the columns of an $N \times N$ matrix $W$;
+orthogonality reads $W^{*} W = N I$, so $W / \sqrt{N}$ is unitary — the
+DFT is, up to scale, a rotation of $\mathbb{C}^N$.)
+
+### One more name for the same matrix
+
+Look at the entries of $W$ once more: $(W)_{nk} = w_k[n] = \omega^{nk}$
+with $\omega = e^{2 \pi i / N}$, so the $n$-th row is
+$1, \omega^n, \omega^{2n}, \dots$ — the successive powers of a single
+number. A matrix whose rows are geometric progressions of their own
+"nodes", $V_{jk} = z_j^{\,k}$, has a classical name: the
+**[Vandermonde matrix](https://en.wikipedia.org/wiki/Vandermonde_matrix)**.
+It is the matrix of *polynomial interpolation* — solving
+$V \mathbf{c} = \mathbf{y}$ means finding a polynomial with coefficients
+$c_k$ that passes through the points $(z_j, y_j)$ — and its famous
+determinant,
+
+$$
+\det V = \prod_{0 \,\le\, i \,\lt\, j \,\le\, N-1} (z_j - z_i),
+$$
+
+says it is invertible exactly when all the nodes are distinct.
+
+The DFT matrix, then, is *the* Vandermonde matrix with its nodes placed at
+the $N$-th roots of unity — as distinct, and as symmetric, as $N$ points
+can be — and that special placement is what upgrades "invertible" to
+"unitary up to scale". Two consequences are worth savoring. First, our
+"the model passes through every sample" is now literally polynomial
+interpolation: the forward DFT *evaluates* the polynomial
+$p(z) = x[0] + x[1] z + \dots + x[N-1] z^{N-1}$ at all $N$ roots of unity
+(in our sign convention, at $z = \omega^{-k}$), and the inverse DFT
+*interpolates* the coefficients back from the values. Second, this
+evaluate–interpolate loop is exactly how the FFT multiplies polynomials
+fast — evaluate both factors at the roots of unity, multiply the values
+pointwise, interpolate the product back — the trick at the heart of
+big-integer arithmetic.
