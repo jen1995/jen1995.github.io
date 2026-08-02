@@ -480,7 +480,9 @@ $$
 
 Name the columns — $\mathbf{x}$ on the left, $\mathbf{w}_k$ for the $k$-th
 one on the right — and the whole system collapses into one line, with the
-forward transform alongside it:
+forward transform alongside it. The second formula is nothing new: it is
+the inner-product form of the DFT from [the very first
+section](#what-does-xk-measure), now wearing vector notation:
 
 $$
 \mathbf{x} = \sum_{k=0}^{N-1} \frac{X[k]}{N}\, \mathbf{w}_k,
