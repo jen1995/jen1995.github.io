@@ -159,10 +159,34 @@ we have been using all along, now earned. Every list of $N$ numbers is a
 weighted sum of probes in exactly one way; the interpolation is not luck
 but $N$ dimensions meeting $N$ basis vectors.
 
-In vector language the whole story is one line. Collect the samples into a
-vector $\mathbf{x} \in \mathbb{C}^N$ and each probe into a vector
-$\mathbf{w}_k = \left( w_k[0], \dots, w_k[N-1] \right)$. Then the two DFT
-formulas say exactly
+To see the same thing in vector language, start slow. The inverse DFT is
+one equation *per sample* — write them all out, one under another:
+
+$$
+\begin{aligned}
+x[0] &= \tfrac{X[0]}{N}\, w_0[0] + \tfrac{X[1]}{N}\, w_1[0] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[0] \\
+x[1] &= \tfrac{X[0]}{N}\, w_0[1] + \tfrac{X[1]}{N}\, w_1[1] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[1] \\
+&\;\;\vdots \\
+x[N-1] &= \tfrac{X[0]}{N}\, w_0[N-1] + \dots + \tfrac{X[N-1]}{N}\, w_{N-1}[N-1].
+\end{aligned}
+$$
+
+Now read this system by *columns* instead of rows. Every column carries
+one and the same scalar $\tfrac{X[k]}{N}$ — and the stack of numbers it
+multiplies, $w_k[0], w_k[1], \dots, w_k[N-1]$, is the $k$-th probe written
+out top to bottom. So the $N$ equations are really one equation between
+columns:
+
+$$
+\begin{pmatrix} x[0] \\ x[1] \\ \vdots \\ x[N-1] \end{pmatrix}
+= \frac{X[0]}{N} \begin{pmatrix} w_0[0] \\ w_0[1] \\ \vdots \\ w_0[N-1] \end{pmatrix}
++ \dots
++ \frac{X[N-1]}{N} \begin{pmatrix} w_{N-1}[0] \\ w_{N-1}[1] \\ \vdots \\ w_{N-1}[N-1] \end{pmatrix}.
+$$
+
+Name the columns — $\mathbf{x}$ on the left, $\mathbf{w}_k$ for the $k$-th
+one on the right — and the whole system collapses into one line, with the
+forward transform alongside it:
 
 $$
 \mathbf{x} = \sum_{k=0}^{N-1} \frac{X[k]}{N}\, \mathbf{w}_k,
