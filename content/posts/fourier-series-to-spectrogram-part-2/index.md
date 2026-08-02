@@ -118,8 +118,64 @@ Two things to see here. Inside the window, the green model passes through
 every blue sample *exactly* — $N$ numbers in, $N$ numbers out, the books
 balance as always.
 
-<details>
-<summary><b>Why exactly, and not approximately?</b> (a two-line computation with a payoff)</summary>
+(Why *exactly*, and not merely very closely? That has a beautiful
+answer, but it deserves its own stretch of road — and gets one: see the
+[interlude below](#interlude-the-probes-are-a-basis), right after we
+finish reading the pictures.)
+
+Outside the window, the model does the only thing a sum of
+whole-turn oscillations can do: **repeats**, with the window's own period.
+The DFT never models your signal as it is — it models a periodic world
+assembled from your window, Part 1's glued copies meeting us yet again. At
+$N = 4$ that world has almost nothing to do with the real signal; by
+$N = 25$ it is a faithful model of the window — and still a pure invention
+everywhere else. (This picture was suggested by a friend of the blog —
+thank you!)
+
+Zoom out, and the same experiment shows *when the invention comes true*.
+Everything depends on how the window relates to the signal's own period:
+
+![Zoomed out: the model when the window holds half, exactly one, and one and a half signal periods](dft_model_zoom.png)
+
+The middle panel is the special one. When the window holds **exactly one
+period** of the signal (or any whole number of them), the glued copies
+reproduce the signal — the model is correct not only inside the window but
+*everywhere, forever*. That is the DFT at its happiest: the signal's
+frequency coincides with one of the probes. In the other two panels the
+window holds half a period and one and a half: the model still passes
+through every sample it saw, but its periodic continuation has nothing to
+do with the real signal — the top one never even goes negative, the bottom
+one continues in counter-phase — and at every seam the curve kinks. Those
+kinks have a price in the spectrum, and Part 3 charges it under the name
+[spectral leakage](/posts/fourier-series-to-spectrogram-part-3/#the-price-of-cutting-spectral-leakage).
+
+Turn the "whole turns" rule around, and it becomes a restriction important
+enough to put in bold: **whole numbers of turns are all the DFT has.** Its
+basis contains the constant ($k = 0$) and the oscillations that fit a whole
+number of times into the recording — nothing else. A tone that completes,
+say, two and a half turns over our $N$ samples is simply not in the
+vocabulary: no single $X[k]$ is "its" coefficient. Real recordings contain
+such tones all the time, of course, and the DFT must express them *somehow*
+— smearing them across the whole-turn vocabulary it does have. The
+consequences of that smearing (it goes by the name *spectral leakage*) will
+matter a great deal when we build the spectrogram in Part 3; for now, keep
+in mind that the DFT's world is quantized to whole turns.
+
+> 💡 **The $k = 0$ probe** makes zero turns: $w_0[n] \equiv 1$, and
+> $X[0] = \sum_n x[n]$ is just $N$ times the *average* of the signal. Audio
+> engineers call it the **DC component** (from "direct current" — the
+> electrical origin shows). For sound it is normally near zero: pressure
+> oscillates around the atmospheric baseline, and the microphone measures
+> only the deviation.
+
+(For a lovely interactive treatment of these facts, see [chapter 5 of Brian
+McFee's *Digital Signals Theory*](https://brianmcfee.net/dstbook-site/content/ch05-fourier/DFT.html).)
+
+## Interlude: the probes are a basis
+
+The green model above hit every sample dead on, and that was promised
+to be no accident. This interlude pays the debt — a stretch of honest
+linear algebra, ending with a reunion with an old classic.
 
 First, write the model down. As a function of continuous time, the $k$-th
 probe is $e^{2 \pi i \frac{k}{NT} t}$ — the $k$-th grid frequency — so the
@@ -205,10 +261,7 @@ stack the probes as the columns of an $N \times N$ matrix $W$;
 orthogonality reads $W^{*} W = N I$, so $W / \sqrt{N}$ is unitary — the
 DFT is, up to scale, a rotation of $\mathbb{C}^N$.)
 
-</details>
-
-<details>
-<summary><b>One more name for the same matrix</b> (a reunion with a linear algebra classic)</summary>
+### One more name for the same matrix
 
 Look at the entries of $W$ once more: $(W)_{nk} = w_k[n] = \omega^{nk}$
 with $\omega = e^{2 \pi i / N}$, so the $n$-th row is
@@ -240,56 +293,6 @@ evaluate–interpolate loop is exactly how the FFT multiplies polynomials
 fast — evaluate both factors at the roots of unity, multiply the values
 pointwise, interpolate the product back — the trick at the heart of
 big-integer arithmetic.
-
-</details>
-
-Outside the window, the model does the only thing a sum of
-whole-turn oscillations can do: **repeats**, with the window's own period.
-The DFT never models your signal as it is — it models a periodic world
-assembled from your window, Part 1's glued copies meeting us yet again. At
-$N = 4$ that world has almost nothing to do with the real signal; by
-$N = 25$ it is a faithful model of the window — and still a pure invention
-everywhere else. (This picture was suggested by a friend of the blog —
-thank you!)
-
-Zoom out, and the same experiment shows *when the invention comes true*.
-Everything depends on how the window relates to the signal's own period:
-
-![Zoomed out: the model when the window holds half, exactly one, and one and a half signal periods](dft_model_zoom.png)
-
-The middle panel is the special one. When the window holds **exactly one
-period** of the signal (or any whole number of them), the glued copies
-reproduce the signal — the model is correct not only inside the window but
-*everywhere, forever*. That is the DFT at its happiest: the signal's
-frequency coincides with one of the probes. In the other two panels the
-window holds half a period and one and a half: the model still passes
-through every sample it saw, but its periodic continuation has nothing to
-do with the real signal — the top one never even goes negative, the bottom
-one continues in counter-phase — and at every seam the curve kinks. Those
-kinks have a price in the spectrum, and Part 3 charges it under the name
-[spectral leakage](/posts/fourier-series-to-spectrogram-part-3/#the-price-of-cutting-spectral-leakage).
-
-Turn the "whole turns" rule around, and it becomes a restriction important
-enough to put in bold: **whole numbers of turns are all the DFT has.** Its
-basis contains the constant ($k = 0$) and the oscillations that fit a whole
-number of times into the recording — nothing else. A tone that completes,
-say, two and a half turns over our $N$ samples is simply not in the
-vocabulary: no single $X[k]$ is "its" coefficient. Real recordings contain
-such tones all the time, of course, and the DFT must express them *somehow*
-— smearing them across the whole-turn vocabulary it does have. The
-consequences of that smearing (it goes by the name *spectral leakage*) will
-matter a great deal when we build the spectrogram in Part 3; for now, keep
-in mind that the DFT's world is quantized to whole turns.
-
-> 💡 **The $k = 0$ probe** makes zero turns: $w_0[n] \equiv 1$, and
-> $X[0] = \sum_n x[n]$ is just $N$ times the *average* of the signal. Audio
-> engineers call it the **DC component** (from "direct current" — the
-> electrical origin shows). For sound it is normally near zero: pressure
-> oscillates around the atmospheric baseline, and the microphone measures
-> only the deviation.
-
-(For a lovely interactive treatment of these facts, see [chapter 5 of Brian
-McFee's *Digital Signals Theory*](https://brianmcfee.net/dstbook-site/content/ch05-fourier/DFT.html).)
 
 ## From the index to hertz
 
