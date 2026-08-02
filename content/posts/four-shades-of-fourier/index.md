@@ -209,6 +209,20 @@ here it is one of the physicist junctures flagged in the introduction.
 Third, sifting: each delta samples everything under its integral — the
 signal and the exponential alike — at its own grid instant $t = nT$.
 
+(Can the second move be made rigorous? In two layers. For *honest
+functions* in place of deltas, swapping an infinite sum with an integral
+is licensed by the [Fubini–Tonelli
+theorem](https://en.wikipedia.org/wiki/Fubini%27s_theorem) — a sum is an
+integral over the counting measure, and the swap is legal whenever the
+total absolute mass $\sum_n \int |f_n|$ is finite; in our setting that
+becomes *absolute summability of the samples*, $\sum_n |x(nT)| \lt
+\infty$, which also makes the resulting series converge absolutely and
+uniformly in $f$. With deltas on stage, though, no classical theorem
+applies — the clean framework is the [distribution
+theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)) that
+Part 1's proof pointed to, where this whole computation is a *definition*
+dressed as a calculation.)
+
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
 $e^{-2 \pi i n} = 1$ — nothing changes. The spectrum of a sampled signal is
