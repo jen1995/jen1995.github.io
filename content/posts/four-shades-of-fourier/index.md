@@ -83,14 +83,19 @@ $$
 x(t) \approx \sum_{n=-\infty}^{\infty} X(f_n)\, e^{2 \pi i f_n t} \cdot \frac{1}{P}
 $$
 
-— value of a function at a grid point, times the grid step $\frac{1}{P}$,
-summed over the grid. That is a *Riemann sum* (an old friend from Part 1),
-and as $P \to \infty$ the mesh $\frac{1}{P} \to 0$ and the sum converges to
-the integral:
+This final sum is an *integral sum* — a Riemann sum, an old friend from
+Part 1 — for the function $X(f)\, e^{2 \pi i f t}$ over the partition
+$f_n$ of the frequency axis, whose norm is the difference of adjacent
+points: $f_{n+1} - f_n = \frac{1}{P}$. As $P \to \infty$, the norm of the
+partition goes to $0$, and the sum converges to the integral:
 
 $$
-x(t) = \int_{-\infty}^{\infty} X(f)\, e^{2 \pi i f t}\, df.
+x(t) = \int_{-\infty}^{\infty} X(f)\, e^{2 \pi i f t}\, df
 $$
+
+(understood as a symmetric limit of the integration bounds — the
+[Cauchy principal value](https://en.wikipedia.org/wiki/Cauchy_principal_value);
+more on this in a moment).
 
 Meet the second shade. $X(f)$ is the **Fourier transform** of $x(t)$, and
 the last formula — the **Fourier integral** — is its inversion: the signal
@@ -107,9 +112,8 @@ integrable](https://en.wikipedia.org/wiki/Absolutely_integrable_function)
 signal it converges absolutely — no interpretation needed. The *inversion*
 integral is the delicate character: $X$ itself need not be absolutely
 integrable (our rectangular pulse's transform will turn out to be a sinc,
-whose tails die like $\frac{1}{f}$ — too slowly), so the Fourier integral
-is read as a symmetric limit, a [principal
-value](https://en.wikipedia.org/wiki/Cauchy_principal_value), and the
+whose tails die like $\frac{1}{f}$ — too slowly), which is exactly why the
+Fourier integral needed the principal-value reading above, and the
 [inversion theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem)
 pins down exactly when it returns $x(t)$. The fine print lives in analysis
 textbooks — Zorich's *Mathematical Analysis II* treats it with full care —
