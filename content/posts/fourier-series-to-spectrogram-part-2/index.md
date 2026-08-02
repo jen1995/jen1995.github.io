@@ -33,12 +33,15 @@ image of the other half.
 
 ## What does X[k] measure?
 
-Look at the DFT formula through the lens of the inner product we introduced
-while proving the sifting property in Part 1: multiply two signals pointwise,
-sum up — with the sum over a continuum becoming an integral, and, for complex
-signals, the second factor conjugated (that is what the overline over
-$w_k[n]$ below denotes). The DFT sum is *exactly* that, in the
-finite-dimensional case the notation came from:
+Look at the DFT formula through the lens of the inner product from Part 1's
+sifting-property proof. There we needed it for *continuous* signals:
+multiply pointwise, then integrate — the integral standing in for "add
+everything up" over a continuum. For finite lists of samples the same
+recipe is simpler still: multiply pointwise and literally add. That is the
+ordinary dot product of vectors — the very case the notation was borrowed
+from in the first place — plus one refinement for complex signals: the
+second factor gets conjugated (that is what the overline over $w_k[n]$
+denotes):
 
 $$
 X[k] = \sum_{n=0}^{N-1} x[n]\, \overline{w_k[n]} = \langle x, w_k \rangle,
