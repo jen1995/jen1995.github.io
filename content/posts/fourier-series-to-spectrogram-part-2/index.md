@@ -159,6 +159,28 @@ we have been using all along, now earned. Every list of $N$ numbers is a
 weighted sum of probes in exactly one way; the interpolation is not luck
 but $N$ dimensions meeting $N$ basis vectors.
 
+In vector language the whole story is one line. Collect the samples into a
+vector $\mathbf{x} \in \mathbb{C}^N$ and each probe into a vector
+$\mathbf{w}_k = \left( w_k[0], \dots, w_k[N-1] \right)$. Then the two DFT
+formulas say exactly
+
+$$
+\mathbf{x} = \sum_{k=0}^{N-1} \frac{X[k]}{N}\, \mathbf{w}_k,
+\qquad
+X[k] = \langle \mathbf{x}, \mathbf{w}_k \rangle
+$$
+
+— the textbook expansion of a vector in an orthogonal basis: each
+coefficient is the inner product with the corresponding basis vector,
+divided by that vector's squared length. And the squared length is
+$\langle \mathbf{w}_k, \mathbf{w}_k \rangle = N$, as we just computed —
+which is where the $\frac{1}{N}$ of the inverse DFT has been hiding all
+along. (Part 1's convention inset told you where that factor is *put*;
+this is why it *exists*. And one step further, for the matrix-minded:
+stack the probes as the columns of an $N \times N$ matrix $W$;
+orthogonality reads $W^{*} W = N I$, so $W / \sqrt{N}$ is unitary — the
+DFT is, up to scale, a rotation of $\mathbb{C}^N$.)
+
 </details>
 
 Outside the window, the model does the only thing a sum of
