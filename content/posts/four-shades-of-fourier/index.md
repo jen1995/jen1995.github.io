@@ -273,9 +273,12 @@ frequency.
 ### The copies: what sampling does to a spectrum
 
 Periodicity is only half the story. The other half is *what exactly* one
-period of $X_d$ contains — and here bridge two pays an unexpected
-dividend. Consider the periodization of the original spectrum $X(f)$ along
-the *frequency* axis, copies every $f_s$:
+period of $X_d$ contains — and here [bridge
+two](#bridge-two-the-transform-is-the-envelope-of-the-series) pays an
+unexpected dividend: its envelope formula, $c_n = \frac{1}{P}
+X\!\left(\frac{n}{P}\right)$, is about to be reused with the roles of time
+and frequency swapped. Consider the periodization of the original spectrum
+$X(f)$ along the *frequency* axis, copies every $f_s$:
 
 $$
 Y(f) = \sum_{m=-\infty}^{\infty} X(f - m f_s).
