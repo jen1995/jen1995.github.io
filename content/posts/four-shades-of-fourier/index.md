@@ -168,12 +168,15 @@ This bridge also plants the law that will organize everything below.
 Periodizing the signal made its spectrum discrete — samples on the grid
 $\frac{n}{P}$. **Periodic in time ⇔ discrete in frequency**, and the
 period in one domain sets the grid step in the other: $P$ seconds of period
-— $\frac{1}{P}$ hertz between harmonics. [Part 2 met the same law in the fully discrete corner of the
-square](/posts/fourier-series-to-spectrogram-part-2/) — for the DFT — and
-proved it there by direct computation, before any general principle was in
-sight: two lines of $e^{-2 \pi i n} = 1$. Here it surfaces in the
-continuous corner, and by the end of this post it will run every road on
-the map.
+— $\frac{1}{P}$ hertz between harmonics. [Part 2 met both faces of this
+law](/posts/fourier-series-to-spectrogram-part-2/) on what will become the
+*bottom edge* of our map — the road from the Fourier series to the DFT,
+where a single derivation periodizes the signal (and the spectrum comes
+out discrete) and samples it (and the spectrum comes out periodic), each
+fact checked by direct computation before any general principle was in
+sight: two lines of $e^{-2 \pi i n} = 1$. The bridge we have just crossed
+is the square's *left edge*, the same law between transform and series —
+and by the end of this post it will run every road on the map.
 
 ## Bridge three: sample the signal — the DTFT
 
