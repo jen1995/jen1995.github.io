@@ -148,9 +148,10 @@ $$
 \langle w_j, w_k \rangle = \sum_{n=0}^{N-1} e^{2 \pi i \frac{(j - k) n}{N}}.
 $$
 
-For $j = k$ every term is $1$ and the sum is $N$. For $j \ne k$ it is a
-geometric series with ratio $q = e^{2 \pi i (j-k)/N}$, where $q \ne 1$ but
-$q^N = 1$ — so the sum, $\frac{q^N - 1}{q - 1}$, is exactly zero.
+For $j = k$ every term is $1$ and the sum is $N$. For two *different*
+probes it is a geometric series with ratio $q = e^{2 \pi i (j-k)/N}$ — a
+ratio that is not $1$ itself, yet satisfies $q^N = 1$ — so the sum,
+$\frac{q^N - 1}{q - 1}$, is exactly zero.
 
 Orthogonal vectors are linearly independent, so the $N$ probes form a
 genuine **basis** of the $N$-dimensional space of sample lists — the word
