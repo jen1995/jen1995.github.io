@@ -241,11 +241,16 @@ it: the left picture has $129$ rows spaced $31.2$ Hz apart, the right one
 $1025$ rows spaced $3.9$ Hz apart — eight times finer, on paper. The bottom
 row of the figure makes the grids visible: it re-plots the *same* green
 patch — $500$ Hz by a quarter of a second — from each picture, pixel for
-pixel. On the left the patch is spanned by $16$ chunky rows and $31$
-columns; on the right, by $128$ fine rows but only *three* columns. The
+pixel. On the left the patch is spanned by $17$ chunky rows and $32$
+columns; on the right, by $129$ fine rows but only *four* columns. The
 long window's grid is finer along frequency and far coarser along time —
 and every pixel of a spectrogram is exactly one (frame, bin) cell of the
-STFT, so the pixels *are* the grid.
+STFT, so the pixels *are* the grid. (Where does the column count come
+from? One column per hop, and we hop by a quarter of the window — $8$ ms
+on the left, $64$ ms on the right. A smaller hop would draw more columns,
+but they would be near-duplicates: neighboring frames share three quarters
+of their samples. The honest time resolution is set by the window length
+itself; the hop only chooses how densely you sample it.)
 
 Now the arithmetic of what each column actually sees. The chirp climbs at
 $(3600 - 200)/2 = 1700$ Hz per second. During one $32$ ms frame it sweeps
