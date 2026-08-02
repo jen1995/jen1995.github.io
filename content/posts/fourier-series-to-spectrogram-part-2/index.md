@@ -434,7 +434,7 @@ linear algebra, ending with a reunion with an old classic.
 
 First, write the model down. As a function of continuous time, the $k$-th
 probe is $e^{2 \pi i \frac{k}{NT} t}$ — the $k$-th grid frequency — so the
-weighted sum drawn in green is
+weighted probe sum is
 
 $$
 \tilde{x}(t) = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k}{NT} t}.
@@ -569,9 +569,9 @@ $$
 Nodes as distinct, and as symmetric, as $N$ points can be — and that
 special placement is what upgrades "invertible" to "unitary up to scale". Two consequences are worth savoring.
 
-First, our sample-hitting model turns out to be a *polynomial
-interpolation* problem, posed the most natural way: find the polynomial
-of degree $N-1$,
+First, our sample-hitting model turns out to be a *[polynomial
+interpolation](https://en.wikipedia.org/wiki/Polynomial_interpolation)*
+problem, posed the most natural way: find the polynomial of degree $N-1$,
 
 $$
 q(z) = c_0 + c_1 z + \dots + c_{N-1} z^{N-1},
@@ -588,7 +588,21 @@ $$
 Stare at this system of $N$ conditions: the matrix multiplying the unknown
 coefficients has entries $\omega^{nk}$ — it is *exactly* our $W$. Finding
 the polynomial through the samples means solving
-$W \mathbf{c} = \mathbf{x}$. And we have already solved it: compare the
+$W \mathbf{c} = \mathbf{x}$ — written out in full:
+
+$$
+\underbrace{\begin{pmatrix}
+1 & 1 & \cdots & 1 \\
+1 & \omega & \cdots & \omega^{N-1} \\
+\vdots & \vdots & & \vdots \\
+1 & \omega^{N-1} & \cdots & \omega^{(N-1)^2}
+\end{pmatrix}}_{W}
+\underbrace{\begin{pmatrix} c_0 \\ c_1 \\ \vdots \\ c_{N-1} \end{pmatrix}}_{\mathbf{c}}
+=
+\underbrace{\begin{pmatrix} x[0] \\ x[1] \\ \vdots \\ x[N-1] \end{pmatrix}}_{\mathbf{x}}.
+$$
+
+And we have already solved it: compare the
 condition above with the inverse DFT,
 $x[n] = \tfrac{1}{N} \sum_k X[k]\, \omega^{k n}$, and the coefficients can
 be read off directly:
@@ -604,12 +618,34 @@ roots-of-unity nodes are so symmetric that the solution is one transform.)
 And the interpolating polynomial is an old friend. Substitute
 $z = e^{2 \pi i t / (NT)}$: as $t$ runs through the window, $z$ walks once
 around the unit circle, visiting the node $\omega^n$ exactly at the sample
-instant $t = nT$ — and $q(z)$ turns into $\tilde{x}(t)$, the green model
-from the pictures. The curve that hit every sample *was* this
-interpolating polynomial all along, traced along the circle. (The
-dictionary also reads backwards: treat the samples as the *coefficients*
-of a polynomial, and the forward DFT computes that polynomial's *values*
-at the nodes — evaluation in one direction, interpolation in the other.)
+instant $t = nT$. Under this substitution — with the solution
+$c_k = X[k]/N$ plugged in on the second line —
+
+$$
+\begin{aligned}
+q\!\left( e^{2 \pi i t/(NT)} \right)
+&= \sum_{k=0}^{N-1} c_k\, e^{2 \pi i \frac{k}{NT} t} \\
+&= \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k}{NT} t}
+ = \tilde{x}(t)
+\end{aligned}
+$$
+
+— $q$ turns into $\tilde{x}(t)$, the green model from the pictures. The
+curve that hit every sample *was* this interpolating polynomial all along,
+traced along the circle:
+
+![The interpolation task on the unit circle, and the same task unrolled along time](interp_circle.png)
+
+(A footnote for the mirror-trained reader: traced literally with the
+frequencies $0, \dots, N-1$, the curve $q(e^{2 \pi i t/(NT)})$ is
+complex-valued *between* the samples. The drawn curve uses each probe at
+its *balanced* frequency — every $k$ beyond $N/2$ acting as the negative
+frequency $k - N$ — which is what keeps it real. At the samples themselves
+the two choices agree, because $e^{2 \pi i (k-N) n/N} = e^{2 \pi i k n/N}$
+— the periodicity $c_{k+N} = c_k$ yet again. And the dictionary also reads
+backwards: treat the samples as the *coefficients* of a polynomial, and
+the forward DFT computes that polynomial's *values* at the nodes —
+evaluation in one direction, interpolation in the other.)
 
 Second, this coefficients-to-values dictionary, cheap in both directions,
 is exactly how the FFT multiplies polynomials fast — convert both factors
