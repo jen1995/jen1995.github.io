@@ -121,10 +121,28 @@ balance as always.
 <details>
 <summary><b>Why exactly, and not approximately?</b> (a two-line computation with a payoff)</summary>
 
-At a sample instant $t = nT$ the model's formula turns into the inverse
-DFT from Part 1, and the forward–inverse pair is an exact round trip. But
-the deeper reason deserves to be said out loud: as lists of $N$ values,
-the probes are **orthogonal** to one another. Compute their inner product:
+First, write the model down. As a function of continuous time, the $k$-th
+probe is $e^{2 \pi i \frac{k}{NT} t}$ — the $k$-th grid frequency — so the
+weighted sum drawn in green is
+
+$$
+\tilde{x}(t) = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k}{NT} t}.
+$$
+
+Now put a sample instant $t = nT$ into it. The $T$ cancels in the
+exponent, and
+
+$$
+\tilde{x}(nT) = \frac{1}{N} \sum_{k=0}^{N-1} X[k]\, e^{2 \pi i \frac{k n}{N}} = x[n]
+$$
+
+— the right-hand side is *literally* the inverse DFT formula from Part 1,
+and its output is the original samples. So at the grid instants the model
+has no freedom at all: it is contractually obliged to return $x[n]$.
+
+That pushes the question one step deeper: why does the *inverse formula*
+reproduce the samples exactly? Because, as lists of $N$ values, the probes
+are **orthogonal** to one another. Compute their inner product:
 
 $$
 \langle w_j, w_k \rangle = \sum_{n=0}^{N-1} e^{2 \pi i \frac{(j - k) n}{N}}.
@@ -140,7 +158,9 @@ we have been using all along, now earned. Every list of $N$ numbers is a
 weighted sum of probes in exactly one way; the interpolation is not luck
 but $N$ dimensions meeting $N$ basis vectors.
 
-</details> Outside the window, it does the only thing a sum of
+</details>
+
+Outside the window, the model does the only thing a sum of
 whole-turn oscillations can do: **repeats**, with the window's own period.
 The DFT never models your signal as it is — it models a periodic world
 assembled from your window, Part 1's glued copies meeting us yet again. At
