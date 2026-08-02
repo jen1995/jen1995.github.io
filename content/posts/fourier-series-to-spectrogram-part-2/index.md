@@ -82,6 +82,24 @@ description is simply not on offer. Only as the recording grows does the
 vocabulary reach down to where the signal actually lives — by $N = 25$ the
 lowest probe finally oscillates at almost the signal's own pace.
 
+And what does the vocabulary *say*, once every word gets its weight? Sum
+all $N$ probes with the coefficients the DFT assigns them — that is
+exactly the inverse DFT — and draw the sum as a continuous curve. This is
+the signal the DFT actually believes in:
+
+![The DFT's model of the signal — the weighted probe sum — for four recording lengths](dft_model.png)
+
+Two things to see here. Inside the window, the orange sum passes through
+every blue sample *exactly* — $N$ numbers in, $N$ numbers out, the books
+balance as always. Outside the window, it does the only thing a sum of
+whole-turn oscillations can do: **repeats**, with the window's own period.
+The DFT never models your signal as it is — it models a periodic world
+assembled from your window, Part 1's glued copies meeting us yet again. At
+$N = 4$ that world has almost nothing to do with the real signal; by
+$N = 25$ it is a faithful model of the window — and still a pure invention
+everywhere else. (This picture was suggested by a friend of the blog —
+thank you!)
+
 Turn the "whole turns" rule around, and it becomes a restriction important
 enough to put in bold: **whole numbers of turns are all the DFT has.** Its
 basis contains the constant ($k = 0$) and the oscillations that fit a whole
