@@ -24,10 +24,12 @@ Two conventions carried over from the trilogy: frequencies live in hertz
 the machinery for *discrete* signals — the delta function, the sifting
 property, the comb — is the one built honestly in
 [Part 1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft);
-we will lean on it without re-deriving. A warning in the same spirit as
-there: today we argue like physicists — limits and integrals get swapped
-when the picture demands it. Part 1 shows what making one such swap honest
-costs; doing it for every step here would triple the post.
+we will lean on it without re-deriving. And a calibration of rigor: most
+steps today are honest, and where the classical fine print matters we will
+say so and point to it — but at a few junctures (an approximation slipped
+inside an infinite sum, a summation swapped with an integral) we will
+still argue like physicists. Part 1 shows what making a single such swap
+fully honest costs; doing it for every bridge would triple the post.
 
 ## The cast, in one paragraph each
 
