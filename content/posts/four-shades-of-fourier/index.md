@@ -128,8 +128,9 @@ by side on p. 524 of the 9th Russian edition.
 ## Bridge two: the transform is the envelope of the series
 
 Now walk the same bridge in the opposite direction — it reveals something
-the limit hid. Take an *aperiodic* signal $x(t)$ of finite extent: zero
-outside $\left[ -\frac{\tau}{2}, \frac{\tau}{2} \right]$. It has a Fourier
+the limit hid. Take an *aperiodic* signal $x(t)$ of finite extent (finite
+**support**, in the math vocabulary): zero outside
+$\left[ -\frac{\tau}{2}, \frac{\tau}{2} \right]$. It has a Fourier
 transform $X(f)$. Build its periodic extension $x_P(t)$ — the copy-gluing
 of Part 1 again, copies every $P$. The only thing that matters here is
 that the copies do not overlap, and $P \ge \tau$ guarantees exactly that:
