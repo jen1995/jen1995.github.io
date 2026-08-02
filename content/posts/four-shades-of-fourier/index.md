@@ -216,7 +216,11 @@ In two layers. For *honest
 functions* in place of deltas, swapping an infinite sum with an integral
 is licensed by the [Fubini–Tonelli
 theorem](https://en.wikipedia.org/wiki/Fubini%27s_theorem) — a sum is an
-integral over the counting measure, and the swap is legal whenever the
+integral over the [counting
+measure](https://en.wikipedia.org/wiki/Counting_measure), the measure that
+assigns to a set of indices simply the number of its elements, so that
+"integrating" against it means adding the terms up; the swap of the two
+integrals is then legal whenever the
 total absolute mass $\sum_n \int |f_n|$ is finite; in our setting that
 becomes *absolute summability of the samples*, $\sum_n |x(nT)| \lt
 \infty$, which also makes the resulting series converge absolutely and
