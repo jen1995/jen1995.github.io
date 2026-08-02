@@ -123,6 +123,19 @@ answer, but it deserves its own stretch of road — and gets one: the
 [appendix at the end of the post](#appendix-the-probes-are-a-basis),
 for whenever the linear-algebra mood strikes.)
 
+> 💡 **Wait — how do cosines add up to a sine?** Every probe we drew
+> starts at its peak, yet the green model starts wherever the signal
+> starts — at zero, even. The resolving detail is that the weights $X[k]$
+> are *complex*: each carries a magnitude and a phase, and a complex
+> weight *shifts* its probe in time. Pair each $k$ with its mirror twin
+> $N - k$, and their joint contribution to the model is
+> $\tfrac{2 |X[k]|}{N} \cos\!\big( 2 \pi \tfrac{k}{NT}\, t + \arg X[k] \big)$
+> — a cosine nudged to its own starting point, Part 1's
+> $A \cos(\dots - \phi)$ story again. The pictures draw every probe at
+> phase zero; the sum deploys each one shifted, with the $k = 0$ word —
+> the plain mean — soaking up any constant offset. A sine is merely a
+> cosine whose phase is nudged by a quarter turn.
+
 Outside the window, the model does the only thing a sum of
 whole-turn oscillations can do: **repeats**, with the window's own period.
 The DFT never models your signal as it is — it models a periodic world
