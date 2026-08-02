@@ -209,7 +209,10 @@ here it is one of the physicist junctures flagged in the introduction.
 Third, sifting: each delta samples everything under its integral — the
 signal and the exponential alike — at its own grid instant $t = nT$.
 
-(Can the second move be made rigorous? In two layers. For *honest
+<details>
+<summary><b>Can the second move be made rigorous?</b></summary>
+
+In two layers. For *honest
 functions* in place of deltas, swapping an infinite sum with an integral
 is licensed by the [Fubini–Tonelli
 theorem](https://en.wikipedia.org/wiki/Fubini%27s_theorem) — a sum is an
@@ -221,7 +224,9 @@ uniformly in $f$. With deltas on stage, though, no classical theorem
 applies — the clean framework is the [distribution
 theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)) that
 Part 1's proof pointed to, where this whole computation is a *definition*
-dressed as a calculation.)
+dressed as a calculation.
+
+</details>
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
