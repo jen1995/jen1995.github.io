@@ -6,6 +6,7 @@ tags: ["transformers", "attention", "translations"]
 summary: "The full series in one post: why attention replaced recurrence; every building block of the Transformer — intuition, formula, PyTorch code, a numpy reference and an honest FLOPs count; then the assembled model, trained on a toy task, with the memory costs and the KV-cache explained."
 math: true
 aliases: ["/posts/transformers-part-0/"]
+weight: 50
 ---
 
 ## Part 0 — Introduction: seq2seq, language models, attention

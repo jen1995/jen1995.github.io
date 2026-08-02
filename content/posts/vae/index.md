@@ -5,6 +5,7 @@ draft: false
 tags: ["generative-models", "vae", "translations"]
 summary: "A deep dive into variational autoencoders: the ELBO and its derivation, the reparameterization trick, CVAE — and the discrete-latent line of work (VQ-VAE, VQ-VAE-2, DALL-E) that grew out of it. With self-check questions and a hands-on notebook."
 math: true
+weight: 60
 ---
 
 > This post is an English translation of my chapter on VAE from the [Machine Learning Handbook](https://education.yandex.ru/handbook/ml) by Yandex School of Data Analysis (originally in Russian). The text follows the latest revised version of the chapter; the figures are the original English-language versions.

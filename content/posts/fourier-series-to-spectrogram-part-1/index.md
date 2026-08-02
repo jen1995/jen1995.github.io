@@ -5,6 +5,7 @@ draft: false
 tags: ["fourier", "dsp", "speech"]
 summary: "Part 1 of 3: from air pressure and a guitar string, through sampling and the Fourier series — to the DFT, derived honestly, delta functions and all."
 math: true
+weight: 10
 ---
 
 Open any tutorial on speech processing and you will meet the spectrogram in the

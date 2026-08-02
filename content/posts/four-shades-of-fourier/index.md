@@ -5,6 +5,7 @@ draft: true
 tags: ["fourier", "dsp", "math"]
 summary: "The family reunion: the Fourier series, the Fourier transform, the DTFT and the DFT — and the five bridges that connect them, all built from one law: discrete in one domain means periodic in the other."
 math: true
+weight: 40
 ---
 
 Back in [Part 1 of the spectrogram series](/posts/fourier-series-to-spectrogram-part-1/)

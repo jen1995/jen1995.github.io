@@ -5,6 +5,7 @@ draft: false
 tags: ["fourier", "dsp", "speech"]
 summary: "Part 2 of 3: learning to read the DFT's output — which bin is which frequency, why resolution is one over duration, the mirror symmetry, and the Nyquist frequency."
 math: true
+weight: 20
 ---
 
 [Part 1](/posts/fourier-series-to-spectrogram-part-1/) ended with the machinery

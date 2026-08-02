@@ -5,6 +5,7 @@ draft: false
 tags: ["fourier", "dsp", "speech"]
 summary: "Part 3 of 3: cut the signal into frames, pay for the cut with leakage, patch it with windows, stack the columns — the spectrogram, and its mel-compressed cousin that speech models actually consume."
 math: true
+weight: 30
 ---
 
 [Part 2](/posts/fourier-series-to-spectrogram-part-2/) ended on an
