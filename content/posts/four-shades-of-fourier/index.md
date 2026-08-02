@@ -221,10 +221,10 @@ measure on the line is only its most famous customer — and another
 customer is the [counting
 measure](https://en.wikipedia.org/wiki/Counting_measure) on the integers:
 the measure that assigns to a set of indices simply the number of its
-elements, so that "integrating" against it means adding the terms up. A
-sum is an integral over the counting measure.
+elements, so that "integrating" against it means adding the terms up.
 
-Why? Strip any integral to its skeleton and it reads: *value of the
+A sum is an integral over the counting measure. Why? Strip any integral to
+its skeleton and it reads: *value of the
 function on a piece, times the size of the piece, summed over the pieces*.
 The Riemann integral measures its pieces by length, $dt$. A measure $\mu$
 is nothing but a different rule for the size of a piece — and the counting
