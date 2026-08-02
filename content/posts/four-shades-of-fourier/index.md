@@ -253,8 +253,10 @@ dressed as a calculation.
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
 $e^{-2 \pi i n} = 1$ — nothing changes. The spectrum of a sampled signal is
-**periodic with period $f_s$**: one glance at the exponent, and the "signal
-lives on a grid" card from Parts 1–2 plays itself. Set the notational
+**periodic with period $f_s$** — and the reason is, once again, that $n$
+is an integer: sampling put the signal on a grid, and a whole number of
+extra turns changes no exponential. It is the same one-line argument that
+gave $c_{k+N} = c_k$ in Part 1, now acting in the other domain. Set the notational
 convention $T = 1$ (indices instead of seconds, square brackets as in
 Part 1) and this sum is the third shade, the **discrete-time Fourier
 transform**:
