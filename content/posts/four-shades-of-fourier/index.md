@@ -234,7 +234,10 @@ $f(n) \cdot 1$, and summing over the pieces is literally summing the
 values: $\int f\, d\mu = \sum_n f(n)$.
 
 With that dictionary in hand, our sum-plus-integral is a
-double integral over a product of two measure spaces; and the swap of the
+double integral over a product of two concrete measure spaces: the
+integers $\mathbb{Z}$ carrying the counting measure (that side is the sum
+over $n$) times the time axis $\mathbb{R}$ carrying the usual Lebesgue
+measure (that side is the integral over $t$). The swap of the
 two is legal whenever the
 total absolute mass $\sum_n \int |f_n|$ is finite; in our setting that
 becomes *absolute summability of the samples*, $\sum_n |x(nT)| \lt
