@@ -131,9 +131,9 @@ Now walk the same bridge in the opposite direction — it reveals something
 the limit hid. Take an *aperiodic* signal $x(t)$ of finite extent (finite
 **support**, in the math vocabulary): zero outside
 $\left[ -\frac{\tau}{2}, \frac{\tau}{2} \right]$. It has a Fourier
-transform $X(f)$. Build its periodic extension $x_P(t)$ — the copy-gluing
-of Part 1 again, copies every $P$. The only thing that matters here is
-that the copies do not overlap, and $P \ge \tau$ guarantees exactly that:
+transform $X(f)$. Pick a period $P$ at least as large as the support,
+$P \ge \tau$, and copy the signal every $P$: this gives the periodic
+extension $x_P(t)$ — Part 1's gluing again — and the copies never overlap:
 
 ![A compact signal and its periodic extension, copies spaced P apart with gaps](periodize_gap.png)
 
