@@ -595,9 +595,17 @@ W^{-1} = \frac{1}{N} W^{*},
 \mathbf{c} = \frac{1}{N} W^{*} \mathbf{x}.
 $$
 
-Now look at what the product $W^{*} \mathbf{x}$ computes, row by row: the
-$k$-th row of $W^{*}$ holds the conjugated probe $\overline{w_k[n]} =
-\omega^{-k n}$, so the $k$-th entry of the product is
+Now look at what the product $W^{*} \mathbf{x}$ computes, row by row.
+Written out, the conjugate transpose is simply $W$ with the sign of every
+power flipped — conjugation negates the exponents, and transposition
+changes nothing because $W$ is symmetric:
+
+$$
+W^{*} = \begin{pmatrix} 1 & 1 & 1 & \cdots & 1 \\ 1 & \omega^{-1} & \omega^{-2} & \cdots & \omega^{-(N-1)} \\ 1 & \omega^{-2} & \omega^{-4} & \cdots & \omega^{-2(N-1)} \\ \vdots & \vdots & \vdots & & \vdots \\ 1 & \omega^{-(N-1)} & \omega^{-2(N-1)} & \cdots & \omega^{-(N-1)^2} \end{pmatrix}.
+$$
+
+The $k$-th row holds the conjugated probe $\overline{w_k[n]} =
+\omega^{-k n}$, so the $k$-th entry of $W^{*} \mathbf{x}$ is
 $\sum_n x[n]\, \omega^{-k n}$ — the forward DFT, term for term. The
 solution of the interpolation system turns out to be our old coefficients:
 
@@ -631,8 +639,10 @@ traced along the circle:
 
 ![The interpolation task on the unit circle, and the same task unrolled along time](interp_circle.png)
 
-(A footnote that leans on the [mirror symmetry](#the-mirror) from earlier
-in the post: traced literally with the
+<details>
+<summary><b>A fine-print footnote:</b> why the drawn curve is real (it leans on <a href="#the-mirror">the mirror symmetry</a>)</summary>
+
+Traced literally with the
 frequencies $0, \dots, N-1$, the curve $q(e^{2 \pi i t/(NT)})$ is
 complex-valued *between* the samples. The drawn curve lets the mirror
 twins act as a conjugate pair instead: for $0 \lt k \lt N/2$ the
@@ -645,7 +655,9 @@ in half is the lone Nyquist one when $N$ is even — half of $X[N/2]$ goes
 to $+f_s/2$, half to $-f_s/2$, and the halves sum to a real cosine. At the
 sample instants every one of these choices is indistinguishable, because
 $e^{2 \pi i (k-N) n/N} = e^{2 \pi i k n/N}$ — the periodicity
-$c_{k+N} = c_k$ yet again.)
+$c_{k+N} = c_k$ yet again.
+
+</details>
 
 Second, this coefficients-to-values dictionary, cheap in both directions,
 is exactly how the FFT multiplies polynomials fast — convert both factors
