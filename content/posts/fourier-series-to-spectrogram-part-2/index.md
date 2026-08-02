@@ -54,10 +54,23 @@ oscillation** $w_k$ — a number that measures how much the signal *resembles*
 that oscillation, exactly like a dot product measures how much one vector
 leans along another. As $n$ runs through the $N$ samples, the exponent of
 $w_k$ grows to $2 \pi i k$: the basis oscillation makes exactly $k$ full
-turns across the recording. This is Part 1's "whole number of oscillations
-per period" rule wearing its discrete clothes: the DFT offers us $N$ probe
-frequencies — zero turns, one turn, two turns, … — and reports the signal's
-resemblance to each.
+turns across the recording — Part 1's ["only oscillations that fit a whole
+number of times into the
+period"](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series)
+rule, wearing its discrete clothes. Here is the whole cast at once, drawn
+over one window of $N = 8$ samples:
+
+![The DFT basis over one window: the fundamental and its integer multiples](basis_ladder.png)
+
+This picture is worth pausing on, because it shows what *dictates* the
+basis: nothing but $N$ itself. Fix the window — $N$ samples, $NT$ seconds —
+and the slowest nonzero probe is forced: one full turn over exactly those
+samples, frequency $1/(NT)$. The rest of the vocabulary follows
+automatically, because every other probe is an integer multiple of that
+fundamental — two turns, three turns, up the ladder. Choose the window and
+the basis comes with it; the DFT then offers its $N$ probe frequencies —
+zero turns, one turn, two turns, … — and reports the signal's resemblance
+to each.
 
 These $N$ oscillations deserve a name, because they are more than measuring
 sticks: look back at the *inverse* DFT formula from Part 1 — it is
