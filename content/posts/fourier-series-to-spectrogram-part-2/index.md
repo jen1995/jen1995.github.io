@@ -576,9 +576,17 @@ $$
 p(z) = x[0] + x[1]\, z + \dots + x[N-1]\, z^{N-1}.
 $$
 
-The forward DFT is *evaluation*: $X[k] = p(\omega^{-k})$ (the minus is our
-sign convention) — the spectrum is the list of values this polynomial
-takes at the $N$ roots of unity. The inverse DFT is *interpolation*:
+The forward DFT is *evaluation* — group the exponential into a power of a
+single number and the DFT sum becomes the polynomial at work:
+
+$$
+X[k] = \sum_{n=0}^{N-1} x[n]\, e^{-2 \pi i \frac{k n}{N}}
+     = \sum_{n=0}^{N-1} x[n] \left( \omega^{-k} \right)^{n}
+     = p\!\left( \omega^{-k} \right)
+$$
+
+(the minus is our sign convention) — the spectrum is the list of values
+this polynomial takes at the $N$ roots of unity. The inverse DFT is *interpolation*:
 handed those $N$ values at those $N$ nodes, it recovers the one and only
 degree-$(N-1)$ polynomial through them — that is, the coefficients — that
 is, the samples. So on this side of the mirror the samples are not points
