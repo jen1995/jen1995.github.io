@@ -114,7 +114,7 @@ the signal the DFT actually believes in:
 
 ![The DFT's model of the signal — the weighted probe sum — for four recording lengths](dft_model.png)
 
-Two things to see here. Inside the window, the orange sum passes through
+Two things to see here. Inside the window, the green model passes through
 every blue sample *exactly* — $N$ numbers in, $N$ numbers out, the books
 balance as always. Outside the window, it does the only thing a sum of
 whole-turn oscillations can do: **repeats**, with the window's own period.
