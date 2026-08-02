@@ -261,12 +261,20 @@ through $1700 \cdot 0.256 \approx 435$ Hz — more than a *hundred* bins of
 the right grid. And the column reports the
 truth: the frame genuinely contained all of those frequencies, so the fine
 grid faithfully resolves… a smear $435$ Hz wide. The sharper $\Delta f$
-bought a worse picture, because **frequency resolution is only resolution
-for signals that hold still — whose spectral content stays the same — for
-the whole window.** This is the *quasi-stationarity* from the typical-numbers
-inset above, now seen from the other side: 25 ms is chosen precisely so
-that speech holds still within a frame. A chirp, by definition, holds
-still at no window length at all.
+bought a worse picture. Here is the lesson, stated carefully: **$\Delta f$
+measures the fineness of the frequency axis — not the thinness of what
+lands on it.** A tone's image is one bin thin only when the tone's
+frequency stays inside one bin — changes by less than $\Delta f$ — over
+the whole window. Drift further, and the frame *genuinely contains* every
+frequency the tone visited along the way: a band of them, which no grid,
+however fine, can render thinner than it really is. Check this against the
+numbers: the left window catches $54$ Hz of drift on a grid of $31$ Hz
+bins — about two bins thick, nearly as thin as the axis allows; the right
+window catches $435$ Hz of drift on $3.9$ Hz bins — a hundred-bin-wide
+band, rendered in loving detail. This is the *quasi-stationarity* from the
+typical-numbers inset, now made quantitative: a long window serves a
+signal only if the signal's frequencies barely move for the whole of it.
+Speech within $25$ ms qualifies; a chirp, by definition, never does.
 
 There is no window length that wins both ways — only a choice matched to
 the signal. This is not an engineering shortcoming but mathematics: time
