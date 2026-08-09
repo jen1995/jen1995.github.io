@@ -204,20 +204,10 @@ principal-value clause.
 This bridge also plants the law that will organize everything below.
 Periodizing the signal made its spectrum discrete — samples on the grid
 $\frac{n}{P}$. **Periodic in time ⇔ discrete in frequency**, and the
-period in one domain sets the grid step in the other: $P$ seconds of period
-— $\frac{1}{P}$ hertz between harmonics. [Part 2 of the spectrogram series, *Reading the
-DFT*,](/posts/fourier-series-to-spectrogram-part-2/) met both faces of
-this law on what will become the *bottom edge* of [our map](#the-square) —
-the road from the Fourier series to the DFT. That road makes two moves at
-once: it periodizes the signal, and it samples it. The periodization made
-the spectrum discrete — a Fourier series hands over coefficients on a grid
-by its very construction. The sampling made the spectrum periodic — [one
-line: $c_{k+N} = c_k$](/posts/fourier-series-to-spectrogram-part-1/#only-n-distinct-coefficients).
-Both facts arrived by direct computation, before any general principle was
-in sight. The bridge
-we have just crossed
-is the square's *left edge*, the same law between transform and series —
-and by the end of this post it will run every road on the map.
+period in one domain sets the grid step in the other: $P$ seconds of
+period — $\frac{1}{P}$ hertz between harmonics. The bridge we have just
+crossed is the *left edge* of [our map](#the-square) — and by the end of
+this post the same law will run every road on it.
 
 ## Bridge three: sample the signal — the DTFT
 
@@ -364,8 +354,9 @@ dark twin, again exactly as promised.
 
 The fourth shade needs no new work at all: it is the road
 [Part 1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft)
-walked end to end. Take $N$ samples, periodize with period $NT$, feed the
-comb into the Fourier *series*, let sifting collapse the integral:
+walked end to end — the *bottom edge* of the map. Take $N$ samples,
+periodize with period $NT$, feed the comb into the Fourier *series*, let
+sifting collapse the integral:
 
 $$
 c_k = \frac{1}{NT} \sum_{n=0}^{N-1} x(nT)\, e^{-2 \pi i \frac{k n}{N}},
@@ -375,6 +366,17 @@ $T$ cancels in the exponent, only $N$ coefficients are distinct, and
 dropping the physical scale leaves the **discrete Fourier transform**
 $X[k] = \sum_n x[n]\, e^{-2 \pi i k n / N}$ — discrete and periodic in both
 domains, the fully quantized corner of the table.
+
+Note that this one road makes *two* moves at once — it periodizes the
+signal, and it samples it — so both faces of the law fire together. The
+periodization made the spectrum discrete: a Fourier series hands over
+coefficients on a grid by its very construction. The sampling made the
+spectrum periodic: [one line,
+$c_{k+N} = c_k$](/posts/fourier-series-to-spectrogram-part-1/#only-n-distinct-coefficients).
+This is where [Part 2 of the spectrogram series, *Reading the
+DFT*,](/posts/fourier-series-to-spectrogram-part-2/) first met both faces
+of the law — by direct computation, before any general principle was in
+sight.
 
 ## Bridge five: sample the spectrum — DTFT → DFT
 
