@@ -411,6 +411,50 @@ smuggles in. (Bridges four and five agree to the letter:
 $c_k = \frac{1}{NT} X_d(f_k)$ — the envelope relation of bridge two, one
 floor down the table.)
 
+## Do the roads run back?
+
+Look at the arrows: every one of them points *toward* discreteness. The
+DFT is a sink — three roads lead in, none lead out. Is the traffic really
+one-way?
+
+For arbitrary signals, yes. Sampling discards everything between the
+samples; periodizing overlaps everything that pokes out of one period. A
+general crossing loses information, and lost information buys no return
+ticket. But each bridge *does* have a return ticket, and all the tickets
+carry the same fine print: **a crossing is reversible exactly when the
+other domain is limited.**
+
+- **DFT → DTFT.** Our recording was time-limited to $N$ samples by
+  construction — and that alone is enough: the continuous curve $X_d(f)$
+  is completely determined by its $N$ samples, through an explicit
+  interpolation formula. Practitioners walk this reverse road daily
+  without noticing: **zero-padding** a signal before an FFT computes
+  nothing new — it merely evaluates the same DTFT on a denser grid.
+- **DFT → FS.** If a periodic signal contains only $N$ harmonics, its $N$
+  coefficients rebuild it exactly — this is the trigonometric
+  interpolation of [Part 2's green
+  model](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure),
+  the curve through every sample.
+- **DTFT → FT.** The copies picture already said it: if the signal was
+  band-limited below $\frac{f_s}{2}$, the copies never touch, and one
+  period of the DTFT holds an intact $X(f)$ — cut it out, and the
+  transform (hence the signal, every value between the samples included)
+  is recovered. That return ticket is the sampling theorem of
+  Kotelnikov–Shannon–Nyquist, and its price — band-limitedness — is
+  precisely the fine print the next post will read aloud.
+
+So the law of the square has a quieter second half: *limited in one
+domain ⇔ recoverable from samples in the other*. Sampling time costs
+nothing when the frequency content is limited; sampling frequency costs
+nothing when the time extent is limited. The DFT sits in its corner not
+as a grave but as a compressed archive.
+
+(One caveat for the perfectionist: the full journey back — DFT all the
+way to the analog world — needs time-limitedness *and* band-limitedness
+at once, and a nonzero signal cannot strictly have both. The round trip
+to the analog world is therefore always an approximation; how good an
+approximation is, once again, the sampling theorem's department.)
+
 ## The map, walked
 
 Here is [the same map from the top of the post](#the-square) once more —
