@@ -119,14 +119,13 @@ integrable](https://en.wikipedia.org/wiki/Absolutely_integrable_function)
 signal — our standing assumption — and the caution turns out to be
 vacuous: $\left| x(t)\, e^{-2 \pi i f t} \right| = |x(t)|$, the integral
 converges absolutely, and every reasonable reading of it agrees. The
-inversion integral enjoys no such luck: its input is $X$, which need not
-be absolutely integrable *even when $x$ was* — our rectangular pulse's
-transform will turn out to be a sinc, with tails dying like $\frac{1}{f}$,
-too slowly (we compute it in bridge two) — so there the principal value
-genuinely earns its keep, and
-the [inversion
+inversion integral enjoys no such luck. Its input is $X$ — and $X$ need
+not be absolutely integrable *even when $x$ was*: our rectangular pulse's
+transform will turn out to be a sinc, with tails dying like $\frac{1}{f}$
+— too slowly (we compute it in bridge two). So there the principal value
+genuinely earns its keep. The [inversion
 theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem) pins
-down exactly when the symmetric limit returns $x(t)$, under far weaker
+down exactly when the symmetric limit returns $x(t)$ — under far weaker
 assumptions than our physicist's derivation used. This is precisely how
 [Zorich's *Mathematical Analysis
 II*](https://matan.math.msu.su/media/uploads/2020/03/V.A.Zorich-Kniga-II-9-izdanie-Temp-Corr-3.pdf)
