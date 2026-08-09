@@ -434,6 +434,11 @@ other domain is limited.**
   <details>
   <summary><b>Zero-padding: the reverse road in daily use</b> (a denser reading, not a sharper spectrum)</summary>
 
+  The trick in one sentence: **we append zeros to the recording so that
+  the DFT samples *more points off the same DTFT curve* $X_d(f)$** — a
+  denser reading of the curve, nothing else. Now slowly: why would we
+  want that, and why do zeros deliver it?
+
   Start from the picture bridge five left us: the $N$ DFT values are $N$
   *readings* of the continuous curve $X_d(f)$, taken on the grid
   $f_k = \frac{k}{NT}$. Between the grid points the curve keeps living —
