@@ -427,24 +427,32 @@ other domain is limited.**
 - **DFT → DTFT.** Our recording was time-limited to $N$ samples by
   construction — and that alone is enough: the continuous curve $X_d(f)$
   is completely determined by its $N$ samples, through an explicit
-  interpolation formula.
+  [interpolation formula](https://en.wikipedia.org/wiki/Discrete-time_Fourier_transform#Sampling_the_DTFT):
+  every value of the curve is a fixed weighted mix of the $N$ bins, the
+  weights coming from the
+  [Dirichlet kernel](https://en.wikipedia.org/wiki/Dirichlet_kernel) — a
+  periodic cousin of the sinc.
 
   <details>
   <summary><b>The recovery in practice: zero-padding</b> (a denser reading, not a sharper spectrum)</summary>
 
-  The trick in one sentence: **we append zeros to the recording so that
-  the DFT samples *more points off the same DTFT curve* $X_d(f)$** — a
-  denser reading of the curve, nothing else. Now slowly: why would we
-  want that, and why do zeros deliver it?
+  First, why would anyone walk this road in daily life? Start from the
+  picture bridge five left us: the $N$ DFT values are $N$ *readings* of
+  the continuous curve $X_d(f)$, taken on the grid $f_k = \frac{k}{NT}$.
+  Between the grid points the curve keeps living — bridge five simply
+  never looks there. And sometimes we badly want to look: if the curve's
+  peak sits *between* two grid points, the $N$ readings show two
+  middling bars where $X_d(f)$ has one sharp summit — both the position
+  and the height of the true peak are misread.
 
-  Start from the picture bridge five left us: the $N$ DFT values are $N$
-  *readings* of the continuous curve $X_d(f)$, taken on the grid
-  $f_k = \frac{k}{NT}$. Between the grid points the curve keeps living —
-  bridge five simply never looks there. And sometimes we badly want to
-  look: if the curve's peak sits *between* two grid points, the $N$
-  readings show two middling bars where $X_d(f)$ has one sharp summit.
+  The interpolation formula above is one remedy: it reconstructs
+  $X_d(f)$ at any frequency we care to name. We *could* evaluate it —
+  but almost nobody does, because there is a lazier road to the same
+  values, one that reuses the FFT we already run: **append zeros to the
+  recording, and the DFT itself will read *more points off the same
+  curve* $X_d(f)$**. Here is why the zeros deliver exactly that.
 
-  So — how do we read the same curve at more points? The grid step
+  The grid step
   $\frac{1}{NT}$ is set by one thing only: the length of the vector we
   feed to the DFT. We cannot lengthen the recording after the fact, but
   we can lengthen the *vector* — append zeros, say to length $4N$, and
