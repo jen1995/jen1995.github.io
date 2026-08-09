@@ -208,11 +208,11 @@ period in one domain sets the grid step in the other: $P$ seconds of period
 — $\frac{1}{P}$ hertz between harmonics. [Part 2 of the spectrogram series, *Reading the
 DFT*,](/posts/fourier-series-to-spectrogram-part-2/) met both faces of
 this law on what will become the *bottom edge* of [our map](#the-square) —
-the road from the Fourier series to the DFT,
-where a single derivation periodizes the signal (and the spectrum comes
-out discrete — the series hands over coefficients on a grid by its very
-construction) and samples it (and the spectrum comes out periodic — [one
-line: $c_{k+N} = c_k$](/posts/fourier-series-to-spectrogram-part-1/#only-n-distinct-coefficients)).
+the road from the Fourier series to the DFT. That road makes two moves at
+once: it periodizes the signal, and it samples it. The periodization made
+the spectrum discrete — a Fourier series hands over coefficients on a grid
+by its very construction. The sampling made the spectrum periodic — [one
+line: $c_{k+N} = c_k$](/posts/fourier-series-to-spectrogram-part-1/#only-n-distinct-coefficients).
 Both facts arrived by direct computation, before any general principle was
 in sight. The bridge
 we have just crossed
