@@ -122,7 +122,8 @@ converges absolutely, and every reasonable reading of it agrees. The
 inversion integral enjoys no such luck: its input is $X$, which need not
 be absolutely integrable *even when $x$ was* — our rectangular pulse's
 transform will turn out to be a sinc, with tails dying like $\frac{1}{f}$,
-too slowly — so there the principal value genuinely earns its keep, and
+too slowly (we compute it in bridge two) — so there the principal value
+genuinely earns its keep, and
 the [inversion
 theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem) pins
 down exactly when the symmetric limit returns $x(t)$, under far weaker
@@ -171,6 +172,27 @@ samples pack tighter along the same envelope, until they fuse into it:
 (The stems in the picture are drawn as $P \cdot c_n$ — the raw coefficients
 themselves shrink like $\frac{1}{P}$ and would sink into the axis; the
 *shape* is what survives, and the shape is $X(f)$.)
+
+And what *is* that envelope, for the rectangular pulse of the pictures?
+For once, a transform we can compute end to end — the pulse has height $1$
+on $\left[ -\frac{1}{2}, \frac{1}{2} \right]$, so:
+
+$$
+\begin{aligned}
+X(f) = \int_{-1/2}^{1/2} e^{-2 \pi i f t}\, dt
+     &= \left. \frac{e^{-2 \pi i f t}}{-2 \pi i f} \right|_{t=-1/2}^{t=1/2} \\
+     &= \frac{e^{\pi i f} - e^{-\pi i f}}{2 \pi i f}
+      = \frac{\sin(\pi f)}{\pi f},
+\end{aligned}
+$$
+
+the last step being Euler's formula run backwards,
+$\sin z = \frac{1}{2i} \left( e^{iz} - e^{-iz} \right)$. This damped
+ripple is the [**sinc** function](https://en.wikipedia.org/wiki/Sinc_function)
+— the curve the stems of the figure trace, and the promised troublemaker
+of bridge one: its tails die like $\frac{1}{f}$, too slowly for absolute
+integrability, which is exactly why the inversion integral keeps its
+principal-value clause.
 
 This bridge also plants the law that will organize everything below.
 Periodizing the signal made its spectrum discrete — samples on the grid
