@@ -427,12 +427,10 @@ other domain is limited.**
 - **DFT → DTFT.** Our recording was time-limited to $N$ samples by
   construction — and that alone is enough: the continuous curve $X_d(f)$
   is completely determined by its $N$ samples, through an explicit
-  interpolation formula. Practitioners walk this reverse road daily,
-  under the name **zero-padding** — the cut below unpacks the trick, and
-  what it does and does not buy.
+  interpolation formula.
 
   <details>
-  <summary><b>Zero-padding: the reverse road in daily use</b> (a denser reading, not a sharper spectrum)</summary>
+  <summary><b>The recovery in practice: zero-padding</b> (a denser reading, not a sharper spectrum)</summary>
 
   The trick in one sentence: **we append zeros to the recording so that
   the DFT samples *more points off the same DTFT curve* $X_d(f)$** — a
