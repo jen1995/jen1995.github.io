@@ -110,7 +110,7 @@ integral over all frequencies, and the coefficients $c_n$ matured into a
 doing).
 
 <details>
-<summary><b>Two remarks on honesty</b> (which integral truly needs its principal value)</summary>
+<summary><b>Two remarks on honesty</b> (when the principal value actually matters)</summary>
 
 Formally, *both* integrals are defined with the
 symmetric-limit — principal-value — reading, and for a good reason: the
