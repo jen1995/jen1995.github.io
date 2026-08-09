@@ -427,16 +427,32 @@ other domain is limited.**
 - **DFT → DTFT.** Our recording was time-limited to $N$ samples by
   construction — and that alone is enough: the continuous curve $X_d(f)$
   is completely determined by its $N$ samples, through an explicit
-  interpolation formula. Practitioners walk this reverse road daily
-  without noticing, under the name **zero-padding**: take the $N$
-  samples, append another $N$ zeros, and run a length-$2N$ FFT. Bridge
-  five then samples the *same* curve $X_d(f)$ — appending zeros changed
-  no term of its sum — only now at $2N$ points instead of $N$. The
-  plotted spectrum comes out smoother, and it is tempting to read that
-  smoothness as better frequency resolution. It is not: the curve being
-  sampled was already completely determined by the original $N$ samples,
-  so the extra bins expose no information the short recording did not
-  contain — a denser *reading* of the spectrum, not a sharper one.
+  interpolation formula. Better yet, this particular road can be walked
+  without ever writing that formula down. Start from the picture bridge
+  five left us: the $N$ DFT values are $N$ *readings* of the continuous
+  curve $X_d(f)$, taken on the grid $f_k = \frac{k}{NT}$. Between the
+  grid points the curve keeps living — bridge five simply never looks
+  there. And sometimes we badly want to look: if the curve's peak sits
+  *between* two grid points, the $N$ readings show two middling bars
+  where $X_d(f)$ has one sharp summit. So — how do we read the same
+  curve at more points? The grid step $\frac{1}{NT}$ is set by one thing
+  only: the length of the vector we feed to the DFT. We cannot lengthen
+  the recording after the fact, but we can lengthen the *vector* —
+  append zeros, say to length $4N$, and the grid step drops to
+  $\frac{1}{4NT}$. The zeros are harmless by construction: each term of
+  the sum $X_d(f) = \sum_n x[n]\, e^{-2\pi i f n T}$ is a sample times a
+  probe, so every appended sample contributes a zero term, and the curve
+  does not move an inch. The length-$4N$ DFT therefore reads the *same*
+  curve — at four times as many points:
+
+  ![Zero-padding: the same DTFT curve, read on a four-times-denser grid](zero_padding.png)
+
+  This everyday trick is called **zero-padding**, and the picture also
+  shows its fine print. The dense reading is smoother and finally
+  catches the summit — but the curve itself was fixed the moment the $N$
+  samples were recorded, so the extra bins expose nothing the short
+  recording did not already contain. Zero-padding buys a denser
+  *reading* of the spectrum, not a sharper spectrum.
   $\Delta f = 1/\text{duration}$, [the law of Part
   2](/posts/fourier-series-to-spectrogram-part-2/#from-the-index-to-hertz),
   still stands: zeros add no listening time.
