@@ -124,8 +124,9 @@ vacuous: $\left| x(t)\, e^{-2 \pi i f t} \right| = |x(t)|$, the integral
 converges absolutely, and every reasonable reading of it agrees. The
 inversion integral enjoys no such luck. Its input is $X$ — and $X$ need
 not be absolutely integrable *even when $x$ was*: our rectangular pulse's
-transform will turn out to be a sinc, with tails dying like $\frac{1}{f}$
-— too slowly (we compute it in bridge two). So there the principal value
+transform will turn out to be a
+[sinc](https://en.wikipedia.org/wiki/Sinc_function), with tails dying like
+$\frac{1}{f}$ — too slowly (we compute it in bridge two). So there the principal value
 genuinely earns its keep. The [inversion
 theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem) pins
 down exactly when the symmetric limit returns $x(t)$ — under far weaker
