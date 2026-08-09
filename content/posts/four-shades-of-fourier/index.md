@@ -11,7 +11,9 @@ weight: 40
 Back in [Part 1 of the spectrogram series](/posts/fourier-series-to-spectrogram-part-1/)
 we promised that several *different* creatures answer to the name
 "Fourier", showed a 2×2 table as a teaser, and walked its bottom row — from
-the Fourier **series** to the **discrete** Fourier transform. This post is
+the Fourier **series** to the **discrete** Fourier transform. (Throughout
+this post, "Part 1", "Part 2" and "Part 3" refer to the parts of that
+series — this post itself is not a Part 4, just a close relative.) This post is
 the payoff of that teaser: we meet the remaining shades — the Fourier
 **transform** and its **discrete-time** cousin — and, more importantly,
 build *every bridge between the four*. None of the four is an axiom; each
@@ -203,10 +205,10 @@ This bridge also plants the law that will organize everything below.
 Periodizing the signal made its spectrum discrete — samples on the grid
 $\frac{n}{P}$. **Periodic in time ⇔ discrete in frequency**, and the
 period in one domain sets the grid step in the other: $P$ seconds of period
-— $\frac{1}{P}$ hertz between harmonics. [Part 2 met both faces of this
-law](/posts/fourier-series-to-spectrogram-part-2/) on what will become the
-*bottom edge* of [our map](#the-square) — the road from the Fourier series
-to the DFT,
+— $\frac{1}{P}$ hertz between harmonics. [Part 2 of the spectrogram series, *Reading the
+DFT*,](/posts/fourier-series-to-spectrogram-part-2/) met both faces of
+this law on what will become the *bottom edge* of [our map](#the-square) —
+the road from the Fourier series to the DFT,
 where a single derivation periodizes the signal (and the spectrum comes
 out discrete — the series hands over coefficients on a grid by its very
 construction) and samples it (and the spectrum comes out periodic — [one
