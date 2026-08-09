@@ -19,9 +19,12 @@ the payoff of that teaser: we meet the remaining shades — the Fourier
 build *every bridge between the four*. None of the four is an axiom; each
 is another one pushed through a limit, a sampling, or a periodization.
 
+Here is the whole map at once — the four shades in their corners, and the
+five bridges numbered in the order we will cross them:
+
 <a id="the-square"></a>
 
-![Four Shades of Fourier](four_shades_of_fourier.svg)
+![The map: four shades of Fourier and the five numbered bridges between them](shades_map.png)
 
 Two conventions carried over from the trilogy: frequencies live in hertz
 (the exponentials are $e^{\pm 2 \pi i f t}$, no loose $\omega$'s), and all
@@ -50,7 +53,7 @@ $$
 Continuous periodic time, discrete frequency. The other three shades we
 will *construct* — from this one.
 
-## Bridge one: let the period go to infinity
+## Bridge one: Fourier series → Fourier transform
 
 The series serves periodic signals only. What about a signal that never
 repeats — a single pulse, a spoken sentence, anything from the real world?
@@ -141,7 +144,7 @@ follows immediately for integrable inputs.
 
 </details>
 
-## Bridge two: the transform is the envelope of the series
+## Bridge two: Fourier transform → Fourier series
 
 Now walk the same bridge in the opposite direction — it reveals something
 the limit hid. Take an *aperiodic* signal $x(t)$ of finite extent (finite
@@ -209,7 +212,7 @@ period — $\frac{1}{P}$ hertz between harmonics. The bridge we have just
 crossed is the *left edge* of [our map](#the-square) — and by the end of
 this post the same law will run every road on it.
 
-## Bridge three: sample the signal — the DTFT
+## Bridge three: Fourier transform → DTFT
 
 So far both shades live on continuous time. Enter the sampled world —
 through the honest gate built in Part 1: a discrete signal is the analog
@@ -299,7 +302,7 @@ frequency.
 
 Periodicity is only half the story. The other half is *what exactly* one
 period of $X_d$ contains — and here [bridge
-two](#bridge-two-the-transform-is-the-envelope-of-the-series) pays an
+two](#bridge-two-fourier-transform--fourier-series) pays an
 unexpected dividend: its envelope formula, $c_n = \frac{1}{P}
 X\!\left(\frac{n}{P}\right)$, is about to be reused with the roles of time
 and frequency swapped. Consider the periodization of the original spectrum
@@ -350,7 +353,7 @@ from being written out. If the copies do overlap (bottom row), they add up
 where they collide, and no cutting recovers $X$ — aliasing, the theorem's
 dark twin, again exactly as promised.
 
-## Bridge four: sample the signal inside one period — the DFT
+## Bridge four: Fourier series → DFT
 
 The fourth shade needs no new work at all: it is the road
 [Part 1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft)
@@ -378,7 +381,7 @@ DFT*,](/posts/fourier-series-to-spectrogram-part-2/) first met both faces
 of the law — by direct computation, before any general principle was in
 sight.
 
-## Bridge five: sample the spectrum — DTFT → DFT
+## Bridge five: DTFT → DFT
 
 One connection remains: the two discrete-time shades. The DTFT of a finite
 recording ($x[n] = 0$ outside $0, \dots, N-1$) is a continuous periodic
@@ -408,11 +411,12 @@ smuggles in. (Bridges four and five agree to the letter:
 $c_k = \frac{1}{NT} X_d(f_k)$ — the envelope relation of bridge two, one
 floor down the table.)
 
-## The map
+## The map, walked
 
-Here is the whole square, with every road labeled:
+Here is [the same map from the top of the post](#the-square) once more —
+only now every road on it has been built underfoot:
 
-![The four shades and the five bridges between them](shades_map.png)
+![The map again: four shades and five bridges, all of them now crossed](shades_map.png)
 
 One law runs every road: **discrete in one domain ⇔ periodic in the
 other** — and quantitatively, a period of $A$ in one domain forces a grid
