@@ -455,6 +455,38 @@ at once, and a nonzero signal cannot strictly have both. The round trip
 to the analog world is therefore always an approximation; how good an
 approximation is, once again, the sampling theorem's department.)
 
+<details>
+<summary><b>Why can't a signal be time-limited and band-limited at once?</b> (a Taylor series settles it)</summary>
+
+Suppose $x$ is band-limited: $x(t) = \int_{-B}^{B} X(f)\, e^{2 \pi i f t}\, df$,
+an integral over a *finite* stretch of frequencies. Differentiate under
+the integral as many times as you like — each derivative pulls down one
+factor of $2 \pi i f$, and $|f| \le B$ caps it:
+
+$$
+\left| x^{(k)}(t) \right|
+\le (2 \pi B)^k \int_{-B}^{B} |X(f)|\, df = C \cdot (2 \pi B)^k.
+$$
+
+The derivatives grow at most geometrically — and a factorial beats any
+geometric growth. The Taylor remainder around any point $t_0$ is bounded
+by $C\, \frac{(2 \pi B\, |t - t_0|)^k}{k!} \to 0$, so the Taylor series
+of $x$ converges *to $x$, on the entire axis* — the same reason the
+series for $e^{z}$ has infinite radius. A band-limited signal is, in
+other words, an [analytic function](https://en.wikipedia.org/wiki/Analytic_function):
+its behavior on any tiny interval determines it everywhere. (Part 1's
+["why not Taylor?"](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series)
+inset complained that Taylor coefficients are rigidly global creatures —
+here, at last, that rigidity does useful work.)
+
+Now let $x$ also be time-limited: identically zero outside some interval.
+Pick $t_0$ in the silence. Every derivative of $x$ at $t_0$ is zero, so
+the Taylor series is the zero series — and by the paragraph above it
+converges to $x$ everywhere. Hence $x \equiv 0$. A signal that is not
+identically zero must overflow either its time box or its frequency box.
+
+</details>
+
 ## The map, walked
 
 Here is [the same map from the top of the post](#the-square) once more —
