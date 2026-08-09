@@ -109,7 +109,10 @@ integral over all frequencies, and the coefficients $c_n$ matured into a
 *density* $X(f)$ (per unit of frequency — that is what the extra $P$ was
 doing).
 
-Two remarks on honesty. Formally, *both* integrals are defined with the
+<details>
+<summary><b>Two remarks on honesty</b> (which integral truly needs its principal value)</summary>
+
+Formally, *both* integrals are defined with the
 symmetric-limit — principal-value — reading, and for a good reason: the
 definition must make sense even for inputs that are *not* absolutely
 integrable, and the inversion integral will need exactly that generosity.
@@ -132,6 +135,8 @@ II*](https://matan.math.msu.su/media/uploads/2020/03/V.A.Zorich-Kniga-II-9-izdan
 sets things up on p. 524 of the 9th Russian edition: both definitions
 carry the principal-value clause, and the absolute-convergence remark
 follows immediately for integrable inputs.
+
+</details>
 
 ## Bridge two: the transform is the envelope of the series
 
