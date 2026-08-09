@@ -109,23 +109,29 @@ integral over all frequencies, and the coefficients $c_n$ matured into a
 *density* $X(f)$ (per unit of frequency — that is what the extra $P$ was
 doing).
 
-Two remarks on honesty, because the two integrals are not equally
-innocent. The *defining* integral for $X(f)$ is a fully honest one:
-$\left| x(t)\, e^{-2 \pi i f t} \right| = |x(t)|$, so for an [absolutely
+Two remarks on honesty. Formally, *both* integrals are defined with the
+symmetric-limit — principal-value — reading, and for a good reason: the
+definition must make sense even for inputs that are *not* absolutely
+integrable, and the inversion integral will need exactly that generosity.
+The real distinction between the two is *when the principal value has
+actual work to do*. Feed the forward transform an [absolutely
 integrable](https://en.wikipedia.org/wiki/Absolutely_integrable_function)
-signal it converges absolutely — no interpretation needed. The *inversion*
-integral is the delicate character: $X$ itself need not be absolutely
-integrable (our rectangular pulse's transform will turn out to be a sinc,
-whose tails die like $\frac{1}{f}$ — too slowly), which is exactly why the
-Fourier integral needed the principal-value reading above, and the
-[inversion theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem)
-pins down exactly when it returns $x(t)$ — under far weaker assumptions
-than our physicist's derivation used. The fine print lives in analysis
-textbooks; [Zorich's *Mathematical Analysis
+signal — our standing assumption — and the caution turns out to be
+vacuous: $\left| x(t)\, e^{-2 \pi i f t} \right| = |x(t)|$, the integral
+converges absolutely, and every reasonable reading of it agrees. The
+inversion integral enjoys no such luck: its input is $X$, which need not
+be absolutely integrable *even when $x$ was* — our rectangular pulse's
+transform will turn out to be a sinc, with tails dying like $\frac{1}{f}$,
+too slowly — so there the principal value genuinely earns its keep, and
+the [inversion
+theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem) pins
+down exactly when the symmetric limit returns $x(t)$, under far weaker
+assumptions than our physicist's derivation used. This is precisely how
+[Zorich's *Mathematical Analysis
 II*](https://matan.math.msu.su/media/uploads/2020/03/V.A.Zorich-Kniga-II-9-izdanie-Temp-Corr-3.pdf)
-makes exactly this pair of remarks with the bar of rigor raised — the
-principal-value definition and the absolute-convergence argument sit side
-by side on p. 524 of the 9th Russian edition.
+sets things up on p. 524 of the 9th Russian edition: both definitions
+carry the principal-value clause, and the absolute-convergence remark
+follows immediately for integrable inputs.
 
 ## Bridge two: the transform is the envelope of the series
 
