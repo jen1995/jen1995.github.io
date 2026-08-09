@@ -428,8 +428,18 @@ other domain is limited.**
   construction — and that alone is enough: the continuous curve $X_d(f)$
   is completely determined by its $N$ samples, through an explicit
   interpolation formula. Practitioners walk this reverse road daily
-  without noticing: **zero-padding** a signal before an FFT computes
-  nothing new — it merely evaluates the same DTFT on a denser grid.
+  without noticing, under the name **zero-padding**: take the $N$
+  samples, append another $N$ zeros, and run a length-$2N$ FFT. Bridge
+  five then samples the *same* curve $X_d(f)$ — appending zeros changed
+  no term of its sum — only now at $2N$ points instead of $N$. The
+  plotted spectrum comes out smoother, and it is tempting to read that
+  smoothness as better frequency resolution. It is not: the curve being
+  sampled was already completely determined by the original $N$ samples,
+  so the extra bins expose no information the short recording did not
+  contain — a denser *reading* of the spectrum, not a sharper one.
+  $\Delta f = 1/\text{duration}$, [the law of Part
+  2](/posts/fourier-series-to-spectrogram-part-2/#from-the-index-to-hertz),
+  still stands: zeros add no listening time.
 - **DFT → FS.** If a periodic signal contains only $N$ harmonics, its $N$
   coefficients rebuild it exactly — this is the trigonometric
   interpolation of [Part 2's green
@@ -469,10 +479,28 @@ $$
 $$
 
 The derivatives grow at most geometrically — and a factorial beats any
-geometric growth. The Taylor remainder around any point $t_0$ is bounded
-by $C\, \frac{(2 \pi B\, |t - t_0|)^k}{k!} \to 0$, so the Taylor series
-of $x$ converges *to $x$, on the entire axis* — the same reason the
-series for $e^{z}$ has infinite radius. A band-limited signal is, in
+geometric growth. Two small gears turn inside that claim, so let us
+expose them. First, the [Lagrange form of the Taylor
+remainder](https://en.wikipedia.org/wiki/Taylor%27s_theorem#Explicit_formulas_for_the_remainder):
+cutting the Taylor series of $x$ around $t_0$ after $k$ terms leaves the
+error
+
+$$
+R_k(t) = \frac{x^{(k+1)}(\xi)}{(k+1)!}\, (t - t_0)^{k+1}
+\quad \text{for some } \xi \text{ between } t_0 \text{ and } t,
+$$
+
+so the error is controlled by the *next* derivative, and our bound turns
+it into $|R_k(t)| \le C\, \frac{a^{k+1}}{(k+1)!}$ with
+$a = 2 \pi B\, |t - t_0|$ — a fixed number once $t$ is fixed. Second, why
+does $\frac{a^k}{k!}$ go to $0$? Compare successive terms: the ratio is
+$\frac{a}{k+1}$, which drops below $\frac{1}{2}$ as soon as $k$ passes
+$2a$ — from that point on every term at least halves. The factorial
+outruns any geometric growth; this is the same reason the series for
+$e^{z}$ converges everywhere. And "the remainder tends to zero" is
+*literally* the statement "the Taylor series converges to $x(t)$": the
+remainder is, by definition, the gap between $x(t)$ and the first $k$
+terms. A band-limited signal is, in
 other words, an [analytic function](https://en.wikipedia.org/wiki/Analytic_function):
 its behavior on any tiny interval determines it everywhere. (Part 1's
 ["why not Taylor?"](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series)
