@@ -340,7 +340,10 @@ Sampling in time periodizes the spectrum — the exact dual of bridge two,
 proved *by* bridge two, run in the other domain. (Mathematicians know this
 identity as the [Poisson summation
 formula](https://en.wikipedia.org/wiki/Poisson_summation_formula); we got
-it by crossing our own bridge twice.)
+it by crossing our own bridge twice. To see the match, set $f = 0$: the
+copies formula collapses to the textbook statement
+$\sum_n x(nT) = \frac{1}{T} \sum_m X(m f_s)$ — the sum of a signal's
+samples equals, up to $\frac{1}{T}$, the sum of its spectrum's samples.)
 
 ![Sampling periodizes the spectrum: separated copies at a generous rate, overlapping copies at a slow one](dtft_copies.png)
 
