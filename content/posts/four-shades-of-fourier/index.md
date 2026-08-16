@@ -220,12 +220,10 @@ through the honest gate built in Part 1: a discrete signal is the analog
 signal times the comb,
 $x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_n x(nT)\, \delta(t - nT)$.
 This object is no honest function — it is a train of deltas, so "its
-Fourier transform" can only mean the *generalized* transform. That is
-the same extended sense in which the delta itself has one: Part 1
-justified it by building the delta as a limit of ever-narrower averaging
-bumps, and everything resting on deltas inherits both the justification
-and its fine print (the cut below returns to what the fine print says).
-With that caveat on record, compute, step by step:
+Fourier transform" can only mean the *generalized* transform, in the
+same sense as for the delta itself, built honestly in Part 1 (the cut
+below returns to the fine print). With that caveat on record, compute,
+step by step:
 
 $$
 \begin{aligned}
