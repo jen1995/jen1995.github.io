@@ -32,11 +32,11 @@ the machinery for *discrete* signals — the delta function, the sifting
 property, the comb — is the one built honestly in
 [Part 1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft);
 we will lean on it without re-deriving. And a calibration of rigor: most
-steps today are honest, and where the classical fine print matters we will
-say so and point to it — but at a few junctures (an approximation slipped
-inside an infinite sum, a summation swapped with an integral) we will
-still argue like physicists. Part 1 shows what making a single such swap
-fully honest costs; doing it for every bridge would triple the post.
+steps today are honest, and where the classical fine print matters we
+will say so and point to it. One physicist's shortcut does remain, in
+bridge one: an approximation slips inside an infinite sum before the
+limit is taken. Part 1 shows what making such a step fully honest
+costs — we will flag it there and move on.
 
 ## The cast, in one paragraph each
 
@@ -260,14 +260,15 @@ summable*, $\sum_n |x(nT)| \lt \infty$. Each term of our series has
 absolute value $|x(nT)|$ — the exponential contributes only a phase — so
 by the [Weierstrass
 M-test](https://en.wikipedia.org/wiki/Weierstrass_M-test) the series
-then converges at every $f$, and uniformly at that. This sum is also
-how the DSP literature introduces the object. An accessible reference
-is the [ДВПФ chapter of
-ru.dsplib.org](https://web.archive.org/web/20260514053418/https://ru.dsplib.org/content/dtft/dtft.html)
-(archived — the same source whose discrete-signal model Part 1
-follows): it reaches the very same formula by the comb-and-sifting
-route. The convergence fine print is textbook material — Oppenheim &
-Schafer's classic *Discrete-Time Signal Processing*, §2.7.
+then converges at every $f$, and uniformly at that. This is also
+exactly how the standard textbook introduces the object. Oppenheim &
+Schafer's classic *Discrete-Time Signal Processing* (3rd edition,
+Pearson New International Edition, Pearson 2014; ch. 2,
+"Discrete-Time Signals and Systems", §7 "Representation of Sequences
+by Fourier Transforms", pp. 50–52) defines the transform as the limit
+of precisely our symmetric truncations — their Eq. (134) — and reaches
+absolute summability as the sufficient condition for uniform
+convergence through the same bound.
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
