@@ -272,10 +272,17 @@ total absolute mass $\sum_n \int |f_n|$ is finite; in our setting that
 becomes *absolute summability of the samples*, $\sum_n |x(nT)| \lt
 \infty$, which also makes the resulting series converge absolutely and
 uniformly in $f$. With deltas on stage, though, no classical theorem
-applies — the clean framework is the [distribution
-theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)) that
-Part 1's proof pointed to, where this whole computation is a *definition*
-dressed as a calculation.
+applies — the clean framework is the [theory of tempered
+distributions](https://en.wikipedia.org/wiki/Distribution_(mathematics)#Tempered_distributions_and_Fourier_transform)
+that Part 1's proof pointed to. There the Fourier transform of a
+distribution $u$ is *defined* by handing the exponential over to the
+test function, $\langle \mathcal{F}u, \varphi \rangle = \langle u,
+\mathcal{F}\varphi \rangle$; feed it $u = \delta_{nT}$, apply the
+definition of the delta, and out comes
+$\mathcal{F}\delta_{nT} = e^{-2 \pi i f n T}$ — one term of our sum. The
+whole computation above is those two definitions unfolded term by term:
+no sum ever crosses an integral, because the spot where the swap stood
+is occupied by a definition.
 
 </details>
 
