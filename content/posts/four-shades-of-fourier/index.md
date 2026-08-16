@@ -241,58 +241,34 @@ signal and the exponential alike — at its own grid instant $t = nT$.
 <details>
 <summary><b>Can the second move be made rigorous?</b></summary>
 
-In two layers. For *honest
-functions* in place of deltas, swapping an infinite sum with an integral
-is licensed by the [Fubini–Tonelli
-theorem](https://en.wikipedia.org/wiki/Fubini%27s_theorem). The theorem is
-stated for products of arbitrary *σ-finite measure spaces* — the Lebesgue
-measure on the line is only its most famous customer — and another
-customer is the [counting
-measure](https://en.wikipedia.org/wiki/Counting_measure) on the integers:
-the measure that assigns to a set of indices simply the number of its
-elements, so that "integrating" against it means adding the terms up.
+Yes, in two layers — for now only a sketch of the ingredients. **TBD:
+expand this into a proper walk-through.**
 
-A sum is an integral over the counting measure. Why? Strip any integral to
-its skeleton and it reads: *value of the
-function on a piece, times the size of the piece, summed over the pieces*.
-The Riemann integral measures its pieces by length, $dt$. A measure $\mu$
-is nothing but a different rule for the size of a piece — and the counting
-measure's rule is "the size of a set is the number of indices in it". Each
-single index is then a piece of size $1$, "value times size" is
-$f(n) \cdot 1$, and summing over the pieces is literally summing the
-values: $\int f\, d\mu = \sum_n f(n)$.
-
-With that dictionary in hand, our sum-plus-integral is a
-double integral over a product of two concrete measure spaces: the
-integers $\mathbb{Z}$ carrying the counting measure (that side is the sum
-over $n$) times the time axis $\mathbb{R}$ carrying the usual Lebesgue
-measure (that side is the integral over $t$). The swap of the
-two is legal whenever the
-total absolute mass $\sum_n \int |f_n|$ is finite; in our setting that
-becomes *absolute summability of the samples*, $\sum_n |x(nT)| \lt
-\infty$, which also makes the resulting series converge absolutely and
-uniformly in $f$. With deltas on stage, though, no classical theorem
-applies — the clean framework is the [theory of tempered
-distributions](https://en.wikipedia.org/wiki/Distribution_(mathematics)#Tempered_distributions_and_Fourier_transform)
-that Part 1's proof pointed to. There the Fourier transform of a
-distribution $u$ is *defined* by handing the exponential over to the
-test function, $\langle \mathcal{F}u, \varphi \rangle = \langle u,
-\mathcal{F}\varphi \rangle$; feed it $u = \delta_{nT}$, apply the
-definition of the delta, and out comes
-$\mathcal{F}\delta_{nT} = e^{-2 \pi i f n T}$ — one term of our sum. The
-whole computation above is those two definitions unfolded term by term:
-no sum ever crosses an integral, because the spot where the swap stood
-is occupied by a definition.
-
-And this is why the two layers are not rivals — the second stands on the
-first. A definition costs nothing to write down, so it owes us a reason
-to be called "the Fourier transform"; the reason is that on honest
-functions it agrees with the classical one. Check that agreement by
-hand, and the verification turns out to be a swap of two integrals —
-*the duality formula is the Fubini identity itself*, provable while the
-functions are honest, promoted to a definition exactly where deltas rob
-the proof of its meaning. The classical layer is the license; the
-definition is the shortcut it certifies.
+- **Layer 1 — honest functions.** Replace the deltas by narrow unit-mass
+  bumps (Part 1's measurement model); everything becomes classical. The
+  swap of $\sum_n$ with $\int dt$ is the [Fubini–Tonelli
+  theorem](https://en.wikipedia.org/wiki/Fubini%27s_theorem#Fubini–Tonelli_theorem)
+  on the product of two measure spaces: $\mathbb{Z}$ with the [counting
+  measure](https://en.wikipedia.org/wiki/Counting_measure) (that side is
+  the sum) times $\mathbb{R}$ with the Lebesgue measure (that side is
+  the integral). The theorem's hypothesis — finite total absolute
+  mass — translates to *absolute summability of the samples*,
+  $\sum_n |x(nT)| \lt \infty$.
+- **Layer 2 — deltas.** No classical theorem applies; the framework is
+  the [theory of tempered
+  distributions](https://en.wikipedia.org/wiki/Distribution_(mathematics)#Tempered_distributions_and_Fourier_transform)
+  that Part 1's proof pointed to. Two definitions do all the work: the
+  delta, $\langle \delta_a, \varphi \rangle = \varphi(a)$, and the
+  Fourier transform by duality,
+  $\langle \mathcal{F}u, \varphi \rangle = \langle u, \mathcal{F}\varphi \rangle$.
+  From them, $\mathcal{F}\delta_{nT} = e^{-2 \pi i f n T}$ follows in one
+  line, and the whole computation is definitions unfolding — the spot
+  where the swap stood is occupied by a definition.
+- **Why both layers.** A definition owes us a reason to be called "the
+  Fourier transform"; the reason is that on honest functions it agrees
+  with the classical one — and that agreement, checked by hand, is
+  itself a Fubini swap. Layer 1 is the license; layer 2 is the shortcut
+  it certifies.
 
 </details>
 
