@@ -354,8 +354,8 @@ signal was lost by sampling it.** Cut that copy out, run the Fourier
 integral, and the continuous signal comes back — every value between the
 samples included. That is precisely the [sampling theorem stated in
 Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
-— and the middle row of the picture above *is* its proof, one post away
-from being written out. If the copies do overlap (bottom row), they add up
+— and the generous-rate row of the picture above *is* its proof, one
+post away from being written out. If the copies do overlap (bottom row), they add up
 where they collide, and no cutting recovers $X$ — aliasing, the theorem's
 dark twin, again exactly as promised.
 
