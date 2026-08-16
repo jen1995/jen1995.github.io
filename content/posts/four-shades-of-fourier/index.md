@@ -435,54 +435,6 @@ other domain is limited.**
   is completely determined by its $N$ readings, through an explicit
   interpolation formula (worked out in Oppenheim & Schafer, ch. 8, §4
   "Sampling the Fourier Transform", pp. 666–669).
-
-  <details>
-  <summary><b>The recovery in practice: zero-padding</b> (a denser reading, not a sharper spectrum)</summary>
-
-  The $N$ DFT values are $N$ *readings* of the curve $X_d(f)$ on the
-  grid $f_k = \frac{k}{NT}$; if the curve's peak sits *between* two grid
-  points, the readings misread both its position and its height. The
-  remedy practitioners actually use is not the interpolation formula but
-  a lazier road to the same values: **append zeros to the recording, and
-  the DFT itself will read *more points off the same curve* $X_d(f)$**.
-  Here is why the zeros deliver exactly that.
-
-  The grid step
-  $\frac{1}{NT}$ is set by one thing only: the length of the vector we
-  feed to the DFT. We cannot lengthen the recording after the fact, but
-  we can lengthen the *vector* — append zeros, say to length $4N$, and
-  the grid step drops to $\frac{1}{4NT}$. The zeros are harmless by
-  construction: each term of the sum
-  $X_d(f) = \sum_n x[n]\, e^{-2\pi i f n T}$ is a sample times a probe,
-  so every appended sample contributes a zero term, and the curve does
-  not move an inch. The length-$4N$ DFT therefore reads the *same*
-  curve — at four times as many points:
-
-  ![Zero-padding: the same DTFT curve, read on a four-times-denser grid](zero_padding.png)
-
-  Now, carefully: what did the zeros buy us? On the picture — a lot. The
-  coarse reading showed a bar of height 6.3 at bin 3 and a bar of height
-  3.9 at bin 4; anyone would report "frequency about 3, amplitude about
-  6.3", and both numbers would be wrong. The dense reading lands almost
-  on the summit and reports the truth: frequency 3.4, height about 8.
-  This is a genuine win, and it has a name — **estimation**: pinpointing
-  the position and height of a peak that the curve *does* have.
-
-  What the zeros can never buy is **resolution**: telling *two* close
-  tones apart. If two sines sit closer than $1/\text{duration}$, their
-  lobes have merged into a single hump *on the curve $X_d(f)$ itself*,
-  before any reading takes place. A denser grid will only measure that
-  one hump more and more precisely; the fact that there were two tones
-  was lost the moment the recording ended. The curve is a photograph
-  already taken, and zero-padding is zoom at the screen: zoom locates
-  the center of a blurred spot ever more finely, but two stars smeared
-  into one spot stay one spot at any magnification.
-  $\Delta f = 1/\text{duration}$, [the law of Part
-  2](/posts/fourier-series-to-spectrogram-part-2/#from-the-index-to-hertz),
-  still stands: zeros add no listening time — a denser *reading* of the
-  spectrum, never a sharper spectrum.
-
-  </details>
 - **DFT → FS.** If a periodic signal contains only $N$ harmonics, its $N$
   coefficients rebuild it exactly — this is the trigonometric
   interpolation of [Part 2's green
