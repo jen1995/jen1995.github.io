@@ -219,10 +219,9 @@ So far both shades live on continuous time. Enter the sampled world —
 through the honest gate built in Part 1: a discrete signal is the analog
 signal times the comb,
 $x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_n x(nT)\, \delta(t - nT)$.
-This object is no honest function — it is a train of deltas, so "its
-Fourier transform" can only mean the *generalized* transform, in the
-same sense as for the delta itself, built in Part 1. With that caveat
-on record, compute, step by step:
+This object is a train of deltas, not an honest function — so, as
+everywhere in Part 1, an integral with deltas inside means what the
+sifting property says it means. Compute, step by step:
 
 $$
 \begin{aligned}
