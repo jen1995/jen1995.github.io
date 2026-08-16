@@ -219,8 +219,11 @@ So far both shades live on continuous time. Enter the sampled world —
 through the honest gate built in Part 1: a discrete signal is the analog
 signal times the comb,
 $x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_n x(nT)\, \delta(t - nT)$.
-This object has a perfectly good Fourier transform — compute it honestly,
-step by step:
+This object is no honest function — it is a train of deltas, so "its
+Fourier transform" can only mean the *generalized* transform, on the
+same license Part 1 bought for the delta itself (the cut below returns
+to what that license costs). With that caveat on record, compute, step
+by step:
 
 $$
 \begin{aligned}
