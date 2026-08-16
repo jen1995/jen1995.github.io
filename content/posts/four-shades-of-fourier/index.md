@@ -221,8 +221,8 @@ signal times the comb,
 $x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_n x(nT)\, \delta(t - nT)$.
 This object is no honest function — it is a train of deltas, so "its
 Fourier transform" can only mean the *generalized* transform, in the
-same sense as for the delta itself, built honestly in Part 1. With that
-caveat on record, compute, step by step:
+same sense as for the delta itself, built in Part 1. With that caveat
+on record, compute, step by step:
 
 $$
 \begin{aligned}
