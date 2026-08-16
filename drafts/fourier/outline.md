@@ -58,7 +58,13 @@ Arc: what "band-limited" means → the theorem statement → proof sketch throug
 the Four Shades machinery (sampling makes the spectrum periodic; if the copies
 don't overlap, the original spectrum is recoverable — cut one copy out, done)
 → sinc interpolation as the reconstruction formula → aliasing when the
-condition fails (wagon-wheel effect, why 44.1 kHz) → demos in matplotlib.
+condition fails (wagon-wheel effect: film at 24 fps samples the spoke
+frequency; spokes advancing slightly *less* than one spoke-step per frame
+read as slow *backwards* rotation — a negative alias frequency; standing
+wheel = rotation exactly one step per frame; kin: strobe light on a fan,
+phone video of propellers. Plus why 44.1 kHz) → demos in matplotlib
+(a spinning-spokes animation sampled at a few frame rates would make the
+point wordlessly).
 Natural sequel to Four Shades: the periodized-spectrum picture *is* the proof.
 
 ### Act two, post 3 (the finale). F0, pitch and the cepstrum: reading the voice
