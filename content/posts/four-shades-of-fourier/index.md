@@ -1,7 +1,7 @@
 ---
 title: "Four Shades of Fourier"
-date: 2026-08-02
-draft: true
+date: 2026-08-16
+draft: false
 tags: ["fourier", "dsp", "math"]
 summary: "The family reunion: the Fourier series, the Fourier transform, the DTFT and the DFT — and the five bridges that connect them, all built from one law: discrete in one domain means periodic in the other."
 math: true
@@ -137,7 +137,7 @@ theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem) pins
 down exactly when the symmetric limit returns $x(t)$ — under far weaker
 assumptions than our physicist's derivation used. This is precisely how
 [Zorich's *Mathematical Analysis
-II*](https://matan.math.msu.su/media/uploads/2020/03/V.A.Zorich-Kniga-II-9-izdanie-Temp-Corr-3.pdf)
+II*](https://forallxyz.net/a-21)
 sets things up on p. 524 of the 9th Russian edition: both definitions
 carry the principal-value clause, and the absolute-convergence remark
 follows immediately for integrable inputs.
