@@ -262,9 +262,11 @@ by the [Weierstrass
 M-test](https://en.wikipedia.org/wiki/Weierstrass_M-test) the series
 then converges at every $f$, and uniformly at that. This is also how the
 standard DSP textbooks introduce the object — Oppenheim & Schafer's
-classic *Discrete-Time Signal Processing* (ch. 2) takes the sum itself
-as the definition, with absolute summability as the sufficient
-condition for its uniform convergence.
+classic [*Discrete-Time Signal
+Processing*](https://archive.org/details/discretetimesign00alan) (ch. 2,
+borrowable at the Internet Archive) takes the sum itself as the
+definition, with absolute summability as the sufficient condition for
+its uniform convergence.
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
