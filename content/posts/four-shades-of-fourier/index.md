@@ -432,11 +432,15 @@ other domain is limited.**
 
 - **DFT → DTFT.** If the signal is time-limited to $N$ samples, the
   continuous curve $X_d(f)$ is completely determined by its $N$
-  readings (Oppenheim & Schafer, ch. 8, §4 "Sampling the Fourier
-  Transform", pp. 666–669: sampling the transform periodizes the time
-  signal — our law, run in reverse — so a time-limited signal survives
-  in one period and is recoverable; the explicit interpolation formula
-  is their Problem 57). But the toll is real, and it is charged daily: when the
+  readings. The argument (Oppenheim & Schafer, ch. 8, §4 "Sampling the
+  Fourier Transform", pp. 666–669) is bridge five's law once more: keep
+  only $N$ readings of the curve, and the time signal they encode is
+  not $x[n]$ but its *periodization* $\sum_r x[n - rN]$ — sampling in
+  frequency periodizes time. A signal that lives on $N$ samples fits
+  inside one period, so the copies do not overlap and an intact $x$
+  sits in each: read it off, and the whole curve follows. (The explicit
+  interpolation formula that does this in one step is their
+  Problem 57.) But the toll is real, and it is charged daily: when the
   $N$ samples are a window cut from a longer signal — every frame of
   Part 3's spectrograms — the road leads back to the DTFT *of the
   window*, not of the signal, and the gap between the two is exactly
@@ -505,8 +509,17 @@ $e^{z}$ converges everywhere. And "the remainder tends to zero" is
 *literally* the statement "the Taylor series converges to $x(t)$": the
 remainder is, by definition, the gap between $x(t)$ and the first $k$
 terms. A band-limited signal is, in
-other words, an [analytic function](https://en.wikipedia.org/wiki/Analytic_function):
-its behavior on any tiny interval determines it everywhere. (Part 1's
+other words, an [analytic function](https://en.wikipedia.org/wiki/Analytic_function)
+— and of the strongest kind. Look at what the bound delivered:
+$a = 2 \pi B\, |t - t_0|$ is finite for *every* $t$, however far from
+$t_0$, so the Taylor series around any single point converges to $x$
+**on the whole line** — the radius of convergence is infinite (in
+complex-analysis vocabulary, $x$ extends to an [entire
+function](https://en.wikipedia.org/wiki/Entire_function)). And a power
+series leaves no freedom: inside its radius of convergence the
+coefficients are forced — they can only be $\frac{x^{(k)}(t_0)}{k!}$.
+So the behavior of $x$ on any tiny interval around $t_0$, which already
+pins down all the derivatives there, pins down $x$ everywhere. (Part 1's
 ["why not Taylor?"](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series)
 inset complained that Taylor coefficients are rigidly global creatures —
 here, at last, that rigidity does useful work.)
