@@ -432,9 +432,11 @@ other domain is limited.**
 
 - **DFT → DTFT.** If the signal is time-limited to $N$ samples, the
   continuous curve $X_d(f)$ is completely determined by its $N$
-  readings, through an explicit interpolation formula (worked out in
-  Oppenheim & Schafer, ch. 8, §4 "Sampling the Fourier Transform",
-  pp. 666–669). But the toll is real, and it is charged daily: when the
+  readings (Oppenheim & Schafer, ch. 8, §4 "Sampling the Fourier
+  Transform", pp. 666–669: sampling the transform periodizes the time
+  signal — our law, run in reverse — so a time-limited signal survives
+  in one period and is recoverable; the explicit interpolation formula
+  is their Problem 57). But the toll is real, and it is charged daily: when the
   $N$ samples are a window cut from a longer signal — every frame of
   Part 3's spectrograms — the road leads back to the DTFT *of the
   window*, not of the signal, and the gap between the two is exactly
