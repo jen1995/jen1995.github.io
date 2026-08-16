@@ -31,6 +31,7 @@ Notes:
 | Преобразование Фурье дельта-функции | delta-function properties used in the series-to-DFT derivation | [archived](https://web.archive.org/web/2026/https://ru.dsplib.org/content/fourier_transform_delta_func/fourier_transform_delta_func.html) |
 | ДПФ (вывод из ряда Фурье) | cross-check of our post-1 derivation | [archived](https://web.archive.org/web/2026/https://ru.dsplib.org/content/dft/dft.html) |
 | Ряд Фурье | reference for post 2 formula tables | [archived](https://web.archive.org/web/2026/https://ru.dsplib.org/content/fourier_series/fourier_series.html) |
+| ДВПФ | **the DTFT** for Four Shades bridge three: same comb→swap→sifting route, periodicity, T=1 convention; NB: no convergence discussion there | [archived](https://web.archive.org/web/20260514053418/https://ru.dsplib.org/content/dtft/dtft.html) |
 
 (The first two are verified end-to-end — pages open with full text. The rest
 follow the same pattern; verify on first use.)

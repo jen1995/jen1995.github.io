@@ -260,14 +260,14 @@ summable*, $\sum_n |x(nT)| \lt \infty$. Each term of our series has
 absolute value $|x(nT)|$ — the exponential contributes only a phase — so
 by the [Weierstrass
 M-test](https://en.wikipedia.org/wiki/Weierstrass_M-test) the series
-then converges at every $f$, and uniformly at that. This is also how the
-standard DSP textbooks introduce the object — Oppenheim & Schafer's
-classic [*Discrete-Time Signal
-Processing*](https://archive.org/details/discretetimesign00alan)
-(§2.7, "Representation of Sequences by Fourier Transforms"; borrowable
-at the Internet Archive) takes the sum itself as the definition, with
-absolute summability as the sufficient condition for its uniform
-convergence.
+then converges at every $f$, and uniformly at that. This sum is also
+how the DSP literature introduces the object. An accessible reference
+is the [ДВПФ chapter of
+ru.dsplib.org](https://web.archive.org/web/20260514053418/https://ru.dsplib.org/content/dtft/dtft.html)
+(archived — the same source whose discrete-signal model Part 1
+follows): it reaches the very same formula by the comb-and-sifting
+route. The convergence fine print is textbook material — Oppenheim &
+Schafer's classic *Discrete-Time Signal Processing*, §2.7.
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
