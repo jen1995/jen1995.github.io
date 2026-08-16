@@ -260,15 +260,21 @@ summable*, $\sum_n |x(nT)| \lt \infty$. Each term of our series has
 absolute value $|x(nT)|$ — the exponential contributes only a phase — so
 by the [Weierstrass
 M-test](https://en.wikipedia.org/wiki/Weierstrass_M-test) the series
-then converges at every $f$, and uniformly at that. This is also
-exactly how the standard textbook introduces the object. Oppenheim &
-Schafer's classic *Discrete-Time Signal Processing* (3rd edition,
-Pearson New International Edition, Pearson 2014; ch. 2,
-"Discrete-Time Signals and Systems", §7 "Representation of Sequences
-by Fourier Transforms", pp. 50–52) defines the transform as the limit
-of precisely our symmetric truncations — their Eq. (134) — and reaches
+then converges at every $f$, and uniformly at that.
+
+<details>
+<summary><b>The textbook reference</b> (chapter and page in Oppenheim & Schafer)</summary>
+
+This is also exactly how the standard textbook introduces the object.
+Oppenheim & Schafer's classic *Discrete-Time Signal Processing* (3rd
+edition, Pearson New International Edition, Pearson 2014; ch. 2,
+"Discrete-Time Signals and Systems", §7 "Representation of Sequences by
+Fourier Transforms", pp. 50–52) defines the transform as the limit of
+precisely our symmetric truncations — their Eq. (134) — and reaches
 absolute summability as the sufficient condition for uniform
 convergence through the same bound.
+
+</details>
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
