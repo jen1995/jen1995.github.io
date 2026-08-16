@@ -221,9 +221,8 @@ signal times the comb,
 $x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_n x(nT)\, \delta(t - nT)$.
 This object is no honest function — it is a train of deltas, so "its
 Fourier transform" can only mean the *generalized* transform, in the
-same sense as for the delta itself, built honestly in Part 1 (the cut
-below returns to the fine print). With that caveat on record, compute,
-step by step:
+same sense as for the delta itself, built honestly in Part 1. With that
+caveat on record, compute, step by step:
 
 $$
 \begin{aligned}
@@ -238,42 +237,10 @@ Three moves. First, substitute the comb model. Second, swap the sum with
 the integral — and note that this time the sum is *infinite*: in Part 1
 the matching swap held by plain linearity of finitely many terms, while
 here it is one of the physicist junctures flagged in the introduction.
-Third, sifting: each delta samples everything under its integral — the
-signal and the exponential alike — at its own grid instant $t = nT$.
-
-<details>
-<summary><b>Can the second move be made rigorous?</b></summary>
-
-Yes, in two layers — for now only a sketch of the ingredients. **TBD:
-expand this into a proper walk-through.**
-
-- **Layer 1 — honest functions.** Replace the deltas by narrow unit-mass
-  bumps (Part 1's measurement model); everything becomes classical. The
-  swap of $\sum_n$ with $\int dt$ is the [Fubini–Tonelli
-  theorem](https://en.wikipedia.org/wiki/Fubini%27s_theorem#Fubini–Tonelli_theorem)
-  on the product of two measure spaces: $\mathbb{Z}$ with the [counting
-  measure](https://en.wikipedia.org/wiki/Counting_measure) (that side is
-  the sum) times $\mathbb{R}$ with the Lebesgue measure (that side is
-  the integral). The theorem's hypothesis — finite total absolute
-  mass — translates to *absolute summability of the samples*,
-  $\sum_n |x(nT)| \lt \infty$.
-- **Layer 2 — deltas.** No classical theorem applies; the framework is
-  the [theory of tempered
-  distributions](https://en.wikipedia.org/wiki/Distribution_(mathematics)#Tempered_distributions_and_Fourier_transform)
-  that Part 1's proof pointed to. Two definitions do all the work: the
-  delta, $\langle \delta_a, \varphi \rangle = \varphi(a)$, and the
-  Fourier transform by duality,
-  $\langle \mathcal{F}u, \varphi \rangle = \langle u, \mathcal{F}\varphi \rangle$.
-  From them, $\mathcal{F}\delta_{nT} = e^{-2 \pi i f n T}$ follows in one
-  line, and the whole computation is definitions unfolding — the spot
-  where the swap stood is occupied by a definition.
-- **Why both layers.** A definition owes us a reason to be called "the
-  Fourier transform"; the reason is that on honest functions it agrees
-  with the classical one — and that agreement, checked by hand, is
-  itself a Fubini swap. Layer 1 is the license; layer 2 is the shortcut
-  it certifies.
-
-</details>
+Third, the [sifting property proved in Part
+1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft):
+each delta samples everything under its integral — the signal and the
+exponential alike — at its own grid instant $t = nT$.
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
