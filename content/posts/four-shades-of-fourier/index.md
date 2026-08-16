@@ -430,11 +430,18 @@ ticket. But each bridge *does* have a return ticket, and all the tickets
 carry the same fine print: **a crossing is reversible exactly when the
 other domain is limited.**
 
-- **DFT → DTFT.** Our recording was time-limited to $N$ samples by
-  construction — and that alone is enough: the continuous curve $X_d(f)$
-  is completely determined by its $N$ readings, through an explicit
-  interpolation formula (worked out in Oppenheim & Schafer, ch. 8, §4
-  "Sampling the Fourier Transform", pp. 666–669).
+- **DFT → DTFT.** If the signal is time-limited to $N$ samples, the
+  continuous curve $X_d(f)$ is completely determined by its $N$
+  readings, through an explicit interpolation formula (worked out in
+  Oppenheim & Schafer, ch. 8, §4 "Sampling the Fourier Transform",
+  pp. 666–669). But the toll is real, and it is charged daily: when the
+  $N$ samples are a window cut from a longer signal — every frame of
+  Part 3's spectrograms — the road leads back to the DTFT *of the
+  window*, not of the signal, and the gap between the two is exactly
+  [the leakage Part 3
+  measured](/posts/fourier-series-to-spectrogram-part-3/#the-price-of-cutting-spectral-leakage).
+  For a discrete signal stretching over the whole time axis, no finite
+  batch of readings pins the curve down at all.
 - **DFT → FS.** If a periodic signal contains only $N$ harmonics, its $N$
   coefficients rebuild it exactly — this is the trigonometric
   interpolation of [Part 2's green
