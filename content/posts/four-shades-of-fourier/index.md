@@ -354,8 +354,8 @@ signal was lost by sampling it.** Cut that copy out, run the Fourier
 integral, and the continuous signal comes back — every value between the
 samples included. That is precisely the [sampling theorem stated in
 Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
-— and the generous-rate row of the picture above *is* its proof, one
-post away from being written out. If the copies do overlap (bottom row), they add up
+— and row 2 of the picture above *is* its proof, one post away from
+being written out. If the copies do overlap (row 3), they add up
 where they collide, and no cutting recovers $X$ — aliasing, the theorem's
 dark twin, again exactly as promised.
 
@@ -550,8 +550,8 @@ both domains end up discrete *and* periodic: the DFT, with its $N$-point
 grids locked in the relation $\Delta f = \frac{1}{NT}$ that Part 2 spent a
 whole section reading.
 
-The square also says what comes next. The generous-rate row of the copies
-picture — separated copies, the original spectrum intact inside each — is
+The square also says what comes next. Row 2 of the copies picture —
+separated copies, the original spectrum intact inside each — is
 the entire proof of the theorem with three names, waiting to be written
 carefully: what "band-limited" must mean, why the boundary case bites, how
 the sinc reconstructs, and what the wagon wheels in old westerns have to do
