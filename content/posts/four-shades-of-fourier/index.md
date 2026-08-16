@@ -550,9 +550,9 @@ both domains end up discrete *and* periodic: the DFT, with its $N$-point
 grids locked in the relation $\Delta f = \frac{1}{NT}$ that Part 2 spent a
 whole section reading.
 
-The square also says what comes next. The middle row of the copies picture
-— separated copies, the original spectrum intact inside each — is the
-entire proof of the theorem with three names, waiting to be written
+The square also says what comes next. The generous-rate row of the copies
+picture — separated copies, the original spectrum intact inside each — is
+the entire proof of the theorem with three names, waiting to be written
 carefully: what "band-limited" must mean, why the boundary case bites, how
 the sinc reconstructs, and what the wagon wheels in old westerns have to do
 with any of it. The theorem's post is next on this road.
