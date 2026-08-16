@@ -219,31 +219,30 @@ So far both shades live on continuous time. Enter the sampled world —
 through the honest gate built in Part 1: a discrete signal is the analog
 signal times the comb,
 $x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_n x(nT)\, \delta(t - nT)$.
-This object is a train of deltas, not an honest function — so the
-transform integral below is not a classical integral. It is read the
-way Part 1 set up: a delta is the limit of ever-narrower unit-mass
-bumps, an integral with a delta inside is shorthand for the limit of
-the corresponding honest integrals, and its value is given by the
-sifting property proved there: $\int f(t)\, \delta(t - a)\, dt = f(a)$.
-Compute, step by step:
+Truncate the train for a moment — keep only the samples with
+$|n| \le N$ — and transform this finite piece, step by step:
 
 $$
 \begin{aligned}
-X_d(f) &= \int_{-\infty}^{\infty} x_d(t)\, e^{-2 \pi i f t}\, dt
-        = \int_{-\infty}^{\infty} \left( \sum_{n=-\infty}^{\infty} x(t)\, \delta(t - nT) \right) e^{-2 \pi i f t}\, dt \\
-       &= \sum_{n=-\infty}^{\infty} \int_{-\infty}^{\infty} x(t)\, \delta(t - nT)\, e^{-2 \pi i f t}\, dt \\
-       &= \sum_{n=-\infty}^{\infty} x(nT)\, e^{-2 \pi i f n T}.
+\int_{-\infty}^{\infty} \left( \sum_{n=-N}^{N} x(nT)\, \delta(t - nT) \right) e^{-2 \pi i f t}\, dt
+ &= \sum_{n=-N}^{N} x(nT) \int_{-\infty}^{\infty} \delta(t - nT)\, e^{-2 \pi i f t}\, dt \\
+ &= \sum_{n=-N}^{N} x(nT)\, e^{-2 \pi i f n T}.
 \end{aligned}
 $$
 
-Three moves. First, substitute the comb model. Second, swap the sum with
-the integral — and note that this time the sum is *infinite*: in Part 1
-the matching swap held by plain linearity of finitely many terms, while
-here it is one of the physicist junctures flagged in the introduction.
-Third, the [sifting property proved in Part
-1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft):
-each delta samples everything under its integral — the signal and the
-exponential alike — at its own grid instant $t = nT$.
+Both moves are fully covered by Part 1's machinery: a *finite* sum
+crosses the integral by plain linearity, and then the [sifting property
+proved in Part
+1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft)
+collapses each integral — every delta samples the exponential at its own
+grid instant $t = nT$. Nothing new had to be argued.
+
+The full train is the $N \to \infty$ limit of its truncations — so we
+*define* its transform as the limit of these finite results:
+
+$$
+X_d(f) = \sum_{n=-\infty}^{\infty} x(nT)\, e^{-2 \pi i f n T}.
+$$
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
