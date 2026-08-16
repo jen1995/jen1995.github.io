@@ -198,11 +198,12 @@ $$
 
 the last step being Euler's formula run backwards,
 $\sin z = \frac{1}{2i} \left( e^{iz} - e^{-iz} \right)$. This damped
-ripple is the [**sinc** function](https://en.wikipedia.org/wiki/Sinc_function)
-— the curve the stems of the figure trace, and the promised troublemaker
-of bridge one: its tails die like $\frac{1}{f}$, too slowly for absolute
-integrability, which is exactly why the inversion integral keeps its
-principal-value clause.
+ripple is the [**sinc** function](https://en.wikipedia.org/wiki/Sinc_function).
+Look back at the envelope figure: the tips of the stems lie exactly on
+this curve — sinc *is* the envelope the coefficients were densifying
+onto. And it is the promised troublemaker of bridge one: its tails die
+like $\frac{1}{f}$, too slowly for absolute integrability, which is
+exactly why the inversion integral keeps its principal-value clause.
 
 This bridge also plants the law that will organize everything below.
 Periodizing the signal made its spectrum discrete — samples on the grid
