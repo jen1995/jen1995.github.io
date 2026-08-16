@@ -284,6 +284,16 @@ whole computation above is those two definitions unfolded term by term:
 no sum ever crosses an integral, because the spot where the swap stood
 is occupied by a definition.
 
+And this is why the two layers are not rivals — the second stands on the
+first. A definition costs nothing to write down, so it owes us a reason
+to be called "the Fourier transform"; the reason is that on honest
+functions it agrees with the classical one. Check that agreement by
+hand, and the verification turns out to be a swap of two integrals —
+*the duality formula is the Fubini identity itself*, provable while the
+functions are honest, promoted to a definition exactly where deltas rob
+the proof of its meaning. The classical layer is the license; the
+definition is the shortcut it certifies.
+
 </details>
 
 Before naming it, notice its defining feature. Shift $f$ by
