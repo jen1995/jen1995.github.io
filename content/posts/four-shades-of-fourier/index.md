@@ -320,31 +320,12 @@ d_n = \frac{1}{f_s} \int_{-f_s/2}^{f_s/2} Y(f)\, e^{2 \pi i f n T}\, df
     = \frac{1}{f_s}\, x(nT).
 $$
 
-Two transitions here, each worth spelling out.
-
-**Transition one: one period of a periodization = the whole line of the
-original.** This is the unfolding trick of bridge two, now in its
-general form. Substitute the definition of $Y$ and integrate the sum
-term by term (the interval is finite, so this is the mild kind of swap).
-In the $m$-th term shift the variable, $g = f - m f_s$: the integration
-window slides $m$ periods to the left, while the harmonic does not
-change at all —
-$e^{2 \pi i (g + m f_s) n T} = e^{2 \pi i g n T} \cdot e^{2 \pi i m n}$,
-and $e^{2 \pi i m n} = 1$ because $f_s T = 1$ and a whole number of
-turns is invisible (the same integer argument that gave us periodicity
-a moment ago). What remains is the integral of $X(g)\, e^{2 \pi i g n T}$
-over the window $\left[ -\frac{f_s}{2} - m f_s,\ \frac{f_s}{2} - m f_s \right]$,
-one window per $m$ — and these windows tile the whole line with no gaps
-and no overlaps. Summing over the tiles gives the integral over the
-whole line. (In bridge two the copies had disjoint supports, so one
-whole copy filled the window; here the copies may overlap freely — each
-donates its chunk to the window, and the chunks reassemble the line.)
-
-**Transition two: the Fourier integral.** The middle expression is the
-inversion integral of bridge one, evaluated at the instant $t = nT$: it
-reassembles the signal from its spectrum,
-$\int_{-\infty}^{\infty} X(f)\, e^{2 \pi i f t}\, df = x(t)$. The
-integral collapses to the sample $x(nT)$.
+Two transitions here: **1)** the integral of a periodization over one
+period equals the integral of the original over the whole line — bridge
+two's unfolding trick, and the harmonic rides along untouched because
+it is itself $f_s$-periodic; **2)** the middle expression is the
+Fourier inversion integral of bridge one, evaluated at $t = nT$ — it
+reassembles the sample $x(nT)$.
 
 So the periodized spectrum is
 $Y(f) = \sum_n \frac{x(nT)}{f_s} e^{-2 \pi i f n T} = T \cdot X_d(f)$, that
