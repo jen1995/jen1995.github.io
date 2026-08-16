@@ -376,12 +376,12 @@ dropping the physical scale leaves the **discrete Fourier transform**
 $X[k] = \sum_n x[n]\, e^{-2 \pi i k n / N}$ — discrete and periodic in both
 domains, the fully quantized corner of the table.
 
-Note that this one road makes *two* moves at once — it periodizes the
-signal, and it samples it — so both faces of the law fire together. The
-periodization made the spectrum discrete: a Fourier series hands over
-coefficients on a grid by its very construction. The sampling made the
-spectrum periodic: [one line,
+Note that this one road makes *two* moves at once — it samples the
+signal, and it periodizes it — so both faces of the law fire together.
+The sampling made the spectrum periodic: [one line,
 $c_{k+N} = c_k$](/posts/fourier-series-to-spectrogram-part-1/#only-n-distinct-coefficients).
+The periodization made the spectrum discrete: a Fourier series hands
+over coefficients on a grid by its very construction.
 This is where [Part 2 of the spectrogram series, *Reading the
 DFT*,](/posts/fourier-series-to-spectrogram-part-2/) first met both faces
 of the law — by direct computation, before any general principle was in
