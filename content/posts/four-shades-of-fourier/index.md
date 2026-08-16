@@ -432,31 +432,20 @@ other domain is limited.**
 
 - **DFT → DTFT.** Our recording was time-limited to $N$ samples by
   construction — and that alone is enough: the continuous curve $X_d(f)$
-  is completely determined by its $N$ samples, through an explicit
-  [interpolation formula](https://en.wikipedia.org/wiki/Discrete-time_Fourier_transform#Sampling_the_DTFT):
-  every value of the curve is a fixed weighted mix of the $N$ bins, the
-  weights coming from the
-  [Dirichlet kernel](https://en.wikipedia.org/wiki/Dirichlet_kernel) — a
-  periodic cousin of the sinc.
+  is completely determined by its $N$ readings, through an explicit
+  interpolation formula (worked out in Oppenheim & Schafer, ch. 8, §4
+  "Sampling the Fourier Transform", pp. 666–669).
 
   <details>
   <summary><b>The recovery in practice: zero-padding</b> (a denser reading, not a sharper spectrum)</summary>
 
-  First, why would anyone walk this road in daily life? Start from the
-  picture bridge five left us: the $N$ DFT values are $N$ *readings* of
-  the continuous curve $X_d(f)$, taken on the grid $f_k = \frac{k}{NT}$.
-  Between the grid points the curve keeps living — bridge five simply
-  never looks there. And sometimes we badly want to look: if the curve's
-  peak sits *between* two grid points, the $N$ readings show two
-  middling bars where $X_d(f)$ has one sharp summit — both the position
-  and the height of the true peak are misread.
-
-  The interpolation formula above is one remedy: it reconstructs
-  $X_d(f)$ at any frequency we care to name. We *could* evaluate it —
-  but almost nobody does, because there is a lazier road to the same
-  values, one that reuses the FFT we already run: **append zeros to the
-  recording, and the DFT itself will read *more points off the same
-  curve* $X_d(f)$**. Here is why the zeros deliver exactly that.
+  The $N$ DFT values are $N$ *readings* of the curve $X_d(f)$ on the
+  grid $f_k = \frac{k}{NT}$; if the curve's peak sits *between* two grid
+  points, the readings misread both its position and its height. The
+  remedy practitioners actually use is not the interpolation formula but
+  a lazier road to the same values: **append zeros to the recording, and
+  the DFT itself will read *more points off the same curve* $X_d(f)$**.
+  Here is why the zeros deliver exactly that.
 
   The grid step
   $\frac{1}{NT}$ is set by one thing only: the length of the vector we
