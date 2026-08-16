@@ -219,8 +219,13 @@ So far both shades live on continuous time. Enter the sampled world —
 through the honest gate built in Part 1: a discrete signal is the analog
 signal times the comb,
 $x_d(t) = x(t) \cdot \text{Ш}_T(t) = \sum_n x(nT)\, \delta(t - nT)$.
-Truncate the train for a moment — keep only the samples with
-$|n| \le N$ — and transform this finite piece, step by step:
+One thing is genuinely new here. In Part 1 every integral ran over a
+bounded stretch — a neighborhood of one sampling point, a single
+period — so only finitely many teeth of the comb ever fell inside. The
+transform integral runs over the whole line, and for the first time
+*all* the teeth speak at once. So truncate the train for a moment —
+keep only the samples with $|n| \le N$ — and transform this finite
+piece, step by step:
 
 $$
 \begin{aligned}
@@ -235,14 +240,29 @@ crosses the integral by plain linearity, and then the [sifting property
 proved in Part
 1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft)
 collapses each integral — every delta samples the exponential at its own
-grid instant $t = nT$. Nothing new had to be argued.
+grid instant $t = nT$.
 
-The full train is the $N \to \infty$ limit of its truncations — so we
-*define* its transform as the limit of these finite results:
+The full train is the $N \to \infty$ limit of its truncations,
 
 $$
-X_d(f) = \sum_{n=-\infty}^{\infty} x(nT)\, e^{-2 \pi i f n T}.
+x_d(t) = \lim_{N \to \infty} \sum_{n=-N}^{N} x(nT)\, \delta(t - nT),
 $$
+
+so we *define* its transform as the limit of the finite results:
+
+$$
+X_d(f) \;\overset{\text{def}}{=}\; \lim_{N \to \infty} \sum_{n=-N}^{N} x(nT)\, e^{-2 \pi i f n T} = \sum_{n=-\infty}^{\infty} x(nT)\, e^{-2 \pi i f n T},
+$$
+
+asking, as is only fair for a definition-by-limit, that the limit
+exist. A clean sufficient condition: the samples are *absolutely
+summable*, $\sum_n |x(nT)| \lt \infty$. Each term of our series has
+absolute value $|x(nT)|$ — the exponential contributes only a phase — so
+by the [Weierstrass
+M-test](https://en.wikipedia.org/wiki/Weierstrass_M-test) the series
+then converges at every $f$, and uniformly at that. This is also how the
+standard DSP textbooks introduce the object: the sum itself is taken as
+the definition, with absolute summability as its standing assumption.
 
 Before naming it, notice its defining feature. Shift $f$ by
 $f_s = \frac{1}{T}$: each term picks up
