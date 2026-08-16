@@ -438,9 +438,10 @@ other domain is limited.**
   not $x[n]$ but its *periodization* $\sum_r x[n - rN]$ — sampling in
   frequency periodizes time. A signal that lives on $N$ samples fits
   inside one period, so the copies do not overlap and an intact $x$
-  sits in each: read it off, and the whole curve follows. (The explicit
-  interpolation formula that does this in one step is their
-  Problem 57.) But the toll is real, and it is charged daily: when the
+  sits in each: copy those $N$ samples out of one period, plug them into
+  the sum $X_d(f) = \sum_n x[n]\, e^{-2 \pi i f n T}$, and the curve is
+  back — computable at every frequency. (The explicit interpolation
+  formula that does all of this in one step is their Problem 57.) But the toll is real, and it is charged daily: when the
   $N$ samples are a window cut from a longer signal — every frame of
   Part 3's spectrograms — the road leads back to the DTFT *of the
   window*, not of the signal, and the gap between the two is exactly
