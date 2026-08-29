@@ -332,46 +332,48 @@ frequency simply means turning the other way.)
 
 And here is what an honest frame rate looks like. Give the film eight
 times the frames, so the wheel turns only $5°$ per true frame — safely
-inside the window — and the illusion evaporates. (Eight times is
-comfort, not necessity: *any* rate that keeps the turn per frame under
-half a spoke-step — that is, any $f_s > 2 f_0$ — would be honest; the
-threshold itself sits at $22.5°$ per frame.)
+inside the window — and the illusion evaporates:
 
 ![The same wheel at eight times the frame rate: the top spoke is the true spoke, advancing correctly](wagon_wheel_fast.png)
 
-Said through the sector alone: sampling is honest exactly when the
-neighboring spoke cannot reach the sector within one frame, so that the
-sector's tenant stays the same physical spoke; aliasing is the moment a
-neighbor takes over the tenancy unnoticed. Two special speeds close the
-story. At exactly one spoke-step per frame the takeover is perfect —
-every frame shows the identical pattern, and the film sees a standing
-wheel under a galloping coach, the alias at frequency zero:
+Eight times is comfort, not necessity: *any* rate that keeps the turn
+per frame under half a spoke-step — any $f_s > 2 f_0$ — is honest.
+Here is a barely sufficient one, $20°$ per frame, just under the
+threshold. The jumps are large, but from each frame to the next every
+spoke still lands *closer to its own previous position than to its
+neighbor's* — and that is the real criterion: the eye pairs each spoke
+with the nearest spoke of the previous frame, and sampling is honest
+exactly when this pairing is the true one:
 
-![Exactly one spoke-step per frame: the pattern is identical in every frame, a standing wheel](wagon_wheel_standing.png)
+![A barely sufficient rate, twenty degrees per frame: large jumps, correct pairing](wagon_wheel_min.png)
 
-And exactly *half* a spoke-step per frame is the wheel's boundary case,
-$f_0 = \frac{1}{2}$: the old tenant and the neighbor land on the two
-edges of the sector at once, the pattern merely alternates between two
-positions, and forwards is indistinguishable from backwards — the
+Push to the threshold itself — exactly half a spoke-step per frame,
+$f_0 = \frac{1}{2}$ — and the pairing becomes a coin toss: each spoke
+lands exactly halfway between two old positions, the pattern merely
+alternates, and forwards is indistinguishable from backwards — the
 wheel-world twin of the edge sine sampled at its zero crossings:
 
 ![Exactly half a spoke-step per frame: two spokes on the sector's edges, direction undecidable](wagon_wheel_boundary.png)
 
+Past the threshold the pairing goes wrong — that is our first strip,
+$40°$ per frame read as $5°$ backwards. And one speed deserves its own
+portrait: not the worst case, but the illusion's fixed point. At
+exactly one full spoke-step per frame every spoke lands precisely on
+its neighbor's old position — every frame is identical, and the film
+sees a standing wheel under a galloping coach, the alias at frequency
+zero. A shade slower and the wheel crawls backwards; a shade faster,
+forwards: the whole cycle repeats every spoke-step:
+
+![Exactly one spoke-step per frame: the pattern is identical in every frame, a standing wheel](wagon_wheel_standing.png)
+
 The same fine print explains a famous number. Human hearing ends near
 $20$ kHz, so audio needs $f_s > 40$ kHz — and CDs run at
-[$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). Why the extra
-$4.1$? Recall the anti-aliasing filter from the band-limited section:
-before sampling, everything above $\frac{f_s}{2}$ must be removed, or
-it will alias into the recording. At $f_s = 40$ kHz exactly, that
-filter would face an impossible job: pass $20$ kHz untouched (it is
-still audible) and already annihilate $20.001$ kHz. Real analog filters
-cannot switch that abruptly — their attenuation grows *gradually* over
-a stretch of frequencies. Raising $f_s$ to $44.1$ kHz moves the
-deadline: the filter must be silent only by
-$\frac{f_s}{2} = 22.05$ kHz, so it can pass everything up to $20$ kHz
-and then fade out across the $20$–$22.05$ kHz gap. Whatever it fails to
-kill inside that gap is harmless twice over: inaudible, and below
-$\frac{f_s}{2}$, so it aliases nothing. (Why $44100$ and not a round
+[$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). The extra
+$4.1$ kHz is working room for the anti-aliasing filter: an analog
+low-pass cannot cut off instantly, so it passes everything up to
+$20$ kHz and fades to silence across the $20$–$22.05$ kHz gap — and
+whatever survives in that gap is harmless, being both inaudible and
+below $\frac{f_s}{2}$. (Why $44100$ and not a round
 $44000$? A relic: early digital audio was stored on video recorders,
 and $44100$ samples per second is what fits as three samples per line
 on both TV standards of the era.)
@@ -406,9 +408,9 @@ trilogy built the discrete world from sound up; Four Shades drew the
 map and its law; today the dashed road home is paved — samples back to
 the analog signal, toll checked at the gate. The debts are settled.
 
-The next journey will look like a change of subject, and is secretly a
-continuation. In quantum mechanics a particle's position and momentum
-descriptions are a *Fourier pair* — the momentum wavefunction is the
+The blog's next journey is quantum mechanics — a change of subject on
+the surface, and secretly a continuation. In quantum mechanics a
+particle's position and momentum descriptions are a *Fourier pair* — the momentum wavefunction is the
 Fourier transform of the position one — and the uncertainty principle
 is [Part 3's time–frequency
 trade-off](/posts/fourier-series-to-spectrogram-part-3/#the-trade-off-you-cannot-escape)
