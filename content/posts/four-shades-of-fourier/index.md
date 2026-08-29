@@ -174,18 +174,18 @@ $$
 
 Read it as a picture: the Fourier coefficients of the periodized signal are
 *samples of one continuous curve* — the transform $\frac{1}{P} X(f)$ is the
-**envelope** of the discrete spectrum. Make the period longer, and the
-samples pack tighter along the same envelope, until they fuse into it:
+**envelope** of the discrete spectrum.
 
-![Fourier coefficients densify onto the transform as the period grows](envelope.png)
+Let us compute one such envelope concretely, so the pictures below can
+show it. The story so far worked for *any* signal of finite support —
+but the pictures of bridge one had already committed to a specific one,
+the rectangular pulse, and for it the transform can be computed end to
+end. Here is that pulse again, with the periodic extension we just
+built:
 
-(The stems in the picture are drawn as $P \cdot c_n$ — the raw coefficients
-themselves shrink like $\frac{1}{P}$ and would sink into the axis; the
-*shape* is what survives, and the shape is $X(f)$.)
+![The rectangular pulse of bridge one, height 1 on [−1/2, 1/2], and its periodic extension](rect_pulse.png)
 
-And what *is* that envelope, for the rectangular pulse of the pictures?
-For once, a transform we can compute end to end — the pulse has height $1$
-on $\left[ -\frac{1}{2}, \frac{1}{2} \right]$, so:
+The pulse has height $1$ on $\left[ -\frac{1}{2}, \frac{1}{2} \right]$, so:
 
 $$
 \begin{aligned}
@@ -198,12 +198,21 @@ $$
 
 the last step being Euler's formula run backwards,
 $\sin z = \frac{1}{2i} \left( e^{iz} - e^{-iz} \right)$. This damped
-ripple is the [**sinc** function](https://en.wikipedia.org/wiki/Sinc_function).
-Look back at the envelope figure: the tips of the stems lie exactly on
-this curve — sinc *is* the envelope the coefficients were densifying
-onto. And it is the promised troublemaker of bridge one: its tails die
+ripple is the [**sinc** function](https://en.wikipedia.org/wiki/Sinc_function)
+— and it is the promised troublemaker of bridge one: its tails die
 like $\frac{1}{f}$, too slowly for absolute integrability, which is
 exactly why the inversion integral keeps its principal-value clause.
+
+Now make the period longer, and the samples pack tighter along the same
+envelope — for our pulse, along the sinc just computed — until they
+fuse into it:
+
+![Fourier coefficients densify onto the transform as the period grows](envelope.png)
+
+(The stems in the picture are drawn as $P \cdot c_n$ — the raw
+coefficients themselves shrink like $\frac{1}{P}$ and would sink into
+the axis; the *shape* is what survives, and the shape is exactly the
+sinc.)
 
 This bridge also plants the law that will organize everything below.
 Periodizing the signal made its spectrum discrete — samples on the grid
