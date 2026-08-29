@@ -114,8 +114,8 @@ picture above, and that one bright row already contains the whole theorem:
 **nothing about the analog signal was lost**, because its entire
 transform sits undamaged inside the spectrum of the sampled one.
 
-It remains to cut the copy out and cash it in. Multiply $X_d$ by the
-rectangular cutter
+It remains to cut the copy out and turn it back into the signal.
+Multiply $X_d$ by the rectangular cutter
 
 $$
 H(f) = \begin{cases} T, & |f| \lt \frac{f_s}{2}, \\ 0, & \text{otherwise} \end{cases}
