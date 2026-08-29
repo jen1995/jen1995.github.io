@@ -98,9 +98,9 @@ $T$ is the sampling step and $f_s = \frac{1}{T}$ the sampling rate;
 $X_d(f) = \sum_n x(nT)\, e^{-2 \pi i f n T}$ is the DTFT — the spectrum
 computed from the samples alone; and each integer $m$ contributes one
 term $X(f - m f_s)$, a *copy* of the original spectrum slid $m$ grid
-steps along the frequency axis. In pictures — [the copies figure of Four
-Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum),
-reproduced here with today's row framed in violet, the color of today's road on the map:
+steps along the frequency axis (the picture is [the copies figure of
+Four Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum);
+today we need **row 2** of it, the framed one):
 
 ![The copies picture, with row 2 — the theorem's row — framed in violet](copies_row2.png)
 
