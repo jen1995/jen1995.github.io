@@ -336,6 +336,24 @@ inside the window — and the illusion evaporates:
 
 ![The same wheel at eight times the frame rate: the top spoke is the true spoke, advancing correctly](wagon_wheel_fast.png)
 
+Said through the sector alone: sampling is honest exactly when the
+neighboring spoke cannot reach the sector within one frame, so that the
+sector's tenant stays the same physical spoke; aliasing is the moment a
+neighbor takes over the tenancy unnoticed. Two special speeds close the
+story. At exactly one spoke-step per frame the takeover is perfect —
+every frame shows the identical pattern, and the film sees a standing
+wheel under a galloping coach, the alias at frequency zero:
+
+![Exactly one spoke-step per frame: the pattern is identical in every frame, a standing wheel](wagon_wheel_standing.png)
+
+And exactly *half* a spoke-step per frame is the wheel's boundary case,
+$f_0 = \frac{1}{2}$: the old tenant and the neighbor land on the two
+edges of the sector at once, the pattern merely alternates between two
+positions, and forwards is indistinguishable from backwards — the
+wheel-world twin of the edge sine sampled at its zero crossings:
+
+![Exactly half a spoke-step per frame: two spokes on the sector's edges, direction undecidable](wagon_wheel_boundary.png)
+
 The same fine print explains a famous number. Human hearing ends near
 $20$ kHz, so audio needs $f_s > 40$ kHz — and CDs run at
 [$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). Why the extra
