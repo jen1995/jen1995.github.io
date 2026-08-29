@@ -1,7 +1,7 @@
 ---
 title: "The Theorem with Three Names"
 date: 2026-08-29
-draft: true
+draft: false
 tags: ["fourier", "dsp", "math"]
 summary: "Kotelnikov, Shannon, Nyquist — the sampling theorem, proved with machinery we already own: sampling periodizes the spectrum, separated copies mean nothing was lost, and a train of sincs rebuilds the signal between its samples."
 math: true
@@ -288,7 +288,7 @@ $\frac{f_s}{2} = 2.5$ Hz, its in-window family member is
 $6 - 5 = 1$ Hz — and, as the family picture already showed, the samples
 of the $6$ Hz sine are exactly the samples of the $1$ Hz sine:
 
-![Two sines, one set of samples: a 4 Hz tone and its 1 Hz alias at a 5 Hz sampling rate](aliased_pair.png)
+![Two sines, one set of samples: a 6 Hz tone and its 1 Hz alias at a 5 Hz sampling rate](aliased_pair.png)
 
 The recording cannot say which candidate was real, so a $6$ Hz tone
 goes in and a $1$ Hz impostor comes out. The impostor has a
