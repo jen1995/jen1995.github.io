@@ -264,9 +264,12 @@ frequency axis: $X_d$ stacks the shifted copies $X(f - m f_s)$ on top
 of one another precisely because, to the samples, all the frequencies
 of one family are indistinguishable. The theorem's hypothesis is what keeps
 the confusion harmless: exactly one member of every family fits inside
-the window $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$, and for
-a signal band-limited below $\frac{f_s}{2}$ that member is the true
-one — so picking the in-window candidate, which is all a reconstruction
+the window $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$. One
+always exists — subtract from any frequency the nearest multiple of
+$f_s$, and the remainder is at most $\frac{f_s}{2}$ away from zero —
+and two never fit at once, because distinct members sit at least $f_s$
+apart while the window is only $f_s$ wide. For a signal band-limited
+below $\frac{f_s}{2}$ the in-window member is the true one — so picking the in-window candidate, which is all a reconstruction
 can ever do, picks correctly. Both halves of that story fit in one
 picture:
 
