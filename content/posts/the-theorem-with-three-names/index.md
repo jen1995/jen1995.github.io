@@ -130,13 +130,17 @@ Everything outside the rectangle is erased, and the central copy
 survives untouched:
 
 $$
-H(f)\, X_d(f) = T \cdot \frac{1}{T} \sum_{m=-\infty}^{\infty} X(f - m f_s)
-= \sum_{m=-\infty}^{\infty} X(f - m f_s)
-\qquad \text{for } |f| \lt \frac{f_s}{2},
+\begin{aligned}
+H(f)\, X_d(f) &= T \cdot \frac{1}{T} \sum_{m=-\infty}^{\infty} X(f - m f_s)
+= \sum_{m=-\infty}^{\infty} X(f - m f_s) \\
+&= X(f) \qquad \text{for } |f| \lt \frac{f_s}{2}.
+\end{aligned}
 $$
 
-and in this sum every term with nonzero $m$ vanishes, because its
-argument lands far outside the band:
+The first equality is only bookkeeping — the cutter's $T$ cancels the
+$\frac{1}{T}$ of the copies formula. The cutting itself is the second
+equality: the whole sum collapses to its single $m = 0$ term, because
+every term with nonzero $m$ has its argument far outside the band,
 
 $$
 |f - m f_s| \ge |m|\, f_s - |f| > f_s - \frac{f_s}{2} = \frac{f_s}{2} > B
@@ -144,8 +148,7 @@ $$
 
 (the first step is the triangle inequality; the second uses
 $|m| \ge 1$ and $|f| \lt \frac{f_s}{2}$; the last is the theorem's
-hypothesis $f_s > 2B$). Beyond the band $X$ is zero, so the sum
-collapses to its $m = 0$ term alone — which is $X(f)$. Outside the
+hypothesis $f_s > 2B$) — and beyond the band, $X$ is zero. Outside the
 window the left side is zero because $H$ is, and the right side is zero
 too: $|f| \ge \frac{f_s}{2} > B$ puts $f$ beyond the band where $X$
 lives. So at every frequency,
