@@ -118,11 +118,12 @@ It remains to cut the copy out and turn it back into the signal.
 Multiply $X_d$ by the rectangular cutter
 
 $$
-H(f) = \begin{cases} T, & |f| \lt \frac{f_s}{2}, \\ 0, & \text{otherwise} \end{cases}
+H(f) = T \cdot \mathbf{1}_{(-f_s/2,\; f_s/2)}(f)
 $$
 
-— zero outside the central period, and $T$ (not $1$) inside, to cancel
-the $\frac{1}{T}$ the copies formula carries:
+— $T$ times the indicator of the central period ($\mathbf{1}_A$ equals
+$1$ on the set $A$ and $0$ elsewhere); the factor is $T$ rather than
+$1$ so as to cancel the $\frac{1}{T}$ the copies formula carries:
 
 ![The cutter H(f) over the periodized spectrum, and the product: the central copy X(f) alone](cutter.png)
 
