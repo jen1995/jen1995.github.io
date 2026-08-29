@@ -188,7 +188,10 @@ equals $1$ at its center (at that one point its formula reads
 $\frac{0}{0}$, and the value $1$ is the classic limit
 $\frac{\sin u}{u} \to 1$ — the black dot in the picture above) while
 every other sinc is passing through one of its zeros, so no neighbor
-interferes. *Between* the instants, all the
+interferes:
+
+![Three of the sincs: each peaks at its own sample and vanishes at every other sample instant](three_sincs.png)
+ *Between* the instants, all the
 sincs speak at once, and their sum fills in the continuous curve — the
 values the recording never measured, restored by the theorem. This is
 the third interpolation of our series, kin to two we have already met —
@@ -201,8 +204,8 @@ period; the sinc train is their full-line sibling — infinitely many
 samples, no period, the entire time axis rebuilt.
 
 And here is the formula at work on a concrete signal — three sinusoids
-with band edge $B = 1.9$ Hz, sampled at $f_s = 5$ Hz, comfortably above
-the Nyquist rate $2B = 3.8$ Hz:
+with band edge $B = 2$ Hz, sampled at $f_s = 5$ Hz, comfortably above
+the Nyquist rate $2B = 4$ Hz:
 
 ![Three sinusoids sampled above the Nyquist rate; each sample launches a sinc; the sum reproduces the signal](sinc_train.png)
 
