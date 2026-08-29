@@ -357,7 +357,7 @@ wheel-world twin of the edge sine sampled at its zero crossings:
 
 Past the threshold the pairing goes wrong — that is our first strip,
 $40°$ per frame read as $5°$ backwards. And one speed deserves its own
-portrait: not the worst case, but the illusion's fixed point. At
+portrait — the illusion's fixed point. At
 exactly one full spoke-step per frame every spoke lands precisely on
 its neighbor's old position — every frame is identical, and the film
 sees a standing wheel under a galloping coach, the alias at frequency
