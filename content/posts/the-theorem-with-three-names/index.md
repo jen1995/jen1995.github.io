@@ -137,13 +137,7 @@ H(f)\, X_d(f) &= T \cdot I_{[-f_s/2,\, f_s/2]}(f) \cdot \frac{1}{T} \sum_{m=-\in
 \end{aligned}
 $$
 
-The last equality is the geometry we just described, written in
-symbols: inside the window only the $m = 0$ copy is present, so the sum
-there is plain $X(f)$; outside the window both sides vanish — the
-indicator on the left, the band limit on the right. So
-$H(f)\, X_d(f) = X(f)$ at every frequency — *exactly*, not
-approximately — and the Fourier integral of bridge one rebuilds the
-signal from it:
+Now the Fourier integral of bridge one rebuilds the signal from it:
 
 $$
 \begin{aligned}
