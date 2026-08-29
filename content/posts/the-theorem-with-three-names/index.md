@@ -127,13 +127,12 @@ the $\frac{1}{T}$ the copies formula carries:
 ![The cutter H(f) over the periodized spectrum, and the product: the central copy X(f) alone](cutter.png)
 
 Everything outside the rectangle is erased, and the central copy
-survives untouched. Let us also verify that by direct computation.
-Inside the window, where $|f| \lt \frac{f_s}{2}$, the cutter equals $T$
-and cancels the prefactor:
+survives untouched:
 
 $$
 H(f)\, X_d(f) = T \cdot \frac{1}{T} \sum_{m=-\infty}^{\infty} X(f - m f_s)
-= \sum_{m=-\infty}^{\infty} X(f - m f_s),
+= \sum_{m=-\infty}^{\infty} X(f - m f_s)
+\qquad \text{for } |f| \lt \frac{f_s}{2},
 $$
 
 and in this sum every term with nonzero $m$ vanishes, because its
