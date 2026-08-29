@@ -249,10 +249,8 @@ inequality.
 
 ## Aliasing, or the wheels that spin backwards
 
-Now break the hypothesis properly: sample *slower* than the Nyquist
-rate, so that the copies overlap — row 3 of the copies picture. For a
-single tone the overlap boils down to one identity: at the sample
-instants $t = nT$,
+Start from an identity that holds at *any* sampling rate: at the
+sample instants $t = nT$,
 
 $$
 e^{2 \pi i (f - f_s)\, n T} = e^{2 \pi i f n T} \cdot e^{-2 \pi i n}
@@ -260,25 +258,25 @@ e^{2 \pi i (f - f_s)\, n T} = e^{2 \pi i f n T} \cdot e^{-2 \pi i n}
 $$
 
 so the frequencies $f$, $f \pm f_s$, $f \pm 2 f_s, \dots$ produce
-*identical* samples — that is what the spectral copies were saying all
-along, translated into the time domain. Note that the identity holds at
-*any* sampling rate: sampling always confuses each such family of
-frequencies. What the theorem's hypothesis buys is that exactly one
-member of every family fits inside the window
-$\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ — and for a signal
-band-limited below $\frac{f_s}{2}$, that one member is the true one.
-Sampling too slowly is what breaks this bookkeeping: it pushes the true
-frequency *outside* the window, and then the family member inside is an
-impostor. Concretely: sample a $4$ Hz sine at $f_s = 5$ Hz — the tone
-sits well above $\frac{f_s}{2} = 2.5$ Hz — and the samples are exactly
-those of a $1$ Hz sine turned upside down ($4 - 5 = -1$ Hz):
+*identical* samples — sampling always confuses each such family of
+frequencies. That is what the spectral copies were saying all along,
+translated into the time domain. The theorem's hypothesis is what keeps
+the confusion harmless: exactly one member of every family fits inside
+the window $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$, and for
+a signal band-limited below $\frac{f_s}{2}$ that member is the true
+one — so picking the in-window candidate, which is all a reconstruction
+can ever do, picks correctly. Now break the hypothesis: sample *slower*
+than the Nyquist rate, so that the copies overlap — row 3 of the copies
+picture. The true frequency is pushed *outside* the window, and the
+family member left inside is an impostor. Concretely: sample a $4$ Hz
+sine at $f_s = 5$ Hz — the tone sits well above
+$\frac{f_s}{2} = 2.5$ Hz — and the samples are exactly those of a
+$1$ Hz sine turned upside down ($4 - 5 = -1$ Hz):
 
 ![Two sines, one set of samples: a 4 Hz tone and its 1 Hz alias at a 5 Hz sampling rate](aliased_pair.png)
 
-The recording cannot say which candidate was real, and every
-reconstruction built on it — $(\star)$ included — behaves as if the
-answer were the candidate inside $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$:
-a $4$ Hz tone goes in, a $1$ Hz impostor comes out. The impostor has a
+The recording cannot say which candidate was real, so a $4$ Hz tone
+goes in and a $1$ Hz impostor comes out. The impostor has a
 name — an [**alias**](https://en.wikipedia.org/wiki/Aliasing) — and the
 phenomenon is not exotic: you have watched it in every western. Film
 runs at $24$ frames per second — a sampler at $24$ Hz pointed at a
