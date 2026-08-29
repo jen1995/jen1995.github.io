@@ -282,14 +282,15 @@ picture, back on stage with today's villain at full strength:
 ![The copies picture again, with row 3 — overlapping copies, aliasing — at full strength](copies_row3.png)
 
 The true frequency is pushed *outside* the window, and the
-family member left inside is an impostor. Concretely: sample a $4$ Hz
-sine at $f_s = 5$ Hz — the tone sits well above
-$\frac{f_s}{2} = 2.5$ Hz — and the samples are exactly those of a
-$1$ Hz sine turned upside down ($4 - 5 = -1$ Hz):
+family member left inside is an impostor. Concretely: sample the $6$ Hz
+member of the family above at $f_s = 5$ Hz. The tone sits above
+$\frac{f_s}{2} = 2.5$ Hz, its in-window family member is
+$6 - 5 = 1$ Hz — and, as the family picture already showed, the samples
+of the $6$ Hz sine are exactly the samples of the $1$ Hz sine:
 
 ![Two sines, one set of samples: a 4 Hz tone and its 1 Hz alias at a 5 Hz sampling rate](aliased_pair.png)
 
-The recording cannot say which candidate was real, so a $4$ Hz tone
+The recording cannot say which candidate was real, so a $6$ Hz tone
 goes in and a $1$ Hz impostor comes out. The impostor has a
 name — an [**alias**](https://en.wikipedia.org/wiki/Aliasing) — and the
 phenomenon is not exotic: you have watched it in every western. Film
@@ -298,10 +299,10 @@ stagecoach wheel. A wheel with $k$ spokes looks the same after
 $\frac{1}{k}$ of a turn, so the camera effectively watches a periodic
 pattern whose frequency is $k$ times the rotation rate — far above
 $12$ Hz for any wheel at speed. The pattern aliases. Spokes advancing
-slightly *less* than one spoke-step per frame read as a slow crawl
-*backwards* — a negative alias frequency, the upside-down sine of our
-picture. Exactly one step per frame, and the wheel stands still under a
-galloping coach. That is the
+slightly *less* than one full spoke-step per frame land, in every new
+frame, a little *behind* the previous frame's spoke positions — and the
+eye reads a slow rotation backwards. Exactly one step per frame, and
+the wheel stands still under a galloping coach. That is the
 [wagon-wheel effect](https://en.wikipedia.org/wiki/Wagon-wheel_effect),
 and its kin are everywhere: a fan under a
 [strobe light](https://en.wikipedia.org/wiki/Stroboscopic_effect), the
