@@ -332,6 +332,12 @@ rotation, run the other way. One ninth of a pattern-period is
 $\frac{45°}{9} = 5°$ — the eye's backwards drift per frame, this time
 computed rather than observed.
 
+And here is what an honest frame rate looks like. Give the film eight
+times the frames, so the wheel turns only $5°$ per true frame — safely
+inside the window — and the illusion evaporates:
+
+![The same wheel at eight times the frame rate: the top spoke is the true spoke, advancing correctly](wagon_wheel_fast.png)
+
 The same fine print explains a famous number. Human hearing ends near
 $20$ kHz, so audio needs $f_s > 40$ kHz — and CDs run at
 [$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). Why the extra
