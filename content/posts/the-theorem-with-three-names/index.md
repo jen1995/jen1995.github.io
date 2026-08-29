@@ -98,23 +98,21 @@ $T$ is the sampling step and $f_s = \frac{1}{T}$ the sampling rate;
 $X_d(f) = \sum_n x(nT)\, e^{-2 \pi i f n T}$ is the DTFT — the spectrum
 computed from the samples alone; and each integer $m$ contributes one
 term $X(f - m f_s)$, a *copy* of the original spectrum slid $m$ grid
-steps along the frequency axis.
+steps along the frequency axis. In pictures — [the copies figure of Four
+Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum),
+reproduced here with today's row framed:
+
+![The copies picture, with row 2 — the theorem's row — framed](copies_row2.png)
 
 Now put the two hypotheses side by side. Each copy occupies
 $(-B, B)$ around its own center; the centers sit $f_s$ apart; and
 $f_s > 2B$ means the spacing exceeds the width. So the copies *cannot
 touch* — between consecutive copies there is a strip of silence, and the
 central period $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ contains
-exactly one thing: the original $X(f)$, intact. That is [row 2 of the
-copies picture of Four
-Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum)
-— reproduced here, with today's row framed:
-
-![The copies picture, with row 2 — the theorem's row — framed](copies_row2.png)
-
-The framed row already contains the whole theorem: **nothing about the
-analog signal was lost**, because its entire transform sits undamaged
-inside the spectrum of the sampled one.
+exactly one thing: the original $X(f)$, intact. That is row 2 of the
+picture above, and the framed row already contains the whole theorem:
+**nothing about the analog signal was lost**, because its entire
+transform sits undamaged inside the spectrum of the sampled one.
 
 It remains to cut the copy out and cash it in. Multiply $X_d$ by the
 rectangular cutter
