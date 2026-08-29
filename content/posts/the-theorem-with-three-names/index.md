@@ -100,9 +100,9 @@ computed from the samples alone; and each integer $m$ contributes one
 term $X(f - m f_s)$, a *copy* of the original spectrum slid $m$ grid
 steps along the frequency axis. In pictures — [the copies figure of Four
 Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum),
-reproduced here with today's row framed:
+reproduced here with today's row framed in violet, the color of today's road on the map:
 
-![The copies picture, with row 2 — the theorem's row — framed](copies_row2.png)
+![The copies picture, with row 2 — the theorem's row — framed in violet](copies_row2.png)
 
 Now put the two hypotheses side by side. Each copy occupies
 $(-B, B)$ around its own center; the centers sit $f_s$ apart; and
