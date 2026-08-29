@@ -166,7 +166,11 @@ $$
 $$
 
 the [sinc](https://en.wikipedia.org/wiki/Sinc_function) again — this time
-in the *time* domain, one bump per sample. Put the pieces together:
+in the *time* domain, one bump per sample:
+
+![The sinc function: one at its center, zero at every nonzero integer](sinc.png)
+
+Put the pieces together:
 
 $$
 x(t) = \sum_{n=-\infty}^{\infty} x(nT)\,
@@ -179,14 +183,29 @@ This is the
 and it deserves a slow read. Each sample $x(nT)$ launches its own sinc,
 centered at its own instant $nT$ and scaled to its own height. At the
 instant $t = mT$ the formula returns exactly $x(mT)$ — the $m$-th sinc
-equals $1$ at its center while every other sinc is passing through one
-of its zeros, so no neighbor interferes. *Between* the instants, all the
+equals $1$ at its center (at that one point its formula reads
+$\frac{0}{0}$, and the value $1$ is the classic limit
+$\frac{\sin u}{u} \to 1$ — the black dot in the picture above) while
+every other sinc is passing through one of its zeros, so no neighbor
+interferes. *Between* the instants, all the
 sincs speak at once, and their sum fills in the continuous curve — the
 values the recording never measured, restored by the theorem. This is
 the continuous twin of the two interpolations we have already met: [Part
 2's green model](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
 threading every sample, and the Dirichlet reconstruction of [Four
 Shades' return roads](/posts/four-shades-of-fourier/#do-the-roads-run-back).
+
+And here is the formula at work on a concrete signal — three sinusoids
+with band edge $B = 1.9$ Hz, sampled at $f_s = 5$ Hz, comfortably above
+the Nyquist rate $2B = 3.8$ Hz:
+
+![Three sinusoids sampled above the Nyquist rate; each sample launches a sinc; the sum reproduces the signal](sinc_train.png)
+
+The middle row is the slow read made visible: one scaled sinc per
+sample, peaking at its own sample and silent at all the others. The
+bottom row is the theorem itself: the sum of the sincs lands exactly on
+the original — the green curve covers the grey dashed one entirely,
+every value between the samples included.
 
 ## The boundary case bites
 
