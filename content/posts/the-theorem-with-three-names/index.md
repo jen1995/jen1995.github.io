@@ -267,7 +267,12 @@ the confusion harmless: exactly one member of every family fits inside
 the window $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$, and for
 a signal band-limited below $\frac{f_s}{2}$ that member is the true
 one — so picking the in-window candidate, which is all a reconstruction
-can ever do, picks correctly. Now break the hypothesis: sample *slower*
+can ever do, picks correctly. Both halves of that story fit in one
+picture:
+
+![One family of frequencies: three sines through the same samples, and the frequency ladder folding into the window](family.png)
+
+Now break the hypothesis: sample *slower*
 than the Nyquist rate, so that the copies overlap — row 3 of the copies
 picture, back on stage with today's villain at full strength:
 
