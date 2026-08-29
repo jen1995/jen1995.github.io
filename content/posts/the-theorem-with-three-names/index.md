@@ -261,9 +261,17 @@ $$
 
 so the frequencies $f$, $f \pm f_s$, $f \pm 2 f_s, \dots$ produce
 *identical* samples — that is what the spectral copies were saying all
-along, translated into the time domain. Concretely: sample a $4$ Hz
-sine at $f_s = 5$ Hz, and the samples are exactly those of a $1$ Hz
-sine turned upside down ($4 - 5 = -1$ Hz):
+along, translated into the time domain. Note that the identity holds at
+*any* sampling rate: sampling always confuses each such family of
+frequencies. What the theorem's hypothesis buys is that exactly one
+member of every family fits inside the window
+$\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ — and for a signal
+band-limited below $\frac{f_s}{2}$, that one member is the true one.
+Sampling too slowly is what breaks this bookkeeping: it pushes the true
+frequency *outside* the window, and then the family member inside is an
+impostor. Concretely: sample a $4$ Hz sine at $f_s = 5$ Hz — the tone
+sits well above $\frac{f_s}{2} = 2.5$ Hz — and the samples are exactly
+those of a $1$ Hz sine turned upside down ($4 - 5 = -1$ Hz):
 
 ![Two sines, one set of samples: a 4 Hz tone and its 1 Hz alias at a 5 Hz sampling rate](aliased_pair.png)
 
