@@ -302,19 +302,31 @@ $12$ Hz for any wheel at speed. The pattern aliases. Spokes advancing
 slightly *less* than one full spoke-step per frame land, in every new
 frame, a little *behind* the previous frame's spoke positions — and the
 eye reads a slow rotation backwards. Exactly one step per frame, and
-the wheel stands still under a galloping coach. That is the
+the wheel stands still under a galloping coach:
+
+![Five film frames of a spoked wheel: the true spoke races clockwise, the near-top spoke drifts slowly counterclockwise](wagon_wheel.png)
+
+That is the
 [wagon-wheel effect](https://en.wikipedia.org/wiki/Wagon-wheel_effect),
 and its kin are everywhere: a fan under a
 [strobe light](https://en.wikipedia.org/wiki/Stroboscopic_effect), the
 frozen propellers in phone videos of airplanes.
 
-The same section of fine print explains a famous number. Human hearing
-ends near $20$ kHz, so audio needs $f_s > 40$ kHz — and CDs run at
-[$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). The margin is
-not generosity; it is the anti-aliasing filter's salary. A real analog
-filter cannot pass $20$ kHz untouched and annihilate $20.001$ kHz — it
-needs a transition band to roll off in, and the stretch from $20$ to
-$22.05$ kHz is exactly that runway. (Why $44100$ and not a round
+The same fine print explains a famous number. Human hearing ends near
+$20$ kHz, so audio needs $f_s > 40$ kHz — and CDs run at
+[$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). Why the extra
+$4.1$? Recall the anti-aliasing filter from the band-limited section:
+before sampling, everything above $\frac{f_s}{2}$ must be removed, or
+it will alias into the recording. At $f_s = 40$ kHz exactly, that
+filter would face an impossible job: pass $20$ kHz untouched (it is
+still audible) and already annihilate $20.001$ kHz. Real analog filters
+cannot switch that abruptly — their attenuation grows *gradually* over
+a stretch of frequencies. Raising $f_s$ to $44.1$ kHz moves the
+deadline: the filter must be silent only by
+$\frac{f_s}{2} = 22.05$ kHz, so it can pass everything up to $20$ kHz
+and then fade out across the $20$–$22.05$ kHz gap. Whatever it fails to
+kill inside that gap is harmless twice over: inaudible, and below
+$\frac{f_s}{2}$, so it aliases nothing. (Why $44100$ and not a round
 $44000$? A relic: early digital audio was stored on video recorders,
 and $44100$ samples per second is what fits as three samples per line
 on both TV standards of the era.)
