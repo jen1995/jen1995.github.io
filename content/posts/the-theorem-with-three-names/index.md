@@ -259,8 +259,10 @@ $$
 
 so the frequencies $f$, $f \pm f_s$, $f \pm 2 f_s, \dots$ produce
 *identical* samples — sampling always confuses each such family of
-frequencies. That is what the spectral copies were saying all along,
-translated into the time domain. The theorem's hypothesis is what keeps
+frequencies. The copies formula states the very same fact on the
+frequency axis: $X_d$ stacks the shifted copies $X(f - m f_s)$ on top
+of one another precisely because, to the samples, all the frequencies
+of one family are indistinguishable. The theorem's hypothesis is what keeps
 the confusion harmless: exactly one member of every family fits inside
 the window $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$, and for
 a signal band-limited below $\frac{f_s}{2}$ that member is the true
