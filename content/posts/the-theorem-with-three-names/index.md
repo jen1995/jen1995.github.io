@@ -332,6 +332,15 @@ rotation, run the other way. One ninth of a pattern-period is
 $\frac{45°}{9} = 5°$ — the eye's backwards drift per frame, this time
 computed rather than observed.
 
+The shaded sector on the wheel and the shaded window on the frequency
+axis are one object in two units, and the exchange rate between them is
+*one pattern-period = one spoke-step = $45°$*. The window
+$\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ reaches half a
+period to each side; half a spoke-step is $22.5°$ — the sector. A
+pattern shift inside the sector per frame is a frequency inside the
+window, and the hypothesis $f_0 \lt \frac{f_s}{2}$ reads, in wheel
+units: less than half a spoke-step of true turn per frame.
+
 And here is what an honest frame rate looks like. Give the film eight
 times the frames, so the wheel turns only $5°$ per true frame — safely
 inside the window — and the illusion evaporates:
