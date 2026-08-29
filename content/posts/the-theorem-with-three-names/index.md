@@ -267,7 +267,11 @@ a signal band-limited below $\frac{f_s}{2}$ that member is the true
 one — so picking the in-window candidate, which is all a reconstruction
 can ever do, picks correctly. Now break the hypothesis: sample *slower*
 than the Nyquist rate, so that the copies overlap — row 3 of the copies
-picture. The true frequency is pushed *outside* the window, and the
+picture, back on stage with today's villain at full strength:
+
+![The copies picture again, with row 3 — overlapping copies, aliasing — at full strength](copies_row3.png)
+
+The true frequency is pushed *outside* the window, and the
 family member left inside is an impostor. Concretely: sample a $4$ Hz
 sine at $f_s = 5$ Hz — the tone sits well above
 $\frac{f_s}{2} = 2.5$ Hz — and the samples are exactly those of a
