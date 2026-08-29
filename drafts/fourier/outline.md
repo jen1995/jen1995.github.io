@@ -67,7 +67,13 @@ phone video of propellers. Plus why 44.1 kHz) → demos in matplotlib
 point wordlessly).
 Natural sequel to Four Shades: the periodized-spectrum picture *is* the proof.
 
-### Act two, post 3 (the finale). F0, pitch and the cepstrum: reading the voice
+### Act two, post 3 — POSTPONED (2026-08-29): after the Kotelnikov post the blog
+switches to quantum mechanics (the long-planned project with ipetr0v).
+The F0/cepstrum material below stays parked here for a future return;
+the Kotelnikov post's Onward should tease QM instead (position–momentum
+as a Fourier pair; uncertainty = Part 3's time–frequency trade-off).
+
+### F0, pitch and the cepstrum: reading the voice
 Source: TTS lecture deck ([Google Slides](https://docs.google.com/presentation/d/1hR4koanl61qFXNAk2SRp45gYcgxUAc5Xt6_UQJMJYmM/), slides 26–38; local copy in scratchpad).
 Arc: F0 & harmonics (Fourier series made flesh) → pitch as perception, the
 missing-fundamental effect → when F0 exists: voiced vs whispered/voiceless

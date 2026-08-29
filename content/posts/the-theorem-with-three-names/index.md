@@ -166,4 +166,7 @@ rate)*
 
 ## Onward
 
-*(to come: the F0/cepstrum teaser)*
+*(to come: the Fourier road pauses here; tease the next journey —
+quantum mechanics, where the position–momentum pair is a Fourier pair
+and the uncertainty principle is Part 3's time–frequency trade-off in a
+lab coat)*
