@@ -366,7 +366,7 @@ forwards: the whole cycle repeats every spoke-step:
 
 ![Exactly one spoke-step per frame: the pattern is identical in every frame, a standing wheel](wagon_wheel_standing.png)
 
-The same fine print explains a famous number. Human hearing ends near
+The threat of aliasing also explains a famous number. Human hearing ends near
 $20$ kHz, so audio needs $f_s > 40$ kHz — and CDs run at
 [$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). The extra
 $4.1$ kHz is working room for the anti-aliasing filter: an analog
