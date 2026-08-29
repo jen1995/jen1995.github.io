@@ -137,7 +137,7 @@ H(f)\, X_d(f) &= T \cdot I_{[-f_s/2,\, f_s/2]}(f) \cdot \frac{1}{T} \sum_{m=-\in
 \end{aligned}
 $$
 
-Now the Fourier integral of bridge one rebuilds the signal from it:
+Now the Fourier integral rebuilds the signal from it:
 
 $$
 \begin{aligned}
@@ -151,9 +151,9 @@ $$
 $X_d(f) = \sum_n x(nT)\, e^{-2 \pi i f n T}$ and swapped the sum with the
 integral (the by-now-familiar juncture: honest for absolutely summable
 samples, by the same Weierstrass argument as in Four Shades). The
-remaining integral is an old friend: it is bridge two's
-rectangle-to-sinc computation, run with the roles of time and frequency
-swapped. Writing $\tau = t - nT$:
+remaining integral is an old friend: it is the rectangle-to-sinc
+computation from bridge two of Four Shades, run with the roles of time
+and frequency swapped. Writing $\tau = t - nT$:
 
 $$
 \begin{aligned}
