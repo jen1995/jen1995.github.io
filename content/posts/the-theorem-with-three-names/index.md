@@ -84,8 +84,9 @@ $(-B, B)$ around its own center; the centers sit $f_s$ apart; and
 $f_s > 2B$ means the spacing exceeds the width. So the copies *cannot
 touch* — between consecutive copies there is a strip of silence, and the
 central period $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ contains
-exactly one thing: the original $X(f)$, intact. That is row 2 of the
-copies picture, and it already contains the whole theorem: **nothing
+exactly one thing: the original $X(f)$, intact. That is [row 2 of the
+copies picture](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum),
+and it already contains the whole theorem: **nothing
 about the analog signal was lost**, because its entire transform sits
 undamaged inside the spectrum of the sampled one.
 
