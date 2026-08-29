@@ -39,8 +39,10 @@ $$
 X(f) = 0 \quad \text{for all } |f| \ge B.
 $$
 
-In the pictures of Four Shades this was row 1 of the copies figure — one
-hump, confined. Read physically: the signal contains no oscillation
+In pictures this is row 1 of the copies figure below: the whole
+transform is a single hump that dies out completely before the edges of
+the frame — $X$ is identically zero outside a finite stretch of the
+frequency axis. Read physically: the signal contains no oscillation
 faster than $B$ hertz; above that frequency there is simply nothing to
 represent.
 
@@ -52,8 +54,10 @@ real recording ends — so no signal in practice satisfies the definition
 exactly. Second, engineering makes the definition true *by force*: before
 an ADC ever sees the signal, an analog **anti-aliasing filter** cuts away
 everything above a chosen band edge. For sound this costs nothing
-audible — the ear gives up near $20$ kHz anyway, so a filter parked just
-above that discards only what no listener could miss. (Hold that thought;
+audible — the [ear gives up near
+$20$ kHz](https://en.wikipedia.org/wiki/Hearing_range) anyway, so a
+filter parked just above that discards only what no listener could
+miss. (Hold that thought;
 it returns when we ask why CDs run at $44.1$ kHz.)
 
 ## The theorem, stated
