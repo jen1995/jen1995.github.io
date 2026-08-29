@@ -127,8 +127,36 @@ the $\frac{1}{T}$ the copies formula carries:
 ![The cutter H(f) over the periodized spectrum, and the product: the central copy X(f) alone](cutter.png)
 
 Everything outside the rectangle is erased, and the central copy
-survives untouched: $H(f)\, X_d(f) = X(f)$ *exactly*. Now the Fourier
-integral of bridge one rebuilds the signal from it:
+survives untouched. Let us also verify that by direct computation.
+Inside the window, where $|f| \lt \frac{f_s}{2}$, the cutter equals $T$
+and cancels the prefactor:
+
+$$
+H(f)\, X_d(f) = T \cdot \frac{1}{T} \sum_{m=-\infty}^{\infty} X(f - m f_s)
+= \sum_{m=-\infty}^{\infty} X(f - m f_s),
+$$
+
+and in this sum every term with nonzero $m$ vanishes, because its
+argument lands far outside the band:
+
+$$
+|f - m f_s| \ge |m|\, f_s - |f| > f_s - \frac{f_s}{2} = \frac{f_s}{2} > B
+$$
+
+(the first step is the triangle inequality; the second uses
+$|m| \ge 1$ and $|f| \lt \frac{f_s}{2}$; the last is the theorem's
+hypothesis $f_s > 2B$). Beyond the band $X$ is zero, so the sum
+collapses to its $m = 0$ term alone — which is $X(f)$. Outside the
+window the left side is zero because $H$ is, and the right side is zero
+too: $|f| \ge \frac{f_s}{2} > B$ puts $f$ beyond the band where $X$
+lives. So at every frequency,
+
+$$
+H(f)\, X_d(f) = X(f)
+$$
+
+— *exactly*, not approximately. Now the Fourier integral of bridge one
+rebuilds the signal from it:
 
 $$
 \begin{aligned}
