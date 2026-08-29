@@ -22,6 +22,14 @@ rate needs a *strict* inequality, how a train of sinc functions rebuilds
 every value between the samples — and what wagon wheels in old westerns
 have to do with any of it.
 
+Here is today's journey on [the map of Four
+Shades](/posts/four-shades-of-fourier/#the-square). Of all the roads on
+it we are crossing the dashed one, in bold below — *backwards* along
+bridge three, from the sampled world to the analog one, paying the toll
+written on it:
+
+![The map of the four shades with today's crossing, DTFT → FT, in bold](theorem_road.png)
+
 ## What "band-limited" must mean
 
 A signal is **band-limited** if its spectrum lives inside a finite
@@ -85,10 +93,15 @@ $f_s > 2B$ means the spacing exceeds the width. So the copies *cannot
 touch* — between consecutive copies there is a strip of silence, and the
 central period $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ contains
 exactly one thing: the original $X(f)$, intact. That is [row 2 of the
-copies picture](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum),
-and it already contains the whole theorem: **nothing
-about the analog signal was lost**, because its entire transform sits
-undamaged inside the spectrum of the sampled one.
+copies picture of Four
+Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum)
+— reproduced here, with today's row framed:
+
+![The copies picture, with row 2 — the theorem's row — framed](copies_row2.png)
+
+The framed row already contains the whole theorem: **nothing about the
+analog signal was lost**, because its entire transform sits undamaged
+inside the spectrum of the sampled one.
 
 It remains to cut the copy out and cash it in. Multiply $X_d$ by the
 rectangular cutter
