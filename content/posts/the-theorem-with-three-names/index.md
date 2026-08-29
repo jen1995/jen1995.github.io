@@ -253,9 +253,9 @@ inequality.
 ## Aliasing, or the wheels that spin backwards
 
 Now break the hypothesis properly: sample *slower* than the Nyquist
-rate, so that the copies overlap — row 3 of the copies picture. What
-overlap means for a single tone can be said without any pictures: at
-the sample instants $t = nT$,
+rate, so that the copies overlap — row 3 of the copies picture. For a
+single tone the overlap boils down to one identity: at the sample
+instants $t = nT$,
 
 $$
 e^{2 \pi i (f - f_s)\, n T} = e^{2 \pi i f n T} \cdot e^{-2 \pi i n}
