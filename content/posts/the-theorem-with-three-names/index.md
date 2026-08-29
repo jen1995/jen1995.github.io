@@ -75,11 +75,13 @@ formula $(\star)$ below.
 
 Both landmarks of [Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
 reappear here with names attached: $2B$ — twice the band — is the
-**Nyquist rate**, the slowest sampling that still works; and from the
-sampler's point of view, $\frac{f_s}{2}$ is the **Nyquist frequency**,
-the highest band edge a given rate can serve. And note the inequality is
-*strict*: $f_s = 2B$ exactly is not enough, and a section below shows the
-counterexample where the boundary case fails.
+**Nyquist rate**: sample faster than it, and the signal is exactly
+recoverable from the samples; sample at it or slower, and recovery is no
+longer guaranteed. From the sampler's point of view, $\frac{f_s}{2}$ is
+the **Nyquist frequency**: the ceiling below which a signal's spectrum
+must stay for a rate of $f_s$ to recover the signal. Note the inequality
+is *strict*: $f_s = 2B$ exactly is not enough, and a section below shows
+the counterexample where the boundary case fails.
 
 ## The proof we already drew
 
