@@ -93,6 +93,14 @@ $$
 X_d(f) = \frac{1}{T} \sum_{m=-\infty}^{\infty} X(f - m f_s).
 $$
 
+Every symbol spelled out, so that no trip to the previous post is
+needed: $X(f)$ is the Fourier transform of the analog signal $x(t)$;
+$T$ is the sampling step and $f_s = \frac{1}{T}$ the sampling rate;
+$X_d(f) = \sum_n x(nT)\, e^{-2 \pi i f n T}$ is the DTFT — the spectrum
+computed from the samples alone; and each integer $m$ contributes one
+term $X(f - m f_s)$, a *copy* of the original spectrum slid $m$ grid
+steps along the frequency axis.
+
 Now put the two hypotheses side by side. Each copy occupies
 $(-B, B)$ around its own center; the centers sit $f_s$ apart; and
 $f_s > 2B$ means the spacing exceeds the width. So the copies *cannot
