@@ -41,7 +41,7 @@ $$
 
 In pictures this is row 1 of the copies figure below: the whole
 transform is a single hump that dies out completely before the edges of
-the frame — $X$ is identically zero outside a finite stretch of the
+the picture — $X$ is identically zero outside a finite stretch of the
 frequency axis. Read physically: the signal contains no oscillation
 faster than $B$ hertz; above that frequency there is simply nothing to
 represent.
@@ -110,7 +110,7 @@ $f_s > 2B$ means the spacing exceeds the width. So the copies *cannot
 touch* — between consecutive copies there is a strip of silence, and the
 central period $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ contains
 exactly one thing: the original $X(f)$, intact. That is row 2 of the
-picture above, and the framed row already contains the whole theorem:
+picture above, and that one bright row already contains the whole theorem:
 **nothing about the analog signal was lost**, because its entire
 transform sits undamaged inside the spectrum of the sampled one.
 
