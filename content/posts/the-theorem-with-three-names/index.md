@@ -217,21 +217,131 @@ every value between the samples included.
 
 ## The boundary case bites
 
-*(to come: a sine at exactly $f_s/2$, sampled in its zero crossings)*
+Why must the inequality be strict? Sample at the Nyquist rate *exactly*,
+$f_s = 2B$, and aim the sampler at the worst inhabitant of the band — a
+sine sitting right at the edge, $x(t) = \sin(2 \pi B t)$. The samples
+land at $t = \frac{n}{2B}$:
+
+$$
+x\!\left( \frac{n}{2B} \right) = \sin(\pi n) = 0
+\qquad \text{for every integer } n.
+$$
+
+Every sample is zero — the sine is measured precisely at its zero
+crossings:
+
+![A sine at exactly half the sampling rate, sampled at its zero crossings](boundary_sine.png)
+
+The recording is empty, indistinguishable from a recording of silence.
+Two different signals — the edge sine and the zero signal — pass through
+the same samples, so *no* formula, $(\star)$ or any other, can promise
+to restore "the" original: the information was lost at the sampling
+stage, before any reconstruction began. Phase only widens the family:
+$A \sin(2 \pi B t + \varphi)$ samples to $A\, (-1)^n \sin \varphi$,
+so of the two numbers $A$ and $\varphi$ only the product
+$A \sin \varphi$ survives — infinitely many edge sines share every such
+recording. ([Part 2's companion
+notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/reading_the_dft.ipynb)
+stumbled on this exact ghost: the sine at $\frac{f_s}{2}$ that vanishes
+from its own DFT.)
+
+The copies picture says the same thing in the frequency domain. At
+$f_s = 2B$ the neighboring copies do not overlap — but they *touch*: the
+edge of each copy lands exactly on the edge of the next. Our sine lives
+entirely on that shared edge, and its spectral spikes cancel against
+their mirror twins from the neighboring copy — the spectrum of the
+samples comes out identically zero, which is the frequency-domain face
+of the empty recording. Touching is already too much; hence the strict
+inequality.
 
 ## Aliasing, or the wheels that spin backwards
 
-*(to come: overlapping copies, two sinusoids through the same samples,
-the wagon-wheel effect, why CDs run at 44.1 kHz)*
+Now break the hypothesis properly: sample *slower* than the Nyquist
+rate, so that the copies overlap — row 3 of the copies picture. What
+overlap means for a single tone can be said without any pictures: at
+the sample instants $t = nT$,
+
+$$
+e^{2 \pi i (f - f_s)\, n T} = e^{2 \pi i f n T} \cdot e^{-2 \pi i n}
+= e^{2 \pi i f n T},
+$$
+
+so the frequencies $f$, $f \pm f_s$, $f \pm 2 f_s, \dots$ produce
+*identical* samples — that is what the spectral copies were saying all
+along, translated into the time domain. Concretely: sample a $4$ Hz
+sine at $f_s = 5$ Hz, and the samples are exactly those of a $1$ Hz
+sine turned upside down ($4 - 5 = -1$ Hz):
+
+![Two sines, one set of samples: a 4 Hz tone and its 1 Hz alias at a 5 Hz sampling rate](aliased_pair.png)
+
+The recording cannot say which candidate was real, and every
+reconstruction built on it — $(\star)$ included — behaves as if the
+answer were the candidate inside $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$:
+a $4$ Hz tone goes in, a $1$ Hz impostor comes out. The impostor has a
+name — an [**alias**](https://en.wikipedia.org/wiki/Aliasing) — and the
+phenomenon is not exotic: you have watched it in every western. Film
+runs at $24$ frames per second — a sampler at $24$ Hz pointed at a
+stagecoach wheel. A wheel with $k$ spokes looks the same after
+$\frac{1}{k}$ of a turn, so the camera effectively watches a periodic
+pattern whose frequency is $k$ times the rotation rate — far above
+$12$ Hz for any wheel at speed. The pattern aliases. Spokes advancing
+slightly *less* than one spoke-step per frame read as a slow crawl
+*backwards* — a negative alias frequency, the upside-down sine of our
+picture. Exactly one step per frame, and the wheel stands still under a
+galloping coach. That is the
+[wagon-wheel effect](https://en.wikipedia.org/wiki/Wagon-wheel_effect),
+and its kin are everywhere: a fan under a
+[strobe light](https://en.wikipedia.org/wiki/Stroboscopic_effect), the
+frozen propellers in phone videos of airplanes.
+
+The same section of fine print explains a famous number. Human hearing
+ends near $20$ kHz, so audio needs $f_s > 40$ kHz — and CDs run at
+[$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). The margin is
+not generosity; it is the anti-aliasing filter's salary. A real analog
+filter cannot pass $20$ kHz untouched and annihilate $20.001$ kHz — it
+needs a transition band to roll off in, and the stretch from $20$ to
+$22.05$ kHz is exactly that runway. (Why $44100$ and not a round
+$44000$? A relic: early digital audio was stored on video recorders,
+and $44100$ samples per second is what fits as three samples per line
+on both TV standards of the era.)
 
 ## Three names, four people
 
-*(to come: Whittaker 1915, Kotelnikov 1933, Shannon 1949, and Nyquist's
-rate)*
+The theorem's name depends on where you learned it, and every version
+is defensible. [Harry
+Nyquist](https://en.wikipedia.org/wiki/Harry_Nyquist) (1928) studied
+telegraphy and showed that a channel of band $B$ carries at most $2B$
+independent pulses per second — the critical *rate* is rightly his,
+though he never stated the reconstruction theorem. [E. T.
+Whittaker](https://en.wikipedia.org/wiki/E._T._Whittaker) (1915) had
+already built the sinc series $(\star)$ as pure interpolation
+mathematics, with no signals in sight. [Vladimir
+Kotelnikov](https://en.wikipedia.org/wiki/Vladimir_Kotelnikov) (1933)
+was the first to state and prove the sampling theorem as an engineering
+fact — in a Soviet radio-engineering conference paper that the West did
+not read for decades. And [Claude
+Shannon](https://en.wikipedia.org/wiki/Claude_Shannon) (1949) proved it
+again as a foundation stone of information theory, and it entered the
+world's textbooks under his name. So the Russian literature says
+*Kotelnikov's theorem*, the Western says
+[*Nyquist–Shannon*](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem),
+mathematicians remember Whittaker's *cardinal series* — three names,
+four people, one road across the map.
 
 ## Onward
 
-*(to come: the Fourier road pauses here; tease the next journey —
-quantum mechanics, where the position–momentum pair is a Fourier pair
-and the uncertainty principle is Part 3's time–frequency trade-off in a
-lab coat)*
+With this post the Fourier road of the blog closes its loop. The
+trilogy built the discrete world from sound up; Four Shades drew the
+map and its law; today the dashed road home is paved — samples back to
+the analog signal, toll checked at the gate. The debts are settled.
+
+The next journey will look like a change of subject, and is secretly a
+continuation. In quantum mechanics a particle's position and momentum
+descriptions are a *Fourier pair* — the momentum wavefunction is the
+Fourier transform of the position one — and the uncertainty principle
+is [Part 3's time–frequency
+trade-off](/posts/fourier-series-to-spectrogram-part-3/#the-trade-off-you-cannot-escape)
+wearing a lab coat: a signal cannot be narrow in time and in frequency
+at once, and a particle cannot be sharp in position and in momentum at
+once — for exactly the same mathematical reason. The map stays open;
+the roads keep going. See you in the quantum world.
