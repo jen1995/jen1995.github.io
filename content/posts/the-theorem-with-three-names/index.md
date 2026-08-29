@@ -312,34 +312,21 @@ and its kin are everywhere: a fan under a
 [strobe light](https://en.wikipedia.org/wiki/Stroboscopic_effect), the
 frozen propellers in phone videos of airplanes.
 
-The dictionary between the wheel and the theorem is worth writing out.
-The sampling rate $f_s$ is the frame rate: one sample per frame. The
-signal the camera watches is the spoke *pattern*: with $k$ spokes it
-repeats every $\frac{1}{k}$ of a turn, so at $R$ turns per second its
-frequency is $f_0 = k R$ pattern-periods per second — and this $f_0$
-plays the role of the band edge $B$. The theorem then demands
-$f_s > 2 k R$: the film must run faster than twice the spoke-passing
-frequency, which a galloping coach at $24$ frames per second has no
-hope of satisfying — the hypothesis is broken, and the family takes
-over. In the frames above the numbers are explicit: the wheel advances
-$40°$ per frame while the pattern repeats every $45°$, so the true
-frequency is $f_0 = \frac{40}{45} = \frac{8}{9}$ of a pattern-period
-per frame — well outside the window
-$\left( -\frac{1}{2}, \frac{1}{2} \right)$. Its in-window family
-member is $\frac{8}{9} - 1 = -\frac{1}{9}$, and for a *rotating*
-pattern a negative frequency has a perfectly concrete meaning: the same
-rotation, run the other way. One ninth of a pattern-period is
-$\frac{45°}{9} = 5°$ — the eye's backwards drift per frame, this time
-computed rather than observed.
-
-The shaded sector on the wheel and the shaded window on the frequency
-axis are one object in two units, and the exchange rate between them is
-*one pattern-period = one spoke-step = $45°$*. The window
-$\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ reaches half a
-period to each side; half a spoke-step is $22.5°$ — the sector. A
-pattern shift inside the sector per frame is a frequency inside the
-window, and the hypothesis $f_0 \lt \frac{f_s}{2}$ reads, in wheel
-units: less than half a spoke-step of true turn per frame.
+The dictionary between the wheel and the theorem is short. The
+sampling rate $f_s$ is the frame rate; the signal is the spoke
+*pattern*, which at $R$ turns per second repeats $f_0 = k R$ times per
+second — that $f_0$ plays the band edge $B$, and the theorem demands
+$f_s > 2 f_0$, which $24$ frames per second cannot give a galloping
+coach. To read the frames above, convert hertz into what the eye sees —
+degrees — at the rate *one pattern-period = one spoke-step = $45°$*.
+The true frequency, $40°$ per frame, is $\frac{8}{9}$ of a period —
+outside the window $\left( -\frac{1}{2}, \frac{1}{2} \right)$; the
+window itself converts into the shaded sector,
+$\pm \frac{45°}{2} = \pm 22.5°$; and the in-window family member,
+$\frac{8}{9} - 1 = -\frac{1}{9}$ of a period, is $-5°$ per frame —
+the slow backwards drift, this time computed rather than observed. (For
+a rotating pattern a negative frequency simply means turning the other
+way.)
 
 And here is what an honest frame rate looks like. Give the film eight
 times the frames, so the wheel turns only $5°$ per true frame — safely
