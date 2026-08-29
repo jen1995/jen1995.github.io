@@ -312,6 +312,26 @@ and its kin are everywhere: a fan under a
 [strobe light](https://en.wikipedia.org/wiki/Stroboscopic_effect), the
 frozen propellers in phone videos of airplanes.
 
+The dictionary between the wheel and the theorem is worth writing out.
+The sampling rate $f_s$ is the frame rate: one sample per frame. The
+signal the camera watches is the spoke *pattern*: with $k$ spokes it
+repeats every $\frac{1}{k}$ of a turn, so at $R$ turns per second its
+frequency is $f_0 = k R$ pattern-periods per second — and this $f_0$
+plays the role of the band edge $B$. The theorem then demands
+$f_s > 2 k R$: the film must run faster than twice the spoke-passing
+frequency, which a galloping coach at $24$ frames per second has no
+hope of satisfying — the hypothesis is broken, and the family takes
+over. In the frames above the numbers are explicit: the wheel advances
+$40°$ per frame while the pattern repeats every $45°$, so the true
+frequency is $f_0 = \frac{40}{45} = \frac{8}{9}$ of a pattern-period
+per frame — well outside the window
+$\left( -\frac{1}{2}, \frac{1}{2} \right)$. Its in-window family
+member is $\frac{8}{9} - 1 = -\frac{1}{9}$, and for a *rotating*
+pattern a negative frequency has a perfectly concrete meaning: the same
+rotation, run the other way. One ninth of a pattern-period is
+$\frac{45°}{9} = 5°$ — the eye's backwards drift per frame, this time
+computed rather than observed.
+
 The same fine print explains a famous number. Human hearing ends near
 $20$ kHz, so audio needs $f_s > 40$ kHz — and CDs run at
 [$44.1$ kHz](https://en.wikipedia.org/wiki/44,100_Hz). Why the extra
