@@ -151,9 +151,10 @@ $$
 $X_d(f) = \sum_n x(nT)\, e^{-2 \pi i f n T}$ and swapped the sum with the
 integral (the by-now-familiar juncture: honest for absolutely summable
 samples, by the same Weierstrass argument as in Four Shades). The
-remaining integral is an old friend: it is the rectangle-to-sinc
-computation from bridge two of Four Shades, run with the roles of time
-and frequency swapped. Writing $\tau = t - nT$:
+remaining integral is an old friend: it is the [rectangle-to-sinc
+computation from bridge two of Four
+Shades](/posts/four-shades-of-fourier/#bridge-two-fourier-transform--fourier-series),
+run with the roles of time and frequency swapped. Writing $\tau = t - nT$:
 
 $$
 \begin{aligned}
