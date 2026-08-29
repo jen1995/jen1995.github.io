@@ -122,9 +122,13 @@ H(f) = \begin{cases} T, & |f| \lt \frac{f_s}{2}, \\ 0, & \text{otherwise} \end{c
 $$
 
 — zero outside the central period, and $T$ (not $1$) inside, to cancel
-the $\frac{1}{T}$ the copies formula carries. Then $H(f)\, X_d(f) = X(f)$
-*exactly*, and the Fourier integral of bridge one rebuilds the signal
-from it:
+the $\frac{1}{T}$ the copies formula carries:
+
+![The cutter H(f) over the periodized spectrum, and the product: the central copy X(f) alone](cutter.png)
+
+Everything outside the rectangle is erased, and the central copy
+survives untouched: $H(f)\, X_d(f) = X(f)$ *exactly*. Now the Fourier
+integral of bridge one rebuilds the signal from it:
 
 $$
 \begin{aligned}
