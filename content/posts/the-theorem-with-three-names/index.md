@@ -312,24 +312,23 @@ and its kin are everywhere: a fan under a
 [strobe light](https://en.wikipedia.org/wiki/Stroboscopic_effect), the
 frozen propellers in phone videos of airplanes.
 
-The dictionary between the wheel and the theorem is short. The
-sampling rate $f_s$ is the frame rate; the signal is the spoke
-*pattern*, which at $R$ turns per second repeats $f_0 = k R$ times per
-second — that $f_0$ plays the band edge $B$, and the theorem demands
-$f_s > 2 f_0$, which $24$ frames per second cannot give a galloping
-coach. To read the frames above, convert hertz into what the eye sees —
-degrees — at the rate *one pattern-period = one spoke-step = $45°$*.
-The true frequency, $40°$ per frame, is $\frac{8}{9}$ of a period per
-frame. In per-frame units the sampling rate is $1$ by definition — one
-sample per frame — so the window
-$\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ becomes
-$\left( -\frac{1}{2}, \frac{1}{2} \right)$, and $\frac{8}{9}$ sits
-outside it; the window itself converts into the shaded sector,
-$\pm \frac{45°}{2} = \pm 22.5°$; and the in-window family member,
-$\frac{8}{9} - 1 = -\frac{1}{9}$ of a period, is $-5°$ per frame —
-the slow backwards drift, this time computed rather than observed. (For
-a rotating pattern a negative frequency simply means turning the other
-way.)
+The dictionary between the wheel and the theorem is short. Film is
+sampling: one frame — one sample, so let us measure frequencies *per
+frame*; then the sampling rate is $f_s = 1$ by definition, and the
+window $\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ is
+$\left( -\frac{1}{2}, \frac{1}{2} \right)$. The signal is the spoke
+*pattern*, and its natural unit is the spoke-step: *one pattern-period
+= one spoke-step = $45°$*. In the frames above the wheel turns $40°$
+per frame, so the true frequency is
+$f_0 = \frac{40}{45} = \frac{8}{9}$ of a period per frame — outside
+the window: the hypothesis $f_0 \lt \frac{1}{2}$ is broken. (It is
+broken for any real wheel at speed — spokes sweep past far more often
+than twelve times a second, half of film's $24$.) The window converts
+into the shaded sector, $\pm \frac{45°}{2} = \pm 22.5°$; the
+in-window family member, $\frac{8}{9} - 1 = -\frac{1}{9}$ of a
+period, is $-5°$ per frame — the slow backwards drift, this time
+computed rather than observed. (For a rotating pattern a negative
+frequency simply means turning the other way.)
 
 And here is what an honest frame rate looks like. Give the film eight
 times the frames, so the wheel turns only $5°$ per true frame — safely
