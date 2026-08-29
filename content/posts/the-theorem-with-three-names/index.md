@@ -100,7 +100,7 @@ computed from the samples alone; and each integer $m$ contributes one
 term $X(f - m f_s)$, a *copy* of the original spectrum slid $m$ grid
 steps along the frequency axis (the picture is [the copies figure of
 Four Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum);
-today we need **row 2** of it, the one left at full strength):
+today we need **row 2** of it):
 
 ![The copies picture, with row 2 — the theorem's row — at full strength and the other rows dimmed](copies_row2.png)
 
