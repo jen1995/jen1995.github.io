@@ -190,10 +190,14 @@ every other sinc is passing through one of its zeros, so no neighbor
 interferes. *Between* the instants, all the
 sincs speak at once, and their sum fills in the continuous curve — the
 values the recording never measured, restored by the theorem. This is
-the continuous twin of the two interpolations we have already met: [Part
-2's green model](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
+the third interpolation of our series, kin to two we have already met —
+[Part 2's green
+model](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
 threading every sample, and the Dirichlet reconstruction of [Four
 Shades' return roads](/posts/four-shades-of-fourier/#do-the-roads-run-back).
+Those two lived in periodic worlds with finitely many samples per
+period; the sinc train is their full-line sibling — infinitely many
+samples, no period, the entire time axis rebuilt.
 
 And here is the formula at work on a concrete signal — three sinusoids
 with band edge $B = 1.9$ Hz, sampled at $f_s = 5$ Hz, comfortably above
