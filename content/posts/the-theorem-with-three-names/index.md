@@ -332,7 +332,10 @@ frequency simply means turning the other way.)
 
 And here is what an honest frame rate looks like. Give the film eight
 times the frames, so the wheel turns only $5°$ per true frame — safely
-inside the window — and the illusion evaporates:
+inside the window — and the illusion evaporates. (Eight times is
+comfort, not necessity: *any* rate that keeps the turn per frame under
+half a spoke-step — that is, any $f_s > 2 f_0$ — would be honest; the
+threshold itself sits at $22.5°$ per frame.)
 
 ![The same wheel at eight times the frame rate: the top spoke is the true spoke, advancing correctly](wagon_wheel_fast.png)
 
