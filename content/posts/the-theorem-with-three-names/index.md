@@ -319,9 +319,12 @@ second — that $f_0$ plays the band edge $B$, and the theorem demands
 $f_s > 2 f_0$, which $24$ frames per second cannot give a galloping
 coach. To read the frames above, convert hertz into what the eye sees —
 degrees — at the rate *one pattern-period = one spoke-step = $45°$*.
-The true frequency, $40°$ per frame, is $\frac{8}{9}$ of a period —
-outside the window $\left( -\frac{1}{2}, \frac{1}{2} \right)$; the
-window itself converts into the shaded sector,
+The true frequency, $40°$ per frame, is $\frac{8}{9}$ of a period per
+frame. In per-frame units the sampling rate is $1$ by definition — one
+sample per frame — so the window
+$\left( -\frac{f_s}{2}, \frac{f_s}{2} \right)$ becomes
+$\left( -\frac{1}{2}, \frac{1}{2} \right)$, and $\frac{8}{9}$ sits
+outside it; the window itself converts into the shaded sector,
 $\pm \frac{45°}{2} = \pm 22.5°$; and the in-window family member,
 $\frac{8}{9} - 1 = -\frac{1}{9}$ of a period, is $-5°$ per frame —
 the slow backwards drift, this time computed rather than observed. (For
