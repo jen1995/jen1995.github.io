@@ -118,12 +118,12 @@ It remains to cut the copy out and turn it back into the signal.
 Multiply $X_d$ by the rectangular cutter
 
 $$
-H(f) = T \cdot \mathbf{1}_{(-f_s/2,\; f_s/2)}(f)
+H(f) = \begin{cases} T, & |f| \le \frac{f_s}{2}, \\ 0, & \text{otherwise} \end{cases} \;=\; T \cdot I_{[-f_s/2,\, f_s/2]}(f)
 $$
 
-— $T$ times the indicator of the central period ($\mathbf{1}_A$ equals
-$1$ on the set $A$ and $0$ elsewhere); the factor is $T$ rather than
-$1$ so as to cancel the $\frac{1}{T}$ the copies formula carries:
+— $T$ times the indicator of the central period ($I_A$ equals $1$ on
+the set $A$ and $0$ elsewhere); the factor is $T$ rather than $1$ so as
+to cancel the $\frac{1}{T}$ the copies formula carries:
 
 ![The cutter H(f) over the periodized spectrum, and the product: the central copy X(f) alone](cutter.png)
 
@@ -132,34 +132,18 @@ survives untouched:
 
 $$
 \begin{aligned}
-H(f)\, X_d(f) &= T \cdot \frac{1}{T} \sum_{m=-\infty}^{\infty} X(f - m f_s)
-= \sum_{m=-\infty}^{\infty} X(f - m f_s) \\
-&= X(f) \qquad \text{for } |f| \lt \frac{f_s}{2}.
+H(f)\, X_d(f) &= T \cdot I_{[-f_s/2,\, f_s/2]}(f) \cdot \frac{1}{T} \sum_{m=-\infty}^{\infty} X(f - m f_s) \\
+&= I_{[-f_s/2,\, f_s/2]}(f) \sum_{m=-\infty}^{\infty} X(f - m f_s) \;=\; X(f).
 \end{aligned}
 $$
 
-The first equality is only bookkeeping — the cutter's $T$ cancels the
-$\frac{1}{T}$ of the copies formula. The cutting itself is the second
-equality: the whole sum collapses to its single $m = 0$ term, because
-every term with nonzero $m$ has its argument far outside the band,
-
-$$
-|f - m f_s| \ge |m|\, f_s - |f| > f_s - \frac{f_s}{2} = \frac{f_s}{2} > B
-$$
-
-(the first step is the triangle inequality; the second uses
-$|m| \ge 1$ and $|f| \lt \frac{f_s}{2}$; the last is the theorem's
-hypothesis $f_s > 2B$) — and beyond the band, $X$ is zero. Outside the
-window the left side is zero because $H$ is, and the right side is zero
-too: $|f| \ge \frac{f_s}{2} > B$ puts $f$ beyond the band where $X$
-lives. So at every frequency,
-
-$$
-H(f)\, X_d(f) = X(f)
-$$
-
-— *exactly*, not approximately. Now the Fourier integral of bridge one
-rebuilds the signal from it:
+The last equality is the geometry we just described, written in
+symbols: inside the window only the $m = 0$ copy is present, so the sum
+there is plain $X(f)$; outside the window both sides vanish — the
+indicator on the left, the band limit on the right. So
+$H(f)\, X_d(f) = X(f)$ at every frequency — *exactly*, not
+approximately — and the Fourier integral of bridge one rebuilds the
+signal from it:
 
 $$
 \begin{aligned}
