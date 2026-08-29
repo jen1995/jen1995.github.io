@@ -236,10 +236,7 @@ The recording is empty, indistinguishable from a recording of silence.
 Two different signals — the edge sine and the zero signal — pass through
 the same samples, so *no* formula, $(\star)$ or any other, can promise
 to restore "the" original: the information was lost at the sampling
-stage, before any reconstruction began. ([Part 2's companion
-notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/reading_the_dft.ipynb)
-stumbled on this exact ghost: the sine at $\frac{f_s}{2}$ that vanishes
-from its own DFT.)
+stage, before any reconstruction began.
 
 The copies picture says the same thing in the frequency domain. At
 $f_s = 2B$ the neighboring copies do not overlap — but they *touch*: the
