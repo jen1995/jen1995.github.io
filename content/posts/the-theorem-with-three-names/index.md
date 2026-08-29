@@ -236,11 +236,7 @@ The recording is empty, indistinguishable from a recording of silence.
 Two different signals — the edge sine and the zero signal — pass through
 the same samples, so *no* formula, $(\star)$ or any other, can promise
 to restore "the" original: the information was lost at the sampling
-stage, before any reconstruction began. Phase only widens the family:
-$A \sin(2 \pi B t + \varphi)$ samples to $A\, (-1)^n \sin \varphi$,
-so of the two numbers $A$ and $\varphi$ only the product
-$A \sin \varphi$ survives — infinitely many edge sines share every such
-recording. ([Part 2's companion
+stage, before any reconstruction began. ([Part 2's companion
 notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/reading_the_dft.ipynb)
 stumbled on this exact ghost: the sine at $\frac{f_s}{2}$ that vanishes
 from its own DFT.)
