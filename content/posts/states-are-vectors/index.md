@@ -79,7 +79,9 @@ $$
 $$
 
 with addition commutative ($|A\rangle + |B\rangle = |B\rangle + |A\rangle$)
-and associative, with a zero vector ($|A\rangle + 0 = |A\rangle$) and
+and associative
+($\left( |A\rangle + |B\rangle \right) + |C\rangle = |A\rangle + \left( |B\rangle + |C\rangle \right)$),
+with a zero vector ($|A\rangle + 0 = |A\rangle$) and
 a negative for every vector ($|A\rangle + (-|A\rangle) = 0$). And you
 can multiply a ket by any complex number $z$ and get a ket,
 $z\,|A\rangle$, with multiplication distributing over both kinds of
