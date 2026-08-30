@@ -153,25 +153,28 @@ axiom 3 possible, because $\langle \psi | \psi \rangle$ then comes out
 real (by axiom 2 it equals its own conjugate) and can meaningfully be
 called positive.
 
-In the column model the inner product is the familiar dot product with
-a conjugation on the left factor:
+An important point: the three axioms alone do not pin the inner
+product down — many different functions satisfy them, and choosing an
+inner product is genuinely *extra structure* on a vector space. In the
+column model the standard choice is fixed by one declaration: the two
+basis columns are **orthonormal**,
+
+$$
+\langle u | u \rangle = \langle d | d \rangle = 1, \qquad \langle u | d \rangle = \langle d | u \rangle = 0.
+$$
+
+Once this is declared, the axioms leave no freedom at all: the inner
+product of any two kets must be the familiar dot product with a
+conjugation on the left factor,
 
 $$
 \langle \phi | \psi \rangle = \phi_u^* \psi_u + \phi_d^* \psi_d.
 $$
 
 <details>
-<summary>Where the coordinate formula comes from</summary>
+<summary>The derivation of the coordinate formula</summary>
 
-The three axioms alone do not pin the inner product down — many
-functions satisfy them. What pins it down is one extra declaration:
-the basis columns are **orthonormal**,
-
-$$
-\langle u | u \rangle = \langle d | d \rangle = 1, \qquad \langle u | d \rangle = \langle d | u \rangle = 0.
-$$
-
-Given that, the axioms force the formula. Expand both arguments,
+Expand both arguments,
 $|\phi\rangle = \phi_u |u\rangle + \phi_d |d\rangle$ and
 $|\psi\rangle = \psi_u |u\rangle + \psi_d |d\rangle$, and open the
 bracket slot by slot. Linearity in the second argument gives
