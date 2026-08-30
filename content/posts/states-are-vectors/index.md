@@ -155,7 +155,11 @@ called positive.
 
 Now that we have an inner product, let us agree that our basis kets
 are **orthonormal** — each of unit length, and orthogonal to each
-other:
+other. (Agreeing costs nothing: any basis can be turned into an
+orthonormal one by the
+[Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process);
+the theorem with proof is on p. 54 of Panov's lectures — see the
+references.) In formulas:
 
 $$
 \langle u | u \rangle = \langle d | d \rangle = 1, \qquad \langle u | d \rangle = \langle d | u \rangle = 0.
