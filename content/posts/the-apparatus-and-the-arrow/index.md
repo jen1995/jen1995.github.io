@@ -109,8 +109,10 @@ are projections of the same up-pointing vector.
 ## Experiment three: turning the arrow
 
 If the projection model is right, it makes a sharp prediction. Prepare
-an electron that reads $+1$ with the arrow up — so, classically, its
-vector $\vec \sigma$ points up. Now lay the apparatus on its side: the
+an electron that reads $+1$ with the arrow up. (To *prepare* is not a
+new kind of act — it is a measurement used as a starting point: point
+the arrow up, measure, and take an electron whose window showed $+1$.)
+Classically, then, its vector $\vec \sigma$ points up. Now lay the apparatus on its side: the
 arrow points along $x$, at $90°$ to the vector. The projection of an
 up-pointing unit vector onto a horizontal axis is $0$, so the window
 should read $0$.
