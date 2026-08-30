@@ -174,24 +174,32 @@ $$
 <details>
 <summary>The derivation of the coordinate formula</summary>
 
-Expand both arguments,
+Write both arguments in the basis,
 $|\phi\rangle = \phi_u |u\rangle + \phi_d |d\rangle$ and
 $|\psi\rangle = \psi_u |u\rangle + \psi_d |d\rangle$, and open the
-bracket slot by slot. Linearity in the second argument gives
+bracket slot by slot. First the second slot, by linearity:
 
 $$
-\langle \phi | \psi \rangle = \psi_u \langle \phi | u \rangle + \psi_d \langle \phi | d \rangle,
+\begin{aligned}
+\langle \phi | \psi \rangle &= \langle \phi \,|\, \psi_u u + \psi_d d \rangle \\
+&= \psi_u \langle \phi | u \rangle + \psi_d \langle \phi | d \rangle.
+\end{aligned}
 $$
 
-and anti-linearity in the first argument unpacks each remaining
-bracket:
+Now each remaining bracket, by anti-linearity in the first slot —
+remember that the scalars come out conjugated:
 
 $$
-\langle \phi | u \rangle = \phi_u^* \langle u | u \rangle + \phi_d^* \langle d | u \rangle = \phi_u^*,
+\begin{aligned}
+\langle \phi | u \rangle &= \langle \phi_u u + \phi_d d \,|\, u \rangle \\
+&= \phi_u^* \langle u | u \rangle + \phi_d^* \langle d | u \rangle \\
+&= \phi_u^* \cdot 1 + \phi_d^* \cdot 0 = \phi_u^*,
+\end{aligned}
 $$
 
-where the cross term died by orthogonality — and likewise
-$\langle \phi | d \rangle = \phi_d^*$. Substituting back:
+where the cross term died by the declared orthogonality, and in the
+same way $\langle \phi | d \rangle = \phi_d^*$. Substituting both back
+into the first computation:
 
 $$
 \langle \phi | \psi \rangle = \phi_u^* \psi_u + \phi_d^* \psi_d. \quad \square
