@@ -72,10 +72,13 @@ $+1$. Or $-1$. It never shows $0.3$, never $0.99$, never anything but
 those two values — no matter how the electron was produced, no matter
 how carefully we prepare the setup.
 
-Now measure the *same* electron again, without touching anything in
-between. The window shows the same value as before. And again the third
-time, and the hundredth: whatever the first answer was, every following
-measurement along the same arrow repeats it.
+Now measure the *same* electron again — not a fresh one, but the very
+electron that has just been through a measurement — without touching
+anything in between. A fresh electron could show either value; for this
+one the "either" is gone. The window shows exactly the value it showed
+before. And again the third time, and the hundredth: whatever the first
+answer was, every following measurement along the same arrow repeats
+it.
 
 ![The apparatus measures the same electron repeatedly along the same axis: the first answer, whatever it was, repeats forever](repeat.png)
 
