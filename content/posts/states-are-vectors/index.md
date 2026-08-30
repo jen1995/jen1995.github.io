@@ -70,7 +70,7 @@ post, the three experimental axes $z$, $x$, $y$ together will leave no
 room for real weights. For now, take "complex" on credit and notice
 only that nothing below becomes harder because of it.
 
-So what exactly is a **complex vector space**? Informally: a set of
+What exactly is a **complex vector space**? Informally: a set of
 objects (for us: kets) with two operations. You can add any two kets
 and get a ket, with addition commutative and associative, a zero
 vector, and a negative for every vector. You can multiply a ket by any
@@ -89,7 +89,7 @@ added and scaled component by component. This space is called
 $\mathbb C^2$.
 
 <details>
-<summary>The full definition</summary>
+<summary>The complete rigorous definition of a vector space, axiom by axiom</summary>
 
 A **vector space over the field $\mathbb C$** is a set $V$ equipped
 with two operations — addition $V \times V \to V$ and scalar
