@@ -21,8 +21,11 @@ station of the road will come with a notebook to play with, because
 these concepts *want* to be poked at.
 
 But principles come later. Today there is no mathematics at all — only
-an experiment, told after Susskind and Friedman's *Quantum Mechanics:
-The Theoretical Minimum*. One black box, one arrow, one window, and
+an experiment. The story of this post — the apparatus, the arrow, the
+stubborn ±1 — is retold from chapter 1 of Susskind and Friedman's
+*Quantum Mechanics: The Theoretical Minimum* (see the references
+below), which we warmly recommend reading in the original. One black
+box, one arrow, one window, and
 exactly one formula, which is a cosine. By the end of the post the
 classical picture of measurement will be quietly, irreparably broken —
 and the wreckage will tell us precisely what kind of mathematics we
@@ -189,3 +192,15 @@ dynamics and the Schrödinger equation, where the Fourier road pays its
 promised dividend — and then the four problems: the box, the tunnel,
 the oscillator, the hydrogen atom whose discrete menu started the whole
 story.
+
+## References
+
+- Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
+  Minimum*. Basic Books, 2014 — chapter 1 is the source of this post's
+  experiment, and the book grew out of Susskind's Stanford course,
+  [freely available in video](https://theoreticalminimum.com/courses/quantum-mechanics/2012/winter)
+  at [theoreticalminimum.com](https://theoreticalminimum.com/).
+- The [Quantum Sense](https://www.youtube.com/@quantumsensechannel)
+  video series, *Maths of Quantum Mechanics* — the backbone of the
+  mathematical posts to come; this post touches its opening question
+  (why classical physics fails for the hydrogen atom).
