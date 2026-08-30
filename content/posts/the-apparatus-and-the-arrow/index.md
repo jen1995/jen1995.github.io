@@ -43,18 +43,19 @@ spinning about its axis; do not actually picture that — the picture is
 historical, and it misleads (for one thing, a point particle has no
 axis to spin about). For our story one thing matters: spin is a
 *measurable* property of the electron — and everything else about it we
-will learn the honest way, from the experiments below. Until then we
-treat it as a black box: our only access to the spin is the apparatus. (The real-world setup behind that box is the
-[Stern–Gerlach experiment](https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment);
-we keep the box closed on purpose.)
+will learn the honest way, from the experiments below.
 
-The apparatus $\mathcal A$ is itself a black box, with two features on
-the outside:
+Our only access to the spin is a measuring device: the apparatus
+$\mathcal A$, a black box with two features on the outside:
 
 - an **arrow** painted on its side — the apparatus can be carried
   around and oriented so the arrow points along any direction in space;
 - a **window** that is blank until a measurement happens, and then
   shows a number.
+
+(The real-world setup behind this box is the
+[Stern–Gerlach experiment](https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment);
+we keep the box closed on purpose.)
 
 ![The laboratory: the apparatus with its arrow and its window, and the electron](apparatus.png)
 
