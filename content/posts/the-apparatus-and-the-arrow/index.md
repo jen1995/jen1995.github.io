@@ -254,6 +254,15 @@ promised dividend — and then the four problems: the box, the tunnel,
 the oscillator, the hydrogen atom whose discrete menu started the whole
 story.
 
+> The laboratory of this post can be played with, not just read about:
+> a [ready-made notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/spin_lab.ipynb)
+> lives in this blog's repository and [opens in
+> Colab](https://colab.research.google.com/github/jen1995/jen1995.github.io/blob/main/notebooks/spin_lab.ipynb)
+> in one click: a simulated apparatus you can orient and fire, all three
+> experiments rerun with as many rounds as you like, the erasure of the
+> old certainty verified on a thousand electrons — and a numerical peek
+> at the "squared and halved" curve the act is heading toward.
+
 ## References
 
 - Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
