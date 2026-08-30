@@ -120,6 +120,8 @@ experiment of the last post ever revealed. Below, the claim faces its
 first test — the right and left states will have to fit inside these
 same two dimensions, and they will.
 
+![The dimension, two claims: |d⟩ lies on no multiple of |u⟩ (at least two); every preparable state lies in their plane, the crossed-out third direction is never needed (at most two)](dimension_two.png)
+
 ## The inner product
 
 A vector space knows how to blend, but the wishlist also asked for
