@@ -153,6 +153,25 @@ question did not merely produce a new answer — it *erased* the old one.
 
 ![Measure the prepared electron along x, then along z again: the answer along z is random — the x measurement erased it](forget.png)
 
+## What we saw
+
+The whole record, in one list:
+
+- Point the arrow along any axis $\hat m$ and measure a fresh electron:
+  the first value is random, $+1$ or $-1$. Keep the arrow along
+  $\hat m$, and every following measurement repeats the first. From now
+  on we phrase it this way: the measurement **prepares** the electron
+  in one of two states, and the following measurements along the same
+  axis *confirm* that it is in that state.
+- Replace $\hat m$ by $-\hat m$: an electron prepared as $+1$ along
+  $\hat m$ reads $-1$ along $-\hat m$ — deterministically, and vice
+  versa.
+- Replace $\hat m$ by any other axis $\hat n$: the first measurement
+  along $\hat n$ is random again — the electron is re-prepared along
+  $\hat n$, and its old certainty along $\hat m$ is erased. Over many
+  rounds of "prepare along $\hat m$, measure along $\hat n$" the
+  average outcome is $\langle \hat m, \hat n \rangle = \cos \theta$.
+
 ## What exactly broke
 
 It is worth saying carefully which classical beliefs these three
