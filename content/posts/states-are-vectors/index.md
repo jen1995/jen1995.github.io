@@ -91,7 +91,8 @@ $$
 z \left( |A\rangle + |B\rangle \right) = z|A\rangle + z|B\rangle, \qquad (z + w)|A\rangle = z|A\rangle + w|A\rangle.
 $$
 
-That is the whole idea; the precise axiom list is in the cut below.
+That is the whole idea; the precise axiom list lives in the
+[Wikipedia article on vector spaces](https://en.wikipedia.org/wiki/Vector_space#Definition_and_basic_properties).
 
 A concrete model for our two-outcome space: columns of two complex
 numbers,
@@ -102,36 +103,6 @@ $$
 
 added and scaled component by component. This space is called
 $\mathbb C^2$.
-
-<details>
-<summary>The complete rigorous definition of a vector space, axiom by axiom</summary>
-
-A **vector space over the field $\mathbb C$** is a set $V$ equipped
-with two operations — addition $V \times V \to V$ and scalar
-multiplication $\mathbb C \times V \to V$ — such that for all vectors
-$|A\rangle, |B\rangle, |C\rangle \in V$ and all scalars
-$z, w \in \mathbb C$:
-
-1. addition is associative:
-   $\left( |A\rangle + |B\rangle \right) + |C\rangle = |A\rangle + \left( |B\rangle + |C\rangle \right)$;
-2. addition is commutative:
-   $|A\rangle + |B\rangle = |B\rangle + |A\rangle$;
-3. there is a zero vector $0$ with $|A\rangle + 0 = |A\rangle$;
-4. every vector has a negative: $|A\rangle + (-|A\rangle) = 0$;
-5. scalar multiplication is compatible with multiplication in
-   $\mathbb C$: $z \left( w |A\rangle \right) = (zw) |A\rangle$;
-6. the unit scalar acts trivially: $1 \cdot |A\rangle = |A\rangle$;
-7. multiplication distributes over vector addition:
-   $z \left( |A\rangle + |B\rangle \right) = z|A\rangle + z|B\rangle$;
-8. multiplication distributes over scalar addition:
-   $(z + w) |A\rangle = z|A\rangle + w|A\rangle$.
-
-Everything else — uniqueness of the zero vector and of negatives,
-$0 \cdot |A\rangle = 0$, and so on — is derived from these eight. For
-the systematic development see Panov's linear algebra lectures in the
-references.
-
-</details>
 
 The dimension of the space is a physical statement, and it deserves
 emphasis. The claim that *two* kets suffice — that every state of the
