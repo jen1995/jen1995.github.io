@@ -143,6 +143,16 @@ $$
 The classical answer is not wrong — it is the *expectation* of the
 quantum answer. Determinism survives only in the average.
 
+One more twist, and it is the cruelest. Take an electron that measured
+$+1$ along $z$, measure it along $x$ — say the window shows $+1$ — and
+now return the apparatus to $z$ and measure once more. Experiment one
+promised that repetition confirms; the electron *had* a certain answer
+along $z$ moments ago. But the window does not show the remembered
+$+1$: it shows $\pm 1$ at random, half and half. Asking the $x$
+question did not merely produce a new answer — it *erased* the old one.
+
+![Measure the prepared electron along x, then along z again: the answer along z is random — the x measurement erased it](forget.png)
+
 ## What exactly broke
 
 It is worth saying carefully which classical beliefs these three
