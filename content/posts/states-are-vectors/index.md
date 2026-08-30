@@ -165,9 +165,8 @@ $$
 \langle u | u \rangle = \langle d | d \rangle = 1, \qquad \langle u | d \rangle = \langle d | u \rangle = 0.
 $$
 
-With this agreement in place, the axioms leave no freedom at all: the
-inner product of any two kets must be the familiar dot product with a
-conjugation on the left factor,
+Then in coordinate form the inner product of two arbitrary kets
+equals
 
 $$
 \langle \phi | \psi \rangle = \phi_u^* \psi_u + \phi_d^* \psi_d.
