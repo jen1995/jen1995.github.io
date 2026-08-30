@@ -59,7 +59,10 @@ the outside:
 ![The laboratory: the apparatus with its arrow and its window, and the electron](apparatus.png)
 
 Bring the apparatus close to the electron, let it interact, and read
-the window. That single act is what we will call a measurement.
+the window. That single act is what we will call a **measurement** —
+the central notion of everything that follows.
+
+![A measurement in three frames: bring the apparatus to the electron, let them interact, read the window](measure.png)
 
 ## Experiment one: the window shows ±1 — and repetition confirms
 
