@@ -71,13 +71,25 @@ room for real weights. For now, take "complex" on credit and notice
 only that nothing below becomes harder because of it.
 
 The structure that everything below rests on is the **complex vector
-space**. Informally: a set of
-objects (for us: kets) with two operations. You can add any two kets
-and get a ket, with addition commutative and associative, a zero
-vector, and a negative for every vector. You can multiply a ket by any
-complex number $z$ and get a ket, with multiplication distributing
-over both kinds of addition. That is the whole idea; the precise axiom
-list is in the cut below.
+space**. Informally: a set of objects (for us: kets) with two
+operations. You can add any two kets and get a ket,
+
+$$
+|A\rangle + |B\rangle = |C\rangle,
+$$
+
+with addition commutative ($|A\rangle + |B\rangle = |B\rangle + |A\rangle$)
+and associative, with a zero vector ($|A\rangle + 0 = |A\rangle$) and
+a negative for every vector ($|A\rangle + (-|A\rangle) = 0$). And you
+can multiply a ket by any complex number $z$ and get a ket,
+$z\,|A\rangle$, with multiplication distributing over both kinds of
+addition:
+
+$$
+z \left( |A\rangle + |B\rangle \right) = z|A\rangle + z|B\rangle, \qquad (z + w)|A\rangle = z|A\rangle + w|A\rangle.
+$$
+
+That is the whole idea; the precise axiom list is in the cut below.
 
 A concrete model for our two-outcome space: columns of two complex
 numbers,
