@@ -89,10 +89,14 @@ first reading of a fresh electron seems to come out either way.
 
 ## Experiment two: flipping the apparatus negates the answer
 
-Take an electron that just measured $+1$ with the arrow up. Turn the
-apparatus upside down — the arrow now points along $-z$ — and measure
-again. The window shows $-1$, every time. Flip back: $+1$ again.
-Deterministically.
+Take an electron that just measured $+1$ with the arrow up — as in
+experiment one, an electron that has been *through a measurement*, not
+a fresh one. Turn the apparatus upside down — the arrow now points
+along $-z$ — and measure the same electron again. The window shows
+$-1$, every time. Flip back: $+1$ again. Deterministically: once the
+first measurement has given its answer, there is no randomness anywhere
+in this loop. (A fresh electron would show $\pm 1$ at random under
+either orientation; the determinism belongs to the measured one.)
 
 ![Flipping the apparatus flips the answer, with no randomness at all](flip.png)
 
