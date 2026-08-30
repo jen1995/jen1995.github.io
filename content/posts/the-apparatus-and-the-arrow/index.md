@@ -115,7 +115,7 @@ arrow points along $x$, at $90°$ to the vector. The projection of an
 up-pointing unit vector onto a horizontal axis is $0$, so the window
 should read $0$.
 
-It reads $+1$. Or $-1$. Never $0$ — the window has exactly two values
+It does no such thing. It reads $+1$. Or $-1$. Never $0$ — the window has exactly two values
 it is willing to show, and turning the apparatus does not change that.
 
 ![The apparatus laid on its side, arrow along x: the window shows +1 or −1, never 0](never_zero.png)
