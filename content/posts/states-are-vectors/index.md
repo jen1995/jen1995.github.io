@@ -161,36 +161,44 @@ $$
 $$
 
 <details>
-<summary>Proof that this formula satisfies all three axioms</summary>
+<summary>Where the coordinate formula comes from</summary>
 
-*Linearity in the second argument.* Components of a sum add and
-components of a scaled ket scale, so
-
-$$
-\phi_u^* (\psi_u + \zeta_u) + \phi_d^* (\psi_d + \zeta_d) = \langle \phi | \psi \rangle + \langle \phi | \zeta \rangle,
-$$
-
-and pulling a scalar $a$ out of each component of $|a\psi\rangle$
-gives $a \langle \phi | \psi \rangle$.
-
-*Hermitian symmetry.* Conjugate the formula with the arguments
-swapped:
+The three axioms alone do not pin the inner product down — many
+functions satisfy them. What pins it down is one extra declaration:
+the basis columns are **orthonormal**,
 
 $$
-\langle \psi | \phi \rangle^* = \left( \psi_u^* \phi_u + \psi_d^* \phi_d \right)^* = \psi_u \phi_u^* + \psi_d \phi_d^*,
+\langle u | u \rangle = \langle d | d \rangle = 1, \qquad \langle u | d \rangle = \langle d | u \rangle = 0.
 $$
 
-which is exactly $\langle \phi | \psi \rangle$, since conjugation
-undoes conjugation and conjugates each plain factor.
-
-*Positive definiteness.* With both arguments equal,
+Given that, the axioms force the formula. Expand both arguments,
+$|\phi\rangle = \phi_u |u\rangle + \phi_d |d\rangle$ and
+$|\psi\rangle = \psi_u |u\rangle + \psi_d |d\rangle$, and open the
+bracket slot by slot. Linearity in the second argument gives
 
 $$
-\langle \psi | \psi \rangle = \psi_u^* \psi_u + \psi_d^* \psi_d = |\psi_u|^2 + |\psi_d|^2,
+\langle \phi | \psi \rangle = \psi_u \langle \phi | u \rangle + \psi_d \langle \phi | d \rangle,
 $$
 
-a sum of squared magnitudes: it is zero only when both components
-vanish, i.e. only for the zero vector, and positive otherwise. $\square$
+and anti-linearity in the first argument unpacks each remaining
+bracket:
+
+$$
+\langle \phi | u \rangle = \phi_u^* \langle u | u \rangle + \phi_d^* \langle d | u \rangle = \phi_u^*,
+$$
+
+where the cross term died by orthogonality — and likewise
+$\langle \phi | d \rangle = \phi_d^*$. Substituting back:
+
+$$
+\langle \phi | \psi \rangle = \phi_u^* \psi_u + \phi_d^* \psi_d. \quad \square
+$$
+
+The same computation with $n$ basis vectors instead of two gives the
+general coordinate formula
+$\langle \phi | \psi \rangle = \sum_i \phi_i^* \psi_i$ — valid, note,
+only in an orthonormal basis: in a skewed basis the cross terms
+survive and the formula grows correction terms.
 
 </details>
 
