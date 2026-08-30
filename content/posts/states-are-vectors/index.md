@@ -153,18 +153,16 @@ axiom 3 possible, because $\langle \psi | \psi \rangle$ then comes out
 real (by axiom 2 it equals its own conjugate) and can meaningfully be
 called positive.
 
-An important point: the three axioms alone do not pin the inner
-product down — many different functions satisfy them, and choosing an
-inner product is genuinely *extra structure* on a vector space. In the
-column model the standard choice is fixed by one declaration: the two
-basis columns are **orthonormal**,
+Now that we have an inner product, let us agree that our basis kets
+are **orthonormal** — each of unit length, and orthogonal to each
+other:
 
 $$
 \langle u | u \rangle = \langle d | d \rangle = 1, \qquad \langle u | d \rangle = \langle d | u \rangle = 0.
 $$
 
-Once this is declared, the axioms leave no freedom at all: the inner
-product of any two kets must be the familiar dot product with a
+With this agreement in place, the axioms leave no freedom at all: the
+inner product of any two kets must be the familiar dot product with a
 conjugation on the left factor,
 
 $$
