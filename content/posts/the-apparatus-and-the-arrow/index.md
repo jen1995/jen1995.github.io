@@ -132,7 +132,10 @@ The general version: prepare $+1$ along the direction $\hat m$, then
 measure with the arrow along another direction $\hat n$, at angle
 $\theta$ to the first. Classically the window should show the
 projection, $\cos \theta$. What actually happens: the window shows
-$\pm 1$ at random — and the average over many rounds tends to
+$\pm 1$ at random — and the average over many rounds tends to the
+projection. In symbols: writing $\sigma$ for the number in the window,
+and using the angle brackets $\langle Q \rangle$ — quantum mechanics'
+standard notation for the statistical average of a quantity $Q$ —
 
 $$
 \langle \sigma \rangle = \cos \theta.
