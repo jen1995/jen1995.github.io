@@ -36,10 +36,9 @@ need to build next.
 Here is the whole laboratory. We have a quantum system — say, a single
 electron, of which we care about one property called its
 [**spin**](https://en.wikipedia.org/wiki/Spin_(physics)). Physically,
-spin is an *intrinsic* degree of freedom of the electron — a small
-built-in amount of angular momentum that every electron carries, the way it
-carries its charge and its mass, and which makes the electron behave as
-a tiny magnet. The name comes from the early picture of a charged ball
+spin is an *intrinsic* form of angular momentum, carried by the
+electron the way it carries its charge and its mass — and it makes the
+electron behave as a tiny magnet. The name comes from the early picture of a charged ball
 spinning about its axis; do not actually picture that — the picture is
 historical, and it misleads (for one thing, a point particle has no
 axis to spin about). For our story two things matter: spin is a
