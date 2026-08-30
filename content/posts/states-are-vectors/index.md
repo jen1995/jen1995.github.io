@@ -246,9 +246,15 @@ posts away — that is where the "squared and halved" cosine lives.)
 
 ![Up and down: opposite in the lab, orthogonal in state space](ortho_not_space.png)
 
-**Normalized means total probability one.** The weights carry
-probabilities: for a state $|A\rangle = \alpha_u |u\rangle + \alpha_d |d\rangle$,
-the probability that a $z$ measurement answers $+1$ is
+**Normalized means total probability one.** Here we must borrow from
+the future, and the loan is the largest of this post. *How exactly*
+the weights encode probabilities is a genuinely deep question — deep
+enough that a whole post of this act is reserved for it: there is a
+beautiful argument that, once weights carry probabilities at all,
+consistency across bases forces one specific formula and no other. For
+today we take that formula on credit. For a state
+$|A\rangle = \alpha_u |u\rangle + \alpha_d |d\rangle$, the probability
+that a $z$ measurement answers $+1$ is
 
 $$
 P_u = \alpha_u^* \alpha_u = |\alpha_u|^2,
@@ -258,11 +264,7 @@ and likewise $P_d = |\alpha_d|^2$. The weights themselves are called
 **probability amplitudes** — they are not probabilities (they are
 complex; they can cancel each other in a superposition, which is
 exactly the freedom the act will spend later), but their squared
-magnitudes are. For now this squared-magnitude rule is a *postulate*
-we read off Susskind's presentation; one of the next posts will earn
-it honestly — there is a beautiful argument that, given "weights carry
-probabilities" at all, basis-invariance forces the square. Two
-outcomes must exhaust all possibilities, so
+magnitudes are. Two outcomes must exhaust all possibilities, so
 
 $$
 |\alpha_u|^2 + |\alpha_d|^2 = 1,
