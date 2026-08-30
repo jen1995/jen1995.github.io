@@ -160,6 +160,40 @@ $$
 \langle \phi | \psi \rangle = \phi_u^* \psi_u + \phi_d^* \psi_d.
 $$
 
+<details>
+<summary>Proof that this formula satisfies all three axioms</summary>
+
+*Linearity in the second argument.* Components of a sum add and
+components of a scaled ket scale, so
+
+$$
+\phi_u^* (\psi_u + \zeta_u) + \phi_d^* (\psi_d + \zeta_d) = \langle \phi | \psi \rangle + \langle \phi | \zeta \rangle,
+$$
+
+and pulling a scalar $a$ out of each component of $|a\psi\rangle$
+gives $a \langle \phi | \psi \rangle$.
+
+*Hermitian symmetry.* Conjugate the formula with the arguments
+swapped:
+
+$$
+\langle \psi | \phi \rangle^* = \left( \psi_u^* \phi_u + \psi_d^* \phi_d \right)^* = \psi_u \phi_u^* + \psi_d \phi_d^*,
+$$
+
+which is exactly $\langle \phi | \psi \rangle$, since conjugation
+undoes conjugation and conjugates each plain factor.
+
+*Positive definiteness.* With both arguments equal,
+
+$$
+\langle \psi | \psi \rangle = \psi_u^* \psi_u + \psi_d^* \psi_d = |\psi_u|^2 + |\psi_d|^2,
+$$
+
+a sum of squared magnitudes: it is zero only when both components
+vanish, i.e. only for the zero vector, and positive otherwise. $\square$
+
+</details>
+
 Two definitions ride along for free, both borrowed from ordinary
 geometry:
 
