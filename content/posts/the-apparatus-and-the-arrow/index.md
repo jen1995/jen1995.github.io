@@ -41,11 +41,10 @@ electron the way it carries its charge and its mass — and it makes the
 electron behave as a tiny magnet. The name comes from the early picture of a charged ball
 spinning about its axis; do not actually picture that — the picture is
 historical, and it misleads (for one thing, a point particle has no
-axis to spin about). For our story two things matter: spin is a
-*measurable* property of the electron, and — as the experiments below
-will show — its measurement returns one of exactly **two** values.
-Beyond that we treat it as a black box: our only access to the spin is
-the apparatus. (The real-world setup behind that box is the
+axis to spin about). For our story one thing matters: spin is a
+*measurable* property of the electron — and everything else about it we
+will learn the honest way, from the experiments below. Until then we
+treat it as a black box: our only access to the spin is the apparatus. (The real-world setup behind that box is the
 [Stern–Gerlach experiment](https://en.wikipedia.org/wiki/Stern%E2%80%93Gerlach_experiment);
 we keep the box closed on purpose.)
 
