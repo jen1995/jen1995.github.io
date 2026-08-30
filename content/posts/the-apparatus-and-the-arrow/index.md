@@ -58,6 +58,8 @@ the outside:
 - a **window** that is blank until a measurement happens, and then
   shows a number.
 
+![The laboratory: the apparatus with its arrow and its window, and the electron](apparatus.png)
+
 Bring the apparatus close to the electron, let it interact, and read
 the window. That single act is what we will call a measurement.
 
