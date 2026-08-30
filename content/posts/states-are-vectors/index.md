@@ -343,8 +343,16 @@ $$
 
 The set of all linear functionals on $V$ is itself a vector space,
 called the **dual space** $V^*$. In the column model, functionals are
-row vectors: a row times a column is a number, and every linear
-recipe for "column in, number out" is of that shape.
+row vectors: a row times a column is a number,
+
+$$
+\begin{pmatrix} L_u & L_d \end{pmatrix} \begin{pmatrix} \psi_u \\ \psi_d \end{pmatrix} = L_u \psi_u + L_d \psi_d,
+$$
+
+and every linear recipe for "column in, number out" is of that shape —
+feed the basis columns one by one into a functional $L$, and the
+numbers $L_u = L(|u\rangle)$, $L_d = L(|d\rangle)$ it returns *are*
+its row, since linearity determines everything else.
 
 Two spaces, then: kets live in $V$, bras live in $V^*$. What makes the
 notation honest is that the spaces are twins, and the pairing is
