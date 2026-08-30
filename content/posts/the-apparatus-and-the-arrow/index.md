@@ -118,7 +118,7 @@ should read $0$.
 It reads $+1$. Or $-1$. Never $0$ — the window has exactly two values
 it is willing to show, and turning the apparatus does not change that.
 
-![Arrow turned to the x axis: the classical prediction of 0 is crossed out — the window shows +1 or −1, never 0](never_zero.png)
+![The apparatus laid on its side, arrow along x: the window shows +1 or −1, never 0](never_zero.png)
 
 But run the experiment many times — each round: prepare $+1$ along $z$,
 turn the apparatus to $x$, measure — and record the answers. The
