@@ -18,6 +18,14 @@ Primary sources:
   finite-dimensional theorems
 - ipetr0v's draft "From Kronecker Delta to Dirac Delta" (PR #2,
   drafts/dirac_delta/) — the continuous-basis bridge
+- Fermi, *Лекции по квантовой механике* (Chicago 1954 notes; Russian
+  edition at https://publ.lib.ru/ARCHIVES/F/FERMI_Enriko_(fizik)/_Fermi_E..html
+  — recommended by Eugenia's dad): the physicist's-eye counterpart to our
+  route. Three roles: (1) the optical–mechanical analogy as a SECOND
+  bridge to the Schrödinger equation in QM-5 (section or big cut);
+  (2) cross-check and tricks for the four problem posts; (3) Fermi-style
+  order-of-magnitude estimates via uncertainty for asides/notebooks.
+  Terse, assumes classical mechanics — a seasoning, not a first textbook.
 
 Standing assets from the Fourier road (reuse, don't rebuild): the delta
 built honestly in Part 1; Fourier pair machinery from Four Shades; the
@@ -105,6 +113,10 @@ The longest post; notes §9–13 + the classical interlude.
    stationary action, Euler–Lagrange ⇒ Newton; the generator table
    (∂L/∂x = dp/dt, ∂L/∂t = −dE/dt) — as a details-heavy but self-contained
    section, only what the generator story needs.
+2½. Fermi's second bridge (cut or section): the optical–mechanical
+   analogy — geometrical optics : wave optics = classical mechanics :
+   quantum mechanics; eikonal → de Broglie → the same Schrödinger
+   equation from the wave side. Two roads, one equation — map-style.
 3. Evolution operator U(t): three physical requirements ⇒ unitarity
    (her §12 proof), Taylor step ⇒ i d/dt|ψ⟩ = Ĥ|ψ⟩, the generator
    argument for Ĥ = energy, ħ for dimensions — flagged honestly as the
