@@ -131,9 +131,26 @@ Axioms 1 and 2 together force *anti*-linearity in the first argument:
 pulling a scalar out of the left slot conjugates it,
 $\langle a\psi | \phi \rangle = a^* \langle \psi | \phi \rangle$. This
 asymmetry is not a nuisance but the whole point — it is what makes
-axiom 3 possible, because $\langle \psi | \psi \rangle$ then comes out
-real (by axiom 2 it equals its own conjugate) and can meaningfully be
-called positive.
+axiom 3 possible, and two small computations show how. First, axiom 2
+with both arguments equal reads
+
+$$
+\langle \psi | \psi \rangle = \langle \psi | \psi \rangle^*,
+$$
+
+and a complex number equal to its own conjugate is real — so calling
+$\langle \psi | \psi \rangle$ positive is meaningful in the first
+place. Second, scale the vector by any complex number $a$: the scalar
+leaves the first slot conjugated and the second slot plain,
+
+$$
+\langle a\psi | a\psi \rangle = a^* a \, \langle \psi | \psi \rangle = |a|^2 \, \langle \psi | \psi \rangle,
+$$
+
+and $|a|^2$ is positive — scaling can never break positivity. Had the
+product been linear in *both* slots instead, scaling by $a = i$ would
+multiply $\langle \psi | \psi \rangle$ by $i^2 = -1$ and flip its
+sign, and axiom 3 would be unsalvageable.
 
 Now that we have an inner product, let us agree that our basis kets
 are **orthonormal** — each of unit length, and orthogonal to each
