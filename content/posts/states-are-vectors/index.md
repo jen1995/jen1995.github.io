@@ -317,7 +317,9 @@ and $\frac{1}{2}$ in both cases — and yet the sign is physical
 information, because that apparatus reads it perfectly. This is
 the first quantum phenomenon that the vector formalism *predicted*
 rather than recorded: nothing in the bare experiment log of the last
-post said the two fifty-fifty states must differ by a sign.
+post said the two fifty-fifty states must be orthogonal — differing in
+the sign of one component, which is a very different thing from being
+opposite vectors.
 
 <details>
 <summary>The leftover freedom: global phase</summary>
