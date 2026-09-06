@@ -472,8 +472,10 @@ $$
 $$
 
 Coordinates are inner products — the amplitudes of a state along a
-basis are literally its projections onto the basis kets, which is why
-$\alpha_u = \langle u | A \rangle$ in the spin example above.
+basis are literally its projections onto the basis kets. For the spin
+state $|A\rangle = \alpha_u |u\rangle + \alpha_d |d\rangle$ this
+reads $\alpha_u = \langle u | A \rangle$ and
+$\alpha_d = \langle d | A \rangle$.
 
 ![In an orthonormal basis, a coordinate is the inner product with the corresponding basis vector](coords_are_inner_products.png)
 
