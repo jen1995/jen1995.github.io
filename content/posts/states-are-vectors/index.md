@@ -155,7 +155,8 @@ $$
 and $|a|^2$ is positive — scaling can never break positivity. Had the
 product been linear in *both* slots instead, scaling by $a = i$ would
 multiply $\langle \psi | \psi \rangle$ by $i^2 = -1$ and flip its
-sign, and axiom 3 would be unsalvageable.
+sign — so no positivity requirement could hold, and axiom 3 could not
+even be stated.
 
 </details>
 
