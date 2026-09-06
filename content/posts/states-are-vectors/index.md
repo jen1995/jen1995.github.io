@@ -614,7 +614,17 @@ of this blog — the Dirac delta.
 
 Infinite sums also raise a genuinely new mathematical concern:
 convergence. An infinite superposition of states had better *be* a
-state — the limit must not fall out of the space. A vector space with
+state — the limit must not fall out of the space. That this can
+actually happen is worth seeing once. Take the space of *continuous*
+functions on a segment and, inside it, the partial Fourier sums of a
+square wave: every partial sum is continuous, the terms of the
+sequence come closer and closer together, and yet what they converge
+to is a step — a function with a jump, which is not in the space at
+all. The sequence has a limit, but the space does not contain it.
+
+![Partial Fourier sums of a square wave: every one continuous, the limit a step outside the space of continuous functions; abstractly, a sequence closing in on a hole in the space](completeness.png)
+
+A vector space with
 an inner product whose metric is complete (every Cauchy sequence of
 vectors converges to a vector inside the space) is called a **Hilbert
 space**, and that is the standing arena of quantum mechanics: the
