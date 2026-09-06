@@ -576,8 +576,11 @@ was simply the case $n = 2$.
 ## When the menu is infinite
 
 Finite menus are settled. If a measurement offers countably many
-outcomes — the hydrogen atom's energy menu $E_1, E_2, \dots$ from the
-opening of the last post — the state is an infinite superposition:
+outcomes — the bound-state energies of the hydrogen atom from the
+opening of the last post, $E_1, E_2, \dots$, infinitely many of them
+crowding together as they approach the ionization threshold (we will
+compute $E_n \propto -1/n^2$ in the last post of the act) — the state
+is an infinite superposition:
 
 $$
 |\psi\rangle = \sum_{i=1}^{\infty} c_i \, |E_i\rangle.
