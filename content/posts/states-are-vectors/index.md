@@ -588,9 +588,11 @@ $$
 |\psi\rangle = \sum_{i=1}^{\infty} c_i \, |E_i\rangle.
 $$
 
-And if the measured quantity is *continuous* — the position $x$ of a
-particle on a line — the sum has to become an integral over the
-uncountable menu of outcomes:
+And if the *menu itself* is a continuum — not a list of values,
+countable or not, but a whole interval of the real line, every point
+of which is a possible reading, as for the position $x$ of a particle
+on a line — then there is nothing to index a sum by, and the sum has
+to become an integral over the uncountable menu of outcomes:
 
 $$
 |\psi\rangle = \int \psi(x) \, |x\rangle \, dx.
