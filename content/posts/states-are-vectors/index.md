@@ -738,8 +738,8 @@ rather than postulated.
 > [ready-made notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/state_space.ipynb)
 > lives in this blog's repository and [opens in
 > Colab](https://colab.research.google.com/github/jen1995/jen1995.github.io/blob/main/notebooks/state_space.ipynb)
-> in one click: the inner product with its conjugation (and NumPy's
-> trap for the unwary), right and left built from the experiments, a
+> in one click: the inner product with its conjugation (and the NumPy
+> function that silently skips it), right and left built from the experiments, a
 > scan showing that no real vector can serve as the y-axis states,
 > Riesz's theorem by construction, outer products as rank-one matrices
 > and the identity resolved in three bases, Born probabilities summing
