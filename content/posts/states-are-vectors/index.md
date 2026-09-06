@@ -431,9 +431,13 @@ $$
 
 by positive definiteness, i.e. $|\phi\rangle = |\phi'\rangle$.
 
-(For a general Hilbert space the statement survives, but the proof
-needs completeness — see Yakovlev's *Functional spaces*, p. 96, in the
-references below.)
+(In infinite dimensions the statement survives, but the proof above
+does not: the candidate vector becomes an infinite sum, and one must
+know that the sum converges to an element *of the space*. That is
+guaranteed by a property finite-dimensional spaces have for free and
+infinite-dimensional ones must be required to have — we meet it below
+as the defining property of a Hilbert space. For the general proof see
+Yakovlev's *Functional spaces*, p. 96, in the references below.)
 
 </details>
 
