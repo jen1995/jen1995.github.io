@@ -334,9 +334,11 @@ for the qubit post; it deserves the full stage.
 
 ## Bras, and why the bracket splits
 
-The notation $\langle \phi | \psi \rangle$ looks like an object
-$\langle \phi |$ acting on an object $|\psi\rangle$ — and it can be
-read exactly that way.
+The inner product $\langle \phi | \psi \rangle$ can be looked at
+from a new angle: not as a function of two vectors, but as one object,
+$\langle \phi |$, *acting on* another, $|\psi\rangle$. Fix the left
+argument and let the right one vary — what remains is a machine that
+takes a ket and returns a number.
 
 But first, a general definition. Let $V$ and $W$ be vector spaces
 over $\mathbb C$. A map
