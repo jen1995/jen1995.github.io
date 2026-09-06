@@ -336,9 +336,10 @@ for the qubit post; it deserves the full stage.
 
 The notation $\langle \phi | \psi \rangle$ looks like an object
 $\langle \phi |$ acting on an object $|\psi\rangle$ — and it can be
-read exactly that way, once we have one general definition.
+read exactly that way.
 
-Let $V$ and $W$ be vector spaces over $\mathbb C$. A map
+But first, a general definition. Let $V$ and $W$ be vector spaces
+over $\mathbb C$. A map
 $\mathcal A : V \to W$ is called **linear** if it respects both
 operations of a vector space — for all vectors $u, v \in V$ and every
 scalar $\lambda \in \mathbb C$,
