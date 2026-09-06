@@ -441,7 +441,7 @@ Yakovlev's *Functional spaces*, p. 96, in the references below.)
 
 </details>
 
-## Coordinates, and the identity resolved
+## Coordinates, and a formula for the identity operator
 
 An **orthonormal basis** of the state space is a family of kets
 $\{ |E_i\rangle \}$ that spans the space, with every two distinct
