@@ -686,10 +686,10 @@ with the Fourier coefficients as the coordinates.
 — each coefficient $X[k]$ is the inner product of the signal with one
 basis oscillation — is the same statement in $\mathbb C^N$.
 
-Completeness is the property that separates honest infinite
-superpositions from wishful ones, and proving things about it is real
-functional analysis. Three facts we will quietly rely on, with
-pointers instead of proofs:
+Completeness is what guarantees that an infinite superposition
+converges to an element of the space, and proving anything beyond that
+in infinite dimensions is real functional analysis. Three facts we
+will quietly rely on, with pointers instead of proofs:
 
 - every Hilbert space admits an orthonormal basis (not necessarily
   countable) — this is the infinite-dimensional answer to the
