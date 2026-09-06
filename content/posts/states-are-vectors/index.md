@@ -687,9 +687,10 @@ with the Fourier coefficients as the coordinates.
 basis oscillation — is the same statement in $\mathbb C^N$.
 
 Completeness is what guarantees that an infinite superposition
-converges to an element of the space, and proving anything beyond that
-in infinite dimensions is real functional analysis. Three facts we
-will quietly rely on, with pointers instead of proofs:
+converges to an element of the space. Beyond that guarantee, the
+infinite-dimensional theory is real functional analysis, and this post
+will not rebuild it. Three facts we will quietly rely on, with pointers
+instead of proofs:
 
 - every Hilbert space admits an orthonormal basis (not necessarily
   countable) — this is the infinite-dimensional answer to the
