@@ -338,13 +338,17 @@ The inner product $\langle \phi | \psi \rangle$ can be looked at
 from a new angle: not as a function of two vectors, but as one object,
 $\langle \phi |$, *acting on* another, $|\psi\rangle$. Fix the left
 argument and let the right one vary — what remains is a machine that
-takes a ket and returns a number.
+takes a ket and returns a number:
 
-But first, a general definition. Let $V$ and $W$ be vector spaces
-over $\mathbb C$. A map
-$\mathcal A : V \to W$ is called **linear** if it respects both
-operations of a vector space — for all vectors $u, v \in V$ and every
-scalar $\lambda \in \mathbb C$,
+$$
+\langle \phi | : \; V \to \mathbb C, \qquad |\psi\rangle \mapsto \langle \phi | \psi \rangle.
+$$
+
+This half-bracket $\langle \phi |$ is called a **bra**. What kind of
+machine is it? A general definition first. Let $V$ and $W$ be vector
+spaces over $\mathbb C$. A map $\mathcal A : V \to W$ is called
+**linear** if it respects both operations of a vector space — for all
+vectors $u, v \in V$ and every scalar $\lambda \in \mathbb C$,
 
 $$
 \mathcal A (u + v) = \mathcal A u + \mathcal A v, \qquad \mathcal A (\lambda v) = \lambda \, \mathcal A v.
@@ -354,12 +358,11 @@ A linear map whose target space is the scalars themselves,
 $L : V \to \mathbb C$, is called a **linear functional**: it eats a
 vector and returns a number, linearly.
 
-Now the reading of the bracket. A **bra** $\langle \phi |$ is a
-linear functional on the space of kets,
-
-$$
-\langle \phi | : \; V \to \mathbb C, \qquad |\psi\rangle \mapsto \langle \phi | \psi \rangle.
-$$
+And that is exactly what a bra is. By axiom 1 the inner product is
+linear in its second argument — so with the first argument fixed, the
+machine $|\psi\rangle \mapsto \langle \phi | \psi \rangle$
+respects sums and scalars: **a bra is a linear functional on the space
+of kets.**
 
 The set of all linear functionals on $V$ is itself a vector space,
 called the **dual space** $V^*$. In the column model, functionals are
