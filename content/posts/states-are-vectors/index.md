@@ -629,8 +629,42 @@ an inner product whose metric is complete (every [Cauchy sequence](https://en.wi
 vectors converges to a vector inside the space) is called a **Hilbert
 space**, and that is the standing arena of quantum mechanics: the
 state space of a quantum system is a Hilbert space $\mathcal H$. Our
-$\mathbb C^2$ is one (trivially — finite-dimensional spaces are always
-complete). The space of square-integrable wavefunctions, called
+$\mathbb C^2$ is one — finite-dimensional spaces are always complete,
+for a reason worth a short cut.
+
+<details>
+<summary>Why every finite-dimensional space is complete</summary>
+
+Take an orthonormal basis and write vectors by their coordinates. For
+any two vectors $v, w$ and any coordinate $i$,
+
+$$
+|c_i(v) - c_i(w)|^2 \leq \sum_j |c_j(v) - c_j(w)|^2 = \lVert v - w \rVert^2,
+$$
+
+a single coordinate never exceeds the whole norm. So if a sequence of
+vectors $v_1, v_2, \dots$ is Cauchy, each of the $n$ numerical
+sequences $c_i(v_1), c_i(v_2), \dots$ is Cauchy too — and a Cauchy
+sequence of complex numbers converges, by the
+[completeness of the real numbers](https://en.wikipedia.org/wiki/Completeness_of_the_real_numbers)
+applied to real and imaginary parts. Call the limits $c_1, \dots, c_n$
+and assemble the vector $v = \sum_i c_i |E_i\rangle$. It is the limit
+of the sequence in the norm, because
+
+$$
+\lVert v_m - v \rVert^2 = \sum_{i=1}^{n} |c_i(v_m) - c_i|^2
+$$
+
+is a *finite* sum of terms that each tend to zero. That last word is
+where infinite dimensions break the argument: with infinitely many
+coordinates, convergence coordinate by coordinate no longer forces the
+infinite sum of squares to converge, and completeness becomes a
+property to be proved for each space separately — or required, as the
+definition of a Hilbert space does.
+
+</details>
+
+The space of square-integrable wavefunctions, called
 $L^2$, is the important infinite-dimensional one: its inner product is
 
 $$
