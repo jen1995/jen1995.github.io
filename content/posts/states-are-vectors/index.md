@@ -454,7 +454,9 @@ $$
 \langle E_i | E_j \rangle = \delta_{ij}.
 $$
 
-(Such a basis always exists — that was the Gram–Schmidt remark above.)
+(In finite dimensions such a basis always exists — that was the
+Gram–Schmidt remark above; the infinite-dimensional case is harder and
+is deferred to the cut at the end of the post.)
 For the spin, $\{|u\rangle, |d\rangle\}$ is
 one such basis — and so is $\{|r\rangle, |l\rangle\}$: *each
 measurement axis donates its own orthonormal basis*, which is exactly
