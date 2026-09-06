@@ -429,8 +429,32 @@ $$
 \langle \phi - \phi' \,|\, \phi - \phi' \rangle = 0 \quad \Longrightarrow \quad |\phi\rangle - |\phi'\rangle = 0
 $$
 
-by positive definiteness, i.e. $|\phi\rangle = |\phi'\rangle$. (For
-the infinite-dimensional version see the functional-analysis
+by positive definiteness, i.e. $|\phi\rangle = |\phi'\rangle$.
+
+*A basis-free proof.* The construction above used an orthonormal
+basis; Panov's lectures (Theorem 3.9.3, pp. 62–63) prove the same
+theorem without choosing one. Consider the map that sends each ket to
+its bra,
+
+$$
+|\phi\rangle \; \mapsto \; \langle \phi | = \langle \phi | \cdot \rangle, \qquad V \to V^*.
+$$
+
+It respects sums, and it respects scalars up to conjugation
+(anti-linearity in the first slot) — which does not affect the
+dimension count below. It is injective: if $\langle \phi |$ is the
+zero functional, then $\langle \phi | \psi \rangle = 0$ for every
+$|\psi\rangle$, in particular $\langle \phi | \phi \rangle = 0$, so
+$|\phi\rangle = 0$ by positive definiteness. Finally,
+$\dim V^* = \dim V$ in finite dimensions (a dual basis has as many
+elements as the basis it is dual to), and an injective map between
+spaces of equal finite dimension is also surjective — the rank–nullity
+theorem. So every functional is the bra of exactly one ket. Panov's
+point in calling the isomorphism *canonical*: the map itself was
+written down with no basis in sight; a basis appeared only inside the
+proof.
+
+(For the infinite-dimensional version see the functional-analysis
 references at the end — the statement survives, the proof needs
 completeness.)
 
