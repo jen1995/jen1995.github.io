@@ -131,8 +131,13 @@ Axioms 1 and 2 together force *anti*-linearity in the first argument:
 pulling a scalar out of the left slot conjugates it,
 $\langle a\psi | \phi \rangle = a^* \langle \psi | \phi \rangle$. This
 asymmetry is not a nuisance but the whole point — it is what makes
-axiom 3 possible, and two small computations show how. First, axiom 2
-with both arguments equal reads
+axiom 3 possible: it guarantees that $\langle \psi | \psi \rangle$
+is real and stays positive under scaling.
+
+<details>
+<summary>Why anti-linearity is what makes positivity possible — two computations</summary>
+
+First, axiom 2 with both arguments equal reads
 
 $$
 \langle \psi | \psi \rangle = \langle \psi | \psi \rangle^*,
@@ -151,6 +156,8 @@ and $|a|^2$ is positive — scaling can never break positivity. Had the
 product been linear in *both* slots instead, scaling by $a = i$ would
 multiply $\langle \psi | \psi \rangle$ by $i^2 = -1$ and flip its
 sign, and axiom 3 would be unsalvageable.
+
+</details>
 
 Now that we have an inner product, let us agree that our basis kets
 are **orthonormal** — each of unit length, and orthogonal to each
