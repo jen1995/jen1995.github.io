@@ -625,7 +625,7 @@ all. The sequence has a limit, but the space does not contain it.
 ![Partial Fourier sums of a square wave: every one continuous, the limit a step outside the space of continuous functions; abstractly, a sequence closing in on a hole in the space](completeness.png)
 
 A vector space with
-an inner product whose metric is complete (every Cauchy sequence of
+an inner product whose metric is complete (every [Cauchy sequence](https://en.wikipedia.org/wiki/Cauchy_sequence) of
 vectors converges to a vector inside the space) is called a **Hilbert
 space**, and that is the standing arena of quantum mechanics: the
 state space of a quantum system is a Hilbert space $\mathcal H$. Our
