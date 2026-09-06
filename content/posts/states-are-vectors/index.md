@@ -531,10 +531,11 @@ $$
 $$
 
 read left to right — the bra eats $|\psi\rangle$ and returns the
-number $c_i$, which then scales the ket $|E_i\rangle$. Every output is
-a multiple of the single vector $|E_i\rangle$, so the matrix has
-**rank one**: its columns are all proportional to the column of
-$|E_i\rangle$. In general, for any two kets, the outer product
+number $c_i$, which then scales the ket $|E_i\rangle$. So whatever
+ket goes in, what comes out is a multiple of the single vector
+$|E_i\rangle$ — and that is exactly what it means for a matrix to have
+**rank one**: its columns are all proportional to one column, here the
+column of $|E_i\rangle$. In general, for any two kets, the outer product
 $|\phi\rangle \langle \chi|$ is the rank-one matrix with entries
 $\phi_i \, \chi_j^*$ — the column of $|\phi\rangle$ times the
 conjugated row of $|\chi\rangle$.
