@@ -102,7 +102,8 @@ $$
 $$
 
 added and scaled component by component. This space is called
-$\mathbb C^2$.
+$\mathbb C^2$, and we will refer to this concrete picture — kets as
+columns of numbers — as the **column model**.
 
 ## The inner product
 
