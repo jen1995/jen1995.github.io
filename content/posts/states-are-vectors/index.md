@@ -249,7 +249,10 @@ $180°$ to each other in the lab; their state vectors sit at $90°$ in
 state space. The two geometries are genuinely different spaces, and
 confusing them is the classic beginner's trap. (The exact dictionary
 between lab angles and state-space angles is the Bloch sphere, two
-posts away — that is where the "squared and halved" cosine lives.)
+posts away — and that is where the [last post's closing
+promise](/posts/the-apparatus-and-the-arrow/#the-wishlist) is kept:
+the cosine of the experiments returns "squared and halved", as the
+probability $\cos^2(\theta/2)$ of answering $+1$.)
 
 ![Up and down: opposite in the lab, orthogonal in state space](ortho_not_space.png)
 
