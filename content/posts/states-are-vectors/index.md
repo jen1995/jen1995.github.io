@@ -431,9 +431,9 @@ $$
 
 by positive definiteness, i.e. $|\phi\rangle = |\phi'\rangle$.
 
-(For the infinite-dimensional version see the functional-analysis
-references at the end — the statement survives, the proof needs
-completeness.)
+(For a general Hilbert space the statement survives, but the proof
+needs completeness — see Yakovlev's *Functional spaces*, p. 96, in the
+references below.)
 
 </details>
 
