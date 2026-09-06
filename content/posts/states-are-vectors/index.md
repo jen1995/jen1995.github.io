@@ -268,8 +268,9 @@ $$
 P_u = \alpha_u^* \alpha_u = |\alpha_u|^2,
 $$
 
-and likewise $P_d = |\alpha_d|^2$. The weights themselves are called
-**probability amplitudes** — they are not probabilities (they are
+and likewise $P_d = |\alpha_d|^2$. This squared-magnitude rule is
+known as the [**Born rule**](https://en.wikipedia.org/wiki/Born_rule).
+The weights themselves are called **probability amplitudes** — they are not probabilities (they are
 complex; they can cancel each other in a superposition, which is
 exactly the freedom the road will spend later), but their squared
 magnitudes are. Two outcomes must exhaust all possibilities, so
@@ -731,7 +732,8 @@ continuum limit, meeting the delta that [Part 1 of the Fourier
 road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
 built coming the other way — as the limit of shrinking averaging
 windows. After that: observables as operators, and the
-Born rule earned rather than postulated.
+Born rule — the squared-magnitude rule we took on credit today — earned
+rather than postulated.
 
 ## References
 
