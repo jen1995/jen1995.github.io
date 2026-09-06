@@ -672,11 +672,16 @@ $$
 $$
 
 and the Fourier road has already walked its most famous orthonormal
-basis — the harmonics $e_n = e^{inx}$ on a segment, with the Fourier
-series as the decomposition $f = \sum_n \langle e_n | f \rangle \, e_n$
-and the Fourier coefficients as the coordinates. In the language of
-this post, the [Fourier series of Part 1](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series)
-is "coordinates are inner products" in the Hilbert space $L^2$, and
+basis: the harmonics $e_n = e^{inx}$ on a segment. In that basis the
+decomposition of a function reads
+
+$$
+f = \sum_{n=-\infty}^{\infty} \langle e_n | f \rangle \, e_n,
+$$
+
+which is "coordinates are inner products" in the Hilbert space $L^2$ —
+and it is the [Fourier series of Part 1](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series),
+with the Fourier coefficients as the coordinates.
 [Part 2's reading of the DFT](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
 — each coefficient $X[k]$ is the inner product of the signal with one
 basis oscillation — is the same statement in $\mathbb C^N$.
