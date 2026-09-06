@@ -175,6 +175,33 @@ gallery, orbital cross-sections and isosurfaces.
 
 ---
 
+## Thread: spectra — discrete, continuous, mixed (added 2026-09-06)
+
+Eugenia's find while reviewing QM-2: the hydrogen energy spectrum is
+*mixed* — countably many bound levels E_n ∝ −1/n² crowding toward the
+ionization threshold, and a continuous spectrum above it (ionized
+electron). These are exactly the point/continuous spectra of
+self-adjoint operators from functional analysis, and the four problem
+posts form a natural taxonomy: box = purely discrete, tunneling =
+purely continuous, hydrogen = both. Not a separate post — a thread with
+one home:
+
+- **QM-3 (observables)**: when stating "eigenvalues = outcomes", name
+  the word *spectrum* and say honestly that in infinite dimensions it
+  need not be pure point; cut with a pointer to the spectral theorem for
+  self-adjoint operators (discrete vs continuous spectrum).
+- **QM-2½ / QM-5**: position and momentum as the first operators with
+  purely continuous spectrum — the "eigenvectors" |x⟩, |p⟩ are not
+  normalizable, live outside the Hilbert space, and are normalized to a
+  delta, ⟨x|y⟩ = δ(x−y) (rigged Hilbert space *named*, not built).
+- **QM-7 (tunneling) — the thread's home**: unbound (scattering) states
+  as the physics of the continuous spectrum; plane waves vs wave packets;
+  why T(E) is a function of a continuous variable while the box had a
+  discrete list.
+- **QM-9 (hydrogen) — the payoff**: one operator, both kinds of spectrum;
+  the ionization threshold as the boundary; bound orbitals vs scattering
+  states. Closes the circle to QM-2's "countably many outcomes" example.
+
 ## Deferred (not on the minimal path)
 
 - Tensor products & entanglement (notes §14, multi-qubit) — act four
