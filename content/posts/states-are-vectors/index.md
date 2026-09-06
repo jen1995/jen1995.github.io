@@ -313,8 +313,9 @@ The only difference
 between them is the sign of the weight on $|d\rangle$: $+\frac{1}{\sqrt 2}$
 for right, $-\frac{1}{\sqrt 2}$ for left. Every $z$ measurement is
 blind to that sign — it sees only the squared magnitudes, $\frac{1}{2}$
-and $\frac{1}{2}$ in both cases — and yet the sign is physical
-information, because that apparatus reads it perfectly.
+and $\frac{1}{2}$ in both cases — and yet the two states are
+physically different: measured along $x$, one answers $+1$ with
+certainty and the other $-1$.
 
 <details>
 <summary>The leftover freedom: global phase</summary>
