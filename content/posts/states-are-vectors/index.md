@@ -501,6 +501,45 @@ the entire act: inserting $\hat I$ in this form between any bra and
 any ket splits a quantum computation along a basis of our choosing.
 We will spend it constantly.
 
+<details>
+<summary>What kind of object is |E_i⟩⟨E_i|? A ket times a bra, in the column model</summary>
+
+A ket next to a bra, with nothing between them, may look like a
+misprint — we have only ever multiplied a bra *by* a ket. But the
+column model makes the product perfectly concrete. A ket is a column
+and a bra is a row; a row times a column is a $1 \times 1$ number (the
+inner product), while a **column times a row** is an $n \times n$
+matrix — the *outer product*. For the spin basis:
+
+$$
+|u\rangle \langle u| = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \begin{pmatrix} 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \qquad |d\rangle \langle d| = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \begin{pmatrix} 0 & 1 \end{pmatrix} = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}.
+$$
+
+Add the two and the identity matrix appears — that is the resolution
+of identity, seen in coordinates:
+
+$$
+|u\rangle \langle u| + |d\rangle \langle d| = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = \hat I.
+$$
+
+Each summand on its own is a **projector**: feed it a ket and it
+returns the component of that ket along its basis direction,
+
+$$
+|E_i\rangle \langle E_i | \psi \rangle = c_i \, |E_i\rangle,
+$$
+
+read left to right — the bra eats $|\psi\rangle$ and returns the
+number $c_i$, which then scales the ket $|E_i\rangle$. Every output is
+a multiple of the single vector $|E_i\rangle$, so the matrix has
+**rank one**: its columns are all proportional to the column of
+$|E_i\rangle$. In general, for any two kets, the outer product
+$|\phi\rangle \langle \chi|$ is the rank-one matrix with entries
+$\phi_i \, \chi_j^*$ — the column of $|\phi\rangle$ times the
+conjugated row of $|\chi\rangle$.
+
+</details>
+
 ## When the menu is infinite
 
 Everything above was built in two dimensions, but the definitions
