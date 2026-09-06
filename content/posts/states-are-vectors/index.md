@@ -308,12 +308,13 @@ $$
 Check the exclusivity:
 $\langle r | l \rangle = \frac{1}{2} \langle u | u \rangle - \frac{1}{2} \langle d | d \rangle = \frac{1}{2} - \frac{1}{2} = 0$.
 Two states, each an equal-weight blend of up and down, and yet
-perfectly distinguishable by an $x$ apparatus. The only difference
+perfectly distinguishable by the apparatus with its arrow along $x$.
+The only difference
 between them is the sign of the weight on $|d\rangle$: $+\frac{1}{\sqrt 2}$
 for right, $-\frac{1}{\sqrt 2}$ for left. Every $z$ measurement is
 blind to that sign — it sees only the squared magnitudes, $\frac{1}{2}$
 and $\frac{1}{2}$ in both cases — and yet the sign is physical
-information, because the $x$ apparatus reads it perfectly. This is
+information, because that apparatus reads it perfectly. This is
 the first quantum phenomenon that the vector formalism *predicted*
 rather than recorded: nothing in the bare experiment log of the last
 post said the two fifty-fifty states must differ by a sign.
