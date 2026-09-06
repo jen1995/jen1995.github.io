@@ -311,11 +311,12 @@ Two states, each an equal-weight blend of up and down, and yet
 perfectly distinguishable by the apparatus with its arrow along $x$.
 The only difference
 between them is the sign of the weight on $|d\rangle$: $+\frac{1}{\sqrt 2}$
-for right, $-\frac{1}{\sqrt 2}$ for left. Every $z$ measurement is
-blind to that sign — it sees only the squared magnitudes, $\frac{1}{2}$
-and $\frac{1}{2}$ in both cases — and yet the two states are
-physically different: measured along $x$, one answers $+1$ with
-certainty and the other $-1$.
+for right, $-\frac{1}{\sqrt 2}$ for left. No series of $z$ measurements can tell the two apart: each single
+measurement answers $+1$ or $-1$, and over many rounds both states
+produce the same frequencies, $\frac{1}{2}$ and $\frac{1}{2}$ — the
+squared magnitudes of the weights, from which the sign has vanished.
+And yet the two states are physically different: measured along $x$,
+one answers $+1$ with certainty and the other $-1$.
 
 <details>
 <summary>The leftover freedom: global phase</summary>
