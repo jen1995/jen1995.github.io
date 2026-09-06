@@ -440,16 +440,18 @@ references below.)
 ## Coordinates, and the identity resolved
 
 An **orthonormal basis** of the state space is a family of kets
-$\{ |E_i\rangle \}$ that spans the space and satisfies
+$\{ |E_i\rangle \}$ that spans the space, with every two distinct
+members orthogonal and every member of unit length. Both conditions
+fit in one line with the help of the
+[Kronecker delta](https://en.wikipedia.org/wiki/Kronecker_delta) — the
+symbol $\delta_{ij}$ that equals $1$ when $i = j$ and $0$ otherwise:
 
 $$
-\langle E_i | E_j \rangle = \delta_{ij}
+\langle E_i | E_j \rangle = \delta_{ij}.
 $$
 
-— pairwise orthogonal, each of unit length, all in one Kronecker-delta
-line. (Such a basis always exists: take any basis and run Gram–Schmidt
-orthogonalization; see Panov's lectures in the references for the
-finite-dimensional proof.) For the spin, $\{|u\rangle, |d\rangle\}$ is
+(Such a basis always exists — that was the Gram–Schmidt remark above.)
+For the spin, $\{|u\rangle, |d\rangle\}$ is
 one such basis — and so is $\{|r\rangle, |l\rangle\}$: *each
 measurement axis donates its own orthonormal basis*, which is exactly
 the "different questions split the same state into different blends"
