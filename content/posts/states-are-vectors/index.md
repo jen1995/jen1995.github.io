@@ -345,7 +345,7 @@ $$
 $$
 
 This half-bracket $\langle \phi |$ is called a **bra** — and now
-Dirac's pun is complete: a bra $\langle \phi |$ and a ket
+Dirac's play on words is complete: a bra $\langle \phi |$ and a ket
 $|\psi\rangle$ together make a *bra-ket*, $\langle \phi | \psi \rangle$,
 which is the bracket of our inner product. What kind of machine is
 the bra? A general definition first. Let $V$ and $W$ be vector
