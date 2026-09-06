@@ -1,7 +1,7 @@
 ---
 title: "States Are Vectors"
-date: 2026-08-30
-draft: true
+date: 2026-09-06
+draft: false
 tags: ["quantum", "math"]
 summary: "The wreckage of the last post demanded a state object that blends outcomes with weights. We build one — inside the smallest quantum system there is — and discover that the blueprint was linear algebra all along: kets, inner products, bras, and one theorem of Riesz."
 math: true

@@ -84,14 +84,23 @@ Six hard-won gotchas (Markdown parses the page before KaTeX sees it):
    `\begin{aligned}` (`&=` per step) and stacked definitions with
    `\begin{gathered}`. Check every new formula at the preview's default width.
 
+Two smaller notes, learned on the quantum posts:
+
+- Inline `$...$` works inside a `<details><summary>` line: goldmark leaves
+  the summary text raw, and the client-side auto-render walks the whole DOM,
+  so `<summary>What is $|E_i\rangle \langle E_i|$?</summary>` renders.
+- Do not make a formula the link text: KaTeX re-renders it and the link
+  styling disappears, so the reader never sees a link. Put the link on the
+  words next to the formula instead.
+
 Tables, `> 💡` callout quotes, `<details>` blocks and code fences all work.
 
 ## Post ordering
 
 The posts list is **manually ordered** via `weight` in front matter (Hugo
 sorts weighted pages first, ascending; unweighted pages fall to the bottom).
-Current ladder: Fourier trilogy 10/20/30, Four Shades 40, Transformers 50,
-VAE 60. **Every new post must get a weight**, or it will sink below
+Current ladder: Fourier trilogy 10/20/30, Four Shades 40, Three Names 45,
+quantum road 47, 48, …, Transformers 50, VAE 60. **Every new post must get a weight**, or it will sink below
 everything weighted. Leave gaps (steps of 10) so future posts can slot in
 between.
 

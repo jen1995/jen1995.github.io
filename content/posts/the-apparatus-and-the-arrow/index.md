@@ -1,7 +1,7 @@
 ---
 title: "The Apparatus and the Arrow"
-date: 2026-08-30
-draft: true
+date: 2026-09-06
+draft: false
 tags: ["quantum", "physics"]
 summary: "The quantum road begins with no mathematics at all: a black box with an arrow, a window that only ever shows +1 or −1, and three experiments that quietly break the classical idea of what a measurement is."
 math: true
