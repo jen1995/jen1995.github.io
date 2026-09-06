@@ -599,10 +599,15 @@ $$
 $$
 
 The weight function $\psi(x)$ — one complex amplitude per position —
-is the celebrated **wavefunction**, and this single line is the bridge
-between the linear algebra of this post and the calculus this blog's
-Fourier road spent four posts on. But the line is written on credit
-twice over: what exactly is the ket $|x\rangle$, and what is
+is the celebrated **wavefunction**. Notice what this single line does:
+the coordinates of a state in the position basis are no longer a
+column of numbers but a *function* of $x$, so the vector language of
+this post and the function language of this blog's Fourier road meet
+here. Everything the Fourier road did to functions — integrate them,
+transform them — will apply to states; the concrete payoff, that the
+coordinates of a state in the momentum basis are the Fourier transform
+of its coordinates in the position basis, belongs to the dynamics post
+of this act. But the line is written on credit twice over: what exactly is the ket $|x\rangle$, and what is
 $\langle x | y \rangle$ if not a Kronecker delta? Making those symbols
 honest is the next post's whole job, and the answer is an old friend
 of this blog — the Dirac delta.
