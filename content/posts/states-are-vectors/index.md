@@ -135,7 +135,7 @@ axiom 3 possible: it guarantees that $\langle \psi | \psi \rangle$
 is real and stays positive under scaling.
 
 <details>
-<summary>Why anti-linearity is what makes positivity possible — two computations</summary>
+<summary>The two computations behind this claim</summary>
 
 First, axiom 2 with both arguments equal reads
 
