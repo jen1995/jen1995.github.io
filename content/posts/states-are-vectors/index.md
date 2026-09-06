@@ -20,7 +20,7 @@ below), and it is the same strategy this blog used for the Fourier
 road: build the machinery inside the smallest example that exhibits
 everything, and only then say the general words. Our smallest example
 is ready — the spin from the last post, a system with exactly two
-outcomes per question. Every abstract move we make will be checkable
+outcomes per measurement. Every abstract move we make will be checkable
 against experiments we have already run.
 
 One honesty note before we start, in the spirit of this road's rigor
@@ -460,9 +460,9 @@ Gram–Schmidt remark above. The infinite-dimensional case is harder;
 we return to it in the section on Hilbert spaces below.)
 For the spin, $\{|u\rangle, |d\rangle\}$ is
 one such basis — and so is $\{|r\rangle, |l\rangle\}$: *each
-measurement axis donates its own orthonormal basis*, which is exactly
-the "different questions split the same state into different blends"
-of the wishlist.
+measurement axis donates its own orthonormal basis* — which is exactly
+the wishlist's observation that different measurable quantities split
+the same state into different blends.
 
 Orthonormality is what makes coordinates effortless. Decompose
 $|\psi\rangle = \sum_i c_i |E_i\rangle$ and hit both sides with a
@@ -713,8 +713,8 @@ The wishlist, revisited:
 2. **A way to blend outcomes into states** — superposition with
    complex amplitudes; probabilities are squared magnitudes, subject
    to the promised derivation. ✓
-3. **Questions as mathematical actors** — each axis donated a basis,
-   but the *question itself* (spin along $\hat n$) still has no object
+3. **Measurable quantities as mathematical actors** — each axis donated
+   a basis, but the *quantity itself* (spin along $\hat n$) still has no object
    of its own. That is the observables post, two stops ahead.
 4. **Measurement as an operation on states** — same address.
 5. **Geometry must enter** — the $y$-axis states have already
