@@ -686,22 +686,22 @@ with the Fourier coefficients as the coordinates.
 — each coefficient $X[k]$ is the inner product of the signal with one
 basis oscillation — is the same statement in $\mathbb C^N$.
 
-<details>
-<summary>Fine print: completeness, separability, and where the proofs live</summary>
-
 Completeness is the property that separates honest infinite
 superpositions from wishful ones, and proving things about it is real
 functional analysis. Three facts we will quietly rely on, with
-pointers instead of proofs: every Hilbert space admits an orthonormal
-basis (not necessarily countable); every vector decomposes into at
-most countably many basis terms with coefficients
-$\langle E_i | \psi \rangle$; and the Hilbert spaces of quantum
-mechanics are *separable* — they admit countable orthonormal bases.
-Proofs: Sergeev's functional analysis lectures, pp. 29–32, and
-Yakovlev's *Functional spaces*, p. 96 for the general Riesz theorem
-(links below).
+pointers instead of proofs:
 
-</details>
+- every Hilbert space admits an orthonormal basis (not necessarily
+  countable) — this is the infinite-dimensional answer to the
+  Gram–Schmidt remark above;
+- every vector decomposes into at most countably many basis terms, with
+  coefficients $\langle E_i | \psi \rangle$ — "coordinates are inner
+  products" survives;
+- the Hilbert spaces of quantum mechanics are *separable*: they admit
+  countable orthonormal bases.
+
+Proofs: Sergeev's functional analysis lectures, pp. 29–32 (links in
+the references).
 
 ## What we built
 
