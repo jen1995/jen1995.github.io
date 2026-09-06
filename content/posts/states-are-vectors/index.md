@@ -502,7 +502,7 @@ any ket splits a quantum computation along a basis of our choosing.
 We will spend it constantly.
 
 <details>
-<summary>What kind of object is |E_i⟩⟨E_i|? A ket times a bra, in the column model</summary>
+<summary>What kind of object is $|E_i\rangle \langle E_i|$? A ket times a bra, in the column model</summary>
 
 A ket next to a bra, with nothing between them, may look like a
 misprint — we have only ever multiplied a bra *by* a ket. But the
