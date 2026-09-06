@@ -315,11 +315,12 @@ for right, $-\frac{1}{\sqrt 2}$ for left. Every $z$ measurement is
 blind to that sign — it sees only the squared magnitudes, $\frac{1}{2}$
 and $\frac{1}{2}$ in both cases — and yet the sign is physical
 information, because that apparatus reads it perfectly. This is
-the first quantum phenomenon that the vector formalism *predicted*
-rather than recorded: nothing in the bare experiment log of the last
-post said the two fifty-fifty states must be orthogonal — differing in
-the sign of one component, which is a very different thing from being
-opposite vectors.
+the first place where the vector formalism went beyond recording the
+experiments. The experiment log said only *that* right and left are
+perfectly distinguishable; the formalism says *what* carries the
+distinction — a relative sign between the two weights, a quantity that
+no $z$ measurement can see, and that no entry of the log ever
+mentioned.
 
 <details>
 <summary>The leftover freedom: global phase</summary>
