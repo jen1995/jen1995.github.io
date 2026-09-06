@@ -23,7 +23,7 @@ is ready — the spin from the last post, a system with exactly two
 outcomes per question. Every abstract move we make will be checkable
 against experiments we have already run.
 
-One honesty note before we start, in the spirit of this act's rigor
+One honesty note before we start, in the spirit of this road's rigor
 policy: everything in this post is proved for *finite-dimensional*
 spaces. The infinite-dimensional analogues are true but harder; we
 will flag each such point and put the references in collapsible cuts
@@ -48,7 +48,7 @@ prepared along $z$ and asked along $x$ behaved like "half $+1$, half
 $-1$" — the state must be able to *blend* definite outcomes with
 weights. Mathematics has a structure whose entire job is weighted
 blending: a *vector space*, where objects can be added and scaled. So
-here is the design decision that this whole act rests on:
+here is the design decision that this whole road rests on:
 
 **States are vectors. A general state is a linear combination of
 outcome states:**
@@ -257,7 +257,7 @@ posts away.)
 **Normalized means total probability one.** Here we must borrow from
 the future, and the loan is the largest of this post. *How exactly*
 the weights encode probabilities is a genuinely deep question — deep
-enough that a whole post of this act is reserved for it: there is a
+enough that a whole post of this road is reserved for it: there is a
 beautiful argument that, once weights carry probabilities at all,
 consistency across bases forces one specific formula and no other. For
 today we take that formula on credit. For a state
@@ -271,7 +271,7 @@ $$
 and likewise $P_d = |\alpha_d|^2$. The weights themselves are called
 **probability amplitudes** — they are not probabilities (they are
 complex; they can cancel each other in a superposition, which is
-exactly the freedom the act will spend later), but their squared
+exactly the freedom the road will spend later), but their squared
 magnitudes are. Two outcomes must exhaust all possibilities, so
 
 $$
@@ -498,7 +498,7 @@ $$
 $$
 
 This **resolution of identity** is the single most-used identity of
-the entire act: inserting $\hat I$ in this form between any bra and
+the entire road: inserting $\hat I$ in this form between any bra and
 any ket splits a quantum computation along a basis of our choosing.
 We will spend it constantly.
 
@@ -581,7 +581,7 @@ opening of the last post, $E_1, E_2, \dots$, infinitely many of them
 crowding together as they approach the ionization threshold (the
 levels go as $E_n \propto -1/n^2$ — see the
 [energy levels of hydrogen](https://en.wikipedia.org/wiki/Hydrogen_atom#Energy_levels)
-on Wikipedia; we will compute them in the last post of the act) — the state is an
+on Wikipedia; we will compute them in the last post of the road) — the state is an
 infinite superposition:
 
 $$
@@ -607,7 +607,7 @@ here. Everything the Fourier road did to functions — integrate them,
 transform them — will apply to states; the concrete payoff, that the
 coordinates of a state in the momentum basis are the Fourier transform
 of its coordinates in the position basis, belongs to the dynamics post
-of this act. But the line is written on credit twice over: what exactly is the ket $|x\rangle$, and what is
+of this road. But the line is written on credit twice over: what exactly is the ket $|x\rangle$, and what is
 $\langle x | y \rangle$ if not a Kronecker delta? Making those symbols
 honest is the next post's whole job, and the answer is an old friend
 of this blog — the Dirac delta.

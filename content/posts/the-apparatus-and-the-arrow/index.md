@@ -10,9 +10,9 @@ weight: 47
 
 The Fourier road of this blog [ended with a
 promise](/posts/the-theorem-with-three-names/#onward): see you in the
-quantum world. Welcome — this post opens act three.
+quantum world. Welcome — this post opens the quantum road.
 
-The plan of the act is deliberately modest. We will not build the whole
+The plan of the road is deliberately modest. We will not build the whole
 cathedral of quantum mechanics axiom by axiom. We will assemble a small
 set of principles — deeply, with proofs — and then spend them on four
 classic problems: a particle trapped in a box, quantum tunneling, the
@@ -190,7 +190,7 @@ continuous quantity — a projection, smoothly shrinking as the angle
 grows — is simply not what a measurement returns. (This is the same
 surprise the hydrogen atom serves: its electron radiates energy in a
 discrete menu of portions, each appearing with some probability — we
-will meet that menu again in the final post of the act.)
+will meet that menu again in the final post of the road.)
 
 **A measurement is not a reading; it is a preparation.** After the
 first measurement along a new axis, the outcome repeats along that axis
@@ -245,7 +245,7 @@ the surface of a sphere.
 
 ## Onward
 
-The road of the act, so the map is on the table from day one: states as
+The stations of the road, so the map is on the table from day one: states as
 vectors → the continuous basis and an old friend, the Dirac delta → 
 observables and where probabilities really come from → the qubit and
 the Bloch sphere, where today's apparatus gets its geometry back →
@@ -261,7 +261,7 @@ story.
 > in one click: a simulated apparatus you can orient and fire, all three
 > experiments rerun with as many rounds as you like, the erasure of the
 > old certainty verified on a thousand electrons — and a numerical peek
-> at the "squared and halved" curve the act is heading toward.
+> at the "squared and halved" curve the road is heading toward.
 
 ## References
 
