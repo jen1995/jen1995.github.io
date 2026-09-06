@@ -547,10 +547,35 @@ conjugated row of $|\chi\rangle$.
 
 </details>
 
-## When the menu is infinite
+## Any finite menu
 
 Everything above was built in two dimensions, but the definitions
-never used the number two. If a measurement offers countably many
+never used the number two. Suppose a measurement offers $n$ outcomes
+instead of two — some quantity with a menu of $n$ values. Then:
+
+- each outcome gets its own ket, $|E_1\rangle, \dots, |E_n\rangle$,
+  and a general state is a superposition
+  $|\psi\rangle = \sum_{i=1}^{n} c_i \, |E_i\rangle$ with complex
+  amplitudes;
+- the column model is $\mathbb C^n$ — columns of $n$ complex numbers —
+  with the inner product
+  $\langle \phi | \psi \rangle = \sum_{i=1}^{n} \phi_i^* \psi_i$
+  once the basis is declared orthonormal, $\langle E_i | E_j \rangle = \delta_{ij}$;
+- outcome kets are mutually orthogonal (distinct outcomes exclude each
+  other), the amplitudes are the coordinates
+  $c_i = \langle E_i | \psi \rangle$, and the probability of the
+  $i$-th outcome is $|c_i|^2$, with $\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$;
+- bras are rows of $n$ entries, Riesz's theorem holds — its proof
+  above was already written for a general $n$ — and the resolution of
+  identity has $n$ terms, $\hat I = \sum_{i=1}^{n} |E_i\rangle \langle E_i|$.
+
+Nothing changes but the size. Every finite-dimensional statement of
+this post is a statement about $\mathbb C^n$ for some $n$; the spin
+was simply the case $n = 2$.
+
+## When the menu is infinite
+
+Finite menus are settled. If a measurement offers countably many
 outcomes — the hydrogen atom's energy menu $E_1, E_2, \dots$ from the
 opening of the last post — the state is an infinite superposition:
 
