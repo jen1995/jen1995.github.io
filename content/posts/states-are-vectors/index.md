@@ -422,8 +422,14 @@ $$
 
 so $|\phi\rangle$ represents $L$. Uniqueness: if $|\phi'\rangle$ also
 represents $L$, then $\langle \phi - \phi' | \psi \rangle = 0$ for
-every $|\psi\rangle$; take $|\psi\rangle = |\phi\rangle - |\phi'\rangle$
-and positive definiteness forces $|\phi\rangle = |\phi'\rangle$. (For
+every $|\psi\rangle$ — in particular for
+$|\psi\rangle = |\phi\rangle - |\phi'\rangle$ itself:
+
+$$
+\langle \phi - \phi' \,|\, \phi - \phi' \rangle = 0 \quad \Longrightarrow \quad |\phi\rangle - |\phi'\rangle = 0
+$$
+
+by positive definiteness, i.e. $|\phi\rangle = |\phi'\rangle$. (For
 the infinite-dimensional version see the functional-analysis
 references at the end — the statement survives, the proof needs
 completeness.)
