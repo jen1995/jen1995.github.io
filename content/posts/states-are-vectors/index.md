@@ -533,9 +533,14 @@ $$
 read left to right — the bra eats $|\psi\rangle$ and returns the
 number $c_i$, which then scales the ket $|E_i\rangle$. So whatever
 ket goes in, what comes out is a multiple of the single vector
-$|E_i\rangle$ — and that is exactly what it means for a matrix to have
-**rank one**: its columns are all proportional to one column, here the
-column of $|E_i\rangle$. In general, for any two kets, the outer product
+$|E_i\rangle$: the set of all possible outputs — the *image* of the
+matrix — is the one-dimensional line through $|E_i\rangle$. The
+[rank](https://en.wikipedia.org/wiki/Rank_(linear_algebra)) of a matrix
+is precisely the dimension of its image, so this matrix has
+**rank one**. In coordinates the same fact looks like this: the
+columns of a matrix are the images of the basis vectors, so here every
+column is a multiple of the column of $|E_i\rangle$ — for
+$|u\rangle\langle u|$ above, the columns $(1, 0)^T$ and $(0, 0)^T$. In general, for any two kets, the outer product
 $|\phi\rangle \langle \chi|$ is the rank-one matrix with entries
 $\phi_i \, \chi_j^*$ — the column of $|\phi\rangle$ times the
 conjugated row of $|\chi\rangle$.
