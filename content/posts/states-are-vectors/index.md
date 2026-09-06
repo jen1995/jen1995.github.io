@@ -162,8 +162,8 @@ even be stated.
 
 Now that we have an inner product, let us agree that our basis kets
 are **orthonormal** — each of unit length, and orthogonal to each
-other. (Agreeing costs nothing: any basis can be turned into an
-orthonormal one by the
+other. (Agreeing costs nothing: in finite dimensions any basis can be
+turned into an orthonormal one by the
 [Gram–Schmidt process](https://en.wikipedia.org/wiki/Gram%E2%80%93Schmidt_process);
 the theorem with proof is on p. 54 of Panov's lectures — see the
 references.) In formulas:
