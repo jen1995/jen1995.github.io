@@ -455,8 +455,8 @@ $$
 $$
 
 (In finite dimensions such a basis always exists — that was the
-Gram–Schmidt remark above; the infinite-dimensional case is harder and
-is deferred to the cut at the end of the post.)
+Gram–Schmidt remark above. The infinite-dimensional case is harder;
+we return to it in the section on Hilbert spaces below.)
 For the spin, $\{|u\rangle, |d\rangle\}$ is
 one such basis — and so is $\{|r\rangle, |l\rangle\}$: *each
 measurement axis donates its own orthonormal basis*, which is exactly
