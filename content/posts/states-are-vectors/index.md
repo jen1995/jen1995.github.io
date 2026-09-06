@@ -336,9 +336,23 @@ for the qubit post; it deserves the full stage.
 
 The notation $\langle \phi | \psi \rangle$ looks like an object
 $\langle \phi |$ acting on an object $|\psi\rangle$ — and it can be
-read exactly that way. A **bra** $\langle \phi |$ is a *linear
-functional*: a linear map that eats a ket and returns a complex
-number,
+read exactly that way, once we have one general definition.
+
+Let $V$ and $W$ be vector spaces over $\mathbb C$. A map
+$\mathcal A : V \to W$ is called **linear** if it respects both
+operations of a vector space — for all vectors $u, v \in V$ and every
+scalar $\lambda \in \mathbb C$,
+
+$$
+\mathcal A (u + v) = \mathcal A u + \mathcal A v, \qquad \mathcal A (\lambda v) = \lambda \, \mathcal A v.
+$$
+
+A linear map whose target space is the scalars themselves,
+$L : V \to \mathbb C$, is called a **linear functional**: it eats a
+vector and returns a number, linearly.
+
+Now the reading of the bracket. A **bra** $\langle \phi |$ is a
+linear functional on the space of kets,
 
 $$
 \langle \phi | : \; V \to \mathbb C, \qquad |\psi\rangle \mapsto \langle \phi | \psi \rangle.
