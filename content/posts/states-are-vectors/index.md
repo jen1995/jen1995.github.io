@@ -314,13 +314,7 @@ between them is the sign of the weight on $|d\rangle$: $+\frac{1}{\sqrt 2}$
 for right, $-\frac{1}{\sqrt 2}$ for left. Every $z$ measurement is
 blind to that sign — it sees only the squared magnitudes, $\frac{1}{2}$
 and $\frac{1}{2}$ in both cases — and yet the sign is physical
-information, because that apparatus reads it perfectly. This is
-the first place where the vector formalism went beyond recording the
-experiments. The experiment log said only *that* right and left are
-perfectly distinguishable; the formalism says *what* carries the
-distinction — a relative sign between the two weights, a quantity that
-no $z$ measurement can see, and that no entry of the log ever
-mentioned.
+information, because that apparatus reads it perfectly.
 
 <details>
 <summary>The leftover freedom: global phase</summary>
