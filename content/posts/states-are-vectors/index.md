@@ -104,24 +104,6 @@ $$
 added and scaled component by component. This space is called
 $\mathbb C^2$.
 
-The dimension of the space is a physical statement, and it splits
-into two claims of very different weight. That the space is *at least*
-two-dimensional is cheap: up and down are mutually exclusive
-preparations, so neither ket can be a multiple of the other — no
-choice of weight turns certainly-up into certainly-down. The real
-content is the claim that the space is *at most* two-dimensional:
-every state of the spin, prepared along **any** axis whatsoever, is
-already some blend $\alpha_u |u\rangle + \alpha_d |d\rangle$ of these
-two kets. That is not a consequence of "the window shows two values" —
-a priori, the state prepared along $x$ could have needed a direction
-of its own. It is the mathematical form of "there is no more to know":
-a third dimension would be storage room for information that no
-experiment of the last post ever revealed. Below, the claim faces its
-first test — the right and left states will have to fit inside these
-same two dimensions, and they will.
-
-![The dimension, two claims: |d⟩ lies on no multiple of |u⟩ (at least two); every preparable state lies in their plane, the crossed-out third direction is never needed (at most two)](dimension_two.png)
-
 ## The inner product
 
 A vector space knows how to blend, but the wishlist also asked for
