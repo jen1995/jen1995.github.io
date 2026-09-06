@@ -727,8 +727,10 @@ Next stop: the continuous basis, done honestly. The kets $|x\rangle$
 of the wavefunction line need an orthogonality relation, and it cannot
 be a Kronecker delta — the guest post that opens the door walks from
 Kronecker's $\delta_{ij}$ to Dirac's $\delta(x-y)$ by an explicit
-continuum limit, meeting the delta of the Fourier road's Part 1
-coming the other way. After that: observables as operators, and the
+continuum limit, meeting the delta that [Part 1 of the Fourier
+road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+built coming the other way — as the limit of shrinking averaging
+windows. After that: observables as operators, and the
 Born rule earned rather than postulated.
 
 ## References
