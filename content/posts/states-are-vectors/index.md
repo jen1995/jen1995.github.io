@@ -730,8 +730,7 @@ be a Kronecker delta — the guest post that opens the door walks from
 Kronecker's $\delta_{ij}$ to Dirac's $\delta(x-y)$ by an explicit
 continuum limit, meeting the delta that [Part 1 of the Fourier
 road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
-built coming the other way — as the limit of shrinking averaging
-windows. After that: observables as operators, and the
+built coming the other way. After that: observables as operators, and the
 Born rule — the squared-magnitude rule we took on credit today — earned
 rather than postulated.
 
