@@ -431,51 +431,9 @@ $$
 
 by positive definiteness, i.e. $|\phi\rangle = |\phi'\rangle$.
 
-*A basis-free proof.* The construction above used an orthonormal
-basis; Panov's lectures (Theorem 3.9.3, pp. 62–63) prove the same
-theorem without choosing one. Consider the map that sends each ket to
-its bra,
-
-$$
-|\phi\rangle \; \mapsto \; \langle \phi | = \langle \phi | \cdot \rangle, \qquad V \to V^*.
-$$
-
-It respects sums, and it respects scalars up to conjugation
-(anti-linearity in the first slot) — which does not affect the
-dimension count below. It is injective: if $\langle \phi |$ is the
-zero functional, then $\langle \phi | \psi \rangle = 0$ for every
-$|\psi\rangle$, in particular $\langle \phi | \phi \rangle = 0$, so
-$|\phi\rangle = 0$ by positive definiteness. Finally,
-$\dim V^* = \dim V$ in finite dimensions (a dual basis has as many
-elements as the basis it is dual to), and an injective map between
-spaces of equal finite dimension is also surjective — the rank–nullity
-theorem. So every functional is the bra of exactly one ket. Panov's
-point in calling the isomorphism *canonical*: the map itself was
-written down with no basis in sight; a basis appeared only inside the
-proof.
-
 (For the infinite-dimensional version see the functional-analysis
 references at the end — the statement survives, the proof needs
 completeness.)
-
-</details>
-
-<details>
-<summary>A worthwhile subtlety: when is the bra "the conjugate transpose"?</summary>
-
-In the column model one often hears: the bra of a column is its
-conjugate transpose row. True — **but only in an orthonormal basis.**
-Riesz's theorem promises a representing vector; it does not promise
-that the row of numbers written in *whatever* basis you have equals
-that vector conjugated. Redo the proof above in a basis that is not
-orthonormal and the cross terms $\langle E_i | E_j \rangle$ no longer
-collapse, so the components of the representing vector pick up the
-geometry of the basis. In this act we work in orthonormal bases
-throughout, where the slogan is safe:
-
-$$
-|\psi\rangle = \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix} \quad \Longleftrightarrow \quad \langle \psi | = \begin{pmatrix} c_1^* & \cdots & c_n^* \end{pmatrix}.
-$$
 
 </details>
 
