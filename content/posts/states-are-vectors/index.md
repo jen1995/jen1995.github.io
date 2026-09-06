@@ -578,9 +578,11 @@ was simply the case $n = 2$.
 Finite menus are settled. If a measurement offers countably many
 outcomes — the bound-state energies of the hydrogen atom from the
 opening of the last post, $E_1, E_2, \dots$, infinitely many of them
-crowding together as they approach the ionization threshold (we will
-compute $E_n \propto -1/n^2$ in the last post of the act) — the state
-is an infinite superposition:
+crowding together as they approach the ionization threshold (the
+levels go as
+[$E_n \propto -1/n^2$](https://en.wikipedia.org/wiki/Hydrogen_atom#Energy_levels);
+we will compute them in the last post of the act) — the state is an
+infinite superposition:
 
 $$
 |\psi\rangle = \sum_{i=1}^{\infty} c_i \, |E_i\rangle.
