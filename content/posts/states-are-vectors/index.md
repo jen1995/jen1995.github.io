@@ -347,9 +347,10 @@ $$
 This half-bracket $\langle \phi |$ is called a **bra** — and now
 Dirac's play on words is complete: a bra $\langle \phi |$ and a ket
 $|\psi\rangle$ together make a *bra-ket*, $\langle \phi | \psi \rangle$,
-which is the bracket of our inner product. What kind of machine is
-the bra? A general definition first. Let $V$ and $W$ be vector
-spaces over $\mathbb C$. A map $\mathcal A : V \to W$ is called
+which is the bracket of our inner product.
+
+What kind of machine is the bra? A general definition first. Let $V$
+and $W$ be vector spaces over $\mathbb C$. A map $\mathcal A : V \to W$ is called
 **linear** if it respects both operations of a vector space — for all
 vectors $u, v \in V$ and every scalar $\lambda \in \mathbb C$,
 
