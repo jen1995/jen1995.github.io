@@ -104,7 +104,11 @@ construction is spelled out in the cut below). For our integrals even
 this is not available: the kets $|x\rangle$ will turn out not to be
 elements of the Hilbert space at all — their norm is infinite, as we
 will see — so a limit of the sums $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$
-in the norm has nowhere to live. We therefore take the sums themselves
+in the norm has nowhere to live. (This is not a retreat from the last
+post's promise that the space of states is a Hilbert space. The
+*states* $|\psi\rangle$ do live there; the position kets $|x\rangle$
+are not states, and we will say precisely what they are once their
+norm has been computed.) We therefore take the sums themselves
 as the *definition*: the integral $\int a(x)\, |x\rangle\, dx$ is
 shorthand for the family of finite sums
 
@@ -316,13 +320,39 @@ $\lVert\, |x_i\rangle \,\rVert = 1 / \sqrt{\Delta x}$, and it
 **diverges** as $\Delta x \to 0$. Whatever the limiting objects
 $|x\rangle$ are, they are not unit vectors, not normalizable vectors,
 not elements of the Hilbert space at all. That is why "basis" has been
-in scare quotes since the first paragraph — and it is the first
-appearance of a theme the road will return to: position is a
-measurable quantity whose menu of outcomes is a continuum, and such
-quantities have "eigenvectors" that live just outside the space of
-states. (The functional-analysis name for a menu of this kind is a
-*continuous spectrum*; the box, the tunnel and the hydrogen atom will
-show all three kinds — discrete, continuous, and mixed.)
+in scare quotes since the first paragraph.
+
+Does this contradict the last post, where the space of states was
+declared a Hilbert space? No — and the distinction is worth stating
+carefully, because it will recur. The space of states is still the
+Hilbert space $L^2$ of square-integrable wavefunctions: every physical
+state $|\psi\rangle$, every honest superposition, lives there. But
+$|x\rangle$ is **not a state**. Physically, "the particle is exactly
+at the point $x$" is not a preparation any apparatus can make — a
+state of definite position would have infinite norm, and its
+probabilities could not sum to one. Mathematically, $|x\rangle$ is a
+*generalized vector*, an object of the same kind as the delta itself:
+it exists only through what it does to honest states. The bra
+$\langle x |$ is the functional "evaluate the wavefunction at $x$",
+$\langle x | \psi \rangle = \psi(x)$, and this functional is *not* the
+inner product with any element of $L^2$ — the last post's Riesz
+theorem does not apply to it, because evaluation at a point is not a
+bounded functional on $L^2$. So the "continuous basis" is a basis in a
+generalized sense: every honest state has an expansion
+$\int \psi(x)\, |x\rangle\, dx$ along it, while the "basis vectors"
+themselves stand just outside the space. The rigorous home for this
+arrangement is a *rigged Hilbert space* — a triple
+$\Phi \subset \mathcal H \subset \Phi^*$ of nice test states, the
+Hilbert space, and the generalized vectors, with $|x\rangle \in \Phi^*$
+— which we name and do not build.
+
+This is also the first appearance of a theme the road will return to:
+position is a measurable quantity whose menu of outcomes is a
+continuum, and such quantities have "eigenvectors" that live just
+outside the space of states. (The functional-analysis name for a menu
+of this kind is a *continuous spectrum*; the box, the tunnel and the
+hydrogen atom will show all three kinds — discrete, continuous, and
+mixed.)
 
 ## Taking the limit
 
