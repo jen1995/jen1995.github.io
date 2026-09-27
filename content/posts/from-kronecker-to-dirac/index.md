@@ -100,7 +100,7 @@ simplest possible way — coordinate by coordinate. For
 $\mathbf f = (f_1, \dots, f_k)$ with values in $\mathbb R^k$,
 
 $$
-\int_a^b \mathbf f\, dx := \left( \int_a^b f_1\, dx, \; \dots, \; \int_a^b f_k\, dx \right),
+\int_a^b \mathbf f\, dx := \left( \int_a^b f_1\, dx, \; \dots, \; \int_a^b f_k\, dx \right).
 $$
 
 The integral sums come along for free: a Riemann sum of a
