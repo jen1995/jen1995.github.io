@@ -331,11 +331,22 @@ declared a Hilbert space? No — and the distinction is worth stating
 carefully, because it will recur. The space of states is still the
 Hilbert space $L^2$ of square-integrable wavefunctions: every physical
 state $|\psi\rangle$, every honest superposition, lives there. But
-$|x\rangle$ is **not a state**. Physically, "the particle is exactly
-at the point $x$" is not a preparation any apparatus can make — a
-state of definite position would have infinite norm, and its
-probabilities could not sum to one. Mathematically, $|x\rangle$ is a
-*generalized vector*, an object of the same kind as the delta itself:
+$|x\rangle$ is **not a state** — and, in particular, no state
+$|\psi\rangle$ can be equal to a single $|x_0\rangle$. Suppose it
+were: its wavefunction would be $\psi(x) = \langle x | x_0 \rangle = \delta(x - x_0)$,
+and $\langle \psi | \psi \rangle = \int |\delta(x - x_0)|^2\, dx$ is
+not even a divergent integral, it is an undefined expression — the
+delta cannot be squared. What *can* be prepared is a state
+concentrated *near* $x_0$: a narrow bump of width $\sigma$, say a
+Gaussian, which is an honest element of $L^2$ for every $\sigma \gt 0$.
+But as $\sigma \to 0$ these states converge to nothing in $L^2$ — the
+normalized bumps have no limit in the norm — so "exactly at $x_0$" is
+not a rare state but a nonexistent one, approachable to any precision
+and never reached. This is a genuine difference from the discrete
+menus of the first two posts, where every outcome had a state of its
+own ($|u\rangle$, $|d\rangle$): for a continuous menu, a definite
+outcome has no state, only approximations. Mathematically, then,
+$|x\rangle$ is a *generalized vector*, an object of the same kind as the delta itself:
 it exists only through what it does to honest states. The bra
 $\langle x |$ is the functional "evaluate the wavefunction at $x$",
 $\langle x | \psi \rangle = \psi(x)$, and this functional is *not* the
