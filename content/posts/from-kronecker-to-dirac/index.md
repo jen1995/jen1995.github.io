@@ -109,9 +109,10 @@ integrate each coordinate — so it applies in any vector space with a
 fixed basis. The integral
 sums come along for free: a Riemann sum of a vector-valued function is
 $\sum_i \mathbf f(x_i)\, \Delta x$ — a finite linear combination of its
-*values*, which coordinate by coordinate is just the ordinary Riemann
-sum of each coordinate — and Rudin's integral is the limit of these
-sums, coordinate by coordinate. Our integral
+*values*, hence itself a vector, whose $j$-th coordinate is the
+ordinary numerical Riemann sum $\sum_i f_j(x_i)\, \Delta x$ — and
+Rudin's integral is the limit of these sums, coordinate by
+coordinate. Our integral
 $\int a(x)\, |x\rangle\, dx$ is meant exactly this way, with the
 "basis" $\{ |x\rangle \}$ — except that its coordinates are labeled by
 a continuum, and we do not yet know what $\langle x | y \rangle$ is,
