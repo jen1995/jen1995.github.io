@@ -21,4 +21,4 @@ Current and past series:
 - **Transformers from scratch** — a step-by-step walk from RNNs with attention to the full Transformer architecture.
 - **Generative models** — VAEs and friends, with the math worked out carefully.
 
-You can find Eugenia on [GitHub](https://github.com/jen1995), reach me on Telegram: [@evg3307](https://t.me/evg3307), or write me an email: [evg3307@yandex.ru](mailto:evg3307@yandex.ru).
+You can find Eugenia on [GitHub](https://github.com/jen1995), reach her on Telegram: [@evg3307](https://t.me/evg3307), or write her an email: [evg3307@yandex.ru](mailto:evg3307@yandex.ru). Ivan is on GitHub as [ipetr0v](https://github.com/ipetr0v).
