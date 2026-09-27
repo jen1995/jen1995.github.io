@@ -341,7 +341,12 @@ themselves stand just outside the space. The rigorous home for this
 arrangement is a *rigged Hilbert space* — a triple
 $\Phi \subset \mathcal H \subset \Phi^*$ of nice test states, the
 Hilbert space, and the generalized vectors, with $|x\rangle \in \Phi^*$
-— which we name and do not build.
+— which we name and do not build. The construction, and the theorem
+that every honest state expands along generalized eigenvectors, are
+due to Gelfand and Vilenkin (*Generalized Functions*, vol. 4); the
+gentlest entry is de la Madrid's article on the role of the rigged
+Hilbert space in quantum mechanics, which works it all out on one
+solvable example — both are in the references.
 
 This is also the first appearance of a theme the road will return to:
 position is a measurable quantity whose menu of outcomes is a
@@ -606,6 +611,17 @@ postulated.
   (appendix A),
   [derivation of the four-wave kinetic equation in action-angle variables](https://arxiv.org/abs/1911.13057),
   and [discretized light-cone quantization](https://arxiv.org/abs/hep-ph/9910203).
+- I. M. Gelfand, N. Ya. Vilenkin. *Generalized Functions, vol. 4:
+  Applications of Harmonic Analysis*. Academic Press, 1964 (Russian
+  original: И. М. Гельфанд, Н. Я. Виленкин, *Обобщённые функции, вып. 4:
+  Некоторые применения гармонического анализа. Оснащённые гильбертовы
+  пространства*, Физматгиз, 1961) — chapter I, §4: rigged Hilbert spaces
+  and the expansion in generalized eigenvectors.
+- R. de la Madrid. [The role of the rigged Hilbert space in quantum
+  mechanics](https://arxiv.org/abs/quant-ph/0502053). *European Journal
+  of Physics* 26 (2005), 287–312 — a pedestrian introduction on one
+  exactly solvable example; the place to see why $|x\rangle$ lives
+  outside the Hilbert space and how Dirac's formalism is made rigorous.
 - W. Rudin. *Principles of Mathematical Analysis*, 3rd ed. McGraw-Hill,
   1976 — §6.23, the coordinate-wise definition of the integral of a vector-valued function.
 - This blog's own first meeting with the delta:
