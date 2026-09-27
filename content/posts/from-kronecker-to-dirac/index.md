@@ -103,22 +103,23 @@ $$
 \int_a^b \mathbf f\, dx := \left( \int_a^b f_1\, dx, \; \dots, \; \int_a^b f_k\, dx \right),
 $$
 
-Rudin states this for $\mathbb R^k$, but nothing in the recipe uses
-$\mathbb R^k$ specifically — pick a basis, expand the integrand in it,
-integrate each coordinate — so it applies in any vector space with a
-fixed basis. The integral
-sums come along for free: a Riemann sum of a vector-valued function is
-$\sum_i \mathbf f(x_i)\, \Delta x$ — a finite linear combination of its
-*values*, hence itself a vector, whose $j$-th coordinate is the
-ordinary numerical Riemann sum $\sum_i f_j(x_i)\, \Delta x$ — and
-Rudin's integral is the limit of these sums, coordinate by
-coordinate. Our integral
-$\int a(x)\, |x\rangle\, dx$ is meant exactly this way, with the
-"basis" $\{ |x\rangle \}$ — except that its coordinates are labeled by
-a continuum, and we do not yet know what $\langle x | y \rangle$ is,
-so we cannot even write those coordinates down. Hence the plan: on a
-grid the basis is finite, the integrand is $a(x)\, |x\rangle$, and its
-Riemann sums — the **discretized states** —
+The integral sums come along for free: a Riemann sum of a
+vector-valued function is $\sum_i \mathbf f(x_i)\, \Delta x$ — a finite
+linear combination of its *values*, hence itself a vector, whose
+$j$-th coordinate is the ordinary numerical Riemann sum
+$\sum_i f_j(x_i)\, \Delta x$ — and Rudin's integral is the limit of
+these sums, coordinate by coordinate.
+
+The definition needs coordinates, and for $\mathbb R^k$ they are
+given: $k$ of them, along the standard axes. For our integrand
+$a(x)\, |x\rangle$ this is exactly where the trouble starts. Which
+coordinates? The natural axes are the position kets themselves, and
+the coordinate of $|x\rangle$ along $|y\rangle$ is $\langle y | x \rangle$
+— the very object this post is trying to find. Worse, there is one
+axis per real number, so "$k$" is not a number at all. Hence the plan:
+on a grid there are finitely many kets, we *declare* them to be the
+coordinate axes, and the Riemann sums of the integrand — the
+**discretized states** —
 
 $$
 |\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y
