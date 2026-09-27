@@ -531,7 +531,14 @@ $\sum_j f(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y$ converge to
 $f(x)$. That is the same tested sum, with the same conventions and the
 same limit, as in the previous section. The arrow above is universally
 used as shorthand for this statement, and now we know what it
-abbreviates.
+abbreviates. It also has a classical name: in Gelfand and Shilov's
+*Generalized Functions*, vol. 1, a sequence of functions $f_\nu$ is
+called **delta-like** if its integrals over any interval stay bounded
+and $\int_a^b f_\nu \to 1$ when $a \lt 0 \lt b$ and $\to 0$ otherwise —
+and every delta-like sequence converges weakly to $\delta$ (chapter I,
+§2.5). Our spikes, read as step functions of width $\Delta x$ and
+height $1/\Delta x$ centered at $x$, satisfy both conditions on sight,
+so the identification above is a special case of that theorem.
 
 <details>
 <summary>The same delta, the other way round — Part 1's road</summary>
@@ -611,6 +618,11 @@ postulated.
   (appendix A),
   [derivation of the four-wave kinetic equation in action-angle variables](https://arxiv.org/abs/1911.13057),
   and [discretized light-cone quantization](https://arxiv.org/abs/hep-ph/9910203).
+- I. M. Gelfand, G. E. Shilov. *Generalized Functions, vol. 1:
+  Properties and Operations*. Academic Press, 1964 (Russian original:
+  И. М. Гельфанд, Г. Е. Шилов, *Обобщённые функции и действия над
+  ними*, Физматгиз, 1959) — chapter I, §1.8 (weak convergence of
+  generalized functions) and §2.5 (delta-like sequences).
 - I. M. Gelfand, N. Ya. Vilenkin. *Generalized Functions, vol. 4:
   Applications of Harmonic Analysis*. Academic Press, 1964 (Russian
   original: И. М. Гельфанд, Н. Я. Виленкин, *Обобщённые функции, вып. 4:
