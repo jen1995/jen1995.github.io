@@ -104,21 +104,25 @@ $$
 $$
 
 and the same recipe works in any space with a fixed basis: expand the
-integrand in the basis and integrate each coordinate. Our integral
+integrand in the basis and integrate each coordinate. The integral
+sums come along for free: a Riemann sum of a vector-valued function is
+$\sum_i \mathbf f(x_i)\, \Delta x$ — a finite linear combination of its
+*values*, which coordinate by coordinate is just the ordinary Riemann
+sum of each coordinate — and Rudin's integral is the limit of these
+sums, coordinate by coordinate. Our integral
 $\int a(x)\, |x\rangle\, dx$ is meant exactly this way, with the
 "basis" $\{ |x\rangle \}$ — except that its coordinates are labeled by
 a continuum, and we do not yet know what $\langle x | y \rangle$ is,
 so we cannot even write those coordinates down. Hence the plan: on a
-grid the basis is finite, the coordinate along $|x_i\rangle$ is the
-Riemann-sum coefficient $a(x_i)\, \Delta x$, and the integrals become
-the **discretized states**
+grid the basis is finite, the integrand is $a(x)\, |x\rangle$, and its
+Riemann sums — the **discretized states** —
 
 $$
 |\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y
 $$
 
-— finite linear combinations of kets, so everything we do with them is
-the finite-dimensional linear algebra of the last post. Every limit
+are finite linear combinations of kets, so everything we do with them
+is the finite-dimensional linear algebra of the last post. Every limit
 $\Delta x \to 0$ in this post will be a limit of *numbers* computed
 from these finite sums, never a limit of kets.
 
