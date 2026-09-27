@@ -113,7 +113,12 @@ completeness — the defining property of a Hilbert space from the last
 post — guarantees that they converge. The integral obeys the expected
 rules; in particular the inner product passes inside,
 $\langle \phi \,|\, \int v(x)\, dx \rangle = \int \langle \phi | v(x) \rangle\, dx$.
-The general theory, for measurable rather than continuous $v$, is the
+This construction is in the textbooks: for functions with values in
+$\mathbb R^k$ in Rudin's *Principles of Mathematical Analysis*,
+§6.23–6.25, and for values in a general Banach space in Dieudonné's
+*Foundations of Modern Analysis*, chapter VIII, §7 (see the references
+below). The general theory, for measurable rather than continuous
+$v$, is the
 [Bochner integral](https://en.wikipedia.org/wiki/Bochner_integral).
 None of this applies to $\int a(x)\, |x\rangle\, dx$ directly, because
 $|x\rangle \notin \mathcal H$ — but the last identity is the reading
@@ -626,5 +631,11 @@ postulated.
   (appendix A),
   [derivation of the four-wave kinetic equation in action-angle variables](https://arxiv.org/abs/1911.13057),
   and [discretized light-cone quantization](https://arxiv.org/abs/hep-ph/9910203).
+- W. Rudin. *Principles of Mathematical Analysis*, 3rd ed. McGraw-Hill,
+  1976 — §6.23–6.25, integration of vector-valued functions.
+- J. Dieudonné. *Foundations of Modern Analysis*. Academic Press, 1960
+  (Russian translation: Ж. Дьедонне, *Основы современного анализа*,
+  Мир, 1964) — chapter VIII, §7: the integral of a function with values
+  in a Banach space, built from Riemann-type sums and completeness.
 - This blog's own first meeting with the delta:
   [Part 1 of the Fourier road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal).
