@@ -8,7 +8,7 @@ ShowReadingTime: false
 comments: false
 ---
 
-Hi! I'm Eugenia Elistratova — I love mathematics, machine learning and spontaneous shenanigans. **Cohomology Zero** is a blog where I write about machine learning and about math for its own sake.
+Hi! I'm Eugenia Elistratova — I love mathematics and machine learning, and my spontaneous madness indicator is off the charts. **Cohomology Zero** is a blog where I write about machine learning and about math for its own sake.
 
 And hi, I'm [Ivan Petrov](https://github.com/ipetr0v) — I practice safe programming, collect cat memes, and nerd out fearlessly :) I joined the blog for the quantum road, starting with the post on the Dirac delta.
 
