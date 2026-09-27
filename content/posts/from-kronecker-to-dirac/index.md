@@ -627,8 +627,11 @@ postulated.
   Applications of Harmonic Analysis*. Academic Press, 1964 (Russian
   original: И. М. Гельфанд, Н. Я. Виленкин, *Обобщённые функции, вып. 4:
   Некоторые применения гармонического анализа. Оснащённые гильбертовы
-  пространства*, Физматгиз, 1961) — chapter I, §4: rigged Hilbert spaces
-  and the expansion in generalized eigenvectors.
+  пространства*, Физматгиз, 1961) — chapter I, §4 (pp. 133–161):
+  generalized eigenvectors (§4.1), rigged Hilbert spaces (§4.2), and
+  Theorem 5′ (§4.5, p. 161): a self-adjoint operator in a rigged
+  Hilbert space has a complete system of generalized eigenvectors —
+  the theorem behind $\int \psi(x)\, |x\rangle\, dx$.
 - R. de la Madrid. [The role of the rigged Hilbert space in quantum
   mechanics](https://arxiv.org/abs/quant-ph/0502053). *European Journal
   of Physics* 26 (2005), 287–312 — a pedestrian introduction on one
