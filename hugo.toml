@@ -30,7 +30,7 @@ pagination.pagerSize = 10
 
   [params.homeInfoParams]
     Title = "Cohomology Zero 👋"
-    Content = "Hi, I'm Eugenia Elistratova — I love mathematics and machine learning, and my spontaneous madness indicator is off the charts — and since the quantum road this blog has a second author: [Ivan Petrov](https://github.com/ipetr0v), who practices safe programming and collects cat memes. Here we unapologetically nerd out about machine learning and mathematics — transformers, generative models, and math for its own sake. The name is a nod to [this meme](https://youtu.be/mqAf5lOJZew): we're still waiting for the environment to answer — cohomology: zero?.. Find me on Telegram: [@evg3307](https://t.me/evg3307) or by email: [evg3307@yandex.ru](mailto:evg3307@yandex.ru)."
+    Content = "Hi, I'm Eugenia Elistratova — I love mathematics and machine learning, and my [spontaneous madness indicator](https://youtu.be/s82aHuKtjJU?t=58) is off the charts — and since the quantum road this blog has a second author: [Ivan Petrov](https://github.com/ipetr0v), who practices safe programming and collects cat memes. Here we unapologetically nerd out about machine learning and mathematics — transformers, generative models, and math for its own sake. The name is a nod to [this meme](https://youtu.be/mqAf5lOJZew): we're still waiting for the environment to answer — cohomology: zero?.. Find me on Telegram: [@evg3307](https://t.me/evg3307) or by email: [evg3307@yandex.ru](mailto:evg3307@yandex.ru)."
 
   [[params.socialIcons]]
     name = "github"
