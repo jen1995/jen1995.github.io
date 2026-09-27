@@ -103,8 +103,10 @@ $$
 \int_a^b \mathbf f\, dx := \left( \int_a^b f_1\, dx, \; \dots, \; \int_a^b f_k\, dx \right),
 $$
 
-and the same recipe works in any space with a fixed basis: expand the
-integrand in the basis and integrate each coordinate. The integral
+Rudin states this for $\mathbb R^k$, but nothing in the recipe uses
+$\mathbb R^k$ specifically — pick a basis, expand the integrand in it,
+integrate each coordinate — so it applies in any vector space with a
+fixed basis. The integral
 sums come along for free: a Riemann sum of a vector-valued function is
 $\sum_i \mathbf f(x_i)\, \Delta x$ — a finite linear combination of its
 *values*, which coordinate by coordinate is just the ordinary Riemann
