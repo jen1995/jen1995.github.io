@@ -94,20 +94,54 @@ every sum and integral below converges. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
-Lay down a grid of spacing $\Delta x$ with sample points $x_i$. By the
-definition of the Riemann integral,
+But first, an honest question: what is an integral of a *vector*? For
+an ordinary function $v(x)$ with values in a Hilbert space there is a
+standard answer — lay down a grid of spacing $\Delta x$ with sample
+points $x_i$, form the Riemann sums $\sum_i v(x_i)\, \Delta x$, and
+call $\int v(x)\, dx$ their limit as $\Delta x \to 0$, the limit
+taken *in the norm of the space*, exactly as for numbers (the
+construction is spelled out in the cut below). For our integrals even
+this is not available: the kets $|x\rangle$ will turn out not to be
+elements of the Hilbert space at all — their norm is infinite, as we
+will see — so a limit of the sums $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$
+in the norm has nowhere to live. We therefore take the sums themselves
+as the *definition*: the integral $\int a(x)\, |x\rangle\, dx$ is
+shorthand for the family of finite sums
 
 $$
-|\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y
+|\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y,
 $$
 
-are the discretized states. Two things deserve flags right away.
-These are **finite** linear combinations of kets, so everything we do
-with them is finite-dimensional linear algebra — the subject of the
-last post, nothing more. And the *continuous* objects they approach —
-the integral $\int a(x) |x\rangle\, dx$ and the kets $|x\rangle$
-themselves — are more delicate to define than ordinary vectors; the
-whole point of discretizing is to never touch them directly.
+the **discretized states**, and every limit $\Delta x \to 0$ in this
+post will be a limit of *numbers* computed from them — inner products,
+probabilities — never a limit of kets. That is the whole strategy. It
+has two virtues. The discretized states are **finite** linear
+combinations of kets, so everything we do with them is
+finite-dimensional linear algebra, the subject of the last post and
+nothing more. And the objects we do not know how to define — the kets
+$|x\rangle$ and the integral over them — are never touched directly:
+they appear only inside numbers that we know how to compute.
+
+<details>
+<summary>Integrals of vector-valued functions, for the curious</summary>
+
+If $v : [a, b] \to \mathcal H$ is a continuous function with values in
+a Hilbert space (or any complete normed space), its Riemann sums over
+finer and finer grids form a Cauchy sequence in the norm of
+$\mathcal H$ — the same estimate as for real-valued functions, with
+absolute values replaced by norms — and completeness, the defining
+property of a Hilbert space from the last post, guarantees that they
+converge. Their limit is the integral $\int_a^b v(x)\, dx$, and it
+obeys the expected rules; in particular the inner product passes
+inside, $\langle \phi \,|\, \int v(x)\, dx \rangle = \int \langle \phi | v(x) \rangle\, dx$.
+The general theory, for measurable rather than continuous $v$, is the
+[Bochner integral](https://en.wikipedia.org/wiki/Bochner_integral).
+None of this applies to $\int a(x)\, |x\rangle\, dx$ directly, because
+$|x\rangle \notin \mathcal H$ — but the last identity is the reading
+that survives: the integral is known through its inner products with
+honest vectors, which is exactly what the rest of the post computes.
+
+</details>
 
 Compute the inner product of the two finite sums. By linearity in the
 second slot and anti-linearity in the first — the two properties from
