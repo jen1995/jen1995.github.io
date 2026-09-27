@@ -102,8 +102,12 @@ call $\int v(x)\, dx$ their limit as $\Delta x \to 0$, the limit
 taken *in the norm of the space*, exactly as for numbers (the
 construction is spelled out in the cut below). For our integrals even
 this is not available: the kets $|x\rangle$ will turn out not to be
-elements of the Hilbert space at all — their norm is infinite, as we
-will see — so a limit of the sums $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$
+elements of the Hilbert space at all. The norm in question is the one
+the last post built from the inner product,
+$\lVert v \rVert = \sqrt{\langle v | v \rangle}$: for the grid kets it
+will come out finite but equal to $1/\sqrt{\Delta x}$, growing without
+bound as the grid is refined, so no limiting ket of finite norm exists
+— and a limit of the sums $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$
 in the norm has nowhere to live. (This is not a retreat from the last
 post's promise that the space of states is a Hilbert space. The
 *states* $|\psi\rangle$ do live there; the position kets $|x\rangle$
