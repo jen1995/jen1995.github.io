@@ -94,14 +94,37 @@ every sum and integral below converges. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
-But first, an honest question: what is an integral of a *vector*? For
-an ordinary function $v(x)$ with values in a Hilbert space there is a
-standard answer — lay down a grid of spacing $\Delta x$ with sample
-points $x_i$, form the Riemann sums $\sum_i v(x_i)\, \Delta x$, and
-call $\int v(x)\, dx$ their limit as $\Delta x \to 0$, the limit
-taken *in the norm of the space*, exactly as for numbers (the
-construction is spelled out in the cut below). For our integrals even
-this is not available: the kets $|x\rangle$ will turn out not to be
+But first, an honest question: what is an integral of a *vector*?
+
+<details>
+<summary>Integrals of vector-valued functions: the standard answer</summary>
+
+For an ordinary function $v(x)$ with values in a Hilbert space
+$\mathcal H$ the answer copies the real-valued case step by step. Lay
+down a grid of spacing $\Delta x$ with sample points $x_i$, form the
+Riemann sums $\sum_i v(x_i)\, \Delta x$ — finite linear combinations
+of vectors, so honest elements of $\mathcal H$ — and call
+$\int v(x)\, dx$ their limit as $\Delta x \to 0$, the limit taken *in
+the norm of the space*, exactly as for numbers. If $v$ is continuous
+on $[a, b]$, the Riemann sums over finer and finer grids form a Cauchy
+sequence in the norm of $\mathcal H$ (the same estimate as for
+real-valued functions, with absolute values replaced by norms), and
+completeness — the defining property of a Hilbert space from the last
+post — guarantees that they converge. The integral obeys the expected
+rules; in particular the inner product passes inside,
+$\langle \phi \,|\, \int v(x)\, dx \rangle = \int \langle \phi | v(x) \rangle\, dx$.
+The general theory, for measurable rather than continuous $v$, is the
+[Bochner integral](https://en.wikipedia.org/wiki/Bochner_integral).
+None of this applies to $\int a(x)\, |x\rangle\, dx$ directly, because
+$|x\rangle \notin \mathcal H$ — but the last identity is the reading
+that survives: the integral is known through its inner products with
+honest vectors, which is exactly what the rest of the post computes.
+
+</details>
+
+For an ordinary function with values in a Hilbert space there is a
+standard answer — a limit of Riemann sums in the norm of the space,
+spelled out in the cut. For our integrals even this is not available: the kets $|x\rangle$ will turn out not to be
 elements of the Hilbert space at all. The norm in question is the one
 the last post built from the inner product,
 $\lVert v \rVert = \sqrt{\langle v | v \rangle}$: for the grid kets it
@@ -129,27 +152,6 @@ finite-dimensional linear algebra, the subject of the last post and
 nothing more. And the objects we do not know how to define — the kets
 $|x\rangle$ and the integral over them — are never touched directly:
 they appear only inside numbers that we know how to compute.
-
-<details>
-<summary>Integrals of vector-valued functions, for the curious</summary>
-
-If $v : [a, b] \to \mathcal H$ is a continuous function with values in
-a Hilbert space (or any complete normed space), its Riemann sums over
-finer and finer grids form a Cauchy sequence in the norm of
-$\mathcal H$ — the same estimate as for real-valued functions, with
-absolute values replaced by norms — and completeness, the defining
-property of a Hilbert space from the last post, guarantees that they
-converge. Their limit is the integral $\int_a^b v(x)\, dx$, and it
-obeys the expected rules; in particular the inner product passes
-inside, $\langle \phi \,|\, \int v(x)\, dx \rangle = \int \langle \phi | v(x) \rangle\, dx$.
-The general theory, for measurable rather than continuous $v$, is the
-[Bochner integral](https://en.wikipedia.org/wiki/Bochner_integral).
-None of this applies to $\int a(x)\, |x\rangle\, dx$ directly, because
-$|x\rangle \notin \mathcal H$ — but the last identity is the reading
-that survives: the integral is known through its inner products with
-honest vectors, which is exactly what the rest of the post computes.
-
-</details>
 
 Compute the inner product of the two finite sums. By linearity in the
 second slot and anti-linearity in the first — the two properties from
