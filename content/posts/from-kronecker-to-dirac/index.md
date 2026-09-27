@@ -94,69 +94,33 @@ every sum and integral below converges. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
-But first, an honest question: what is an integral of a *vector*?
-
-<details>
-<summary>Integrals of vector-valued functions: the standard answer</summary>
-
-For an ordinary function $v(x)$ with values in a Hilbert space
-$\mathcal H$ the answer copies the real-valued case step by step. Lay
-down a grid of spacing $\Delta x$ with sample points $x_i$, form the
-Riemann sums $\sum_i v(x_i)\, \Delta x$ — finite linear combinations
-of vectors, so honest elements of $\mathcal H$ — and call
-$\int v(x)\, dx$ their limit as $\Delta x \to 0$, the limit taken *in
-the norm of the space*, exactly as for numbers. If $v$ is continuous
-on $[a, b]$, the Riemann sums over finer and finer grids form a Cauchy
-sequence in the norm of $\mathcal H$ (the same estimate as for
-real-valued functions, with absolute values replaced by norms), and
-completeness — the defining property of a Hilbert space from the last
-post — guarantees that they converge. The integral obeys the expected
-rules; in particular the inner product passes inside,
-$\langle \phi \,|\, \int v(x)\, dx \rangle = \int \langle \phi | v(x) \rangle\, dx$.
-This construction is in the textbooks: for functions with values in
-$\mathbb R^k$ in Rudin's *Principles of Mathematical Analysis*,
-§6.23–6.25, and for values in a general Banach space in Dieudonné's
-*Foundations of Modern Analysis*, chapter VIII, §7 (see the references
-below). The general theory, for measurable rather than continuous
-$v$, is the
-[Bochner integral](https://en.wikipedia.org/wiki/Bochner_integral).
-None of this applies to $\int a(x)\, |x\rangle\, dx$ directly, because
-$|x\rangle \notin \mathcal H$ — but the last identity is the reading
-that survives: the integral is known through its inner products with
-honest vectors, which is exactly what the rest of the post computes.
-
-</details>
-
-For an ordinary function with values in a Hilbert space there is a
-standard answer — a limit of Riemann sums in the norm of the space,
-spelled out in the cut. For our integrals even this is not available: the kets $|x\rangle$ will turn out not to be
-elements of the Hilbert space at all. The norm in question is the one
-the last post built from the inner product,
-$\lVert v \rVert = \sqrt{\langle v | v \rangle}$: for the grid kets it
-will come out finite but equal to $1/\sqrt{\Delta x}$, growing without
-bound as the grid is refined, so no limiting ket of finite norm exists
-— and a limit of the sums $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$
-in the norm has nowhere to live. (This is not a retreat from the last
-post's promise that the space of states is a Hilbert space. The
-*states* $|\psi\rangle$ do live there; the position kets $|x\rangle$
-are not states, and we will say precisely what they are once their
-norm has been computed.) We therefore take the sums themselves
-as the *definition*: the integral $\int a(x)\, |x\rangle\, dx$ is
-shorthand for the family of finite sums
+But first: what is an integral of a *vector*? Rudin's *Principles of
+Mathematical Analysis* (§6.23, see the references) defines it in the
+simplest possible way — coordinate by coordinate. For
+$\mathbf f = (f_1, \dots, f_k)$ with values in $\mathbb R^k$,
 
 $$
-|\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y,
+\int_a^b \mathbf f\, dx := \left( \int_a^b f_1\, dx, \; \dots, \; \int_a^b f_k\, dx \right),
 $$
 
-the **discretized states**, and every limit $\Delta x \to 0$ in this
-post will be a limit of *numbers* computed from them — inner products,
-probabilities — never a limit of kets. That is the whole strategy. It
-has two virtues. The discretized states are **finite** linear
-combinations of kets, so everything we do with them is
-finite-dimensional linear algebra, the subject of the last post and
-nothing more. And the objects we do not know how to define — the kets
-$|x\rangle$ and the integral over them — are never touched directly:
-they appear only inside numbers that we know how to compute.
+and the same recipe works in any space with a fixed basis: expand the
+integrand in the basis and integrate each coordinate. Our integral
+$\int a(x)\, |x\rangle\, dx$ is meant exactly this way, with the
+"basis" $\{ |x\rangle \}$ — except that its coordinates are labeled by
+a continuum, and we do not yet know what $\langle x | y \rangle$ is,
+so we cannot even write those coordinates down. Hence the plan: on a
+grid the basis is finite, the coordinate along $|x_i\rangle$ is the
+Riemann-sum coefficient $a(x_i)\, \Delta x$, and the integrals become
+the **discretized states**
+
+$$
+|\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y
+$$
+
+— finite linear combinations of kets, so everything we do with them is
+the finite-dimensional linear algebra of the last post. Every limit
+$\Delta x \to 0$ in this post will be a limit of *numbers* computed
+from these finite sums, never a limit of kets.
 
 Compute the inner product of the two finite sums. By linearity in the
 second slot and anti-linearity in the first — the two properties from
@@ -632,10 +596,6 @@ postulated.
   [derivation of the four-wave kinetic equation in action-angle variables](https://arxiv.org/abs/1911.13057),
   and [discretized light-cone quantization](https://arxiv.org/abs/hep-ph/9910203).
 - W. Rudin. *Principles of Mathematical Analysis*, 3rd ed. McGraw-Hill,
-  1976 — §6.23–6.25, integration of vector-valued functions.
-- J. Dieudonné. *Foundations of Modern Analysis*. Academic Press, 1960
-  (Russian translation: Ж. Дьедонне, *Основы современного анализа*,
-  Мир, 1964) — chapter VIII, §7: the integral of a function with values
-  in a Banach space, built from Riemann-type sums and completeness.
+  1976 — §6.23, the coordinate-wise definition of the integral of a vector-valued function.
 - This blog's own first meeting with the delta:
   [Part 1 of the Fourier road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal).
