@@ -196,6 +196,8 @@ be rewritten over the single refined grid, and we are back to the
 case in the text — with a Riemann integral as the limit either way,
 since the limit does not depend on the grid that produced it.
 
+![Two grids of different spacing and a common refinement of which both are multiples: every cell of either grid is a union of refined cells](common_refinement.png)
+
 </details>
 
 Two factors remain: a Riemann sum, and a leftover $\Delta x$. As
