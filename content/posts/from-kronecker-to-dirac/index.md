@@ -89,8 +89,10 @@ $$
 where $|x\rangle$ is the "basis" ket labeled by the real number $x$
 and $a, b$ are the wavefunctions (we write $a$ and $b$ rather than
 $\psi$ and $\varphi$ to keep the two states apart). We assume $a$ and
-$b$ continuous and integrable, $\int |a(x)|\, dx \lt \infty$, so that
-every sum and integral below converges. The plan: compute
+$b$ continuous and square-integrable, $\int |a(x)|^2\, dx \lt \infty$
+— that is, honest elements of $L^2$, as states must be — so that the
+inner product $\int a^* b\, dx$ converges (by the Cauchy–Schwarz
+inequality) and every sum below is finite. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
