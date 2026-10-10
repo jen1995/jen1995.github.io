@@ -131,8 +131,8 @@ $$
 are finite linear combinations of kets, so everything we do with them
 is the finite-dimensional linear algebra of the last post. (Note which
 side is one-dimensional: the *values* $a(x)\, |x\rangle$ are vectors,
-but the variable of integration is a single real number, so $\Delta x$
-is the length of a cell on the line.) Every limit
+but the variable of integration is the single real number $x$, the
+position, so $\Delta x$ is the length of a cell on the line.) Every limit
 $\Delta x \to 0$ in this post will be a limit of *numbers* computed
 from these finite sums, never a limit of kets.
 
