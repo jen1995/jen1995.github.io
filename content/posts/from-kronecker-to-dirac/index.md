@@ -136,7 +136,7 @@ is the length of a cell on the line.) Every limit
 $\Delta x \to 0$ in this post will be a limit of *numbers* computed
 from these finite sums, never a limit of kets.
 
-![The position kets form a continuum, one per real number; a grid keeps finitely many of them and declares them the axes; refining the grid brings the finite set closer to the continuum](continuum_grid.png)
+![The position kets form a continuum, one per real number; a grid keeps finitely many of them and declares them the axes; the Riemann sum of the integrand over the grid is the discretized state](continuum_grid.png)
 
 Compute the inner product of the two finite sums. By linearity in the
 second slot and anti-linearity in the first — the two properties from
