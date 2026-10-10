@@ -171,7 +171,18 @@ $$
 \sum_i \sum_j a(x_i)^* \, b(y_j)\, \delta_{ij}\, \Delta x\, \Delta y = \sum_i a(x_i)^* \, b(x_i)\, \Delta x\, \Delta y.
 $$
 
-We are free to choose the grids, so take $\Delta y = \Delta x$:
+We are free to choose the grids, so take the same grid for both
+states, $\Delta y = \Delta x$ with the same sample points. This is
+not a restriction on the states, only on how we write them: $x$ and
+$y$ are two names for the same line, the kets $|x_i\rangle$ and
+$|y_j\rangle$ are one and the same family, and using one grid for
+both is the continuous counterpart of expanding both vectors in the
+*same* orthonormal basis — which the last post's coordinate formula
+$\langle \psi | \varphi \rangle = \sum_i a_i^* b_i$ required too.
+(Two different grids would work as well — the kernel would become the
+overlap of two cells instead of a Kronecker delta, and the limit, a
+Riemann integral, does not depend on the grid — but the bookkeeping
+would obscure exactly the point we are after.) Then:
 
 $$
 \sum_i a(x_i)^* \, b(x_i)\, \Delta x\, \Delta x = \left( \sum_i a(x_i)^* \, b(x_i)\, \Delta x \right) \cdot \Delta x.
