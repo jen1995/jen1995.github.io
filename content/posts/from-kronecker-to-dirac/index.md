@@ -116,10 +116,13 @@ $a(x)\, |x\rangle$ this is exactly where the trouble starts. Which
 coordinates? The natural axes are the position kets themselves, and
 the coordinate of $|x\rangle$ along $|y\rangle$ is $\langle y | x \rangle$
 — the very object this post is trying to find. Worse, there is one
-axis per real number, so "$k$" is not a number at all. Hence the plan:
-on a grid there are finitely many kets, we *declare* them to be the
-coordinate axes, and the Riemann sums of the integrand — the
-**discretized states** —
+axis per real number, so "$k$" is not a number at all. Hence the plan.
+Lay down a **grid** on the line: sample points $x_1, x_2, \dots$ a
+fixed spacing $\Delta x$ apart — the points at which a Riemann sum
+samples its integrand — and keep only the kets $|x_i\rangle$ at the
+grid points. On any bounded stretch of the line these are finitely
+many, and we *declare* them to be the coordinate axes. The Riemann
+sums of the integrand over this grid — the **discretized states** —
 
 $$
 |\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y
