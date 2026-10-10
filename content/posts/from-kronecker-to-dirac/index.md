@@ -296,7 +296,18 @@ infinite-dimensional state spaces, §1.10; see the references.)
 <summary>Which $L^2$, and who lives in it</summary>
 
 A reader keeping score may feel the ground shifting: are the states
-functions, or vectors, or both? There is only one space. The state
+functions, or vectors, or both? Both — and the two words mean the same
+thing here. A vector is a list of coordinates, one per index: a vector
+in $\mathbb C^n$ is a function $\{1, \dots, n\} \to \mathbb C$. When
+the index becomes a real number $x$, "a vector with a continuum of
+coordinates" is literally a function $\mathbb R \to \mathbb C$, the
+coordinate along $|x\rangle$ being $\langle x | \psi \rangle = \psi(x)$;
+and "finite sum of squared coordinates" becomes
+$\int |\psi(x)|^2\, dx \lt \infty$. What does *not* survive the passage
+to a continuum of indices are the unit vectors themselves: the "$1$ at
+index $x$, $0$ elsewhere" that $|x\rangle$ would have to be is not a
+function — which is this whole post in one sentence. There is only
+one space. The state
 space of a particle on a line is $L^2(\mathbb R)$ — complex-valued
 functions $\psi$ on the line with $\int |\psi(x)|^2\, dx \lt \infty$,
 with the inner product $\int \psi^* \varphi\, dx$ of the last post. Strictly
