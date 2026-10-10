@@ -89,10 +89,15 @@ $$
 where $|x\rangle$ is the "basis" ket labeled by the real number $x$
 and $a, b$ are the wavefunctions (we write $a$ and $b$ rather than
 $\psi$ and $\varphi$ to keep the two states apart). We assume $a$ and
-$b$ continuous and square-integrable, $\int |a(x)|^2\, dx \lt \infty$
-— that is, honest elements of $L^2$, as states must be — so that the
-inner product $\int a^* b\, dx$ converges (by the Cauchy–Schwarz
-inequality) and every sum below is finite. The plan: compute
+$b$ continuous and square-integrable, $\int |a(x)|^2\, dx \lt \infty$.
+Square-integrable functions on the line, with the inner product
+$\langle a | b \rangle = \int a(x)^* b(x)\, dx$, form the Hilbert space
+$L^2(\mathbb R)$ that the
+[last post](/posts/states-are-vectors/#when-the-menu-is-infinite)
+introduced as the state space of a particle on a line; so the
+assumption just says that $a$ and $b$ are honest states. It also
+guarantees that $\int a^* b\, dx$ converges (by the Cauchy–Schwarz
+inequality) and that every sum below is finite. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
