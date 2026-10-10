@@ -96,8 +96,8 @@ $L^2(\mathbb R)$ that the
 [last post](/posts/states-are-vectors/#when-the-menu-is-infinite)
 introduced as the state space of a particle on a line; so the
 assumption just says that $a$ and $b$ are honest states. It also
-guarantees that $\int a^* b\, dx$ converges (by the Cauchy–Schwarz
-inequality) and that every sum below is finite. The plan: compute
+guarantees that $\int a^* b\, dx$ converges (by the
+[Cauchy–Schwarz inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality)) and that every sum below is finite. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
