@@ -187,14 +187,14 @@ $|x_i\rangle$ and $|y_j\rangle$ are one and the same family, and
 using one grid for both is the continuous counterpart of expanding
 both vectors in the *same* orthonormal basis — which the last post's
 coordinate formula $\langle \psi | \varphi \rangle = \sum_i a_i^* b_i$
-required too. Nothing would break with two different grids, either.
-The cell of $x_i$ and the cell of $y_j$ would then partially overlap,
-so $\langle x_i | y_j \rangle$ would be a number proportional to the
-length of their overlap rather than a clean $0$ or $1$; the double sum
-would still converge to $\int a(x)^* b(x)\, dx$, because a Riemann
-integral does not care which grid produced it. But the kernel would
-no longer be a Kronecker delta, and the Kronecker delta is exactly the
-object we want to watch turn into the Dirac delta.
+required too. Nothing would break with two different grids, either:
+take their *common refinement* — the grid whose cut points are all
+the cut points of both (when the spacings are commensurable, simply
+the grid of which both are multiples). Every cell of either original
+grid is a union of cells of the refined one, so both Riemann sums can
+be rewritten over the single refined grid, and we are back to the
+case in the text — with a Riemann integral as the limit either way,
+since the limit does not depend on the grid that produced it.
 
 </details>
 
