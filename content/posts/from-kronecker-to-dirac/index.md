@@ -80,42 +80,55 @@ precisely in what sense.
 
 ## The inner product of two continuous superpositions
 
-Take two states written the way the last post wrote them,
+Start where the last post left off: with honest vectors. A state
+with $n$ possible outcomes was a vector with $n$ coordinates,
 
 $$
-|\psi\rangle = \int a(x)\, |x\rangle\, dx, \qquad |\varphi\rangle = \int b(y)\, |y\rangle\, dy,
+|\psi\rangle = \sum_{i=1}^{n} a_i\, |E_i\rangle, \qquad a_i = \langle E_i | \psi \rangle,
 $$
 
-where $|x\rangle$ is the "basis" ket labeled by the real number $x$
-and $a, b$ are the wavefunctions (we write $a$ and $b$ rather than
-$\psi$ and $\varphi$ to keep the two states apart). We assume $a$ and
-$b$ continuous and square-integrable, $\int |a(x)|^2\, dx \lt \infty$.
-Square-integrable functions on the line, with the inner product
-$\langle a | b \rangle = \int a(x)^* b(x)\, dx$, form the Hilbert space
-$L^2(\mathbb R)$ that the
+and the list $(a_1, \dots, a_n)$ is all there is to know about it. Look
+at that list as a *function*: it assigns a number to each index, so a
+vector in $\mathbb C^n$ is a function $\{1, \dots, n\} \to \mathbb C$,
+and the expansion above just says "coordinates times unit vectors".
+Now let the menu grow. More outcomes — a longer list, still one
+coordinate per index. A continuum of outcomes — one index per real
+number $x$ — and the list of coordinates *is* a function on the line.
+That is the whole insight: **a vector with a continuum of coordinates
+is a function**, and the function is what the last post called the
+wavefunction, $a(x) = \langle x | \psi \rangle$.
+
+![A vector is a list of coordinates indexed by i; as the index runs over the real line, the list becomes a function — the wavefunction](coords_to_function.png)
+
+With that in mind, take two states written the way the last post
+wrote them,
+
+$$
+|\psi\rangle = \int a(x)\, |x\rangle\, dx, \qquad |\varphi\rangle = \int b(y)\, |y\rangle\, dy
+$$
+
+(we write $a$ and $b$ rather than $\psi$ and $\varphi$ to keep the two
+states apart). Each formula is the same statement as the finite one,
+"coordinates times unit vectors", with the sum over indices turned
+into an integral; the state and its wavefunction are one object. We
+assume $a$ and $b$ continuous and square-integrable,
+$\int |a(x)|^2\, dx \lt \infty$. Square-integrable functions on the
+line, with the inner product $\langle a | b \rangle = \int a(x)^* b(x)\, dx$,
+form the Hilbert space $L^2(\mathbb R)$ that the
 [last post](/posts/states-are-vectors/#when-the-menu-is-infinite)
 introduced as the state space of a particle on a line; so the
-assumption just says that $a$ and $b$ are honest states. It also
+assumption just says that $a$ and $b$ are honest states, and it
 guarantees that $\int a^* b\, dx$ converges (by the
-[Cauchy–Schwarz inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality)) and that every sum below is finite. The plan: compute
+[Cauchy–Schwarz inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality))
+and that every sum below is finite.
+
+What *is* exotic in these formulas is the unit vectors. The ket
+$|x\rangle$ — "a $1$ at index $x$ and $0$ everywhere else" — is not a
+function on the line at all, as the rest of the post will show, and
+$\langle x | y \rangle$, the inner product of two such objects, is
+exactly what we are after. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
-
-First, a word about what this formula says, because it is less exotic
-than it looks. A vector is a list of coordinates, one per index: a
-vector in $\mathbb C^n$ is a function $\{1, \dots, n\} \to \mathbb C$,
-and writing it as $v = \sum_i v_i\, e_i$ — coordinates times unit
-vectors — is just reading that list off. When the index becomes a real
-number $x$, "a vector with a continuum of coordinates" is literally a
-function $\mathbb R \to \mathbb C$: that function is the wavefunction
-$a(x)$, the coordinate along $|x\rangle$ is $\langle x | \psi \rangle = a(x)$,
-and $\int a(x)\, |x\rangle\, dx$ is the very same statement,
-"coordinates times unit vectors", with the sum over indices turned
-into an integral. The state and its wavefunction are one object. What
-*is* exotic is the unit vectors: $|x\rangle$ — "a $1$ at index $x$ and
-$0$ everywhere else" — is not a function on the line at all, as the
-rest of the post will show, and $\langle x | y \rangle$, the inner
-product of two such objects, is exactly what we are after.
 
 So we discretize. Lay down a **grid** on the line: sample points
 $x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — and keep only the
