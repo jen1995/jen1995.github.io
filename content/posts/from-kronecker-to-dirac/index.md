@@ -133,6 +133,8 @@ is the length of a cell on the line.) Every limit
 $\Delta x \to 0$ in this post will be a limit of *numbers* computed
 from these finite sums, never a limit of kets.
 
+![The integrand a(x)|x⟩ on a grid: a Riemann box of area a(x_i)Δx in front of each grid ket; the same numbers read as coordinates along the declared axes |x_i⟩](discretize.png)
+
 Compute the inner product of the two finite sums. By linearity in the
 second slot and anti-linearity in the first — the two properties from
 the last post — the sums come out of the bracket and the scalars come
