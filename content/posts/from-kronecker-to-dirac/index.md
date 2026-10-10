@@ -94,45 +94,35 @@ every sum and integral below converges. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
-But first: what is an integral of a *vector*? Rudin's *Principles of
-Mathematical Analysis* (§6.23, see the references) defines it in the
-simplest possible way — coordinate by coordinate. For
-$\mathbf f = (f_1, \dots, f_k)$ with values in $\mathbb R^k$,
+First, a word about what this formula says, because it is less exotic
+than it looks. A vector is a list of coordinates, one per index: a
+vector in $\mathbb C^n$ is a function $\{1, \dots, n\} \to \mathbb C$,
+and writing it as $v = \sum_i v_i\, e_i$ — coordinates times unit
+vectors — is just reading that list off. When the index becomes a real
+number $x$, "a vector with a continuum of coordinates" is literally a
+function $\mathbb R \to \mathbb C$: that function is the wavefunction
+$a(x)$, the coordinate along $|x\rangle$ is $\langle x | \psi \rangle = a(x)$,
+and $\int a(x)\, |x\rangle\, dx$ is the very same statement,
+"coordinates times unit vectors", with the sum over indices turned
+into an integral. The state and its wavefunction are one object. What
+*is* exotic is the unit vectors: $|x\rangle$ — "a $1$ at index $x$ and
+$0$ everywhere else" — is not a function on the line at all, as the
+rest of the post will show, and $\langle x | y \rangle$, the inner
+product of two such objects, is exactly what we are after.
 
-$$
-\int_a^b \mathbf f\, dx := \left( \int_a^b f_1\, dx, \; \dots, \; \int_a^b f_k\, dx \right).
-$$
-
-The integral sums come along for free: a Riemann sum of a
-vector-valued function is $\sum_i \mathbf f(x_i)\, \Delta x$ — a finite
-linear combination of its *values*, hence itself a vector, whose
-$j$-th coordinate is the ordinary numerical Riemann sum
-$\sum_i f_j(x_i)\, \Delta x$ — and Rudin's integral is the limit of
-these sums, coordinate by coordinate.
-
-The definition needs coordinates, and for $\mathbb R^k$ they are
-given: $k$ of them, along the standard axes. For our integrand
-$a(x)\, |x\rangle$ this is exactly where the trouble starts. Which
-coordinates? The natural axes are the position kets themselves, and
-the coordinate of $|x\rangle$ along $|y\rangle$ is $\langle y | x \rangle$
-— the very object this post is trying to find. Worse, there is one
-axis per real number, so "$k$" is not a number at all. Hence the plan.
-Lay down a **grid** on the line: sample points $x_1, x_2, \dots$ a
-fixed spacing $\Delta x$ apart — the points at which a Riemann sum
-samples its integrand — and keep only the kets $|x_i\rangle$ at the
-grid points. On any bounded stretch of the line these are finitely
-many, and we *declare* them to be the coordinate axes. The Riemann
-sums of the integrand over this grid — the **discretized states** —
+So we discretize. Lay down a **grid** on the line: sample points
+$x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — and keep only the
+kets $|x_i\rangle$ at the grid points. On any bounded stretch of the
+line these are finitely many, and we *declare* them to be the axes.
+Replacing the integral by its Riemann sum over this grid gives the
+**discretized states**
 
 $$
 |\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y
 $$
 
-are finite linear combinations of kets, so everything we do with them
-is the finite-dimensional linear algebra of the last post. (Note which
-side is one-dimensional: the *values* $a(x)\, |x\rangle$ are vectors,
-but the variable of integration is the single real number $x$, the
-position, so $\Delta x$ is the length of a cell on the line.) Every limit
+— finite linear combinations of kets, so everything we do with them is
+the finite-dimensional linear algebra of the last post. Every limit
 $\Delta x \to 0$ in this post will be a limit of *numbers* computed
 from these finite sums, never a limit of kets.
 
@@ -295,19 +285,7 @@ infinite-dimensional state spaces, §1.10; see the references.)
 <details>
 <summary>Which $L^2$, and who lives in it</summary>
 
-A reader keeping score may feel the ground shifting: are the states
-functions, or vectors, or both? Both — and the two words mean the same
-thing here. A vector is a list of coordinates, one per index: a vector
-in $\mathbb C^n$ is a function $\{1, \dots, n\} \to \mathbb C$. When
-the index becomes a real number $x$, "a vector with a continuum of
-coordinates" is literally a function $\mathbb R \to \mathbb C$, the
-coordinate along $|x\rangle$ being $\langle x | \psi \rangle = \psi(x)$;
-and "finite sum of squared coordinates" becomes
-$\int |\psi(x)|^2\, dx \lt \infty$. What does *not* survive the passage
-to a continuum of indices are the unit vectors themselves: the "$1$ at
-index $x$, $0$ elsewhere" that $|x\rangle$ would have to be is not a
-function — which is this whole post in one sentence. There is only
-one space. The state
+There is only one space in play. The state
 space of a particle on a line is $L^2(\mathbb R)$ — complex-valued
 functions $\psi$ on the line with $\int |\psi(x)|^2\, dx \lt \infty$,
 with the inner product $\int \psi^* \varphi\, dx$ of the last post. Strictly
@@ -318,11 +296,7 @@ which sends each ket to its wavefunction; as everyone does, we
 *identify* a ket with its image. So "the ket $|\psi\rangle$ lies in
 $L^2$" means "its wavefunction $\psi$ is square-integrable on the
 line", and a ket and its wavefunction are one element written two
-ways. There is
-no "vector-valued $L^2$" anywhere; the only vector-valued object we
-met was the integrand $a(x)\, |x\rangle$ in the discussion of Rudin's
-definition, and its values are generalized vectors, which is exactly
-why that definition could not be applied to it directly.
+ways.
 
 So, in the formula $|\psi\rangle = \int \psi(x)\, |x\rangle\, dx$, who
 lives in $L^2$? The state $|\psi\rangle$, i.e. the function $\psi$ —
@@ -755,7 +729,5 @@ postulated.
   $L^2$) and §52 (the separability of $L^2$); together with Sergeev's
   Theorem 20 (lecture V), separability is equivalent to the existence
   of a countable orthonormal basis.
-- W. Rudin. *Principles of Mathematical Analysis*, 3rd ed. McGraw-Hill,
-  1976 — §6.23, the coordinate-wise definition of the integral of a vector-valued function.
 - This blog's own first meeting with the delta:
   [Part 1 of the Fourier road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal).
