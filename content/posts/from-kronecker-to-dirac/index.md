@@ -299,11 +299,15 @@ A reader keeping score may feel the ground shifting: are the states
 functions, or vectors, or both? There is only one space. The state
 space of a particle on a line is $L^2(\mathbb R)$ — complex-valued
 functions $\psi$ on the line with $\int |\psi(x)|^2\, dx \lt \infty$,
-with the inner product $\int \psi^* \varphi\, dx$ of the last post. A
-ket $|\psi\rangle$ and its wavefunction $\psi(x)$ are the *same
-element* of this space written two ways: in the position
-representation the function *is* the vector, and
-$\langle x | \psi \rangle = \psi(x)$ just reads off its value. There is
+with the inner product $\int \psi^* \varphi\, dx$ of the last post. Strictly
+speaking the state space is an abstract Hilbert space $\mathcal H$,
+and the **position representation** is the unitary map
+$\mathcal H \to L^2(\mathbb R)$, $|\psi\rangle \mapsto \psi(x) = \langle x | \psi \rangle$,
+which sends each ket to its wavefunction; as everyone does, we
+*identify* a ket with its image. So "the ket $|\psi\rangle$ lies in
+$L^2$" means "its wavefunction $\psi$ is square-integrable on the
+line", and a ket and its wavefunction are one element written two
+ways. There is
 no "vector-valued $L^2$" anywhere; the only vector-valued object we
 met was the integrand $a(x)\, |x\rangle$ in the discussion of Rudin's
 definition, and its values are generalized vectors, which is exactly
@@ -311,8 +315,10 @@ why that definition could not be applied to it directly.
 
 So, in the formula $|\psi\rangle = \int \psi(x)\, |x\rangle\, dx$, who
 lives in $L^2$? The state $|\psi\rangle$, i.e. the function $\psi$ —
-nothing else. The cell states $|\hat x_i\rangle$ live there too: the
-computation above gives them norm one. The grid kets
+nothing else. The cell states $|\hat x_i\rangle$ live there too: their
+wavefunction $\hat x_i(x)$ is defined on the whole line — $1/\sqrt{\Delta x}$
+on the cell, zero everywhere else — a step function with finite
+support, and the computation above gives it norm one. The grid kets
 $|x_i\rangle = |\hat x_i\rangle / \sqrt{\Delta x}$ still do, but
 barely: their wavefunction is the spike of height $1/\Delta x$ on the
 cell — the very kernel $K_\Delta$ of this post — and its squared norm
