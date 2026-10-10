@@ -255,7 +255,16 @@ $$
 $$
 
 so that, by the last post's Born rule, $|c_i|^2$ is the probability of
-finding the particle in cell $i$. Now the physics: the squared
+finding the particle in cell $i$. (Note that, unlike $|x\rangle$, the
+cell states are honest elements of $L^2$ — a cell state is the
+indicator function of its cell, normalized — and the grid is not a
+"countable subset of the continuous basis" but a replacement for it.
+Taken over all grids at once, the cell states form a countable family
+whose linear combinations, the step functions, are dense in $L^2$:
+that density is the separability of $L^2$ the last post promised, and
+it is why discretization can approximate every state — see Rudin's
+*Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
+chapter VIII, §51–52, in the references.) Now the physics: the squared
 wavefunction $|a(x)|^2$ is a probability **density** — probability per
 unit length — so the probability of landing in a cell of width
 $\Delta x$ is the density times the width:
@@ -639,6 +648,15 @@ postulated.
   of Physics* 26 (2005), 287–312 — a pedestrian introduction on one
   exactly solvable example; the place to see why $|x\rangle$ lives
   outside the Hilbert space and how Dirac's formalism is made rigorous.
+- W. Rudin. *Real and Complex Analysis*, 3rd ed. McGraw-Hill, 1987 —
+  Theorem 3.13: simple functions are dense in $L^p$.
+- A. N. Kolmogorov, S. V. Fomin. *Elements of the Theory of Functions
+  and Functional Analysis*, vol. 2. Graylock, 1961 (Russian original:
+  А. Н. Колмогоров, С. В. Фомин, *Элементы теории функций и
+  функционального анализа*) — chapter VIII, §51 (dense subsets of
+  $L^2$) and §52 (the separability of $L^2$); together with Sergeev's
+  Theorem 20 (lecture V), separability is equivalent to the existence
+  of a countable orthonormal basis.
 - W. Rudin. *Principles of Mathematical Analysis*, 3rd ed. McGraw-Hill,
   1976 — §6.23, the coordinate-wise definition of the integral of a vector-valued function.
 - This blog's own first meeting with the delta:
