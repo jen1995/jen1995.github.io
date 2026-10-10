@@ -274,7 +274,58 @@ the physics fix the coefficients. Introduce a new symbol: let
 $|\hat x_i\rangle$ be the orthonormal **cell states**,
 $\langle \hat x_i | \hat x_j \rangle = \delta_{ij}$, where
 $|\hat x_i\rangle$ means "the particle is somewhere in cell $i$" — a
-cell of width $\Delta x$ around $x_i$. Write the discretized state as
+cell of width $\Delta x$ around $x_i$. As a wavefunction this is the
+flat bump on the cell, scaled to unit norm:
+
+$$
+\hat x_i(x) = \begin{cases} 1/\sqrt{\Delta x} & |x - x_i| \leq \Delta x / 2 \\ 0 & \text{otherwise} \end{cases}
+$$
+
+Orthonormality is read off directly: different cells have disjoint
+supports, so the product of two different cell states vanishes
+everywhere and $\langle \hat x_i | \hat x_j \rangle = 0$ for
+$i \neq j$, while
+$\langle \hat x_i | \hat x_i \rangle = \int |\hat x_i|^2\, dx = \Delta x \cdot \frac{1}{\Delta x} = 1$.
+(This way of building a continuous basis from a lattice of cells is
+how Shankar's *Principles of Quantum Mechanics* introduces
+infinite-dimensional state spaces, §1.10; see the references.)
+
+![The cell states as wavefunctions: flat bumps of height 1/√Δx on disjoint cells — orthonormal by inspection; a state written in them has amplitudes a(x_i)√Δx](cell_states.png)
+
+<details>
+<summary>Which $L^2$, and who lives in it</summary>
+
+A reader keeping score may feel the ground shifting: are the states
+functions, or vectors, or both? There is only one space. The state
+space of a particle on a line is $L^2(\mathbb R)$ — complex-valued
+functions $\psi$ on the line with $\int |\psi(x)|^2\, dx \lt \infty$,
+with the inner product $\int \psi^* \varphi\, dx$ of the last post. A
+ket $|\psi\rangle$ and its wavefunction $\psi(x)$ are the *same
+element* of this space written two ways: in the position
+representation the function *is* the vector, and
+$\langle x | \psi \rangle = \psi(x)$ just reads off its value. There is
+no "vector-valued $L^2$" anywhere; the only vector-valued object we
+met was the integrand $a(x)\, |x\rangle$ in the discussion of Rudin's
+definition, and its values are generalized vectors, which is exactly
+why that definition could not be applied to it directly.
+
+So, in the formula $|\psi\rangle = \int \psi(x)\, |x\rangle\, dx$, who
+lives in $L^2$? The state $|\psi\rangle$, i.e. the function $\psi$ —
+nothing else. The cell states $|\hat x_i\rangle$ live there too: the
+computation above gives them norm one. The grid kets
+$|x_i\rangle = |\hat x_i\rangle / \sqrt{\Delta x}$ still do, but
+barely: their wavefunction is the spike of height $1/\Delta x$ on the
+cell — the very kernel $K_\Delta$ of this post — and its squared norm
+is $\Delta x \cdot (1/\Delta x)^2 = 1/\Delta x$, which grows without
+bound as the grid is refined. And the limiting ket $|x\rangle$ is not
+in $L^2$ at all: its wavefunction would have to be
+$\langle y | x \rangle = \delta(y - x)$ as a function of $y$, and that
+is not a function — as the rest of the post shows, it is defined only
+by what it does inside integrals.
+
+</details>
+
+Write the discretized state as
 
 $$
 |\psi_\Delta\rangle = \sum_i c_i\, |\hat x_i\rangle,
@@ -674,6 +725,10 @@ postulated.
   of Physics* 26 (2005), 287–312 — a pedestrian introduction on one
   exactly solvable example; the place to see why $|x\rangle$ lives
   outside the Hilbert space and how Dirac's formalism is made rigorous.
+- R. Shankar. *Principles of Quantum Mechanics*, 2nd ed. Plenum, 1994 —
+  §1.10, "Generalization to infinite dimensions": a continuous basis
+  built from a lattice of cells, with the Dirac delta emerging in the
+  limit.
 - W. Rudin. *Real and Complex Analysis*, 3rd ed. McGraw-Hill, 1987 —
   Theorem 3.13: simple functions are dense in $L^p$.
 - A. N. Kolmogorov, S. V. Fomin. *Elements of the Theory of Functions
