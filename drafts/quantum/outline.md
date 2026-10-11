@@ -243,9 +243,15 @@ Source: a physicist's view of "any QM problem". Where each remark lands:
   imaginary cube → discrete momenta → momentum representation as the
   infinite-box limit (ties back to the delta post's cut).
 - **QM-7 (tunneling).** Slowly varying potential → locally constant → piece
-  together box solutions: the WKB idea, as a cut. "Contraction mapping
-  theorem is important" — unclear where he meant it (Born series /
-  Lippmann–Schwinger iteration in scattering?) — ASK.
+  together box solutions: the WKB idea, as a cut.
+- **Contraction mapping (Banach fixed-point) theorem** — his general
+  remark: "a very important theorem of functional analysis, important in
+  practice", not tied to one place. Natural landings on our road: QM-5, a
+  cut on *why* time evolution exists and is unique — Picard iteration for
+  i d/dt|ψ⟩ = H|ψ⟩ is a contraction on a short time interval, and its limit
+  is the exponential U(t) = e^{−iHt}; QM-7, the Born series for scattering
+  as a fixed-point iteration (Lippmann–Schwinger). Also the honest reason
+  iterative numerical solvers in the notebooks converge.
 - **QM-9 (hydrogen).** Rotations → angular momentum as the generator →
   SO(3), Casimir operator L² — his route to spherical harmonics; aligns
   with the plan to derive them at the depth of the oscillator's ladder.
