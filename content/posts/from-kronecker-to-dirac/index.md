@@ -640,6 +640,37 @@ height $1/\Delta x$ centered at $x$, satisfy both conditions on sight,
 so the identification above is a special case of that theorem.
 
 <details>
+<summary>The physicist's version of the same construction: a very large box</summary>
+
+Physicists rarely discretize position. They discretize *momentum*
+instead, and the device is a box. Put the particle in a box of length
+$L$ with periodic boundary conditions. Plane waves $e^{ikx}$ then fit
+only for wave numbers $k_n = 2\pi n / L$, $n \in \mathbb Z$ — a
+discrete, countable menu — and, normalized as
+$\frac{1}{\sqrt L}\, e^{i k_n x}$, they are honestly orthonormal on
+$[0, L]$: $\langle k_n | k_m \rangle = \delta_{nm}$, a Kronecker delta
+again, with sums over $n$ and nothing exotic anywhere. Now let
+$L \to \infty$. The spacing $2\pi / L$ of the menu shrinks, sums over
+$n$ turn into integrals, $\sum_n \to \frac{L}{2\pi} \int dk$, and the
+normalized plane waves, rescaled by $\sqrt{L / 2\pi}$ — exactly as our
+cell states were rescaled by $1/\sqrt{\Delta x}$ — acquire the delta
+normalization $\langle k | k' \rangle = \delta(k - k')$. It is this
+post's construction with the roles of position and momentum
+exchanged: the box plays the grid, $2\pi / L$ plays $\Delta x$, and
+"the box is large enough not to matter" is the physicist's phrase for
+"the limit is taken only in numbers". Working in a huge box and never
+sending $L$ to infinity is, in practice, what a physicist means by a
+Hilbert space: a discrete orthonormal basis, with the continuum kept
+as a convenient shorthand. We chose the grid rather than the box for
+two reasons: it keeps the Kronecker delta literally in view, and it
+needs no Fourier transform — which the road has not yet earned in the
+quantum setting. The box returns twice: in the dynamics post, where
+momentum gets its own basis, and in the particle-in-a-box post, where
+the walls are real.
+
+</details>
+
+<details>
 <summary>The same delta, the other way round — Part 1's road</summary>
 
 The Fourier road's Part 1 met the delta as the limit of a shrinking

@@ -202,6 +202,63 @@ one home:
   the ionization threshold as the boundary; bound orbitals vs scattering
   states. Closes the circle to QM-2's "countably many outcomes" example.
 
+## Notes from Eugenia's dad (consultation 2026-10-11), mapped to the road
+
+Source: a physicist's view of "any QM problem". Where each remark lands:
+
+- **Scope.** All problems split into one-particle (barrier, levels, wells —
+  "the domain of QM proper") and many-particle (beyond it). Our four
+  problems are all one-particle; say so in QM-6's intro. Many-body / QFT
+  stays deferred (his pointers: A. Zee, *QFT in a Nutshell* — has problems
+  and solutions; Peskin & Schroeder, *Introduction to QFT* — "with a
+  teacher").
+- **QM-2½ (delta post) — DONE as a cut:** "physicists always mean a
+  discretized Hilbert space": a very large box quantizes momentum
+  (k_n = 2πn/L), box-normalized plane waves are Kronecker-orthonormal, and
+  L → ∞ gives Σ_n → (L/2π)∫dk and ⟨k|k′⟩ = δ(k−k′) — our grid construction
+  with position ↔ momentum swapped (box ↔ grid, 2π/L ↔ Δx, 1/√L ↔ 1/√Δx).
+- **QM-3 (observables).** Kets are chosen by solving the one-particle problem:
+  the eigenbasis of the Hamiltonian; observables are averages ⟨ψ|A|ψ⟩; a
+  concrete representation = bra times ket, ⟨p|1⟩ "take the first function
+  in the p-representation". History pointers for references: Dirac's
+  *Principles* and Pauli's lectures (how the operator table arose).
+- **QM-5 (dynamics).** His "scheme for mathematicians": start from the
+  transformation operator (translation, rotation, time shift) → its
+  infinitesimal version (Taylor around the identity) → the generator → the
+  Lie algebra of the symmetry group; momentum is conserved only with
+  translation symmetry, angular momentum with rotational, energy with time
+  translation. This IS the generator section of QM-5 (§11 of the notes) —
+  present it as "the three symmetries from which all operators of QM are
+  built". Exercise idea (for nb-tunnel / QM-7): rewrite the barrier problem
+  in the p-representation, p²/2m, then in the energy basis — practice
+  changing bases without clinging to any one.
+- **QM-6 (box).** Physical framing: quantization comes from boundary
+  conditions (zero at the walls = infinite potential). A qubit in hardware
+  is "a large potential well for electrons"; a crystal is a 3D well
+  (silicon, germanium — flat inside, barrier at the boundary); a quantum
+  dot = a 3D well ("circular harmonics"); hydrogen is a Coulomb potential,
+  NOT a well. Mesoscopics as a cut: once the well is smaller than microns
+  the shape of the boundary matters (graphene edges: armchair vs zigzag);
+  larger — it does not. Box quantization of momentum for a cm-sized
+  imaginary cube → discrete momenta → momentum representation as the
+  infinite-box limit (ties back to the delta post's cut).
+- **QM-7 (tunneling).** Slowly varying potential → locally constant → piece
+  together box solutions: the WKB idea, as a cut. "Contraction mapping
+  theorem is important" — unclear where he meant it (Born series /
+  Lippmann–Schwinger iteration in scattering?) — ASK.
+- **QM-9 (hydrogen).** Rotations → angular momentum as the generator →
+  SO(3), Casimir operator L² — his route to spherical harmonics; aligns
+  with the plan to derive them at the depth of the oscillator's ladder.
+- **General.** "The physicist's criterion is the experiment, not whether the
+  mathematics converges" (his aside on SR paradoxes) — a candidate sentence
+  for a rigor-policy cut. Textbooks he recommends (all two-volume, Russian
+  editions exist): von Neumann, *Mathematical Foundations of QM* (Nauka
+  1964; English 1955 on archive.org); Richtmyer, *Principles of Advanced
+  Mathematical Physics* (Mir 1982/84); Messiah, *Quantum Mechanics* (Nauka
+  1978/79); also Kato, *Perturbation Theory for Linear Operators* (Mir 1972)
+  for the spectral-theory side; Mackey, *Mathematical Foundations of QM*
+  (1963, free on archive.org) — compact axiomatics, good for QM-3.
+
 ## Deferred (not on the minimal path)
 
 - Tensor products & entanglement (notes §14, multi-qubit) — act four
