@@ -364,14 +364,15 @@ infinite-dimensional state spaces, §1.10; see the references.)
 
 ![The cell states as wavefunctions: flat bumps of height 1/√Δx on disjoint cells — orthonormal by inspection; a state written in them has amplitudes a(x_i)√Δx](cell_states.png)
 
-Write the discretized state in the cell states,
+Write the discretized state in the cell states, with coefficients
+$c_i$ still to be found,
 
 $$
-|\psi_\Delta\rangle = \sum_i c_i\, |\hat x_i\rangle.
+|\psi_\Delta\rangle = \sum_i c_i\, |\hat x_i\rangle,
 $$
 
-The coefficients come from the rule of the last post that has not
-failed us yet — coordinates in an orthonormal basis are inner
+where the coefficients come from the rule of the last post that has
+not failed us yet — coordinates in an orthonormal basis are inner
 products — with the inner product of $L^2$:
 
 $$
