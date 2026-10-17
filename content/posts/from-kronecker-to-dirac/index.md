@@ -333,16 +333,15 @@ dead end numerically, next to the fix we are about to find:
 
 ## The right basis: cell states
 
-The dead end is not a failure of the limit machinery. The limit worked
-flawlessly and reported, correctly, that the state we built converges
-to zero. We did not compute the right state wrongly — we
-**discretized the wrong state**.
-
-Which discrete state is the right one? The failed guess showed that
-we do not actually know the inner products of the original kets:
-assuming $\langle x_i | x_j \rangle = \delta_{ij}$ led to zero. So let
-us build the state from a basis we *define* to be orthonormal, and let
-the physics fix the coefficients. Introduce a new symbol: let
+The dead end is not a failure of the limit machinery. The limit
+worked flawlessly and reported, correctly, what the table
+$\langle x_i | y_j \rangle = \delta_{ij}$ implies: coordinates that
+drain away. The table was the guess, and the table was wrong. We
+cannot know the inner products of the grid kets in advance — they are
+the very thing under construction — so instead of guessing them we
+build the grid states from a basis we *define* to be orthonormal,
+made of honest elements of $L^2$, and let linear algebra fix the
+coefficients. Introduce a new symbol: let
 $|\hat x_i\rangle$ be the orthonormal **cell states**,
 $\langle \hat x_i | \hat x_j \rangle = \delta_{ij}$, where
 $|\hat x_i\rangle$ means "the particle is somewhere in cell $i$" — a
