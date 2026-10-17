@@ -226,8 +226,9 @@ $1$, the other by as little as we like: no function $K$ can satisfy
 the requirement.
 
 Notice what the argument used about $K$ — nothing beyond the
-definition of a function: at every point, including $y = x$, it has
-one finite value. That is what makes it bounded near $y = x$, and a
+definition of a function: it assigns to every point of its domain,
+$y = x$ included, one finite value. That is what makes it bounded
+near $y = x$, and a
 bounded function over an interval of vanishing width carries
 vanishing weight. The only way to return $a(x)$ would be to be, at
 the single point $y = x$, not a finite number but "infinite with unit
