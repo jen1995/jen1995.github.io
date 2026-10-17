@@ -397,32 +397,23 @@ for continuous $a$ the integral over the cell equals $a(\xi_i)\, \Delta x$
 for some point $\xi_i$ of the cell. So the coordinate of a state along
 a cell state is a sample of $a$ in the cell times $\sqrt{\Delta x}$.
 
-Now we can finally say what the $|x_i\rangle$ of the original Riemann
-sum is. We have two expressions for the same discretized state: the
-Riemann-sum notation $\sum_i a(\xi_i)\, |x_i\rangle\, \Delta x$ we
-adopted at the start — a Riemann sum may sample each cell at any of
-its points, so sample it at $\xi_i$ — with the normalization of
-$|x_i\rangle$ left open, and the expansion
-$\sum_i a(\xi_i)\, \sqrt{\Delta x}\; |\hat x_i\rangle$ we just derived.
-Both run over the same cells, so for them to describe the same state
-the terms must agree cell by cell:
+This fixes the grid ket $|x_i\rangle$ of the original Riemann sum.
+Sample that sum at the same points $\xi_i$ — a Riemann sum may sample
+each cell anywhere — and compare it with the expansion just derived,
+cell by cell:
 
 $$
 a(\xi_i)\, |x_i\rangle\, \Delta x = a(\xi_i)\, \sqrt{\Delta x}\; |\hat x_i\rangle \quad \Longrightarrow \quad |x_i\rangle = \frac{1}{\sqrt{\Delta x}}\, |\hat x_i\rangle.
 $$
 
-So $|x_i\rangle$ was never an independent object that got rescaled. It
-is *determined* by this equation: the unique ket that makes the
-Riemann-sum notation — and its limit $\int a(x)\, |x\rangle\, dx$ —
-describe the correctly normalized state. With this identification the
-kernel becomes
+So the kernel is
 
 $$
 \langle x_i | y_j \rangle = \frac{1}{\Delta x}\, \langle \hat x_i | \hat x_j \rangle = \frac{\delta_{ij}}{\Delta x},
 $$
 
-carrying a factor $1/\Delta x$ that cancels the leftover $\Delta x$ of
-the dead end. This is the correctly normalized kernel:
+with a factor $1/\Delta x$ that cancels the leftover $\Delta x$ of
+the dead end:
 
 $$
 \boxed{\; \langle x_i | y_j \rangle = \frac{\delta_{ij}}{\Delta x} \;}
