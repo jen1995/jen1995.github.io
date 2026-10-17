@@ -375,7 +375,8 @@ inner products — here the inner product of $L^2$:
 
 $$
 \begin{aligned}
-c_i = \langle \hat x_i | \psi \rangle &= \int \hat x_i(y)^*\, a(y)\, dy = \frac{1}{\sqrt{\Delta x}} \int_{\text{cell } i} a(y)\, dy \\
+c_i = \langle \hat x_i | \psi \rangle &= \int \hat x_i(y)^*\, a(y)\, dy \\
+&= \frac{1}{\sqrt{\Delta x}} \int_{\text{cell } i} a(y)\, dy \\
 &= a(\xi_i)\, \sqrt{\Delta x},
 \end{aligned}
 $$
