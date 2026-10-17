@@ -345,10 +345,15 @@ coefficients. Introduce a new symbol: let
 $|\hat x_i\rangle$ be the orthonormal **cell states**,
 $\langle \hat x_i | \hat x_j \rangle = \delta_{ij}$, where
 $|\hat x_i\rangle$ means "the particle is somewhere in cell $i$" — a
-cell of width $\Delta x$ around $x_i$. Write $C_i = [x_i - \Delta x/2,\; x_i + \Delta x/2]$
-for the cell and $\mathbf 1_{C_i}$ for its **indicator function** —
-$1$ on the cell, $0$ elsewhere. As a wavefunction the cell state is
-this flat bump, scaled to unit norm:
+cell of width $\Delta x$ around $x_i$,
+
+$$
+C_i = \left[\, x_i - \tfrac{\Delta x}{2},\; x_i + \tfrac{\Delta x}{2} \,\right],
+$$
+
+with $\mathbf 1_{C_i}$ for its **indicator function** — $1$ on the
+cell, $0$ elsewhere. As a wavefunction the cell state is this flat
+bump, scaled to unit norm:
 
 $$
 \hat x_i(x) = \frac{\mathbf 1_{C_i}(x)}{\sqrt{\Delta x}}.
