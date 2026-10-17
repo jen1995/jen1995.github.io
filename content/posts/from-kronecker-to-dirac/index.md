@@ -449,10 +449,13 @@ probability of landing in a cell is the density times the width.
 
 ![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
 
-The norm of a grid ket is fixed by the same equation:
-$\lVert\, |x_i\rangle \,\rVert = 1/\sqrt{\Delta x}$, which grows without
-bound as the grid is refined. We return to what that means once the
-limit is taken.
+One thing is worth mentioning before we move on. The same equation
+fixes the norm of a grid ket,
+$\lVert\, |x_i\rangle \,\rVert = 1/\sqrt{\Delta x}$, and it grows
+without bound as the grid is refined. What that means for the
+limiting kets $|x\rangle$ is the subject of the section
+[*The price*](#the-price-the-position-kets-are-not-states), once the
+delta is built.
 
 ## Taking the limit
 
