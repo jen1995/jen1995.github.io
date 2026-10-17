@@ -223,17 +223,11 @@ an integral over an interval of width $\varepsilon$ of a function
 bounded by $\max |K|$ — at most $\varepsilon \cdot \max |K|$, which
 goes to zero as the bump narrows. One side of the equation differs by
 $1$, the other by as little as we like: no function $K$ can satisfy
-the requirement.
-
-Notice what the argument used about $K$ — nothing beyond the
-definition of a function: it assigns to every point of its domain,
-$y = x$ included, one finite value. That is what makes it bounded
-near $y = x$, and a
-bounded function over an interval of vanishing width carries
-vanishing weight. The only way to return $a(x)$ would be to be, at
-the single point $y = x$, not a finite number but "infinite with unit
-area" — the informal description of the delta from the opening of the
-post, and precisely what a function, by definition, cannot be.
+the requirement. All the argument used about $K$ is that, being a function, it
+assigns one finite value to every point of its domain, $y = x$
+included — so it is bounded there, whereas returning $a(x)$ would take
+being "infinite with unit area" at that single point, which a function
+by definition cannot be.
 
 </details>
 
