@@ -397,9 +397,10 @@ for continuous $a$ the integral over the cell equals $a(\xi_i)\, \Delta x$
 for some point $\xi_i$ of the cell. So the coordinate of a state along
 a cell state is a sample of $a$ in the cell times $\sqrt{\Delta x}$.
 Taking the sample at the grid point, $c_i = a(x_i)\sqrt{\Delta x}$,
-changes nothing in the limit — $\xi_i$ and $x_i$ lie in the same cell
-of width $\Delta x$, and $a$ is continuous — and matches the Riemann
-sum we started from.
+changes nothing as the grid is refined, $\Delta x \to 0$: $\xi_i$ and
+$x_i$ lie in the same cell of width $\Delta x$, so $a(\xi_i) - a(x_i) \to 0$
+by continuity of $a$. It also matches the Riemann sum we started
+from.
 
 The physical reading, for later: once squared amplitudes are read as
 probabilities, $|c_i|^2 = |a(x_i)|^2\, \Delta x$ says that $|a(x)|^2$
