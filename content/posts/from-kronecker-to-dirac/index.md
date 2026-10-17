@@ -147,13 +147,32 @@ predicament: in
 the "perfect instrument" that reads off a signal's value at one
 instant could not be a function either, and the Dirac delta had to
 be built as a limit of averaging windows. Here the same object will
-arrive from the opposite side — and $\langle x | y \rangle$, the inner
-product of two such objects, is exactly what we are after.
+arrive from the opposite side.
+
+Let us restate the goal with this in hand. We know what the inner
+product of our two states is: $\int a(x)^* b(x)\, dx$, the continuum
+version of $\sum_i a_i^* b_i$. What we do not know is
+$\langle x | y \rangle$. Now expand both states in the position kets
+and pull the sums out of the bracket by linearity in each slot, the
+two properties from the last post. In finite dimensions that gives
+$\langle \psi | \varphi \rangle = \sum_{i,j} a_i^* b_j \langle E_i | E_j \rangle$;
+with the sums turned into integrals:
+
+$$
+\langle \psi | \varphi \rangle = \iint a(x)^*\, b(y)\, \langle x | y \rangle\, dx\, dy.
+$$
+
+The two expressions must agree for *every* pair of states, and this is
+the equation we are going to solve for the unknown $\langle x | y \rangle$.
+The manipulation is formal: the integrand contains the very object we
+do not understand, and we have just seen that it will not be a
+function. So we do not attack the equation head-on.
 
 The plan, then: replace both integrals by Riemann sums, compute
-$\langle \psi | \varphi \rangle$ as finite-dimensional linear algebra,
-and take the limit only at the very end. Lay down a **grid** on the
-line: sample points
+$\langle \psi | \varphi \rangle$ as finite-dimensional linear algebra —
+where the unknown becomes a finite table of numbers
+$\langle x_i | y_j \rangle$ — and take the limit only at the very end.
+Lay down a **grid** on the line: sample points
 $x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — and keep only the
 kets $|x_i\rangle$ at the grid points. On any bounded stretch of the
 line these are finitely many, and we *declare* them to be the axes.
