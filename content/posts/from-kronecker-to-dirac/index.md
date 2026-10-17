@@ -457,43 +457,6 @@ $|x\rangle$ are, they are not unit vectors, not normalizable vectors,
 not elements of the Hilbert space at all. That is why "basis" has been
 in scare quotes since the first paragraph.
 
-Which space is meant here, and who exactly is in it, deserves a
-precise statement before the physics of it:
-
-<details>
-<summary>Which $L^2$, and who lives in it</summary>
-
-There is only one space in play. The state
-space of a particle on a line is $L^2(\mathbb R)$ — complex-valued
-functions $\psi$ on the line with $\int |\psi(x)|^2\, dx \lt \infty$,
-with the inner product $\int \psi^* \varphi\, dx$ of the last post. Strictly
-speaking the state space is an abstract Hilbert space $\mathcal H$,
-and the **position representation** is the unitary map
-$\mathcal H \to L^2(\mathbb R)$, $|\psi\rangle \mapsto \psi(x) = \langle x | \psi \rangle$,
-which sends each ket to its wavefunction; as everyone does, we
-*identify* a ket with its image. So "the ket $|\psi\rangle$ lies in
-$L^2$" means "its wavefunction $\psi$ is square-integrable on the
-line", and a ket and its wavefunction are one element written two
-ways.
-
-So, in the formula $|\psi\rangle = \int \psi(x)\, |x\rangle\, dx$, who
-lives in $L^2$? The state $|\psi\rangle$, i.e. the function $\psi$ —
-nothing else. The cell states $|\hat x_i\rangle$ live there too: their
-wavefunction $\hat x_i(x)$ is defined on the whole line — $1/\sqrt{\Delta x}$
-on the cell, zero everywhere else — a step function with finite
-support, and the computation above gives it norm one. The grid kets
-$|x_i\rangle = |\hat x_i\rangle / \sqrt{\Delta x}$ still do, but
-barely: their wavefunction is the spike of height $1/\Delta x$ on the
-cell — the very kernel $K_\Delta$ of this post — and its squared norm
-is $\Delta x \cdot (1/\Delta x)^2 = 1/\Delta x$, which grows without
-bound as the grid is refined. And the limiting ket $|x\rangle$ is not
-in $L^2$ at all: its wavefunction would have to be
-$\langle y | x \rangle = \delta(y - x)$ as a function of $y$, and that
-is not a function — as the rest of the post shows, it is defined only
-by what it does inside integrals.
-
-</details>
-
 Does this contradict the last post, where the space of states was
 declared a Hilbert space? No — and the distinction is worth stating
 carefully, because it will recur. The space of states is still the
