@@ -270,8 +270,11 @@ and the main question of the post is: what is the kernel?
 
 It is tempting to say the kernel is just the Kronecker delta,
 $\langle x_i | y_j \rangle \overset{?}{=} \delta_{ij}$ — the grid
-kets are orthonormal, as any decent basis should be. Let us see where
-that leads. The $\delta_{ij}$ collapses the $j$-sum:
+kets are orthonormal, as any decent basis should be. Nothing forbids
+the guess: we showed above that no *function* $K(x, y)$ on the line
+can be the kernel, but on the grid the kernel is a finite table of
+numbers, and any table is a legitimate candidate. The test is what its
+limit does. Let us see where this one leads. The $\delta_{ij}$ collapses the $j$-sum:
 
 $$
 \sum_i \sum_j a(x_i)^* \, b(y_j)\, \delta_{ij}\, \Delta x\, \Delta y = \sum_i a(x_i)^* \, b(x_i)\, \Delta x\, \Delta y.
@@ -318,7 +321,14 @@ $$
 
 The naive guess is a dead end: with $\langle x_i | y_j \rangle = \delta_{ij}$,
 *every* pair of states has inner product zero in the limit — including
-a state with itself, so every state has length zero. Here is the same
+a state with itself, so every state has length zero. This is the
+unit-vector problem from the previous section, seen from the grid.
+Read the table $\delta_{ij}$ as a function of $y$ for fixed $x_i$: it
+is $1$ on the one cell containing $x_i$ and $0$ elsewhere, and as the
+grid is refined it settles into exactly the function "$1$ at $y = x$,
+$0$ everywhere else" — the zero vector of $L^2$ from the figure
+above. The guess failed because its limit is a function, and we
+already knew that a function cannot do the job. Here is the same
 dead end numerically, next to the fix we are about to find:
 
 ![The inner product of two discretized states as the grid is refined: with the kernel δ_ij it decays to zero, with δ_ij/Δx it converges to the integral](two_kernels.png)
