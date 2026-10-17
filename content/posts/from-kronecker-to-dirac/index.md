@@ -401,10 +401,13 @@ This fixes the grid ket $|x_i\rangle$ of the original Riemann sum,
 $|\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x$, whose
 normalization was left open. Sample that sum at the points $\xi_i$
 instead of $x_i$ — a Riemann sum may sample each cell anywhere — and
-compare it with the expansion just derived, cell by cell:
+compare it with the expansion in cell states,
+$|\psi_\Delta\rangle = \sum_i c_i\, |\hat x_i\rangle$ with
+$c_i = a(\xi_i)\sqrt{\Delta x}$. Both describe the same state, so the
+terms must agree cell by cell:
 
 $$
-a(\xi_i)\, |x_i\rangle\, \Delta x = a(\xi_i)\, \sqrt{\Delta x}\; |\hat x_i\rangle \quad \Longrightarrow \quad |x_i\rangle = \frac{1}{\sqrt{\Delta x}}\, |\hat x_i\rangle.
+\underbrace{a(\xi_i)\, \Delta x}_{\text{Riemann sum}}\; |x_i\rangle = \underbrace{a(\xi_i)\, \sqrt{\Delta x}}_{c_i}\; |\hat x_i\rangle \quad \Longrightarrow \quad |x_i\rangle = \frac{1}{\sqrt{\Delta x}}\, |\hat x_i\rangle.
 $$
 
 So the kernel is
