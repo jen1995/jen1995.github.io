@@ -198,26 +198,30 @@ general: no function whatsoever can satisfy the requirement.
 <details>
 <summary>Why no function at all can be the kernel</summary>
 
-Expand *both* states in the kets and pull both integrals out:
+Suppose $\langle x | y \rangle$ were an ordinary function of two
+variables, $K(x, y)$. The requirement would then read
 
 $$
-\langle \psi | \varphi \rangle = \iint a(x)^*\, b(y)\, \langle x | y \rangle\, dx\, dy,
+a(x) = \int K(x, y)\, a(y)\, dy \qquad \text{for every continuous } a,
 $$
 
-and comparing with the inner-product formula, $\langle x | y \rangle$ must select
-the diagonal of a double integral the way $\delta_{ij}$ selects the
-diagonal of a double sum. No function $K(x, y)$ does that, and here
-is why. Take two continuous functions $b_1$ and $b_2$ that coincide
-everywhere except on a tiny interval around $y = x$, where $b_2$ has a
-narrow bump of height $1$: so $b_2(x) - b_1(x) = 1$. The requirement
-asks the integrals $\int K(x, y)\, b_1(y)\, dy$ and
-$\int K(x, y)\, b_2(y)\, dy$ to return $b_1(x)$ and $b_2(x)$, numbers
-that differ by $1$. But the two integrals differ by
-$\int K(x, y)\, (b_2 - b_1)(y)\, dy$, an integral of a bounded function
-over a tiny interval — and that is as small as we like once the
-interval is narrow enough. Integrating against a function is an
-averaging, and no average over a stretch of $y$ can see what $b$ does
-at the single point $y = x$.
+and this is impossible. Fix $x$ and take two continuous functions
+$a_1$ and $a_2$ that are equal everywhere except on a tiny interval
+of width $\varepsilon$ around $y = x$, where $a_2$ rises above $a_1$
+by a narrow bump of height $1$. The left-hand sides differ by
+$a_2(x) - a_1(x) = 1$. The right-hand sides differ by
+
+$$
+\int K(x, y)\, \big(a_2(y) - a_1(y)\big)\, dy,
+$$
+
+an integral over an interval of width $\varepsilon$ of a function
+bounded by $\max |K|$ — at most $\varepsilon \cdot \max |K|$, which
+goes to zero as the bump narrows. One side of the equation differs by
+$1$, the other by as little as we like: no function $K$ can satisfy
+the requirement. The reason is general: an integral against a
+function averages $a$ over a stretch of $y$, and no average can see
+what $a$ does at a single point.
 
 </details>
 
