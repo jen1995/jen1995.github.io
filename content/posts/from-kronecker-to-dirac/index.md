@@ -368,12 +368,6 @@ Note that, unlike $|x\rangle$, the
 cell states are honest elements of $L^2$ — a cell state is the
 indicator function of its cell, normalized — and the grid is not a
 "countable subset of the continuous basis" but a replacement for it.
-Taken over all grids at once, the cell states form a countable family
-whose linear combinations, the step functions, are dense in $L^2$:
-that density is the separability of $L^2$ the last post promised, and
-it is why discretization can approximate every state — see Rudin's
-*Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
-chapter VIII, §51–52, in the references.
 
 Write the discretized state in the cell states,
 
@@ -542,6 +536,15 @@ outside the space of states. (The functional-analysis name for a menu
 of this kind is a *continuous spectrum*; the box, the tunnel and the
 hydrogen atom will show all three kinds — discrete, continuous, and
 mixed.)
+
+*A remark to close the section, for readers who want the functional
+analysis behind "discretization can approximate every state".*
+Taken over all grids at once, the cell states form a countable family
+whose linear combinations, the step functions, are dense in $L^2$:
+that density is the separability of $L^2$ the last post promised, and
+it is why discretization can approximate every state — see Rudin's
+*Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
+chapter VIII, §51–52, in the references.
 
 ## Taking the limit
 
