@@ -396,11 +396,6 @@ the last step by the
 for continuous $a$ the integral over the cell equals $a(\xi_i)\, \Delta x$
 for some point $\xi_i$ of the cell. So the coordinate of a state along
 a cell state is a sample of $a$ in the cell times $\sqrt{\Delta x}$.
-Taking the sample at the grid point, $c_i = a(x_i)\sqrt{\Delta x}$,
-changes nothing as the grid is refined, $\Delta x \to 0$: $\xi_i$ and
-$x_i$ lie in the same cell of width $\Delta x$, so $a(\xi_i) - a(x_i) \to 0$
-by continuity of $a$. It also matches the Riemann sum we started
-from.
 
 The physical reading, for later: once squared amplitudes are read as
 probabilities, $|c_i|^2 = |a(x_i)|^2\, \Delta x$ says that $|a(x)|^2$
@@ -411,14 +406,16 @@ probability of landing in a cell is the density times the width.
 
 Now we can finally say what the $|x_i\rangle$ of the original Riemann
 sum is. We have two expressions for the same discretized state: the
-Riemann-sum notation $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$ we
-adopted at the start, with the normalization of $|x_i\rangle$ left
-open, and the expansion $\sum_i a(x_i)\, \sqrt{\Delta x}\; |\hat x_i\rangle$
-we just derived. Both run over the same cells, so for them to describe
-the same state the terms must agree cell by cell:
+Riemann-sum notation $\sum_i a(\xi_i)\, |x_i\rangle\, \Delta x$ we
+adopted at the start — a Riemann sum may sample each cell at any of
+its points, so sample it at $\xi_i$ — with the normalization of
+$|x_i\rangle$ left open, and the expansion
+$\sum_i a(\xi_i)\, \sqrt{\Delta x}\; |\hat x_i\rangle$ we just derived.
+Both run over the same cells, so for them to describe the same state
+the terms must agree cell by cell:
 
 $$
-a(x_i)\, |x_i\rangle\, \Delta x = a(x_i)\, \sqrt{\Delta x}\; |\hat x_i\rangle \quad \Longrightarrow \quad |x_i\rangle = \frac{1}{\sqrt{\Delta x}}\, |\hat x_i\rangle.
+a(\xi_i)\, |x_i\rangle\, \Delta x = a(\xi_i)\, \sqrt{\Delta x}\; |\hat x_i\rangle \quad \Longrightarrow \quad |x_i\rangle = \frac{1}{\sqrt{\Delta x}}\, |\hat x_i\rangle.
 $$
 
 So $|x_i\rangle$ was never an independent object that got rescaled. It
