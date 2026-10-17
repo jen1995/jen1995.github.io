@@ -205,27 +205,27 @@ $$
 a(x) = \int K(x, y)\, a(y)\, dy \qquad \text{for every continuous } a,
 $$
 
-and this is impossible. Fix $x$ and take two continuous functions
-$a_1$ and $a_2$ that are equal everywhere except on a tiny interval
-of width $\varepsilon$ around $y = x$, where $a_2$ rises above $a_1$
-by a narrow bump of height $1$.
+and two short steps show that this is impossible.
 
-![Two continuous test functions a₁ and a₂, equal outside a tiny interval of width ε around x, where a₂ rises by a bump of height 1; their difference is a tent of height 1 and width ε, with area at most ε](two_test_functions.png)
+*The kernel must vanish away from $x$.* Take any continuous $a$ with
+$a(x) = 0$. The requirement says $\int K(x, y)\, a(y)\, dy = 0$ for
+every such $a$ — and that forces $K(x, y) = 0$ for all $y \neq x$
+(strictly, for almost every $y$; a continuous $K$ would have to vanish
+identically off the diagonal).
 
-The left-hand sides differ by
-$a_2(x) - a_1(x) = 1$. The right-hand sides differ by
+*A function has one finite value at a point, and a point has no
+width.* So $K(x, \cdot)$ is a function equal to zero everywhere except
+possibly at the single point $y = x$, where it takes some finite
+value. The integral of such a function against anything is zero: a
+single point contributes nothing to an integral, however large the
+finite value sitting there. Then $\int K(x, y)\, a(y)\, dy = 0$ for
+every $a$ — while the requirement demands $a(x)$, which need not be
+zero.
 
-$$
-\int K(x, y)\, \big(a_2(y) - a_1(y)\big)\, dy,
-$$
-
-an integral over an interval of width $\varepsilon$ of a function
-bounded by $\max |K|$ — at most $\varepsilon \cdot \max |K|$, which
-goes to zero as the bump narrows. One side of the equation differs by
-$1$, the other by as little as we like: no function $K$ can satisfy
-the requirement. The reason is general: an integral against a
-function averages $a$ over a stretch of $y$, and no average can see
-what $a$ does at a single point.
+The only way out is to be, at $y = x$, not a finite number but
+"infinite with unit area" — which is exactly the informal description
+of the delta from the opening of the post, and exactly what no
+function can do.
 
 </details>
 
