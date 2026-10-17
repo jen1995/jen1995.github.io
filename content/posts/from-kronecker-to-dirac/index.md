@@ -430,8 +430,14 @@ $$
 \langle x_i | \psi_\Delta \rangle = \sum_j a(\xi_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y = a(\xi_i).
 $$
 
-Now fix a target point $x$ — the only thing held fixed from here on —
-let $i$ be the index of the cell containing it, and refine the grid.
+On every grid the ket returns the sample of $a$ in its cell, with no
+stray factor of $\Delta x$ to drain it away. Everything else is a
+limit.
+
+## Taking the limit
+
+The requirement first. Fix a target point $x$ — the only thing held
+fixed from here on — let $i$ be the index of the cell containing it, and refine the grid.
 The index $i$, the grid point $x_i$ and the sample $\xi_i$ all change
 with the grid, but $x_i$ and $\xi_i$ lie in the cell around $x$, so
 $|\xi_i - x| \leq \Delta x \to 0$, and by continuity of $a$
@@ -442,9 +448,7 @@ $$
 
 That is the requirement, $\langle x | \psi \rangle = a(x)$.
 
-## Taking the limit
-
-First the inner product. The formula
+Next the inner product. The formula
 $\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$ was derived
 from the requirement alone, so now that the grid kets meet the
 requirement it must follow from them as well. Substitute the
