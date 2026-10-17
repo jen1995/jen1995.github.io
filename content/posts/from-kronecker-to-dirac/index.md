@@ -165,9 +165,15 @@ $$
 $$
 
 — finite linear combinations of kets, so everything we do with them is
-the finite-dimensional linear algebra of the last post. Every limit
-$\Delta x \to 0$ in this post will be a limit of *numbers* computed
-from these finite sums, never a limit of kets.
+the finite-dimensional linear algebra of the last post. One rule
+governs the rest of the post: when the grid is refined,
+$\Delta x \to 0$, the only things we ask to converge are *numbers*
+computed from these finite sums — the inner product
+$\langle \psi_\Delta | \varphi_\Delta \rangle$, and later the sums that
+test the kernel against a function. We never claim that the
+discretized state $|\psi_\Delta\rangle$ converges to $|\psi\rangle$
+as a vector: that would need a norm to converge in, and the kets
+$|x_i\rangle$, as the post will show, cannot supply one.
 
 ![The position kets form a continuum, one per real number; a grid keeps finitely many of them and declares them the axes; the Riemann sum of the integrand over the grid is the discretized state](continuum_grid.png)
 
