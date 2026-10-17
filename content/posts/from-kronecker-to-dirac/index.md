@@ -110,21 +110,25 @@ $$
 (we write $a$ and $b$ rather than $\psi$ and $\varphi$ to keep the two
 states apart). Each formula is the same statement as the finite one,
 "coordinates times unit vectors", with the sum over indices turned
-into an integral; the state and its wavefunction are one object. The
-analogy carries the norm along too. For a vector with $n$ coordinates
-the squared length is $\lVert v \rVert^2 = \sum_i |v_i|^2$; for a vector
-with a continuum of coordinates the sum becomes an integral,
-$\lVert a \rVert^2 = \int |a(x)|^2\, dx$, and the inner product
-$\sum_i a_i^* b_i$ becomes $\langle a | b \rangle = \int a(x)^* b(x)\, dx$.
-So the one assumption we need is that our continuum vectors have
-finite length — that $a$ and $b$ are **square-integrable**,
-$\int |a(x)|^2\, dx \lt \infty$ (for a state the length is in fact $1$:
-total probability one). Square-integrable functions on the line with
-this inner product form the Hilbert space $L^2(\mathbb R)$ that the
-[last post](/posts/states-are-vectors/#when-the-menu-is-infinite)
-introduced as the state space of a particle on a line, so the
-assumption just says that $a$ and $b$ are honest states; it also
-guarantees that $\int a^* b\, dx$ converges (by the
+into an integral; the state and its wavefunction are one object.
+Where the wavefunctions live was settled in the last post as well: the
+[space of square-integrable wavefunctions](/posts/states-are-vectors/#when-the-menu-is-infinite),
+$L^2(\mathbb R)$ — functions with finite length,
+$\lVert a \rVert^2 = \int |a(x)|^2\, dx \lt \infty$ (for a state the length
+is in fact $1$: total probability one) — with the inner product
+
+$$
+\langle a | b \rangle = \int a(x)^*\, b(x)\, dx,
+$$
+
+the continuum version of $\sum_i a_i^* b_i$. This is a definition we
+inherit, not something this post derives, and it will serve as the
+**yardstick** throughout: whatever $\langle x | y \rangle$ turns out to
+be, expanding $|\psi\rangle$ and $|\varphi\rangle$ in the kets must
+reproduce this number. (It is this yardstick that will expose, a few
+sections down, a tempting first guess for $\langle x | y \rangle$ as
+wrong: the guess gives every state length zero.) Square-integrability
+also guarantees that $\int a^* b\, dx$ converges (by the
 [Cauchy–Schwarz inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality))
 and that every sum below is finite. We assume $a$ and $b$ continuous
 as well, which is what the Riemann sums need.
@@ -149,10 +153,9 @@ instant could not be a function either, and the Dirac delta had to
 be built as a limit of averaging windows. Here the same object will
 arrive from the opposite side.
 
-Let us restate the goal with this in hand. We know what the inner
-product of our two states is: $\int a(x)^* b(x)\, dx$, the continuum
-version of $\sum_i a_i^* b_i$. What we do not know is
-$\langle x | y \rangle$. Now expand both states in the position kets
+Let us restate the goal with this in hand. The inner product of our
+two states is known — it is the yardstick, $\int a(x)^* b(x)\, dx$.
+What we do not know is $\langle x | y \rangle$. Now expand both states in the position kets
 and pull the sums out of the bracket by linearity in each slot, the
 two properties from the last post. In finite dimensions that gives
 $\langle \psi | \varphi \rangle = \sum_{i,j} a_i^* b_j \langle E_i | E_j \rangle$;
@@ -524,8 +527,10 @@ $$
 $$
 
 The $1/\Delta x$ cancelled exactly one of the two spacings, leaving a
-single honest Riemann sum. This is the inner product of $L^2$ from the
-last post — recovered, this time, from the kets.
+single honest Riemann sum. This is the yardstick — the inner product
+of $L^2$ from the last post — now reproduced by the kets: the
+normalization $1/\sqrt{\Delta x}$ is exactly what makes the ket
+expansion agree with it.
 
 **Option B.** Keep the double structure and take the limit of the
 whole double sum as a *number*:
