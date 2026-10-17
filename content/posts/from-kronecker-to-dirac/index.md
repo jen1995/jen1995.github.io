@@ -362,6 +362,17 @@ $\langle \hat x_i | \hat x_i \rangle = \int |\hat x_i|^2\, dx = \Delta x \cdot \
 how Shankar's *Principles of Quantum Mechanics* introduces
 infinite-dimensional state spaces, §1.10; see the references.)
 
+Note that, unlike $|x\rangle$, the
+cell states are honest elements of $L^2$ — a cell state is the
+indicator function of its cell, normalized — and the grid is not a
+"countable subset of the continuous basis" but a replacement for it.
+Taken over all grids at once, the cell states form a countable family
+whose linear combinations, the step functions, are dense in $L^2$:
+that density is the separability of $L^2$ the last post promised, and
+it is why discretization can approximate every state — see Rudin's
+*Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
+chapter VIII, §51–52, in the references.
+
 ![The cell states as wavefunctions: flat bumps of height 1/√Δx on disjoint cells — orthonormal by inspection; a state written in them has amplitudes a(x_i)√Δx](cell_states.png)
 
 Write the discretized state in the cell states,
@@ -389,16 +400,7 @@ a cell state is a sample of $a$ in the cell times $\sqrt{\Delta x}$.
 Taking the sample at the grid point, $c_i = a(x_i)\sqrt{\Delta x}$,
 changes nothing in the limit — $\xi_i$ and $x_i$ lie in the same cell
 of width $\Delta x$, and $a$ is continuous — and matches the Riemann
-sum we started from. (Note that, unlike $|x\rangle$, the
-cell states are honest elements of $L^2$ — a cell state is the
-indicator function of its cell, normalized — and the grid is not a
-"countable subset of the continuous basis" but a replacement for it.
-Taken over all grids at once, the cell states form a countable family
-whose linear combinations, the step functions, are dense in $L^2$:
-that density is the separability of $L^2$ the last post promised, and
-it is why discretization can approximate every state — see Rudin's
-*Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
-chapter VIII, §51–52, in the references.)
+sum we started from.
 
 The physical reading, for later: once squared amplitudes are read as
 probabilities, $|c_i|^2 = |a(x_i)|^2\, \Delta x$ says that $|a(x)|^2$
