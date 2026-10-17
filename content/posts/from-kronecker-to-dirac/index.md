@@ -342,10 +342,8 @@ the very thing under construction — so instead of guessing them we
 build the grid states from a basis we *define* to be orthonormal,
 made of honest elements of $L^2$, and let linear algebra fix the
 coefficients. Introduce a new symbol: let
-$|\hat x_i\rangle$ be the orthonormal **cell states**,
-$\langle \hat x_i | \hat x_j \rangle = \delta_{ij}$, where
-$|\hat x_i\rangle$ means "the particle is somewhere in cell $i$" — a
-cell of width $\Delta x$ around $x_i$,
+$|\hat x_i\rangle$ be the **cell state** "the particle is somewhere in
+cell $i$" — a cell of width $\Delta x$ around $x_i$,
 
 $$
 C_i = \left[\, x_i - \tfrac{\Delta x}{2},\; x_i + \tfrac{\Delta x}{2} \,\right],
@@ -359,11 +357,19 @@ $$
 \hat x_i(x) = \frac{\mathbf 1_{C_i}(x)}{\sqrt{\Delta x}}.
 $$
 
-Orthonormality is read off directly: different cells have disjoint
-supports, so the product of two different cell states vanishes
-everywhere and $\langle \hat x_i | \hat x_j \rangle = 0$ for
-$i \neq j$, while
-$\langle \hat x_i | \hat x_i \rangle = \int |\hat x_i|^2\, dx = \Delta x \cdot \frac{1}{\Delta x} = 1$.
+The cell states are orthonormal, and this time it is a computation,
+not a guess. The product of two indicators is the indicator of the
+intersection, so the inner product of $L^2$ measures the overlap of
+two cells:
+
+$$
+\langle \hat x_i | \hat x_j \rangle = \frac{1}{\Delta x} \int \mathbf 1_{C_i}(x)\, \mathbf 1_{C_j}(x)\, dx = \frac{\text{length of } C_i \cap C_j}{\Delta x} = \delta_{ij},
+$$
+
+because distinct cells are disjoint and a cell has length
+$\Delta x$. The Kronecker delta is back, but its indices now label
+*intervals*, and the $1$ on the diagonal is a cell measured against
+itself.
 (This way of building a continuous basis from a lattice of cells is
 how Shankar's *Principles of Quantum Mechanics* introduces
 infinite-dimensional state spaces, §1.10; see the references.)
