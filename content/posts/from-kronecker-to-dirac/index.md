@@ -442,13 +442,6 @@ $$
 
 That is the requirement, $\langle x | \psi \rangle = a(x)$.
 
-With the construction done, its physical reading: once squared amplitudes are read as
-probabilities, $|c_i|^2 = |a(\xi_i)|^2\, \Delta x$ says that $|a(x)|^2$
-is a probability **density** — probability per unit length — and the
-probability of landing in a cell is the density times the width.
-
-![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
-
 ## Taking the limit
 
 First the inner product. The formula
@@ -719,7 +712,15 @@ of this kind is a *continuous spectrum*; the box, the tunnel and the
 hydrogen atom will show all three kinds — discrete, continuous, and
 mixed.)
 
-*A remark to close the section, for readers who want the functional
+*A remark on the physics, and an advance on a later post.* Once
+squared amplitudes are read as probabilities — the Born rule, which
+the last post took on credit and a later post of the road derives — $|c_i|^2 = |a(\xi_i)|^2\, \Delta x$ says that $|a(x)|^2$
+is a probability **density** — probability per unit length — and the
+probability of landing in a cell is the density times the width.
+
+![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
+
+*A second remark, for readers who want the functional
 analysis behind "discretization can approximate every state".*
 Taken over all grids at once, the cell states form a countable family
 whose linear combinations, the step functions, are dense in $L^2$:
