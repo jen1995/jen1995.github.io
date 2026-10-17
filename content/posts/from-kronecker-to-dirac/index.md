@@ -430,9 +430,11 @@ $$
 \langle x_i | \psi_\Delta \rangle = \sum_j a(\xi_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y = a(\xi_i).
 $$
 
-Now fix a target point $x$, let $i$ be the index of the cell
-containing it, and refine the grid. The point $\xi_i$ lies in that
-cell, so $|\xi_i - x| \leq \Delta x \to 0$, and by continuity of $a$
+Now fix a target point $x$ — the only thing held fixed from here on —
+let $i$ be the index of the cell containing it, and refine the grid.
+The index $i$, the grid point $x_i$ and the sample $\xi_i$ all change
+with the grid, but $x_i$ and $\xi_i$ lie in the cell around $x$, so
+$|\xi_i - x| \leq \Delta x \to 0$, and by continuity of $a$
 
 $$
 \lim_{\Delta x \to 0} \langle x_i | \psi_\Delta \rangle = \lim_{\Delta x \to 0} a(\xi_i) = a(x).
