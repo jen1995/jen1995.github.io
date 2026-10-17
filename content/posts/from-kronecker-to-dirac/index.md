@@ -397,10 +397,11 @@ for continuous $a$ the integral over the cell equals $a(\xi_i)\, \Delta x$
 for some point $\xi_i$ of the cell. So the coordinate of a state along
 a cell state is a sample of $a$ in the cell times $\sqrt{\Delta x}$.
 
-This fixes the grid ket $|x_i\rangle$ of the original Riemann sum.
-Sample that sum at the same points $\xi_i$ — a Riemann sum may sample
-each cell anywhere — and compare it with the expansion just derived,
-cell by cell:
+This fixes the grid ket $|x_i\rangle$ of the original Riemann sum,
+$|\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x$, whose
+normalization was left open. Sample that sum at the points $\xi_i$
+instead of $x_i$ — a Riemann sum may sample each cell anywhere — and
+compare it with the expansion just derived, cell by cell:
 
 $$
 a(\xi_i)\, |x_i\rangle\, \Delta x = a(\xi_i)\, \sqrt{\Delta x}\; |\hat x_i\rangle \quad \Longrightarrow \quad |x_i\rangle = \frac{1}{\sqrt{\Delta x}}\, |\hat x_i\rangle.
