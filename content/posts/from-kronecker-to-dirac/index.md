@@ -440,11 +440,7 @@ $$
 \lim_{\Delta x \to 0} \langle x_i | \psi_\Delta \rangle = \lim_{\Delta x \to 0} a(\xi_i) = a(x).
 $$
 
-That is the requirement, $\langle x | \psi \rangle = a(x)$. Since
-the inner-product formula
-$\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$ was derived
-from the requirement alone, it must now follow from the grid kets as
-well; the next section watches it do so.
+That is the requirement, $\langle x | \psi \rangle = a(x)$.
 
 With the construction done, its physical reading: once squared amplitudes are read as
 probabilities, $|c_i|^2 = |a(\xi_i)|^2\, \Delta x$ says that $|a(x)|^2$
@@ -567,17 +563,20 @@ as a vector: that would need a norm to converge in, and we have just
 seen that the kets $|x_i\rangle$ cannot supply one — their norm
 $1/\sqrt{\Delta x}$ runs away.
 
-Substitute the normalized kernel into the double sum and do the
-$j$-sum with $\delta_{ij}$ first:
+First the inner product. The formula
+$\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$ was derived
+from the requirement alone, so now that the grid kets meet the
+requirement it must follow from them as well. Substitute the
+normalized kernel into the double sum and do the $j$-sum with
+$\delta_{ij}$ first:
 
 $$
 \langle \psi_\Delta | \varphi_\Delta \rangle = \sum_i \sum_j a(x_i)^* \, b(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta x\, \Delta y = \sum_i a(x_i)^* \, b(x_i)\, \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; \int a(x)^* \, b(x)\, dx.
 $$
 
 The $1/\Delta x$ cancelled exactly one of the two spacings, leaving a
-single honest Riemann sum. This is the inner-product formula that the
-requirement produced at the start — now reproduced by the kets, as it
-had to be once the requirement held on the grid.
+single honest Riemann sum, and the inner-product formula is
+reproduced by the kets.
 
 That settles the inner product, but not the kernel itself. We would
 like to say what $K_\Delta = \delta_{ij} / \Delta x$ *converges to*,
