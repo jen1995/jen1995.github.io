@@ -492,11 +492,10 @@ reproduced by the kets.
 
 That settles the inner product, but not the kernel itself. We would
 like to say what $K_\Delta = \delta_{ij} / \Delta x$ *converges to*,
-and call that $\langle x | y \rangle$. Fix the index $i$ — so the
-spike's location $x_i$ is fixed; call it $x$ — and look at
-$K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$ as a function of $y$:
-a single spike of **width** $\Delta x$ and **height** $1/\Delta x$,
-hence of **area**
+and call that $\langle x | y \rangle$. Fix a point $x$ on the line, let $C_i$ be the cell containing it,
+and look at $K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$ as a
+function of $y$: a single spike of **width** $\Delta x$ and **height**
+$1/\Delta x$ around $x$, hence of **area**
 
 $$
 \text{width} \times \text{height} = \Delta x \cdot \frac{1}{\Delta x} = 1.
