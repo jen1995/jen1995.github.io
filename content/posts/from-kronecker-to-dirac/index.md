@@ -173,18 +173,17 @@ also guarantees that $\int a^* b\, dx$ converges (by the
 and that every sum below is finite. We assume $a$ and $b$ continuous
 as well, which is what the Riemann sums need.
 
-Throughout the construction below this formula is the **yardstick**:
-whatever we build in place of $|x\rangle$ must reproduce it. (It is
-this yardstick that will expose, a few sections down, a tempting first
-guess for $\langle x | y \rangle$ as wrong: the guess gives every state
-length zero.) One step of the derivation deserves a flag. "Pull the
-integral out of the slot" is the integral version of anti-linearity —
-in the last post a finite sum came out of a bracket. That an
-*integral* of kets may do the same is exactly what the construction
-has to justify, and it will: below, an integral over kets is only ever
-evaluated as the limit of finite sums inside a bracket — the rule
-stated at the start of *Taking the limit* — and the last section of
-the post gives that kind of limit its name, *weak convergence*.
+This formula is the **yardstick** for everything that follows.
+Whatever we build in place of $|x\rangle$ must reproduce it, and a
+candidate that fails to is wrong — that is how a tempting first guess
+for $\langle x | y \rangle$ will be rejected a few sections down.
+
+One step of the derivation was taken on trust. The last post allowed
+a finite sum to come out of a bracket; here we let an *integral* of
+kets come out. Nothing so far says that this is legitimate. The
+construction below will make it so: it only ever takes integrals over
+kets as limits of finite sums, and the finite sums come out of a
+bracket by the last post's rule.
 
 ### Why the coordinate objects cannot be functions
 
