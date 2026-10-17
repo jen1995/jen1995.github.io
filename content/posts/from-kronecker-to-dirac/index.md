@@ -457,7 +457,10 @@ normalized kernel into the double sum and do the $j$-sum with
 $\delta_{ij}$ first:
 
 $$
-\langle \psi_\Delta | \varphi_\Delta \rangle = \sum_i \sum_j a(x_i)^* \, b(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta x\, \Delta y = \sum_i a(x_i)^* \, b(x_i)\, \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; \int a(x)^* \, b(x)\, dx.
+\begin{aligned}
+\langle \psi_\Delta | \varphi_\Delta \rangle &= \sum_i \sum_j a(x_i)^* \, b(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta x\, \Delta y \\
+&= \sum_i a(x_i)^* \, b(x_i)\, \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; \int a(x)^* \, b(x)\, dx.
+\end{aligned}
 $$
 
 The $1/\Delta x$ cancelled exactly one of the two spacings, leaving a
