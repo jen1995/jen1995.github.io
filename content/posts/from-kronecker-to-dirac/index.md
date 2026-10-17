@@ -364,15 +364,28 @@ infinite-dimensional state spaces, §1.10; see the references.)
 
 ![The cell states as wavefunctions: flat bumps of height 1/√Δx on disjoint cells — orthonormal by inspection; a state written in them has amplitudes a(x_i)√Δx](cell_states.png)
 
-Write the discretized state as
+Write the discretized state in the cell states,
 
 $$
-|\psi_\Delta\rangle = \sum_i c_i\, |\hat x_i\rangle,
+|\psi_\Delta\rangle = \sum_i c_i\, |\hat x_i\rangle.
 $$
 
-so that $|c_i|^2$ is the probability of finding the particle in cell
-$i$ — by the Born rule, the squared-amplitude rule the last post took
-on credit and a later post of the road will earn. (Note that, unlike $|x\rangle$, the
+The coefficients come from the rule of the last post that has not
+failed us yet — coordinates in an orthonormal basis are inner
+products — with the inner product of $L^2$:
+
+$$
+\begin{aligned}
+c_i = \langle \hat x_i | \psi \rangle &= \int \hat x_i(y)^*\, a(y)\, dy \\
+&= \frac{1}{\sqrt{\Delta x}} \int_{\text{cell } i} a(y)\, dy \;\approx\; a(x_i)\, \sqrt{\Delta x},
+\end{aligned}
+$$
+
+the last step by continuity of $a$: over a cell of width $\Delta x$
+the integral of $a$ is $a(x_i)\, \Delta x$ up to an error that vanishes
+faster than $\Delta x$. We take $c_i = a(x_i)\sqrt{\Delta x}$ — the
+Riemann-sum version of these coordinates, exact when $a$ is constant
+on each cell. (Note that, unlike $|x\rangle$, the
 cell states are honest elements of $L^2$ — a cell state is the
 indicator function of its cell, normalized — and the grid is not a
 "countable subset of the continuous basis" but a replacement for it.
@@ -381,14 +394,12 @@ whose linear combinations, the step functions, are dense in $L^2$:
 that density is the separability of $L^2$ the last post promised, and
 it is why discretization can approximate every state — see Rudin's
 *Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
-chapter VIII, §51–52, in the references.) Now the physics: the squared
-wavefunction $|a(x)|^2$ is a probability **density** — probability per
-unit length — so the probability of landing in a cell of width
-$\Delta x$ is the density times the width:
+chapter VIII, §51–52, in the references.)
 
-$$
-|c_i|^2 = |a(x_i)|^2\, \Delta x \quad \Longrightarrow \quad c_i = a(x_i)\, \sqrt{\Delta x}.
-$$
+The physical reading, for later: once squared amplitudes are read as
+probabilities, $|c_i|^2 = |a(x_i)|^2\, \Delta x$ says that $|a(x)|^2$
+is a probability **density** — probability per unit length — and the
+probability of landing in a cell is the density times the width.
 
 ![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
 
@@ -762,9 +773,10 @@ $$
 
 To get from the first to the second, the discrete kernel must be
 rescaled by $1/\Delta x$, because that is the normalization a
-continuous basis forces — the probability of a cell is a density times
-a width, so the amplitude of a cell carries a square root of the
-width — and the resulting spikes converge to $\delta(x - y)$ only in
+continuous basis forces — the coordinate of a state along a unit cell
+state is an inner product over the cell, $a(x_i)\sqrt{\Delta x}$, so
+the amplitude of a cell carries a square root of the width;
+physically, the probability of a cell is a density times a width — and the resulting spikes converge to $\delta(x - y)$ only in
 the weak sense: not point by point, but through what they do to every
 function they are integrated against. In short: the Dirac delta is
 what the Kronecker delta becomes when a sum becomes an integral.
