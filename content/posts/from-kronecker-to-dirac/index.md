@@ -423,20 +423,22 @@ $$
 \boxed{\; \langle x_i | y_j \rangle = \frac{\delta_{ij}}{\Delta x} \;}
 $$
 
-Check it against the requirement first. Hit the discretized state with a
-grid bra, as in the dead end:
+Check it against the requirement. Hit the discretized state, sampled
+at the $\xi_j$, with a grid bra:
 
 $$
-\langle x_i | \psi_\Delta \rangle = \sum_j a(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y = a(x_i).
+\langle x_i | \psi_\Delta \rangle = \sum_j a(\xi_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y = a(\xi_i).
 $$
 
-The $1/\Delta x$ cancels the $\Delta y = \Delta x$ of the sum, and the
-grid ket returns the sample of $a$ in its cell — $a(x_i)$ here, or
-$a(\xi_i)$ with the other sampling — with no stray factor of
-$\Delta x$ to drain it away as the grid is refined. Fix a target point
-$x$ and let $\Delta x \to 0$: the cell containing $x$ shrinks onto it,
-and the sample tends to $a(x)$ by continuity. That is the requirement,
-$\langle x | \psi \rangle = a(x)$, met in the limit — and the
+Now fix a target point $x$, let $i$ be the index of the cell
+containing it, and refine the grid. The point $\xi_i$ lies in that
+cell, so $|\xi_i - x| \leq \Delta x \to 0$, and by continuity of $a$
+
+$$
+\lim_{\Delta x \to 0} \langle x_i | \psi_\Delta \rangle = \lim_{\Delta x \to 0} a(\xi_i) = a(x).
+$$
+
+That is the requirement, $\langle x | \psi \rangle = a(x)$. The
 inner-product formula must now follow; the next section watches it
 do so.
 
