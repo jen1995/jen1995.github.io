@@ -431,9 +431,14 @@ $$
 $$
 
 The $1/\Delta x$ cancels the $\Delta y = \Delta x$ of the sum, and the
-grid kets return the coordinate exactly — not in the limit, on every
-grid. The requirement holds, and the inner-product formula must now
-follow; the next section watches it do so.
+grid ket returns the sample of $a$ in its cell — $a(x_i)$ here, or
+$a(\xi_i)$ with the other sampling — with no stray factor of
+$\Delta x$ to drain it away as the grid is refined. Fix a target point
+$x$ and let $\Delta x \to 0$: the cell containing $x$ shrinks onto it,
+and the sample tends to $a(x)$ by continuity. That is the requirement,
+$\langle x | \psi \rangle = a(x)$, met in the limit — and the
+inner-product formula must now follow; the next section watches it
+do so.
 
 With the construction done, its physical reading: once squared amplitudes are read as
 probabilities, $|c_i|^2 = |a(\xi_i)|^2\, \Delta x$ says that $|a(x)|^2$
