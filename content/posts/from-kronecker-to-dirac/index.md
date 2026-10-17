@@ -163,10 +163,9 @@ $$
 The right-hand side is the inner product of the
 [space of square-integrable wavefunctions](/posts/states-are-vectors/#when-the-menu-is-infinite),
 $L^2(\mathbb R)$, which the last post wrote down as
-$\langle f | g \rangle = \int f^* g\, dx$. It is worth being clear
-about what the computation shows, because the construction below will
-use this inner product freely. The formula $\int a^* b\, dx$ is a
-definition that stands on its own: it makes sense for any two
+$\langle f | g \rangle = \int f^* g\, dx$.
+
+The formula $\int a^* b\, dx$ is a definition that stands on its own: it makes sense for any two
 square-integrable functions, needs no kets and no deltas, and
 satisfies the axioms of an inner product from the last post — linear
 in $b$, conjugate-linear in $a$, and $\int |a|^2\, dx \gt 0$ unless $a$
