@@ -449,70 +449,10 @@ probability of landing in a cell is the density times the width.
 
 ![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
 
-One consequence deserves to be said out loud now, because the rest of
-the road will keep meeting it. The norm of a grid ket is
-$\lVert\, |x_i\rangle \,\rVert = 1 / \sqrt{\Delta x}$, and it
-**diverges** as $\Delta x \to 0$. Whatever the limiting objects
-$|x\rangle$ are, they are not unit vectors, not normalizable vectors,
-not elements of the Hilbert space at all. That is why "basis" has been
-in scare quotes since the first paragraph.
-
-Does this contradict the last post, where the space of states was
-declared a Hilbert space? No — and the distinction is worth stating
-carefully, because it will recur. The space of states is still the
-Hilbert space $L^2$ of square-integrable wavefunctions: every physical
-state $|\psi\rangle$, every honest superposition, lives there. But
-$|x\rangle$ is **not a state** — and, in particular, no state
-$|\psi\rangle$ can be equal to a single $|x_0\rangle$. Suppose it
-were: its wavefunction would be $\psi(x) = \langle x | x_0 \rangle = \delta(x - x_0)$,
-and $\langle \psi | \psi \rangle = \int |\delta(x - x_0)|^2\, dx$ is
-not even a divergent integral, it is an undefined expression — the
-delta cannot be squared. What *can* be prepared is a state
-concentrated *near* $x_0$: a narrow bump of width $\sigma$, say a
-Gaussian, which is an honest element of $L^2$ for every $\sigma \gt 0$.
-But as $\sigma \to 0$ these states converge to nothing in $L^2$ — the
-normalized bumps have no limit in the norm — so "exactly at $x_0$" is
-not a rare state but a nonexistent one, approachable to any precision
-and never reached. This is a genuine difference from the discrete
-menus of the first two posts, where every outcome had a state of its
-own ($|u\rangle$, $|d\rangle$): for a continuous menu, a definite
-outcome has no state, only approximations. Mathematically, then,
-$|x\rangle$ is a *generalized vector*, an object of the same kind as the delta itself:
-it exists only through what it does to honest states. The bra
-$\langle x |$ is the functional "evaluate the wavefunction at $x$",
-$\langle x | \psi \rangle = \psi(x)$, and this functional is *not* the
-inner product with any element of $L^2$ — the last post's Riesz
-theorem does not apply to it, because evaluation at a point is not a
-bounded functional on $L^2$. So the "continuous basis" is a basis in a
-generalized sense: every honest state has an expansion
-$\int \psi(x)\, |x\rangle\, dx$ along it, while the "basis vectors"
-themselves stand just outside the space. The rigorous home for this
-arrangement is a *rigged Hilbert space* — a triple
-$\Phi \subset \mathcal H \subset \Phi^*$ of nice test states, the
-Hilbert space, and the generalized vectors, with $|x\rangle \in \Phi^*$
-— which we name and do not build. The construction, and the theorem
-that every honest state expands along generalized eigenvectors, are
-due to Gelfand and Vilenkin (*Generalized Functions*, vol. 4); the
-gentlest entry is de la Madrid's article on the role of the rigged
-Hilbert space in quantum mechanics, which works it all out on one
-solvable example — both are in the references.
-
-This is also the first appearance of a theme the road will return to:
-position is a measurable quantity whose menu of outcomes is a
-continuum, and such quantities have "eigenvectors" that live just
-outside the space of states. (The functional-analysis name for a menu
-of this kind is a *continuous spectrum*; the box, the tunnel and the
-hydrogen atom will show all three kinds — discrete, continuous, and
-mixed.)
-
-*A remark to close the section, for readers who want the functional
-analysis behind "discretization can approximate every state".*
-Taken over all grids at once, the cell states form a countable family
-whose linear combinations, the step functions, are dense in $L^2$:
-that density is the separability of $L^2$ the last post promised, and
-it is why discretization can approximate every state — see Rudin's
-*Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
-chapter VIII, §51–52, in the references.
+The norm of a grid ket is fixed by the same equation:
+$\lVert\, |x_i\rangle \,\rVert = 1/\sqrt{\Delta x}$, which grows without
+bound as the grid is refined. We return to what that means once the
+limit is taken.
 
 ## Taking the limit
 
@@ -734,6 +674,74 @@ the systematic theory of objects like $\delta$ is
 which we name and do not rebuild.
 
 </details>
+
+## The price: the position kets are not states
+
+One consequence of the construction deserves to be said out loud,
+because the rest of the road will keep meeting it. The norm of a grid
+ket is
+$\lVert\, |x_i\rangle \,\rVert = 1 / \sqrt{\Delta x}$, and it
+**diverges** as $\Delta x \to 0$. Whatever the limiting objects
+$|x\rangle$ are, they are not unit vectors, not normalizable vectors,
+not elements of the Hilbert space at all. That is why "basis" has been
+in scare quotes since the first paragraph.
+
+Does this contradict the last post, where the space of states was
+declared a Hilbert space? No — and the distinction is worth stating
+carefully, because it will recur. The space of states is still the
+Hilbert space $L^2$ of square-integrable wavefunctions: every physical
+state $|\psi\rangle$, every honest superposition, lives there. But
+$|x\rangle$ is **not a state** — and, in particular, no state
+$|\psi\rangle$ can be equal to a single $|x_0\rangle$. Suppose it
+were: its wavefunction would be $\psi(x) = \langle x | x_0 \rangle = \delta(x - x_0)$,
+and $\langle \psi | \psi \rangle = \int |\delta(x - x_0)|^2\, dx$ is
+not even a divergent integral, it is an undefined expression — the
+delta cannot be squared. What *can* be prepared is a state
+concentrated *near* $x_0$: a narrow bump of width $\sigma$, say a
+Gaussian, which is an honest element of $L^2$ for every $\sigma \gt 0$.
+But as $\sigma \to 0$ these states converge to nothing in $L^2$ — the
+normalized bumps have no limit in the norm — so "exactly at $x_0$" is
+not a rare state but a nonexistent one, approachable to any precision
+and never reached. This is a genuine difference from the discrete
+menus of the first two posts, where every outcome had a state of its
+own ($|u\rangle$, $|d\rangle$): for a continuous menu, a definite
+outcome has no state, only approximations. Mathematically, then,
+$|x\rangle$ is a *generalized vector*, an object of the same kind as the delta itself:
+it exists only through what it does to honest states. The bra
+$\langle x |$ is the functional "evaluate the wavefunction at $x$",
+$\langle x | \psi \rangle = \psi(x)$, and this functional is *not* the
+inner product with any element of $L^2$ — the last post's Riesz
+theorem does not apply to it, because evaluation at a point is not a
+bounded functional on $L^2$. So the "continuous basis" is a basis in a
+generalized sense: every honest state has an expansion
+$\int \psi(x)\, |x\rangle\, dx$ along it, while the "basis vectors"
+themselves stand just outside the space. The rigorous home for this
+arrangement is a *rigged Hilbert space* — a triple
+$\Phi \subset \mathcal H \subset \Phi^*$ of nice test states, the
+Hilbert space, and the generalized vectors, with $|x\rangle \in \Phi^*$
+— which we name and do not build. The construction, and the theorem
+that every honest state expands along generalized eigenvectors, are
+due to Gelfand and Vilenkin (*Generalized Functions*, vol. 4); the
+gentlest entry is de la Madrid's article on the role of the rigged
+Hilbert space in quantum mechanics, which works it all out on one
+solvable example — both are in the references.
+
+This is also the first appearance of a theme the road will return to:
+position is a measurable quantity whose menu of outcomes is a
+continuum, and such quantities have "eigenvectors" that live just
+outside the space of states. (The functional-analysis name for a menu
+of this kind is a *continuous spectrum*; the box, the tunnel and the
+hydrogen atom will show all three kinds — discrete, continuous, and
+mixed.)
+
+*A remark to close the section, for readers who want the functional
+analysis behind "discretization can approximate every state".*
+Taken over all grids at once, the cell states form a countable family
+whose linear combinations, the step functions, are dense in $L^2$:
+that density is the separability of $L^2$ the last post promised, and
+it is why discretization can approximate every state — see Rudin's
+*Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
+chapter VIII, §51–52, in the references.
 
 ## Summary
 
