@@ -363,7 +363,10 @@ intersection, so the inner product of $L^2$ measures the overlap of
 two cells:
 
 $$
-\langle \hat x_i | \hat x_j \rangle = \frac{1}{\Delta x} \int \mathbf 1_{C_i}(x)\, \mathbf 1_{C_j}(x)\, dx = \frac{\text{length of } C_i \cap C_j}{\Delta x} = \delta_{ij},
+\begin{aligned}
+\langle \hat x_i | \hat x_j \rangle &= \frac{1}{\Delta x} \int \mathbf 1_{C_i}(x)\, \mathbf 1_{C_j}(x)\, dx \\
+&= \frac{\text{length of } C_i \cap C_j}{\Delta x} = \delta_{ij},
+\end{aligned}
 $$
 
 because distinct cells are disjoint and a cell has length
