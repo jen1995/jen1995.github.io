@@ -198,8 +198,14 @@ to everything, and no unit vector.
 
 ![The unit-vector problem: a 1 at one index is a unit vector in ℂ⁵; on the line the same recipe has zero length; what does the job is a spike of unit area, narrower and taller without a function as its limit](unit_vector_problem.png)
 
-The requirement says why no other function will do either. Expand
-*both* states in the kets and pull both integrals out:
+Nor does a repaired candidate help — a narrow bump of unit norm, say.
+Any attempt of this kind fails for the same reason, and the reason is
+general: no function whatsoever can satisfy the requirement.
+
+<details>
+<summary>Why no function at all can be the kernel</summary>
+
+Expand *both* states in the kets and pull both integrals out:
 
 $$
 \langle \psi | \varphi \rangle = \iint a(x)^*\, b(y)\, \langle x | y \rangle\, dx\, dy,
@@ -218,7 +224,11 @@ $\int K(x, y)\, (b_2 - b_1)(y)\, dy$, an integral of a bounded function
 over a tiny interval — and that is as small as we like once the
 interval is narrow enough. Integrating against a function is an
 averaging, and no average over a stretch of $y$ can see what $b$ does
-at the single point $y = x$. The object that actually does a
+at the single point $y = x$.
+
+</details>
+
+The object that actually does a
 coordinate object's job is not a function at all, as the rest of the
 post will show. Readers of the Fourier road
 have met this exact predicament: in
