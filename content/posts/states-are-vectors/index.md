@@ -666,7 +666,8 @@ definition of a Hilbert space does.
 </details>
 
 The space of square-integrable wavefunctions, called
-$L^2$, is the important infinite-dimensional one: its inner product is
+[$L^2$](https://en.wikipedia.org/wiki/Lp_space#L2_and_Hilbert_spaces),
+is the important infinite-dimensional one: its inner product is
 
 $$
 \langle f | g \rangle = \int f^*(x) \, g(x) \, dx,
