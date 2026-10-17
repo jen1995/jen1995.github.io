@@ -375,16 +375,20 @@ inner products — here the inner product of $L^2$:
 
 $$
 \begin{aligned}
-c_i = \langle \hat x_i | \psi \rangle &= \int \hat x_i(y)^*\, a(y)\, dy \\
-&= \frac{1}{\sqrt{\Delta x}} \int_{\text{cell } i} a(y)\, dy \;\approx\; a(x_i)\, \sqrt{\Delta x},
+c_i = \langle \hat x_i | \psi \rangle &= \int \hat x_i(y)^*\, a(y)\, dy = \frac{1}{\sqrt{\Delta x}} \int_{\text{cell } i} a(y)\, dy \\
+&= a(\xi_i)\, \sqrt{\Delta x},
 \end{aligned}
 $$
 
-the last step by continuity of $a$: over a cell of width $\Delta x$
-the integral of $a$ is $a(x_i)\, \Delta x$ up to an error that vanishes
-faster than $\Delta x$. We take $c_i = a(x_i)\sqrt{\Delta x}$ — the
-Riemann-sum version of these coordinates, exact when $a$ is constant
-on each cell. (Note that, unlike $|x\rangle$, the
+the last step by the
+[mean value theorem for integrals](https://en.wikipedia.org/wiki/Mean_value_theorem#Mean_value_theorems_for_definite_integrals):
+for continuous $a$ the integral over the cell equals $a(\xi_i)\, \Delta x$
+for some point $\xi_i$ of the cell. So the coordinate of a state along
+a cell state is a sample of $a$ in the cell times $\sqrt{\Delta x}$.
+Taking the sample at the grid point, $c_i = a(x_i)\sqrt{\Delta x}$,
+changes nothing in the limit — $\xi_i$ and $x_i$ lie in the same cell
+of width $\Delta x$, and $a$ is continuous — and matches the Riemann
+sum we started from. (Note that, unlike $|x\rangle$, the
 cell states are honest elements of $L^2$ — a cell state is the
 indicator function of its cell, normalized — and the grid is not a
 "countable subset of the continuous basis" but a replacement for it.
