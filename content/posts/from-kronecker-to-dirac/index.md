@@ -148,11 +148,12 @@ the "perfect instrument" that reads off a signal's value at one
 instant could not be a function either, and the Dirac delta had to
 be built as a limit of averaging windows. Here the same object will
 arrive from the opposite side — and $\langle x | y \rangle$, the inner
-product of two such objects, is exactly what we are after. The plan: compute
-$\langle \psi | \varphi \rangle$ by discretizing each integral into a
-Riemann sum, and take the limit at the very end.
+product of two such objects, is exactly what we are after.
 
-So we discretize. Lay down a **grid** on the line: sample points
+The plan, then: replace both integrals by Riemann sums, compute
+$\langle \psi | \varphi \rangle$ as finite-dimensional linear algebra,
+and take the limit only at the very end. Lay down a **grid** on the
+line: sample points
 $x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — and keep only the
 kets $|x_i\rangle$ at the grid points. On any bounded stretch of the
 line these are finitely many, and we *declare* them to be the axes.
