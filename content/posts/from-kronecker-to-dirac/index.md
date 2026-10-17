@@ -173,12 +173,13 @@ also guarantees that $\int a^* b\, dx$ converges (by the
 and that every sum below is finite. We assume $a$ and $b$ continuous
 as well, which is what the Riemann sums need.
 
-The inner-product formula just derived,
-$\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$, is the
-**yardstick** for everything that follows. Whatever we build in place
-of $|x\rangle$ must reproduce it, and a candidate that fails to is
-wrong — that is how a tempting first guess
-for $\langle x | y \rangle$ will be rejected a few sections down.
+The requirement itself is the **yardstick** for everything that
+follows. Whatever we build in place of $|x\rangle$ must return
+coordinates, $\langle x | \psi \rangle = a(x)$, in the limit — and
+then, as we have just seen, the inner-product formula comes for free.
+A candidate that fails the requirement is wrong; that is how a
+tempting first guess for $\langle x | y \rangle$ will be rejected a
+few sections down.
 
 One step of the derivation was taken on trust. The last post allowed
 a finite sum to come out of a bracket; here we let an *integral* of
@@ -211,7 +212,7 @@ $$
 \langle \psi | \varphi \rangle = \iint a(x)^*\, b(y)\, \langle x | y \rangle\, dx\, dy,
 $$
 
-and comparing with the yardstick, $\langle x | y \rangle$ must select
+and comparing with the inner-product formula, $\langle x | y \rangle$ must select
 the diagonal of a double integral the way $\delta_{ij}$ selects the
 diagonal of a double sum. No function $K(x, y)$ does that, and here
 is why. Take two continuous functions $b_1$ and $b_2$ that coincide
@@ -243,8 +244,8 @@ arrive from the opposite side.
 The plan, then: build the coordinate objects. Replace both integrals
 by Riemann sums, compute $\langle \psi | \varphi \rangle$ as
 finite-dimensional linear algebra — where the unknown becomes a finite
-table of numbers $\langle x_i | y_j \rangle$ — find which table makes
-the limit reproduce the yardstick, and read the Dirac delta off that
+table of numbers $\langle x_i | y_j \rangle$ — find which table satisfies
+the requirement in the limit, and read the Dirac delta off that
 table's limit. Lay down a **grid** on the line: sample points
 $x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — and keep only the
 kets $|x_i\rangle$ at the grid points. On any bounded stretch of the
@@ -345,7 +346,16 @@ is $1$ on the one cell containing $x_i$ and $0$ elsewhere, and as the
 grid is refined it settles into exactly the function "$1$ at $y = x$,
 $0$ everywhere else" — the zero vector of $L^2$ from the figure
 above. The guess failed because its limit is a function, and we
-already knew that a function cannot do the job. Here is the same
+already knew that a function cannot do the job. The requirement says
+the same thing in one line, without any double sum: hit the
+discretized state with a grid bra,
+
+$$
+\langle x_i | \psi_\Delta \rangle = \sum_j a(y_j)\, \delta_{ij}\, \Delta y = a(x_i)\, \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; 0,
+$$
+
+and the kets return coordinates that vanish as the grid is refined,
+instead of $a(x_i)$. Here is the same
 dead end numerically, next to the fix we are about to find:
 
 ![The inner product of two discretized states as the grid is refined: with the kernel δ_ij it decays to zero, with δ_ij/Δx it converges to the integral](two_kernels.png)
@@ -522,6 +532,18 @@ $$
 \boxed{\; \langle x_i | y_j \rangle = \frac{\delta_{ij}}{\Delta x} \;}
 $$
 
+Check it against the yardstick first. Hit the discretized state with a
+grid bra, as in the dead end:
+
+$$
+\langle x_i | \psi_\Delta \rangle = \sum_j a(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y = a(x_i).
+$$
+
+The $1/\Delta x$ cancels the $\Delta y = \Delta x$ of the sum, and the
+grid kets return the coordinate exactly — not in the limit, on every
+grid. The requirement holds, and the inner-product formula must now
+follow; the next section watches it do so.
+
 One consequence deserves to be said out loud now, because the rest of
 the road will keep meeting it. The norm of a grid ket is
 $\lVert\, |x_i\rangle \,\rVert = 1 / \sqrt{\Delta x}$, and it
@@ -607,10 +629,9 @@ $$
 $$
 
 The $1/\Delta x$ cancelled exactly one of the two spacings, leaving a
-single honest Riemann sum. This is the yardstick — the inner product
-of $L^2$ from the last post — now reproduced by the kets: the
-normalization $1/\sqrt{\Delta x}$ is exactly what makes the ket
-expansion agree with it.
+single honest Riemann sum. This is the inner-product formula that the
+requirement produced at the start — now reproduced by the kets, as it
+had to be once the requirement held on the grid.
 
 **Option B.** Keep the double structure and take the limit of the
 whole double sum as a *number*:
