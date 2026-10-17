@@ -366,8 +366,12 @@ infinite-dimensional state spaces, §1.10; see the references.)
 
 Note that, unlike $|x\rangle$, the
 cell states are honest elements of $L^2$ — a cell state is the
-indicator function of its cell, normalized — and the grid is not a
-"countable subset of the continuous basis" but a replacement for it.
+indicator function of its cell, normalized. This corrects a picture
+the word "grid" may have suggested: the grid kets we are about to
+build are not the kets $|x\rangle$ of the continuum picked out at the
+grid points — such a ket at a single point is not an element of
+$L^2$ at all — but states spread over a whole cell of width
+$\Delta x$, which stand in for the points only as $\Delta x \to 0$.
 
 Write the discretized state in the cell states,
 
