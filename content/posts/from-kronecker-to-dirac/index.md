@@ -138,13 +138,7 @@ to everything, and no unit vector. The object that actually does a
 unit vector's job here — making $\int a(y)\, \langle x_0 | y \rangle\, dy$
 return $a(x_0)$ — is not a function at all, as the rest of the post
 will show; and $\langle x | y \rangle$, the inner product of two such
-objects, is exactly what we are after. (A ket can certainly stand
-under an honest-looking formula — a plane wave $e^{ikx}$, say. But
-that is the *momentum* basis, not the position one, and it has the
-same disease in the other direction: $|e^{ikx}|^2 = 1$ everywhere, so
-its length $\int 1\, dx$ is infinite. Both families are unit vectors
-that live just outside $L^2$; the box in a cut below treats the second
-the way this post treats the first.) The plan: compute
+objects, is exactly what we are after. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
@@ -672,9 +666,12 @@ $L \to \infty$. The spacing $2\pi / L$ of the menu shrinks, sums over
 $n$ turn into integrals, $\sum_n \to \frac{L}{2\pi} \int dk$, and the
 normalized plane waves, rescaled by $\sqrt{L / 2\pi}$ — exactly as our
 cell states were rescaled by $1/\sqrt{\Delta x}$ — acquire the delta
-normalization $\langle k | k' \rangle = \delta(k - k')$. It is this
-post's construction with the roles of position and momentum
-exchanged: the box plays the grid, $2\pi / L$ plays $\Delta x$, and
+normalization $\langle k | k' \rangle = \delta(k - k')$. Note that on the infinite line the plane wave $e^{ikx}$ itself is
+the momentum twin of the position ket, with the same disease in the
+other direction: $|e^{ikx}|^2 = 1$ everywhere, so its length
+$\int 1\, dx$ is infinite, and it is a unit vector living just outside
+$L^2$, exactly as $|x\rangle$ is. It is this post's construction with
+the roles of position and momentum exchanged: the box plays the grid, $2\pi / L$ plays $\Delta x$, and
 "the box is large enough not to matter" is the physicist's phrase for
 "the limit is taken only in numbers". Working in a huge box and never
 sending $L$ to infinity is, in practice, what a physicist means by a
