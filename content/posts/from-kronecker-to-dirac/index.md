@@ -193,7 +193,12 @@ to everything, and no unit vector.
 
 Nor does a repaired candidate help — a narrow bump of unit norm, say.
 Any attempt of this kind fails for the same reason, and the reason is
-general: no function whatsoever can satisfy the requirement.
+general: no function whatsoever can satisfy the requirement. Recall
+what it asks of $\langle x | y \rangle$:
+
+$$
+a(x) = \int \langle x | y \rangle\, a(y)\, dy \qquad \text{for every state } a.
+$$
 
 Suppose $\langle x | y \rangle$ were an ordinary function of two
 variables, $K(x, y)$. The requirement would then read
@@ -254,8 +259,11 @@ $$
 |\psi_\Delta\rangle = \sum_i a(x_i)\, |x_i\rangle\, \Delta x, \qquad |\varphi_\Delta\rangle = \sum_j b(y_j)\, |y_j\rangle\, \Delta y
 $$
 
-— finite linear combinations of kets, so everything we do with them is
-the finite-dimensional linear algebra of the last post.
+We use the same grid for both states — the points $y_j$ are the
+points $x_j$ and $\Delta y = \Delta x$; the second letter only keeps
+the two sums apart. These are finite linear combinations of kets, so
+everything we do with them is the finite-dimensional linear algebra of
+the last post.
 
 ![The position kets form a continuum, one per real number; a grid keeps finitely many of them and declares them the axes; the Riemann sum of the integrand over the grid is the discretized state](continuum_grid.png)
 
@@ -289,115 +297,39 @@ kets are orthonormal, as any decent basis should be. Nothing forbids
 the guess: we showed above that no *function* $K(x, y)$ on the line
 can be the kernel, but on the grid the kernel is a finite table of
 numbers, and any table is a legitimate candidate. The test is what its
-limit does. Let us see where this one leads. The $\delta_{ij}$ collapses the $j$-sum:
+limit does.
 
-$$
-\sum_i \sum_j a(x_i)^* \, b(y_j)\, \delta_{ij}\, \Delta x\, \Delta y = \sum_i a(x_i)^* \, b(x_i)\, \Delta x\, \Delta y.
-$$
-
-We are free to choose the grids, so take the same grid for both
-states, $\Delta y = \Delta x$ with the same sample points. Then:
-
-$$
-\sum_i a(x_i)^* \, b(x_i)\, \Delta x\, \Delta x = \left( \sum_i a(x_i)^* \, b(x_i)\, \Delta x \right) \cdot \Delta x.
-$$
-
-<details>
-<summary>Why one grid for both states is not a restriction</summary>
-
-It is a choice of how we write the states, not an assumption about
-them: $x$ and $y$ are two names for the same line, the kets
-$|x_i\rangle$ and $|y_j\rangle$ are one and the same family, and
-using one grid for both is the continuous counterpart of expanding
-both vectors in the *same* orthonormal basis — which the last post's
-coordinate formula $\langle \psi | \varphi \rangle = \sum_i a_i^* b_i$
-required too. Nothing would break with two different grids, either:
-take their *common refinement* — the grid whose cut points are all
-the cut points of both (when the spacings are commensurable, simply
-the grid of which both are multiples). Every cell of either original
-grid is a union of cells of the refined one, so both Riemann sums can
-be rewritten over the single refined grid, and we are back to the
-case in the text — with a Riemann integral as the limit either way,
-since the limit does not depend on the grid that produced it.
-
-![Two grids of different spacing and a common refinement of which both are multiples: every cell of either grid is a union of refined cells](common_refinement.png)
-
-</details>
-
-Two factors remain: a Riemann sum, and a leftover $\Delta x$. As
-$\Delta x \to 0$ the Riemann sum approaches the finite number
-$\int a(x)^* \, b(x)\, dx$ — but it is multiplied by that extra
-$\Delta x$, which goes to zero. The whole expression converges to
-zero:
-
-$$
-\left( \sum_i a(x_i)^* \, b(x_i)\, \Delta x \right) \cdot \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; 0.
-$$
-
-The naive guess is a dead end: with $\langle x_i | y_j \rangle = \delta_{ij}$,
-*every* pair of states has inner product zero in the limit — including
-a state with itself, so every state has length zero. This is the
-unit-vector problem from the previous section, seen from the grid.
-Read the table $\delta_{ij}$ as a function of $y$ for fixed $x_i$: it
-is $1$ on the one cell containing $x_i$ and $0$ elsewhere, and as the
-grid is refined it settles into exactly the function "$1$ at $y = x$,
-$0$ everywhere else" — the zero vector of $L^2$ from the figure
-above. The guess failed because its limit is a function, and we
-already knew that a function cannot do the job. The requirement says
-the same thing in one line, without any double sum: hit the
-discretized state with a grid bra,
+Test the guess against the requirement: hit the discretized state
+with a grid bra. The $\delta_{ij}$ keeps one term of the sum,
 
 $$
 \langle x_i | \psi_\Delta \rangle = \sum_j a(y_j)\, \delta_{ij}\, \Delta y = a(x_i)\, \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; 0,
 $$
 
 and the kets return coordinates that vanish as the grid is refined,
-instead of $a(x_i)$. Here is the same
+instead of $a(x_i)$. The inner product fares the same way: in the
+double sum the $\delta_{ij}$ collapses the $j$-sum, and what remains is
+
+$$
+\langle \psi_\Delta | \varphi_\Delta \rangle = \left( \sum_i a(x_i)^* \, b(x_i)\, \Delta x \right) \cdot \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; 0
+$$
+
+— a Riemann sum, which tends to the finite number $\int a^* b\, dx$,
+times a leftover $\Delta x$, which tends to zero. With
+$\langle x_i | y_j \rangle = \delta_{ij}$, *every* pair of states has
+inner product zero in the limit — including a state with itself, so
+every state has length zero.
+
+This is the unit-vector problem from the previous section, seen from
+the grid. Read the table $\delta_{ij}$ as a function of $y$ for fixed
+$x_i$: it is $1$ on the one cell containing $x_i$ and $0$ elsewhere,
+and as the grid is refined it settles into exactly the function "$1$
+at $y = x$, $0$ everywhere else" — the zero vector of $L^2$ from the
+figure above. The guess failed because its limit is a function, and
+we already knew that a function cannot do the job. Here is the same
 dead end numerically, next to the fix we are about to find:
 
 ![The inner product of two discretized states as the grid is refined: with the kernel δ_ij it decays to zero, with δ_ij/Δx it converges to the integral](two_kernels.png)
-
-<details>
-<summary>A fully rigorous Riemann sum</summary>
-
-Above we treated $\sum_i a(x_i)^* \, b(x_i)\, \Delta x$ as a Riemann
-sum over the whole line. Strictly, a Riemann sum lives on a *bounded*
-interval: pick a finite window, partition it into cells, sample the
-function in each cell. Let us redo the computation exactly that way,
-with every step an explicit estimate.
-
-Work on the window $[-A, A]$ split into $2N$ equal cells, so the
-spacing is $\Delta x = A / N$ and the sample points are
-$x_i = i \, \Delta x$ for $i = -N, \dots, N$. The kets are taken
-genuinely orthonormal, $\langle x_i | x_j \rangle = \delta_{ij}$.
-Since $a, b$ are continuous they are bounded on the window:
-$|a(x)|, |b(x)| \leq M$ for some constant $M$. Each coefficient
-carries one factor of the spacing,
-
-$$
-|\psi_\Delta\rangle = \frac{A}{N} \sum_{i=-N}^{N} a(x_i)\, |x_i\rangle, \qquad |\varphi_\Delta\rangle = \frac{A}{N} \sum_{j=-N}^{N} b(y_j)\, |y_j\rangle,
-$$
-
-and the inner product is
-
-$$
-\begin{aligned}
-\langle \psi_\Delta | \varphi_\Delta \rangle &= \frac{A^2}{N^2} \sum_{i=-N}^{N} \sum_{j=-N}^{N} a(x_i)^* \, b(y_j)\, \delta_{ij} \\
-&= \frac{A^2}{N^2} \sum_{i=-N}^{N} a(x_i)^* \, b(x_i) =: S_N.
-\end{aligned}
-$$
-
-Bound $S_N$ term by term: each of the $2N + 1$ terms is at most $M^2$
-in absolute value, so
-
-$$
-|S_N| \leq \frac{A^2}{N^2} \cdot (2N + 1) \cdot M^2 \;\xrightarrow{\; N \to \infty \;}\; 0.
-$$
-
-About $2N$ bounded terms against a $1/N^2$ prefactor: the sum goes to
-zero. $\square$
-
-</details>
 
 ## Normalizing the basis
 
@@ -492,13 +424,6 @@ $$
 $$
 
 ![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
-
-(This also diagnoses the dead end. The naive coefficients
-$c_i = a(x_i)\, \Delta x$ correspond to cell probabilities
-$|a(x_i)|^2\, \Delta x^2$, and the total probability
-$\sum_i |a(x_i)|^2\, \Delta x^2 = \Delta x \sum_i |a(x_i)|^2\, \Delta x$
-goes to zero with $\Delta x$: the naive state was not normalized, and
-its norm was draining away with the grid.)
 
 Now we can finally say what the $|x_i\rangle$ of the original Riemann
 sum is. We have two expressions for the same discretized state: the
@@ -609,20 +534,11 @@ as a vector: that would need a norm to converge in, and we have just
 seen that the kets $|x_i\rangle$ cannot supply one — their norm
 $1/\sqrt{\Delta x}$ runs away.
 
-Substitute the normalized kernel into the double sum:
+Substitute the normalized kernel into the double sum and do the
+$j$-sum with $\delta_{ij}$ first:
 
 $$
-\langle \psi_\Delta | \varphi_\Delta \rangle = \sum_i \sum_j a(x_i)^* \, b(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta x\, \Delta y.
-$$
-
-There are two ways to take the limit, and the difference between them
-is the whole subtlety of the Dirac delta.
-
-**Option A.** Do the $j$-sum with $\delta_{ij}$ first, on the grid
-$\Delta y = \Delta x$:
-
-$$
-\sum_i \sum_j a(x_i)^* \, b(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta x\, \Delta y = \sum_i a(x_i)^* \, b(x_i)\, \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; \int a(x)^* \, b(x)\, dx.
+\langle \psi_\Delta | \varphi_\Delta \rangle = \sum_i \sum_j a(x_i)^* \, b(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta x\, \Delta y = \sum_i a(x_i)^* \, b(x_i)\, \Delta x \;\xrightarrow{\;\Delta x \to 0\;}\; \int a(x)^* \, b(x)\, dx.
 $$
 
 The $1/\Delta x$ cancelled exactly one of the two spacings, leaving a
@@ -630,40 +546,13 @@ single honest Riemann sum. This is the inner-product formula that the
 requirement produced at the start — now reproduced by the kets, as it
 had to be once the requirement held on the grid.
 
-**Option B.** Keep the double structure and take the limit of the
-whole double sum as a *number*:
-
-$$
-L := \lim_{\substack{\Delta x \to 0 \\ \Delta y = \Delta x}} \; \sum_i \sum_j a(x_i)^* \, b(y_j)\, \underbrace{\frac{\delta_{ij}}{\Delta x}}_{K_\Delta(x_i,\, y_j)}\, \Delta x\, \Delta y.
-$$
-
-This limit exists — it is the limit of the very same double sum, so it
-equals $\int a(x)^* \, b(x)\, dx$. But the summand has exactly the
-shape of a double Riemann sum with kernel $K_\Delta$, so we would
-*like* to write $L$ as a double integral against some limiting kernel:
-
-$$
-L \overset{?}{=} \iint a(x)^* \, b(y)\, K(x, y)\, dx\, dy.
-$$
-
-Comparing with Option A, such a $K$ would have to satisfy
-
-$$
-\iint a(x)^* \, b(y)\, K(x, y)\, dx\, dy = \int a(x)^* \, b(x)\, dx,
-$$
-
-for all $a$ and $b$ — it would have to select the diagonal of a double
-integral, exactly as $\delta_{ij}$ selects the diagonal of a double
-sum. Whether any object $K$ does this, and what *kind* of object it
-would have to be, is the rest of the post.
-
-## The limiting kernel is not a function
-
-Fix the index $i$ — so the spike's location $x_i$ is fixed; call it
-$x$ — and look at $K_\Delta(x_i, y_j) = \delta_{ij} / \Delta x$ as a
-function of $y_j$: it equals $1/\Delta x$ at $y_j = x_i$ and $0$ at
-every other grid point. A single spike of **width** $\Delta x$ and
-**height** $1/\Delta x$, hence of **area**
+That settles the inner product, but not the kernel itself. We would
+like to say what $K_\Delta = \delta_{ij} / \Delta x$ *converges to*,
+and call that $\langle x | y \rangle$. Fix the index $i$ — so the
+spike's location $x_i$ is fixed; call it $x$ — and look at
+$K_\Delta(x_i, y_j)$ as a function of $y_j$: it equals $1/\Delta x$
+at $y_j = x_i$ and $0$ at every other grid point. A single spike of
+**width** $\Delta x$ and **height** $1/\Delta x$, hence of **area**
 
 $$
 \text{width} \times \text{height} = \Delta x \cdot \frac{1}{\Delta x} = 1.
@@ -675,17 +564,12 @@ draw for the Dirac delta.
 
 ![The discrete kernel at a fixed x as the grid is refined: thinner, taller, area one](spikes.png)
 
-So it is tempting to take the limit of $K_\Delta$ directly and call
-the result $K(x, y)$. That does not work, and it is worth seeing why.
-A pointwise limit would be a "function" that is $0$ everywhere except
-at the single point $y = x$, where it is infinite. There is **no
-ordinary function** like that: a function that is zero everywhere
-except at one point has integral $0$, not $1$, because a single point
-has no width and contributes no area. Taken literally, the spike is
-not a legitimate function, and the naive pointwise limit does not
-exist.
-
-This is the key obstacle. The object we are reaching for is not a
+So it is tempting to take the limit of $K_\Delta$ pointwise and call
+the result $K(x, y)$. But that limit would be "$0$ everywhere except
+at the single point $y = x$, infinite there" — and the section on the
+coordinate objects showed that no function can play this part: a
+function has one finite value at $y = x$, and a single point has no
+width to contribute an area. The object we are reaching for is not a
 function, so we cannot define $K(x, y)$ by its values. We fall back on
 the definition from the introduction instead: the Dirac delta is
 defined not by its values but by **what it does inside an integral** —
@@ -696,7 +580,10 @@ pointwise limit at all; we will show that $K$ *sifts*.
 
 The strategy: test the discrete kernel $K_\Delta$ against an arbitrary
 continuous function $f$, evaluate as an honest finite sum, and take
-the limit only at the end.
+the limit only at the end. This is the check we ran on every grid
+after normalizing — $\langle x_i | \psi_\Delta \rangle = a(x_i)$ — with
+the coordinate $a$ replaced by an arbitrary continuous $f$, and with
+the limit taken at the end.
 
 Fix a target point $x$ once and for all, and let $i$ be the index of
 the grid cell containing $x$, so that $x_i$ is the grid point nearest
@@ -743,14 +630,15 @@ sifting, not assumptions:
   integral returns $f(x) = 0$, so $\delta$ feels nothing away from the
   diagonal.
 
-This also closes Option B. Sifting in the $y$ variable collapses the
-double integral into the single one,
+Sifting in the $y$ variable also collapses a double integral into a
+single one,
 
 $$
 \iint a(x)^* \, b(y)\, \delta(x - y)\, dx\, dy = \int a(x)^* \, b(x)\, dx,
 $$
 
-which is exactly the condition we required of $K$. And it pays the
+— the diagonal of a double integral selected exactly as $\delta_{ij}$
+selects the diagonal of a double sum. And it pays the
 last post's second debt in the same breath: for the position kets,
 
 $$
