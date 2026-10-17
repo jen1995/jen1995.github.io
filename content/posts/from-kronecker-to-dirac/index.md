@@ -173,14 +173,6 @@ also guarantees that $\int a^* b\, dx$ converges (by the
 and that every sum below is finite. We assume $a$ and $b$ continuous
 as well, which is what the Riemann sums need.
 
-The requirement itself is the **yardstick** for everything that
-follows. Whatever we build in place of $|x\rangle$ must return
-coordinates, $\langle x | \psi \rangle = a(x)$, in the limit — and
-then, as we have just seen, the inner-product formula comes for free.
-A candidate that fails the requirement is wrong; that is how a
-tempting first guess for $\langle x | y \rangle$ will be rejected a
-few sections down.
-
 One step of the derivation was taken on trust. The last post allowed
 a finite sum to come out of a bracket; here we let an *integral* of
 kets come out. Nothing so far says that this is legitimate. The
@@ -532,7 +524,7 @@ $$
 \boxed{\; \langle x_i | y_j \rangle = \frac{\delta_{ij}}{\Delta x} \;}
 $$
 
-Check it against the yardstick first. Hit the discretized state with a
+Check it against the requirement first. Hit the discretized state with a
 grid bra, as in the dead end:
 
 $$
