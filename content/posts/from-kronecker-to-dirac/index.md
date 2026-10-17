@@ -221,13 +221,12 @@ $$
 
 an integral over an interval of width $\varepsilon$ of a function
 bounded by $\max |K|$ — at most $\varepsilon \cdot \max |K|$, which
-goes to zero as the bump narrows. One side of the equation differs by
-$1$, the other by as little as we like: no function $K$ can satisfy
-the requirement. All the argument used about $K$ is that, being a function, it
+goes to zero as the bump narrows. One side of the equation differs by $1$, the other by as little as we
+like — and all we used about $K$ was that, being a function, it
 assigns one finite value to every point of its domain, $y = x$
-included — so it is bounded there, whereas returning $a(x)$ would take
-being "infinite with unit area" at that single point, which a function
-by definition cannot be.
+included, so it is bounded there. No function $K$ can satisfy the
+requirement: returning $a(x)$ would take being "infinite with unit
+area" at that single point, which a function by definition cannot be.
 
 </details>
 
