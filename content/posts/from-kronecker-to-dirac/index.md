@@ -110,17 +110,24 @@ $$
 (we write $a$ and $b$ rather than $\psi$ and $\varphi$ to keep the two
 states apart). Each formula is the same statement as the finite one,
 "coordinates times unit vectors", with the sum over indices turned
-into an integral; the state and its wavefunction are one object. We
-assume $a$ and $b$ continuous and square-integrable,
-$\int |a(x)|^2\, dx \lt \infty$. Square-integrable functions on the
-line, with the inner product $\langle a | b \rangle = \int a(x)^* b(x)\, dx$,
-form the Hilbert space $L^2(\mathbb R)$ that the
+into an integral; the state and its wavefunction are one object. The
+analogy carries the norm along too. For a vector with $n$ coordinates
+the squared length is $\lVert v \rVert^2 = \sum_i |v_i|^2$; for a vector
+with a continuum of coordinates the sum becomes an integral,
+$\lVert a \rVert^2 = \int |a(x)|^2\, dx$, and the inner product
+$\sum_i a_i^* b_i$ becomes $\langle a | b \rangle = \int a(x)^* b(x)\, dx$.
+So the one assumption we need is that our continuum vectors have
+finite length — that $a$ and $b$ are **square-integrable**,
+$\int |a(x)|^2\, dx \lt \infty$ (for a state the length is in fact $1$:
+total probability one). Square-integrable functions on the line with
+this inner product form the Hilbert space $L^2(\mathbb R)$ that the
 [last post](/posts/states-are-vectors/#when-the-menu-is-infinite)
-introduced as the state space of a particle on a line; so the
-assumption just says that $a$ and $b$ are honest states, and it
+introduced as the state space of a particle on a line, so the
+assumption just says that $a$ and $b$ are honest states; it also
 guarantees that $\int a^* b\, dx$ converges (by the
 [Cauchy–Schwarz inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality))
-and that every sum below is finite.
+and that every sum below is finite. We assume $a$ and $b$ continuous
+as well, which is what the Riemann sums need.
 
 What *is* exotic in these formulas is the unit vectors. The ket
 $|x\rangle$ — "a $1$ at index $x$ and $0$ everywhere else" — is not a
