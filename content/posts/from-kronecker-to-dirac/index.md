@@ -369,9 +369,10 @@ cell states are honest elements of $L^2$ — a cell state is the
 indicator function of its cell, normalized. This corrects a picture
 the word "grid" may have suggested: the grid kets we are about to
 build are not the kets $|x\rangle$ of the continuum picked out at the
-grid points — such a ket at a single point is not an element of
-$L^2$ at all — but states spread over a whole cell of width
-$\Delta x$, which stand in for the points only as $\Delta x \to 0$.
+grid points and declared orthonormal — that was the dead end, and
+the function "$1$ at a point" behind it is the zero vector of $L^2$ —
+but states spread over a whole cell of width $\Delta x$, which stand
+in for the points only as $\Delta x \to 0$.
 
 Write the discretized state in the cell states,
 
