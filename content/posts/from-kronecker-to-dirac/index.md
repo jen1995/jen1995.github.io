@@ -134,7 +134,11 @@ write the ket $|x_0\rangle$ as a function of the index, the way we
 just wrote states: "a $1$ at $x_0$ and $0$ everywhere else". That
 function exists, but it is useless — its squared length
 $\int |f|^2\, dx$ is zero, so in $L^2$ it is the zero vector, orthogonal
-to everything, and no unit vector. The object that actually does a
+to everything, and no unit vector.
+
+![The unit-vector problem: a 1 at one index is a unit vector in ℂ⁵; on the line the same recipe has zero length; what does the job is a spike of unit area, narrower and taller without a function as its limit](unit_vector_problem.png)
+
+The object that actually does a
 unit vector's job here — making $\int a(y)\, \langle x_0 | y \rangle\, dy$
 return $a(x_0)$ — is not a function at all, as the rest of the post
 will show. Readers of the Fourier road have met this exact
@@ -144,9 +148,7 @@ the "perfect instrument" that reads off a signal's value at one
 instant could not be a function either, and the Dirac delta had to
 be built as a limit of averaging windows. Here the same object will
 arrive from the opposite side — and $\langle x | y \rangle$, the inner
-product of two such objects, is exactly what we are after.
-
-![The unit-vector problem: a 1 at one index is a unit vector in ℂ⁵; on the line the same recipe has zero length; what does the job is a spike of unit area, narrower and taller without a function as its limit](unit_vector_problem.png) The plan: compute
+product of two such objects, is exactly what we are after. The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
