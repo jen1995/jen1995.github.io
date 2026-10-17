@@ -225,6 +225,15 @@ goes to zero as the bump narrows. One side of the equation differs by
 $1$, the other by as little as we like: no function $K$ can satisfy
 the requirement.
 
+Notice what the argument used about $K$ — nothing beyond the
+definition of a function: at every point, including $y = x$, it has
+one finite value. That is what makes it bounded near $y = x$, and a
+bounded function over an interval of vanishing width carries
+vanishing weight. The only way to return $a(x)$ would be to be, at
+the single point $y = x$, not a finite number but "infinite with unit
+area" — the informal description of the delta from the opening of the
+post, and precisely what a function, by definition, cannot be.
+
 </details>
 
 The object that actually does a
