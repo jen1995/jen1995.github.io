@@ -370,9 +370,8 @@ $$
 |\psi_\Delta\rangle = \sum_i c_i\, |\hat x_i\rangle,
 $$
 
-where the coefficients $c_i$ come from the rule of the last post that
-has not failed us yet — coordinates in an orthonormal basis are inner
-products — with the inner product of $L^2$:
+where the coefficients $c_i$ are, as always in an orthonormal basis,
+inner products — here the inner product of $L^2$:
 
 $$
 \begin{aligned}
