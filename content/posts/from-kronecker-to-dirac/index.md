@@ -207,13 +207,20 @@ $$
 
 and comparing with the yardstick, $\langle x | y \rangle$ must select
 the diagonal of a double integral the way $\delta_{ij}$ selects the
-diagonal of a double sum. No function $K(x, y)$ does that. Integrating
-against a function is an averaging: $\int K(x, y)\, b(y)\, dy$ weighs
-$b$ over a stretch of $y$, so changing $b$ on a tiny interval around
-$y = x$ changes the result by a tiny amount — while the value $b(x)$
-that the requirement demands can change by as much as we like. The
-object that actually does a coordinate object's job is not a function
-at all, as the rest of the post will show. Readers of the Fourier road
+diagonal of a double sum. No function $K(x, y)$ does that, and here
+is why. Take two continuous functions $b_1$ and $b_2$ that coincide
+everywhere except on a tiny interval around $y = x$, where $b_2$ has a
+narrow bump of height $1$: so $b_2(x) - b_1(x) = 1$. The requirement
+asks the integrals $\int K(x, y)\, b_1(y)\, dy$ and
+$\int K(x, y)\, b_2(y)\, dy$ to return $b_1(x)$ and $b_2(x)$, numbers
+that differ by $1$. But the two integrals differ by
+$\int K(x, y)\, (b_2 - b_1)(y)\, dy$, an integral of a bounded function
+over a tiny interval — and that is as small as we like once the
+interval is narrow enough. Integrating against a function is an
+averaging, and no average over a stretch of $y$ can see what $b$ does
+at the single point $y = x$. The object that actually does a
+coordinate object's job is not a function at all, as the rest of the
+post will show. Readers of the Fourier road
 have met this exact predicament: in
 [Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
 the "perfect instrument" that reads off a signal's value at one
