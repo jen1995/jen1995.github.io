@@ -397,13 +397,6 @@ for continuous $a$ the integral over the cell equals $a(\xi_i)\, \Delta x$
 for some point $\xi_i$ of the cell. So the coordinate of a state along
 a cell state is a sample of $a$ in the cell times $\sqrt{\Delta x}$.
 
-The physical reading, for later: once squared amplitudes are read as
-probabilities, $|c_i|^2 = |a(x_i)|^2\, \Delta x$ says that $|a(x)|^2$
-is a probability **density** — probability per unit length — and the
-probability of landing in a cell is the density times the width.
-
-![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
-
 Now we can finally say what the $|x_i\rangle$ of the original Riemann
 sum is. We have two expressions for the same discretized state: the
 Riemann-sum notation $\sum_i a(\xi_i)\, |x_i\rangle\, \Delta x$ we
@@ -446,6 +439,13 @@ The $1/\Delta x$ cancels the $\Delta y = \Delta x$ of the sum, and the
 grid kets return the coordinate exactly — not in the limit, on every
 grid. The requirement holds, and the inner-product formula must now
 follow; the next section watches it do so.
+
+With the construction done, its physical reading: once squared amplitudes are read as
+probabilities, $|c_i|^2 = |a(\xi_i)|^2\, \Delta x$ says that $|a(x)|^2$
+is a probability **density** — probability per unit length — and the
+probability of landing in a cell is the density times the width.
+
+![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
 
 One consequence deserves to be said out loud now, because the rest of
 the road will keep meeting it. The norm of a grid ket is
