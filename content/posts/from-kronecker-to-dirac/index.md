@@ -451,17 +451,6 @@ probability of landing in a cell is the density times the width.
 
 ## Taking the limit
 
-Before taking any, one rule governs everything that follows. When the
-grid is refined, $\Delta x \to 0$, the only things we ask to converge
-are *numbers* computed from the finite sums — the inner product
-$\langle \psi_\Delta | \varphi_\Delta \rangle$, and later the sums that
-test the kernel against a function. We never claim that the
-discretized state $|\psi_\Delta\rangle$ converges to $|\psi\rangle$
-as a vector: that would need a norm to converge in, and the kets
-$|x_i\rangle$ cannot supply one — by $|x_i\rangle = |\hat x_i\rangle / \sqrt{\Delta x}$
-their norm is $1/\sqrt{\Delta x}$, which runs away as the grid is
-refined.
-
 First the inner product. The formula
 $\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$ was derived
 from the requirement alone, so now that the grid kets meet the
