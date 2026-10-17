@@ -345,11 +345,13 @@ coefficients. Introduce a new symbol: let
 $|\hat x_i\rangle$ be the orthonormal **cell states**,
 $\langle \hat x_i | \hat x_j \rangle = \delta_{ij}$, where
 $|\hat x_i\rangle$ means "the particle is somewhere in cell $i$" — a
-cell of width $\Delta x$ around $x_i$. As a wavefunction this is the
-flat bump on the cell, scaled to unit norm:
+cell of width $\Delta x$ around $x_i$. Write $C_i = [x_i - \Delta x/2,\; x_i + \Delta x/2]$
+for the cell and $\mathbf 1_{C_i}$ for its **indicator function** —
+$1$ on the cell, $0$ elsewhere. As a wavefunction the cell state is
+this flat bump, scaled to unit norm:
 
 $$
-\hat x_i(x) = \begin{cases} 1/\sqrt{\Delta x} & |x - x_i| \leq \Delta x / 2 \\ 0 & \text{otherwise} \end{cases}
+\hat x_i(x) = \frac{\mathbf 1_{C_i}(x)}{\sqrt{\Delta x}}.
 $$
 
 Orthonormality is read off directly: different cells have disjoint
@@ -416,12 +418,16 @@ $$
 $$
 
 with a factor $1/\Delta x$ that cancels the leftover $\Delta x$ of
-the dead end. Do not read the table as "nonzero at one point": its
-indices label *cells*, and as a function on the line the kernel is the
-wavefunction of $|x_i\rangle$, namely $\hat x_i(y) / \sqrt{\Delta x}$ —
-a flat step of height $1/\Delta x$ over the whole cell $i$, zero
-elsewhere, with area $\Delta x \cdot 1/\Delta x = 1$. This is the
-correctly normalized kernel:
+the dead end. As a function of a point $y$ on the line, rather than
+of a cell index, the kernel is the wavefunction of $|x_i\rangle$:
+
+$$
+K_\Delta(x_i, y) = \frac{\hat x_i(y)}{\sqrt{\Delta x}} = \frac{\mathbf 1_{C_i}(y)}{\Delta x},
+$$
+
+a step of height $1/\Delta x$ over the whole cell $C_i$, which on the
+grid points reduces to the table $K_\Delta(x_i, y_j) = \delta_{ij}/\Delta x$.
+This is the correctly normalized kernel:
 
 $$
 \boxed{\; \langle x_i | y_j \rangle = \frac{\delta_{ij}}{\Delta x} \;}
@@ -475,9 +481,9 @@ That settles the inner product, but not the kernel itself. We would
 like to say what $K_\Delta = \delta_{ij} / \Delta x$ *converges to*,
 and call that $\langle x | y \rangle$. Fix the index $i$ — so the
 spike's location $x_i$ is fixed; call it $x$ — and look at
-$K_\Delta(x_i, y_j)$ as a function of $y_j$: it equals $1/\Delta x$
-at $y_j = x_i$ and $0$ at every other grid point. A single spike of
-**width** $\Delta x$ and **height** $1/\Delta x$, hence of **area**
+$K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$ as a function of $y$:
+a single spike of **width** $\Delta x$ and **height** $1/\Delta x$,
+hence of **area**
 
 $$
 \text{width} \times \text{height} = \Delta x \cdot \frac{1}{\Delta x} = 1.
