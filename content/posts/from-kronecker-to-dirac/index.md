@@ -129,11 +129,22 @@ guarantees that $\int a^* b\, dx$ converges (by the
 and that every sum below is finite. We assume $a$ and $b$ continuous
 as well, which is what the Riemann sums need.
 
-What *is* exotic in these formulas is the unit vectors. The ket
-$|x\rangle$ — "a $1$ at index $x$ and $0$ everywhere else" — is not a
-function on the line at all, as the rest of the post will show, and
-$\langle x | y \rangle$, the inner product of two such objects, is
-exactly what we are after. The plan: compute
+What *is* exotic in these formulas is the unit vectors. Try to
+write the ket $|x_0\rangle$ as a function of the index, the way we
+just wrote states: "a $1$ at $x_0$ and $0$ everywhere else". That
+function exists, but it is useless — its squared length
+$\int |f|^2\, dx$ is zero, so in $L^2$ it is the zero vector, orthogonal
+to everything, and no unit vector. The object that actually does a
+unit vector's job here — making $\int a(y)\, \langle x_0 | y \rangle\, dy$
+return $a(x_0)$ — is not a function at all, as the rest of the post
+will show; and $\langle x | y \rangle$, the inner product of two such
+objects, is exactly what we are after. (A ket can certainly stand
+under an honest-looking formula — a plane wave $e^{ikx}$, say. But
+that is the *momentum* basis, not the position one, and it has the
+same disease in the other direction: $|e^{ikx}|^2 = 1$ everywhere, so
+its length $\int 1\, dx$ is infinite. Both families are unit vectors
+that live just outside $L^2$; the box in a cut below treats the second
+the way this post treats the first.) The plan: compute
 $\langle \psi | \varphi \rangle$ by discretizing each integral into a
 Riemann sum, and take the limit at the very end.
 
