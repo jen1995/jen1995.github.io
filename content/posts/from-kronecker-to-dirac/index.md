@@ -416,7 +416,12 @@ $$
 $$
 
 with a factor $1/\Delta x$ that cancels the leftover $\Delta x$ of
-the dead end:
+the dead end. Do not read the table as "nonzero at one point": its
+indices label *cells*, and as a function on the line the kernel is the
+wavefunction of $|x_i\rangle$, namely $\hat x_i(y) / \sqrt{\Delta x}$ —
+a flat step of height $1/\Delta x$ over the whole cell $i$, zero
+elsewhere, with area $\Delta x \cdot 1/\Delta x = 1$. This is the
+correctly normalized kernel:
 
 $$
 \boxed{\; \langle x_i | y_j \rangle = \frac{\delta_{ij}}{\Delta x} \;}
