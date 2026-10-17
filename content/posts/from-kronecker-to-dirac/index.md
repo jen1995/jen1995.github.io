@@ -449,14 +449,6 @@ probability of landing in a cell is the density times the width.
 
 ![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
 
-One thing is worth mentioning before we move on. The same equation
-fixes the norm of a grid ket,
-$\lVert\, |x_i\rangle \,\rVert = 1/\sqrt{\Delta x}$, and it grows
-without bound as the grid is refined. What that means for the
-limiting kets $|x\rangle$ is the subject of the section
-[*The price*](#the-price-the-position-kets-are-not-states), once the
-delta is built.
-
 ## Taking the limit
 
 Before taking any, one rule governs everything that follows. When the
@@ -465,9 +457,10 @@ are *numbers* computed from the finite sums — the inner product
 $\langle \psi_\Delta | \varphi_\Delta \rangle$, and later the sums that
 test the kernel against a function. We never claim that the
 discretized state $|\psi_\Delta\rangle$ converges to $|\psi\rangle$
-as a vector: that would need a norm to converge in, and we have just
-seen that the kets $|x_i\rangle$ cannot supply one — their norm
-$1/\sqrt{\Delta x}$ runs away.
+as a vector: that would need a norm to converge in, and the kets
+$|x_i\rangle$ cannot supply one — by $|x_i\rangle = |\hat x_i\rangle / \sqrt{\Delta x}$
+their norm is $1/\sqrt{\Delta x}$, which runs away as the grid is
+refined.
 
 First the inner product. The formula
 $\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$ was derived
