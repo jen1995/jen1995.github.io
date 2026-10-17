@@ -235,10 +235,11 @@ instant could not be a function either, and the Dirac delta had to
 be built as a limit of averaging windows. Here the same object will
 arrive from the opposite side.
 
-### Building them
+### Building the coordinate objects from the finite-dimensional side
 
-The plan, then: build the coordinate objects. Replace both integrals
-by Riemann sums, compute $\langle \psi | \varphi \rangle$ as
+That opposite side is the finite-dimensional linear algebra of the
+last post, where everything is a sum and nothing is exotic. The plan:
+replace both integrals by Riemann sums, compute $\langle \psi | \varphi \rangle$ as
 finite-dimensional linear algebra — where the unknown becomes a finite
 table of numbers $\langle x_i | y_j \rangle$ — find which table satisfies
 the requirement in the limit, and read the Dirac delta off that
