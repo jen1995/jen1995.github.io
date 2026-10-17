@@ -431,8 +431,9 @@ $$
 $$
 
 On every grid the ket returns the sample of $a$ in its cell, with no
-stray factor of $\Delta x$ to drain it away. Everything else is a
-limit.
+stray factor of $\Delta x$ to drain it away. What remains is to refine
+the grid and see what this table of numbers, and the states built
+from it, converge to — which is the next section.
 
 ## Taking the limit
 
