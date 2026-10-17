@@ -331,7 +331,7 @@ dead end numerically, next to the fix we are about to find:
 
 ![The inner product of two discretized states as the grid is refined: with the kernel δ_ij it decays to zero, with δ_ij/Δx it converges to the integral](two_kernels.png)
 
-## Normalizing the basis
+## The right basis: cell states
 
 The dead end is not a failure of the limit machinery. The limit worked
 flawlessly and reported, correctly, that the state we built converges
@@ -608,7 +608,7 @@ pointwise limit at all; we will show that $K$ *sifts*.
 The strategy: test the discrete kernel $K_\Delta$ against an arbitrary
 continuous function $f$, evaluate as an honest finite sum, and take
 the limit only at the end. This is the check we ran on every grid
-after normalizing — $\langle x_i | \psi_\Delta \rangle = a(x_i)$ — with
+after building the cell states — $\langle x_i | \psi_\Delta \rangle = a(x_i)$ — with
 the coordinate $a$ replaced by an arbitrary continuous $f$, and with
 the limit taken at the end.
 
@@ -757,7 +757,7 @@ $1/\Delta x$, area one, tested against a continuous $f$, sifting
 proved by continuity as $\Delta x \to 0$. The two constructions are
 the same construction with different motivation — one came from
 *measuring* a signal through an instrument of finite resolution, the
-other from *normalizing* a basis of finite resolution — and the same
+other from *building* a basis of finite resolution — and the same
 fine print applies to both: the delta is not a function, and the
 limits are weak. Analysis calls such families
 [approximate identities](https://en.wikipedia.org/wiki/Mollifier);
