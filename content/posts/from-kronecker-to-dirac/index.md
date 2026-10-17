@@ -440,9 +440,11 @@ $$
 \lim_{\Delta x \to 0} \langle x_i | \psi_\Delta \rangle = \lim_{\Delta x \to 0} a(\xi_i) = a(x).
 $$
 
-That is the requirement, $\langle x | \psi \rangle = a(x)$. The
-inner-product formula must now follow; the next section watches it
-do so.
+That is the requirement, $\langle x | \psi \rangle = a(x)$. Since
+the inner-product formula
+$\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$ was derived
+from the requirement alone, it must now follow from the grid kets as
+well; the next section watches it do so.
 
 With the construction done, its physical reading: once squared amplitudes are read as
 probabilities, $|c_i|^2 = |a(\xi_i)|^2\, \Delta x$ says that $|a(x)|^2$
