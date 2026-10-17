@@ -111,29 +111,84 @@ $$
 states apart). Each formula is the same statement as the finite one,
 "coordinates times unit vectors", with the sum over indices turned
 into an integral; the state and its wavefunction are one object.
-Where the wavefunctions live was settled in the last post as well: the
+
+### What the coordinate objects must do
+
+In the finite case the coordinates come out of the basis by a one-line
+computation, which the
+[last post](/posts/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
+did: hit the expansion with a basis bra, and orthonormality collapses
+the sum,
+
+$$
+\langle E_k | \psi \rangle = \sum_i a_i\, \langle E_k | E_i \rangle = \sum_i a_i\, \delta_{ki} = a_k.
+$$
+
+"Coordinates are inner products", and the Kronecker delta is what
+makes it work. The continuum version of this is the one property we
+ask of the position kets: that they return the coordinates of every
+state the same way,
+
+$$
+\langle x | \psi \rangle = a(x) \qquad \text{for every state } |\psi\rangle.
+$$
+
+Expand $|\psi\rangle$ inside the bracket, and the requirement becomes a
+statement about the unknown $\langle x | y \rangle$:
+
+$$
+a(x) = \int \langle x | y \rangle\, a(y)\, dy.
+$$
+
+Read it as the continuous twin of the Kronecker line above:
+$\langle x | y \rangle$, as a function of $y$, must do inside an
+integral what $\delta_{ki}$ does inside a sum — kill every contribution
+except the one at $y = x$ and return the coordinate there. The sifting
+property from the opening of the post is therefore not a definition
+handed down from above; it is the *requirement* that the position kets
+be a basis in the sense of the last post. We will call a ket with this
+property a **coordinate object** for the point $x$.
+
+### The inner product, assuming the coordinate objects exist
+
+Suppose for a moment that such objects exist. Then the inner product
+of our two states follows in one line. Expand only the bra, pull the
+integral out of the first slot — anti-linearity, which conjugates $a$
+— and apply the requirement to what remains:
+
+$$
+\langle \psi | \varphi \rangle = \Big\langle \int a(x)\, |x\rangle\, dx \;\Big|\; \varphi \Big\rangle = \int a(x)^*\, \langle x | \varphi \rangle\, dx = \int a(x)^*\, b(x)\, dx.
+$$
+
+This is the inner product of the
 [space of square-integrable wavefunctions](/posts/states-are-vectors/#when-the-menu-is-infinite),
-$L^2(\mathbb R)$ — functions with finite length,
-$\lVert a \rVert^2 = \int |a(x)|^2\, dx \lt \infty$ (for a state the length
-is in fact $1$: total probability one) — with the inner product
-
-$$
-\langle a | b \rangle = \int a(x)^*\, b(x)\, dx,
-$$
-
-the continuum version of $\sum_i a_i^* b_i$. This is a definition we
-inherit, not something this post derives, and it will serve as the
-**yardstick** throughout: whatever $\langle x | y \rangle$ turns out to
-be, expanding $|\psi\rangle$ and $|\varphi\rangle$ in the kets must
-reproduce this number. (It is this yardstick that will expose, a few
-sections down, a tempting first guess for $\langle x | y \rangle$ as
-wrong: the guess gives every state length zero.) Square-integrability
+$L^2(\mathbb R)$, which the last post wrote down as
+$\langle f | g \rangle = \int f^* g\, dx$ — now derived from the
+requirement rather than declared. With $\varphi = \psi$ it gives the
+norm, $\lVert a \rVert^2 = \int |a(x)|^2\, dx$, so a state must be
+**square-integrable**, $\int |a(x)|^2\, dx \lt \infty$ (for a state the
+length is in fact $1$: total probability one). Square-integrability
 also guarantees that $\int a^* b\, dx$ converges (by the
 [Cauchy–Schwarz inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality))
 and that every sum below is finite. We assume $a$ and $b$ continuous
 as well, which is what the Riemann sums need.
 
-What *is* exotic in these formulas is the unit vectors. Try to
+Throughout the construction below this formula is the **yardstick**:
+whatever we build in place of $|x\rangle$ must reproduce it. (It is
+this yardstick that will expose, a few sections down, a tempting first
+guess for $\langle x | y \rangle$ as wrong: the guess gives every state
+length zero.) One step of the derivation deserves a flag. "Pull the
+integral out of the slot" is the integral version of anti-linearity —
+in the last post a finite sum came out of a bracket. That an
+*integral* of kets may do the same is exactly what the construction
+has to justify, and it will: below, an integral over kets is only ever
+evaluated as the limit of finite sums inside a bracket — the rule
+stated at the start of *Taking the limit* — and the last section of
+the post gives that kind of limit its name, *weak convergence*.
+
+### Why the coordinate objects cannot be functions
+
+What *is* exotic in all this is the unit vectors. Try to
 write the ket $|x_0\rangle$ as a function of the index, the way we
 just wrote states: "a $1$ at $x_0$ and $0$ everywhere else". That
 function exists, but it is useless — its squared length
@@ -142,40 +197,37 @@ to everything, and no unit vector.
 
 ![The unit-vector problem: a 1 at one index is a unit vector in ℂ⁵; on the line the same recipe has zero length; what does the job is a spike of unit area, narrower and taller without a function as its limit](unit_vector_problem.png)
 
-The object that actually does a
-unit vector's job here — making $\int a(y)\, \langle x_0 | y \rangle\, dy$
-return $a(x_0)$ — is not a function at all, as the rest of the post
-will show. Readers of the Fourier road have met this exact
-predicament: in
+The requirement says why no other function will do either. Expand
+*both* states in the kets and pull both integrals out:
+
+$$
+\langle \psi | \varphi \rangle = \iint a(x)^*\, b(y)\, \langle x | y \rangle\, dx\, dy,
+$$
+
+and comparing with the yardstick, $\langle x | y \rangle$ must select
+the diagonal of a double integral the way $\delta_{ij}$ selects the
+diagonal of a double sum. No function $K(x, y)$ does that. Integrating
+against a function is an averaging: $\int K(x, y)\, b(y)\, dy$ weighs
+$b$ over a stretch of $y$, so changing $b$ on a tiny interval around
+$y = x$ changes the result by a tiny amount — while the value $b(x)$
+that the requirement demands can change by as much as we like. The
+object that actually does a coordinate object's job is not a function
+at all, as the rest of the post will show. Readers of the Fourier road
+have met this exact predicament: in
 [Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
 the "perfect instrument" that reads off a signal's value at one
 instant could not be a function either, and the Dirac delta had to
 be built as a limit of averaging windows. Here the same object will
 arrive from the opposite side.
 
-Let us restate the goal with this in hand. The inner product of our
-two states is known — it is the yardstick, $\int a(x)^* b(x)\, dx$.
-What we do not know is $\langle x | y \rangle$. Now expand both states in the position kets
-and pull the sums out of the bracket by linearity in each slot, the
-two properties from the last post. In finite dimensions that gives
-$\langle \psi | \varphi \rangle = \sum_{i,j} a_i^* b_j \langle E_i | E_j \rangle$;
-with the sums turned into integrals:
+### Building them
 
-$$
-\langle \psi | \varphi \rangle = \iint a(x)^*\, b(y)\, \langle x | y \rangle\, dx\, dy.
-$$
-
-The two expressions must agree for *every* pair of states, and this is
-the equation we are going to solve for the unknown $\langle x | y \rangle$.
-The manipulation is formal: the integrand contains the very object we
-do not understand, and we have just seen that it will not be a
-function. So we do not attack the equation head-on.
-
-The plan, then: replace both integrals by Riemann sums, compute
-$\langle \psi | \varphi \rangle$ as finite-dimensional linear algebra —
-where the unknown becomes a finite table of numbers
-$\langle x_i | y_j \rangle$ — and take the limit only at the very end.
-Lay down a **grid** on the line: sample points
+The plan, then: build the coordinate objects. Replace both integrals
+by Riemann sums, compute $\langle \psi | \varphi \rangle$ as
+finite-dimensional linear algebra — where the unknown becomes a finite
+table of numbers $\langle x_i | y_j \rangle$ — find which table makes
+the limit reproduce the yardstick, and read the Dirac delta off that
+table's limit. Lay down a **grid** on the line: sample points
 $x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — and keep only the
 kets $|x_i\rangle$ at the grid points. On any bounded stretch of the
 line these are finitely many, and we *declare* them to be the axes.
@@ -661,7 +713,11 @@ $$
 
 — the continuous orthonormality relation, the thing that replaces
 $\langle E_i | E_j \rangle = \delta_{ij}$ when the label of the basis
-becomes a real number.
+becomes a real number. And the kets we built are the **coordinate
+objects** the section on the inner product asked for: with the
+integral read as the limit above,
+$\langle x | \psi \rangle = \int \langle x | y \rangle\, \psi(y)\, dy = \psi(x)$
+for every state — the requirement we started from, now met.
 
 Note what we did **not** do: we never claimed the spikes converge as
 functions. We tested against $f$, produced a limit of numbers, and
@@ -774,6 +830,14 @@ width — and the resulting spikes converge to $\delta(x - y)$ only in
 the weak sense: not point by point, but through what they do to every
 function they are integrated against. In short: the Dirac delta is
 what the Kronecker delta becomes when a sum becomes an integral.
+
+The logic of the post hangs on one requirement: that the position kets
+return coordinates, $\langle x | \psi \rangle = \psi(x)$, exactly as
+an orthonormal basis does through $\delta_{ki}$. The $L^2$ inner
+product followed from that requirement in one line; the grid
+construction then built kets that satisfy it in the limit, and the
+price of satisfying it — the $1/\Delta x$ — is what turned the
+Kronecker delta into the Dirac delta.
 
 ## Onward
 
