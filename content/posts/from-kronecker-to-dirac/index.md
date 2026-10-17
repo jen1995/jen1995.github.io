@@ -239,11 +239,11 @@ arrive from the opposite side.
 
 That opposite side is the finite-dimensional linear algebra of the
 last post, where everything is a sum and nothing is exotic. The plan:
-replace both integrals by Riemann sums, compute $\langle \psi | \varphi \rangle$ as
-finite-dimensional linear algebra — where the unknown becomes a finite
-table of numbers $\langle x_i | y_j \rangle$ — find which table satisfies
-the requirement in the limit, and read the Dirac delta off that
-table's limit. Lay down a **grid** on the line: sample points
+replace both integrals by Riemann sums, so that
+$\langle \psi | \varphi \rangle$ becomes a finite computation and the
+unknown becomes a finite table of numbers $\langle x_i | y_j \rangle$;
+find which table satisfies the requirement in the limit; and read the
+Dirac delta off that table's limit. Lay down a **grid** on the line: sample points
 $x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — and keep only the
 kets $|x_i\rangle$ at the grid points. On any bounded stretch of the
 line these are finitely many, and we *declare* them to be the axes.
