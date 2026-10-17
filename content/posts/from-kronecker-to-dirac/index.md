@@ -195,9 +195,6 @@ Nor does a repaired candidate help — a narrow bump of unit norm, say.
 Any attempt of this kind fails for the same reason, and the reason is
 general: no function whatsoever can satisfy the requirement.
 
-<details>
-<summary>Why no function at all can be the kernel</summary>
-
 Suppose $\langle x | y \rangle$ were an ordinary function of two
 variables, $K(x, y)$. The requirement would then read
 
@@ -227,8 +224,6 @@ assigns one finite value to every point of its domain, $y = x$
 included, so it is bounded there. No function $K$ can satisfy the
 requirement: returning $a(x)$ would take being "infinite with unit
 area" at that single point, which a function by definition cannot be.
-
-</details>
 
 The object that actually does a
 coordinate object's job is not a function at all, as the rest of the
