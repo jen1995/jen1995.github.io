@@ -160,15 +160,26 @@ $$
 \langle \psi | \varphi \rangle = \Big\langle \int a(x)\, |x\rangle\, dx \;\Big|\; \varphi \Big\rangle = \int a(x)^*\, \langle x | \varphi \rangle\, dx = \int a(x)^*\, b(x)\, dx.
 $$
 
-This is the inner product of the
+The right-hand side is the inner product of the
 [space of square-integrable wavefunctions](/posts/states-are-vectors/#when-the-menu-is-infinite),
 $L^2(\mathbb R)$, which the last post wrote down as
-$\langle f | g \rangle = \int f^* g\, dx$ — now derived from the
-requirement rather than declared. With $\varphi = \psi$ it gives the
-norm, $\lVert a \rVert^2 = \int |a(x)|^2\, dx$, so a state must be
+$\langle f | g \rangle = \int f^* g\, dx$. It is worth being clear
+about what the computation shows, because the construction below will
+use this inner product freely. The formula $\int a^* b\, dx$ is a
+definition that stands on its own: it makes sense for any two
+square-integrable functions, needs no kets and no deltas, and
+satisfies the axioms of an inner product from the last post — linear
+in $b$, conjugate-linear in $a$, and $\int |a|^2\, dx \gt 0$ unless $a$
+is zero. What the line above adds is a *consistency* statement: if
+the position kets meet the requirement, the inner product computed
+through the kets coincides with the inner product of $L^2$. So there
+is one honest inner product in play, that of $L^2$, and the kets are
+to be built to match it.
+
+A word on the functions themselves. A state must be
 **square-integrable**, $\int |a(x)|^2\, dx \lt \infty$ (for a state the
 length is in fact $1$: total probability one). Square-integrability
-also guarantees that $\int a^* b\, dx$ converges (by the
+guarantees that $\int a^* b\, dx$ converges (by the
 [Cauchy–Schwarz inequality](https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality))
 and that every sum below is finite. We assume $a$ and $b$ continuous
 as well, which is what the Riemann sums need.
@@ -395,7 +406,8 @@ $$
 $$
 
 where the coefficients $c_i$ are, as always in an orthonormal basis,
-inner products — here the inner product of $L^2$:
+inner products — the inner product of $L^2$, the one that needs no
+kets:
 
 $$
 \begin{aligned}
@@ -472,10 +484,10 @@ $$
 
 That is the requirement, $\langle x | \psi \rangle = a(x)$.
 
-Next the inner product. The formula
-$\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$ was derived
-from the requirement alone, so now that the grid kets meet the
-requirement it must follow from them as well. Substitute the
+Next the inner product. The consistency statement at the start of
+the post says that kets meeting the requirement reproduce the inner
+product of $L^2$, $\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$;
+the grid kets now meet it, so watch them do so. Substitute the
 normalized kernel into the double sum and do the $j$-sum with
 $\delta_{ij}$ first:
 
