@@ -370,8 +370,9 @@ $$
 |\psi_\Delta\rangle = \sum_i c_i\, |\hat x_i\rangle,
 $$
 
-so that, by the last post's Born rule, $|c_i|^2$ is the probability of
-finding the particle in cell $i$. (Note that, unlike $|x\rangle$, the
+so that $|c_i|^2$ is the probability of finding the particle in cell
+$i$ — by the Born rule, the squared-amplitude rule the last post took
+on credit and a later post of the road will earn. (Note that, unlike $|x\rangle$, the
 cell states are honest elements of $L^2$ — a cell state is the
 indicator function of its cell, normalized — and the grid is not a
 "countable subset of the continuous basis" but a replacement for it.
