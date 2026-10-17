@@ -208,7 +208,11 @@ $$
 and this is impossible. Fix $x$ and take two continuous functions
 $a_1$ and $a_2$ that are equal everywhere except on a tiny interval
 of width $\varepsilon$ around $y = x$, where $a_2$ rises above $a_1$
-by a narrow bump of height $1$. The left-hand sides differ by
+by a narrow bump of height $1$.
+
+![Two continuous test functions a₁ and a₂, equal outside a tiny interval of width ε around x, where a₂ rises by a bump of height 1; their difference is a tent of height 1 and width ε, with area at most ε](two_test_functions.png)
+
+The left-hand sides differ by
 $a_2(x) - a_1(x) = 1$. The right-hand sides differ by
 
 $$
