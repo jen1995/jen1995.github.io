@@ -357,10 +357,9 @@ $$
 \hat x_i(x) = \frac{\mathbf 1_{C_i}(x)}{\sqrt{\Delta x}}.
 $$
 
-The cell states are orthonormal, and this time it is a computation,
-not a guess. The product of two indicators is the indicator of the
-intersection, so the inner product of $L^2$ measures the overlap of
-two cells:
+Let us check that the cell states are orthonormal. The product of two
+indicators is the indicator of the intersection, so the inner product
+of $L^2$ measures the overlap of two cells:
 
 $$
 \begin{aligned}
