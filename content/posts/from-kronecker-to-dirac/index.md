@@ -173,9 +173,11 @@ also guarantees that $\int a^* b\, dx$ converges (by the
 and that every sum below is finite. We assume $a$ and $b$ continuous
 as well, which is what the Riemann sums need.
 
-This formula is the **yardstick** for everything that follows.
-Whatever we build in place of $|x\rangle$ must reproduce it, and a
-candidate that fails to is wrong — that is how a tempting first guess
+The inner-product formula just derived,
+$\langle \psi | \varphi \rangle = \int a(x)^* b(x)\, dx$, is the
+**yardstick** for everything that follows. Whatever we build in place
+of $|x\rangle$ must reproduce it, and a candidate that fails to is
+wrong — that is how a tempting first guess
 for $\langle x | y \rangle$ will be rejected a few sections down.
 
 One step of the derivation was taken on trust. The last post allowed
