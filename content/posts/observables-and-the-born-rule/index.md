@@ -745,12 +745,16 @@ ordinary sphere.
   operator *defined* by the mean value (3.8), eigenfunctions (3.12),
   Hermiticity from the reality of the mean (3.15–3.17).
 - P. A. M. Dirac. *The Principles of Quantum Mechanics*, 4th ed.
-  Oxford University Press, 1958 — chapter II, "Dynamical variables
-  and observables", §10 (observables), §11 (functions of observables),
-  §12 (the general physical interpretation): the average
-  $\langle \psi | \xi | \psi \rangle$ as the physical content of an
-  observable, and probabilities as averages of the corresponding
-  projectors.
+  Oxford University Press, 1958 (Russian translation: П. А. М. Дирак,
+  *Принципы квантовой механики*, 2-е изд., Наука, 1979, под ред.
+  В. А. Фока) — chapter II, "Dynamical variables and observables":
+  §10 (observables; Russian ed. p. 52), §11 (functions of
+  observables; p. 60), §12 (the general physical interpretation;
+  pp. 67–71): the basic assumption that the average of the results of
+  measuring $\xi$ in the state $|x\rangle$ is $\langle x | \xi | x \rangle$
+  (p. 68), and the probability of the value $a$ as the average of the
+  function $\delta_{\xi a}$ of the observable, $P_a = \langle x | \delta_{\xi a} | x \rangle$,
+  eq. (45) (p. 69) — the projector route of this post.
 - R. P. Feynman, R. B. Leighton, M. Sands. *The Feynman Lectures on
   Physics*, vol. III — chapter 5, "Spin One" (an apparatus between
   Stern–Gerlach filters is described by a table of amplitudes

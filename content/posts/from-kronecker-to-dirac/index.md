@@ -990,8 +990,10 @@ identified with the delta.
   exactly solvable example; the place to see why $|x\rangle$ lives
   outside the Hilbert space and how Dirac's formalism is made rigorous.
 - P. A. M. Dirac. *The Principles of Quantum Mechanics*, 4th ed.
-  Oxford University Press, 1958 — chapter III, §15 (the δ function)
-  and §16 (properties of the basic vectors): the orthogonality
+  Oxford University Press, 1958 (Russian translation: П. А. М. Дирак,
+  *Принципы квантовой механики*, 2-е изд., Наука, 1979) — chapter
+  III, §15 (the δ function; Russian ed. p. 84) and §16 (properties of
+  the basic vectors; p. 88): the orthogonality
   relation $\langle \xi' | \xi'' \rangle = \delta(\xi' - \xi'')$ for basic
   kets with a continuous label, in the form the subject has used ever
   since.
