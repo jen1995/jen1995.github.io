@@ -26,23 +26,15 @@ its amplitude" — and promised a derivation. The
 [last post](/posts/from-kronecker-to-dirac/) borrowed it again in
 passing.
 
-This post settles both, and it does so in the order in which the
-objects were actually found. The usual textbook order starts from a
-postulate — "observables are Hermitian operators, outcomes are their
-eigenvalues" — and derives everything else. Here the postulate comes
-last. The starting point is the one thing an apparatus gives us that
-is reproducible: *averages*. Averages are quadratic forms in the
-state, so a measurable quantity is a table of numbers with two
-indices — an operator. Real averages make the table Hermitian.
-Diagonalizing a Hermitian table turns every average into a weighted
-average of its eigenvalues, and the weights are the Born rule. Only
-then do eigenvalues and eigenvectors appear, as what the
-diagonalization produced, not as what was assumed. This is the road
-of Landau and Lifshitz's §3 and of chapter II of Dirac's *Principles*
-(see the references); Heisenberg took its first steps in 1925
-without knowing where they led. The spin of the first post does the
-explaining, as always, and the spin operators are constructed from the
-experiments as in lecture 3 of Susskind and Friedman.
+This post settles both. It does not start from the usual textbook
+postulate about operators; it starts from the one thing an apparatus
+gives us that is reproducible — averages — and follows where they
+lead. That is the road of Landau and Lifshitz's §3 and of chapter II
+of Dirac's *Principles* (see the references), and Heisenberg took
+its first steps in 1925 without knowing where they led. The spin of
+the first post does the explaining, as always, and the spin operators
+are constructed from the experiments as in lecture 3 of Susskind and
+Friedman.
 
 ## Where we stand
 
