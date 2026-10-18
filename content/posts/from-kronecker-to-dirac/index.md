@@ -177,7 +177,7 @@ in $b$, conjugate-linear in $a$, and $\int |a|^2\, dx \gt 0$ unless $a$
 is zero. What the line above adds is a *consistency* statement: if
 the position kets meet the requirement, the inner product computed
 through the kets coincides with the inner product of $L^2$. So there
-is one honest inner product in play, that of $L^2$, and the kets are
+is one inner product in play, that of $L^2$, and the kets are
 to be built to match it.
 
 A word on the functions themselves. A state must be
@@ -355,11 +355,11 @@ dead end numerically, next to the fix we are about to find:
 The dead end is not a failure of the limit machinery. The limit
 worked flawlessly and reported, correctly, what the table
 $\langle x_i | y_j \rangle = \delta_{ij}$ implies: coordinates that
-drain away. The table was the guess, and the table was wrong. We
+vanish as the grid is refined. What was wrong was the table. We
 cannot know the inner products of the grid kets in advance — they are
 the very thing under construction — so instead of guessing them we
 build the grid states from a basis we *define* to be orthonormal,
-made of honest elements of $L^2$, and let linear algebra fix the
+made of elements of $L^2$, and let linear algebra fix the
 coefficients. Introduce a new symbol: let
 $|\hat x_i\rangle$ be the **cell state** "the particle is somewhere in
 cell $i$" — a cell of width $\Delta x$ around $x_i$,
@@ -389,7 +389,7 @@ $$
 
 because distinct cells are disjoint and a cell has length
 $\Delta x$. The Kronecker delta is back, but its indices now label
-*intervals*, and the $1$ on the diagonal is a cell measured against
+*intervals*, and the $1$ on the diagonal is the overlap of a cell with
 itself.
 (The lattice is also how Shankar's *Principles of Quantum
 Mechanics* enters infinite dimensions, §1.10; his route and ours are
@@ -475,7 +475,7 @@ $$
 $$
 
 On every grid the ket returns the sample of $a$ in its cell, with no
-stray factor of $\Delta x$ to drain it away. What remains is to refine
+leftover factor of $\Delta x$. What remains is to refine
 the grid and see what this table of numbers, and the states built
 from it, converge to — which is the next section.
 
@@ -547,7 +547,7 @@ pointwise limit at all; we will show that $K$ *sifts*.
 Recall from the opening of the post what defines the Dirac delta: the
 **sifting property**, $\int f(y)\, \delta(x - y)\, dy = f(x)$ for
 every continuous $f$ — integrating against it plucks out the value at
-$y = x$. We have in fact already proved it. The limit computed at the
+$y = x$. It has already been proved. The limit computed at the
 start of *Taking the limit*,
 
 $$
@@ -608,9 +608,9 @@ inner product: with the integral read as the limit above,
 $\langle x | \psi \rangle = \int \langle x | y \rangle\, \psi(y)\, dy = \psi(x)$
 for every state, which is the requirement.
 
-(One detail of the test is worth a second look: the step of the grid
-and the width of the spike went to zero *together*. Why that is
-allowed, and why we chose to do it that way, is discussed in
+(The step of the grid and the width of the spike went to zero
+*together*. Why that is allowed, and why the post does it that way,
+is discussed in
 [Appendix B](#appendix-b-why-one-grid-and-the-straight-roads-not-taken).)
 
 Note what we did **not** do: we never claimed the spikes converge as
@@ -665,13 +665,12 @@ is the list of coordinates of the ket $|x_0\rangle$ in the *position
 basis*, the basis of position kets $\{|x\rangle\}$ — that is, its
 wavefunction. In the position representation, where every
 ket is identified with its wavefunction, the position ket *is* the
-delta concentrated at $x_0$. Here is what that does and does not say.
-A ket equals a function only after a basis is chosen, exactly as a
+delta concentrated at $x_0$. A ket equals a function only after a basis is chosen, exactly as a
 vector equals a column of numbers only after a basis is chosen; the
-delta is the face of $|x_0\rangle$ in the position basis, and in
-another basis the same ket has other coordinates.
+delta is the list of coordinates of $|x_0\rangle$ in the position
+basis, and in another basis the same ket has another list.
 
-Two of those faces, with the basis vectors quoted now and derived
+Two other bases, with their basis vectors quoted now and derived
 later on the road. In finite dimensions a basis vector $|E_k\rangle$
 has coordinates $\delta_{ik}$ in its own basis; in any other basis
 $\{|F_j\rangle\}$ its coordinates are its inner products with the new
@@ -712,11 +711,11 @@ $$
 an ordinary discrete list of numbers. The infinite norm shows up there
 too: $\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
 $\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
-three faces — a delta, a plane wave, a divergent column — one
-**generalized vector**: the name, made precise in
-[Appendix A](#appendix-a-the-price-the-position-kets-are-not-states),
-for an object that, like the delta, is defined only by what it does to
-honest states. In every case the coordinates were obtained the
+three lists of coordinates — a delta, a plane wave, a divergent column
+— for one **generalized vector**: an object defined, like the delta,
+only by its inner products with states;
+[Appendix A](#appendix-a-the-price-the-position-kets-are-not-states)
+makes the term precise. In every case the coordinates were obtained the
 same way as in finite dimensions: as inner products with the basis
 vectors, which the delta reduces to values at $x_0$.
 
@@ -766,7 +765,7 @@ and the diagonal selector in a double integral.
   the kets do to states. Their norm $1/\sqrt{\Delta x}$ diverges, so the
   limit is not an element of $L^2$ and not a state: a *generalized
   vector*. Physically, "the particle is exactly at $x_0$" is an
-  idealization that honest states approach and never reach. Both
+  idealization that states approach and never reach. Both
   points are spelled out in
   [Appendix A](#appendix-a-the-price-the-position-kets-are-not-states).
 - **By its coordinates.** In the *position basis* its coordinates are
@@ -849,9 +848,9 @@ gentlest entry is de la Madrid's article on the role of the rigged
 Hilbert space in quantum mechanics, which works it all out on one
 solvable example — both are in the references.
 
-One more thing the construction did not fix: the road to the limit.
-The cell states are one sequence of honest states converging weakly
-to $|x_0\rangle$; any delta-like sequence does the same — Gaussians of
+The construction also leaves one thing open: the sequence that
+approaches the limit. The cell states are one sequence of states
+converging weakly to $|x_0\rangle$; any delta-like sequence does the same — Gaussians of
 shrinking width, or the oscillating kernels
 $\sin(K(y - x_0)) / \pi(y - x_0)$ that come from cutting off the
 plane-wave integral $\frac{1}{2\pi} \int e^{ik(y - x_0)}\, dk$, the
