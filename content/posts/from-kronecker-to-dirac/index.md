@@ -560,21 +560,21 @@ $$
 \int f(y)\, K(x, y)\, dy = f(x) \qquad \text{for every continuous } f.
 $$
 
-An object satisfying the sifting property for all $f$ is, by
-definition, the Dirac delta. We have therefore *earned* the
-identification
+An object satisfying the sifting property for all continuous $f$ is,
+by definition, the Dirac delta:
 
 $$
 \boxed{\; K(x, y) = \delta(x - y) \;}
 $$
 
-and the spike features from before now follow as *consequences* of
-sifting, not assumptions:
-
-- **unit area** — set $f \equiv 1$, giving $\int \delta(x - y)\, dy = 1$;
-- **concentration at $y = x$** — for any $f$ vanishing at $x$ the
-  integral returns $f(x) = 0$, so $\delta$ feels nothing away from the
-  diagonal.
+The two features of the spikes — area one, and concentration at a
+single point — were observed on the grid, for finite $\Delta x$. For
+the limit they follow from the sifting property, so nothing beyond it
+needs to be assumed. Take $f \equiv 1$: the sifting property gives
+$\int \delta(x - y)\, dy = 1$, area one. Take any $f$ with $f(x) = 0$:
+the sifting property gives $\int f(y)\, \delta(x - y)\, dy = 0$,
+whatever $f$ does away from $x$ — the delta sees only the point
+$y = x$.
 
 Sifting in the $y$ variable also collapses a double integral into a
 single one,
