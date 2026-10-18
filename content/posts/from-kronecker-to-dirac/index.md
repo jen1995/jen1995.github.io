@@ -871,7 +871,10 @@ $\Delta y \to 0$ turns the sum into its integral, the average of $f$
 over the cell:
 
 $$
-\sum_j f(\xi_j)\, K_\Delta(x_i, y_j)\, \Delta y \;\xrightarrow{\;\Delta y \to 0\;}\; \int f(y)\, K_\Delta(x_i, y)\, dy = \frac{1}{\Delta x} \int_{C_i} f(y)\, dy.
+\begin{aligned}
+\sum_j f(\xi_j)\, K_\Delta(x_i, y_j)\, \Delta y \;&\xrightarrow{\;\Delta y \to 0\;}\; \int f(y)\, K_\Delta(x_i, y)\, dy \\
+&= \frac{1}{\Delta x} \int_{C_i} f(y)\, dy.
+\end{aligned}
 $$
 
 Then let $\Delta x \to 0$: the cell shrinks onto $x$ and the average
@@ -883,7 +886,8 @@ $\Delta x$. (The coupling does have a direction: with $\Delta y \gt \Delta x$
 a cell may contain no sample point, and the sum misses the spike.)
 
 The iterated version is shorter — it is the shrinking-window argument
-of Part 1 of the Fourier road — but on it the Kronecker delta
+of [Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+of the Fourier road — but on it the Kronecker delta
 disappears at the first step, as soon as the sum becomes an integral.
 The point of this post was to keep the state a finite sum, the kernel
 a table $\delta_{ij} / \Delta x$, and the test of the kernel a sum that
