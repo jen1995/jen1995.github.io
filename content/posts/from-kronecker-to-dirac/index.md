@@ -574,28 +574,27 @@ through $f(x)$, which is the same thing said through integrals. The
 spike had area one; with $f \equiv 1$ the sifting property gives
 $\int \delta(x - y)\, dy = 1$.
 
-Sifting in the $y$ variable also collapses a double integral into a
+Sifting in the $y$ variable collapses a double integral into a
 single one,
 
 $$
 \iint a(x)^* \, b(y)\, \delta(x - y)\, dx\, dy = \int a(x)^* \, b(x)\, dx,
 $$
 
-— the diagonal of a double integral selected exactly as $\delta_{ij}$
-selects the diagonal of a double sum. And it pays the
-last post's second debt in the same breath: for the position kets,
+selecting the diagonal of a double integral as $\delta_{ij}$ selects
+the diagonal of a double sum. Since $K$ was defined as the limit of
+$\langle x_i | y_j \rangle$, this also answers the second question of
+the opening: for the position kets,
 
 $$
-\langle x | y \rangle = \delta(x - y)
+\langle x | y \rangle = \delta(x - y),
 $$
 
-— the continuous orthonormality relation, the thing that replaces
-$\langle E_i | E_j \rangle = \delta_{ij}$ when the label of the basis
-becomes a real number. And the kets we built are the **coordinate
-objects** the section on the inner product asked for: with the
-integral read as the limit above,
+the continuous version of $\langle E_i | E_j \rangle = \delta_{ij}$.
+Finally, the kets are the coordinate objects of the section on the
+inner product: with the integral read as the limit above,
 $\langle x | \psi \rangle = \int \langle x | y \rangle\, \psi(y)\, dy = \psi(x)$
-for every state — the requirement we started from, now met.
+for every state, which is the requirement.
 
 Note what we did **not** do: we never claimed the spikes converge as
 functions. We tested against $f$, produced a limit of numbers, and
