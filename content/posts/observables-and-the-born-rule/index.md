@@ -31,10 +31,10 @@ postulate about operators; it starts from the one thing an apparatus
 gives us that is reproducible — averages — and follows where they
 lead. That is the road of Landau and Lifshitz's §3 and of chapter II
 of Dirac's *Principles* (see the references), and Heisenberg took
-its first steps in 1925 without knowing where they led. The spin of
-the first post does the explaining, as always, and the spin operators
-are constructed from the experiments as in lecture 3 of Susskind and
-Friedman.
+its first steps in 1925 without knowing where they led. As in the second
+post, the spin of the first post serves as the running example, and
+its operators are constructed from the experiments as in lecture 3 of
+Susskind and Friedman.
 
 ## Where we stand
 
