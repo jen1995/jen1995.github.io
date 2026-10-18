@@ -612,6 +612,49 @@ functions. We tested against $f$, produced a limit of numbers, and
 identified $K$ by its action. That is the only sense in which the
 identification holds, and it has a name.
 
+<details>
+<summary>Two limits in one: the grid and the spike shrink together</summary>
+
+One thing in the test above deserves a second look. The spacing
+$\Delta x$ plays two roles at once: it is the width of the spike
+$K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$, and it is the step of
+the grid on which "integrating $f$ against $K$" was replaced by a sum.
+We sent both to zero together, along the diagonal $\Delta y = \Delta x$.
+Two limits are coupled here, and coupling limits needs a reason.
+
+The honest version is an *iterated* limit. For fixed $\Delta x$ the
+spike is an ordinary function of $y$, so integrating $f$ against it is
+an ordinary integral — the average of $f$ over the cell:
+
+$$
+\int f(y)\, K_\Delta(x_i, y)\, dy = \frac{1}{\Delta x} \int_{C_i} f(y)\, dy.
+$$
+
+Riemann sums with step $\Delta y \to 0$ converge to this integral while
+$\Delta x$ stays put — the inner limit. Then let $\Delta x \to 0$: the
+cell shrinks onto $x$, and the average tends to $f(x)$ by continuity —
+the outer limit. In this form there is no grid at all, only a
+shrinking window and an integral; it is exactly the construction of
+[Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+and the delta-like sequences of Gelfand and Shilov in the next
+section.
+
+The diagonal limit of the text agrees with the iterated one, and the
+reason is continuity of $f$: with $\Delta y = \Delta x$ the cell holds a
+single sample point, the sum collapses to $f(x_i)$, and $f(x_i)$
+differs from the cell average by at most the oscillation of $f$ over a
+cell of width $\Delta x$, which goes to zero. Without continuity the
+two limits could disagree, and coupling them would be a mistake.
+
+The coupling also has a direction. The grid must be no coarser than
+the spike, $\Delta y \leq \Delta x$: with $\Delta y \gt \Delta x$ a cell
+may contain no sample point at all, the sum returns $0$, and the test
+misses the spike entirely. That is why the discrete delta and the grid
+that tests it cannot be separated: a kernel of width $\Delta x$ is only
+visible to a sum of resolution $\Delta x$ or better.
+
+</details>
+
 ## Weak convergence
 
 It is tempting to write
