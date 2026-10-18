@@ -650,8 +650,9 @@ so the identification above is a special case of that theorem.
 
 Read $\langle x | y \rangle = \delta(x - y)$ once more, this time with
 $y = x_0$ fixed and $x$ running: $\langle x | x_0 \rangle = \delta(x - x_0)$
-is the list of coordinates of the ket $|x_0\rangle$ in the position
-basis — its wavefunction. In the position representation, where every
+is the list of coordinates of the ket $|x_0\rangle$ in the *position
+basis*, the basis of position kets $\{|x\rangle\}$ — that is, its
+wavefunction. In the position representation, where every
 ket is identified with its wavefunction, the position ket *is* the
 delta concentrated at $x_0$. Here is what that does and does not say.
 A ket equals a function only after a basis is chosen, exactly as a
