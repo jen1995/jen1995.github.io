@@ -909,7 +909,11 @@ their limit is never taken. The delta then enters without any grid:
 from the completeness relation $\int |x'\rangle\langle x'|\, dx' = I$
 and the requirement $\langle x | f \rangle = f(x)$ he deduces that
 $\langle x | x' \rangle$ must vanish off the diagonal and integrate to
-one — Dirac's argument, with this post's requirement in Dirac's role.
+one. This is Dirac's own argument (*The Principles of Quantum
+Mechanics*, chapter III, §§15–16; see the references), and it rests
+on the same requirement as this post — $\langle x | \psi \rangle = \psi(x)$,
+which Shankar states as "the projection of $|f\rangle$ along
+$|x\rangle$ is just $f(x)$".
 The two routes agree on every number. The inner product of two
 discretized states is
 $\sum_i a(x_i)^* b(x_i)\, \langle x_i | x_i \rangle\, \Delta^2$, and the
@@ -960,6 +964,12 @@ identified with the delta.
   of Physics* 26 (2005), 287–312 — a pedestrian introduction on one
   exactly solvable example; the place to see why $|x\rangle$ lives
   outside the Hilbert space and how Dirac's formalism is made rigorous.
+- P. A. M. Dirac. *The Principles of Quantum Mechanics*, 4th ed.
+  Oxford University Press, 1958 — chapter III, §15 (the δ function)
+  and §16 (properties of the basic vectors): the orthogonality
+  relation $\langle \xi' | \xi'' \rangle = \delta(\xi' - \xi'')$ for basic
+  kets with a continuous label, in the form the subject has used ever
+  since.
 - R. Shankar. *Principles of Quantum Mechanics*, 2nd ed. Plenum, 1994 —
   §1.10, "Generalization to infinite dimensions", pp. 57–63: a
   function on a string as a vector of its values at lattice points,
