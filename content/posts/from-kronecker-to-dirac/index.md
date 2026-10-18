@@ -96,7 +96,12 @@ coordinate per index. A continuum of outcomes — one index per real
 number $x$ — and the list of coordinates *is* a function on the line.
 That is the whole insight: **a vector with a continuum of coordinates
 is a function**, and the function is what the last post called the
-wavefunction, $a(x) = \langle x | \psi \rangle$.
+wavefunction, $a(x) = \langle x | \psi \rangle$ — the coordinates of
+the state in the **position basis**, the family of position kets
+$\{|x\rangle\}$. It is one basis among several the road will use,
+just as the spin had a basis per measurement axis; the problems ahead
+will expand the same states in energy bases, and the dynamics post in
+the momentum basis.
 
 ![A vector is a list of coordinates indexed by i; as the index runs over the real line, the list becomes a function — the wavefunction](coords_to_function.png)
 
@@ -685,7 +690,7 @@ and the diagonal selector in a double integral.
   limit is not an element of $L^2$ and not a state: a *generalized
   vector*. Physically, "the particle is exactly at $x_0$" is an
   idealization that honest states approach and never reach.
-- **By its coordinates.** In the position basis its coordinates are
+- **By its coordinates.** In the *position basis* its coordinates are
   $\langle y | x_0 \rangle = \delta(y - x_0)$. Since the position
   representation identifies every ket with its wavefunction, in that
   representation $|x_0\rangle$ *is* the delta concentrated at $x_0$,
@@ -705,8 +710,33 @@ equals a function only after a basis is chosen, exactly as a vector
 equals a column of numbers only after a basis is chosen; the delta is
 the face of $|x_0\rangle$ in the position basis, and in another basis
 the same ket has other coordinates.
-[Appendix A](#appendix-a-the-price-the-position-kets-are-not-states)
-shows two of them.
+
+Two of those faces, quoted now and derived later on the road. In
+finite dimensions a basis vector
+$|E_k\rangle$ has coordinates $\delta_{ik}$ in its own basis and
+coordinates $\langle F_j | E_k \rangle$ in any other basis
+$\{|F_j\rangle\}$ — a column of numbers that is nothing like a single
+$1$ among zeros. The position ket behaves the same way. In the
+position basis its coordinates are $\delta(y - x_0)$. In the
+*momentum* basis — the plane waves that the dynamics post will
+introduce as the eigenvectors of momentum — its coordinates are
+
+$$
+\langle k | x_0 \rangle = \frac{e^{-ikx_0}}{\sqrt{2\pi}},
+$$
+
+a complex exponential of constant modulus: the Fourier road's "flat
+spectrum of a delta", now as a change of basis (we quote the formula
+here and derive it there). And in the *energy* basis of a particle in
+a box of length $L$, with eigenfunctions
+$\varphi_n(x) = \sqrt{2/L}\, \sin(n\pi x / L)$, the coordinates of
+$|x_0\rangle$ are an ordinary discrete list of numbers,
+$\langle E_n | x_0 \rangle = \varphi_n(x_0)$ — the values of the
+eigenfunctions at the point. The infinite norm shows up there too:
+$\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
+$\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
+three faces — a delta, a plane wave, a divergent column — one
+generalized vector.
 
 The logic of the post hangs on the first of these properties: that
 the position kets return coordinates, exactly as an orthonormal basis
@@ -795,32 +825,6 @@ in a very large box, which leaves position continuous and discretizes
 *momentum* instead — plane waves $e^{i k_n x}$ with $k_n = 2\pi n / L$
 — and the same $1/\sqrt{\text{spacing}}$ rescaling appears there. The
 road returns to that construction when momentum gets its own basis.
-
-**The same ket in other bases.** In finite dimensions a basis vector
-$|E_k\rangle$ has coordinates $\delta_{ik}$ in its own basis and
-coordinates $\langle F_j | E_k \rangle$ in any other basis
-$\{|F_j\rangle\}$ — a column of numbers that is nothing like a single
-$1$ among zeros. The position ket behaves the same way. In the
-position basis its coordinates are $\delta(y - x_0)$. In the
-*momentum* basis — the plane waves that the dynamics post will
-introduce as the eigenvectors of momentum — its coordinates are
-
-$$
-\langle k | x_0 \rangle = \frac{e^{-ikx_0}}{\sqrt{2\pi}},
-$$
-
-a complex exponential of constant modulus: the Fourier road's "flat
-spectrum of a delta", now as a change of basis (we quote the formula
-here and derive it there). And in the *energy* basis of a particle in
-a box of length $L$, with eigenfunctions
-$\varphi_n(x) = \sqrt{2/L}\, \sin(n\pi x / L)$, the coordinates of
-$|x_0\rangle$ are an ordinary discrete list of numbers,
-$\langle E_n | x_0 \rangle = \varphi_n(x_0)$ — the values of the
-eigenfunctions at the point. The infinite norm shows up there too:
-$\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
-$\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
-three faces — a delta, a plane wave, a divergent column — one
-generalized vector.
 
 This is also the first appearance of a theme the road will return to:
 position is a measurable quantity whose menu of outcomes is a
