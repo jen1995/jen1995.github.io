@@ -146,7 +146,11 @@ The longest post; notes §9–13 + the classical interlude.
 - Material cut from the delta post and kept for later posts is in
   `drafts/quantum/delta_post_cuts.md` (Born-rule/density remark, separability
   remark, the very-large-box section).
-- Next: QM-3 (observables, spectrum, the Born rule earned).
+- QM-3 drafted 2026-10-18 as content/posts/observables-and-the-born-rule/
+  (weight 50, draft: true): operators from the spin, the three conditions,
+  the Born rule from basis independence (her §7), expectation values,
+  Hermitian operators, σ_z and σ_x from the experiments (σ_y waits for the
+  i/o states in QM-4), measurement as projection. Under review.
 
 ## QM-6. Particle in a box (problem #1)
 
