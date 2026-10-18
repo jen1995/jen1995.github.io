@@ -530,7 +530,7 @@ defined not by its values but by **what it does inside an integral** —
 the sifting property. To identify $K$ with $\delta$ we will not take a
 pointwise limit at all; we will show that $K$ *sifts*.
 
-## Identifying the kernel: the sifting property, earned
+## The kernel is the Dirac delta
 
 Recall from the opening of the post what defines the Dirac delta: the
 **sifting property**, $\int f(y)\, \delta(x - y)\, dy = f(x)$ for
@@ -625,7 +625,10 @@ $\sum_j f(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y$ converge to
 $f(x)$. That is the same tested sum, with the same conventions and the
 same limit, as in the previous section. The arrow above is universally
 used as shorthand for this statement, and now we know what it
-abbreviates. It also has a classical name: in Gelfand and Shilov's
+abbreviates.
+
+![Pointwise versus weak convergence: the spikes' values blow up at y = x and vanish elsewhere, so they converge to no function; the numbers obtained by integrating a continuous f against them — the averages of f over shrinking cells — converge to f(x)](weak_vs_pointwise.png)
+ It also has a classical name: in Gelfand and Shilov's
 *Generalized Functions*, vol. 1, a sequence of functions $f_\nu$ is
 called **delta-like** if its integrals over any interval stay bounded
 and $\int_a^b f_\nu \to 1$ when $a \lt 0 \lt b$ and $\to 0$ otherwise —
