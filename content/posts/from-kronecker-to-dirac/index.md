@@ -387,13 +387,18 @@ because distinct cells are disjoint and a cell has length
 $\Delta x$. The Kronecker delta is back, but its indices now label
 *intervals*, and the $1$ on the diagonal is a cell measured against
 itself.
-(The idea of reaching a continuous basis through a lattice is how
-Shankar's *Principles of Quantum Mechanics* introduces
-infinite-dimensional state spaces, §1.10: a function on a string is a
-vector of its values at $n$ lattice points, and the inner product must
-acquire the spacing $\Delta$ for the limit $n \to \infty$ to be
-$\int f^* g\, dx$. The cell states, and the route through the
-requirement, are this post's own; see the references.)
+(The lattice is also how Shankar's *Principles of Quantum
+Mechanics* enters infinite dimensions, §1.10: a function on a string
+becomes the vector of its values at $n$ lattice points, with unit kets
+$|x_i\rangle$, $\langle x_i | x_j \rangle = \delta_{ij}$. Shankar
+avoids our dead end differently — he keeps the kets unit and inserts
+the spacing $\Delta$ into the inner product by hand, so that it tends
+to $\int f^* g\, dx$ — and then takes no limit of the kets at all: the
+delta normalization $\langle x | x' \rangle = \delta(x - x')$ is
+deduced from completeness together with $\langle x | f \rangle = f(x)$,
+which is this post's requirement used as Dirac used it. The cell
+states, and the delta as the limit of the rescaled Kronecker table,
+are this post's own; see the references.)
 
 ![The cell states as wavefunctions: flat bumps of height 1/√Δx on disjoint cells — orthonormal by inspection; a state written in them has amplitudes a(x_i)√Δx](cell_states.png)
 
@@ -940,9 +945,13 @@ post took the diagonal.
   exactly solvable example; the place to see why $|x\rangle$ lives
   outside the Hilbert space and how Dirac's formalism is made rigorous.
 - R. Shankar. *Principles of Quantum Mechanics*, 2nd ed. Plenum, 1994 —
-  §1.10, "Generalization to infinite dimensions": a continuous basis
-  reached from a lattice of points, with the spacing entering the
-  inner product and the Dirac delta appearing as the normalization of
-  the limiting kets.
+  §1.10, "Generalization to infinite dimensions", pp. 57–63: a
+  function on a string as a vector of its values at lattice points,
+  the spacing $\Delta$ inserted into the inner product for the
+  $n \to \infty$ limit (eq. 1.10.6′), and the normalization
+  $\langle x | x' \rangle = \delta(x - x')$ deduced from completeness
+  and $\langle x | f \rangle = f(x)$ (pp. 59–60) — the requirement of
+  this post, in Dirac's form; the delta is then modelled as the limit
+  of a Gaussian (p. 61).
 - This blog's own first meeting with the delta:
   [Part 1 of the Fourier road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal).
