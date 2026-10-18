@@ -691,7 +691,11 @@ $$
 $$
 
 the sifting property read from right to left — a function written as
-a superposition of deltas. On the grid the same line is literal: the
+a superposition of deltas. Substituting the delta for the ket *is*
+passing to coordinates: a ket equals a function only after a basis is
+chosen, as a vector equals a column of numbers only after a basis is
+chosen, and in another basis the same ket has another face — in the
+momentum basis of the dynamics post, $|x\rangle$ will be a plane wave. On the grid the same line is literal: the
 discretized state $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$ has
 wavefunction $\sum_i a(x_i)\, \mathbf 1_{C_i}(y)$, the step function
 that approximates $a$.
