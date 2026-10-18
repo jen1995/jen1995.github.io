@@ -670,7 +670,9 @@ Gaussian, which is an honest element of $L^2$ for every $\sigma \gt 0$.
 But as $\sigma \to 0$ these states converge to nothing in $L^2$ — the
 normalized bumps have no limit in the norm — so "exactly at $x_0$" is
 not a rare state but a nonexistent one, approachable to any precision
-and never reached. This is a genuine difference from the discrete
+and never reached.
+
+This is a genuine difference from the discrete
 menus of the first two posts, where every outcome had a state of its
 own ($|u\rangle$, $|d\rangle$): for a continuous menu, a definite
 outcome has no state, only approximations. Mathematically, then,
