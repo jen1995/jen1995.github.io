@@ -859,73 +859,37 @@ mixed.)
 
 *Optional reading; it explains a choice made in this post.*
 
-In the test of the kernel the spacing $\Delta x$ played two roles at
-once: the width of the spike $K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$,
-and the step of the grid on which "integrating $f$ against $K$" was
-replaced by a sum. We sent both to zero together, along the diagonal
-$\Delta y = \Delta x$ — two limits at once, which in general one may not
-do without checking that the result does not depend on how the two
-are tied.
+In the test of the kernel the spacing $\Delta x$ played two roles: the
+width of the spike $K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$ and
+the step of the grid on which the integral of $f$ against it was
+written as a sum. We sent both to zero together, along the diagonal
+$\Delta y = \Delta x$.
 
-**The straight road.** Keep the two apart. For fixed $\Delta x$ the
-spike is an ordinary function of $y$, so integrating $f$ against it is
-an ordinary integral — the average of $f$ over the cell:
+Taken one at a time, the two limits look like this. Fix $\Delta x$; the
+spike is an ordinary function of $y$, and letting the grid step
+$\Delta y \to 0$ turns the sum into its integral, the average of $f$
+over the cell:
 
 $$
-\int f(y)\, K_\Delta(x_i, y)\, dy = \frac{1}{\Delta x} \int_{C_i} f(y)\, dy.
+\sum_j f(\xi_j)\, K_\Delta(x_i, y_j)\, \Delta y \;\xrightarrow{\;\Delta y \to 0\;}\; \int f(y)\, K_\Delta(x_i, y)\, dy = \frac{1}{\Delta x} \int_{C_i} f(y)\, dy.
 $$
 
-Riemann sums with step $\Delta y \to 0$ converge to this integral while
-$\Delta x$ stays put. Then let $\Delta x \to 0$: the cell shrinks onto
-$x$, and the average tends to $f(x)$ by continuity. In this form there
-is no grid at all — only a shrinking window and an integral, and it
-is shorter than what this post did. It is also exactly the
-construction of
-[Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
-of the Fourier road, which met the delta as the limit of a shrinking
-averaging window: a rectangle $\frac{1}{\tau} r_\tau(t)$ of width
-$\tau$ and height $1/\tau$, area one, tested against a continuous
-signal, with the sifting property proved by a mean-value argument as
-$\tau \to 0$. Compare with today's spike: width $\Delta x$, height
-$1/\Delta x$, area one, tested against a continuous $f$. The two are
-the same construction with different motivation — one came from
-*measuring* a signal through an instrument of finite resolution, the
-other from *building* a basis of finite resolution — and the same
-fine print applies to both: the delta is not a function, and the
-limits are weak. Analysis calls such families
-[approximate identities](https://en.wikipedia.org/wiki/Mollifier),
-Gelfand and Shilov call them delta-like sequences, and the systematic
-theory of objects like $\delta$ is
-[distribution theory](https://en.wikipedia.org/wiki/Distribution_(mathematics)),
-which we name and do not rebuild.
+Then let $\Delta x \to 0$: the cell shrinks onto $x$ and the average
+tends to $f(x)$ by continuity. The diagonal limit of the text gives
+the same answer, because with $\Delta y = \Delta x$ the sum is the single
+sample $f(\xi_i)$, which differs from the cell average by at most the
+oscillation of $f$ over the cell — and that goes to zero with
+$\Delta x$. (The coupling does have a direction: with $\Delta y \gt \Delta x$
+a cell may contain no sample point, and the sum misses the spike.)
 
-**Why the post did not take it.** On the straight road the Kronecker
-delta disappears at the first step: the spike becomes a step function
-on the line, the sum becomes an integral, and what remains is the
-standard delta-sequence argument. The point of this post was the
-other thing — to keep everything on one grid, where the state is a
-finite sum, the inner product a double sum, the kernel a table
-$\delta_{ij} / \Delta x$, and the test of the kernel collapses to a
-single term *because* $\delta_{ij}$ kills the sum and $1/\Delta x$ eats
-the $\Delta y$. That collapse is the discrete sifting property, and
-watching it turn into the continuous one as $\Delta x \to 0$ is the
-intuition the post was after: the Dirac delta is what the Kronecker
-delta becomes when a sum becomes an integral, with $1/\Delta x$ as the
-exchange rate.
-
-**Why it is allowed.** The diagonal limit agrees with the straight
-road, and the reason is continuity of $f$: with $\Delta y = \Delta x$
-the cell holds a single sample point, the sum collapses to
-$f(\xi_i)$, and $f(\xi_i)$ differs from the cell average by at most the
-oscillation of $f$ over a cell of width $\Delta x$, which goes to
-zero. Without continuity the two limits could disagree. The coupling
-also has a direction: the grid must be no coarser than the spike,
-$\Delta y \leq \Delta x$, since with $\Delta y \gt \Delta x$ a cell may
-contain no sample point at all, the sum returns $0$, and the test
-misses the spike entirely. A kernel of width $\Delta x$ is only visible
-to a sum of resolution $\Delta x$ or better — which is why, on one
-grid, the discrete delta and the sums that test it cannot be
-separated.
+The iterated version is shorter — it is the shrinking-window argument
+of Part 1 of the Fourier road — but on it the Kronecker delta
+disappears at the first step, as soon as the sum becomes an integral.
+The point of this post was to keep the state a finite sum, the kernel
+a table $\delta_{ij} / \Delta x$, and the test of the kernel a sum that
+$\delta_{ij}$ collapses to one term, and to watch that discrete
+sifting become the continuous one as $\Delta x \to 0$. That is why the
+post took the diagonal.
 
 ## References
 
