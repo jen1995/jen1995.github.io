@@ -850,13 +850,29 @@ the weak sense: not point by point, but through what they do to every
 function they are integrated against. In short: the Dirac delta is
 what the Kronecker delta becomes when a sum becomes an integral.
 
-The logic of the post hangs on one requirement: that the position kets
-return coordinates, $\langle x | \psi \rangle = \psi(x)$, exactly as
-an orthonormal basis does through $\delta_{ki}$. The $L^2$ inner
-product followed from that requirement in one line; the grid
-construction then built kets that satisfy it in the limit, and the
-price of satisfying it — the $1/\Delta x$ — is what turned the
-Kronecker delta into the Dirac delta.
+The opening asked two questions, and here are the answers.
+
+*What is $\langle x | y \rangle$?* The Dirac delta, $\delta(x - y)$ —
+the continuous version of $\langle E_i | E_j \rangle = \delta_{ij}$,
+and the diagonal selector in a double integral.
+
+*What is the ket $|x\rangle$?* Not a state and not a function. It is
+defined by one property, that its bra returns the coordinate,
+$\langle x | \psi \rangle = \psi(x)$ for every state; it is reached as
+the limit of the cell states rescaled by $1/\sqrt{\Delta x}$, a limit
+that exists only in the weak sense — through what the kets do to
+states, never as a vector of $L^2$, where its norm would be infinite.
+Mathematically it is a generalized vector; physically, "the particle
+is exactly at $x$" is an idealization that honest states approach and
+never reach.
+
+The logic of the post hangs on the first of these properties: that
+the position kets return coordinates, exactly as an orthonormal basis
+does through $\delta_{ki}$. The $L^2$ inner product followed from that
+requirement in one line; the grid construction then built kets that
+satisfy it in the limit, and the price of satisfying it — the
+$1/\Delta x$ — is what turned the Kronecker delta into the Dirac
+delta.
 
 ## Onward
 
