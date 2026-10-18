@@ -646,6 +646,42 @@ and every delta-like sequence converges weakly to $\delta$ (chapter I,
 height $1/\Delta x$ centered at $x$, satisfy both conditions on sight,
 so the identification above is a special case of that theorem.
 
+## One ket, three bases
+
+Before summing up, one more look at what "the position ket is the
+delta" does and does not say. A ket equals a function only after a
+basis is chosen, exactly as a vector equals a column of numbers only
+after a basis is chosen; the delta is the face of $|x_0\rangle$ in the
+position basis, and in another basis the same ket has other
+coordinates.
+
+Two of those faces, quoted now and derived later on the road. In
+finite dimensions a basis vector
+$|E_k\rangle$ has coordinates $\delta_{ik}$ in its own basis and
+coordinates $\langle F_j | E_k \rangle$ in any other basis
+$\{|F_j\rangle\}$ — a column of numbers that is nothing like a single
+$1$ among zeros. The position ket behaves the same way. In the
+position basis its coordinates are $\delta(y - x_0)$. In the
+*momentum* basis — the plane waves that the dynamics post will
+introduce as the eigenvectors of momentum — its coordinates are
+
+$$
+\langle k | x_0 \rangle = \frac{e^{-ikx_0}}{\sqrt{2\pi}},
+$$
+
+a complex exponential of constant modulus: the Fourier road's "flat
+spectrum of a delta", now as a change of basis (we quote the formula
+here and derive it there). And in the *energy* basis of a particle in
+a box of length $L$, with eigenfunctions
+$\varphi_n(x) = \sqrt{2/L}\, \sin(n\pi x / L)$, the coordinates of
+$|x_0\rangle$ are an ordinary discrete list of numbers,
+$\langle E_n | x_0 \rangle = \varphi_n(x_0)$ — the values of the
+eigenfunctions at the point. The infinite norm shows up there too:
+$\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
+$\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
+three faces — a delta, a plane wave, a divergent column — one
+generalized vector.
+
 ## Summary
 
 The Kronecker delta $\delta_{ij}$ and the Dirac delta $\delta(x - y)$
@@ -706,39 +742,6 @@ and the diagonal selector in a double integral.
   discretized state $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$ has
   wavefunction $\sum_i a(x_i)\, \mathbf 1_{C_i}(y)$, the step function
   that approximates $a$.
-
-The third answer depends on a choice the first two do not make. A ket
-equals a function only after a basis is chosen, exactly as a vector
-equals a column of numbers only after a basis is chosen; the delta is
-the face of $|x_0\rangle$ in the position basis, and in another basis
-the same ket has other coordinates.
-
-Two of those faces, quoted now and derived later on the road. In
-finite dimensions a basis vector
-$|E_k\rangle$ has coordinates $\delta_{ik}$ in its own basis and
-coordinates $\langle F_j | E_k \rangle$ in any other basis
-$\{|F_j\rangle\}$ — a column of numbers that is nothing like a single
-$1$ among zeros. The position ket behaves the same way. In the
-position basis its coordinates are $\delta(y - x_0)$. In the
-*momentum* basis — the plane waves that the dynamics post will
-introduce as the eigenvectors of momentum — its coordinates are
-
-$$
-\langle k | x_0 \rangle = \frac{e^{-ikx_0}}{\sqrt{2\pi}},
-$$
-
-a complex exponential of constant modulus: the Fourier road's "flat
-spectrum of a delta", now as a change of basis (we quote the formula
-here and derive it there). And in the *energy* basis of a particle in
-a box of length $L$, with eigenfunctions
-$\varphi_n(x) = \sqrt{2/L}\, \sin(n\pi x / L)$, the coordinates of
-$|x_0\rangle$ are an ordinary discrete list of numbers,
-$\langle E_n | x_0 \rangle = \varphi_n(x_0)$ — the values of the
-eigenfunctions at the point. The infinite norm shows up there too:
-$\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
-$\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
-three faces — a delta, a plane wave, a divergent column — one
-generalized vector.
 
 The logic of the post hangs on the first of these properties: that
 the position kets return coordinates, exactly as an orthonormal basis
