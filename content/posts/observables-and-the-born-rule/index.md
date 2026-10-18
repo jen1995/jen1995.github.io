@@ -756,11 +756,16 @@ ordinary sphere.
   function $\delta_{\xi a}$ of the observable, $P_a = \langle x | \delta_{\xi a} | x \rangle$,
   eq. (45) (p. 69) — the projector route of this post.
 - R. P. Feynman, R. B. Leighton, M. Sands. *The Feynman Lectures on
-  Physics*, vol. III — chapter 5, "Spin One" (an apparatus between
-  Stern–Gerlach filters is described by a table of amplitudes
-  $\langle j | A | i \rangle$), and chapter 20, "Operators" (§20-2,
-  average energies: $\langle E \rangle = \langle \psi | \hat H | \psi \rangle$).
-  Free online at [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/).
+  Physics*, vol. III (Russian edition: *Фейнмановские лекции по
+  физике*, вып. 8–9 *Квантовая механика*, Мир, 1978) — chapter 5,
+  "Spin One", §5-6 "The machinery of quantum mechanics" (Russian ed.
+  глава 3, §6, p. 75): an apparatus between Stern–Gerlach filters is
+  described by a table of amplitudes $\langle j | A | i \rangle$, "a
+  set of nine numbers, called a matrix"; and chapter 20, "Operators",
+  §20-2 "Average energies" (глава 18, §2, pp. 469–473): the average
+  energy as $\sum_i P_i E_i$ with $P_i = |C_i|^2$ (18.11), rewritten
+  as $\langle \psi | \hat H | \psi \rangle$. Free online at
+  [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/).
 - I. J. R. Aitchison, D. A. MacManus, T. M. Snyder. [*Understanding
   Heisenberg's "magical" paper of July 1925: a new look at the
   calculational details*](https://arxiv.org/abs/quant-ph/0404009).
