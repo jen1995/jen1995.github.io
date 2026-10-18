@@ -78,7 +78,7 @@ inside an *integral* instead of a sum. The rest of the post shows that
 this object is forced to be the Dirac delta $\delta(x - y)$, and says
 precisely in what sense.
 
-## The inner product of two continuous superpositions
+## What the position kets must be
 
 Start where the last post left off: with honest vectors. A state
 with $n$ possible outcomes was a vector with $n$ coordinates,
@@ -255,9 +255,11 @@ instant could not be a function either, and the Dirac delta had to
 be built as a limit of averaging windows. Here the same object will
 arrive from the opposite side.
 
-### Building the coordinate objects from the finite-dimensional side
+## Building the kets on a grid
 
-That opposite side is the finite-dimensional linear algebra of the
+### The grid and the discretized states
+
+The opposite side is the finite-dimensional linear algebra of the
 last post, where everything is a sum and nothing is exotic. The plan:
 replace both integrals by Riemann sums, so that
 $\langle \psi | \varphi \rangle$ becomes a finite computation and the
@@ -306,7 +308,7 @@ $$
 
 and the main question of the post is: what is the kernel?
 
-## A dead end: the naive Kronecker guess
+### A dead end: the naive Kronecker guess
 
 It is tempting to say the kernel is just the Kronecker delta,
 $\langle x_i | y_j \rangle \overset{?}{=} \delta_{ij}$ — the grid
@@ -348,7 +350,7 @@ dead end numerically, next to the fix we are about to find:
 
 ![The inner product of two discretized states as the grid is refined: with the kernel δ_ij it decays to zero, with δ_ij/Δx it converges to the integral](two_kernels.png)
 
-## The right basis: cell states
+### The right basis: cell states
 
 The dead end is not a failure of the limit machinery. The limit
 worked flawlessly and reported, correctly, what the table
@@ -479,6 +481,8 @@ from it, converge to — which is the next section.
 
 ## Taking the limit
 
+### The requirement, then the inner product
+
 The requirement first. Fix a target point $x$ — the only thing held
 fixed from here on — let $i$ be the index of the cell containing it, and refine the grid.
 The index $i$, the grid point $x_i$ and the sample $\xi_i$ all change
@@ -538,7 +542,7 @@ defined not by its values but by **what it does inside an integral** —
 the sifting property. To identify $K$ with $\delta$ we will not take a
 pointwise limit at all; we will show that $K$ *sifts*.
 
-## The kernel is the Dirac delta
+### The kernel is the Dirac delta
 
 Recall from the opening of the post what defines the Dirac delta: the
 **sifting property**, $\int f(y)\, \delta(x - y)\, dy = f(x)$ for
@@ -614,7 +618,7 @@ functions. We tested against $f$, produced a limit of numbers, and
 identified $K$ by its action. That is the only sense in which the
 identification holds, and it has a name.
 
-## Weak convergence
+### Weak convergence
 
 It is tempting to write
 
