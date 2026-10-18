@@ -665,8 +665,8 @@ finite dimensions a basis vector
 $|E_k\rangle$ has coordinates $\delta_{ik}$ in its own basis and
 coordinates $\langle F_j | E_k \rangle$ in any other basis
 $\{|F_j\rangle\}$, generally all nonzero. The position ket behaves the
-same way. In the
-position basis its coordinates are $\delta(y - x_0)$. In the
+same way: in the position basis its coordinates are
+$\delta(y - x_0)$, and in the
 *momentum* basis — the plane waves that the dynamics post will
 introduce as the eigenvectors of momentum — its coordinates are
 
