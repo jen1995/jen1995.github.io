@@ -532,37 +532,29 @@ pointwise limit at all; we will show that $K$ *sifts*.
 
 ## Identifying the kernel: the sifting property, earned
 
-The strategy: test the discrete kernel $K_\Delta$ against an arbitrary
-continuous function $f$, evaluate as an honest finite sum, and take
-the limit only at the end. This is the check we ran on every grid
-after building the cell states — $\langle x_i | \psi_\Delta \rangle = a(x_i)$ — with
-the coordinate $a$ replaced by an arbitrary continuous $f$, and with
-the limit taken at the end.
-
-Fix a target point $x$ once and for all, and let $i$ be the index of
-the grid cell containing $x$, so that $x_i$ is the grid point nearest
-the target, $|x_i - x| \leq \Delta x$. The discrete analogue of
-"integrating $f$ against $K$" is $f$ summed against $K_\Delta$ with
-the spacing $\Delta y$; on our grid $\Delta y = \Delta x$, so the
-$1/\Delta x$ and the $\Delta x$ cancel exactly, and the Kronecker
-delta keeps only the $j = i$ term:
+Recall from the opening of the post what defines the Dirac delta: the
+**sifting property**, $\int f(y)\, \delta(x - y)\, dy = f(x)$ for
+every continuous $f$ — integrating against it plucks out the value at
+$y = x$. We have in fact already proved it. The limit computed at the
+start of *Taking the limit*,
 
 $$
-\sum_j f(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta x = \sum_j f(y_j)\, \delta_{ij} = f(x_i).
+\lim_{\Delta x \to 0} \; \sum_j a(\xi_j)\, K_\Delta(x_i, y_j)\, \Delta y = a(x),
 $$
 
-Now let $\Delta x \to 0$. The grid point $x_i$ is squeezed onto the
-target, $|x_i - x| \leq \Delta x \to 0$, so by continuity of $f$ we
-get $f(x_i) \to f(x)$:
+used nothing about $a$ except that it is continuous — not that it is
+square-integrable, not that it is the wavefunction of a state. So the
+same computation goes through, line for line, for an arbitrary
+continuous function $f$ in place of $a$:
 
 $$
-\lim_{\Delta x \to 0} \; \sum_j f(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y = f(x).
+\lim_{\Delta x \to 0} \; \sum_j f(\xi_j)\, K_\Delta(x_i, y_j)\, \Delta y = f(x) \qquad \text{for every continuous } f.
 $$
 
-This holds for **every** continuous function $f$. It is exactly the
-sifting property, stated in the only rigorous form available to us: as
-a limit of numbers. We therefore *define* the notation
-$\int f(y)\, K(x, y)\, dy$ to mean this limit, and with that reading
+This is the sifting property, stated in the only rigorous form
+available to us: as a limit of numbers. We therefore *define* the
+notation $\int f(y)\, K(x, y)\, dy$ to mean this limit, and with that
+reading
 
 $$
 \int f(y)\, K(x, y)\, dy = f(x) \qquad \text{for every continuous } f.
@@ -641,7 +633,7 @@ section.
 
 The diagonal limit of the text agrees with the iterated one, and the
 reason is continuity of $f$: with $\Delta y = \Delta x$ the cell holds a
-single sample point, the sum collapses to $f(x_i)$, and $f(x_i)$
+single sample point, the sum collapses to $f(\xi_i)$, and $f(\xi_i)$
 differs from the cell average by at most the oscillation of $f$ over a
 cell of width $\Delta x$, which goes to zero. Without continuity the
 two limits could disagree, and coupling them would be a mistake.
