@@ -648,12 +648,16 @@ so the identification above is a special case of that theorem.
 
 ## One ket, three bases
 
-Before summing up, one more look at what "the position ket is the
-delta" does and does not say. A ket equals a function only after a
-basis is chosen, exactly as a vector equals a column of numbers only
-after a basis is chosen; the delta is the face of $|x_0\rangle$ in the
-position basis, and in another basis the same ket has other
-coordinates.
+Read $\langle x | y \rangle = \delta(x - y)$ once more, this time with
+$y = x_0$ fixed and $x$ running: $\langle x | x_0 \rangle = \delta(x - x_0)$
+is the list of coordinates of the ket $|x_0\rangle$ in the position
+basis — its wavefunction. In the position representation, where every
+ket is identified with its wavefunction, the position ket *is* the
+delta concentrated at $x_0$. Here is what that does and does not say.
+A ket equals a function only after a basis is chosen, exactly as a
+vector equals a column of numbers only after a basis is chosen; the
+delta is the face of $|x_0\rangle$ in the position basis, and in
+another basis the same ket has other coordinates.
 
 Two of those faces, quoted now and derived later on the road. In
 finite dimensions a basis vector
