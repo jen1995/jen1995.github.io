@@ -673,12 +673,16 @@ The opening asked two questions, and here are the answers.
 the continuous version of $\langle E_i | E_j \rangle = \delta_{ij}$,
 and the diagonal selector in a double integral.
 
-*What is the ket $|x\rangle$?* Not a state and not a function. It is
+*What is the ket $|x_0\rangle$?* Not a state and not a function. It is
 defined by one property, that its bra returns the coordinate,
-$\langle x | \psi \rangle = \psi(x)$ for every state; it is reached as
-the limit of the cell states rescaled by $1/\sqrt{\Delta x}$, a limit
-that exists only in the weak sense — through what the kets do to
+$\langle x_0 | \psi \rangle = \psi(x_0)$ for every state; it is reached
+as the limit of the cell states rescaled by $1/\sqrt{\Delta x}$, a
+limit that exists only in the weak sense — through what the kets do to
 states, never as a vector of $L^2$, where its norm would be infinite.
+Its wavefunction — its coordinates in the position basis — is
+$\langle y | x_0 \rangle = \delta(y - x_0)$, so in the position
+representation, where a ket and its wavefunction are one object, the
+position ket *is* the delta concentrated at $x_0$.
 Mathematically it is a generalized vector; physically, "the particle
 is exactly at $x$" is an idealization that honest states approach and
 never reach. Both points are spelled out in
