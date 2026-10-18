@@ -388,8 +388,9 @@ $\Delta x$. The Kronecker delta is back, but its indices now label
 *intervals*, and the $1$ on the diagonal is a cell measured against
 itself.
 (The lattice is also how Shankar's *Principles of Quantum
-Mechanics* enters infinite dimensions, §1.10; the two routes are
-compared once the limit is taken.)
+Mechanics* enters infinite dimensions, §1.10; his route and ours are
+compared in
+[Appendix B](#appendix-b-why-one-grid-and-the-straight-roads-not-taken).)
 
 ![The cell states as wavefunctions: flat bumps of height 1/√Δx on disjoint cells — orthonormal by inspection; a state written in them has amplitudes a(x_i)√Δx](cell_states.png)
 
@@ -506,29 +507,6 @@ The $1/\Delta x$ cancelled exactly one of the two spacings, leaving a
 single honest Riemann sum, and the inner-product formula is
 reproduced by the kets.
 
-This is a good place to compare routes with Shankar's §1.10, which
-starts from the same lattice — a function on a string as the vector
-of its values at $n$ points, with unit kets $|x_i\rangle$,
-$\langle x_i | x_j \rangle = \delta_{ij}$ — and meets the same
-problem: with unit kets the sum $\sum_i f(x_i)^* g(x_i)$ diverges as
-$n \to \infty$. Shankar resolves it the other way round. He keeps the
-kets unit and inserts the spacing $\Delta$ into the inner product by
-hand, $\langle f_n | g_n \rangle = \sum_i f(x_i)^* g(x_i)\, \Delta$, so
-that the limit is $\int f^* g\, dx$; the kets are never rescaled and
-their limit is never taken. The delta then enters without any grid:
-from the completeness relation $\int |x'\rangle\langle x'|\, dx' = I$
-and the requirement $\langle x | f \rangle = f(x)$ he deduces that
-$\langle x | x' \rangle$ must vanish off the diagonal and integrate to
-one — Dirac's argument, with this post's requirement in Dirac's role.
-The two routes agree on every number. The inner product of two
-discretized states is
-$\sum_i a(x_i)^* b(x_i)\, \langle x_i | x_i \rangle\, \Delta^2$, and the
-sum needs one factor $1/\Delta$ to survive the limit: Shankar writes it
-into the definition of the inner product, this post writes it into
-the kets, $\langle x_i | x_i \rangle = 1/\Delta x$. What the second
-choice adds is the kets themselves — the cell states — and the kernel
-$\delta_{ij} / \Delta x$ whose limit is about to be identified.
-
 That settles the inner product, but not the kernel itself. We would
 like to say what $K_\Delta = \delta_{ij} / \Delta x$ *converges to*,
 and call that $\langle x | y \rangle$. Fix a point $x$ on the line, let $C_i$ be the cell containing it,
@@ -627,7 +605,7 @@ for every state, which is the requirement.
 (One detail of the test is worth a second look: the step of the grid
 and the width of the spike went to zero *together*. Why that is
 allowed, and why we chose to do it that way, is discussed in
-[Appendix B](#appendix-b-why-one-grid-and-the-straight-road-not-taken).)
+[Appendix B](#appendix-b-why-one-grid-and-the-straight-roads-not-taken).)
 
 Note what we did **not** do: we never claimed the spikes converge as
 functions. We tested against $f$, produced a limit of numbers, and
@@ -878,7 +856,7 @@ of this kind is a *continuous spectrum*; the box, the tunnel and the
 hydrogen atom will show all three kinds — discrete, continuous, and
 mixed.)
 
-## Appendix B. Why one grid, and the straight road not taken
+## Appendix B. Why one grid, and the straight roads not taken
 
 *Optional reading; it explains a choice made in this post.*
 
@@ -917,6 +895,30 @@ a table $\delta_{ij} / \Delta x$, and the test of the kernel a sum that
 $\delta_{ij}$ collapses to one term, and to watch that discrete
 sifting become the continuous one as $\Delta x \to 0$. That is why the
 post took the diagonal.
+
+**Shankar's road.** The other straight road is the one Shankar's
+§1.10 takes. It starts from the same lattice — a function on a string as the vector
+of its values at $n$ points, with unit kets $|x_i\rangle$,
+$\langle x_i | x_j \rangle = \delta_{ij}$ — and meets the same
+problem: with unit kets the sum $\sum_i f(x_i)^* g(x_i)$ diverges as
+$n \to \infty$. Shankar resolves it the other way round. He keeps the
+kets unit and inserts the spacing $\Delta$ into the inner product by
+hand, $\langle f_n | g_n \rangle = \sum_i f(x_i)^* g(x_i)\, \Delta$, so
+that the limit is $\int f^* g\, dx$; the kets are never rescaled and
+their limit is never taken. The delta then enters without any grid:
+from the completeness relation $\int |x'\rangle\langle x'|\, dx' = I$
+and the requirement $\langle x | f \rangle = f(x)$ he deduces that
+$\langle x | x' \rangle$ must vanish off the diagonal and integrate to
+one — Dirac's argument, with this post's requirement in Dirac's role.
+The two routes agree on every number. The inner product of two
+discretized states is
+$\sum_i a(x_i)^* b(x_i)\, \langle x_i | x_i \rangle\, \Delta^2$, and the
+sum needs one factor $1/\Delta$ to survive the limit: Shankar writes it
+into the definition of the inner product, this post writes it into
+the kets, $\langle x_i | x_i \rangle = 1/\Delta x$. What the second
+choice adds is the kets themselves — the cell states — and the kernel
+$\delta_{ij} / \Delta x$ whose limit the post
+identified with the delta.
 
 ## References
 
