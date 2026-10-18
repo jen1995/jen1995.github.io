@@ -388,17 +388,8 @@ $\Delta x$. The Kronecker delta is back, but its indices now label
 *intervals*, and the $1$ on the diagonal is a cell measured against
 itself.
 (The lattice is also how Shankar's *Principles of Quantum
-Mechanics* enters infinite dimensions, §1.10: a function on a string
-becomes the vector of its values at $n$ lattice points, with unit kets
-$|x_i\rangle$, $\langle x_i | x_j \rangle = \delta_{ij}$. Shankar
-avoids our dead end differently — he keeps the kets unit and inserts
-the spacing $\Delta$ into the inner product by hand, so that it tends
-to $\int f^* g\, dx$ — and then takes no limit of the kets at all: the
-delta normalization $\langle x | x' \rangle = \delta(x - x')$ is
-deduced from completeness together with $\langle x | f \rangle = f(x)$,
-which is this post's requirement used as Dirac used it. The cell
-states, and the delta as the limit of the rescaled Kronecker table,
-are this post's own; see the references.)
+Mechanics* enters infinite dimensions, §1.10; the two routes are
+compared once the limit is taken.)
 
 ![The cell states as wavefunctions: flat bumps of height 1/√Δx on disjoint cells — orthonormal by inspection; a state written in them has amplitudes a(x_i)√Δx](cell_states.png)
 
@@ -514,6 +505,26 @@ $$
 The $1/\Delta x$ cancelled exactly one of the two spacings, leaving a
 single honest Riemann sum, and the inner-product formula is
 reproduced by the kets.
+
+This is a good place to compare routes with Shankar's §1.10, which
+starts from the same lattice — a function on a string as the vector
+of its values at $n$ points, with unit kets $|x_i\rangle$,
+$\langle x_i | x_j \rangle = \delta_{ij}$ — and meets the same
+problem: with unit kets the sum $\sum_i f(x_i)^* g(x_i)$ diverges as
+$n \to \infty$. Shankar resolves it the other way round. He keeps the
+kets unit and inserts the spacing $\Delta$ into the inner product by
+hand, $\langle f_n | g_n \rangle = \sum_i f(x_i)^* g(x_i)\, \Delta$, so
+that the limit is $\int f^* g\, dx$; the kets are never rescaled and
+their limit is never taken. The delta then enters without any grid:
+from the completeness relation $\int |x'\rangle\langle x'|\, dx' = I$
+and the requirement $\langle x | f \rangle = f(x)$ he deduces that
+$\langle x | x' \rangle$ must vanish off the diagonal and integrate to
+one — Dirac's argument, with this post's requirement in Dirac's role.
+The two routes agree, because $\sum_i f^* g\, \Delta$ with unit kets is
+the same number as $\sum_i f^* g\, \Delta^2$ with kets of norm
+$1/\sqrt{\Delta}$; what this post adds is the kets themselves — the
+cell states — and the kernel $\delta_{ij} / \Delta x$ whose limit is
+about to be identified.
 
 That settles the inner product, but not the kernel itself. We would
 like to say what $K_\Delta = \delta_{ij} / \Delta x$ *converges to*,
