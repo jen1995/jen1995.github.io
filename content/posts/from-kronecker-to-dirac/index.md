@@ -702,23 +702,6 @@ of this kind is a *continuous spectrum*; the box, the tunnel and the
 hydrogen atom will show all three kinds — discrete, continuous, and
 mixed.)
 
-*A remark on the physics, and an advance on a later post.* Once
-squared amplitudes are read as probabilities — the Born rule, which
-the last post took on credit and a later post of the road derives — $|c_i|^2 = |a(\xi_i)|^2\, \Delta x$ says that $|a(x)|^2$
-is a probability **density** — probability per unit length — and the
-probability of landing in a cell is the density times the width.
-
-![Cut the line into cells: the probability of a cell is the density times its width, so the amplitude of the cell state carries a square root of the width](cells.png)
-
-*A second remark, for readers who want the functional
-analysis behind "discretization can approximate every state".*
-Taken over all grids at once, the cell states form a countable family
-whose linear combinations, the step functions, are dense in $L^2$:
-that density is the separability of $L^2$ the last post promised, and
-it is why discretization can approximate every state — see Rudin's
-*Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
-chapter VIII, §51–52, in the references.
-
 ## Why one grid, and the straight road not taken
 
 *Optional reading. This section and the next are not needed for the
@@ -928,14 +911,5 @@ postulated.
   §1.10, "Generalization to infinite dimensions": a continuous basis
   built from a lattice of cells, with the Dirac delta emerging in the
   limit.
-- W. Rudin. *Real and Complex Analysis*, 3rd ed. McGraw-Hill, 1987 —
-  Theorem 3.13: simple functions are dense in $L^p$.
-- A. N. Kolmogorov, S. V. Fomin. *Elements of the Theory of Functions
-  and Functional Analysis*, vol. 2. Graylock, 1961 (Russian original:
-  А. Н. Колмогоров, С. В. Фомин, *Элементы теории функций и
-  функционального анализа*) — chapter VIII, §51 (dense subsets of
-  $L^2$) and §52 (the separability of $L^2$); together with Sergeev's
-  Theorem 20 (lecture V), separability is equivalent to the existence
-  of a countable orthonormal basis.
 - This blog's own first meeting with the delta:
   [Part 1 of the Fourier road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal).
