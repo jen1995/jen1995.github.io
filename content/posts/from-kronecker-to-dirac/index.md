@@ -673,36 +673,42 @@ The opening asked two questions, and here are the answers.
 the continuous version of $\langle E_i | E_j \rangle = \delta_{ij}$,
 and the diagonal selector in a double integral.
 
-*What is the ket $|x_0\rangle$?* Not a state and not a function. It is
-defined by one property, that its bra returns the coordinate,
-$\langle x_0 | \psi \rangle = \psi(x_0)$ for every state; it is reached
-as the limit of the cell states rescaled by $1/\sqrt{\Delta x}$, a
-limit that exists only in the weak sense — through what the kets do to
-states, never as a vector of $L^2$, where its norm would be infinite.
-Its wavefunction — its coordinates in the position basis — is
-$\langle y | x_0 \rangle = \delta(y - x_0)$, so in the position
-representation, where a ket and its wavefunction are one object, the
-position ket *is* the delta concentrated at $x_0$. This also says what
-stands under the integral of the opening line: in coordinates,
-$|\psi\rangle = \int \psi(x)\, |x\rangle\, dx$ reads
+*What is the ket $|x_0\rangle$?* Three answers, at three levels.
 
-$$
-\psi(y) = \int \psi(x)\, \delta(y - x)\, dx,
-$$
+- **By what it does.** It is the object whose bra returns the
+  coordinate at $x_0$: $\langle x_0 | \psi \rangle = \psi(x_0)$ for
+  every state. This is the definition; everything else follows from
+  it.
+- **By how it is built.** It is the limit of the cell states rescaled
+  by $1/\sqrt{\Delta x}$ — a limit in the weak sense only, through what
+  the kets do to states. Their norm $1/\sqrt{\Delta x}$ diverges, so the
+  limit is not an element of $L^2$ and not a state: a *generalized
+  vector*. Physically, "the particle is exactly at $x_0$" is an
+  idealization that honest states approach and never reach.
+- **By its coordinates.** In the position basis its coordinates are
+  $\langle y | x_0 \rangle = \delta(y - x_0)$. Since the position
+  representation identifies every ket with its wavefunction, in that
+  representation $|x_0\rangle$ *is* the delta concentrated at $x_0$,
+  and the opening line $|\psi\rangle = \int \psi(x)\, |x\rangle\, dx$
+  becomes
 
-the sifting property read from right to left — a function written as
-a superposition of deltas. Substituting the delta for the ket *is*
-passing to coordinates: a ket equals a function only after a basis is
-chosen, as a vector equals a column of numbers only after a basis is
-chosen, and in another basis the same ket has another face — in the
-momentum basis of the dynamics post, $|x\rangle$ will be a plane wave. On the grid the same line is literal: the
-discretized state $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$ has
-wavefunction $\sum_i a(x_i)\, \mathbf 1_{C_i}(y)$, the step function
-that approximates $a$.
-Mathematically it is a generalized vector; physically, "the particle
-is exactly at $x$" is an idealization that honest states approach and
-never reach. Both points are spelled out in
-[Appendix A](#appendix-a-the-price-the-position-kets-are-not-states).
+  $$
+  \psi(y) = \int \psi(x)\, \delta(y - x)\, dx,
+  $$
+
+  the sifting property read from right to left: a function as a
+  superposition of deltas. On the grid the same line is literal — the
+  discretized state $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$ has
+  wavefunction $\sum_i a(x_i)\, \mathbf 1_{C_i}(y)$, the step function
+  that approximates $a$.
+
+The third answer depends on a choice the first two do not make. A ket
+equals a function only after a basis is chosen, exactly as a vector
+equals a column of numbers only after a basis is chosen; the delta is
+the face of $|x_0\rangle$ in the position basis, and in another basis
+the same ket has other coordinates.
+[Appendix A](#appendix-a-the-price-the-position-kets-are-not-states)
+shows two of them.
 
 The logic of the post hangs on the first of these properties: that
 the position kets return coordinates, exactly as an orthonormal basis
@@ -791,6 +797,32 @@ in a very large box, which leaves position continuous and discretizes
 *momentum* instead — plane waves $e^{i k_n x}$ with $k_n = 2\pi n / L$
 — and the same $1/\sqrt{\text{spacing}}$ rescaling appears there. The
 road returns to that construction when momentum gets its own basis.
+
+**The same ket in other bases.** In finite dimensions a basis vector
+$|E_k\rangle$ has coordinates $\delta_{ik}$ in its own basis and
+coordinates $\langle F_j | E_k \rangle$ in any other basis
+$\{|F_j\rangle\}$ — a column of numbers that is nothing like a single
+$1$ among zeros. The position ket behaves the same way. In the
+position basis its coordinates are $\delta(y - x_0)$. In the
+*momentum* basis — the plane waves that the dynamics post will
+introduce as the eigenvectors of momentum — its coordinates are
+
+$$
+\langle k | x_0 \rangle = \frac{e^{-ikx_0}}{\sqrt{2\pi}},
+$$
+
+a complex exponential of constant modulus: the Fourier road's "flat
+spectrum of a delta", now as a change of basis (we quote the formula
+here and derive it there). And in the *energy* basis of a particle in
+a box of length $L$, with eigenfunctions
+$\varphi_n(x) = \sqrt{2/L}\, \sin(n\pi x / L)$, the coordinates of
+$|x_0\rangle$ are an ordinary discrete list of numbers,
+$\langle E_n | x_0 \rangle = \varphi_n(x_0)$ — the values of the
+eigenfunctions at the point. The infinite norm shows up there too:
+$\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
+$\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
+three faces — a delta, a plane wave, a divergent column — one
+generalized vector.
 
 This is also the first appearance of a theme the road will return to:
 position is a measurable quantity whose menu of outcomes is a
