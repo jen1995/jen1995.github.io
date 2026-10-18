@@ -551,8 +551,8 @@ $$
 \lim_{\Delta x \to 0} \; \sum_j f(\xi_j)\, K_\Delta(x_i, y_j)\, \Delta y = f(x) \qquad \text{for every continuous } f.
 $$
 
-This is the sifting property, stated in the only rigorous form
-available to us: as a limit of numbers. We therefore *define* the
+This is the sifting property, with the integral on the left spelled
+out as the limit of sums it stands for. We therefore *define* the
 notation $\int f(y)\, K(x, y)\, dy$ to mean this limit, and with that
 reading
 
