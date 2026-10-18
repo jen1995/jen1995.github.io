@@ -39,8 +39,8 @@ average of its eigenvalues, and the weights are the Born rule. Only
 then do eigenvalues and eigenvectors appear, as what the
 diagonalization produced, not as what was assumed. This is the road
 of Landau and Lifshitz's §3 and of chapter II of Dirac's *Principles*
-(see the references); Heisenberg walked its first stretch in 1925
-without knowing where it led. The spin of the first post does the
+(see the references); Heisenberg took its first steps in 1925
+without knowing where they led. The spin of the first post does the
 explaining, as always, and the spin operators are constructed from the
 experiments as in lecture 3 of Susskind and Friedman.
 
@@ -87,24 +87,25 @@ pair (question, state) is an average: the mean of the outcomes, the
 mean of their squares, the frequency of each particular outcome (which
 is the mean of the indicator "the outcome was $E_i$").
 
-So whatever mathematical object we assign to a question, its first
-duty is this: given a state, return the average of the outcomes. The
-rest of the post is what that duty forces the object to be.
+So whatever mathematical object we assign to a question, it must
+first of all do this: given a state, return the average of the
+outcomes. The rest of the post is what that requirement forces the
+object to be.
 
 ## Heisenberg's table
 
 The object was found before anyone knew what it was. In the summer of
 1925 Heisenberg set out to build a mechanics of the atom out of
 *observable* quantities only — the frequencies and intensities of
-spectral lines — and threw away the electron orbits that nobody could
-see. Spectral lines connect two energy levels, so every observable
+spectral lines — and dropped the electron orbits, which no
+experiment could see. Spectral lines connect two energy levels, so every observable
 quantity carried *two* indices: an amplitude $x_{nm}$ for the
 transition from level $n$ to level $m$, where the classical theory
 had a single Fourier coefficient $x_k$. The position of the electron
 became a table of numbers with two indices. When he needed the
 square of the position, the rule that the combined frequencies add
 forced the entry
-$(x^2)_{nm} = \sum_k x_{nk}\, x_{km}$ — and he noted, uneasily, that
+$(x^2)_{nm} = \sum_k x_{nk}\, x_{km}$ — and he noted that
 with this rule $xy$ and $yx$ need not be equal. He did not recognize
 the rule. Max Born did, within weeks: a table with two indices
 multiplied in this way is a *matrix*, and the rule is matrix
@@ -123,7 +124,7 @@ pairs of states.**
 
 ## A table for a question
 
-Here is the same shape in the laboratory of the first post, following
+The same shape appears in the laboratory of the first post, following
 Feynman (volume III, chapter 5). Fix the $z$ basis
 $\{|u\rangle, |d\rangle\}$. A question $A$ asked of the spin is to be
 described by four numbers — one for each ordered pair of basis
@@ -147,9 +148,9 @@ $$
 $$
 
 A table with two indices and a linear operator are one object in two
-notations, exactly as a column of coordinates and a vector are. So
+notations, as a column of coordinates and a vector are. So
 the wishlist's "object per question" is a linear operator on the
-space of states, and the first post's hat is its badge: $\hat E$ for
+space of states, written with a hat: $\hat E$ for
 energy, $\sigma_z$ for the spin along $z$ (the spin operators are
 written without a hat, by convention). Nothing has been said yet about
 which operator belongs to which question, or about eigenvectors. That
@@ -180,7 +181,7 @@ question:
 (A theorem of Gleason, in the references, shows that for state
 spaces of dimension three and more *every* consistent assignment of
 probabilities is of this quadratic form, so the assumption costs
-nothing; in two dimensions it is a genuine assumption, and the
+nothing; in two dimensions it is an assumption, and the
 section on the Born rule gives an independent reason for it.)
 
 This is the bracket of the first post, $\langle \sigma \rangle$,
@@ -195,8 +196,7 @@ table of a question is fixed by its averages.
 
 Averages of real readings are real numbers. So the quadratic form
 $\langle \psi | \hat A | \psi \rangle$ must be real for *every* state
-$|\psi\rangle$. This is a strong condition on the table, and it has a
-name.
+$|\psi\rangle$. This condition on the table has a name.
 
 First the notion it needs. Write $|\hat M \psi\rangle$ for the vector
 $\hat M$ returns when fed $|\psi\rangle$, so that
@@ -233,7 +233,7 @@ One direction is a line. If $\hat A^\dagger = \hat A$, then
 $\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$
 by the Hermitian symmetry of the inner product, so the number equals
 its own conjugate. The other direction says that a quadratic form
-knows its matrix, and it is proved under the cut.
+determines its matrix; the proof is under the cut.
 
 <details>
 <summary>A quadratic form determines its operator (polarization)</summary>
@@ -263,14 +263,14 @@ antisymmetric part of its matrix.
 
 </details>
 
-So the first consequence of "averages are real" is a structural one:
-**the table of every measurable quantity is Hermitian.** Hermiticity
-arrived before any eigenvector was mentioned.
+So the first consequence of "averages are real" is that **the
+table of every measurable quantity is Hermitian** — and this was
+obtained before any eigenvector was mentioned.
 
 ## Diagonalize: an average of eigenvalues
 
 A Hermitian table can be simplified by a change of basis, and the
-simplification is the whole content of the theory of measurement.
+simplified form is where outcomes and probabilities come from.
 Recall the definitions. A nonzero vector $|v\rangle$ is an
 [**eigenvector**](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
 of $\hat A$ if the operator merely rescales it,
@@ -322,13 +322,13 @@ $$
 \langle A \rangle = \langle \psi | \hat A | \psi \rangle = \sum_{i,j} c_i^*\, \lambda_i \delta_{ij}\, c_j = \sum_i \lambda_i\, |c_i|^2 .
 $$
 
-Look at what this says. The numbers $|c_i|^2$ are nonnegative and
+The numbers $|c_i|^2$ are nonnegative and
 add up to $\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$. So the
 average of the question, in any state, is a **weighted average of the
 eigenvalues** $\lambda_i$, with weights $|c_i|^2$ that form a
 probability distribution. An average of a random quantity is the sum
-of its possible values times their probabilities. Reading the formula
-as exactly that:
+of its possible values times their probabilities. Read the formula
+that way:
 
 > the **eigenvalues** of $\hat A$ are the possible outcomes of the
 > question, and $|c_i|^2$ is the probability of the outcome
@@ -336,9 +336,8 @@ as exactly that:
 
 ![The average of a question is a weighted average of the eigenvalues of its operator: the eigenvalues sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
 
-This is where the eigenbasis comes from. It was not assumed; it is
-the basis in which the average of the question looks like an average
-*should* look. Rewriting the diagonal table without coordinates gives
+This is where the eigenbasis comes from: it is the basis in which
+the average of the question takes the form of an ordinary average. Rewriting the diagonal table without coordinates gives
 the operator as a sum over its own definite directions,
 
 $$
@@ -369,8 +368,8 @@ integral form, which the last post's Appendix A pointed at.
 
 ## The Born rule, two ways
 
-The weights $|c_i|^2$ were read off the diagonalized average. Here
-are two independent reasons why they, and nothing else, are the
+The weights $|c_i|^2$ came out of the diagonalized average. Two
+independent arguments show that they, and nothing else, are the
 probabilities.
 
 ### From averages
@@ -394,9 +393,9 @@ squared amplitude follows.
 
 ### From basis independence
 
-The derivation above leans on the average being a quadratic form.
-Here is a reason for the squared magnitude that uses no such
-assumption — only that probabilities must not depend on the basis the
+The derivation above uses the assumption that the average is a
+quadratic form. The following argument for the squared magnitude
+uses no such assumption — only that probabilities must not depend on the basis the
 state happens to be written in. It follows video 8 of the Quantum
 Sense series.
 
@@ -481,7 +480,7 @@ The coefficients are complex in general. One observation extends the
 result. The eigenvector $|a_i\rangle$ is fixed by the physics only up
 to a unit factor: $e^{i\theta}|a_i\rangle$ is the same physical
 state, still an eigenvector with the same eigenvalue, still of length
-one. So $\{e^{i\theta_i}|a_i\rangle\}$ is just as good an eigenbasis
+one. So $\{e^{i\theta_i}|a_i\rangle\}$ is also an orthonormal eigenbasis
 of the same observable, and in it the coordinates of $|\psi\rangle$
 are $e^{-i\theta_i} c_i$. The probabilities cannot know which of these
 bases was used; hence $f$ depends on $c_i$ only through $|c_i|$.
@@ -611,7 +610,7 @@ operators for arbitrary directions, which the next post constructs.
 
 ## Two of the three Pauli matrices
 
-For the spin all of this is two-by-two matrices. Work in the $z$
+For the spin everything above is two-by-two matrices. Work in the $z$
 basis $\{|u\rangle, |d\rangle\}$, with $|u\rangle = (1, 0)^T$ and
 $|d\rangle = (0, 1)^T$ as in the second post. The spectral
 decomposition of $\sigma_z$ is immediate — outcomes $\pm 1$ on the
@@ -648,7 +647,7 @@ states the second post extracted from them, not taken from a table.
 The third, $\sigma_y$, waits for the $y$-axis states
 $|i\rangle, |o\rangle$, which the second post showed cannot be built
 with real amplitudes; the next post builds them, and $\sigma_y$ with
-them. Heisenberg's table for the spin, filled in.
+them.
 
 ![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
 
@@ -697,7 +696,7 @@ Read the first post's three experiments in this language.
 
 ## What we built
 
-The chain of this post, in one paragraph. What an apparatus gives
+The chain of the post. What an apparatus gives
 us is averages. An average that is a law about the state is a
 quadratic form in its coordinates, so a question is a table with two
 indices — an operator, the object Heisenberg found in 1925. Real
