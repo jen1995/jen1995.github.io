@@ -3,7 +3,7 @@ title: "Observables, and Where the Probabilities Come From"
 date: 2026-10-18
 draft: true
 tags: ["quantum", "math"]
-summary: "The measurable quantities of the first post finally get mathematical objects of their own: operators, whose eigenvalues are the menu of outcomes. Along the way the Born rule — probabilities are squared amplitudes — is derived rather than postulated, and two of the three Pauli matrices fall out of the spin experiments."
+summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; averages are quadratic forms, so a quantity is a table — an operator; real averages make the table Hermitian; diagonalizing it turns the average into an average of eigenvalues, with the Born rule as the weights."
 math: true
 weight: 50
 ---
@@ -24,18 +24,25 @@ There is also a debt. The second post took the
 on credit — "the probability of an outcome is the squared magnitude of
 its amplitude" — and promised a derivation. The
 [last post](/posts/from-kronecker-to-dirac/) borrowed it again in
-passing. Today both are settled: the objects behind the questions are
-**operators**, and the Born rule is forced, not chosen, by one
-requirement — that probabilities must not depend on which basis we
-happen to write a state in.
+passing.
 
-As in the second post, the spin of the first post does the explaining
-first, and the general definitions follow it. The arrangement of the
-principles, and the construction of the spin operators from the
-experiments, follow lecture 3 of Susskind and Friedman's *Quantum
-Mechanics: The Theoretical Minimum* (see the references); the
-derivation of the Born rule follows the *Maths of Quantum Mechanics*
-series by Quantum Sense.
+This post settles both, and it does so in the order in which the
+objects were actually found. The usual textbook order starts from a
+postulate — "observables are Hermitian operators, outcomes are their
+eigenvalues" — and derives everything else. Here the postulate comes
+last. The starting point is the one thing an apparatus gives us that
+is reproducible: *averages*. Averages are quadratic forms in the
+state, so a measurable quantity is a table of numbers with two
+indices — an operator. Real averages make the table Hermitian.
+Diagonalizing a Hermitian table turns every average into a weighted
+average of its eigenvalues, and the weights are the Born rule. Only
+then do eigenvalues and eigenvectors appear, as what the
+diagonalization produced, not as what was assumed. This is the road
+of Landau and Lifshitz's §3 and of chapter II of Dirac's *Principles*
+(see the references); Heisenberg walked its first stretch in 1925
+without knowing where it led. The spin of the first post does the
+explaining, as always, and the spin operators are constructed from the
+experiments as in lecture 3 of Susskind and Friedman.
 
 ## Where we stand
 
@@ -66,145 +73,339 @@ Three facts from the earlier posts are used throughout.
 What is missing is an object for the *question itself* — for "spin
 along $z$" as opposed to its two answers.
 
-## A question becomes an operator
+## What the apparatus gives us: averages
 
-Take the $z$ measurement. We know its menu of answers,
-$+1$ and $-1$, and we know which state goes with which answer:
-$|u\rangle$ with $+1$, $|d\rangle$ with $-1$. Encode this table
-in a single machine $\sigma_z$ that takes a state and returns a
-state, by declaring what it does to the two definite states —
+Go back to the [first post's third
+experiment](/posts/the-apparatus-and-the-arrow/#experiment-three-turning-the-arrow).
+A single reading of the window is random: $+1$ or $-1$, and no
+preparation makes the next reading of a tilted apparatus predictable.
+What *is* predictable is the average over many rounds —
+$\langle \sigma \rangle = \cos\theta$, the one formula of that post.
+The reproducible content of a question, in a given state, is the
+average of its answers. Everything an experiment can check about the
+pair (question, state) is an average: the mean of the outcomes, the
+mean of their squares, the frequency of each particular outcome (which
+is the mean of the indicator "the outcome was $E_i$").
+
+So whatever mathematical object we assign to a question, its first
+duty is this: given a state, return the average of the outcomes. The
+rest of the post is what that duty forces the object to be.
+
+## Heisenberg's table
+
+The object was found before anyone knew what it was. In the summer of
+1925 Heisenberg set out to build a mechanics of the atom out of
+*observable* quantities only — the frequencies and intensities of
+spectral lines — and threw away the electron orbits that nobody could
+see. Spectral lines connect two energy levels, so every observable
+quantity carried *two* indices: an amplitude $x_{nm}$ for the
+transition from level $n$ to level $m$, where the classical theory
+had a single Fourier coefficient $x_k$. The position of the electron
+became a table of numbers with two indices. When he needed the
+square of the position, the rule that the combined frequencies add
+forced the entry
+$(x^2)_{nm} = \sum_k x_{nk}\, x_{km}$ — and he noted, uneasily, that
+with this rule $xy$ and $yx$ need not be equal. He did not recognize
+the rule. Max Born did, within weeks: a table with two indices
+multiplied in this way is a *matrix*, and the rule is matrix
+multiplication. Matrix mechanics followed in the autumn (Born and
+Jordan; then Born, Heisenberg and Jordan), and Dirac, reading
+Heisenberg's paper in Cambridge, built the same structure as an
+algebra of non-commuting "q-numbers". The reconstruction of
+Heisenberg's calculation, step by step, is in the paper by Aitchison,
+MacManus and Snyder in the references.
+
+![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes, which Born recognized as a matrix](heisenberg_table.png)
+
+What survives from that summer, for this post, is the shape of the
+object: **a measurable quantity is a table of numbers indexed by
+pairs of states.**
+
+## A table for a question
+
+Here is the same shape in the laboratory of the first post, following
+Feynman (volume III, chapter 5). Fix the $z$ basis
+$\{|u\rangle, |d\rangle\}$. A question $A$ asked of the spin is to be
+described by four numbers — one for each ordered pair of basis
+states:
 
 $$
-\sigma_z\, |u\rangle = (+1)\, |u\rangle, \qquad \sigma_z\, |d\rangle = (-1)\, |d\rangle
+A_{ij} = \langle E_i |\, A\, | E_j \rangle, \qquad E_i, E_j \in \{u, d\},
 $$
 
-— and extending to every other state by linearity:
-$\sigma_z\,(\alpha |u\rangle + \beta |d\rangle) = \alpha |u\rangle - \beta |d\rangle$.
-The machine multiplies each definite state by the number the window
-would show, and acts on sums term by term.
+a two-by-two table. The notation already says how the table acts: the
+second post showed that an $n \times n$ table of numbers, written
+with respect to an orthonormal basis, *is* a linear operator — a
+machine $\hat A : V \to V$ that sends vectors to vectors and respects
+sums and scalar multiples,
+$\hat A(\alpha|\psi\rangle + \beta|\varphi\rangle) = \alpha\hat A|\psi\rangle + \beta\hat A|\varphi\rangle$.
+In coordinates the machine multiplies the column of $|\psi\rangle$ by
+the table:
 
-![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
+$$
+\hat A\, |\psi\rangle = \sum_{i} \Big( \sum_j A_{ij}\, c_j \Big) |E_i\rangle, \qquad c_j = \langle E_j | \psi \rangle .
+$$
 
-In the language of linear algebra: a **linear operator** on a
-vector space $V$ is a linear map $\hat A : V \to V$ — it sends vectors
-to vectors and respects sums and scalar multiples,
-$\hat A(\alpha |\psi\rangle + \beta |\varphi\rangle) = \alpha \hat A|\psi\rangle + \beta \hat A|\varphi\rangle$.
-A nonzero vector $|v\rangle$ is an
+A table with two indices and a linear operator are one object in two
+notations, exactly as a column of coordinates and a vector are. So
+the wishlist's "object per question" is a linear operator on the
+space of states, and the first post's hat is its badge: $\hat E$ for
+energy, $\sigma_z$ for the spin along $z$ (the spin operators are
+written without a hat, by convention). Nothing has been said yet about
+which operator belongs to which question, or about eigenvectors. That
+is what the averages will decide.
+
+## The average is a quadratic form
+
+Take a state $|\psi\rangle = \sum_j c_j |E_j\rangle$ and a question
+with operator $\hat A$. What expression in the coordinates $c_j$
+can the average of the outcomes be?
+
+The second post made one thing a principle: the state is the vector,
+and nothing about it depends on the basis used to write it. An
+average that is a law about the state must then be an expression in
+the coordinates whose *form* is the same in every orthonormal basis.
+The simplest such expressions are the quadratic ones,
+$\sum_{i,j} c_i^* M_{ij} c_j$ — in vector language, a number built
+from the state and one matrix, $\langle \psi | \hat M | \psi \rangle$
+— and Landau and Lifshitz take it as the starting point of their §3
+that probabilities and averages are of this form, bilinear in
+$\psi$ and $\psi^*$. We take it too, and name the matrix after the
+question:
+
+> **The average.** In the state $|\psi\rangle$, the average of the
+> outcomes of the question with operator $\hat A$ is
+> $$\langle A \rangle = \langle \psi | \hat A | \psi \rangle = \sum_{i,j} c_i^*\, A_{ij}\, c_j .$$
+
+(A theorem of Gleason, in the references, shows that for state
+spaces of dimension three and more *every* consistent assignment of
+probabilities is of this quadratic form, so the assumption costs
+nothing; in two dimensions it is a genuine assumption, and the
+section on the Born rule gives an independent reason for it.)
+
+This is the bracket of the first post, $\langle \sigma \rangle$,
+with its meaning finally spelled out: the operator of the question
+between the bra and the ket of the state. One check is immediate.
+Different questions must have different tables, since two questions
+with the same average in every state are not distinguishable by any
+experiment — and a quadratic form determines its matrix, so the
+table of a question is fixed by its averages.
+
+## Real averages force a Hermitian table
+
+Averages of real readings are real numbers. So the quadratic form
+$\langle \psi | \hat A | \psi \rangle$ must be real for *every* state
+$|\psi\rangle$. This is a strong condition on the table, and it has a
+name.
+
+First the notion it needs. Write $|\hat M \psi\rangle$ for the vector
+$\hat M$ returns when fed $|\psi\rangle$, so that
+$\langle \varphi | \hat M | \psi \rangle = \langle \varphi | \hat M \psi \rangle$.
+The [**adjoint**](https://en.wikipedia.org/wiki/Hermitian_adjoint)
+$\hat M^\dagger$ of $\hat M$ is the operator that lets the operator
+act on the bra instead:
+
+$$
+\langle \varphi | \hat M \psi \rangle = \langle \hat M^\dagger \varphi | \psi \rangle \qquad \text{for all } |\varphi\rangle, |\psi\rangle .
+$$
+
+It exists and is unique by the second post's Riesz theorem (for fixed
+$|\varphi\rangle$ the left side is a linear functional of
+$|\psi\rangle$, hence an inner product with a unique vector, which we
+name $\hat M^\dagger|\varphi\rangle$). In a matrix with respect to an
+orthonormal basis the adjoint is the **conjugate transpose**,
+$(M^\dagger)_{ij} = M_{ji}^*$ (Panov's lectures, §4.1); three rules
+follow from the definition: $(\hat A^\dagger)^\dagger = \hat A$,
+$(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$,
+$(\hat A\hat B)^\dagger = \hat B^\dagger \hat A^\dagger$. The adjoint
+of a ket is its bra, $(|v\rangle)^\dagger = \langle v|$ — the second
+post's bra–ket correspondence in this notation.
+
+An operator equal to its own adjoint, $\hat A^\dagger = \hat A$, is
+called **Hermitian** (or self-adjoint); its matrix equals its own
+conjugate transpose. And:
+
+> **Real averages mean Hermitian operators.** The quadratic form
+> $\langle \psi | \hat A | \psi \rangle$ is real for every
+> $|\psi\rangle$ if and only if $\hat A$ is Hermitian.
+
+One direction is a line. If $\hat A^\dagger = \hat A$, then
+$\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$
+by the Hermitian symmetry of the inner product, so the number equals
+its own conjugate. The other direction says that a quadratic form
+knows its matrix, and it is proved under the cut.
+
+<details>
+<summary>A quadratic form determines its operator (polarization)</summary>
+
+Let $\hat B = \hat A - \hat A^\dagger$. If $\langle \psi | \hat A \psi \rangle$
+is real for all $\psi$, then
+$\langle \psi | \hat B \psi \rangle = \langle \psi | \hat A \psi \rangle - \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle - \langle \psi | \hat A \psi \rangle^* = 0$
+for all $\psi$. The claim is that an operator whose quadratic form
+vanishes identically is the zero operator. Expand the form on
+$|\varphi\rangle + |\psi\rangle$ and on $|\varphi\rangle + i|\psi\rangle$:
+
+$$
+0 = \langle \varphi + \psi \,|\, \hat B(\varphi + \psi) \rangle = \langle \varphi | \hat B \psi \rangle + \langle \psi | \hat B \varphi \rangle ,
+$$
+
+$$
+0 = \langle \varphi + i\psi \,|\, \hat B(\varphi + i\psi) \rangle = i\,\langle \varphi | \hat B \psi \rangle - i\,\langle \psi | \hat B \varphi \rangle .
+$$
+
+Multiply the second line by $-i$ and add it to the first:
+$2\,\langle \varphi | \hat B \psi \rangle = 0$ for all $\varphi, \psi$.
+Choosing $|\varphi\rangle = \hat B|\psi\rangle$ gives
+$\lVert \hat B \psi \rVert^2 = 0$, so $\hat B = 0$ and
+$\hat A = \hat A^\dagger$. The complex scalar $i$ was essential: over
+the real numbers a quadratic form does not determine the
+antisymmetric part of its matrix.
+
+</details>
+
+So the first consequence of "averages are real" is a structural one:
+**the table of every measurable quantity is Hermitian.** Hermiticity
+arrived before any eigenvector was mentioned.
+
+## Diagonalize: an average of eigenvalues
+
+A Hermitian table can be simplified by a change of basis, and the
+simplification is the whole content of the theory of measurement.
+Recall the definitions. A nonzero vector $|v\rangle$ is an
 [**eigenvector**](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
 of $\hat A$ if the operator merely rescales it,
+$\hat A|v\rangle = \lambda|v\rangle$, and $\lambda$ is the
+corresponding **eigenvalue**; the set of eigenvalues is the
+**spectrum** of $\hat A$.
+
+> **Spectral theorem** (finite dimensions). A Hermitian operator has
+> real eigenvalues and an orthonormal basis of eigenvectors.
+
+Two of its three claims are one line each, with the operator moved
+across the bracket; the third is cited.
+
+*Real eigenvalues.* If $\hat A|\varphi\rangle = \lambda|\varphi\rangle$
+with $|\varphi\rangle \neq 0$, then
 
 $$
-\hat A\, |v\rangle = \lambda\, |v\rangle,
+\lambda\, \langle \varphi | \varphi \rangle = \langle \varphi | \hat A \varphi \rangle = \langle \hat A \varphi | \varphi \rangle = \lambda^*\, \langle \varphi | \varphi \rangle ,
 $$
 
-and the number $\lambda$ is the corresponding **eigenvalue**. The set
-of all eigenvalues of an operator is called its **spectrum**; for
-continuous menus the word will mean more than a list of numbers. In this language the
-definite states $|u\rangle, |d\rangle$ are the eigenvectors of
-$\sigma_z$, and the outcomes $\pm 1$ are its eigenvalues.
+and $\langle \varphi | \varphi \rangle \gt 0$ gives $\lambda = \lambda^*$.
 
-That is the general recipe, and in quantum mechanics it is a
-postulate — Susskind's principles 1 and 2:
-
-> **Measurable quantities are operators.** To every measurable
-> quantity $E$ corresponds a linear operator $\hat E$ on the space of
-> states. The possible outcomes of measuring $E$ are the eigenvalues
-> of $\hat E$; a state in which the outcome is certain to be $E_i$ is
-> an eigenvector of $\hat E$ with eigenvalue $E_i$ — a **definite
-> state** of $E$.
-
-This is not a discovery but a *codification* of the
-[first post's experiments](/posts/the-apparatus-and-the-arrow/#what-we-saw):
-the menu of outcomes is fixed and discrete — the eigenvalues; a
-measurement leaves the system in a state that repeats its answer — an
-eigenvector; and a superposition of definite states is a state with
-no certain answer — a vector that is not an eigenvector. From now on
-the word **observable** is used both for the measurable quantity and
-for its operator, written with a hat: $\hat E$ for energy, $\sigma_z$ for the
-spin along $z$.
-
-### Applying the operator is not measuring
-
-The notation invites a confusion, so it is addressed before
-anything else. Applying $\sigma_z$ to a state is a *mathematical*
-operation that returns a state; a measurement is a *physical*
-operation that returns a number and changes the state. They are not
-the same thing.
-
-Apply $\sigma_z$ to the $x$-definite state $|r\rangle$:
+*Orthogonal eigenvectors.* If $\hat A|\varphi_1\rangle = \lambda_1|\varphi_1\rangle$,
+$\hat A|\varphi_2\rangle = \lambda_2|\varphi_2\rangle$ and
+$\lambda_1 \neq \lambda_2$, then
 
 $$
-\sigma_z\, |r\rangle = \tfrac{1}{\sqrt 2}\, \sigma_z |u\rangle + \tfrac{1}{\sqrt 2}\, \sigma_z |d\rangle = \tfrac{1}{\sqrt 2}\, |u\rangle - \tfrac{1}{\sqrt 2}\, |d\rangle = |l\rangle.
+\lambda_2\, \langle \varphi_1 | \varphi_2 \rangle = \langle \varphi_1 | \hat A \varphi_2 \rangle = \langle \hat A \varphi_1 | \varphi_2 \rangle = \lambda_1\, \langle \varphi_1 | \varphi_2 \rangle ,
 $$
 
-The operator turned *right* into *left*. No $z$ measurement of an
-electron prepared along $x$ ever produces an electron pointing left
-along $x$: it produces $|u\rangle$ or $|d\rangle$, at random. So
-$\sigma_z|r\rangle$ is not the state after a measurement. It is a *code*: written in the eigenbasis of $\sigma_z$, the input
-$|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
-lists the possible answers as its basis directions, and the operator
-has tagged each direction with the answer's value. How the
-coefficients encode the *probabilities* of those answers is the next
-section's whole subject. (Susskind and Friedman devote their §3.5, "A
-common misconception", to this point.)
+so $(\lambda_2 - \lambda_1)\langle \varphi_1 | \varphi_2 \rangle = 0$
+and the inner product vanishes.
 
-## What the operator of an observable must satisfy
+*The eigenvectors fill the space.* That there are enough of them to
+form a basis is the part that needs the finite dimension and a page
+of algebra: Panov, §4.2, Theorem 4.2.3 (its Lemmas 4.2.4 and 4.2.5
+are the two facts just proved). Within a repeated eigenvalue the
+eigenvectors are not orthogonal automatically, and Gram–Schmidt makes
+them so.
 
-Not every linear operator can stand for a measurable quantity. The
-experiments impose three conditions, each with a one-line reason.
+Now diagonalize. Call the orthonormal eigenbasis of $\hat A$
+$\{|a_i\rangle\}$, with $\hat A|a_i\rangle = \lambda_i |a_i\rangle$,
+and write the state in it, $|\psi\rangle = \sum_i c_i |a_i\rangle$.
+The table of $\hat A$ in its own eigenbasis is diagonal —
+$\langle a_i | \hat A | a_j \rangle = \lambda_j \langle a_i | a_j \rangle = \lambda_i \delta_{ij}$
+— and the quadratic form collapses:
 
-1. **The eigenvalues are real.** The window shows real numbers.
-2. **The eigenvectors span the whole space.** Every state must expand
-   as $|\psi\rangle = \sum_i c_i |E_i\rangle$ in the definite states
-   of $E$. If some state had no such expansion, then measuring $E$ in
-   that state would have no possible outcome at all — but the
-   $|E_i\rangle$ were declared to cover every outcome there is.
-3. **Distinct definite states are orthogonal.** $\langle E_i | E_j \rangle = 0$
-   for $i \neq j$: the apparatus distinguishes them perfectly, and the
-   second post identified perfect distinguishability with
-   orthogonality.
+$$
+\langle A \rangle = \langle \psi | \hat A | \psi \rangle = \sum_{i,j} c_i^*\, \lambda_i \delta_{ij}\, c_j = \sum_i \lambda_i\, |c_i|^2 .
+$$
 
-Conditions 2 and 3 together, with the eigenvectors normalized to
-length one, say in one phrase: **the definite states of an observable
-form an orthonormal basis of the state space.** This is why every
-measurement axis of the first post donated a basis — $\sigma_z$ owns
-$\{|u\rangle, |d\rangle\}$, $\sigma_x$ owns $\{|r\rangle, |l\rangle\}$ —
-and the rest of the post depends on it.
+Look at what this says. The numbers $|c_i|^2$ are nonnegative and
+add up to $\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$. So the
+average of the question, in any state, is a **weighted average of the
+eigenvalues** $\lambda_i$, with weights $|c_i|^2$ that form a
+probability distribution. An average of a random quantity is the sum
+of its possible values times their probabilities. Reading the formula
+as exactly that:
+
+> the **eigenvalues** of $\hat A$ are the possible outcomes of the
+> question, and $|c_i|^2$ is the probability of the outcome
+> $\lambda_i$ in the state $|\psi\rangle$.
+
+![The average of a question is a weighted average of the eigenvalues of its operator: the eigenvalues sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
+
+This is where the eigenbasis comes from. It was not assumed; it is
+the basis in which the average of the question looks like an average
+*should* look. Rewriting the diagonal table without coordinates gives
+the operator as a sum over its own definite directions,
+
+$$
+\boxed{\; \hat A = \sum_i \lambda_i\, |a_i\rangle\langle a_i| \;}
+$$
+
+— the **spectral decomposition**: each outcome times the projector
+onto its eigenvector. (Apply both sides to $|\psi\rangle$ and use
+$\langle a_i | \psi \rangle = c_i$ to see that it is the same
+operator.) Set every $\lambda_i$ to $1$ and it collapses to the
+resolution of identity of the second post.
 
 Two refinements. An eigenvalue may belong to more than one
-independent eigenvector; the eigenvalue is then called
-**degenerate**, and the measurement does not determine the state
-uniquely — only the subspace it lands in. The hydrogen atom will
-make this concrete: several orbitals share one energy. And in
-infinite dimensions the spectrum of an operator need not be a list of
-eigenvalues with eigenvectors inside the space. The position operator
-of the last post is the first example — its "eigenvectors" $|x\rangle$
-are the generalized vectors that live just outside $L^2$, and its
-spectrum is the whole real line, a **continuous spectrum**. The
-problems ahead show all three kinds: the particle in a box has a
-purely discrete spectrum, the tunneling problem a purely continuous
-one, and hydrogen both at once.
+independent eigenvector; it is then called **degenerate**, and the
+outcome does not determine the state, only the subspace it lands in
+— the hydrogen atom will make this concrete, with several orbitals
+sharing one energy. And in infinite dimensions the spectrum need not
+be a list of eigenvalues with eigenvectors inside the space: the
+position operator of the last post is the first example, its
+"eigenvectors" $|x\rangle$ living just outside $L^2$ and its spectrum
+being the whole real line — a **continuous spectrum**, with
+$\hat x = \int x\, |x\rangle\langle x|\, dx$ as its spectral
+decomposition. The problems ahead show all three kinds: the particle
+in a box has a purely discrete spectrum, the tunneling problem a
+purely continuous one, and hydrogen both at once. For general
+self-adjoint operators the spectral theorem survives in this
+integral form, which the last post's Appendix A pointed at.
 
-## The Born rule, earned
+## The Born rule, two ways
 
-Expand a state in the definite states of an observable,
+The weights $|c_i|^2$ were read off the diagonalized average. Here
+are two independent reasons why they, and nothing else, are the
+probabilities.
+
+### From averages
+
+Among the questions one can ask is the yes/no question "did the
+outcome equal $\lambda_i$?" Its answers are $1$ and $0$, its average is
+by definition the probability of the outcome $\lambda_i$, and its
+operator is the projector $\hat P_i = |a_i\rangle\langle a_i|$ — a
+Hermitian table whose eigenvalues are $1$ (on $|a_i\rangle$) and $0$
+(on everything orthogonal to it), the two answers. The average rule
+applied to this question gives
 
 $$
-|\psi\rangle = \sum_i c_i\, |E_i\rangle, \qquad c_i = \langle E_i | \psi \rangle,
+P(\lambda_i) = \langle \psi | \hat P_i | \psi \rangle = \langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2 .
 $$
 
-and ask the question the second post postponed: what is the
-probability $P_i$ of observing the outcome $E_i$? The coefficient
-$c_i$ measures how much of $|E_i\rangle$ is in $|\psi\rangle$, so
-$P_i$ should be some function of it, $P_i = f(c_i)$ — the same
-function for every outcome and every observable, since nothing in the
-formalism singles one out. The task is to find $f$.
+This is Dirac's route (*Principles*, chapter II, §12): once the
+average of every observable is a quadratic form, the probability of
+every outcome is the average of the corresponding projector, and the
+squared amplitude follows.
 
-### The obvious guess fails
+### From basis independence
 
-Take real coefficients first, in two dimensions, and try the simplest
-guess: the probability is the magnitude, $P_i = |c_i|$, so that
-$|c_1| + |c_2| = 1$. For the fifty-fifty state this gives
+The derivation above leans on the average being a quadratic form.
+Here is a reason for the squared magnitude that uses no such
+assumption — only that probabilities must not depend on the basis the
+state happens to be written in. It follows video 8 of the Quantum
+Sense series.
+
+Suppose the probability of the outcome $\lambda_i$ is some function
+of the coordinate, $P_i = f(c_i)$ — the same function for every
+outcome and every observable, since nothing in the formalism singles
+one out. Take real coefficients first, in two dimensions, and try the
+simplest guess: the probability is the magnitude, $P_i = |c_i|$, so
+that $|c_1| + |c_2| = 1$. For the fifty-fifty state this gives
 $c_1 = c_2 = \frac12$. Now write the *same* state in another
 orthonormal basis — one obtained by rotating the first, which is what
 a different measurement axis does. In the rotated basis the
@@ -213,43 +414,38 @@ $(\frac{1}{\sqrt{10}}, -\frac{2}{\sqrt{10}})$, and the sum of
 magnitudes is no longer one:
 
 $$
-\tfrac{1}{\sqrt{10}} + \tfrac{2}{\sqrt{10}} = \tfrac{3}{\sqrt{10}} \approx 0.95.
+\tfrac{1}{\sqrt{10}} + \tfrac{2}{\sqrt{10}} = \tfrac{3}{\sqrt{10}} \approx 0.95 .
 $$
 
 The coefficients in the new basis no longer add up to a probability
 distribution, and the vector would have to be rescaled by hand every
 time the basis changes. But the state is the same physical state
-whichever apparatus we point at it; a rule that needs a
-rescaling depending on the basis cannot be a law about the state.
+whichever apparatus we point at it; a rule that needs a rescaling
+depending on the basis cannot be a law about the state.
 
 ![The same state vector in two orthonormal bases: the sum of the magnitudes of its coordinates changes with the basis, while the sum of their squares — the squared length — does not](born_counterexample.png)
 
 What *is* the same in every orthonormal basis is the length of the
-vector. The second post normalized states to length one, and in any
-orthonormal basis that reads $\sum_i c_i^2 = 1$ (real case). Whatever
-$f$ is, it has to produce a probability distribution on every unit
-vector, in every orthonormal basis, using only the coordinates.
+vector: for a unit state, $\sum_i c_i^2 = 1$ in every one of them
+(real case). So $f$ must produce a probability distribution on every
+unit vector, in every orthonormal basis, from the coordinates alone.
+Write down what that requires, for real coefficients.
 
-### Three conditions and a differential equation
-
-Write down what we know about $f$, for real coefficients.
-
-1. **Normalization.** $\sum_i f(c_i) = 1$ for every unit vector, i.e.
-   whenever $\sum_i c_i^2 = 1$.
+1. **Normalization.** $\sum_i f(c_i) = 1$ whenever $\sum_i c_i^2 = 1$.
 2. **A single function.** The same $f$ serves every coordinate, every
    basis, every observable.
 3. **Sign does not matter.** $f(-c) = f(c)$: the state $-|\psi\rangle$
-   is the same physical state as $|\psi\rangle$ (the second post:
-   a unit scalar factor changes no measurement), so flipping the sign
-   of one coordinate cannot change a probability.
+   is the same physical state as $|\psi\rangle$ (the second post: a
+   unit scalar factor changes no measurement), so flipping the sign of
+   one coordinate cannot change a probability.
 
-Condition 1 is a constraint on $n$ numbers tied by one equation. Solve
-the tie for the last coordinate, $c_n = \sqrt{1 - \sum_{i \lt n} c_i^2}$
-(condition 3 lets us take the positive root), and condition 1 becomes
-an identity in the $n - 1$ *independent* variables $c_1, \dots, c_{n-1}$:
+Condition 1 ties $n$ numbers by one equation. Solve the tie for the
+last coordinate, $c_n = \sqrt{1 - \sum_{i \lt n} c_i^2}$ (condition 3
+lets us take the positive root), and condition 1 becomes an identity
+in the $n - 1$ *independent* variables $c_1, \dots, c_{n-1}$:
 
 $$
-\sum_{i=1}^{n-1} f(c_i) + f\!\left(\sqrt{1 - \textstyle\sum_{i=1}^{n-1} c_i^2}\right) = 1.
+\sum_{i=1}^{n-1} f(c_i) + f\!\left(\sqrt{1 - \textstyle\sum_{i=1}^{n-1} c_i^2}\right) = 1 .
 $$
 
 An identity in independent variables can be differentiated with
@@ -257,7 +453,7 @@ respect to any of them. Differentiate with respect to $c_1$ (assume
 $f$ differentiable; this is the argument's technical assumption):
 
 $$
-f'(c_1) - f'(c_n)\, \frac{c_1}{c_n} = 0 \qquad\Longrightarrow\qquad \frac{f'(c_1)}{c_1} = \frac{f'(c_n)}{c_n}.
+f'(c_1) - f'(c_n)\, \frac{c_1}{c_n} = 0 \qquad\Longrightarrow\qquad \frac{f'(c_1)}{c_1} = \frac{f'(c_n)}{c_n} .
 $$
 
 Differentiating with respect to $c_2$ instead gives the same
@@ -271,49 +467,38 @@ for all admissible values of two independent variables. A function of
 $c_1$ alone that equals a function of $c_2$ alone is a constant:
 
 $$
-\frac{f'(c)}{c} = \lambda \qquad\Longrightarrow\qquad f(c) = \frac{\lambda}{2}\, c^2 + \mu.
+\frac{f'(c)}{c} = \lambda \qquad\Longrightarrow\qquad f(c) = \frac{\lambda}{2}\, c^2 + \mu .
 $$
 
 Two physical boundary conditions fix the constants. A state with
-$c_i = 0$ has no component along $|E_i\rangle$ at all — it is
-orthogonal to it, hence perfectly distinguishable from it — so the
-outcome $E_i$ never occurs: $f(0) = 0$, and $\mu = 0$. A state with
-$c_i = 1$ *is* $|E_i\rangle$, the definite state, and the first post's
-experiment one says its outcome is certain: $f(1) = 1$, so
-$\lambda = 2$. Therefore
+$c_i = 0$ has no component along $|a_i\rangle$ — it is orthogonal to
+it, hence perfectly distinguishable from it — so the outcome
+$\lambda_i$ never occurs: $f(0) = 0$, and $\mu = 0$. A state with
+$c_i = 1$ *is* $|a_i\rangle$, and then $\lambda_i$ is certain:
+$f(1) = 1$, so $\lambda = 2$. Therefore $f(c) = c^2$.
 
-$$
-f(c) = c^2 .
-$$
+The coefficients are complex in general. One observation extends the
+result. The eigenvector $|a_i\rangle$ is fixed by the physics only up
+to a unit factor: $e^{i\theta}|a_i\rangle$ is the same physical
+state, still an eigenvector with the same eigenvalue, still of length
+one. So $\{e^{i\theta_i}|a_i\rangle\}$ is just as good an eigenbasis
+of the same observable, and in it the coordinates of $|\psi\rangle$
+are $e^{-i\theta_i} c_i$. The probabilities cannot know which of these
+bases was used; hence $f$ depends on $c_i$ only through $|c_i|$.
+Apply the real result to the nonnegative numbers $|c_i|$, which
+satisfy $\sum_i |c_i|^2 = 1$:
 
-### Complex coefficients
-
-The coefficients are complex in general, and the argument above was
-for real ones. One observation extends it. The definite state
-$|E_i\rangle$ is fixed by the physics only up to a unit factor: the
-vector $e^{i\theta}|E_i\rangle$ is the same physical state, is still
-an eigenvector with the same eigenvalue, and still has length one. So
-$\{e^{i\theta_i}|E_i\rangle\}$ is just as good an eigenbasis of the
-same observable, and in it the coordinates of $|\psi\rangle$ are
-$e^{-i\theta_i} c_i$. The probabilities cannot know which of these
-bases was used; hence $f$ depends on $c_i$ only through its magnitude
-$|c_i|$. Apply the real result to the nonnegative numbers $|c_i|$,
-which satisfy $\sum_i |c_i|^2 = 1$, and:
-
-> **The Born rule.** If $|\psi\rangle = \sum_i c_i |E_i\rangle$ in the
+> **The Born rule.** If $|\psi\rangle = \sum_i c_i |a_i\rangle$ in the
 > orthonormal eigenbasis of an observable, the probability that a
-> measurement of that observable returns $E_i$ is
-> $$P(E_i) = |c_i|^2 = |\langle E_i | \psi \rangle|^2 .$$
+> measurement of it returns $\lambda_i$ is
+> $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
 
 Squared magnitudes, because the squared length is the quantity that
-does not change between orthonormal bases. The rule is the only assignment of probabilities to coordinates that
-does not depend on the basis the coordinates are taken in. The
-argument assumed a differentiable $f$ that is the same for every
-coordinate; the theorem that removes those assumptions — for state
-spaces of dimension three and more, any probability assignment that is
-additive over orthonormal bases is of this form — is
-[Gleason's theorem](https://en.wikipedia.org/wiki/Gleason%27s_theorem)
-(1957), in the references.
+does not change between orthonormal bases. The two derivations meet:
+the weights that diagonalization produced are the only weights that
+basis independence allows. (The argument assumed a differentiable
+$f$, the same for every coordinate; Gleason's theorem removes the
+assumptions in dimension three and more.)
 
 ### The continuous menu
 
@@ -346,203 +531,97 @@ the state.
 
 ![The Born rule on the line: |ψ(x)|² is a probability density, and the probability of a cell of width Δx is the density times the width](born_density.png)
 
-## Expectation values
+## Eigenvectors are the definite states
 
-The first post wrote the average of many measurements as
-$\langle \sigma \rangle$ and called it Dirac's bracket notation,
-promising an explanation. With the probabilities in hand,
-the statistical average of the outcomes of $E$ in the state
-$|\psi\rangle$ is
-
-$$
-\langle E \rangle = \sum_i P(E_i)\, E_i = \sum_i |c_i|^2\, E_i .
-$$
-
-Now compute a different-looking quantity: sandwich the operator
-between the bra and the ket of the state. Using $\hat E|E_j\rangle = E_j|E_j\rangle$
-and orthonormality,
+The first post's experiment one says that some states give a certain
+answer: measure again and again, and the window repeats itself. In
+the language of averages, a certain answer is one with no spread —
+the average of the squared deviation from the mean is zero. Compute
+that spread, the **variance**, in the eigenbasis:
 
 $$
-\begin{aligned}
-\langle \psi | \hat E | \psi \rangle &= \Big( \sum_i c_i^* \langle E_i| \Big)\, \hat E\, \Big( \sum_j c_j |E_j\rangle \Big) = \sum_{i,j} c_i^* c_j\, E_j\, \langle E_i | E_j \rangle \\
-&= \sum_i |c_i|^2\, E_i .
-\end{aligned}
+\langle (A - \langle A \rangle)^2 \rangle = \sum_i |c_i|^2\, (\lambda_i - \langle A \rangle)^2 .
 $$
 
-The two agree:
+Every term is nonnegative, so the sum vanishes only if every
+$c_i$ with $\lambda_i \neq \langle A \rangle$ is zero — that is, only
+if $|\psi\rangle$ has components along eigenvectors of a single
+eigenvalue, which makes it an eigenvector itself. Conversely an
+eigenvector has one nonzero weight, hence zero spread. So:
+
+> **Definite states are eigenvectors.** A state in which the outcome
+> of the question $\hat A$ is certain is an eigenvector of $\hat A$,
+> and the certain outcome is its eigenvalue.
+
+This is the statement textbooks start from — Susskind's principles 1
+and 2 — and here it arrives last, as a consequence of "averages are
+quadratic forms". For the spin: the definite states $|u\rangle$,
+$|d\rangle$ of the $z$ question are the eigenvectors of its operator
+$\sigma_z$, with eigenvalues $+1$ and $-1$; the first post's "the
+measurement prepares a state that repeats its answer" is the
+statement that the state after a measurement is an eigenvector.
+
+From now on the word **observable** is used both for the measurable
+quantity and for its Hermitian operator. The three conditions one
+would otherwise have to *demand* of such an operator — real outcomes,
+definite states that span the space, definite states that are
+orthogonal — are the spectral theorem, already proved.
+
+### Applying the operator is not measuring
+
+The notation invites a confusion, so it is addressed before anything
+else is built. Applying $\sigma_z$ to a state is a *mathematical*
+operation that returns a state; a measurement is a *physical*
+operation that returns a number and changes the state. They are not
+the same thing.
+
+Apply $\sigma_z$ to the $x$-definite state $|r\rangle$, using
+$\sigma_z|u\rangle = |u\rangle$, $\sigma_z|d\rangle = -|d\rangle$ and
+linearity:
 
 $$
-\boxed{\; \langle E \rangle = \langle \psi | \hat E | \psi \rangle \;}
+\sigma_z\, |r\rangle = \tfrac{1}{\sqrt 2}\, \sigma_z |u\rangle + \tfrac{1}{\sqrt 2}\, \sigma_z |d\rangle = \tfrac{1}{\sqrt 2}\, |u\rangle - \tfrac{1}{\sqrt 2}\, |d\rangle = |l\rangle .
 $$
 
-The bracket of the first post is this sandwich: the operator between
-the state and itself.
+The operator turned *right* into *left*. No $z$ measurement of an
+electron prepared along $x$ ever produces an electron pointing left
+along $x$: it produces $|u\rangle$ or $|d\rangle$, at random. So
+$\sigma_z|r\rangle$ is not the state after a measurement. It is a
+*code*: written in the eigenbasis of $\sigma_z$, the input
+$|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
+lists the possible answers as its basis directions, and the operator
+has tagged each direction with the answer's value; the coefficients
+encode the probabilities, by the Born rule. (Susskind and Friedman
+devote their §3.5, "A common misconception", to this point.)
 
-Check it against the number the first post measured. Prepare
-$|r\rangle$ — spin $+1$ along $x$ — and measure along $z$, at $90°$ to
-the preparation. The first post's cosine predicts an average of
+![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
+
+Check the formalism against the one number the first post measured.
+Prepare $|r\rangle$ — spin $+1$ along $x$ — and measure along $z$, at
+$90°$ to the preparation. The cosine predicts an average of
 $\cos 90° = 0$. Compute:
 
 $$
-\langle r | \sigma_z | r \rangle = \langle r | l \rangle = 0 ,
+\langle r | \sigma_z | r \rangle = \langle r | l \rangle = 0 .
 $$
 
-using $\sigma_z|r\rangle = |l\rangle$ from above and
-$\langle r | l \rangle = 0$. The formalism returns the right average
-for this angle. The full $\cos\theta$, for an arbitrary angle between
-the axes, needs the spin operators for arbitrary directions, which
-the next post constructs.
-
-## Hermitian operators
-
-Which operators satisfy the three conditions — real spectrum,
-orthonormal eigenbasis? The answer is a named class of operators, and it needs one new
-notion: moving an operator from one side of the bracket to the other.
-
-### The adjoint
-
-Write $|\hat M\psi\rangle$ for the vector that $\hat M$ returns when
-fed $|\psi\rangle$, so that the sandwich reads
-$\langle \varphi | \hat M | \psi \rangle = \langle \varphi | \hat M \psi \rangle$:
-the operator acts on the ket. We want to be able to let it act on the
-*bra* instead. For an operator $\hat M$, its
-[**adjoint**](https://en.wikipedia.org/wiki/Hermitian_adjoint)
-(Hermitian conjugate) $\hat M^\dagger$ is the operator for which this holds:
-
-$$
-\langle \varphi | \hat M \psi \rangle = \langle \hat M^\dagger \varphi | \psi \rangle \qquad \text{for all } |\varphi\rangle, |\psi\rangle .
-$$
-
-In finite dimensions it exists and is unique (the second post's Riesz
-theorem gives it: for fixed $|\varphi\rangle$ the left side is a
-linear functional of $|\psi\rangle$, hence an inner product with a
-unique vector, which we name $\hat M^\dagger|\varphi\rangle$). Three
-rules follow from the definition:
-$(\hat A^\dagger)^\dagger = \hat A$,
-$(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$,
-$(\hat A \hat B)^\dagger = \hat B^\dagger \hat A^\dagger$. For a
-scalar, the adjoint is the complex conjugate: $(c\,\hat I)^\dagger = c^*\hat I$.
-And the adjoint of a ket is its bra, $(|v\rangle)^\dagger = \langle v|$,
-which is the second post's bra–ket correspondence.
-
-In a matrix, with respect to an orthonormal basis, the adjoint is the
-**conjugate transpose**: $(M^\dagger)_{ij} = M_{ji}^*$ — flip across
-the diagonal and conjugate every entry (Panov's lectures, §4.1, in
-the references).
-
-### An observable in terms of its definite states
-
-Let $\hat E$ be an observable with orthonormal eigenbasis
-$\{|E_i\rangle\}$ and real eigenvalues $E_i$. Apply it to an arbitrary
-state, expanded in that basis, and use the second post's
-"coordinates are inner products":
-
-$$
-\begin{aligned}
-\hat E\, |\psi\rangle &= \sum_i c_i\, \hat E |E_i\rangle = \sum_i c_i\, E_i\, |E_i\rangle \\
-&= \sum_i E_i\, |E_i\rangle \langle E_i | \psi \rangle = \Big( \sum_i E_i\, |E_i\rangle\langle E_i| \Big) |\psi\rangle .
-\end{aligned}
-$$
-
-Since this holds for every $|\psi\rangle$, the operator itself is
-
-$$
-\boxed{\; \hat E = \sum_i E_i\, |E_i\rangle\langle E_i| \;}
-$$
-
-— a weighted sum of the projectors onto its definite states, each
-weighted by its outcome. This is the **spectral decomposition** of
-the observable; set every $E_i$ to $1$ and it collapses to the
-resolution of identity $\sum_i |E_i\rangle\langle E_i| = \hat I$ of
-the second post. For the continuous menu the sum is an integral,
-$\hat x = \int x\, |x\rangle\langle x|\, dx$, read in the sense the
-last post gave such integrals.
-
-### Observables are Hermitian
-
-Take the adjoint of the spectral decomposition, using the three
-rules: the adjoint of $E_i\,|E_i\rangle\langle E_i|$ is
-$E_i^*\, (\langle E_i|)^\dagger (|E_i\rangle)^\dagger = E_i^*\, |E_i\rangle\langle E_i|$,
-so
-
-$$
-\hat E^\dagger = \sum_i E_i^*\, |E_i\rangle\langle E_i| = \sum_i E_i\, |E_i\rangle\langle E_i| = \hat E ,
-$$
-
-because the eigenvalues are real. An operator equal to its own adjoint
-is called **Hermitian** (or self-adjoint),
-
-$$
-\hat E^\dagger = \hat E \qquad\Longleftrightarrow\qquad \langle \varphi | \hat E \psi \rangle = \langle \hat E \varphi | \psi \rangle \;\text{ for all } \varphi, \psi,
-$$
-
-and we have shown: every observable is Hermitian. In matrix terms,
-with respect to any orthonormal basis, the matrix of an observable
-equals its own conjugate transpose.
-
-The converse also holds: a Hermitian operator has the two properties
-we demanded.
-
-*Real eigenvalues.* Let $\hat E|\varphi\rangle = \lambda|\varphi\rangle$
-with $|\varphi\rangle \neq 0$. Move the operator across the bracket:
-
-$$
-\lambda\, \langle \varphi | \varphi \rangle = \langle \varphi | \hat E \varphi \rangle = \langle \hat E \varphi | \varphi \rangle = \lambda^*\, \langle \varphi | \varphi \rangle ,
-$$
-
-and since $\langle \varphi | \varphi \rangle \gt 0$, $\lambda = \lambda^*$.
-
-*Orthogonal eigenvectors.* Let $\hat E|\varphi_1\rangle = \lambda_1|\varphi_1\rangle$
-and $\hat E|\varphi_2\rangle = \lambda_2|\varphi_2\rangle$ with
-$\lambda_1 \neq \lambda_2$. The same move gives
-
-$$
-\lambda_2\, \langle \varphi_1 | \varphi_2 \rangle = \langle \varphi_1 | \hat E \varphi_2 \rangle = \langle \hat E \varphi_1 | \varphi_2 \rangle = \lambda_1\, \langle \varphi_1 | \varphi_2 \rangle
-$$
-
-(the eigenvalues are already known to be real), so
-$(\lambda_2 - \lambda_1)\langle \varphi_1 | \varphi_2 \rangle = 0$ and
-the inner product vanishes.
-
-*An orthonormal eigenbasis exists.* In finite dimensions this is the
-**spectral theorem** for self-adjoint operators: every Hermitian
-operator is diagonalizable in an orthonormal basis (Panov, §4.2,
-Theorem 4.2.3; its Lemmas 4.2.4 and 4.2.5 are the two facts just
-proved).
-Within a degenerate eigenvalue the eigenvectors are not orthogonal
-automatically, and Gram–Schmidt makes them so. In infinite dimensions
-the statement needs care: it holds in the same form for *compact*
-self-adjoint operators (the Hilbert–Schmidt theorem — Sergeev's
-lectures, Theorem 40), and for general self-adjoint operators, such
-as position and momentum, the sum over eigenvectors becomes an
-integral over a continuous spectrum, in the sense the last post's
-Appendix A pointed at. The problems ahead meet each kind separately.
-
-So the three physical conditions and the one algebraic condition are
-the same thing:
-
-> **An observable is a Hermitian operator.** Its eigenvalues — the
-> outcomes — are real, and its eigenvectors — the definite states —
-> form an orthonormal basis. Conversely, every Hermitian operator
-> qualifies as an observable in the formalism.
-
-Whether every Hermitian operator corresponds to something an
-apparatus can actually measure is a question for physics, not for
-the mathematics; the formalism only says it may.
+The formalism returns the right average for this angle. The full
+$\cos\theta$, for an arbitrary angle between the axes, needs the spin
+operators for arbitrary directions, which the next post constructs.
 
 ## Two of the three Pauli matrices
 
-For the spin all of this is two-by-two matrices. Work in the $z$ basis
-$\{|u\rangle, |d\rangle\}$, with $|u\rangle = (1, 0)^T$ and
+For the spin all of this is two-by-two matrices. Work in the $z$
+basis $\{|u\rangle, |d\rangle\}$, with $|u\rangle = (1, 0)^T$ and
 $|d\rangle = (0, 1)^T$ as in the second post. The spectral
 decomposition of $\sigma_z$ is immediate — outcomes $\pm 1$ on the
-projectors onto $|u\rangle$ and $|d\rangle$:
+projectors onto its definite states:
 
 $$
 \sigma_z = (+1)\,|u\rangle\langle u| + (-1)\,|d\rangle\langle d| = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
 $$
 
-Now the $x$ measurement. Its definite states are $|r\rangle$ and
+Now the $x$ question. Its definite states are $|r\rangle$ and
 $|l\rangle$, with outcomes $+1$ and $-1$, so the same recipe gives
 $\sigma_x = |r\rangle\langle r| - |l\rangle\langle l|$. In the $z$
 basis, $|r\rangle = \frac{1}{\sqrt 2}(1, 1)^T$ and
@@ -565,10 +644,11 @@ that $\sigma_x (1, 1)^T = (1, 1)^T$ and $\sigma_x (1, -1)^T = -(1, -1)^T$.
 These are two of the three
 [**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
 and they were obtained from the experiments, through the definite
-states the second post extracted from them, not taken from a table. The
-third, $\sigma_y$, waits for the $y$-axis states $|i\rangle, |o\rangle$,
-which the second post showed cannot be built with real amplitudes; the
-next post builds them, and $\sigma_y$ with them.
+states the second post extracted from them, not taken from a table.
+The third, $\sigma_y$, waits for the $y$-axis states
+$|i\rangle, |o\rangle$, which the second post showed cannot be built
+with real amplitudes; the next post builds them, and $\sigma_y$ with
+them. Heisenberg's table for the spin, filled in.
 
 ![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
 
@@ -577,22 +657,23 @@ next post builds them, and $\sigma_y$ with them.
 Wishlist item 4 asked how measurement changes the state. Everything
 needed is now available.
 
-> **Measurement.** Measuring the observable $\hat E$ in the state
-> $|\psi\rangle = \sum_i c_i|E_i\rangle$ returns one of the
-> eigenvalues $E_i$, with probability $|c_i|^2$; immediately after a
-> measurement that returned $E_i$, the state is the definite state
-> $|E_i\rangle$.
+> **Measurement.** Measuring the observable $\hat A$ in the state
+> $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
+> eigenvalues $\lambda_i$, with probability $|c_i|^2$; immediately
+> after a measurement that returned $\lambda_i$, the state is the
+> definite state $|a_i\rangle$.
 
-In the language of projectors: the outcome $E_i$ projects the state
-onto the $i$-th definite direction and renormalizes it,
+In the language of projectors: the outcome $\lambda_i$ projects the
+state onto the $i$-th definite direction and renormalizes it,
 
 $$
-|\psi\rangle \;\longmapsto\; \frac{|E_i\rangle\langle E_i | \psi \rangle}{\lVert\, |E_i\rangle\langle E_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |E_i\rangle ,
+|\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle ,
 $$
 
-a unit factor times $|E_i\rangle$ — the same physical state. And the
-probability of that outcome is the sandwich of the projector:
-$\langle \psi | E_i \rangle \langle E_i | \psi \rangle = |c_i|^2$.
+a unit factor times $|a_i\rangle$ — the same physical state. The
+probability of the outcome is the average of the projector,
+$\langle \psi | \hat P_i | \psi \rangle = |c_i|^2$, as in the first
+derivation of the Born rule.
 
 Read the first post's three experiments in this language.
 
@@ -609,32 +690,39 @@ Read the first post's three experiments in this language.
   state becomes $|r\rangle$ or $|l\rangle$. Measure $\sigma_z$ once
   more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$, half
   $|d\rangle$, so the old certainty is gone — probability $\frac12$
-  for either answer. The erasure of the first post is
-the statement that $\sigma_z$ and $\sigma_x$ have no eigenvector in
-  common.
+  for either answer. The erasure of the first post is the statement
+  that $\sigma_z$ and $\sigma_x$ have no eigenvector in common.
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
 ## What we built
 
-The wishlist, with two more items paid.
+The chain of this post, in one paragraph. What an apparatus gives
+us is averages. An average that is a law about the state is a
+quadratic form in its coordinates, so a question is a table with two
+indices — an operator, the object Heisenberg found in 1925. Real
+averages make the table Hermitian. A Hermitian table has an
+orthonormal eigenbasis, and in that basis the average becomes a
+weighted average of the eigenvalues; the weights are squared
+coordinates, which basis independence confirms as the only possible
+probabilities. The eigenvalues are therefore the outcomes, the
+eigenvectors the states of certain outcome, and a measurement is a
+projection onto one of them.
+
+The wishlist, with two more items paid:
 
 1. **A state object** — a unit vector in a Hilbert space. ✓ (second post)
 2. **A way to blend outcomes** — superposition; probabilities are
-   squared amplitudes, *derived today from basis independence*. ✓
+   squared amplitudes, *derived today, twice*. ✓
 3. **Measurable quantities as actors** — Hermitian operators, whose
    eigenvalues are the outcomes and whose eigenvectors are the
-   definite states; the average of a quantity is the sandwich
-   $\langle \psi | \hat E | \psi \rangle$. ✓
+   definite states; the average of a quantity is
+   $\langle \psi | \hat A | \psi \rangle$. ✓
 4. **Measurement as an operation on states** — projection onto a
    definite state, with the Born probability. ✓
 5. **Geometry must enter** — still open: the dictionary between
    directions in the laboratory and operators on the two-dimensional
-   state space, with the cosine of the first post as its first
-   entry.
-
-Two of the three Pauli matrices came out of the experiments; the
-third, and with it the whole dictionary of item 5, is the next post.
+   state space, with the cosine of the first post as its first entry.
 
 ## Onward
 
@@ -642,44 +730,73 @@ Next stop: the qubit and the Bloch sphere. The $y$-axis states are
 built, complex amplitudes become unavoidable, $\sigma_y$ joins the
 other two, and the spin operator along an arbitrary direction $\hat n$
 turns out to be $\hat n \cdot \vec\sigma$ — from which the first
-post's $\langle \sigma \rangle = \cos\theta$ follows in one line,
-and a two-dimensional complex state space acquires the geometry of an
+post's $\langle \sigma \rangle = \cos\theta$ follows in one line, and
+a two-dimensional complex state space acquires the geometry of an
 ordinary sphere.
 
 ## References
 
+- Л. Д. Ландау, Е. М. Лифшиц. *Квантовая механика (нерелятивистская
+  теория)*, Теоретическая физика, т. III — chapter I, §3
+  "Операторы" (pp. 22–28 of the 6th Russian edition; §3 "Operators"
+  in the English *Quantum Mechanics: Non-Relativistic Theory*): the
+  road of this post — the spectrum and the expansion, $|a_n|^2$ as
+  the only admissible bilinear probability, the mean value (3.7), the
+  operator *defined* by the mean value (3.8), eigenfunctions (3.12),
+  Hermiticity from the reality of the mean (3.15–3.17).
+- P. A. M. Dirac. *The Principles of Quantum Mechanics*, 4th ed.
+  Oxford University Press, 1958 — chapter II, "Dynamical variables
+  and observables", §10 (observables), §11 (functions of observables),
+  §12 (the general physical interpretation): the average
+  $\langle \psi | \xi | \psi \rangle$ as the physical content of an
+  observable, and probabilities as averages of the corresponding
+  projectors.
+- R. P. Feynman, R. B. Leighton, M. Sands. *The Feynman Lectures on
+  Physics*, vol. III — chapter 5, "Spin One" (an apparatus between
+  Stern–Gerlach filters is described by a table of amplitudes
+  $\langle j | A | i \rangle$), and chapter 20, "Operators" (§20-2,
+  average energies: $\langle E \rangle = \langle \psi | \hat H | \psi \rangle$).
+  Free online at [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/).
+- I. J. R. Aitchison, D. A. MacManus, T. M. Snyder. [*Understanding
+  Heisenberg's "magical" paper of July 1925: a new look at the
+  calculational details*](https://arxiv.org/abs/quant-ph/0404009).
+  American Journal of Physics 72 (2004), 1370–1379 — the table of
+  transition amplitudes and the multiplication rule, reconstructed
+  step by step.
+- B. L. van der Waerden (ed.). *Sources of Quantum Mechanics*.
+  North-Holland, 1967; Dover reprint — Heisenberg's July 1925 paper,
+  Born and Jordan's and Dirac's papers of the same year, in
+  translation, with the editor's account of how Born recognized the
+  matrix.
 - Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
   Minimum*. Basic Books, 2014 — lecture 3, "Principles of Quantum
-  Mechanics": §3.1 (linear operators, Hermitian conjugation, Hermitian
-  operators and orthonormal bases), §3.2 (the four principles followed
-  here), §3.3–3.4 (the spin operators constructed from the
-  experiments), §3.5 ("A common misconception": applying an operator is
-  not measuring).
+  Mechanics": §3.1 (linear operators, Hermitian conjugation), §3.2
+  (the four principles, which this post reaches as conclusions),
+  §3.3–3.4 (the spin operators constructed from the experiments), §3.5
+  ("A common misconception": applying an operator is not measuring).
 - [Quantum Sense](https://www.youtube.com/@quantumsensechannel), *Maths
   of Quantum Mechanics* — videos 7 ([observables as linear
   operators](https://youtu.be/ANLRQ7X6h5A)), 8 ([why the probability
   is the squared amplitude](https://youtu.be/PZUZgOUOOIU)) and 9
-  ([Hermitian operators](https://youtu.be/da1rH0Hq62Q)); the Born-rule
-  derivation of this post follows video 8.
+  ([Hermitian operators](https://youtu.be/da1rH0Hq62Q)); the
+  basis-independence derivation of the Born rule follows video 8.
 - A. M. Gleason. *Measures on the closed subspaces of a Hilbert
   space.* Journal of Mathematics and Mechanics 6 (1957), 885–893 — the
-  theorem that the Born rule is the only additive probability
-  assignment on a Hilbert space of dimension at least three;
+  theorem that on a Hilbert space of dimension at least three every
+  additive probability assignment is a quadratic form;
   [Wikipedia's account](https://en.wikipedia.org/wiki/Gleason%27s_theorem)
   is a good first reading.
 - Т. Е. Панов. [*Лекции по линейной алгебре*](http://higeom.math.msu.su/people/taras/teaching/panov-linalg.pdf)
   (in Russian) — §4.1 (adjoint operators; the matrix of the adjoint
   is the conjugate transpose, p. 65) and §4.2 (self-adjoint
-  operators: real eigenvalues, orthogonal eigenvectors, the
-  orthonormal eigenbasis, pp. 66–67).
+  operators: Theorem 4.2.3 on the orthonormal eigenbasis, with Lemmas
+  4.2.4 and 4.2.5, pp. 66–67).
 - А. Г. Сергеев. [*Лекции по функциональному анализу*](https://mi-ras.ru/noc/13_14/2/sergeev/funkan.pdf)
-  (in Russian) — Theorem 40, the Hilbert–Schmidt theorem, p. 81.
-- P. A. M. Dirac. *The Principles of Quantum Mechanics*, 4th ed.
-  Oxford University Press, 1958 — chapter II, "Dynamical variables and
-  observables": the original statement that observables are real
-  linear operators and outcomes their eigenvalues.
+  (in Russian) — Theorem 40, the Hilbert–Schmidt theorem, p. 81: the
+  spectral theorem for compact self-adjoint operators in infinite
+  dimensions.
 - G. W. Mackey. *Mathematical Foundations of Quantum Mechanics*.
   Benjamin, 1963 — the compact axiomatic account, with the
-  probability structure (and Gleason's theorem) at its center.
+  probability structure and Gleason's theorem at its center.
 - 3Blue1Brown, [*Eigenvectors and eigenvalues*](https://youtu.be/PFDu9oVAE-g)
   — the geometric picture of an eigenvector, in twenty minutes.
