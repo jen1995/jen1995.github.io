@@ -603,8 +603,10 @@ One thing in the test above deserves a second look. The spacing
 $\Delta x$ plays two roles at once: it is the width of the spike
 $K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$, and it is the step of
 the grid on which "integrating $f$ against $K$" was replaced by a sum.
-We sent both to zero together, along the diagonal $\Delta y = \Delta x$.
-Two limits are coupled here, and coupling limits needs a reason.
+We sent both to zero together, along the diagonal $\Delta y = \Delta x$
+— that is, we took two limits at once, and in general one may not do
+that without checking that the result does not depend on how the two
+are tied.
 
 The honest version is an *iterated* limit. For fixed $\Delta x$ the
 spike is an ordinary function of $y$, so integrating $f$ against it is
