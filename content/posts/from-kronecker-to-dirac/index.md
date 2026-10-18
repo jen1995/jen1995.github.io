@@ -682,7 +682,19 @@ states, never as a vector of $L^2$, where its norm would be infinite.
 Its wavefunction — its coordinates in the position basis — is
 $\langle y | x_0 \rangle = \delta(y - x_0)$, so in the position
 representation, where a ket and its wavefunction are one object, the
-position ket *is* the delta concentrated at $x_0$.
+position ket *is* the delta concentrated at $x_0$. This also says what
+stands under the integral of the opening line: in coordinates,
+$|\psi\rangle = \int \psi(x)\, |x\rangle\, dx$ reads
+
+$$
+\psi(y) = \int \psi(x)\, \delta(y - x)\, dx,
+$$
+
+the sifting property read from right to left — a function written as
+a superposition of deltas. On the grid the same line is literal: the
+discretized state $\sum_i a(x_i)\, |x_i\rangle\, \Delta x$ has
+wavefunction $\sum_i a(x_i)\, \mathbf 1_{C_i}(y)$, the step function
+that approximates $a$.
 Mathematically it is a generalized vector; physically, "the particle
 is exactly at $x$" is an idealization that honest states approach and
 never reach. Both points are spelled out in
@@ -760,6 +772,21 @@ due to Gelfand and Vilenkin (*Generalized Functions*, vol. 4); the
 gentlest entry is de la Madrid's article on the role of the rigged
 Hilbert space in quantum mechanics, which works it all out on one
 solvable example — both are in the references.
+
+One more thing the construction did not fix: the road to the limit.
+The cell states are one sequence of honest states converging weakly
+to $|x_0\rangle$; any delta-like sequence does the same — Gaussians of
+shrinking width, or the oscillating kernels
+$\sin(K(y - x_0)) / \pi(y - x_0)$ that come from cutting off the
+plane-wave integral $\frac{1}{2\pi} \int e^{ik(y - x_0)}\, dk$, the
+Fourier road's formula for the delta. They all converge to the same
+object, because the object is defined by what it does to states, not
+by how it is approached. The grid itself is likewise one choice of
+discretization among several: physicists more often put the particle
+in a very large box, which leaves position continuous and discretizes
+*momentum* instead — plane waves $e^{i k_n x}$ with $k_n = 2\pi n / L$
+— and the same $1/\sqrt{\text{spacing}}$ rescaling appears there. The
+road returns to that construction when momentum gets its own basis.
 
 This is also the first appearance of a theme the road will return to:
 position is a measurable quantity whose menu of outcomes is a
