@@ -620,10 +620,16 @@ but read as an ordinary limit of functions this is wrong: the
 pointwise limit of the spikes does not exist, and $\delta(x - y)$ is
 not a function anyway. It is a **distribution** — an object defined
 only by its action inside integrals. The correct statement is called
-**weak convergence**: for every continuous function $f$, the *numbers*
-$\sum_j f(y_j)\, \frac{\delta_{ij}}{\Delta x}\, \Delta y$ converge to
-$f(x)$. That is the same tested sum, with the same conventions and the
-same limit, as in the previous section. The arrow above is universally
+**weak convergence**: not the spikes themselves but their *integrals
+against every continuous function* converge — for every continuous
+$f$,
+
+$$
+\int f(y)\, K_\Delta(x_i, y)\, dy \;\xrightarrow{\;\Delta x \to 0\;}\; f(x),
+$$
+
+which is what the previous section proved, with the integral on the
+left written as the sum $\sum_j f(\xi_j)\, K_\Delta(x_i, y_j)\, \Delta y$. The arrow above is universally
 used as shorthand for this statement, and now we know what it
 abbreviates.
 
