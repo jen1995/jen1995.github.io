@@ -596,50 +596,12 @@ inner product: with the integral read as the limit above,
 $\langle x | \psi \rangle = \int \langle x | y \rangle\, \psi(y)\, dy = \psi(x)$
 for every state, which is the requirement.
 
-<details>
-<summary>Two limits in one: the grid and the spike shrink together</summary>
-
-One thing in the test above deserves a second look. The spacing
-$\Delta x$ plays two roles at once: it is the width of the spike
-$K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$, and it is the step of
-the grid on which "integrating $f$ against $K$" was replaced by a sum.
-We sent both to zero together, along the diagonal $\Delta y = \Delta x$
-— that is, we took two limits at once, and in general one may not do
-that without checking that the result does not depend on how the two
-are tied.
-
-The honest version is an *iterated* limit. For fixed $\Delta x$ the
-spike is an ordinary function of $y$, so integrating $f$ against it is
-an ordinary integral — the average of $f$ over the cell:
-
-$$
-\int f(y)\, K_\Delta(x_i, y)\, dy = \frac{1}{\Delta x} \int_{C_i} f(y)\, dy.
-$$
-
-Riemann sums with step $\Delta y \to 0$ converge to this integral while
-$\Delta x$ stays put — the inner limit. Then let $\Delta x \to 0$: the
-cell shrinks onto $x$, and the average tends to $f(x)$ by continuity —
-the outer limit. In this form there is no grid at all, only a
-shrinking window and an integral; it is exactly the construction of
-[Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
-and the delta-like sequences of Gelfand and Shilov in the next
-section.
-
-The diagonal limit of the text agrees with the iterated one, and the
-reason is continuity of $f$: with $\Delta y = \Delta x$ the cell holds a
-single sample point, the sum collapses to $f(\xi_i)$, and $f(\xi_i)$
-differs from the cell average by at most the oscillation of $f$ over a
-cell of width $\Delta x$, which goes to zero. Without continuity the
-two limits could disagree, and coupling them would be a mistake.
-
-The coupling also has a direction. The grid must be no coarser than
-the spike, $\Delta y \leq \Delta x$: with $\Delta y \gt \Delta x$ a cell
-may contain no sample point at all, the sum returns $0$, and the test
-misses the spike entirely. That is why the discrete delta and the grid
-that tests it cannot be separated: a kernel of width $\Delta x$ is only
-visible to a sum of resolution $\Delta x$ or better.
-
-</details>
+(One detail of the test is worth a second look: the step of the grid
+and the width of the spike went to zero *together*. Why that is
+allowed, and why we chose to do it that way, is discussed in the
+optional section
+[*Why one grid*](#why-one-grid-and-the-straight-road-not-taken) at
+the end of the post.)
 
 Note what we did **not** do: we never claimed the spikes converge as
 functions. We tested against $f$, produced a limit of numbers, and
@@ -803,6 +765,64 @@ that density is the separability of $L^2$ the last post promised, and
 it is why discretization can approximate every state — see Rudin's
 *Real and Complex Analysis*, Theorem 3.13, and Kolmogorov–Fomin,
 chapter VIII, §51–52, in the references.
+
+## Why one grid, and the straight road not taken
+
+*Optional reading. Nothing below is needed for the rest of the road;
+it explains a choice made in this post.*
+
+In the test of the kernel the spacing $\Delta x$ played two roles at
+once: the width of the spike $K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$,
+and the step of the grid on which "integrating $f$ against $K$" was
+replaced by a sum. We sent both to zero together, along the diagonal
+$\Delta y = \Delta x$ — two limits at once, which in general one may not
+do without checking that the result does not depend on how the two
+are tied.
+
+**The straight road.** Keep the two apart. For fixed $\Delta x$ the
+spike is an ordinary function of $y$, so integrating $f$ against it is
+an ordinary integral — the average of $f$ over the cell:
+
+$$
+\int f(y)\, K_\Delta(x_i, y)\, dy = \frac{1}{\Delta x} \int_{C_i} f(y)\, dy.
+$$
+
+Riemann sums with step $\Delta y \to 0$ converge to this integral while
+$\Delta x$ stays put. Then let $\Delta x \to 0$: the cell shrinks onto
+$x$, and the average tends to $f(x)$ by continuity. In this form there
+is no grid at all — only a shrinking window and an integral. It is
+exactly the construction of
+[Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+and the delta-like sequences of Gelfand and Shilov, and it is shorter
+than what this post did.
+
+**Why the post did not take it.** On the straight road the Kronecker
+delta disappears at the first step: the spike becomes a step function
+on the line, the sum becomes an integral, and what remains is the
+standard delta-sequence argument. The point of this post was the
+other thing — to keep everything on one grid, where the state is a
+finite sum, the inner product a double sum, the kernel a table
+$\delta_{ij} / \Delta x$, and the test of the kernel collapses to a
+single term *because* $\delta_{ij}$ kills the sum and $1/\Delta x$ eats
+the $\Delta y$. That collapse is the discrete sifting property, and
+watching it turn into the continuous one as $\Delta x \to 0$ is the
+intuition the post was after: the Dirac delta is what the Kronecker
+delta becomes when a sum becomes an integral, with $1/\Delta x$ as the
+exchange rate.
+
+**Why it is allowed.** The diagonal limit agrees with the straight
+road, and the reason is continuity of $f$: with $\Delta y = \Delta x$
+the cell holds a single sample point, the sum collapses to
+$f(\xi_i)$, and $f(\xi_i)$ differs from the cell average by at most the
+oscillation of $f$ over a cell of width $\Delta x$, which goes to
+zero. Without continuity the two limits could disagree. The coupling
+also has a direction: the grid must be no coarser than the spike,
+$\Delta y \leq \Delta x$, since with $\Delta y \gt \Delta x$ a cell may
+contain no sample point at all, the sum returns $0$, and the test
+misses the spike entirely. A kernel of width $\Delta x$ is only visible
+to a sum of resolution $\Delta x$ or better — which is why, on one
+grid, the discrete delta and the sums that test it cannot be
+separated.
 
 ## Summary
 
