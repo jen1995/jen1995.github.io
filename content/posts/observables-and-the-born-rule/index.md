@@ -39,7 +39,7 @@ series by Quantum Sense.
 
 ## Where we stand
 
-Three facts from the earlier posts carry the whole of this one.
+Three facts from the earlier posts are used throughout.
 
 - A measurement along an axis has two outcomes, $+1$ and $-1$, and
   two **definite states** — the states that the measurement prepares
@@ -68,9 +68,9 @@ along $z$" as opposed to its two answers.
 
 ## A question becomes an operator
 
-Here is the idea, on the $z$ measurement. We know its menu of answers,
+Take the $z$ measurement. We know its menu of answers,
 $+1$ and $-1$, and we know which state goes with which answer:
-$|u\rangle$ with $+1$, $|d\rangle$ with $-1$. Encode the whole table
+$|u\rangle$ with $+1$, $|d\rangle$ with $-1$. Encode this table
 in a single machine $\sigma_z$ that takes a state and returns a
 state, by declaring what it does to the two definite states —
 
@@ -81,11 +81,11 @@ $$
 — and extending to every other state by linearity:
 $\sigma_z\,(\alpha |u\rangle + \beta |d\rangle) = \alpha |u\rangle - \beta |d\rangle$.
 The machine multiplies each definite state by the number the window
-would show, and leaves the superposition structure alone.
+would show, and acts on sums term by term.
 
 ![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
 
-The mathematics has names for all of this. A **linear operator** on a
+In the language of linear algebra: a **linear operator** on a
 vector space $V$ is a linear map $\hat A : V \to V$ — it sends vectors
 to vectors and respects sums and scalar multiples,
 $\hat A(\alpha |\psi\rangle + \beta |\varphi\rangle) = \alpha \hat A|\psi\rangle + \beta \hat A|\varphi\rangle$.
@@ -98,9 +98,8 @@ $$
 $$
 
 and the number $\lambda$ is the corresponding **eigenvalue**. The set
-of all eigenvalues of an operator is called its **spectrum** — a word
-to remember, because it will carry more meaning than "a list of
-numbers" once the menus become continuous. In this language the
+of all eigenvalues of an operator is called its **spectrum**; for
+continuous menus the word will mean more than a list of numbers. In this language the
 definite states $|u\rangle, |d\rangle$ are the eigenvectors of
 $\sigma_z$, and the outcomes $\pm 1$ are its eigenvalues.
 
@@ -114,24 +113,23 @@ postulate — Susskind's principles 1 and 2:
 > an eigenvector of $\hat E$ with eigenvalue $E_i$ — a **definite
 > state** of $E$.
 
-Stated honestly, this is not a discovery but a *codification* of the
+This is not a discovery but a *codification* of the
 [first post's experiments](/posts/the-apparatus-and-the-arrow/#what-we-saw):
 the menu of outcomes is fixed and discrete — the eigenvalues; a
 measurement leaves the system in a state that repeats its answer — an
 eigenvector; and a superposition of definite states is a state with
 no certain answer — a vector that is not an eigenvector. From now on
 the word **observable** is used both for the measurable quantity and
-for its operator, hat and all: $\hat E$ for energy, $\sigma_z$ for the
+for its operator, written with a hat: $\hat E$ for energy, $\sigma_z$ for the
 spin along $z$.
 
 ### Applying the operator is not measuring
 
-One confusion is worth heading off at once, because the notation
-invites it. Applying $\sigma_z$ to a state is a *mathematical*
+The notation invites a confusion, so it is addressed before
+anything else. Applying $\sigma_z$ to a state is a *mathematical*
 operation that returns a state; a measurement is a *physical*
 operation that returns a number and changes the state. They are not
-the same thing, and the operator's output is not "what the apparatus
-does".
+the same thing.
 
 Apply $\sigma_z$ to the $x$-definite state $|r\rangle$:
 
@@ -142,14 +140,13 @@ $$
 The operator turned *right* into *left*. No $z$ measurement of an
 electron prepared along $x$ ever produces an electron pointing left
 along $x$: it produces $|u\rangle$ or $|d\rangle$, at random. So
-$\sigma_z|r\rangle$ is not the state after a measurement. What it is,
-is a *code*: written in the eigenbasis of $\sigma_z$, the input
+$\sigma_z|r\rangle$ is not the state after a measurement. It is a *code*: written in the eigenbasis of $\sigma_z$, the input
 $|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
 lists the possible answers as its basis directions, and the operator
 has tagged each direction with the answer's value. How the
 coefficients encode the *probabilities* of those answers is the next
 section's whole subject. (Susskind and Friedman devote their §3.5, "A
-common misconception", to exactly this point.)
+common misconception", to this point.)
 
 ## What the operator of an observable must satisfy
 
@@ -172,9 +169,9 @@ length one, say in one phrase: **the definite states of an observable
 form an orthonormal basis of the state space.** This is why every
 measurement axis of the first post donated a basis — $\sigma_z$ owns
 $\{|u\rangle, |d\rangle\}$, $\sigma_x$ owns $\{|r\rangle, |l\rangle\}$ —
-and it is the structural fact that the rest of the post leans on.
+and the rest of the post depends on it.
 
-Two refinements, for later. An eigenvalue may belong to more than one
+Two refinements. An eigenvalue may belong to more than one
 independent eigenvector; the eigenvalue is then called
 **degenerate**, and the measurement does not determine the state
 uniquely — only the subspace it lands in. The hydrogen atom will
@@ -223,7 +220,7 @@ The coefficients in the new basis no longer add up to a probability
 distribution, and the vector would have to be rescaled by hand every
 time the basis changes. But the state is the same physical state
 whichever apparatus we point at it; a rule that needs a
-basis-dependent rescaling describes no physics.
+rescaling depending on the basis cannot be a law about the state.
 
 ![The same state vector in two orthonormal bases: the sum of the magnitudes of its coordinates changes with the basis, while the sum of their squares — the squared length — does not](born_counterexample.png)
 
@@ -257,8 +254,7 @@ $$
 
 An identity in independent variables can be differentiated with
 respect to any of them. Differentiate with respect to $c_1$ (assume
-$f$ differentiable — this is the one technical assumption of the
-argument):
+$f$ differentiable; this is the argument's technical assumption):
 
 $$
 f'(c_1) - f'(c_n)\, \frac{c_1}{c_n} = 0 \qquad\Longrightarrow\qquad \frac{f'(c_1)}{c_1} = \frac{f'(c_n)}{c_n}.
@@ -309,9 +305,8 @@ which satisfy $\sum_i |c_i|^2 = 1$, and:
 > measurement of that observable returns $E_i$ is
 > $$P(E_i) = |c_i|^2 = |\langle E_i | \psi \rangle|^2 .$$
 
-Squared magnitudes, because the squared length is the one quantity
-that every orthonormal basis agrees on. This is the content of the
-rule: it is the only assignment of probabilities to coordinates that
+Squared magnitudes, because the squared length is the quantity that
+does not change between orthonormal bases. The rule is the only assignment of probabilities to coordinates that
 does not depend on the basis the coordinates are taken in. The
 argument assumed a differentiable $f$ that is the same for every
 coordinate; the theorem that removes those assumptions — for state
@@ -328,7 +323,7 @@ $|\psi\rangle = \int \psi(x)\,|x\rangle\,dx$, and the "coordinates"
 $\psi(x) = \langle x | \psi \rangle$ are a function. The Born rule
 carries over with one change of wording, which the last post's grid
 makes exact. Cut the line into cells of width $\Delta x$; the cell
-states $|\hat x_i\rangle$ are an honest orthonormal basis, and the
+states $|\hat x_i\rangle$ are an orthonormal basis of $L^2$, and the
 coordinate of $|\psi\rangle$ along the cell containing $x_i$ is
 $c_i = \psi(\xi_i)\sqrt{\Delta x}$ for a point $\xi_i$ of the cell. By
 the Born rule the probability of finding the particle in that cell is
@@ -346,8 +341,8 @@ $$
 P(a \leq x \leq b) = \int_a^b |\psi(x)|^2\, dx,
 $$
 
-with total probability $\int |\psi|^2\,dx = 1$: the normalization of
-the state, once more.
+with total probability $\int |\psi|^2\,dx = 1$, the normalization of
+the state.
 
 ![The Born rule on the line: |ψ(x)|² is a probability density, and the probability of a cell of width Δx is the density times the width](born_density.png)
 
@@ -355,7 +350,7 @@ the state, once more.
 
 The first post wrote the average of many measurements as
 $\langle \sigma \rangle$ and called it Dirac's bracket notation,
-promising an explanation. Here it is. With the probabilities in hand,
+promising an explanation. With the probabilities in hand,
 the statistical average of the outcomes of $E$ in the state
 $|\psi\rangle$ is
 
@@ -380,11 +375,10 @@ $$
 \boxed{\; \langle E \rangle = \langle \psi | \hat E | \psi \rangle \;}
 $$
 
-The bracket of the first post was this sandwich all along — the
-operator between the state and itself. The notation that looked like
-a convention is a computation.
+The bracket of the first post is this sandwich: the operator between
+the state and itself.
 
-Check it against the one number the first post handed us. Prepare
+Check it against the number the first post measured. Prepare
 $|r\rangle$ — spin $+1$ along $x$ — and measure along $z$, at $90°$ to
 the preparation. The first post's cosine predicts an average of
 $\cos 90° = 0$. Compute:
@@ -395,16 +389,15 @@ $$
 
 using $\sigma_z|r\rangle = |l\rangle$ from above and
 $\langle r | l \rangle = 0$. The formalism returns the right average
-for the one angle it can reach today. The full $\cos\theta$, for an
-arbitrary angle between the axes, needs the spin operators for
-arbitrary directions, and those are the business of the next post.
+for this angle. The full $\cos\theta$, for an arbitrary angle between
+the axes, needs the spin operators for arbitrary directions, which
+the next post constructs.
 
 ## Hermitian operators
 
 Which operators satisfy the three conditions — real spectrum,
-orthonormal eigenbasis? The answer is a class with a name, and
-reaching it needs one new notion: moving an operator from one side of
-the bracket to the other.
+orthonormal eigenbasis? The answer is a named class of operators, and it needs one new
+notion: moving an operator from one side of the bracket to the other.
 
 ### The adjoint
 
@@ -414,8 +407,7 @@ $\langle \varphi | \hat M | \psi \rangle = \langle \varphi | \hat M \psi \rangle
 the operator acts on the ket. We want to be able to let it act on the
 *bra* instead. For an operator $\hat M$, its
 [**adjoint**](https://en.wikipedia.org/wiki/Hermitian_adjoint)
-(Hermitian conjugate) $\hat M^\dagger$ is the operator that makes
-this move legal:
+(Hermitian conjugate) $\hat M^\dagger$ is the operator for which this holds:
 
 $$
 \langle \varphi | \hat M \psi \rangle = \langle \hat M^\dagger \varphi | \psi \rangle \qquad \text{for all } |\varphi\rangle, |\psi\rangle .
@@ -425,14 +417,13 @@ In finite dimensions it exists and is unique (the second post's Riesz
 theorem gives it: for fixed $|\varphi\rangle$ the left side is a
 linear functional of $|\psi\rangle$, hence an inner product with a
 unique vector, which we name $\hat M^\dagger|\varphi\rangle$). Three
-rules follow from the definition and will be used without comment:
+rules follow from the definition:
 $(\hat A^\dagger)^\dagger = \hat A$,
 $(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$,
 $(\hat A \hat B)^\dagger = \hat B^\dagger \hat A^\dagger$. For a
 scalar, the adjoint is the complex conjugate: $(c\,\hat I)^\dagger = c^*\hat I$.
 And the adjoint of a ket is its bra, $(|v\rangle)^\dagger = \langle v|$,
-which is the second post's bra–ket correspondence in one more
-notation.
+which is the second post's bra–ket correspondence.
 
 In a matrix, with respect to an orthonormal basis, the adjoint is the
 **conjugate transpose**: $(M^\dagger)_{ij} = M_{ji}^*$ — flip across
@@ -489,8 +480,8 @@ and we have shown: every observable is Hermitian. In matrix terms,
 with respect to any orthonormal basis, the matrix of an observable
 equals its own conjugate transpose.
 
-The converse is what makes the class useful: a Hermitian operator
-automatically has the two properties we demanded.
+The converse also holds: a Hermitian operator has the two properties
+we demanded.
 
 *Real eigenvalues.* Let $\hat E|\varphi\rangle = \lambda|\varphi\rangle$
 with $|\varphi\rangle \neq 0$. Move the operator across the bracket:
@@ -525,8 +516,7 @@ self-adjoint operators (the Hilbert–Schmidt theorem — Sergeev's
 lectures, Theorem 40), and for general self-adjoint operators, such
 as position and momentum, the sum over eigenvectors becomes an
 integral over a continuous spectrum, in the sense the last post's
-Appendix A pointed at. We name these and move on; the problems ahead
-will meet each kind on its own ground.
+Appendix A pointed at. The problems ahead meet each kind separately.
 
 So the three physical conditions and the one algebraic condition are
 the same thing:
@@ -542,7 +532,7 @@ the mathematics; the formalism only says it may.
 
 ## Two of the three Pauli matrices
 
-The spin gives all of this a two-by-two face. Work in the $z$ basis
+For the spin all of this is two-by-two matrices. Work in the $z$ basis
 $\{|u\rangle, |d\rangle\}$, with $|u\rangle = (1, 0)^T$ and
 $|d\rangle = (0, 1)^T$ as in the second post. The spectral
 decomposition of $\sigma_z$ is immediate — outcomes $\pm 1$ on the
@@ -574,8 +564,8 @@ Both have eigenvalues $+1$ and $-1$: for $\sigma_x$, check directly
 that $\sigma_x (1, 1)^T = (1, 1)^T$ and $\sigma_x (1, -1)^T = -(1, -1)^T$.
 These are two of the three
 [**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
-and they were not looked up: they were *read off the experiments*,
-through the definite states the second post extracted from them. The
+and they were obtained from the experiments, through the definite
+states the second post extracted from them, not taken from a table. The
 third, $\sigma_y$, waits for the $y$-axis states $|i\rangle, |o\rangle$,
 which the second post showed cannot be built with real amplitudes; the
 next post builds them, and $\sigma_y$ with them.
@@ -585,7 +575,7 @@ next post builds them, and $\sigma_y$ with them.
 ## Measurement, completed
 
 Wishlist item 4 asked how measurement changes the state. Everything
-needed is now on the table.
+needed is now available.
 
 > **Measurement.** Measuring the observable $\hat E$ in the state
 > $|\psi\rangle = \sum_i c_i|E_i\rangle$ returns one of the
@@ -604,8 +594,7 @@ a unit factor times $|E_i\rangle$ — the same physical state. And the
 probability of that outcome is the sandwich of the projector:
 $\langle \psi | E_i \rangle \langle E_i | \psi \rangle = |c_i|^2$.
 
-Read the first post's three experiments in this language, one last
-time.
+Read the first post's three experiments in this language.
 
 - *Repetition confirms.* After a $z$ measurement the state is
   $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$; measuring
@@ -620,8 +609,8 @@ time.
   state becomes $|r\rangle$ or $|l\rangle$. Measure $\sigma_z$ once
   more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$, half
   $|d\rangle$, so the old certainty is gone — probability $\frac12$
-  for either answer. The erasure the first post found so strange is
-  the statement that $\sigma_z$ and $\sigma_x$ have no eigenvector in
+  for either answer. The erasure of the first post is
+the statement that $\sigma_z$ and $\sigma_x$ have no eigenvector in
   common.
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
@@ -653,7 +642,7 @@ Next stop: the qubit and the Bloch sphere. The $y$-axis states are
 built, complex amplitudes become unavoidable, $\sigma_y$ joins the
 other two, and the spin operator along an arbitrary direction $\hat n$
 turns out to be $\hat n \cdot \vec\sigma$ — from which the first
-post's $\langle \sigma \rangle = \cos\theta$ falls out in one line,
+post's $\langle \sigma \rangle = \cos\theta$ follows in one line,
 and a two-dimensional complex state space acquires the geometry of an
 ordinary sphere.
 
