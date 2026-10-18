@@ -567,14 +567,17 @@ $$
 \boxed{\; K(x, y) = \delta(x - y) \;}
 $$
 
-The two features of the spikes — area one, and concentration at a
-single point — were observed on the grid, for finite $\Delta x$. For
-the limit they follow from the sifting property, so nothing beyond it
-needs to be assumed. Take $f \equiv 1$: the sifting property gives
-$\int \delta(x - y)\, dy = 1$, area one. Take any $f$ with $f(x) = 0$:
-the sifting property gives $\int f(y)\, \delta(x - y)\, dy = 0$,
-whatever $f$ does away from $x$ — the delta sees only the point
-$y = x$.
+On the grid the spike had two features: area one, and zero outside
+one cell. The limit $\delta$ has no values, so for it both features
+have to be read off the sifting property, through integrals:
+
+- **area one** — take $f \equiv 1$; the sifting property gives
+  $\int \delta(x - y)\, dy = 1$;
+- **zero away from $x$** — take two functions $f_1$ and $f_2$ that
+  agree near $x$; the sifting property gives
+  $\int f_1\, \delta(x - y)\, dy = \int f_2\, \delta(x - y)\, dy$, both
+  equal to the common value at $x$. However $f_1$ and $f_2$ differ away
+  from $x$, the delta does not notice.
 
 Sifting in the $y$ variable also collapses a double integral into a
 single one,
