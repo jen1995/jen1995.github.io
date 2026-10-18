@@ -692,9 +692,7 @@ and the diagonal selector in a double integral.
   and the opening line $|\psi\rangle = \int \psi(x)\, |x\rangle\, dx$
   becomes
 
-  $$
-  \psi(y) = \int \psi(x)\, \delta(y - x)\, dx,
-  $$
+  $$\psi(y) = \int \psi(x)\, \delta(y - x)\, dx,$$
 
   the sifting property read from right to left: a function as a
   superposition of deltas. On the grid the same line is literal — the
