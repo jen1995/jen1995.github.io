@@ -702,9 +702,9 @@ an ordinary discrete list of numbers. The infinite norm shows up there
 too: $\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
 $\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
 three faces — a delta, a plane wave, a divergent column — one
-generalized vector, and one rule for reading off any of its faces:
-take the inner product with the new basis vector, and let the delta
-sift.
+generalized vector. In every case the coordinates were obtained the
+same way as in finite dimensions: as inner products with the basis
+vectors, which the delta reduces to values at $x_0$.
 
 ## Summary
 
