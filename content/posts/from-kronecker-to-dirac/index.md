@@ -596,11 +596,6 @@ inner product: with the integral read as the limit above,
 $\langle x | \psi \rangle = \int \langle x | y \rangle\, \psi(y)\, dy = \psi(x)$
 for every state, which is the requirement.
 
-Note what we did **not** do: we never claimed the spikes converge as
-functions. We tested against $f$, produced a limit of numbers, and
-identified $K$ by its action. That is the only sense in which the
-identification holds, and it has a name.
-
 <details>
 <summary>Two limits in one: the grid and the spike shrink together</summary>
 
@@ -643,6 +638,11 @@ that tests it cannot be separated: a kernel of width $\Delta x$ is only
 visible to a sum of resolution $\Delta x$ or better.
 
 </details>
+
+Note what we did **not** do: we never claimed the spikes converge as
+functions. We tested against $f$, produced a limit of numbers, and
+identified $K$ by its action. That is the only sense in which the
+identification holds, and it has a name.
 
 ## Weak convergence
 
