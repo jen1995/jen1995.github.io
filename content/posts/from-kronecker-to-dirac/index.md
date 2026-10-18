@@ -767,14 +767,6 @@ and the diagonal selector in a double integral.
   wavefunction $\sum_i a(x_i)\, \mathbf 1_{C_i}(y)$, the step function
   that approximates $a$.
 
-The logic of the post hangs on the first of these properties: that
-the position kets return coordinates, exactly as an orthonormal basis
-does through $\delta_{ki}$. The $L^2$ inner product followed from that
-requirement in one line; the grid construction then built kets that
-satisfy it in the limit, and the price of satisfying it — the
-$1/\Delta x$ — is what turned the Kronecker delta into the Dirac
-delta.
-
 ## Onward
 
 Both debts of the last post are paid: $|x\rangle$ is the limit of the
