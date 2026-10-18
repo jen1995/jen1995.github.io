@@ -520,11 +520,14 @@ from the completeness relation $\int |x'\rangle\langle x'|\, dx' = I$
 and the requirement $\langle x | f \rangle = f(x)$ he deduces that
 $\langle x | x' \rangle$ must vanish off the diagonal and integrate to
 one — Dirac's argument, with this post's requirement in Dirac's role.
-The two routes agree, because $\sum_i f^* g\, \Delta$ with unit kets is
-the same number as $\sum_i f^* g\, \Delta^2$ with kets of norm
-$1/\sqrt{\Delta}$; what this post adds is the kets themselves — the
-cell states — and the kernel $\delta_{ij} / \Delta x$ whose limit is
-about to be identified.
+The two routes agree on every number. The inner product of two
+discretized states is
+$\sum_i a(x_i)^* b(x_i)\, \langle x_i | x_i \rangle\, \Delta^2$, and the
+sum needs one factor $1/\Delta$ to survive the limit: Shankar writes it
+into the definition of the inner product, this post writes it into
+the kets, $\langle x_i | x_i \rangle = 1/\Delta x$. What the second
+choice adds is the kets themselves — the cell states — and the kernel
+$\delta_{ij} / \Delta x$ whose limit is about to be identified.
 
 That settles the inner product, but not the kernel itself. We would
 like to say what $K_\Delta = \delta_{ij} / \Delta x$ *converges to*,
