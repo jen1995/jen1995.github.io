@@ -660,32 +660,51 @@ vector equals a column of numbers only after a basis is chosen; the
 delta is the face of $|x_0\rangle$ in the position basis, and in
 another basis the same ket has other coordinates.
 
-Two of those faces, quoted now and derived later on the road. In
-finite dimensions a basis vector
-$|E_k\rangle$ has coordinates $\delta_{ik}$ in its own basis and
-coordinates $\langle F_j | E_k \rangle$ in any other basis
-$\{|F_j\rangle\}$, generally all nonzero. The position ket behaves the
-same way: in the position basis its coordinates are
-$\delta(y - x_0)$. In the *momentum* basis — the plane waves that the
-dynamics post will introduce as the eigenvectors of momentum — its
-coordinates are
+Two of those faces, with the basis vectors quoted now and derived
+later on the road. In finite dimensions a basis vector $|E_k\rangle$
+has coordinates $\delta_{ik}$ in its own basis; in any other basis
+$\{|F_j\rangle\}$ its coordinates are its inner products with the new
+basis vectors, $\langle F_j | E_k \rangle$, generally all nonzero. The
+position ket behaves the same way, and the inner products are computed
+by sifting. In its own basis, the delta: $\langle y | x_0 \rangle = \delta(y - x_0)$.
+
+Take the **momentum basis**: the kets $|k\rangle$, one for each real
+$k$, whose wavefunctions are the plane waves
 
 $$
-\langle k | x_0 \rangle = \frac{e^{-ikx_0}}{\sqrt{2\pi}},
+\langle y | k \rangle = \frac{e^{iky}}{\sqrt{2\pi}}
 $$
 
-a complex exponential of constant modulus: the Fourier road's "flat
-spectrum of a delta", now as a change of basis (we quote the formula
-here and derive it there). And in the *energy* basis of a particle in
-a box of length $L$, with eigenfunctions
-$\varphi_n(x) = \sqrt{2/L}\, \sin(n\pi x / L)$, the coordinates of
-$|x_0\rangle$ are an ordinary discrete list of numbers,
-$\langle E_n | x_0 \rangle = \varphi_n(x_0)$ — the values of the
-eigenfunctions at the point. The infinite norm shows up there too:
-$\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
+(the dynamics post will introduce them as the eigenvectors of
+momentum; here only the wavefunctions are used). The coordinates of
+$|x_0\rangle$ in this basis are its inner products with them, and the
+delta sifts:
+
+$$
+\langle k | x_0 \rangle = \int \frac{e^{-iky}}{\sqrt{2\pi}}\, \delta(y - x_0)\, dy = \frac{e^{-ikx_0}}{\sqrt{2\pi}},
+$$
+
+a complex exponential of constant modulus — the Fourier road's "flat
+spectrum of a delta", now as a change of basis.
+
+Take the **energy basis** of a particle in a box of length $L$: the
+eigenfunctions $\varphi_n(y) = \sqrt{2/L}\, \sin(n\pi y / L)$,
+$n = 1, 2, \dots$ (the box post will derive them; again only the
+functions are used). The coordinates of $|x_0\rangle$ are once more
+inner products, sifted to the values of the eigenfunctions at the
+point:
+
+$$
+\langle E_n | x_0 \rangle = \int \varphi_n(y)\, \delta(y - x_0)\, dy = \varphi_n(x_0),
+$$
+
+an ordinary discrete list of numbers. The infinite norm shows up there
+too: $\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
 $\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
 three faces — a delta, a plane wave, a divergent column — one
-generalized vector.
+generalized vector, and one rule for reading off any of its faces:
+take the inner product with the new basis vector, and let the delta
+sift.
 
 ## Summary
 
