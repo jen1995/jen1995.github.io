@@ -100,7 +100,7 @@ Tables, `> 💡` callout quotes, `<details>` blocks and code fences all work.
 The posts list is **manually ordered** via `weight` in front matter (Hugo
 sorts weighted pages first, ascending; unweighted pages fall to the bottom).
 Current ladder: Fourier trilogy 10/20/30, Four Shades 40, Three Names 45,
-quantum road 47, 48, …, Transformers 50, VAE 60. **Every new post must get a weight**, or it will sink below
+quantum road 47, 48, 49, … (next quantum posts take 50, 51, …), Transformers 80, VAE 90. **Every new post must get a weight**, or it will sink below
 everything weighted. Leave gaps (steps of 10) so future posts can slot in
 between.
 

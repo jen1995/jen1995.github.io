@@ -1,7 +1,7 @@
 ---
 title: "From Kronecker Delta to Dirac Delta"
-date: 2026-09-27
-draft: true
+date: 2026-10-18
+draft: false
 author: ["Ivan Petrov", "Eugenia Elistratova"]
 tags: ["quantum", "math"]
 summary: "The last post wrote a state as an integral over position kets and left two symbols on credit: what is |x⟩, and what is ⟨x|y⟩? A guest post pays the debt by discretizing honestly — and watching the Kronecker delta of an orthonormal grid turn, in the only sense available, into the Dirac delta."
@@ -792,6 +792,16 @@ stop: measurable quantities finally get objects of their own —
 observables as operators, eigenvalues as the menu of outcomes — and
 the Born rule, taken on credit twice by now, is earned rather than
 postulated.
+
+> The grid of this post can be run, not just read about: a
+> [ready-made notebook](https://github.com/jen1995/jen1995.github.io/blob/main/notebooks/kronecker_to_dirac.ipynb)
+> lives in this blog's repository and [opens in
+> Colab](https://colab.research.google.com/github/jen1995/jen1995.github.io/blob/main/notebooks/kronecker_to_dirac.ipynb)
+> in one click: the discretized state as a step function, the dead end
+> and the fix side by side on finer and finer grids, the requirement and
+> the sifting sums converging to the value at the target point,
+> pointwise versus weak convergence of the spikes, and the coordinates
+> of one position ket in three bases.
 
 ## Appendix A. The price: the position kets are not states
 

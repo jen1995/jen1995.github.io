@@ -136,6 +136,18 @@ The longest post; notes §9–13 + the classical interlude.
    twin ψ̃(p), squeeze one and watch the other spread (the uncertainty
    trade-off, interactive; reuses the Fourier road's machinery).
 
+## Status (2026-10-18)
+
+- QM-1 *The Apparatus and the Arrow* (weight 47) and QM-2 *States Are
+  Vectors* (48) published 2026-09-06; QM-2½ *From Kronecker Delta to Dirac
+  Delta* (49, with Ivan Petrov) published 2026-10-18 with the companion
+  notebook `notebooks/kronecker_to_dirac.ipynb`. Transformers/VAE moved to
+  weights 80/90; next quantum posts take 50, 51, …
+- Material cut from the delta post and kept for later posts is in
+  `drafts/quantum/delta_post_cuts.md` (Born-rule/density remark, separability
+  remark, the very-large-box section).
+- Next: QM-3 (observables, spectrum, the Born rule earned).
+
 ## QM-6. Particle in a box (problem #1)
 
 Stationary Schrödinger equation (separation of time), infinite well:
