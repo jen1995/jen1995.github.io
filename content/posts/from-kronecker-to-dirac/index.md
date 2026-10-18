@@ -689,7 +689,9 @@ and the diagonal selector in a double integral.
   the kets do to states. Their norm $1/\sqrt{\Delta x}$ diverges, so the
   limit is not an element of $L^2$ and not a state: a *generalized
   vector*. Physically, "the particle is exactly at $x_0$" is an
-  idealization that honest states approach and never reach.
+  idealization that honest states approach and never reach. Both
+  points are spelled out in
+  [Appendix A](#appendix-a-the-price-the-position-kets-are-not-states).
 - **By its coordinates.** In the *position basis* its coordinates are
   $\langle y | x_0 \rangle = \delta(y - x_0)$. Since the position
   representation identifies every ket with its wavefunction, in that
