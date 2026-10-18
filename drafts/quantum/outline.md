@@ -212,11 +212,14 @@ Source: a physicist's view of "any QM problem". Where each remark lands:
   stays deferred (his pointers: A. Zee, *QFT in a Nutshell* — has problems
   and solutions; Peskin & Schroeder, *Introduction to QFT* — "with a
   teacher").
-- **QM-2½ (delta post) — DONE as a cut:** "physicists always mean a
-  discretized Hilbert space": a very large box quantizes momentum
+- **QM-2½ (the box) — written, then cut from the delta post on 2026-10-18;
+  text kept in drafts/quantum/delta_post_cuts.md.** "Physicists always mean
+  a discretized Hilbert space": a very large box quantizes momentum
   (k_n = 2πn/L), box-normalized plane waves are Kronecker-orthonormal, and
   L → ∞ gives Σ_n → (L/2π)∫dk and ⟨k|k′⟩ = δ(k−k′) — our grid construction
   with position ↔ momentum swapped (box ↔ grid, 2π/L ↔ Δx, 1/√L ↔ 1/√Δx).
+  New home: QM-3 or QM-5, next to eigenbases of operators — it answers why
+  practice talks in boxes and discrete momenta rather than in deltas.
 - **QM-3 (observables).** Kets are chosen by solving the one-particle problem:
   the eigenbasis of the Hamiltonian; observables are averages ⟨ψ|A|ψ⟩; a
   concrete representation = bra times ket, ⟨p|1⟩ "take the first function
@@ -241,7 +244,7 @@ Source: a physicist's view of "any QM problem". Where each remark lands:
   the shape of the boundary matters (graphene edges: armchair vs zigzag);
   larger — it does not. Box quantization of momentum for a cm-sized
   imaginary cube → discrete momenta → momentum representation as the
-  infinite-box limit (ties back to the delta post's cut).
+  infinite-box limit (ties back to the box text in delta_post_cuts.md).
 - **QM-7 (tunneling).** Slowly varying potential → locally constant → piece
   together box solutions: the WKB idea, as a cut.
 - **Contraction mapping (Banach fixed-point) theorem** — his general
