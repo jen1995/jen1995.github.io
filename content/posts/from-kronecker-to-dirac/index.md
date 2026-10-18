@@ -264,8 +264,10 @@ $\langle \psi | \varphi \rangle$ becomes a finite computation and the
 unknown becomes a finite table of numbers $\langle x_i | y_j \rangle$;
 find which table satisfies the requirement in the limit; and read the
 Dirac delta off that table's limit. Lay down a **grid** on the line: sample points
-$x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — and keep only the
-kets $|x_i\rangle$ at the grid points. On any bounded stretch of the
+$x_1, x_2, \dots$ a fixed spacing $\Delta x$ apart — equivalently, cut
+the line into **cells** of width $\Delta x$ with one sample point in
+the middle of each — and keep only the kets $|x_i\rangle$ at the grid
+points. On any bounded stretch of the
 line these are finitely many, and we *declare* them to be the axes.
 Replacing the integral by its Riemann sum over this grid gives the
 **discretized states**
@@ -635,17 +637,21 @@ $$
 which is what the previous section proved, with the integral on the
 left written as the sum $\sum_j f(\xi_j)\, K_\Delta(x_i, y_j)\, \Delta y$. The arrow above is universally
 used as shorthand for this statement, and now we know what it
-abbreviates.
-
-![Pointwise versus weak convergence: the spikes' values blow up at y = x and vanish elsewhere, so they converge to no function; the numbers obtained by integrating a continuous f against them — the averages of f over shrinking cells — converge to f(x)](weak_vs_pointwise.png)
- It also has a classical name: in Gelfand and Shilov's
+abbreviates. It also has a classical name: in Gelfand and Shilov's
 *Generalized Functions*, vol. 1, a sequence of functions $f_\nu$ is
 called **delta-like** if its integrals over any interval stay bounded
 and $\int_a^b f_\nu \to 1$ when $a \lt 0 \lt b$ and $\to 0$ otherwise —
 and every delta-like sequence converges weakly to $\delta$ (chapter I,
 §2.5). Our spikes, read as step functions of width $\Delta x$ and
 height $1/\Delta x$ centered at $x$, satisfy both conditions on sight,
-so the identification above is a special case of that theorem.
+so the identification above is a special case of that theorem. So
+are the averaging windows of
+[Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+— rectangles of width $\tau$ and height $1/\tau$ — which is how the
+two roads of the opening figure end at the same object: both are
+delta-like sequences, and both converge weakly to the same $\delta$.
+
+![Pointwise versus weak convergence: the spikes' values blow up at y = x and vanish elsewhere, so they converge to no function; the numbers obtained by integrating a continuous f against them — the averages of f over shrinking cells — converge to f(x)](weak_vs_pointwise.png)
 
 ## One ket, three bases
 
@@ -703,7 +709,10 @@ an ordinary discrete list of numbers. The infinite norm shows up there
 too: $\sum_n |\varphi_n(x_0)|^2$ diverges, because the terms
 $\frac{2}{L} \sin^2(n\pi x_0 / L)$ do not go to zero. Three bases,
 three faces — a delta, a plane wave, a divergent column — one
-generalized vector. In every case the coordinates were obtained the
+**generalized vector**: the name, made precise in
+[Appendix A](#appendix-a-the-price-the-position-kets-are-not-states),
+for an object that, like the delta, is defined only by what it does to
+honest states. In every case the coordinates were obtained the
 same way as in finite dimensions: as inner products with the basis
 vectors, which the delta reduces to values at $x_0$.
 
@@ -725,13 +734,16 @@ $$
 
 To get from the first to the second, the discrete kernel must be
 rescaled by $1/\Delta x$, because that is the normalization a
-continuous basis forces — the coordinate of a state along a unit cell
-state is an inner product over the cell, $a(x_i)\sqrt{\Delta x}$, so
-the amplitude of a cell carries a square root of the width;
-physically, the probability of a cell is a density times a width — and the resulting spikes converge to $\delta(x - y)$ only in
-the weak sense: not point by point, but through what they do to every
-function they are integrated against. In short: the Dirac delta is
-what the Kronecker delta becomes when a sum becomes an integral.
+continuous basis forces: the coordinate of a state along a unit cell
+state is an inner product over the cell, $a(\xi_i)\sqrt{\Delta x}$, so
+the amplitude of a cell carries a square root of the width, and the
+grid ket that stands in for the point carries the inverse of it. The
+resulting spikes converge to $\delta(x - y)$ only in the weak sense:
+not point by point, but through what they do to every function they
+are integrated against — the same sense in which Part 1's shrinking
+window converged, so the two roads of the opening figure do end at one
+object. In short: the Dirac delta is what the Kronecker delta becomes
+when a sum becomes an integral.
 
 The opening asked two questions, and here are the answers.
 
@@ -788,8 +800,8 @@ ket is
 $\lVert\, |x_i\rangle \,\rVert = 1 / \sqrt{\Delta x}$, and it
 **diverges** as $\Delta x \to 0$. Whatever the limiting objects
 $|x\rangle$ are, they are not unit vectors, not normalizable vectors,
-not elements of the Hilbert space at all. That is why "basis" has been
-in scare quotes since the first paragraph.
+not elements of the Hilbert space at all. That is why "basis" wore
+scare quotes in the Kronecker section.
 
 Does this contradict the last post, where the space of states was
 declared a Hilbert space? No — and the distinction is worth stating
