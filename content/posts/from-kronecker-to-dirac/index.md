@@ -567,11 +567,12 @@ $$
 \boxed{\; K(x, y) = \delta(x - y) \;}
 $$
 
-The two features of the spikes survive in this reading. The sifting
+The two features of the spikes survive in this reading. The spike
+was zero outside one cell; the delta has no values, but the sifting
 property says that $\int f\, \delta(x - y)\, dy$ depends on $f$ only
-through $f(x)$ — that is what "zero away from $x$" means for an object
-with no values — and with $f \equiv 1$ it gives
-$\int \delta(x - y)\, dy = 1$, area one.
+through $f(x)$, which is the same thing said through integrals. The
+spike had area one; with $f \equiv 1$ the sifting property gives
+$\int \delta(x - y)\, dy = 1$.
 
 Sifting in the $y$ variable also collapses a double integral into a
 single one,
