@@ -73,7 +73,9 @@ Three facts from the earlier posts are used throughout.
 What is missing is an object for the *question itself* — for "spin
 along $z$" as opposed to its two answers.
 
-## What the apparatus gives us: averages
+## From averages to operators
+
+### What the apparatus gives us: averages
 
 Go back to the [first post's third
 experiment](/posts/the-apparatus-and-the-arrow/#experiment-three-turning-the-arrow).
@@ -92,7 +94,7 @@ first of all do this: given a state, return the average of the
 outcomes. The rest of the post is what that requirement forces the
 object to be.
 
-## Heisenberg's table
+### Heisenberg's table
 
 The object was found before anyone knew what it was. In the summer of
 1925 Heisenberg set out to build a mechanics of the atom out of
@@ -122,7 +124,7 @@ What survives from that summer, for this post, is the shape of the
 object: **a measurable quantity is a table of numbers indexed by
 pairs of states.**
 
-## A table for a question
+### A table for a question
 
 The same shape appears in the laboratory of the first post, following
 Feynman (volume III, chapter 5). Fix the $z$ basis
@@ -156,7 +158,7 @@ written without a hat, by convention). Nothing has been said yet about
 which operator belongs to which question, or about eigenvectors. That
 is what the averages will decide.
 
-## The average is a quadratic form
+### The average is a quadratic form
 
 Take a state $|\psi\rangle = \sum_j c_j |E_j\rangle$ and a question
 with operator $\hat A$. What expression in the coordinates $c_j$
@@ -192,7 +194,9 @@ with the same average in every state are not distinguishable by any
 experiment — and a quadratic form determines its matrix, so the
 table of a question is fixed by its averages.
 
-## Real averages force a Hermitian table
+## What the table must be
+
+### Real averages force a Hermitian table
 
 Averages of real readings are real numbers. So the quadratic form
 $\langle \psi | \hat A | \psi \rangle$ must be real for *every* state
@@ -267,7 +271,7 @@ So the first consequence of "averages are real" is that **the
 table of every measurable quantity is Hermitian** — and this was
 obtained before any eigenvector was mentioned.
 
-## Diagonalize: an average of eigenvalues
+### Diagonalize: an average of eigenvalues
 
 A Hermitian table can be simplified by a change of basis, and the
 simplified form is where outcomes and probabilities come from.
@@ -530,7 +534,9 @@ the state.
 
 ![The Born rule on the line: |ψ(x)|² is a probability density, and the probability of a cell of width Δx is the density times the width](born_density.png)
 
-## Eigenvectors are the definite states
+## Outcomes, definite states, and the spin
+
+### Eigenvectors are the definite states
 
 The first post's experiment one says that some states give a certain
 answer: measure again and again, and the window repeats itself. In
@@ -608,7 +614,7 @@ The formalism returns the right average for this angle. The full
 $\cos\theta$, for an arbitrary angle between the axes, needs the spin
 operators for arbitrary directions, which the next post constructs.
 
-## Two of the three Pauli matrices
+### Two of the three Pauli matrices
 
 For the spin everything above is two-by-two matrices. Work in the $z$
 basis $\{|u\rangle, |d\rangle\}$, with $|u\rangle = (1, 0)^T$ and
@@ -651,7 +657,7 @@ them.
 
 ![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
 
-## Measurement, completed
+### Measurement, completed
 
 Wishlist item 4 asked how measurement changes the state. Everything
 needed is now available.
