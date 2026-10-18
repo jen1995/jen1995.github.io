@@ -387,9 +387,13 @@ because distinct cells are disjoint and a cell has length
 $\Delta x$. The Kronecker delta is back, but its indices now label
 *intervals*, and the $1$ on the diagonal is a cell measured against
 itself.
-(This way of building a continuous basis from a lattice of cells is
-how Shankar's *Principles of Quantum Mechanics* introduces
-infinite-dimensional state spaces, §1.10; see the references.)
+(The idea of reaching a continuous basis through a lattice is how
+Shankar's *Principles of Quantum Mechanics* introduces
+infinite-dimensional state spaces, §1.10: a function on a string is a
+vector of its values at $n$ lattice points, and the inner product must
+acquire the spacing $\Delta$ for the limit $n \to \infty$ to be
+$\int f^* g\, dx$. The cell states, and the route through the
+requirement, are this post's own; see the references.)
 
 ![The cell states as wavefunctions: flat bumps of height 1/√Δx on disjoint cells — orthonormal by inspection; a state written in them has amplitudes a(x_i)√Δx](cell_states.png)
 
@@ -937,7 +941,8 @@ post took the diagonal.
   outside the Hilbert space and how Dirac's formalism is made rigorous.
 - R. Shankar. *Principles of Quantum Mechanics*, 2nd ed. Plenum, 1994 —
   §1.10, "Generalization to infinite dimensions": a continuous basis
-  built from a lattice of cells, with the Dirac delta emerging in the
-  limit.
+  reached from a lattice of points, with the spacing entering the
+  inner product and the Dirac delta appearing as the normalization of
+  the limiting kets.
 - This blog's own first meeting with the delta:
   [Part 1 of the Fourier road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal).
