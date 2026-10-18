@@ -598,10 +598,8 @@ for every state, which is the requirement.
 
 (One detail of the test is worth a second look: the step of the grid
 and the width of the spike went to zero *together*. Why that is
-allowed, and why we chose to do it that way, is discussed in the
-optional section
-[*Why one grid*](#why-one-grid-and-the-straight-road-not-taken) at
-the end of the post.)
+allowed, and why we chose to do it that way, is discussed in
+[Appendix B](#appendix-b-why-one-grid-and-the-straight-road-not-taken).)
 
 Note what we did **not** do: we never claimed the spikes converge as
 functions. We tested against $f$, produced a limit of numbers, and
@@ -643,7 +641,70 @@ and every delta-like sequence converges weakly to $\delta$ (chapter I,
 height $1/\Delta x$ centered at $x$, satisfy both conditions on sight,
 so the identification above is a special case of that theorem.
 
-## The price: the position kets are not states
+## Summary
+
+The Kronecker delta $\delta_{ij}$ and the Dirac delta $\delta(x - y)$
+are one idea in two settings. The first selects the diagonal of a
+double sum,
+
+$$
+\sum_i \sum_j a_i^* \, b_j\, \delta_{ij} = \sum_i a_i^* \, b_i;
+$$
+
+the second selects the diagonal of a double integral,
+
+$$
+\iint a(x)^* \, b(y)\, \delta(x - y)\, dx\, dy = \int a(x)^* \, b(x)\, dx.
+$$
+
+To get from the first to the second, the discrete kernel must be
+rescaled by $1/\Delta x$, because that is the normalization a
+continuous basis forces — the coordinate of a state along a unit cell
+state is an inner product over the cell, $a(x_i)\sqrt{\Delta x}$, so
+the amplitude of a cell carries a square root of the width;
+physically, the probability of a cell is a density times a width — and the resulting spikes converge to $\delta(x - y)$ only in
+the weak sense: not point by point, but through what they do to every
+function they are integrated against. In short: the Dirac delta is
+what the Kronecker delta becomes when a sum becomes an integral.
+
+The opening asked two questions, and here are the answers.
+
+*What is $\langle x | y \rangle$?* The Dirac delta, $\delta(x - y)$ —
+the continuous version of $\langle E_i | E_j \rangle = \delta_{ij}$,
+and the diagonal selector in a double integral.
+
+*What is the ket $|x\rangle$?* Not a state and not a function. It is
+defined by one property, that its bra returns the coordinate,
+$\langle x | \psi \rangle = \psi(x)$ for every state; it is reached as
+the limit of the cell states rescaled by $1/\sqrt{\Delta x}$, a limit
+that exists only in the weak sense — through what the kets do to
+states, never as a vector of $L^2$, where its norm would be infinite.
+Mathematically it is a generalized vector; physically, "the particle
+is exactly at $x$" is an idealization that honest states approach and
+never reach. Both points are spelled out in
+[Appendix A](#appendix-a-the-price-the-position-kets-are-not-states).
+
+The logic of the post hangs on the first of these properties: that
+the position kets return coordinates, exactly as an orthonormal basis
+does through $\delta_{ki}$. The $L^2$ inner product followed from that
+requirement in one line; the grid construction then built kets that
+satisfy it in the limit, and the price of satisfying it — the
+$1/\Delta x$ — is what turned the Kronecker delta into the Dirac
+delta.
+
+## Onward
+
+Both debts of the last post are paid: $|x\rangle$ is the limit of the
+normalized cell states, and $\langle x | y \rangle = \delta(x - y)$.
+The road can now use the position basis with a clear conscience. Next
+stop: measurable quantities finally get objects of their own —
+observables as operators, eigenvalues as the menu of outcomes — and
+the Born rule, taken on credit twice by now, is earned rather than
+postulated.
+
+## Appendix A. The price: the position kets are not states
+
+*Optional reading; the rest of the road will refer back to it.*
 
 One consequence of the construction deserves to be said out loud,
 because the rest of the road will keep meeting it. The norm of a grid
@@ -704,10 +765,9 @@ of this kind is a *continuous spectrum*; the box, the tunnel and the
 hydrogen atom will show all three kinds — discrete, continuous, and
 mixed.)
 
-## Why one grid, and the straight road not taken
+## Appendix B. Why one grid, and the straight road not taken
 
-*Optional reading. This section is not needed for the rest of the
-road; it explains a choice made in this post.*
+*Optional reading; it explains a choice made in this post.*
 
 In the test of the kernel the spacing $\Delta x$ played two roles at
 once: the width of the spike $K_\Delta(x_i, y) = \mathbf 1_{C_i}(y) / \Delta x$,
@@ -776,66 +836,6 @@ misses the spike entirely. A kernel of width $\Delta x$ is only visible
 to a sum of resolution $\Delta x$ or better — which is why, on one
 grid, the discrete delta and the sums that test it cannot be
 separated.
-
-## Summary
-
-The Kronecker delta $\delta_{ij}$ and the Dirac delta $\delta(x - y)$
-are one idea in two settings. The first selects the diagonal of a
-double sum,
-
-$$
-\sum_i \sum_j a_i^* \, b_j\, \delta_{ij} = \sum_i a_i^* \, b_i;
-$$
-
-the second selects the diagonal of a double integral,
-
-$$
-\iint a(x)^* \, b(y)\, \delta(x - y)\, dx\, dy = \int a(x)^* \, b(x)\, dx.
-$$
-
-To get from the first to the second, the discrete kernel must be
-rescaled by $1/\Delta x$, because that is the normalization a
-continuous basis forces — the coordinate of a state along a unit cell
-state is an inner product over the cell, $a(x_i)\sqrt{\Delta x}$, so
-the amplitude of a cell carries a square root of the width;
-physically, the probability of a cell is a density times a width — and the resulting spikes converge to $\delta(x - y)$ only in
-the weak sense: not point by point, but through what they do to every
-function they are integrated against. In short: the Dirac delta is
-what the Kronecker delta becomes when a sum becomes an integral.
-
-The opening asked two questions, and here are the answers.
-
-*What is $\langle x | y \rangle$?* The Dirac delta, $\delta(x - y)$ —
-the continuous version of $\langle E_i | E_j \rangle = \delta_{ij}$,
-and the diagonal selector in a double integral.
-
-*What is the ket $|x\rangle$?* Not a state and not a function. It is
-defined by one property, that its bra returns the coordinate,
-$\langle x | \psi \rangle = \psi(x)$ for every state; it is reached as
-the limit of the cell states rescaled by $1/\sqrt{\Delta x}$, a limit
-that exists only in the weak sense — through what the kets do to
-states, never as a vector of $L^2$, where its norm would be infinite.
-Mathematically it is a generalized vector; physically, "the particle
-is exactly at $x$" is an idealization that honest states approach and
-never reach.
-
-The logic of the post hangs on the first of these properties: that
-the position kets return coordinates, exactly as an orthonormal basis
-does through $\delta_{ki}$. The $L^2$ inner product followed from that
-requirement in one line; the grid construction then built kets that
-satisfy it in the limit, and the price of satisfying it — the
-$1/\Delta x$ — is what turned the Kronecker delta into the Dirac
-delta.
-
-## Onward
-
-Both debts of the last post are paid: $|x\rangle$ is the limit of the
-normalized cell states, and $\langle x | y \rangle = \delta(x - y)$.
-The road can now use the position basis with a clear conscience. Next
-stop: measurable quantities finally get objects of their own —
-observables as operators, eigenvalues as the menu of outcomes — and
-the Born rule, taken on credit twice by now, is earned rather than
-postulated.
 
 ## References
 
