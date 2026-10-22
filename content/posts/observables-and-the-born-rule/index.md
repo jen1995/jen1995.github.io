@@ -142,8 +142,13 @@ resolution.
 
 ![A glowing gas of atoms sends a signal in time, a sum of a few pure frequencies; a diffraction grating sends each frequency to its own angle, and on the screen the spectrum appears as lines — the Fourier analysis of the light, performed physically](grating_spectrum.png)
 
-A classical electron circling a nucleus can produce neither sharp
-peaks nor a stable atom. Maxwell's
+The classical model of the atom — Rutherford's, from 1911 — is a
+small planetary system: a heavy positive nucleus, and a light,
+negatively charged electron moving around it on an orbit under the
+electric attraction, exactly as a planet moves around the Sun under
+gravity, with Newton's laws for the motion and Maxwell's laws for
+the electric and magnetic fields. Such an electron can produce
+neither sharp peaks nor a stable atom. Maxwell's
 electrodynamics says that an electric charge
 [emits electromagnetic waves whenever its velocity changes](https://www.feynmanlectures.caltech.edu/I_28.html).
 An electron
