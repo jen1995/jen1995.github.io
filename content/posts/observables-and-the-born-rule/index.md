@@ -234,9 +234,8 @@ coefficients are $Y_\beta(n) = \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n)$.
 **The measured spectrum.** The classical picture thus makes a
 definite prediction about the light: for each orbit, a fundamental
 frequency and its multiples. The prediction is wrong. Hydrogen's lines
-are not multiples of anything — no two of them stand in a ratio of
-small whole numbers, and no choice of orbits arranges them into
-ladders of overtones. What they do form had been noticed in the 1890s
+are not the multiples of a fundamental — no choice of orbits arranges
+them into ladders of overtones. What they do form had been noticed in the 1890s
 by Rydberg and Ritz, by inspecting the tables of lines, before there was any
 theory: every observed frequency of an atom is the *difference* of two
 numbers from a single list — the
