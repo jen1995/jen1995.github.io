@@ -225,7 +225,11 @@ $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
 position $x(t)$: not a function of time any more, but a table of
 numbers indexed by pairs of states.
 
-The multiplication rule followed from the spectral lines themselves.
+A table of numbers is not yet a mechanics: to write equations of
+motion one has to be able to *multiply* positions — the force in an
+oscillator involves $x^2$ and $x^3$. So Heisenberg needed a rule for
+what the table of $x^2$ is, given the table of $x$, and the rule came
+from the spectral lines themselves.
 Classically the square of the position, $x^2(t)$, is again a
 Fourier series. Multiply the series for $x(n, t)$ by itself term by
 term: the product of two harmonics is a harmonic,
