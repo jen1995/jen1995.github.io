@@ -181,10 +181,22 @@ it gave the right spectrum. Mechanics allows a circular orbit of any radius; Boh
 the electron's [angular momentum](https://en.wikipedia.org/wiki/Angular_momentum)
 — mass times speed times radius — is
 a whole multiple of Planck's constant divided by $2\pi$,
-$m v r = n\hbar$ with $n = 1, 2, 3, \dots$ The rule produced the
-discrete radii and energy levels $W(n)$ of hydrogen, and its spectrum
-with them; nothing in the theory explained the rule, and for atoms
-beyond hydrogen it failed.
+$m v r = n\hbar$ with $n = 1, 2, 3, \dots$ The rule produced a
+discrete set of radii and of energies $W(n)$ for hydrogen. A second
+postulate connected them to the light: the electron does not radiate
+while on an allowed orbit, only when it *jumps* from one to another,
+and the frequency of the emitted light is set not by the orbital
+motion but by the energy difference,
+
+$$
+\omega = \frac{W(n) - W(m)}{\hbar}
+$$
+
+(here $\omega$ is the angular frequency of the light, $2\pi$ times the
+frequency in hertz, and $\hbar = h / 2\pi$). With these two rules the
+levels reproduced the hydrogen spectrum line by line. Nothing in the
+theory explained either rule, and for atoms beyond hydrogen the
+scheme failed.
 
 ![Bohr's picture on the left: Newtonian orbits, of which only those with angular momentum nħ are kept, an electron with a position and a period, and a jump between orbits that emits light; on the right, what is actually observed — spectral lines, each joining two levels and carrying two indices](bohr_orbits.png)
 
@@ -240,15 +252,15 @@ by Rydberg and Ritz, by inspecting the tables of lines, before there was any
 theory: every observed frequency of an atom is the *difference* of two
 numbers from a single list — the
 [Rydberg–Ritz combination principle](https://en.wikipedia.org/wiki/Rydberg%E2%80%93Ritz_combination_principle).
-In Bohr's reading the numbers in the list are the energies of the
-stationary states, and a line connects *two* of them:
+This is exactly the pattern Bohr's second postulate produces: the
+numbers in the list are the energies of the stationary states, and a
+line is a jump between *two* of them,
 
 $$
-\omega(n, n - \alpha) = \frac{W(n) - W(n - \alpha)}{\hbar}
+\omega(n, n - \alpha) = \frac{W(n) - W(n - \alpha)}{\hbar} .
 $$
 
-(here $\omega$ is the angular frequency of the light, $2\pi$ times the
-frequency in hertz, and $\hbar = h / 2\pi$). Two consequences. Every
+Two consequences. Every
 observable quantity of the atom carries *two* indices, the two levels
 a line joins, where the classical motion carried one. And two
 frequencies combine not by adding multiples of a fundamental but by
