@@ -194,10 +194,12 @@ as the position and period of the electron", and to build "a
 theoretical quantum mechanics, analogous to classical mechanics, but
 in which only relations between observable quantities occur". What
 *is* observable about an atom is its light: the frequencies and
-intensities of its spectral lines. About the frequencies one thing
-had been known since the 1890s, found empirically by Rydberg and Ritz
-before there was any theory: every observed frequency of an atom is
-the *difference* of two numbers from a single list — the
+intensities of its spectral lines. So the new theory had to be built
+out of those, and its first question was what structure the measured
+frequencies have. That structure was already known: in the 1890s
+Rydberg and Ritz had noticed, by inspecting the tables of lines,
+that every observed frequency of an atom is the *difference* of two
+numbers from a single list — the
 [Rydberg–Ritz combination principle](https://en.wikipedia.org/wiki/Rydberg%E2%80%93Ritz_combination_principle).
 In Bohr's reading the numbers in the list are the energies of the
 stationary states, and a line connects *two* of them:
