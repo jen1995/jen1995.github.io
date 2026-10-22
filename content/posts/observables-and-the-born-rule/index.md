@@ -119,8 +119,11 @@ of them, and in the direction at angle $\theta$ the waves from
 neighbouring slits arrive with a path difference $d \sin\theta$. They
 add up in phase only if that difference is a whole number of
 wavelengths, $d \sin\theta = m\lambda$ — so each wavelength leaves the
-grating at its own angle, and a mixture of wavelengths is spread into
-a fan. The lines are sharp because the contributions of the $N$ slits
+grating at its own angle, as a bundle of parallel rays, and a mixture
+of wavelengths is spread into a fan. The grating itself does not
+bring the bundle to a point — parallel rays stay parallel; a lens
+behind it (or the eye's own lens, when one looks through a grating)
+does that, sending every direction to one point of its focal plane. The lines are sharp because the contributions of the $N$ slits
 form a finite geometric series, $\sum_{n} e^{\,i n \cdot 2\pi d \sin\theta / \lambda}$,
 the same series that made the DFT of Part 2 peak at the right bin; its
 peak has width about $\lambda / N d$, and gratings have thousands of
