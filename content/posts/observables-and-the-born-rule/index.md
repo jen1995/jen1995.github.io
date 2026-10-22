@@ -100,7 +100,15 @@ throughout.
 
 The problem Bohr faced in 1913 was the one the first post started
 from: atoms emit light at a discrete set of frequencies, and they are
-stable. A classical electron circling a nucleus can do neither. Maxwell's
+stable. "Spectrum" here means what it meant on the Fourier road. The
+light arriving from a gas of atoms is a signal in time; a prism or a
+diffraction grating performs its Fourier analysis physically,
+spreading the power over frequency, and a **spectral line** is a
+frequency at which that power is concentrated — a sharp peak in the
+same kind of plot as
+[Part 2's reading of $|X[k]|^2$](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure).
+Hydrogen's spectrum is a handful of such peaks, not a continuous
+band. A classical electron circling a nucleus can do neither. Maxwell's
 electrodynamics says that an electric charge
 [emits electromagnetic waves whenever its velocity changes](https://www.feynmanlectures.caltech.edu/I_28.html).
 An electron
@@ -117,7 +125,7 @@ video of the Quantum Sense series,
 [*Why we need quantum mechanics*](https://youtu.be/3nvbBEzfmE8),
 opens with this failure.)
 
-![A classical electron on an orbit radiates, loses energy and spirals into the nucleus; the classical picture predicts a continuous band of emitted frequencies sweeping upward from the initial orbital frequency, while a discrete set of lines, and stable atoms, is what is observed](classical_collapse.png)
+![A classical electron on an orbit radiates, loses energy and spirals into the nucleus; the two right-hand panels are frequency spectra of the emitted light: the classical picture predicts a continuous band of emitted frequencies sweeping upward from the initial orbital frequency, while a discrete set of lines, and stable atoms, is what is observed](classical_collapse.png)
 
 Bohr's answer was to keep the classical picture and discretize it by
 decree. His theory still pictured the electron as a
