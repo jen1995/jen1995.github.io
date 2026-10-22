@@ -315,11 +315,17 @@ counterpart, and the correspondence is one to one:
 | intensity of the line | $\propto \lvert X_\alpha(n) \rvert^2$ | $\propto \lvert X(n, n - \alpha) \rvert^2$ |
 | the position | $x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t}$ | the set of all $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ |
 
-A table of numbers is not yet a mechanics: to write equations of
-motion one has to be able to *multiply* positions — the force in an
-oscillator involves $x^2$ and $x^3$. So Heisenberg needed a rule for
-what the table of $x^2$ is, given the table of $x$, and here the
-measured spectrum dictates the answer. Classically the coefficients
+A table of numbers is not yet a mechanics. The classical equation of
+motion of a one-dimensional system is Newton's $\ddot x + f(x) = 0$,
+with a force $f(x)$ that is in general a nonlinear function of the
+position — Heisenberg tested his scheme on the simplest such systems,
+oscillators with a restoring force $\omega_0^2 x + \lambda x^2$ or
+$\omega_0^2 x + \lambda x^3$, whose classical motion is periodic and so
+has a Fourier description. To translate such an equation into the
+language of tables one has to know what the table of $x^2$ or $x^3$
+is, given the table of $x$: positions have to be *multiplied*. So
+Heisenberg needed a multiplication rule, and here the measured
+spectrum dictates the answer. Classically the coefficients
 of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$,
 a sum over pairs of harmonics of one orbit. For the table, a product
 of two amplitudes carries the frequency $\omega(n, n - \beta)$ only if
