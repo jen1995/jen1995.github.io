@@ -108,7 +108,15 @@ over frequency, and a **spectral line** is a frequency at which that
 power is concentrated — a sharp peak in the same kind of plot as
 [Part 2's reading of $|X[k]|^2$](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure).
 Hydrogen's spectrum is a handful of such peaks, not a continuous
-band.
+band. (Why a grating sorts frequencies: it is a row of equally spaced
+slits, and light of wavelength $\lambda$ from neighbouring slits adds
+up in phase only in the directions where the path difference is a
+whole number of wavelengths, $d \sin\theta = m\lambda$ — so each
+wavelength leaves at its own angle. The sum over the $N$ slits is the
+same finite geometric series as the DFT of Part 2, which is why the
+lines are sharp.)
+
+![A glowing gas of atoms sends a signal in time, a sum of a few pure frequencies; a diffraction grating sends each frequency to its own angle, and on the screen the spectrum appears as lines — the Fourier analysis of the light, performed physically](grating_spectrum.png)
 
 A classical electron circling a nucleus can produce neither sharp
 peaks nor a stable atom. Maxwell's
