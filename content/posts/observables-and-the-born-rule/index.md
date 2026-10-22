@@ -300,7 +300,12 @@ step — the first of what Aitchison and his coauthors call his
 "magical jumps" — was to let the whole set of quantities
 $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
 position $x(t)$: not a function of time any more, but a table of
-numbers indexed by pairs of states. Side by side:
+numbers indexed by pairs of states.
+
+![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes](heisenberg_table.png)
+
+In this reinterpretation every classical quantity has a measured
+counterpart, and the correspondence is one to one:
 
 | | classical orbit | Heisenberg's reinterpretation |
 |---|---|---|
@@ -339,8 +344,6 @@ commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
 Cambridge built the same structure as an algebra of non-commuting
 "q-numbers", and the "three-man paper" of Born, Heisenberg and Jordan
 completed matrix mechanics before the year was out.
-
-![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes, which Born recognized as a matrix](heisenberg_table.png)
 
 What survives from that summer, for this post, is the shape of the
 object: **a measurable quantity is a table of numbers indexed by
