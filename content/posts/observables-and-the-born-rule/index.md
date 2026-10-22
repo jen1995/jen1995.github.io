@@ -102,7 +102,10 @@ The problem Bohr faced in 1913 was the one the first post started
 from: atoms emit light at a discrete set of frequencies, and they are
 stable. A classical electron circling a nucleus can do neither. Maxwell's
 electrodynamics says that an electric charge emits electromagnetic
-waves whenever its velocity changes — that is how a radio antenna
+waves whenever its velocity changes (the
+[Larmor formula](https://en.wikipedia.org/wiki/Larmor_formula) gives
+the radiated power) — that is how a
+[radio antenna](https://en.wikipedia.org/wiki/Dipole_antenna#Dipole_characteristics)
 works: electrons driven back and forth along it radiate. An electron
 on a circular orbit changes its velocity at every moment, since the
 direction of its motion keeps turning, so it would radiate without
