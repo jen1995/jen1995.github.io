@@ -226,7 +226,8 @@ position $x(t)$: not a function of time any more, but a table of
 numbers indexed by pairs of states.
 
 The multiplication rule followed from the spectral lines themselves.
-Classically $x(t)^2$ is again a Fourier series, with coefficients
+Classically the square of the position, $[x(t)]^2$, is again a
+Fourier series, with coefficients
 $Y_\beta(n) = \sum_\alpha X_\alpha(n) X_{\beta - \alpha}(n)$, because the
 harmonics add: $\omega(n)\alpha + \omega(n)(\beta - \alpha) = \omega(n)\beta$.
 Quantum frequencies add differently — by the Ritz combination
