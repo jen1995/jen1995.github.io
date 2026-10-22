@@ -100,12 +100,12 @@ throughout.
 
 The problem Bohr faced in 1913 was the one the first post started
 from: atoms emit light at a discrete set of frequencies, and they are
-stable. "Spectrum" here means what it meant on the Fourier road. The
-light arriving from a gas of atoms is a signal in time; a prism or a
-diffraction grating performs its Fourier analysis physically,
-spreading the power over frequency, and a **spectral line** is a
-frequency at which that power is concentrated — a sharp peak in the
-same kind of plot as
+stable. The set of frequencies is called the atom's **spectrum**, and
+the word means what it meant on the Fourier road. The light arriving
+from a gas of atoms is a signal in time; a prism or a diffraction
+grating performs its Fourier analysis physically, spreading the power
+over frequency, and a **spectral line** is a frequency at which that
+power is concentrated — a sharp peak in the same kind of plot as
 [Part 2's reading of $|X[k]|^2$](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure).
 Hydrogen's spectrum is a handful of such peaks, not a continuous
 band. A classical electron circling a nucleus can do neither. Maxwell's
