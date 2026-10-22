@@ -178,9 +178,10 @@ in which only relations between observable quantities occur". What
 *is* observable about an atom is its light: the frequencies and
 intensities of its spectral lines. And a spectral line connects
 *two* stationary states — its frequency is a difference of two
-energies, $\omega(n, n - \alpha) = (W(n) - W(n - \alpha)) / \hbar$ —
-so every observable quantity carries two indices where the classical
-motion carried one. Classically the position of an electron on an
+energies, $\omega(n, n - \alpha) = (W(n) - W(n - \alpha)) / \hbar$
+(here $\omega$ is the angular frequency of the light, $2\pi$ times the
+frequency in hertz, and $\hbar = h / 2\pi$) — so every observable
+quantity carries two indices where the classical motion carried one. Classically the position of an electron on an
 orbit with label $n$ is a Fourier series, $x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t}$,
 one amplitude $X_\alpha(n)$ per harmonic; the intensity of the
 $\alpha$-th line is proportional to $|X_\alpha(n)|^2$. In the quantum
