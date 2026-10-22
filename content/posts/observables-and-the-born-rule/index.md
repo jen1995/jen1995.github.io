@@ -263,10 +263,16 @@ $$
 Two consequences. Every
 observable quantity of the atom carries *two* indices, the two levels
 a line joins, where the classical motion carried one. And two
-frequencies combine not by adding multiples of a fundamental but by
-telescoping,
-$\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$,
-since differences of energies telescope.
+frequencies combine differently from two harmonics. The sum of the
+frequencies of two lines that share a level is again a frequency of
+a line, because the shared energy cancels:
+
+$$
+\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \frac{W(n) - W(n - \alpha)}{\hbar} + \frac{W(n - \alpha) - W(n - \beta)}{\hbar} = \omega(n, n - \beta) .
+$$
+
+For harmonics the rule was $\omega(n)\alpha + \omega(n)\gamma = \omega(n)(\alpha + \gamma)$
+— the indices add; here the middle level drops out instead.
 
 **Heisenberg's reinterpretation.** Keep the classical formulas, but
 replace in them every classical quantity by the measured one. The
@@ -288,8 +294,8 @@ oscillator involves $x^2$ and $x^3$. So Heisenberg needed a rule for
 what the table of $x^2$ is, given the table of $x$, and here the
 measured spectrum dictates the answer. Classically the coefficients
 of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$
-because the harmonic frequencies add. The transition frequencies add
-by telescoping instead, so to end up with the right frequency
+because the harmonic frequencies add. Transition frequencies combine
+through a shared level instead, so to end up with the right frequency
 $\omega(n, n - \beta)$ it is, in Heisenberg's words, "almost
 necessary" to combine the amplitudes as
 
