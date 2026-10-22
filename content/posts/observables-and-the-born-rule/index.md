@@ -100,13 +100,17 @@ throughout.
 
 The problem Bohr faced in 1913 was the one the first post started
 from: atoms emit light at a discrete set of frequencies, and they are
-stable. A classical electron circling a nucleus can do neither. In
-classical electrodynamics a charge that accelerates radiates, and a
-charge on a circle accelerates all the time, so the electron would
-radiate continuously; the energy of the light has to come from
-somewhere, so the electron's own energy would decrease, its orbit
-would shrink, and it would spiral into the nucleus — within a
-fraction of a nanosecond, if one does the arithmetic. And as the
+stable. A classical electron circling a nucleus can do neither. Maxwell's
+electrodynamics says that an electric charge emits electromagnetic
+waves whenever its velocity changes — that is how a radio antenna
+works: electrons driven back and forth along it radiate. An electron
+on a circular orbit changes its velocity at every moment, since the
+direction of its motion keeps turning, so it would radiate without
+pause. The energy carried away by the waves has to come from
+somewhere, and the only source is the electron's own energy of
+motion: as it loses energy, its orbit shrinks, and it spirals into
+the nucleus — within a fraction of a nanosecond, if one does the
+arithmetic. And as the
 orbit shrank, the frequency of the emitted light would sweep through
 a continuous range rather than sit at a few sharp values. (The first
 video of the Quantum Sense series,
