@@ -15,8 +15,9 @@ object, and a way to blend outcomes into states — were paid in the
 a Hilbert space, blends are superpositions. Item 3 is still open:
 *measurable quantities as actors, not numbers*. The first post found
 that the electron does not carry a value of "spin along $\hat n$"
-the way it carries a mass; what it carries is a menu of two possible
-answers to that question, with probabilities. So the quantity itself
+the way it carries a mass; what it carries is two possible readings
+of the apparatus pointed along $\hat n$, $+1$ and $-1$, each with a
+probability. So the quantity itself
 needs a mathematical object, separate from the states, and the
 wishlist asked for one per quantity. Item 4, *measurement as an
 operation on states*, is open with it.
