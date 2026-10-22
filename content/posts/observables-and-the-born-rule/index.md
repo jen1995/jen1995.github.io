@@ -268,7 +268,10 @@ frequencies of two lines that share a level is again a frequency of
 a line, because the shared energy cancels:
 
 $$
-\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \frac{W(n) - W(n - \alpha)}{\hbar} + \frac{W(n - \alpha) - W(n - \beta)}{\hbar} = \omega(n, n - \beta) .
+\begin{aligned}
+\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) &= \frac{W(n) - W(n - \alpha)}{\hbar} + \frac{W(n - \alpha) - W(n - \beta)}{\hbar} \\
+&= \frac{W(n) - W(n - \beta)}{\hbar} = \omega(n, n - \beta) .
+\end{aligned}
 $$
 
 For harmonics the rule was $\omega(n)\alpha + \omega(n)\gamma = \omega(n)(\alpha + \gamma)$
