@@ -227,8 +227,8 @@ numbers indexed by pairs of states.
 
 The multiplication rule followed from the spectral lines themselves.
 Classically the square of the position, $x^2(t)$, is again a
-Fourier series. Multiply the series by itself term by term: the
-product of two harmonics is a harmonic,
+Fourier series. Multiply the series for $x(n, t)$ by itself term by
+term: the product of two harmonics is a harmonic,
 $e^{i\omega(n)\alpha t}\, e^{i\omega(n)\gamma t} = e^{i\omega(n)(\alpha + \gamma) t}$,
 because the exponents — the frequencies — add. So the product lands
 on the harmonic with index $\beta = \alpha + \gamma$, and collecting
