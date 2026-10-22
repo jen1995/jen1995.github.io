@@ -101,8 +101,9 @@ throughout.
 The problem Bohr faced in 1913 was the one the first post started
 from: atoms emit light at a discrete set of frequencies, and they are
 stable. A classical electron circling a nucleus can do neither. Maxwell's
-electrodynamics says that an electric charge emits electromagnetic
-waves whenever its velocity changes (the
+electrodynamics says that an electric charge
+[emits electromagnetic waves whenever its velocity changes](https://en.wikipedia.org/wiki/Electromagnetic_radiation#Accelerating_charges)
+(the
 [Larmor formula](https://en.wikipedia.org/wiki/Larmor_formula) gives
 the radiated power) — that is how a
 [radio antenna](https://en.wikipedia.org/wiki/Dipole_antenna#Dipole_characteristics)
