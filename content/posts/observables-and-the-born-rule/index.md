@@ -194,11 +194,16 @@ as the position and period of the electron", and to build "a
 theoretical quantum mechanics, analogous to classical mechanics, but
 in which only relations between observable quantities occur". What
 *is* observable about an atom is its light: the frequencies and
-intensities of its spectral lines. And a spectral line connects
-*two* stationary states — its frequency is a difference of two
-energies, $\omega(n, n - \alpha) = (W(n) - W(n - \alpha)) / \hbar$
-(here $\omega$ is the angular frequency of the light, $2\pi$ times the
-frequency in hertz, and $\hbar = h / 2\pi$) — so every observable
+intensities of its spectral lines. About the frequencies one thing
+had been known since the 1890s, found empirically by Rydberg and Ritz
+before there was any theory: every observed frequency of an atom is
+the *difference* of two numbers from a single list — the
+[Rydberg–Ritz combination principle](https://en.wikipedia.org/wiki/Rydberg%E2%80%93Ritz_combination_principle).
+In Bohr's reading the numbers in the list are the energies of the
+stationary states, and a line connects *two* of them:
+$\omega(n, n - \alpha) = (W(n) - W(n - \alpha)) / \hbar$ (here
+$\omega$ is the angular frequency of the light, $2\pi$ times the
+frequency in hertz, and $\hbar = h / 2\pi$). So every observable
 quantity carries two indices where the classical motion carried one. In Bohr's picture the electron on the orbit with label $n$ moves
 as a classical particle, periodically, with a period $T(n)$ that
 depends on the orbit and an orbital frequency $\omega(n) = 2\pi / T(n)$;
@@ -243,15 +248,11 @@ This is where the classical picture and the measured spectra part
 company. The picture predicts that an electron on orbit $n$ emits the
 harmonics $\omega(n), 2\omega(n), 3\omega(n), \dots$ — an evenly spaced
 ladder of overtones above one fundamental, as a vibrating string
-does. Hydrogen's lines form no such ladder. What they obey instead
-was found empirically by Rydberg and Ritz before any theory: every
-observed frequency is the *difference* of two numbers from one list,
-$\omega(n, m) = (W(n) - W(m)) / \hbar$, and consequently two
-frequencies combine by the
-[Ritz combination principle](https://en.wikipedia.org/wiki/Rydberg%E2%80%93Ritz_combination_principle),
-$\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$
-— differences of energies telescope, where harmonics would simply
-add their multiples. To
+does. Hydrogen's lines form no such ladder: by the Rydberg–Ritz
+principle above, each frequency is a difference of two energies, and
+so two frequencies combine by telescoping,
+$\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$,
+where harmonics would simply add their multiples. To
 end up with the right frequency it is then, in Heisenberg's words,
 "almost necessary" to combine the amplitudes as
 
