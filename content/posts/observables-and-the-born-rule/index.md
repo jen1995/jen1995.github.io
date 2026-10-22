@@ -215,16 +215,21 @@ radiates at exactly these harmonic frequencies, $\omega(n)\alpha$, with
 the intensity of the $\alpha$-th line proportional to
 $|X_\alpha(n)|^2$: the spectrum of an orbit is an evenly spaced
 ladder of overtones above one fundamental, as for a vibrating string.
-One more consequence of the classical picture will be needed later.
-The square of the position, $x^2(t)$, is again a Fourier series: multiply the series for
-$x(n, t)$ by itself term by term, and the product of two harmonics is
-a harmonic,
-$e^{i\omega(n)\alpha t}\, e^{i\omega(n)\gamma t} = e^{i\omega(n)(\alpha + \gamma) t}$,
-because the exponents — the frequencies — add. So the product lands
-on the harmonic with index $\beta = \alpha + \gamma$, and collecting
-every pair of indices that adds up to $\beta$ gives the coefficient
-of $x^2(t)$ as a sum over such pairs,
-$Y_\beta(n) = \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n)$.
+One more consequence of the classical picture will be needed later:
+the Fourier series of the square of the position. Multiply the series
+for $x(n, t)$ by itself and collect the terms with the same frequency:
+
+$$
+\begin{aligned}
+x^2(n, t) &= \sum_\alpha \sum_\gamma X_\alpha(n) X_\gamma(n)\, e^{i\omega(n)(\alpha + \gamma) t} \\
+&= \sum_\beta \Big( \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n) \Big) e^{i\omega(n)\beta t} ,
+\end{aligned}
+$$
+
+with $\beta = \alpha + \gamma$. The square is again a series in the
+same harmonics, because the frequencies of two harmonics *add*,
+$\omega(n)\alpha + \omega(n)\gamma = \omega(n)(\alpha + \gamma)$; its
+coefficients are $Y_\beta(n) = \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n)$.
 
 **The measured spectrum.** Hydrogen's lines form no ladder of
 overtones. What they do form had been noticed in the 1890s by Rydberg
