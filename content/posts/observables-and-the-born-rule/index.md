@@ -310,8 +310,6 @@ numbers indexed by pairs of states. Side by side:
 | intensity of the line | $\propto \lvert X_\alpha(n) \rvert^2$ | $\propto \lvert X(n, n - \alpha) \rvert^2$ |
 | the position | $x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t}$ | the set of all $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ |
 
-![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes, which Born recognized as a matrix](heisenberg_table.png)
-
 A table of numbers is not yet a mechanics: to write equations of
 motion one has to be able to *multiply* positions — the force in an
 oscillator involves $x^2$ and $x^3$. So Heisenberg needed a rule for
@@ -341,6 +339,8 @@ commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
 Cambridge built the same structure as an algebra of non-commuting
 "q-numbers", and the "three-man paper" of Born, Heisenberg and Jordan
 completed matrix mechanics before the year was out.
+
+![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes, which Born recognized as a matrix](heisenberg_table.png)
 
 What survives from that summer, for this post, is the shape of the
 object: **a measurable quantity is a table of numbers indexed by
