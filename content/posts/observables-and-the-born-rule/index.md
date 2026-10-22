@@ -317,9 +317,11 @@ Y(n, n - \beta) = \sum_\alpha X(n, n - \alpha)\, X(n - \alpha, n - \beta) .
 $$
 
 He noted at once that with this rule the product of two different
-quantities need not commute, $xy \neq yx$ — the chain from $n$ to
-$n - \beta$ passes through different intermediate levels depending on
-which factor jumps first — and found the point disturbing. He did not recognize the rule: it is the multiplication of
+quantities need not commute, $xy \neq yx$ — in the chain from $n$
+to $n - \beta$ it matters which quantity supplies the first jump and
+which the second, since $x(n, n - \alpha)\, y(n - \alpha, n - \beta)$ and
+$y(n, n - \alpha)\, x(n - \alpha, n - \beta)$ are different numbers —
+and found the point disturbing. He did not recognize the rule: it is the multiplication of
 matrices, "something unknown to Heisenberg in July 1925". Max Born
 did recognize it within weeks; he and Jordan then wrote down the
 commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
