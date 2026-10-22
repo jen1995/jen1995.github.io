@@ -194,23 +194,15 @@ as the position and period of the electron", and to build "a
 theoretical quantum mechanics, analogous to classical mechanics, but
 in which only relations between observable quantities occur". What
 *is* observable about an atom is its light: the frequencies and
-intensities of its spectral lines. So the new theory had to be built
-out of those, and its first question was what structure the measured
-frequencies have. That structure was already known: in the 1890s
-Rydberg and Ritz had noticed, by inspecting the tables of lines,
-that every observed frequency of an atom is the *difference* of two
-numbers from a single list — the
-[Rydberg–Ritz combination principle](https://en.wikipedia.org/wiki/Rydberg%E2%80%93Ritz_combination_principle).
-In Bohr's reading the numbers in the list are the energies of the
-stationary states, and a line connects *two* of them:
-$\omega(n, n - \alpha) = (W(n) - W(n - \alpha)) / \hbar$ (here
-$\omega$ is the angular frequency of the light, $2\pi$ times the
-frequency in hertz, and $\hbar = h / 2\pi$). So every observable
-quantity carries two indices where the classical motion carried one. In Bohr's picture the electron on the orbit with label $n$ moves
-as a classical particle, periodically, with a period $T(n)$ that
-depends on the orbit and an orbital frequency $\omega(n) = 2\pi / T(n)$;
-and any periodic motion is a
-sum of harmonics of its fundamental frequency — a
+intensities of its spectral lines. To see what that programme does
+to the description of the electron, start with what the classical
+picture says the light should be, then compare with what is measured.
+
+**The classical picture.** In Bohr's picture the electron on the
+orbit with label $n$ moves as a classical particle, periodically,
+with a period $T(n)$ that depends on the orbit and an orbital
+frequency $\omega(n) = 2\pi / T(n)$. Any periodic motion is a sum of
+harmonics of its fundamental frequency — a
 [Fourier series](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series),
 as on the Fourier road:
 
@@ -219,11 +211,47 @@ x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t},
 $$
 
 one amplitude $X_\alpha(n)$ per harmonic. By Maxwell such an electron
-radiates at exactly these harmonic frequencies, $\omega(n)\alpha$, and
-the intensity of the $\alpha$-th line is proportional to
-$|X_\alpha(n)|^2$. In the quantum
-theory the harmonic $\omega(n)\alpha$ is replaced by the transition
-frequency $\omega(n, n - \alpha)$, and the amplitude $X_\alpha(n)$ by a
+radiates at exactly these harmonic frequencies, $\omega(n)\alpha$, with
+the intensity of the $\alpha$-th line proportional to
+$|X_\alpha(n)|^2$: the spectrum of an orbit is an evenly spaced
+ladder of overtones above one fundamental, as for a vibrating string.
+One more classical fact will be needed. The square of the position,
+$x^2(t)$, is again a Fourier series: multiply the series for
+$x(n, t)$ by itself term by term, and the product of two harmonics is
+a harmonic,
+$e^{i\omega(n)\alpha t}\, e^{i\omega(n)\gamma t} = e^{i\omega(n)(\alpha + \gamma) t}$,
+because the exponents — the frequencies — add. So the product lands
+on the harmonic with index $\beta = \alpha + \gamma$, and collecting
+every pair of indices that adds up to $\beta$ gives the coefficient
+of $x^2(t)$ as a sum over such pairs,
+$Y_\beta(n) = \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n)$.
+
+**The measured spectrum.** Hydrogen's lines form no ladder of
+overtones. What they do form had been noticed in the 1890s by Rydberg
+and Ritz, by inspecting the tables of lines, before there was any
+theory: every observed frequency of an atom is the *difference* of two
+numbers from a single list — the
+[Rydberg–Ritz combination principle](https://en.wikipedia.org/wiki/Rydberg%E2%80%93Ritz_combination_principle).
+In Bohr's reading the numbers in the list are the energies of the
+stationary states, and a line connects *two* of them:
+
+$$
+\omega(n, n - \alpha) = \frac{W(n) - W(n - \alpha)}{\hbar}
+$$
+
+(here $\omega$ is the angular frequency of the light, $2\pi$ times the
+frequency in hertz, and $\hbar = h / 2\pi$). Two consequences. Every
+observable quantity of the atom carries *two* indices, the two levels
+a line joins, where the classical motion carried one. And two
+frequencies combine not by adding multiples of a fundamental but by
+telescoping,
+$\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$,
+since differences of energies telescope.
+
+**Heisenberg's reinterpretation.** Keep the classical formulas, but
+replace in them every classical quantity by the measured one. The
+harmonic $\omega(n)\alpha$ becomes the transition frequency
+$\omega(n, n - \alpha)$, and the amplitude $X_\alpha(n)$ becomes a
 **transition amplitude** $X(n, n - \alpha)$ whose squared magnitude
 gives the intensity of the line from $n$ to $n - \alpha$. Heisenberg's
 step — the first of what Aitchison and his coauthors call his
@@ -232,31 +260,18 @@ $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
 position $x(t)$: not a function of time any more, but a table of
 numbers indexed by pairs of states.
 
+![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes, which Born recognized as a matrix](heisenberg_table.png)
+
 A table of numbers is not yet a mechanics: to write equations of
 motion one has to be able to *multiply* positions — the force in an
 oscillator involves $x^2$ and $x^3$. So Heisenberg needed a rule for
-what the table of $x^2$ is, given the table of $x$, and the rule came
-from the spectral lines themselves.
-Classically the square of the position, $x^2(t)$, is again a
-Fourier series. Multiply the series for $x(n, t)$ by itself term by
-term: the product of two harmonics is a harmonic,
-$e^{i\omega(n)\alpha t}\, e^{i\omega(n)\gamma t} = e^{i\omega(n)(\alpha + \gamma) t}$,
-because the exponents — the frequencies — add. So the product lands
-on the harmonic with index $\beta = \alpha + \gamma$, and collecting
-every pair of indices that adds up to $\beta$ gives the coefficient
-of $x^2(t)$ as a sum over such pairs,
-$Y_\beta(n) = \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n)$.
-This is where the classical picture and the measured spectra part
-company. The picture predicts that an electron on orbit $n$ emits the
-harmonics $\omega(n), 2\omega(n), 3\omega(n), \dots$ — an evenly spaced
-ladder of overtones above one fundamental, as a vibrating string
-does. Hydrogen's lines form no such ladder: by the Rydberg–Ritz
-principle above, each frequency is a difference of two energies, and
-so two frequencies combine by telescoping,
-$\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$,
-where harmonics would simply add their multiples. To
-end up with the right frequency it is then, in Heisenberg's words,
-"almost necessary" to combine the amplitudes as
+what the table of $x^2$ is, given the table of $x$, and here the
+measured spectrum dictates the answer. Classically the coefficients
+of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$
+because the harmonic frequencies add. The transition frequencies add
+by telescoping instead, so to end up with the right frequency
+$\omega(n, n - \beta)$ it is, in Heisenberg's words, "almost
+necessary" to combine the amplitudes as
 
 $$
 Y(n, n - \beta) = \sum_\alpha X(n, n - \alpha)\, X(n - \alpha, n - \beta) .
@@ -271,8 +286,6 @@ commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
 Cambridge built the same structure as an algebra of non-commuting
 "q-numbers", and the "three-man paper" of Born, Heisenberg and Jordan
 completed matrix mechanics before the year was out.
-
-![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes, which Born recognized as a matrix](heisenberg_table.png)
 
 What survives from that summer, for this post, is the shape of the
 object: **a measurable quantity is a table of numbers indexed by
