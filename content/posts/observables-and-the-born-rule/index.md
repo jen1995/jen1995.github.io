@@ -262,10 +262,12 @@ $$
 
 Two consequences. Every
 observable quantity of the atom carries *two* indices, the two levels
-a line joins, where the classical motion carried one. And two
-frequencies combine differently from two harmonics. The sum of the
-frequencies of two lines that share a level is again a frequency of
-a line, because the shared energy cancels:
+a line joins, where the classical motion carried one. And the frequencies combine in a new way. Classically, two harmonics
+of the *same* orbit add to a third harmonic of that orbit:
+$\omega(n)\alpha + \omega(n)\gamma = \omega(n)(\alpha + \gamma)$. For
+transition frequencies, two lines add up to a third only if they form
+a *chain* — the second jump starts at the level where the first one
+ended — and then the shared energy cancels:
 
 $$
 \begin{aligned}
@@ -275,8 +277,13 @@ $$
 \end{aligned}
 $$
 
-For harmonics the rule was $\omega(n)\alpha + \omega(n)\gamma = \omega(n)(\alpha + \gamma)$
-— the indices add; here the middle level drops out instead.
+So where the classical rule pairs two harmonics of one orbit, the
+quantum rule pairs two jumps through an intermediate level, and the
+second factor depends on where the first jump landed. For large $n$,
+when neighbouring levels are nearly equally spaced and
+$\omega(n, n - \alpha) \approx \alpha\, \omega(n)$, the chain reduces to
+the classical rule — Bohr's correspondence principle; at small $n$ it
+does not.
 
 **Heisenberg's reinterpretation.** Keep the classical formulas, but
 replace in them every classical quantity by the measured one. The
@@ -297,19 +304,22 @@ motion one has to be able to *multiply* positions — the force in an
 oscillator involves $x^2$ and $x^3$. So Heisenberg needed a rule for
 what the table of $x^2$ is, given the table of $x$, and here the
 measured spectrum dictates the answer. Classically the coefficients
-of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$
-because the harmonic frequencies add. Transition frequencies combine
-through a shared level instead, so to end up with the right frequency
-$\omega(n, n - \beta)$ it is, in Heisenberg's words, "almost
-necessary" to combine the amplitudes as
+of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$,
+a sum over pairs of harmonics of one orbit. For the table, a product
+of two amplitudes carries the frequency $\omega(n, n - \beta)$ only if
+the two transitions form a chain through an intermediate level
+$n - \alpha$, so to end up with the right frequency it is, in
+Heisenberg's words, "almost necessary" to sum over the intermediate
+level:
 
 $$
 Y(n, n - \beta) = \sum_\alpha X(n, n - \alpha)\, X(n - \alpha, n - \beta) .
 $$
 
 He noted at once that with this rule the product of two different
-quantities need not commute, $xy \neq yx$, and found the point
-disturbing. He did not recognize the rule: it is the multiplication of
+quantities need not commute, $xy \neq yx$ — the chain from $n$ to
+$n - \beta$ passes through different intermediate levels depending on
+which factor jumps first — and found the point disturbing. He did not recognize the rule: it is the multiplication of
 matrices, "something unknown to Heisenberg in July 1925". Max Born
 did recognize it within weeks; he and Jordan then wrote down the
 commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
