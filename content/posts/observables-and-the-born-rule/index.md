@@ -67,8 +67,10 @@ Three facts from the earlier posts are used throughout.
   onto the $i$-th basis direction, and the projectors of a basis add
   up to the identity: $\sum_i |E_i\rangle\langle E_i| = \hat I$.
 
-What is missing is an object for the *question itself* — for "spin
-along $z$" as opposed to its two answers.
+What is missing is an object for the *quantity itself*. The two
+answers of the $z$ measurement have objects, the states $|u\rangle$
+and $|d\rangle$; "spin along $z$", the thing that is being measured,
+has none yet.
 
 ## From averages to operators
 
