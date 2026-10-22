@@ -102,7 +102,8 @@ The old quantum theory of Bohr pictured the electron as a classical
 particle on an orbit, with a position $x(t)$ and a period, and then
 added a rule that Newton's mechanics knows nothing about. Mechanics
 allows a circular orbit of any radius; Bohr kept only those on which
-the electron's angular momentum — mass times speed times radius — is
+the electron's [angular momentum](https://en.wikipedia.org/wiki/Angular_momentum)
+— mass times speed times radius — is
 a whole multiple of Planck's constant divided by $2\pi$,
 $m v r = n\hbar$ with $n = 1, 2, 3, \dots$ The rule produced the
 discrete radii and energy levels $W(n)$ of hydrogen, and its spectrum
