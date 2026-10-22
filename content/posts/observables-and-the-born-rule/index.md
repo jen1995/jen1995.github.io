@@ -100,14 +100,16 @@ throughout.
 
 The old quantum theory of Bohr pictured the electron as a classical
 particle on an orbit, with a position $x(t)$ and a period, and then
-added a rule that Newton's mechanics knows nothing about: of all the
-orbits the mechanics allows, only a discrete family is permitted,
-selected by a condition stated in terms of the orbit itself. The rule
-produced the discrete energy levels $W(n)$ and the hydrogen spectrum;
-nothing in the theory explained the rule, and for atoms beyond
-hydrogen it failed.
+added a rule that Newton's mechanics knows nothing about. Mechanics
+allows a circular orbit of any radius; Bohr kept only those on which
+the electron's angular momentum — mass times speed times radius — is
+a whole multiple of Planck's constant divided by $2\pi$,
+$m v r = n\hbar$ with $n = 1, 2, 3, \dots$ The rule produced the
+discrete radii and energy levels $W(n)$ of hydrogen, and its spectrum
+with them; nothing in the theory explained the rule, and for atoms
+beyond hydrogen it failed.
 
-![Bohr's picture on the left: Newtonian orbits, of which only a discrete family is kept, an electron with a position and a period, and a jump between orbits that emits light; on the right, what is actually observed — spectral lines, each joining two levels and carrying two indices](bohr_orbits.png)
+![Bohr's picture on the left: Newtonian orbits, of which only those with angular momentum nħ are kept, an electron with a position and a period, and a jump between orbits that emits light; on the right, what is actually observed — spectral lines, each joining two levels and carrying two indices](bohr_orbits.png)
 
 Heisenberg's opening move was to
 "discard all hope of observing hitherto unobservable quantities, such
