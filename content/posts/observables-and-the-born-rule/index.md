@@ -98,10 +98,14 @@ below follows Heisenberg's paper of July 1925 as reconstructed by
 Aitchison, MacManus and Snyder (see the references), who quote him
 throughout.
 
-The old quantum theory of Bohr pictured the electron as a classical
-particle on an orbit, with a position $x(t)$ and a period, and then
-added a rule that Newton's mechanics knows nothing about. Mechanics
-allows a circular orbit of any radius; Bohr kept only those on which
+The problem Bohr faced in 1913 was the one the first post started
+from: atoms emit light at a discrete set of frequencies, while a
+classical electron circling a nucleus would radiate continuously and
+spiral into it. Bohr's answer was to keep the classical picture and
+discretize it by decree. His theory still pictured the electron as a
+classical particle on an orbit, with a position $x(t)$ and a period,
+and then added a rule that Newton's mechanics knows nothing about.
+Mechanics allows a circular orbit of any radius; Bohr kept only those on which
 the electron's [angular momentum](https://en.wikipedia.org/wiki/Angular_momentum)
 — mass times speed times radius — is
 a whole multiple of Planck's constant divided by $2\pi$,
