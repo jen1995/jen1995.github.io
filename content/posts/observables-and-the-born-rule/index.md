@@ -12,12 +12,14 @@ The [first post](/posts/the-apparatus-and-the-arrow/#the-wishlist) of
 the quantum road ended with a wishlist. Items 1 and 2 — a state
 object, and a way to blend outcomes into states — were paid in the
 [second post](/posts/states-are-vectors/): states are unit vectors in
-a Hilbert space, blends are superpositions. Item 3 has been waiting
-since: *measurable quantities as actors, not numbers*. "Spin along
-$\hat n$" is not a number attached to the electron; it is a question
-with its own menu of answers, and the wishlist asked for a
-mathematical object per question. Item 4, *measurement as an
-operation on states*, is waiting with it.
+a Hilbert space, blends are superpositions. Item 3 is still open:
+*measurable quantities as actors, not numbers*. The first post found
+that the electron does not carry a value of "spin along $\hat n$"
+the way it carries a mass; what it carries is a menu of two possible
+answers to that question, with probabilities. So the quantity itself
+needs a mathematical object, separate from the states, and the
+wishlist asked for one per quantity. Item 4, *measurement as an
+operation on states*, is open with it.
 
 There is also a debt. The second post took the
 [Born rule](/posts/states-are-vectors/#what-the-geometry-means-physically)
