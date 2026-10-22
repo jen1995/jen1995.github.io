@@ -115,9 +115,16 @@ band.
 
 A diffraction grating is a row of $N$ equally spaced slits, a
 distance $d$ apart. Light of wavelength $\lambda$ passes through all
-of them, and in the direction at angle $\theta$ the waves from
-neighbouring slits arrive with a path difference $d \sin\theta$. They
-add up in phase only if that difference is a whole number of
+of them, and in the direction at angle $\theta$ to the axis the waves
+from neighbouring slits travel different distances. Drop a
+perpendicular from the upper slit onto the lower ray: it cuts off a
+right triangle whose hypotenuse is the slit spacing $d$ and whose
+angle at the upper slit is $\theta$, so the lower ray's extra path is
+the opposite side, $d \sin\theta$.
+
+![Two neighbouring slits and two parallel rays at angle θ to the axis: the perpendicular from the upper slit onto the lower ray cuts off a right triangle with hypotenuse d, and the lower ray's extra path is d·sin θ](path_difference.png)
+
+The two waves add up in phase only if that difference is a whole number of
 wavelengths, $d \sin\theta = m\lambda$ — so each wavelength leaves the
 grating at its own angle, as a bundle of parallel rays, and a mixture
 of wavelengths is spread into a fan. The grating itself does not
