@@ -227,9 +227,14 @@ numbers indexed by pairs of states.
 
 The multiplication rule followed from the spectral lines themselves.
 Classically the square of the position, $x^2(t)$, is again a
-Fourier series, with coefficients
-$Y_\beta(n) = \sum_\alpha X_\alpha(n) X_{\beta - \alpha}(n)$, because the
-harmonics add: $\omega(n)\alpha + \omega(n)(\beta - \alpha) = \omega(n)\beta$.
+Fourier series. Multiply the series by itself term by term: the
+product of two harmonics is a harmonic,
+$e^{i\omega(n)\alpha t}\, e^{i\omega(n)\gamma t} = e^{i\omega(n)(\alpha + \gamma) t}$,
+because the exponents — the frequencies — add. So the product lands
+on the harmonic with index $\beta = \alpha + \gamma$, and collecting
+every pair of indices that adds up to $\beta$ gives the coefficient
+of $x^2(t)$ as a sum over such pairs,
+$Y_\beta(n) = \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n)$.
 Quantum frequencies add differently — by the Ritz combination
 principle, $\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$,
 which is just the statement that energy differences telescope. To
