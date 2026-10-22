@@ -108,13 +108,27 @@ over frequency, and a **spectral line** is a frequency at which that
 power is concentrated — a sharp peak in the same kind of plot as
 [Part 2's reading of $|X[k]|^2$](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure).
 Hydrogen's spectrum is a handful of such peaks, not a continuous
-band. (Why a grating sorts frequencies: it is a row of equally spaced
-slits, and light of wavelength $\lambda$ from neighbouring slits adds
-up in phase only in the directions where the path difference is a
-whole number of wavelengths, $d \sin\theta = m\lambda$ — so each
-wavelength leaves at its own angle. The sum over the $N$ slits is the
-same finite geometric series as the DFT of Part 2, which is why the
-lines are sharp.)
+band.
+
+<details>
+<summary>Why a grating sorts frequencies</summary>
+
+A diffraction grating is a row of $N$ equally spaced slits, a
+distance $d$ apart. Light of wavelength $\lambda$ passes through all
+of them, and in the direction at angle $\theta$ the waves from
+neighbouring slits arrive with a path difference $d \sin\theta$. They
+add up in phase only if that difference is a whole number of
+wavelengths, $d \sin\theta = m\lambda$ — so each wavelength leaves the
+grating at its own angle, and a mixture of wavelengths is spread into
+a fan. The lines are sharp because the contributions of the $N$ slits
+form a finite geometric series, $\sum_{n} e^{\,i n \cdot 2\pi d \sin\theta / \lambda}$,
+the same series that made the DFT of Part 2 peak at the right bin; its
+peak has width about $\lambda / N d$, and gratings have thousands of
+slits. A prism does the same job by a different mechanism — the glass
+bends each frequency by a slightly different angle — with poorer
+resolution.
+
+</details>
 
 ![A glowing gas of atoms sends a signal in time, a sum of a few pure frequencies; a diffraction grating sends each frequency to its own angle, and on the screen the spectrum appears as lines — the Fourier analysis of the light, performed physically](grating_spectrum.png)
 
