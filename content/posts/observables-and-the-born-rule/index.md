@@ -20,7 +20,7 @@ of the apparatus pointed along $\hat n$, $+1$ and $-1$, each with a
 probability. So the quantity itself
 needs a mathematical object, separate from the states, and the
 wishlist asked for one per quantity. Item 4, *measurement as an
-operation on states*, is open with it.
+operation on states*, is also still open.
 
 There is also a debt. The second post took the
 [Born rule](/posts/states-are-vectors/#what-the-geometry-means-physically)
