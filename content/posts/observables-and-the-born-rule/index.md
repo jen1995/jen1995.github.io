@@ -82,16 +82,16 @@ A single reading of the window is random: $+1$ or $-1$, and no
 preparation makes the next reading of a tilted apparatus predictable.
 What *is* predictable is the average over many rounds —
 $\langle \sigma \rangle = \cos\theta$, the one formula of that post.
-The reproducible content of a question, in a given state, is the
-average of its answers. Everything an experiment can check about the
-pair (question, state) is an average: the mean of the outcomes, the
-mean of their squares, the frequency of each particular outcome (which
-is the mean of the indicator "the outcome was $E_i$").
+This is true of every measurable quantity, not only of the spin: for
+a system prepared in a given state, the numbers an experiment can
+actually reproduce are averages over many repetitions. Even "how
+often does the outcome $+1$ occur" is an average — of a quantity that
+equals $1$ when the outcome is $+1$ and $0$ otherwise.
 
-So whatever mathematical object we assign to a question, it must
-first of all do this: given a state, return the average of the
-outcomes. The rest of the post is what that requirement forces the
-object to be.
+So whatever mathematical object we assign to a measurable quantity,
+it must first of all do this: given a state, return the average of
+the outcomes. The rest of the post is what that requirement forces
+the object to be.
 
 ### Heisenberg's table
 
