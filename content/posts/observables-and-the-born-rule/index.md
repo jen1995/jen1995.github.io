@@ -93,27 +93,60 @@ the object to be.
 
 ### Heisenberg's table
 
-The object was found before anyone knew what it was. In the summer of
-1925 Heisenberg set out to build a mechanics of the atom out of
-*observable* quantities only — the frequencies and intensities of
-spectral lines — and dropped the electron orbits, which no
-experiment could see. Spectral lines connect two energy levels, so every observable
-quantity carried *two* indices: an amplitude $x_{nm}$ for the
-transition from level $n$ to level $m$, where the classical theory
-had a single Fourier coefficient $x_k$. The position of the electron
-became a table of numbers with two indices. When he needed the
-square of the position, the rule that the combined frequencies add
-forced the entry
-$(x^2)_{nm} = \sum_k x_{nk}\, x_{km}$ — and he noted that
-with this rule $xy$ and $yx$ need not be equal. He did not recognize
-the rule. Max Born did, within weeks: a table with two indices
-multiplied in this way is a *matrix*, and the rule is matrix
-multiplication. Matrix mechanics followed in the autumn (Born and
-Jordan; then Born, Heisenberg and Jordan), and Dirac, reading
-Heisenberg's paper in Cambridge, built the same structure as an
-algebra of non-commuting "q-numbers". The reconstruction of
-Heisenberg's calculation, step by step, is in the paper by Aitchison,
-MacManus and Snyder in the references.
+The object was found before anyone knew what it was. The account
+below follows Heisenberg's paper of July 1925 as reconstructed by
+Aitchison, MacManus and Snyder (see the references), who quote him
+throughout.
+
+The old quantum theory of Bohr pictured the electron on an orbit,
+with a position $x(t)$ and a period, and then imposed quantum
+conditions on the orbit by hand. Heisenberg's opening move was to
+"discard all hope of observing hitherto unobservable quantities, such
+as the position and period of the electron", and to build "a
+theoretical quantum mechanics, analogous to classical mechanics, but
+in which only relations between observable quantities occur". What
+*is* observable about an atom is its light: the frequencies and
+intensities of its spectral lines. And a spectral line connects
+*two* stationary states — its frequency is a difference of two
+energies, $\omega(n, n - \alpha) = (W(n) - W(n - \alpha)) / \hbar$ —
+so every observable quantity carries two indices where the classical
+motion carried one. Classically the position of an electron on an
+orbit with label $n$ is a Fourier series, $x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t}$,
+one amplitude $X_\alpha(n)$ per harmonic; the intensity of the
+$\alpha$-th line is proportional to $|X_\alpha(n)|^2$. In the quantum
+theory the harmonic $\omega(n)\alpha$ is replaced by the transition
+frequency $\omega(n, n - \alpha)$, and the amplitude $X_\alpha(n)$ by a
+**transition amplitude** $X(n, n - \alpha)$ whose squared magnitude
+gives the intensity of the line from $n$ to $n - \alpha$. Heisenberg's
+step — the first of what Aitchison and his coauthors call his
+"magical jumps" — was to let the whole set of quantities
+$X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
+position $x(t)$: not a function of time any more, but a table of
+numbers indexed by pairs of states.
+
+The multiplication rule followed from the spectral lines themselves.
+Classically $x(t)^2$ is again a Fourier series, with coefficients
+$Y_\beta(n) = \sum_\alpha X_\alpha(n) X_{\beta - \alpha}(n)$, because the
+harmonics add: $\omega(n)\alpha + \omega(n)(\beta - \alpha) = \omega(n)\beta$.
+Quantum frequencies add differently — by the Ritz combination
+principle, $\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$,
+which is just the statement that energy differences telescope. To
+end up with the right frequency it is then, in Heisenberg's words,
+"almost necessary" to combine the amplitudes as
+
+$$
+Y(n, n - \beta) = \sum_\alpha X(n, n - \alpha)\, X(n - \alpha, n - \beta) .
+$$
+
+He noted at once that with this rule the product of two different
+quantities need not commute, $xy \neq yx$, and found the point
+disturbing. He did not recognize the rule: it is the multiplication of
+matrices, "something unknown to Heisenberg in July 1925". Max Born
+did recognize it within weeks; he and Jordan then wrote down the
+commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
+Cambridge built the same structure as an algebra of non-commuting
+"q-numbers", and the "three-man paper" of Born, Heisenberg and Jordan
+completed matrix mechanics before the year was out.
 
 ![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes, which Born recognized as a matrix](heisenberg_table.png)
 
@@ -768,12 +801,18 @@ ordinary sphere.
   energy as $\sum_i P_i E_i$ with $P_i = |C_i|^2$ (18.11), rewritten
   as $\langle \psi | \hat H | \psi \rangle$. Free online at
   [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/).
+- W. Heisenberg. *Über quantentheoretische Umdeutung kinematischer
+  und mechanischer Beziehungen.* Zeitschrift für Physik 33 (1925),
+  879–893 — the paper of July 1925; English translation in van der
+  Waerden's collection below.
 - I. J. R. Aitchison, D. A. MacManus, T. M. Snyder. [*Understanding
   Heisenberg's "magical" paper of July 1925: a new look at the
   calculational details*](https://arxiv.org/abs/quant-ph/0404009).
-  American Journal of Physics 72 (2004), 1370–1379 — the table of
-  transition amplitudes and the multiplication rule, reconstructed
-  step by step.
+  American Journal of Physics 72 (2004), 1370–1379 — §2.1 is the
+  source of this post's account: the programme of observable
+  quantities only, the two-index transition amplitudes, the
+  multiplication rule from the Ritz combination principle, and
+  Born's recognition of the matrix.
 - B. L. van der Waerden (ed.). *Sources of Quantum Mechanics*.
   North-Holland, 1967; Dover reprint — Heisenberg's July 1925 paper,
   Born and Jordan's and Dirac's papers of the same year, in
