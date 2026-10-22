@@ -282,13 +282,13 @@ quantum rule pairs two jumps through an intermediate level, and the
 second factor depends on where the first jump landed. For large $n$,
 when neighbouring levels are nearly equally spaced and
 $\omega(n, n - \alpha) \approx \alpha\, \omega(n)$, the chain reduces to
-the classical rule; at small $n$ it does not. That the quantum rules
-must turn into the classical ones for large quantum numbers was a
-third guiding idea of Bohr's, separate from the two postulates of his
-model — he called it the
+the classical rule; at small $n$ it does not. Bohr had made this a
+requirement, separate from the two postulates of his model: for large
+quantum numbers the quantum rules must turn into the classical ones.
+He called it the
 [correspondence principle](https://en.wikipedia.org/wiki/Correspondence_principle),
-and it was the main tool of the search for the new mechanics, for
-Heisenberg included.
+and it was the main tool in the search for the new mechanics,
+Heisenberg's included.
 
 **Heisenberg's reinterpretation.** Keep the classical formulas, but
 replace in them every classical quantity by the measured one. The
