@@ -98,9 +98,14 @@ below follows Heisenberg's paper of July 1925 as reconstructed by
 Aitchison, MacManus and Snyder (see the references), who quote him
 throughout.
 
-The old quantum theory of Bohr pictured the electron on an orbit,
-with a position $x(t)$ and a period, and then imposed quantum
-conditions on the orbit by hand. Heisenberg's opening move was to
+The old quantum theory of Bohr pictured the electron as a classical
+particle on an orbit, with a position $x(t)$ and a period, and then
+added a rule that Newton's mechanics knows nothing about: of all the
+orbits the mechanics allows, only those are permitted whose action
+$\oint p\, dq$ is a whole multiple of Planck's constant, $nh$. The rule
+picked out the discrete energy levels $W(n)$ and explained the
+hydrogen spectrum; nothing in the theory explained the rule, and for
+atoms beyond hydrogen it failed. Heisenberg's opening move was to
 "discard all hope of observing hitherto unobservable quantities, such
 as the position and period of the electron", and to build "a
 theoretical quantum mechanics, analogous to classical mechanics, but
@@ -123,6 +128,8 @@ step — the first of what Aitchison and his coauthors call his
 $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
 position $x(t)$: not a function of time any more, but a table of
 numbers indexed by pairs of states.
+
+![Bohr's picture on the left: Newtonian orbits, of which only those with ∮p dq = nh are kept, an electron with a position and a period, and a jump between orbits that emits light; on the right, what is actually observed — spectral lines, each joining two levels and carrying two indices](bohr_orbits.png)
 
 The multiplication rule followed from the spectral lines themselves.
 Classically $x(t)^2$ is again a Fourier series, with coefficients
