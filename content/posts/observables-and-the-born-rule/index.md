@@ -215,8 +215,8 @@ radiates at exactly these harmonic frequencies, $\omega(n)\alpha$, with
 the intensity of the $\alpha$-th line proportional to
 $|X_\alpha(n)|^2$: the spectrum of an orbit is an evenly spaced
 ladder of overtones above one fundamental, as for a vibrating string.
-One more classical fact will be needed. The square of the position,
-$x^2(t)$, is again a Fourier series: multiply the series for
+One more consequence of the classical picture will be needed later.
+The square of the position, $x^2(t)$, is again a Fourier series: multiply the series for
 $x(n, t)$ by itself term by term, and the product of two harmonics is
 a harmonic,
 $e^{i\omega(n)\alpha t}\, e^{i\omega(n)\gamma t} = e^{i\omega(n)(\alpha + \gamma) t}$,
