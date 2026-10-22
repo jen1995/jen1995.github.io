@@ -147,8 +147,12 @@ small planetary system: a heavy positive nucleus, and a light,
 negatively charged electron moving around it on an orbit under the
 electric attraction, exactly as a planet moves around the Sun under
 gravity, with Newton's laws for the motion and Maxwell's laws for
-the electric and magnetic fields. Such an electron can produce
-neither sharp peaks nor a stable atom. Maxwell's
+the electric and magnetic fields.
+
+![The planetary model: a planet orbiting the Sun under gravity, and beside it Rutherford's atom — an electron orbiting the nucleus under the electric attraction, with Newton's laws for the motion and Maxwell's for the fields](rutherford_atom.png)
+
+Such an electron can produce neither sharp peaks nor a stable atom.
+Maxwell's
 electrodynamics says that an electric charge
 [emits electromagnetic waves whenever its velocity changes](https://www.feynmanlectures.caltech.edu/I_28.html).
 An electron
