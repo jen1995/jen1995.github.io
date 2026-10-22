@@ -199,10 +199,21 @@ intensities of its spectral lines. And a spectral line connects
 energies, $\omega(n, n - \alpha) = (W(n) - W(n - \alpha)) / \hbar$
 (here $\omega$ is the angular frequency of the light, $2\pi$ times the
 frequency in hertz, and $\hbar = h / 2\pi$) — so every observable
-quantity carries two indices where the classical motion carried one. Classically the position of an electron on an
-orbit with label $n$ is a Fourier series, $x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t}$,
-one amplitude $X_\alpha(n)$ per harmonic; the intensity of the
-$\alpha$-th line is proportional to $|X_\alpha(n)|^2$. In the quantum
+quantity carries two indices where the classical motion carried one. In Bohr's picture the electron on the orbit with label $n$ moves
+as a classical particle, periodically, with some period $T$ and
+orbital frequency $\omega(n) = 2\pi / T$; and any periodic motion is a
+sum of harmonics of its fundamental frequency — a
+[Fourier series](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series),
+as on the Fourier road:
+
+$$
+x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t},
+$$
+
+one amplitude $X_\alpha(n)$ per harmonic. By Maxwell such an electron
+radiates at exactly these harmonic frequencies, $\omega(n)\alpha$, and
+the intensity of the $\alpha$-th line is proportional to
+$|X_\alpha(n)|^2$. In the quantum
 theory the harmonic $\omega(n)\alpha$ is replaced by the transition
 frequency $\omega(n, n - \alpha)$, and the amplitude $X_\alpha(n)$ by a
 **transition amplitude** $X(n, n - \alpha)$ whose squared magnitude
