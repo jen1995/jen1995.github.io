@@ -29,13 +29,14 @@ its amplitude" — and promised a derivation. The
 [last post](/posts/from-kronecker-to-dirac/) borrowed it again in
 passing.
 
-This post settles both. Instead of starting from a postulate, it
-starts from what an apparatus actually gives us and follows that as
-far as it goes; the textbook postulate turns up at the end, as a
-conclusion. The route is the one Dirac takes in chapter II of his
-*Principles* (see the references; Landau and Lifshitz walk it in the
-opposite direction in their §3), and Heisenberg took its first steps
-in 1925 without knowing where they led. As in the second post, the
+This post settles both. Most textbooks open this chapter with a
+postulate — "observables are Hermitian operators" — and derive the
+rest from it. Here the postulate is the last line, not the first: the
+post starts from what an apparatus actually gives us and follows that
+as far as it goes. That is the road of chapter II of Dirac's
+*Principles*, and of §3 of Landau and Lifshitz read in the other
+direction (see the references); Heisenberg took its first steps in
+1925 without knowing where they led. As in the second post, the
 spin of the first post serves as the running example, and its
 operators are constructed from the experiments as in lecture 3 of
 Susskind and Friedman.
