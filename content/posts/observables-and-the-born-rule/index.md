@@ -117,7 +117,7 @@ video of the Quantum Sense series,
 [*Why we need quantum mechanics*](https://youtu.be/3nvbBEzfmE8),
 opens with this failure.)
 
-![A classical electron on an orbit radiates, loses energy and spirals into the nucleus; the classical picture predicts a continuous smear of emitted frequencies, while a discrete set of lines, and stable atoms, is what is observed](classical_collapse.png)
+![A classical electron on an orbit radiates, loses energy and spirals into the nucleus; the classical picture predicts a continuous band of emitted frequencies sweeping upward from the initial orbital frequency, while a discrete set of lines, and stable atoms, is what is observed](classical_collapse.png)
 
 Bohr's answer was to keep the classical picture and discretize it by
 decree. His theory still pictured the electron as a
