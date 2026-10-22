@@ -171,13 +171,13 @@ opens with this failure.)
 
 ![A classical electron on an orbit radiates, loses energy and spirals into the nucleus; the two right-hand panels are frequency spectra of the emitted light: the classical picture predicts a continuous band of emitted frequencies sweeping upward from the initial orbital frequency, while a discrete set of lines, and stable atoms, is what is observed](classical_collapse.png)
 
-Bohr's answer, in 1913, was to keep the planetary picture and to
-forbid most of its orbits by a rule of his own. His theory still
-pictured the electron as a classical particle on an orbit, with a
-position $x(t)$ and a period, but it added a condition that Newton's
-mechanics knows nothing about and that nothing in the theory
-justified — it was postulated because it gave the right spectrum.
-Mechanics allows a circular orbit of any radius; Bohr kept only those on which
+Bohr's answer, in 1913, was to keep the planetary picture but to
+allow only some of its orbits. His theory still pictured the
+electron as a classical particle on an orbit, with a position $x(t)$
+and a period, and it added one extra condition on which orbits are
+possible — a condition that Newton's mechanics knows nothing about
+and that nothing in the theory justified; it was postulated because
+it gave the right spectrum. Mechanics allows a circular orbit of any radius; Bohr kept only those on which
 the electron's [angular momentum](https://en.wikipedia.org/wiki/Angular_momentum)
 — mass times speed times radius — is
 a whole multiple of Planck's constant divided by $2\pi$,
