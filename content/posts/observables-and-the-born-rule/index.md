@@ -269,9 +269,9 @@ a line, because the shared energy cancels:
 
 $$
 \begin{aligned}
-&\hbar\,\omega(n, n - \alpha) + \hbar\,\omega(n - \alpha, n - \beta) \\
-&\qquad = \big(W(n) - W(n - \alpha)\big) + \big(W(n - \alpha) - W(n - \beta)\big) \\
-&\qquad = W(n) - W(n - \beta) = \hbar\,\omega(n, n - \beta) .
+&\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) \\
+&\qquad = \frac{W(n) - W(n - \alpha)}{\hbar} + \frac{W(n - \alpha) - W(n - \beta)}{\hbar} \\
+&\qquad = \frac{W(n) - W(n - \beta)}{\hbar} = \omega(n, n - \beta) .
 \end{aligned}
 $$
 
