@@ -84,9 +84,7 @@ What *is* predictable is the average over many rounds —
 $\langle \sigma \rangle = \cos\theta$, the one formula of that post.
 This is true of every measurable quantity, not only of the spin: for
 a system prepared in a given state, the numbers an experiment can
-actually reproduce are averages over many repetitions. Even "how
-often does the outcome $+1$ occur" is an average — of a quantity that
-equals $1$ when the outcome is $+1$ and $0$ otherwise.
+actually reproduce are averages over many repetitions.
 
 So whatever mathematical object we assign to a measurable quantity,
 it must first of all do this: given a state, return the average of
