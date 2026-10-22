@@ -99,10 +99,24 @@ Aitchison, MacManus and Snyder (see the references), who quote him
 throughout.
 
 The problem Bohr faced in 1913 was the one the first post started
-from: atoms emit light at a discrete set of frequencies, while a
-classical electron circling a nucleus would radiate continuously and
-spiral into it. Bohr's answer was to keep the classical picture and
-discretize it by decree. His theory still pictured the electron as a
+from: atoms emit light at a discrete set of frequencies, and they are
+stable. A classical electron circling a nucleus can do neither. In
+classical electrodynamics a charge that accelerates radiates, and a
+charge on a circle accelerates all the time, so the electron would
+radiate continuously; the energy of the light has to come from
+somewhere, so the electron's own energy would decrease, its orbit
+would shrink, and it would spiral into the nucleus — within a
+fraction of a nanosecond, if one does the arithmetic. And as the
+orbit shrank, the frequency of the emitted light would sweep through
+a continuous range rather than sit at a few sharp values. (The first
+video of the Quantum Sense series,
+[*Why we need quantum mechanics*](https://youtu.be/3nvbBEzfmE8),
+opens with this failure.)
+
+![A classical electron on an orbit radiates, loses energy and spirals into the nucleus; the classical picture predicts a continuous smear of emitted frequencies, while a discrete set of lines, and stable atoms, is what is observed](classical_collapse.png)
+
+Bohr's answer was to keep the classical picture and discretize it by
+decree. His theory still pictured the electron as a
 classical particle on an orbit, with a position $x(t)$ and a period,
 and then added a rule that Newton's mechanics knows nothing about.
 Mechanics allows a circular orbit of any radius; Bohr kept only those on which
@@ -841,7 +855,9 @@ ordinary sphere.
   §3.3–3.4 (the spin operators constructed from the experiments), §3.5
   ("A common misconception": applying an operator is not measuring).
 - [Quantum Sense](https://www.youtube.com/@quantumsensechannel), *Maths
-  of Quantum Mechanics* — videos 7 ([observables as linear
+  of Quantum Mechanics* — video 1 ([why we need quantum
+  mechanics](https://youtu.be/3nvbBEzfmE8): the classical collapse of
+  the atom), and videos 7 ([observables as linear
   operators](https://youtu.be/ANLRQ7X6h5A)), 8 ([why the probability
   is the squared amplitude](https://youtu.be/PZUZgOUOOIU)) and 9
   ([Hermitian operators](https://youtu.be/da1rH0Hq62Q)); the
