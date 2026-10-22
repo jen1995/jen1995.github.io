@@ -235,9 +235,19 @@ on the harmonic with index $\beta = \alpha + \gamma$, and collecting
 every pair of indices that adds up to $\beta$ gives the coefficient
 of $x^2(t)$ as a sum over such pairs,
 $Y_\beta(n) = \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n)$.
-Quantum frequencies add differently — by the Ritz combination
-principle, $\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$,
-which is just the statement that energy differences telescope. To
+This is where the classical picture and the measured spectra part
+company. The picture predicts that an electron on orbit $n$ emits the
+harmonics $\omega(n), 2\omega(n), 3\omega(n), \dots$ — an evenly spaced
+ladder of overtones above one fundamental, as a vibrating string
+does. Hydrogen's lines form no such ladder. What they obey instead
+was found empirically by Rydberg and Ritz before any theory: every
+observed frequency is the *difference* of two numbers from one list,
+$\omega(n, m) = (W(n) - W(m)) / \hbar$, and consequently two
+frequencies combine by the
+[Ritz combination principle](https://en.wikipedia.org/wiki/Rydberg%E2%80%93Ritz_combination_principle),
+$\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$
+— differences of energies telescope, where harmonics would simply
+add their multiples. To
 end up with the right frequency it is then, in Heisenberg's words,
 "almost necessary" to combine the amplitudes as
 
