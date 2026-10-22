@@ -300,7 +300,15 @@ step — the first of what Aitchison and his coauthors call his
 "magical jumps" — was to let the whole set of quantities
 $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
 position $x(t)$: not a function of time any more, but a table of
-numbers indexed by pairs of states.
+numbers indexed by pairs of states. Side by side:
+
+| | classical orbit | Heisenberg's reinterpretation |
+|---|---|---|
+| what labels a quantity | one orbit, $n$ | a pair of levels, $(n, n - \alpha)$ |
+| frequency | harmonic $\omega(n)\,\alpha$ | transition $\omega(n, n - \alpha) = \dfrac{W(n) - W(n - \alpha)}{\hbar}$ |
+| amplitude | $X_\alpha(n)$ | $X(n, n - \alpha)$ |
+| intensity of the line | $\propto \lvert X_\alpha(n) \rvert^2$ | $\propto \lvert X(n, n - \alpha) \rvert^2$ |
+| the position | $x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t}$ | the set of all $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ |
 
 ![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes, which Born recognized as a matrix](heisenberg_table.png)
 
@@ -333,19 +341,6 @@ commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
 Cambridge built the same structure as an algebra of non-commuting
 "q-numbers", and the "three-man paper" of Born, Heisenberg and Jordan
 completed matrix mechanics before the year was out.
-
-The old formulas and the new ones, side by side:
-
-| | classical orbit | Heisenberg's table |
-|---|---|---|
-| what labels a quantity | one orbit, $n$ | a pair of levels, $(n, n - \alpha)$ |
-| frequency | harmonic $\omega(n)\,\alpha$ | transition $\omega(n, n - \alpha) = \dfrac{W(n) - W(n - \alpha)}{\hbar}$ |
-| amplitude | $X_\alpha(n)$ | $X(n, n - \alpha)$ |
-| intensity of the line | $\propto \lvert X_\alpha(n) \rvert^2$ | $\propto \lvert X(n, n - \alpha) \rvert^2$ |
-| the position | $x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t}$ | the set of all $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ |
-| frequencies combine | $\omega(n)\alpha + \omega(n)\gamma = \omega(n)(\alpha + \gamma)$ | $\omega(n, n - \alpha) + \omega(n - \alpha, n - \beta) = \omega(n, n - \beta)$ |
-| coefficients of $x^2$ | $Y_\beta(n) = \sum_\alpha X_\alpha(n)\, X_{\beta - \alpha}(n)$ | $Y(n, n - \beta) = \sum_\alpha X(n, n - \alpha)\, X(n - \alpha, n - \beta)$ |
-| product of two quantities | $xy = yx$ | $xy \neq yx$ in general |
 
 What survives from that summer, for this post, is the shape of the
 object: **a measurable quantity is a table of numbers indexed by
