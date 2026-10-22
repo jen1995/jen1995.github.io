@@ -32,9 +32,12 @@ passing.
 This post settles both. It does not start from the usual textbook
 postulate about operators; it starts from the one thing an apparatus
 gives us that is reproducible — averages — and follows where they
-lead. That is the road of Landau and Lifshitz's §3 and of chapter II
-of Dirac's *Principles* (see the references), and Heisenberg took
-its first steps in 1925 without knowing where they led. As in the second
+lead. That is the road of chapter II of Dirac's *Principles*, and of §3
+of Landau and Lifshitz read in the other direction — they start from
+the possible values of a quantity and define its operator by the
+average; here the operator comes first and the values are found in
+it (see the references). Heisenberg took the first steps of this road
+in 1925 without knowing where they led. As in the second
 post, the spin of the first post serves as the running example, and
 its operators are constructed from the experiments as in lecture 3 of
 Susskind and Friedman.
