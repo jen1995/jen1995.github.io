@@ -200,8 +200,9 @@ energies, $\omega(n, n - \alpha) = (W(n) - W(n - \alpha)) / \hbar$
 (here $\omega$ is the angular frequency of the light, $2\pi$ times the
 frequency in hertz, and $\hbar = h / 2\pi$) — so every observable
 quantity carries two indices where the classical motion carried one. In Bohr's picture the electron on the orbit with label $n$ moves
-as a classical particle, periodically, with some period $T$ and
-orbital frequency $\omega(n) = 2\pi / T$; and any periodic motion is a
+as a classical particle, periodically, with a period $T(n)$ that
+depends on the orbit and an orbital frequency $\omega(n) = 2\pi / T(n)$;
+and any periodic motion is a
 sum of harmonics of its fundamental frequency — a
 [Fourier series](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series),
 as on the Fourier road:
