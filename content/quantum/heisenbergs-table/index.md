@@ -673,7 +673,10 @@ p_i = \sum_{j,k} M_{jk}\, c_j^*\, c_k = \langle \psi | \hat M | \psi \rangle
 $$
 
 for some operator $\hat M$, with matrix $M_{jk} = \langle a_j | \hat M | a_k \rangle$
-in the basis $\{|a_i\rangle\}$, that depends on $i$.
+in the basis $\{|a_i\rangle\}$, that depends on $i$. (On notation:
+the index names the outcome, and the probability depends on the
+state — $p_i(\psi)$ in full. Where the outcome is fixed the index is
+dropped and the state is written, $p(\psi)$.)
 
 Why should probabilities be bilinear in the coordinates? Three
 things the bilinear form gets right, and one it deliberately does
