@@ -3,7 +3,7 @@ title: "Heisenberg's Table: Where the Matrices Come From"
 date: 2026-10-25
 draft: true
 tags: ["quantum", "math", "physics"]
-summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; averages are quadratic forms, so a quantity is a table with two indices — an operator; real averages make the table Hermitian; diagonalizing it turns the average into an average of eigenvalues, with squared coordinates as the weights."
+summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; averages are quadratic forms, so a quantity is a table with two indices — an operator; in the basis where the table is diagonal the average is a weighted average of the outcomes, and the weights are the Born probabilities; real readings make the table Hermitian, and the spectral theorem closes the circle."
 math: true
 weight: 50
 ---
@@ -31,9 +31,9 @@ actually gives us and follows that as far as it goes. That is the
 road of chapter II of Dirac's *Principles*, and of §3 of Landau and
 Lifshitz read in the other direction (see the references); Heisenberg
 took its first steps in 1925 without knowing where they led, and the
-middle of the post retells how. What the object says about
-*probabilities* — the Born rule, which the second post took on
-credit — is the next post's subject.
+middle of the post retells how. The Born rule, which the second
+post took on credit, is paid on the way; what a measurement does to
+the state is the next post's subject.
 
 ## Where we stand
 
@@ -397,7 +397,10 @@ $$
 A_{ij} = \langle E_i |\, A\, | E_j \rangle, \qquad E_i, E_j \in \{u, d\},
 $$
 
-a two-by-two table. The notation already says how the table acts: the
+a two-by-two table. Its entries are complex numbers in general — they
+are amplitudes, like the coordinates of a state, and the second post
+showed that real amplitudes are not enough for the spin. The notation
+already says how the table acts: the
 second post showed that an $n \times n$ table of numbers, written
 with respect to an orthonormal basis, *is* a linear operator — a
 machine $\hat A : V \to V$ that sends vectors to vectors and respects
@@ -445,9 +448,11 @@ is what the averages will decide.
 ### The average is a quadratic form
 
 We now have a table for a question and a column for a state. The
-job set at the start of this section was that the object assigned to
-a question must return, for every state, the average of the
-outcomes. So the next step is to say how the table and the column
+requirement set at the
+[start of this chapter](#what-the-apparatus-gives-us-averages),
+before the detour through 1925, was that the object assigned to a
+measurable quantity must return, for every state, the average of
+the outcomes. So the next step is to say how the table and the column
 combine into that one number: given $|\psi\rangle = \sum_j c_j |E_j\rangle$
 and the operator $\hat A$, what expression in the coordinates $c_j$
 and the entries $A_{ij}$ is the average?
@@ -458,11 +463,16 @@ average that is a law about the state must then be an expression in
 the coordinates whose *form* is the same in every orthonormal basis.
 The simplest such expressions are the quadratic ones,
 $\sum_{i,j} c_i^* M_{ij} c_j$ — in vector language, a number built
-from the state and one matrix, $\langle \psi | \hat M | \psi \rangle$
-— and Landau and Lifshitz take it as the starting point of their §3
-that probabilities and averages are of this form, bilinear in
-$\psi$ and $\psi^*$. We take it too, and name the matrix after the
-question:
+from the state and one matrix, $\langle \psi | \hat M | \psi \rangle$.
+In linear algebra this is a *sesquilinear form* evaluated on the
+pair $(\psi, \psi)$: linear in the second argument, conjugate-linear
+in the first, and with the rule for how its matrix changes with the
+basis, $M' = \bar C^{\mathsf T} M C$, which keeps the expression of the
+same shape in every basis (Panov's lectures, §5.1, Definition 5.1.7).
+Landau and Lifshitz state it as a principle in §2 of their book
+that every probability is an expression bilinear in $\psi$ and
+$\psi^*$, and their §3 rests on it. We take it too, and name the
+matrix after the question:
 
 > **The average.** In the state $|\psi\rangle$, the average of the
 > outcomes of the question with operator $\hat A$ is
@@ -484,14 +494,135 @@ table of a question is fixed by its averages.
 
 ## What the table must be
 
-### Real averages force a Hermitian table
+### Suppose the table is diagonal
 
-Averages of real readings are real numbers. So the quadratic form
-$\langle \psi | \hat A | \psi \rangle$ must be real for *every* state
-$|\psi\rangle$. This condition on the table has a name.
+The quadratic form $\sum_{i,j} c_i^* A_{ij} c_j$ has $n^2$ complex
+entries and says nothing yet about outcomes. Make one assumption
+about the table; the end of this chapter says what it costs.
 
-First the notion it needs. Write $|\hat M \psi\rangle$ for the vector
-$\hat M$ returns when fed $|\psi\rangle$, so that
+> **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
+> which the table of the question is diagonal,
+> $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
+> with numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
+
+<details>
+<summary>This assumption is not free</summary>
+
+Over the complex numbers every square matrix has at least one
+direction that it merely rescales: the characteristic polynomial
+$\det(A - \lambda I)$ has a root, by the fundamental theorem of
+algebra. But it need not have $n$ independent such directions. The
+matrix
+
+$$
+\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
+$$
+
+has the single root $\lambda = 0$ and rescales only the multiples of
+$(1, 0)^{\mathsf T}$; no change of basis makes it diagonal. And a
+basis that is also *orthonormal* is a further restriction: a matrix
+is diagonal in some orthonormal basis exactly when it commutes with
+its conjugate transpose, $A \bar A^{\mathsf T} = \bar A^{\mathsf T} A$
+(such matrices are called *normal*; Panov, §4.7, Theorem 4.7.3). So
+the assumption is a genuine condition on the table of a question.
+What it costs is settled below: nothing beyond the reality of the
+readings.
+
+</details>
+
+Write the state in this basis, $|\psi\rangle = \sum_i c_i |a_i\rangle$
+with $c_i = \langle a_i | \psi \rangle$, and the quadratic form
+collapses:
+
+$$
+\langle A \rangle = \sum_{i,j} c_i^*\, \lambda_i \delta_{ij}\, c_j = \sum_i \lambda_i\, |c_i|^2 .
+$$
+
+The numbers $|c_i|^2$ are nonnegative and add up to
+$\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$. So the average of
+the question, in any state, is a **weighted average of the numbers on
+the diagonal**, with weights $|c_i|^2$ that form a probability
+distribution. An average of a random quantity is the sum of its
+possible values times their probabilities. Read the formula that way:
+the $\lambda_i$ are the possible outcomes of the question — no other
+value ever enters its average, in any state — and $|c_i|^2$ looks
+like the probability of the outcome $\lambda_i$.
+
+![The average of a question is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
+
+**The weights are the probabilities.** That the $|c_i|^2$ are not
+merely numbers that happen to sum to one is one more use of the
+average rule. Among the questions one can ask is the yes/no question
+"did the outcome equal $\lambda_i$?" It is answered by the same
+apparatus with its window read differently — $1$ for the outcome
+$\lambda_i$, $0$ for every other outcome — so its definite states are
+the same, and its table is diagonal in the same basis, with $1$ in
+the $i$-th place and $0$ elsewhere: it is the projector
+$\hat P_i = |a_i\rangle\langle a_i|$. The average of a yes/no question
+is, by the definition of an average, the probability of "yes". The
+average rule applied to this table gives
+
+$$
+P(\lambda_i) = \langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2 .
+$$
+
+> **The Born rule.** If $|\psi\rangle = \sum_i c_i |a_i\rangle$ in the
+> basis where the question is diagonal, the probability that a
+> measurement of it returns $\lambda_i$ is
+> $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
+
+This is Dirac's route (*Principles*, chapter II, §§11–12): the
+yes/no question is a *function* of the observable, and the
+probability of a value is the average of that function. The
+[second post](/posts/states-are-vectors/#what-the-geometry-means-physically)
+took the rule on credit; here it follows from "averages are quadratic
+forms". The next post gives a second derivation that does not use
+that assumption.
+
+### The diagonal basis is the eigenbasis
+
+Recall the definitions. A nonzero vector $|v\rangle$ is an
+[**eigenvector**](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
+of $\hat A$ if the operator merely rescales it,
+$\hat A|v\rangle = \lambda|v\rangle$, and $\lambda$ is the
+corresponding **eigenvalue**; the set of eigenvalues is the
+**spectrum** of $\hat A$. A diagonal table says exactly this about
+its basis vectors. By the column rule of
+["A table for a question"](#a-table-for-a-question),
+$\hat A |a_j\rangle = \sum_i A_{ij} |a_i\rangle$, and with
+$A_{ij} = \lambda_i \delta_{ij}$ only one term survives:
+
+$$
+\hat A\, |a_j\rangle = \lambda_j\, |a_j\rangle .
+$$
+
+So the basis of the assumption is a basis of eigenvectors, the
+numbers on the diagonal are the eigenvalues, and the possible
+outcomes of a question are the spectrum of its operator. Rewriting
+the diagonal table without coordinates gives the operator as a sum
+over its own definite directions,
+
+$$
+\boxed{\; \hat A = \sum_i \lambda_i\, |a_i\rangle\langle a_i| \;}
+$$
+
+— the **spectral decomposition**: each outcome times the projector
+onto its eigenvector. (Apply both sides to $|\psi\rangle$ and use
+$\langle a_i | \psi \rangle = c_i$ to see that it is the same
+operator.) Set every $\lambda_i$ to $1$ and it collapses to the
+resolution of identity of the second post; keep a single $\lambda_i$
+and set the rest to $0$ and it is the projector of the yes/no question
+above.
+
+### Real outcomes make the table Hermitian
+
+Readings of an apparatus are real numbers. So the eigenvalues
+$\lambda_i$ are real, and this leaves a mark on the table in every
+basis, not only in the diagonal one. The mark has a name, and the
+name needs a notion.
+
+Write $|\hat M \psi\rangle$ for the vector $\hat M$ returns when fed
+$|\psi\rangle$, so that
 $\langle \varphi | \hat M | \psi \rangle = \langle \varphi | \hat M \psi \rangle$.
 The [**adjoint**](https://en.wikipedia.org/wiki/Hermitian_adjoint)
 $\hat M^\dagger$ of $\hat M$ is the operator that lets the operator
@@ -511,26 +642,43 @@ follow from the definition: $(\hat A^\dagger)^\dagger = \hat A$,
 $(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$,
 $(\hat A\hat B)^\dagger = \hat B^\dagger \hat A^\dagger$. The adjoint
 of a ket is its bra, $(|v\rangle)^\dagger = \langle v|$ — the second
-post's bra–ket correspondence in this notation.
+post's bra–ket correspondence in this notation — and a scalar comes
+out conjugated, $(\lambda \hat A)^\dagger = \lambda^* \hat A^\dagger$.
 
-An operator equal to its own adjoint, $\hat A^\dagger = \hat A$, is
-called **Hermitian** (or self-adjoint); its matrix equals its own
-conjugate transpose. And:
+Now take the adjoint of the spectral decomposition. By the rules,
+$(|a_i\rangle\langle a_i|)^\dagger = (\langle a_i|)^\dagger (|a_i\rangle)^\dagger = |a_i\rangle\langle a_i|$,
+so
 
-> **Real averages mean Hermitian operators.** The quadratic form
-> $\langle \psi | \hat A | \psi \rangle$ is real for every
-> $|\psi\rangle$ if and only if $\hat A$ is Hermitian.
+$$
+\hat A^\dagger = \sum_i \lambda_i^*\, |a_i\rangle\langle a_i| .
+$$
+
+With real eigenvalues, $\lambda_i^* = \lambda_i$, the right side is
+$\hat A$ again. An operator equal to its own adjoint,
+$\hat A^\dagger = \hat A$, is called **Hermitian** (or self-adjoint);
+its matrix equals its own conjugate transpose, in every orthonormal
+basis, since the definition mentions no basis. In the diagonal basis
+the statement is plain — a diagonal matrix equals its conjugate
+transpose exactly when its diagonal is real — and it carries over
+unchanged to the $z$ basis of the spin, where the table of the $x$
+question is not diagonal at all.
+
+> **The table of every measurable quantity is Hermitian.**
+
+**And back.** The assumption that opened the chapter was promised a
+price. Suppose only what the apparatus guarantees — that the average
+$\langle \psi | \hat A | \psi \rangle$ is a real number in every
+state. Then $\hat A$ is Hermitian: the proof is a page of algebra,
+under the cut.
+
+<details>
+<summary>A real quadratic form has a Hermitian operator (polarization)</summary>
 
 One direction is a line. If $\hat A^\dagger = \hat A$, then
 $\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$
 by the Hermitian symmetry of the inner product, so the number equals
-its own conjugate. The other direction says that a quadratic form
-determines its matrix; the proof is under the cut.
-
-<details>
-<summary>A quadratic form determines its operator (polarization)</summary>
-
-Let $\hat B = \hat A - \hat A^\dagger$. If $\langle \psi | \hat A \psi \rangle$
+its own conjugate. For the other direction let
+$\hat B = \hat A - \hat A^\dagger$. If $\langle \psi | \hat A \psi \rangle$
 is real for all $\psi$, then
 $\langle \psi | \hat B \psi \rangle = \langle \psi | \hat A \psi \rangle - \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle - \langle \psi | \hat A \psi \rangle^* = 0$
 for all $\psi$. The claim is that an operator whose quadratic form
@@ -555,20 +703,8 @@ antisymmetric part of its matrix.
 
 </details>
 
-So the first consequence of "averages are real" is that **the
-table of every measurable quantity is Hermitian** — and this was
-obtained before any eigenvector was mentioned.
-
-### Diagonalize: an average of eigenvalues
-
-A Hermitian table can be simplified by a change of basis, and the
-simplified form is where outcomes and probabilities come from.
-Recall the definitions. A nonzero vector $|v\rangle$ is an
-[**eigenvector**](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
-of $\hat A$ if the operator merely rescales it,
-$\hat A|v\rangle = \lambda|v\rangle$, and $\lambda$ is the
-corresponding **eigenvalue**; the set of eigenvalues is the
-**spectrum** of $\hat A$.
+And a Hermitian operator has exactly the basis the assumption asked
+for:
 
 > **Spectral theorem** (finite dimensions). A Hermitian operator has
 > real eigenvalues and an orthonormal basis of eigenvectors.
@@ -603,50 +739,37 @@ are the two facts just proved). Within a repeated eigenvalue the
 eigenvectors are not orthogonal automatically, and Gram–Schmidt makes
 them so.
 
-Now diagonalize. Call the orthonormal eigenbasis of $\hat A$
-$\{|a_i\rangle\}$, with $\hat A|a_i\rangle = \lambda_i |a_i\rangle$,
-and write the state in it, $|\psi\rangle = \sum_i c_i |a_i\rangle$.
-The table of $\hat A$ in its own eigenbasis is diagonal —
-$\langle a_i | \hat A | a_j \rangle = \lambda_j \langle a_i | a_j \rangle = \lambda_i \delta_{ij}$
-— and the quadratic form collapses:
+So the two roads meet. "Diagonal in some orthonormal basis, with real
+numbers on the diagonal" and "real average in every state" are the
+same condition on a table, and both say *Hermitian*. The textbook
+postulate — "observables are Hermitian operators" — is this
+equivalence, stated as a definition.
 
-$$
-\langle A \rangle = \langle \psi | \hat A | \psi \rangle = \sum_{i,j} c_i^*\, \lambda_i \delta_{ij}\, c_j = \sum_i \lambda_i\, |c_i|^2 .
-$$
+### Definite states are eigenvectors
 
-The numbers $|c_i|^2$ are nonnegative and
-add up to $\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$. So the
-average of the question, in any state, is a **weighted average of the
-eigenvalues** $\lambda_i$, with weights $|c_i|^2$ that form a
-probability distribution. An average of a random quantity is the sum
-of its possible values times their probabilities. Read the formula
-that way:
+One more reading of the average formula, this time for the basis
+vectors themselves. In the state $|a_i\rangle$ the coordinates are
+$c_i = 1$ and $c_j = 0$ for $j \neq i$: the whole weight sits on the
+single outcome $\lambda_i$, the average is $\lambda_i$, and by the
+Born rule the outcome $\lambda_i$ has probability one. A state whose
+outcome is certain, and which the measurement therefore confirms on
+every repetition, is what the [first post](/posts/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
+called a definite state. And the second post found that states a
+measurement tells apart with certainty are orthogonal — which the
+eigenvectors of a Hermitian operator are.
 
-> the **eigenvalues** of $\hat A$ are the possible outcomes of the
-> question, and $|c_i|^2$ is the probability of the outcome
-> $\lambda_i$ in the state $|\psi\rangle$.
+> **Definite states are eigenvectors.** The eigenvectors of the
+> operator of a question are its definite states, and the certain
+> outcome in $|a_i\rangle$ is the eigenvalue $\lambda_i$.
 
-The first half of this reading is forced: the average of a question
-in every state is a mean of the $\lambda_i$, so no other values ever
-contribute. The second half — that the weights are the
-probabilities, and not just numbers that happen to sum to one — is
-read off here and *proved* in the next post, in two independent ways.
+For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
+$z$ question, are the eigenvectors of its operator $\sigma_z$, with
+eigenvalues $+1$ and $-1$. The next post proves the converse, that no
+state outside the eigenvectors has a certain outcome, and builds
+$\sigma_z$ and $\sigma_x$ from the definite states by the spectral
+decomposition.
 
-![The average of a question is a weighted average of the eigenvalues of its operator: the eigenvalues sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
-
-This is where the eigenbasis comes from: it is the basis in which
-the average of the question takes the form of an ordinary average. Rewriting the diagonal table without coordinates gives
-the operator as a sum over its own definite directions,
-
-$$
-\boxed{\; \hat A = \sum_i \lambda_i\, |a_i\rangle\langle a_i| \;}
-$$
-
-— the **spectral decomposition**: each outcome times the projector
-onto its eigenvector. (Apply both sides to $|\psi\rangle$ and use
-$\langle a_i | \psi \rangle = c_i$ to see that it is the same
-operator.) Set every $\lambda_i$ to $1$ and it collapses to the
-resolution of identity of the second post.
+### Degeneracy and the continuous spectrum
 
 Two refinements. An eigenvalue may belong to more than one
 independent eigenvector; it is then called **degenerate**, and the
@@ -666,40 +789,78 @@ theorem; Sergeev's lectures, Theorem 40, in the references), and for
 general self-adjoint operators such as position it survives in this
 integral form, which the delta post's Appendix A pointed at.
 
+### Where every calculation starts
+
+The chapter ends where a textbook begins. Shankar's *Principles*
+states the content of this post as postulates and then gives the
+procedure for using them (§4.2, p. 117): construct the operator of
+the quantity; find its orthonormal eigenvectors $|\omega_i\rangle$
+and eigenvalues $\omega_i$; expand the state in that basis,
+$|\psi\rangle = \sum_i |\omega_i\rangle\langle\omega_i|\psi\rangle$;
+the probability of the result $\omega_i$ is
+$|\langle\omega_i|\psi\rangle|^2$. The last three steps are this
+chapter. In his words (p. 119): "To extract this information for any
+observable, we must determine the eigenbasis of the corresponding
+operator and find the projection of $|\psi\rangle$ along all its
+eigenkets." A working habit follows, also his: there is no need to
+change basis each time. One keeps the state written in the eigenbasis
+of a chosen question and computes the eigenvectors of any other
+question as columns in that basis. Landau and Lifshitz go further and
+open their §3 with the eigenfunctions: the wave functions of the
+states in which the quantity has a definite value are the first
+objects they name, and the operator is built afterwards to fit them.
+
+For the problems of this road the chosen question is the energy, and
+the first step — which operator belongs to the question — is what
+the posts on dynamics settle. The second step is then the whole
+work: for a particle on a line the eigenvectors are functions, and
+"find the eigenbasis" means solving a differential equation. The
+particle in a box, the tunneling barrier, the harmonic oscillator and
+the hydrogen atom each begin by finding the eigenfunctions of their
+energy operator, and everything else about them is read off the
+expansion of the state in that basis.
+
 ## What we built
 
 The chain of the post. What an apparatus gives us is averages. An
 average that is a law about the state is a quadratic form in its
 coordinates, so a question is a table with two indices — an operator,
 the object Heisenberg found in 1925 in the spectral lines of the
-atom. Real averages make the table Hermitian. A Hermitian table has
-an orthonormal eigenbasis, and in that basis the average becomes a
-weighted average of the eigenvalues: the eigenvalues are the possible
-outcomes, and the weights $|c_i|^2$ — squared coordinates — are what
-must be the probabilities.
+atom. In the orthonormal basis where the table is diagonal, the
+average is a weighted average of the numbers on the diagonal: they
+are the outcomes, and the weights $|c_i|^2$ are the probabilities —
+the Born rule, obtained from the average of a yes/no question. That
+basis is the eigenbasis of the operator and the outcomes are its
+eigenvalues. Readings are real, so the operator is Hermitian; and
+Hermitian is also enough, by the spectral theorem, for such a basis
+to exist.
 
 Wishlist item 3 is paid: **a measurable quantity is a Hermitian
-operator**, whose eigenvalues are the outcomes and whose average in
-a state is $\langle \psi | \hat A | \psi \rangle$. One thing was read
-off rather than proved — that the weights $|c_i|^2$ are the
-probabilities — and one was not touched at all: what a measurement
-does to the state. Both are the next post.
+operator**, whose eigenvalues are the outcomes, whose eigenvectors are
+the definite states, whose average in a state is
+$\langle \psi | \hat A | \psi \rangle$, and whose outcome
+probabilities are the squared coordinates $|c_i|^2$. Two things
+remain. The Born rule was derived from the assumption that averages
+are quadratic forms, and deserves a reason that does not depend on
+it; and nothing has been said about what a measurement does to the
+state. Both are the next post.
 
 ## Onward
 
-Next stop: the Born rule, earned twice — once from the averages of
-this post, once from the requirement that probabilities must not
-depend on the basis a state is written in; then the definite states
-as eigenvectors, the warning that applying an operator is not
+Next stop: the Born rule, earned a second time — from the
+requirement that probabilities must not depend on the basis a state
+is written in; then the warning that applying an operator is not
 measuring, two of the three Pauli matrices read off the spin
 experiments, and measurement itself as a projection.
 
 ## References
 
 - Л. Д. Ландау, Е. М. Лифшиц. *Квантовая механика (нерелятивистская
-  теория)*, Теоретическая физика, т. III — chapter I, §3
-  "Операторы" (pp. 22–28 of the 6th Russian edition; §3 "Operators"
-  in the English *Quantum Mechanics: Non-Relativistic Theory*): the
+  теория)*, Теоретическая физика, т. III — chapter I, §2
+  "Принцип суперпозиции" (p. 20 of the 6th Russian edition: every
+  probability is an expression bilinear in $\Psi$ and $\Psi^*$, eq.
+  (2.1)) and §3 "Операторы" (pp. 22–28; §3 "Operators" in the
+  English *Quantum Mechanics: Non-Relativistic Theory*): the
   road of this post — the spectrum and the expansion, $|a_n|^2$ as
   the only admissible bilinear probability, the mean value (3.7), the
   operator *defined* by the mean value (3.8), eigenfunctions (3.12),
@@ -714,7 +875,7 @@ experiments, and measurement itself as a projection.
   measuring $\xi$ in the state $|x\rangle$ is $\langle x | \xi | x \rangle$
   (p. 68), and the probability of the value $a$ as the average of the
   function $\delta_{\xi a}$ of the observable, $P_a = \langle x | \delta_{\xi a} | x \rangle$,
-  eq. (45) (p. 69) — the route the next post takes to the Born rule.
+  eq. (45) (p. 69) — the route this post takes to the Born rule.
 - R. P. Feynman, R. B. Leighton, M. Sands. *The Feynman Lectures on
   Physics*, vol. III (Russian edition: *Фейнмановские лекции по
   физике*, вып. 8–9 *Квантовая механика*, Мир, 1978) — chapter 5,
@@ -759,9 +920,19 @@ experiments, and measurement itself as a projection.
   is a good first reading.
 - Т. Е. Панов. [*Лекции по линейной алгебре*](http://higeom.math.msu.su/people/taras/teaching/panov-linalg.pdf)
   (in Russian) — §4.1 (adjoint operators; the matrix of the adjoint
-  is the conjugate transpose, p. 65) and §4.2 (self-adjoint
+  is the conjugate transpose, p. 65), §4.2 (self-adjoint
   operators: Theorem 4.2.3 on the orthonormal eigenbasis, with Lemmas
-  4.2.4 and 4.2.5, pp. 66–67).
+  4.2.4 and 4.2.5, pp. 66–67), §4.7 (normal operators: Theorem 4.7.3,
+  an operator is diagonalizable in an orthonormal basis if and only
+  if it commutes with its adjoint, p. 76) and §5.1 (bilinear and
+  sesquilinear forms, their matrices and the change-of-basis law,
+  pp. 79–81; Definition 5.1.7 is the sesquilinear case).
+- R. Shankar. *Principles of Quantum Mechanics*, 2nd ed. Plenum, 1994 —
+  chapter 4, "The Postulates — a General Discussion", §4.2, pp. 117–119:
+  the four-step procedure (construct the operator, find its
+  eigenbasis, expand the state, square the projections) and the
+  remark that the eigenbasis of every observable must be found, but
+  the basis one works in need not change.
 - А. Г. Сергеев. [*Лекции по функциональному анализу*](https://mi-ras.ru/noc/13_14/2/sergeev/funkan.pdf)
   (in Russian) — Theorem 40, the Hilbert–Schmidt theorem, p. 81: the
   spectral theorem for compact self-adjoint operators in infinite

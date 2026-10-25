@@ -136,6 +136,26 @@ The longest post; notes §9–13 + the classical interlude.
    twin ψ̃(p), squeeze one and watch the other spread (the uncertainty
    trade-off, interactive; reuses the Fourier road's machinery).
 
+## Status (2026-10-25, QM-3 split and reordered)
+
+- QM-3 is two drafts: `heisenbergs-table` (weight 50) and
+  `the-born-rule-earned` (weight 51).
+- Post 1's second half now runs: assume an orthonormal basis in which
+  the table is diagonal (cut: not free — Jordan block, normal ⇔
+  orthonormally diagonalizable, Panov Thm 4.7.3) → average =
+  Σλ|c|² → weights are probabilities via the yes/no question (Dirac
+  §§11–12; the Born rule moved here from post 2) → diagonal basis =
+  eigenbasis, spectral decomposition → real outcomes ⇒ Hermitian
+  (adjoint of the spectral decomposition) → "and back": real averages
+  ⇒ Hermitian (polarization, cut) ⇒ spectral theorem → definite states
+  are eigenvectors (easy direction) → degeneracy/continuous → Shankar
+  §4.2 recipe and the bridge to the problem posts.
+- Post 2 keeps the basis-independence derivation (now its only one),
+  the continuous menu, the variance converse, applying ≠ measuring,
+  σ_z/σ_x, measurement.
+- Uncertainty principle stays in QM-5 item 6 (candidate for its own
+  short post if QM-5 grows too long).
+
 ## Status (2026-10-18)
 
 - QM-1 *The Apparatus and the Arrow* (weight 47) and QM-2 *States Are

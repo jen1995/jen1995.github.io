@@ -3,7 +3,7 @@ title: "The Born Rule, Earned"
 date: 2026-10-25
 draft: true
 tags: ["quantum", "math"]
-summary: "The last post left the squared coordinates sitting in the diagonalized average, looking like probabilities. Here they are proved to be probabilities — twice, from averages and from basis independence — and the rest follows: definite states are eigenvectors, applying an operator is not measuring, two of the three Pauli matrices come out of the spin experiments, and a measurement is a projection."
+summary: "The last post derived the Born rule from the average of a yes/no question. Here it is earned a second time, from the requirement that probabilities must not depend on the basis a state is written in — and the rest follows: no state outside the eigenvectors has a certain outcome, applying an operator is not measuring, two of the three Pauli matrices come out of the spin experiments, and a measurement is a projection."
 math: true
 weight: 51
 ---
@@ -19,22 +19,21 @@ $$
 \langle A \rangle = \sum_i \lambda_i\, |c_i|^2, \qquad \sum_i |c_i|^2 = 1,
 $$
 
-and the post read it as what it looks like: the eigenvalues
-$\lambda_i$ are the possible outcomes, and the squared coordinates
-$|c_i|^2$ are their probabilities. The reading was left unproved.
+and the eigenvalues $\lambda_i$ turned out to be the possible outcomes
+and the squared coordinates $|c_i|^2$ their probabilities — the
+[Born rule](/posts/states-are-vectors/#what-the-geometry-means-physically),
+which the second post had taken on credit and the
+[delta post](/posts/from-kronecker-to-dirac/) borrowed again in
+passing.
 
-Two debts hang on it. The second post took the
-[Born rule](/posts/states-are-vectors/#what-the-geometry-means-physically)
-— "the probability of an outcome is the squared magnitude of its
-amplitude" — on credit and promised a derivation; the
-[delta post](/posts/from-kronecker-to-dirac/) borrowed it again in
-passing. And wishlist item 4 of the
-[first post](/posts/the-apparatus-and-the-arrow/#the-wishlist),
-*measurement as an operation on states*, is still open. This post
-pays both, and collects what falls out along the way: the definite
-states of the first post are eigenvectors, applying an operator is
-not the same as measuring, and two of the three Pauli matrices can be
-read off the spin experiments. As in the second post, the spin of the
+That derivation rests on one assumption, that averages are quadratic
+forms in the state. This post gives the rule a second derivation that
+does not use it, and then pays the last open item of the
+[first post's wishlist](/posts/the-apparatus-and-the-arrow/#the-wishlist),
+*measurement as an operation on states*. It collects what falls out
+along the way: no state outside the eigenvectors has a certain
+outcome, applying an operator is not the same as measuring, and two
+of the three Pauli matrices can be read off the spin experiments. As in the second post, the spin of the
 first post is the running example, and its operators are constructed
 from the experiments as in lecture 3 of Susskind and Friedman.
 
@@ -59,41 +58,19 @@ Three facts from the earlier posts are used throughout.
   onto the direction of $|a_i\rangle$, and the projectors of an
   orthonormal basis add up to the identity.
 - An observable is a Hermitian operator; in its orthonormal
-  eigenbasis its average is $\langle A \rangle = \sum_i \lambda_i |c_i|^2$
+  eigenbasis its average is $\langle A \rangle = \sum_i \lambda_i |c_i|^2$,
+  the eigenvectors are its definite states, and the probability of
+  the outcome $\lambda_i$ is the average of the projector
+  $|a_i\rangle\langle a_i|$, which is $|c_i|^2$
   (the [last post](/posts/heisenbergs-table/)).
 
-## The Born rule, two ways
+## The Born rule, from basis independence
 
-The weights $|c_i|^2$ came out of the diagonalized average. Two
-independent arguments show that they, and nothing else, are the
-probabilities.
-
-### From averages
-
-Among the questions one can ask is the yes/no question "did the
-outcome equal $\lambda_i$?" Its answers are $1$ and $0$, its average is
-by definition the probability of the outcome $\lambda_i$, and its
-operator is the projector $\hat P_i = |a_i\rangle\langle a_i|$ — a
-Hermitian table whose eigenvalues are $1$ (on $|a_i\rangle$) and $0$
-(on everything orthogonal to it), the two answers. The average rule
-applied to this question gives
-
-$$
-P(\lambda_i) = \langle \psi | \hat P_i | \psi \rangle = \langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2 .
-$$
-
-This is Dirac's route (*Principles*, chapter II, §12): once the
-average of every observable is a quadratic form, the probability of
-every outcome is the average of the corresponding projector, and the
-squared amplitude follows.
-
-### From basis independence
-
-The derivation above uses the assumption that the average is a
+The last post's derivation uses the assumption that the average is a
 quadratic form. The following argument for the squared magnitude
-uses no such assumption — only that probabilities must not depend on the basis the
-state happens to be written in. It follows video 8 of the Quantum
-Sense series.
+uses no such assumption — only that probabilities must not depend on
+the basis the state happens to be written in. It follows video 8 of
+the Quantum Sense series.
 
 Suppose the probability of the outcome $\lambda_i$ is some function
 of the coordinate, $P_i = f(c_i)$ — the same function for every
@@ -230,11 +207,14 @@ the state.
 
 ### Eigenvectors are the definite states
 
-The first post's experiment one says that some states give a certain
-answer: measure again and again, and the window repeats itself. In
-the language of averages, a certain answer is one with no spread —
-the average of the squared deviation from the mean is zero. Compute
-that spread, the **variance**, in the eigenbasis:
+The last post showed that every eigenvector is a definite state: in
+$|a_i\rangle$ the outcome $\lambda_i$ has probability one. The converse
+is what makes the eigenvectors *all* the definite states, and it
+needs the Born rule. The first post's experiment one says that some
+states give a certain answer: measure again and again, and the window
+repeats itself. In the language of averages, a certain answer is one
+with no spread — the average of the squared deviation from the mean
+is zero. Compute that spread, the **variance**, in the eigenbasis:
 
 $$
 \langle (A - \langle A \rangle)^2 \rangle = \sum_i |c_i|^2\, (\lambda_i - \langle A \rangle)^2 .
@@ -243,8 +223,7 @@ $$
 Every term is nonnegative, so the sum vanishes only if every
 $c_i$ with $\lambda_i \neq \langle A \rangle$ is zero — that is, only
 if $|\psi\rangle$ has components along eigenvectors of a single
-eigenvalue, which makes it an eigenvector itself. Conversely an
-eigenvector has one nonzero weight, hence zero spread. So:
+eigenvalue, which makes it an eigenvector itself. So:
 
 > **Definite states are eigenvectors.** A state in which the outcome
 > of the question $\hat A$ is certain is an eigenvector of $\hat A$,
@@ -369,8 +348,8 @@ $$
 
 a unit factor times $|a_i\rangle$ — the same physical state. The
 probability of the outcome is the average of the projector,
-$\langle \psi | \hat P_i | \psi \rangle = |c_i|^2$, as in the first
-derivation of the Born rule.
+$\langle \psi | \hat P_i | \psi \rangle = |c_i|^2$, as in the last
+post's derivation of the Born rule.
 
 Read the first post's three experiments in this language.
 
@@ -398,11 +377,12 @@ The wishlist, with two more items paid:
 
 1. **A state object** — a unit vector in a Hilbert space. ✓ (second post)
 2. **A way to blend outcomes** — superposition; probabilities are
-   squared amplitudes, *derived here, twice*. ✓
+   squared amplitudes, derived in the last post from averages and
+   *here from basis independence*. ✓
 3. **Measurable quantities as actors** — Hermitian operators, whose
    eigenvalues are the outcomes and whose eigenvectors are the
    definite states; the average of a quantity is
-   $\langle \psi | \hat A | \psi \rangle$. ✓ (last post, completed here)
+   $\langle \psi | \hat A | \psi \rangle$. ✓ (last post)
 4. **Measurement as an operation on states** — projection onto a
    definite state, with the Born probability. ✓
 5. **Geometry must enter** — still open: the dictionary between
@@ -428,7 +408,7 @@ ordinary sphere.
   теория)*, Теоретическая физика, т. III — chapter I, §3
   "Операторы" (pp. 22–28 of the 6th Russian edition; §3 "Operators"
   in the English *Quantum Mechanics: Non-Relativistic Theory*): the
-  road of the last post, and a third derivation of the Born rule:
+  road of the last post, and one more derivation of the Born rule:
   $|a_n|^2$ as the only admissible bilinear probability, the mean value (3.7), the
   operator *defined* by the mean value (3.8), eigenfunctions (3.12),
   Hermiticity from the reality of the mean (3.15–3.17).
@@ -442,7 +422,7 @@ ordinary sphere.
   measuring $\xi$ in the state $|x\rangle$ is $\langle x | \xi | x \rangle$
   (p. 68), and the probability of the value $a$ as the average of the
   function $\delta_{\xi a}$ of the observable, $P_a = \langle x | \delta_{\xi a} | x \rangle$,
-  eq. (45) (p. 69) — the projector route of this post.
+  eq. (45) (p. 69) — the projector route of the last post.
 - Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
   Minimum*. Basic Books, 2014 — lecture 3, "Principles of Quantum
   Mechanics": §3.1 (linear operators, Hermitian conjugation), §3.2
