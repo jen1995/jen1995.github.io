@@ -549,8 +549,8 @@ throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 
 ### The assumption selects the normal matrices
 
-This is a real restriction. Not every table has such a basis, and
-the ones that do form a definite class: a matrix is diagonal in some
+Which tables satisfy the assumption? Not all of them, and the ones
+that do form a definite class: a matrix is diagonal in some
 orthonormal basis exactly when it commutes with its conjugate
 transpose — the matrix with rows and columns swapped and every entry
 conjugated, written $\bar A^{\mathsf T}$, the bar for the conjugation
