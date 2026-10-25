@@ -539,7 +539,8 @@ $c^\dagger A' c = d^\dagger U^\dagger U A U^\dagger U d = d^\dagger A d$.
 
 </details>
 
-Here is the assumption, with the basis given a name of its own.
+So the assumption is this. The basis it speaks of will be used
+throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the question is diagonal,
