@@ -486,12 +486,6 @@ reports. The requirement of the chapter would be met by one formula,
 with the two readings as the price: the diagonal entries are the
 outcomes, the squared coordinates are the probabilities.
 
-That is the plan for the rest of the chapter: arrange the machinery
-so that this is exactly what happens. Say what the assumption is;
-check that the weights can be nothing but $|c_i|^2$; carry the
-formula to bases in which the table is not diagonal; and see what
-the reality of the outcomes forces on the table.
-
 First the assumption, stated for the record. The basis in which the
 table is diagonal will not, in general, be the basis one started
 with — for the spin, the table of the $x$ question is not diagonal
@@ -748,6 +742,26 @@ unchanged to the $z$ basis of the spin, where the table of the $x$
 question is not diagonal at all.
 
 > **The table of every measurable quantity is Hermitian.**
+
+A worry at this point. A table of $n^2$ complex numbers could have
+been anything, and the chapter has just forced it to be Hermitian;
+an experiment cannot be ordered to produce symmetric tables. It
+need not be, because the experiment never hands us a table. It
+hands us outcomes, which are real numbers, and definite states,
+which are orthogonal; the table is assembled from these two lists by
+the spectral decomposition, and anything assembled that way is
+Hermitian. A table that is not Hermitian would need a complex
+outcome, or a pair of definite states that are not orthogonal, and
+no apparatus produces either. Tables that are not Hermitian do
+appear in the theory, as *devices* rather than questions: Feynman's
+apparatus matrix, a rotation of the spin, the evolution of a state
+in time — these are unitary, the subject of a later post. And the
+first table in history passed the test by itself. Heisenberg's
+amplitudes satisfy $X(m, n) = X(n, m)^*$, because the coordinate
+$x(t)$ they describe is real — the same condition that makes the
+Fourier coefficients of a real signal come in conjugate pairs,
+$X_{-\alpha}(n) = X_\alpha(n)^*$ in the notation of the
+[classical picture](#the-classical-picture).
 
 **And back.** The assumption that opened the chapter was promised a
 price. Suppose only what the apparatus guarantees — that the average
