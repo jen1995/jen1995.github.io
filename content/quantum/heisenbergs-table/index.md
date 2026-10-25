@@ -483,9 +483,9 @@ of something, and if the numbers $\lambda_i$ on the diagonal were the
 *possible outcomes* of the question — $+1$ and $-1$ for the spin —
 then this would be the sum of outcomes times their probabilities:
 an expectation value, exactly the average that the apparatus
-reports. The requirement of the chapter would be met by one formula,
-with the two readings as the price: the diagonal entries are the
-outcomes, the squared coordinates are the probabilities.
+reports. So one formula does the whole job, provided two things are
+true: the numbers on the diagonal are the outcomes, and the squared
+coordinates are the probabilities.
 
 First the assumption, stated for the record. The basis in which the
 table is diagonal will not, in general, be the basis one started
