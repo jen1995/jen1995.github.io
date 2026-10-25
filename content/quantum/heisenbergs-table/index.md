@@ -546,7 +546,7 @@ Here is the assumption, with the basis given a name of its own.
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
 > with numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
 
-### Which tables have such a basis
+### The assumption selects the normal matrices
 
 This is a real restriction. Not every table has such a basis, and
 the ones that do form a definite class: a matrix is diagonal in some
