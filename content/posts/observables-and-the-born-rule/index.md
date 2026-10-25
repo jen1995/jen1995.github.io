@@ -455,9 +455,13 @@ is what the averages will decide.
 
 ### The average is a quadratic form
 
-Take a state $|\psi\rangle = \sum_j c_j |E_j\rangle$ and a question
-with operator $\hat A$. What expression in the coordinates $c_j$
-can the average of the outcomes be?
+We now have a table for a question and a column for a state. The
+job set at the start of this section was that the object assigned to
+a question must return, for every state, the average of the
+outcomes. So the next step is to say how the table and the column
+combine into that one number: given $|\psi\rangle = \sum_j c_j |E_j\rangle$
+and the operator $\hat A$, what expression in the coordinates $c_j$
+and the entries $A_{ij}$ is the average?
 
 The second post made one thing a principle: the state is the vector,
 and nothing about it depends on the basis used to write it. An
