@@ -318,35 +318,39 @@ counterpart, and the correspondence is one to one:
 A table of numbers is not yet a mechanics. The classical equation of
 motion of a one-dimensional system is Newton's $\ddot x + f(x) = 0$,
 with a force $f(x)$ that is in general a nonlinear function of the
-position — Heisenberg tested his scheme on the simplest such systems,
+position. Heisenberg tested his scheme on the simplest such systems,
 oscillators with $f(x) = \omega_0^2 x + \lambda x^2$ or
 $f(x) = \omega_0^2 x + \lambda x^3$, whose classical motion is periodic
-and so has a Fourier description. To translate such an equation into the
-language of tables one has to know what the table of $x^2$ or $x^3$
-is, given the table of $x$: positions have to be *multiplied*. So
-Heisenberg needed a multiplication rule, and here the measured
-spectrum dictates the answer. Classically the coefficients
-of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$
-— the computation [under *The classical picture*](#the-classical-picture)
-above — a sum over pairs of harmonics of one orbit. Heisenberg's
-reasoning for the table was bookkeeping, not a picture. First, $x^2$
-is itself a measurable quantity, so its representative must be a set
-of the same kind, $Y(n, n - \beta)\, e^{i\omega(n, n - \beta) t}$, with
-transition frequencies obeying the Ritz rule. Second, it should be
-built from the $x$-quantities the way the classical one was. Squaring
-a Fourier series meant multiplying every term by every term, so each
-coefficient of $x^2$ became a sum of products of two coefficients of
-$x$; the quantum $Y$ should likewise be a sum of products of two
-$X$'s. Third, the frequencies must come out
-right — and here the chain appears. A product
-$X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t} \cdot X(k, k - \gamma)\, e^{i\omega(k, k - \gamma) t}$
-oscillates at the sum of the two frequencies, and that sum is a
-transition frequency only when the second jump starts where the first
-ended, $k = n - \alpha$; every other pairing produces a frequency the
-atom does not emit. So the only products allowed into
-$Y(n, n - \beta)$ are the chains through an intermediate level
-$n - \alpha$, and it is, in Heisenberg's words, "almost necessary" to
-sum over that level:
+and so has a Fourier description. To translate such an equation into
+the language of tables one has to know what the table of $x^2$ or
+$x^3$ is, given the table of $x$: positions have to be *multiplied*.
+So Heisenberg needed a multiplication rule.
+
+Classically the coefficients of $x^2$ came out as
+$Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$ — the computation
+[under *The classical picture*](#the-classical-picture) above — a sum
+over pairs of harmonics of one orbit. Heisenberg's reasoning for the
+quantum rule was bookkeeping, in three steps.
+
+1. **$x^2$ is a measurable quantity too.** So its representative must
+   be a set of the same kind as that of $x$:
+   $Y(n, n - \beta)\, e^{i\omega(n, n - \beta) t}$, one entry per pair of
+   levels, with transition frequencies obeying the Ritz rule.
+2. **It should be built the way the classical one was.** Squaring a
+   Fourier series meant multiplying every term by every term, so each
+   coefficient of $x^2$ became a sum of products of two coefficients
+   of $x$; the quantum $Y$ should likewise be a sum of products of two
+   $X$'s.
+3. **The frequencies must come out right.** A product
+   $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t} \cdot X(k, k - \gamma)\, e^{i\omega(k, k - \gamma) t}$
+   oscillates at the sum of the two frequencies, and that sum is a
+   transition frequency only when the second jump starts where the
+   first ended, $k = n - \alpha$; every other pairing produces a
+   frequency the atom does not emit.
+
+So the only products allowed into $Y(n, n - \beta)$ are the chains
+through an intermediate level $n - \alpha$, and it is, in
+Heisenberg's words, "almost necessary" to sum over that level:
 
 $$
 Y(n, n - \beta) = \sum_\alpha X(n, n - \alpha)\, X(n - \alpha, n - \beta) .
