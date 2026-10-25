@@ -599,10 +599,41 @@ orthogonalizing *within* a repeated eigenvalue is harmless; but
 orthogonalizing $(1, 1)^{\mathsf T}$ against $(1, 0)^{\mathsf T}$
 gives $(0, 1)^{\mathsf T}$, and $A (0, 1)^{\mathsf T} = (1, 2)^{\mathsf T}$
 is not an eigenvector. Eigenspaces of *different* eigenvalues are
-orthogonal only for special matrices, and the computation that
-proves it for Hermitian ones, later in this chapter, uses
-$\hat A^\dagger = \hat A$ in its middle step; for this $A$ the step
-fails, and indeed $A \bar A^{\mathsf T} \neq \bar A^{\mathsf T} A$.
+orthogonal only for special matrices, and here is where normality
+helps (Panov, §4.7, Lemma 4.7.2). Write $\hat A^\dagger$ for the
+operator of the conjugate transpose, so that
+$\langle \varphi | \hat A \psi \rangle = \langle \hat A^\dagger \varphi | \psi \rangle$
+(it is defined properly later in this chapter). For a normal
+operator, $\hat A \hat A^\dagger = \hat A^\dagger \hat A$, the two vectors
+$\hat A v$ and $\hat A^\dagger v$ have the same length:
+
+$$
+\langle \hat A v | \hat A v \rangle = \langle v | \hat A^\dagger \hat A v \rangle = \langle v | \hat A \hat A^\dagger v \rangle = \langle \hat A^\dagger v | \hat A^\dagger v \rangle .
+$$
+
+Since $\hat A - \lambda \hat I$ is normal along with $\hat A$, the
+vector $(\hat A - \lambda \hat I) v$ vanishes exactly when
+$(\hat A^\dagger - \lambda^* \hat I) v$ does: an eigenvector of
+$\hat A$ with eigenvalue $\lambda$ is an eigenvector of $\hat A^\dagger$
+with eigenvalue $\lambda^*$. Now let
+$\hat A \varphi_1 = \lambda_1 \varphi_1$ and
+$\hat A \varphi_2 = \lambda_2 \varphi_2$ with $\lambda_1 \neq \lambda_2$,
+and move the operator across the bracket:
+
+$$
+\lambda_2 \langle \varphi_1 | \varphi_2 \rangle = \langle \varphi_1 | \hat A \varphi_2 \rangle = \langle \hat A^\dagger \varphi_1 | \varphi_2 \rangle = \lambda_1 \langle \varphi_1 | \varphi_2 \rangle ,
+$$
+
+where the last step is $\hat A^\dagger \varphi_1 = \lambda_1^* \varphi_1$
+with the conjugate coming back out of the bra. So
+$(\lambda_2 - \lambda_1) \langle \varphi_1 | \varphi_2 \rangle = 0$ and
+the eigenvectors are orthogonal. The last step is the one that
+needs normality. For the matrix above,
+$\bar A^{\mathsf T} (1, 0)^{\mathsf T} = (1, 1)^{\mathsf T}$ is not a
+multiple of $(1, 0)^{\mathsf T}$, the chain breaks, and indeed
+$A \bar A^{\mathsf T} \neq \bar A^{\mathsf T} A$. For a Hermitian
+operator $\hat A^\dagger = \hat A$, the lemma is not even needed, and
+that is the version proved later in this chapter.
 
 So "diagonalizable" ($A = S \Lambda S^{-1}$ for some invertible $S$)
 and "diagonalizable in an orthonormal basis" ($A = U \Lambda U^\dagger$
