@@ -715,7 +715,7 @@ $$
 
 The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
 are conjugates of each other, because $p$ is real for every state —
-this is the polarization lemma, stated just below — and a number
+this is the **polarization** lemma, stated just below — and a number
 plus its conjugate is twice its real part:
 
 $$
