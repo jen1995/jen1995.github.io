@@ -500,24 +500,26 @@ it is $\sum_i \lambda_i |c_i|^2$.
 <details>
 <summary>The average is the same in every orthonormal basis</summary>
 
-Let $\{|e_j\rangle\}$ be the basis in use and $\{|a_i\rangle\}$
-another orthonormal basis, and set $U_{ij} = \langle a_i | e_j \rangle$.
-By the resolution of identity $\sum_j |e_j\rangle\langle e_j| = \hat I$:
-
-- $U$ is [**unitary**](https://en.wikipedia.org/wiki/Unitary_matrix): $(U^\dagger U)_{jk} = \sum_i \langle e_j | a_i \rangle \langle a_i | e_k \rangle = \langle e_j | e_k \rangle = \delta_{jk}$;
-- the column of coordinates goes to $c = U d$: $c_i = \langle a_i | \psi \rangle = \sum_j U_{ij}\, d_j$;
-- the table goes to $A' = U A U^\dagger$: $A'_{il} = \langle a_i | \hat A | a_l \rangle = \sum_{j,k} U_{ij}\, A_{jk}\, U_{lk}^*$.
-
-The last line is the change-of-basis law of a sesquilinear form,
-$M' = \bar C^{\mathsf T} M C$ with $C = U^\dagger$ (Panov's lectures,
-§5.1). Substitute:
+Let $d$ be the column of the state's coordinates in one orthonormal
+basis and $A$ the table in it, so that the average is
+$d^\dagger A d = \sum_{j,k} d_j^* A_{jk} d_k$. Passing to another
+orthonormal basis is a [unitary](https://en.wikipedia.org/wiki/Unitary_matrix)
+matrix $U$, $U^\dagger U = I$, and the change-of-basis law for the
+matrix of a sesquilinear form (Panov's lectures, §5.1,
+$M' = \bar C^{\mathsf T} M C$ with the transition matrix $C = U^\dagger$)
+says that the coordinates and the table become
 
 $$
-c^\dagger A' c = d^\dagger U^\dagger\, U A U^\dagger\, U d = d^\dagger A d ,
+c = U d, \qquad A' = U A U^\dagger .
 $$
 
-since $U^\dagger U = I$. The coordinates change, the table changes,
-the number does not.
+Compute the average in the new basis and substitute:
+
+$$
+c^\dagger A' c = d^\dagger U^\dagger\, U A U^\dagger\, U d = d^\dagger A d .
+$$
+
+The coordinates change, the table changes, the number does not.
 
 </details>
 
