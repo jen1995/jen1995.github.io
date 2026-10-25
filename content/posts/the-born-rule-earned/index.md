@@ -26,9 +26,9 @@ which the second post had taken on credit and the
 [delta post](/posts/from-kronecker-to-dirac/) borrowed again in
 passing.
 
-That derivation rests on one assumption, that averages are quadratic
-forms in the state. This post gives the rule a second derivation that
-does not use it, and then pays the last open item of the
+That derivation rests on one assumption, that probabilities are
+bilinear in the coordinates of the state. This post gives the rule a
+second derivation that does not use it, and then pays the last open item of the
 [first post's wishlist](/posts/the-apparatus-and-the-arrow/#the-wishlist),
 *measurement as an operation on states*. It collects what falls out
 along the way: no state outside the eigenvectors has a certain
@@ -66,9 +66,9 @@ Three facts from the earlier posts are used throughout.
 
 ## The Born rule, from basis independence
 
-The last post's derivation uses the assumption that the average is a
-quadratic form. The following argument for the squared magnitude
-uses no such assumption — only that probabilities must not depend on
+The last post's derivation uses the assumption that probabilities
+are bilinear in the coordinates. The following argument for the
+squared magnitude uses no such assumption — only that probabilities must not depend on
 the basis the state happens to be written in. It follows video 8 of
 the Quantum Sense series.
 
@@ -230,8 +230,8 @@ eigenvalue, which makes it an eigenvector itself. So:
 > and the certain outcome is its eigenvalue.
 
 This is the statement textbooks start from — Susskind's principles 1
-and 2 — and here it arrives last, as a consequence of "averages are
-quadratic forms". For the spin: the definite states $|u\rangle$,
+and 2 — and here it arrives last, as a consequence of the average
+rule of the last post. For the spin: the definite states $|u\rangle$,
 $|d\rangle$ of the $z$ question are the eigenvectors of its operator
 $\sigma_z$, with eigenvalues $+1$ and $-1$; the first post's "the
 measurement prepares a state that repeats its answer" is the

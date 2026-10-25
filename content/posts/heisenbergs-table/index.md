@@ -3,7 +3,7 @@ title: "Heisenberg's Table: Where the Matrices Come From"
 date: 2026-10-25
 draft: true
 tags: ["quantum", "math", "physics"]
-summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; averages are quadratic forms, so a quantity is a table with two indices — an operator; in the basis where the table is diagonal the average is a weighted average of the outcomes, and the weights are the Born probabilities; real readings make the table Hermitian, and the spectral theorem closes the circle."
+summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; a quantity is a table with two indices — an operator, the object Heisenberg found in the spectral lines; in the basis where the table is diagonal the average is a weighted average of the outcomes, with the Born probabilities as weights, and the same bracket in every basis; real readings make the table Hermitian, and the spectral theorem closes the circle."
 math: true
 weight: 50
 ---
@@ -28,8 +28,8 @@ this chapter with a postulate — "observables are Hermitian
 operators" — and derive the rest from it. Here the postulate is the
 last line, not the first: the post starts from what an apparatus
 actually gives us and follows that as far as it goes. That is the
-road of chapter II of Dirac's *Principles*, and of §3 of Landau and
-Lifshitz read in the other direction (see the references); Heisenberg
+road of chapter II of Dirac's *Principles* and of §3 of Landau and
+Lifshitz (see the references); Heisenberg
 took its first steps in 1925 without knowing where they led, and the
 middle of the post retells how. The Born rule, which the second
 post took on credit, is paid on the way; what a measurement does to
@@ -445,60 +445,18 @@ written without a hat, by convention). Nothing has been said yet about
 which operator belongs to which question, or about eigenvectors. That
 is what the averages will decide.
 
-### The average is a quadratic form
-
-We now have a table for a question and a column for a state. The
-requirement set at the
-[start of this chapter](#what-the-apparatus-gives-us-averages),
-before the detour through 1925, was that the object assigned to a
-measurable quantity must return, for every state, the average of
-the outcomes. So the next step is to say how the table and the column
-combine into that one number: given $|\psi\rangle = \sum_j c_j |E_j\rangle$
-and the operator $\hat A$, what expression in the coordinates $c_j$
-and the entries $A_{ij}$ is the average?
-
-The second post made one thing a principle: the state is the vector,
-and nothing about it depends on the basis used to write it. An
-average that is a law about the state must then be an expression in
-the coordinates whose *form* is the same in every orthonormal basis.
-The simplest such expressions are the quadratic ones,
-$\sum_{i,j} c_i^* M_{ij} c_j$ — in vector language, a number built
-from the state and one matrix, $\langle \psi | \hat M | \psi \rangle$.
-In linear algebra this is a *sesquilinear form* evaluated on the
-pair $(\psi, \psi)$: linear in the second argument, conjugate-linear
-in the first, and with the rule for how its matrix changes with the
-basis, $M' = \bar C^{\mathsf T} M C$, which keeps the expression of the
-same shape in every basis (Panov's lectures, §5.1, Definition 5.1.7).
-Landau and Lifshitz state it as a principle in §2 of their book
-that every probability is an expression bilinear in $\psi$ and
-$\psi^*$, and their §3 rests on it. We take it too, and name the
-matrix after the question:
-
-> **The average.** In the state $|\psi\rangle$, the average of the
-> outcomes of the question with operator $\hat A$ is
-> $$\langle A \rangle = \langle \psi | \hat A | \psi \rangle = \sum_{i,j} c_i^*\, A_{ij}\, c_j .$$
-
-(A theorem of Gleason, in the references, shows that for state
-spaces of dimension three and more *every* consistent assignment of
-probabilities is of this quadratic form, so the assumption costs
-nothing; in two dimensions it is an assumption, and the
-next post gives an independent reason for it.)
-
-This is the bracket of the first post, $\langle \sigma \rangle$,
-with its meaning finally spelled out: the operator of the question
-between the bra and the ket of the state. One check is immediate.
-Different questions must have different tables, since two questions
-with the same average in every state are not distinguishable by any
-experiment — and a quadratic form determines its matrix, so the
-table of a question is fixed by its averages.
-
-## What the table must be
+## What the averages decide
 
 ### Suppose the table is diagonal
 
-The quadratic form $\sum_{i,j} c_i^* A_{ij} c_j$ has $n^2$ complex
-entries and says nothing yet about outcomes. Make one assumption
-about the table; the end of this chapter says what it costs.
+We now have a table for a question and a column for a state, and the
+requirement set at the
+[start of this chapter](#what-the-apparatus-gives-us-averages),
+before the detour through 1925: the object assigned to a measurable
+quantity must return, for every state, the average of the outcomes.
+A table has $n^2$ complex entries and says nothing yet about outcomes
+or averages. Make one assumption about it; the end of this chapter
+says what it costs.
 
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the question is diagonal,
@@ -530,54 +488,139 @@ readings.
 
 </details>
 
-Write the state in this basis, $|\psi\rangle = \sum_i c_i |a_i\rangle$
-with $c_i = \langle a_i | \psi \rangle$, and the quadratic form
-collapses:
+In this basis the table is $n$ numbers $\lambda_1, \dots, \lambda_n$
+attached to $n$ orthonormal directions, and the state is its
+coordinates along them, $|\psi\rangle = \sum_i c_i |a_i\rangle$ with
+$c_i = \langle a_i | \psi \rangle$ and $\sum_i |c_i|^2 = 1$. The
+average of a random quantity is the sum of its possible values times
+their probabilities. The values the table offers are the $\lambda_i$.
+The probabilities must be built from the coordinates — nothing else
+about the state is available — and three things are known about
+them: they are nonnegative; they add up to one for every unit state;
+and the probability of the $i$-th value is one when the state is
+$|a_i\rangle$ itself and zero when the state has no component along
+it (the second post: a state orthogonal to $|a_i\rangle$ is
+perfectly distinguishable from it). Landau and Lifshitz add the
+principle of their §2 — every probability is an expression bilinear
+in the coordinates and their conjugates — and conclude (§3, p. 23)
+that the only essentially positive quantity satisfying these
+conditions is the squared modulus of the coefficient, $|c_i|^2$. The
+proof is under the cut.
+
+<details>
+<summary>Why the weights are the squared moduli (Landau and Lifshitz's argument)</summary>
+
+Fix $i$ and write the bilinear expression as
+$p_i = \sum_{j,k} M_{jk}\, c_j^* c_k$ with some matrix $M$. The state
+$|a_i\rangle$ has $c_i = 1$ and the other coordinates zero, so
+$M_{ii} = 1$. Every state with $c_i = 0$ gives $p_i = 0$, so the
+expression vanishes identically on the span of the other basis
+vectors, and an expression of this form that vanishes identically has
+zero matrix (the polarization argument in the cut on Hermitian
+operators below): $M_{jk} = 0$ whenever $j \neq i$ and $k \neq i$.
+Only the $i$-th row and column remain. Take the state with
+$c_i = \varepsilon$, $c_k = \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$
+for one $k \neq i$, and zero elsewhere:
 
 $$
-\langle A \rangle = \sum_{i,j} c_i^*\, \lambda_i \delta_{ij}\, c_j = \sum_i \lambda_i\, |c_i|^2 .
+p_i = \varepsilon^2 + \varepsilon \sqrt{1 - \varepsilon^2}\, \big( M_{ik}\, e^{i\varphi} + M_{ki}\, e^{-i\varphi} \big) .
 $$
 
-The numbers $|c_i|^2$ are nonnegative and add up to
-$\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$. So the average of
-the question, in any state, is a **weighted average of the numbers on
-the diagonal**, with weights $|c_i|^2$ that form a probability
-distribution. An average of a random quantity is the sum of its
-possible values times their probabilities. Read the formula that way:
-the $\lambda_i$ are the possible outcomes of the question — no other
-value ever enters its average, in any state — and $|c_i|^2$ looks
-like the probability of the outcome $\lambda_i$.
+For small $\varepsilon$ the second term dominates, and unless it is
+zero for every $\varphi$, some choice of $\varphi$ makes $p_i$
+negative. So $M_{ik} = M_{ki} = 0$ for every $k \neq i$, and
+$p_i = |c_i|^2$.
 
-![The average of a question is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
+</details>
 
-**The weights are the probabilities.** That the $|c_i|^2$ are not
-merely numbers that happen to sum to one is one more use of the
-average rule. Among the questions one can ask is the yes/no question
-"did the outcome equal $\lambda_i$?" It is answered by the same
-apparatus with its window read differently — $1$ for the outcome
-$\lambda_i$, $0$ for every other outcome — so its definite states are
-the same, and its table is diagonal in the same basis, with $1$ in
-the $i$-th place and $0$ elsewhere: it is the projector
-$\hat P_i = |a_i\rangle\langle a_i|$. The average of a yes/no question
-is, by the definition of an average, the probability of "yes". The
-average rule applied to this table gives
+So in the basis where the table is diagonal, the average is
 
 $$
-P(\lambda_i) = \langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2 .
+\langle A \rangle = \sum_i \lambda_i\, |c_i|^2 ,
 $$
+
+a weighted average of the numbers on the diagonal, with weights that
+form a probability distribution — Landau and Lifshitz's (3.7). And
+the weights are the rule the
+[second post](/posts/states-are-vectors/#what-the-geometry-means-physically)
+took on credit:
 
 > **The Born rule.** If $|\psi\rangle = \sum_i c_i |a_i\rangle$ in the
 > basis where the question is diagonal, the probability that a
 > measurement of it returns $\lambda_i$ is
 > $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
 
-This is Dirac's route (*Principles*, chapter II, §§11–12): the
-yes/no question is a *function* of the observable, and the
-probability of a value is the average of that function. The
-[second post](/posts/states-are-vectors/#what-the-geometry-means-physically)
-took the rule on credit; here it follows from "averages are quadratic
-forms". The next post gives a second derivation that does not use
-that assumption.
+The assumption behind this derivation is the bilinear one. The next
+post gives a second derivation that does not use it — only that
+probabilities must not depend on the basis the state is written in.
+(A theorem of Gleason, in the references, shows that for state spaces
+of dimension three and more *every* consistent assignment of
+probabilities is of this bilinear form, so in those dimensions the
+assumption costs nothing.)
+
+![The average of a question is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
+
+### The same bracket in every basis
+
+The formula was written in the one basis where the table is
+diagonal. In another orthonormal basis $\{|e_j\rangle\}$ — the $z$
+basis of the spin, say, for the table of the $x$ question — the
+table is not diagonal, and the average has to be computed from it.
+Write $U_{ij} = \langle a_i | e_j \rangle$ for the inner products
+between the two bases. By "coordinates are inner products" its
+columns are the coordinates of the new basis vectors in the old,
+$|e_j\rangle = \sum_i U_{ij}\, |a_i\rangle$, and it is
+[**unitary**](https://en.wikipedia.org/wiki/Unitary_matrix),
+$U^\dagger U = I$: the entry $(U^\dagger U)_{jk} = \sum_i \langle e_j | a_i \rangle \langle a_i | e_k \rangle$
+is $\langle e_j | e_k \rangle = \delta_{jk}$ by the resolution of
+identity. Inserting the resolution of identity in the same way
+gives the table and the coordinates in the new basis:
+
+$$
+\begin{aligned}
+A'_{jk} &= \langle e_j | \hat A | e_k \rangle = \sum_i U_{ij}^*\, \lambda_i\, U_{ik}, \\
+d_j &= \langle e_j | \psi \rangle = \sum_i U_{ij}^*\, c_i ,
+\end{aligned}
+$$
+
+that is, $A' = U^\dagger \Lambda U$ with $\Lambda$ the diagonal table,
+and $d = U^\dagger c$. This is the change-of-basis law of a
+sesquilinear form, $M' = \bar C^{\mathsf T} M C$ (Panov's lectures,
+§5.1), with a unitary $C$. The table changes; the average does not.
+Substitute:
+
+$$
+\sum_{j,k} d_j^*\, A'_{jk}\, d_k = \sum_{j,k} \langle \psi | e_j \rangle \langle e_j | \hat A | e_k \rangle \langle e_k | \psi \rangle = \langle \psi | \hat A | \psi \rangle ,
+$$
+
+by the resolution of identity twice, and the same bracket evaluated
+in the diagonal basis is $\sum_i \lambda_i |c_i|^2$. So the average
+is a number built from the state and the operator with no basis
+mentioned, and in any orthonormal basis it is the same expression
+in the coordinates and the entries:
+
+> **The average.** In the state $|\psi\rangle$, the average of the
+> outcomes of the question with operator $\hat A$ is
+> $$\langle A \rangle = \langle \psi | \hat A | \psi \rangle = \sum_{j,k} d_j^*\, A_{jk}\, d_k$$
+> in any orthonormal basis, with $d_j$ the coordinates of the state
+> and $A_{jk}$ the entries of the table in that basis.
+
+This is the bracket of the first post, $\langle \sigma \rangle$, with
+its meaning finally spelled out: the operator of the question between
+the bra and the ket of the state. Landau and Lifshitz *define* the
+operator of a quantity by this requirement, that the bracket return
+the mean (their (3.8)). Two checks. Different questions must have
+different tables, since two questions with the same average in every
+state are not distinguishable by any experiment — and an expression
+of this form determines its matrix (the polarization cut below), so
+the table of a question is fixed by its averages. And Dirac's check
+(*Principles*, chapter II, §12): the yes/no question "did the outcome
+equal $\lambda_i$?" is answered by the same apparatus with its window
+read differently, $1$ for $\lambda_i$ and $0$ for every other
+outcome, so its table in the diagonal basis has a single $1$ in the
+$i$-th place: it is the projector $|a_i\rangle\langle a_i|$. Its
+average is $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
+the probability of "yes" — the Born rule, read off the average rule.
 
 ### The diagonal basis is the eigenbasis
 
@@ -611,8 +654,8 @@ onto its eigenvector. (Apply both sides to $|\psi\rangle$ and use
 $\langle a_i | \psi \rangle = c_i$ to see that it is the same
 operator.) Set every $\lambda_i$ to $1$ and it collapses to the
 resolution of identity of the second post; keep a single $\lambda_i$
-and set the rest to $0$ and it is the projector of the yes/no question
-above.
+equal to $1$ and set the rest to $0$ and it is the projector of
+Dirac's yes/no question.
 
 ### Real outcomes make the table Hermitian
 
@@ -822,14 +865,15 @@ expansion of the state in that basis.
 
 ## What we built
 
-The chain of the post. What an apparatus gives us is averages. An
-average that is a law about the state is a quadratic form in its
-coordinates, so a question is a table with two indices — an operator,
-the object Heisenberg found in 1925 in the spectral lines of the
-atom. In the orthonormal basis where the table is diagonal, the
-average is a weighted average of the numbers on the diagonal: they
-are the outcomes, and the weights $|c_i|^2$ are the probabilities —
-the Born rule, obtained from the average of a yes/no question. That
+The chain of the post. What an apparatus gives us is averages. A
+question is a table with two indices — an operator, the object
+Heisenberg found in 1925 in the spectral lines of the atom. In the
+orthonormal basis where the table is diagonal, the average is a
+weighted average of the numbers on the diagonal: they are the
+outcomes, and the weights $|c_i|^2$ are the only admissible
+probabilities — the Born rule. The average is the bracket
+$\langle \psi | \hat A | \psi \rangle$, the same in every basis,
+which is how a table that is not diagonal is used. The diagonal
 basis is the eigenbasis of the operator and the outcomes are its
 eigenvalues. Readings are real, so the operator is Hermitian; and
 Hermitian is also enough, by the spectral theorem, for such a basis
@@ -840,10 +884,10 @@ operator**, whose eigenvalues are the outcomes, whose eigenvectors are
 the definite states, whose average in a state is
 $\langle \psi | \hat A | \psi \rangle$, and whose outcome
 probabilities are the squared coordinates $|c_i|^2$. Two things
-remain. The Born rule was derived from the assumption that averages
-are quadratic forms, and deserves a reason that does not depend on
-it; and nothing has been said about what a measurement does to the
-state. Both are the next post.
+remain. The Born rule was derived from the assumption that
+probabilities are bilinear in the coordinates, and deserves a reason
+that does not depend on it; and nothing has been said about what a
+measurement does to the state. Both are the next post.
 
 ## Onward
 
