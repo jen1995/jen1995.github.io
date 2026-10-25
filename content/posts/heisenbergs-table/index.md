@@ -454,9 +454,46 @@ requirement set at the
 [start of this chapter](#what-the-apparatus-gives-us-averages),
 before the detour through 1925: the object assigned to a measurable
 quantity must return, for every state, the average of the outcomes.
-A table has $n^2$ complex entries and says nothing yet about outcomes
-or averages. Make one assumption about it; the end of this chapter
-says what it costs.
+A table and a column make a column, $\hat A|\psi\rangle$, computed
+above. To get a *number* out of them, do the one more thing the
+second post allows — take the inner product with the state itself:
+
+$$
+\langle \psi | \hat A | \psi \rangle = \sum_{i,j} c_i^*\, A_{ij}\, c_j .
+$$
+
+This is a row times a matrix times a column, and for a general table
+it is $n^2$ terms with no visible meaning. So try the simplest table
+first. What if the table is diagonal in the basis we are using —
+$A_{ij} = \lambda_i \delta_{ij}$, numbers $\lambda_1, \dots, \lambda_n$
+on the diagonal and zeros elsewhere? Then only the terms with
+$i = j$ survive:
+
+$$
+\langle \psi | \hat A | \psi \rangle = \sum_i \lambda_i\, |c_i|^2 .
+$$
+
+Look at this formula. The numbers $|c_i|^2$ are nonnegative and add
+up to one, $\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$ — the
+normalization of the second post. If they were the *probabilities*
+of something, and if the numbers $\lambda_i$ on the diagonal were the
+*possible outcomes* of the question — $+1$ and $-1$ for the spin —
+then this would be the sum of outcomes times their probabilities:
+an expectation value, exactly the average that the apparatus
+reports. The requirement of the chapter would be met by one formula,
+with the two readings as the price: the diagonal entries are the
+outcomes, the squared coordinates are the probabilities.
+
+That is the plan for the rest of the chapter: arrange the machinery
+so that this is exactly what happens. Say what the assumption is;
+check that the weights can be nothing but $|c_i|^2$; carry the
+formula to bases in which the table is not diagonal; and see what
+the reality of the outcomes forces on the table.
+
+First the assumption, stated for the record. The basis in which the
+table is diagonal will not, in general, be the basis one started
+with — for the spin, the table of the $x$ question is not diagonal
+in the $z$ basis — so it gets a name of its own.
 
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the question is diagonal,
@@ -488,24 +525,24 @@ readings.
 
 </details>
 
-In this basis the table is $n$ numbers $\lambda_1, \dots, \lambda_n$
-attached to $n$ orthonormal directions, and the state is its
-coordinates along them, $|\psi\rangle = \sum_i c_i |a_i\rangle$ with
-$c_i = \langle a_i | \psi \rangle$ and $\sum_i |c_i|^2 = 1$. The
-average of a random quantity is the sum of its possible values times
-their probabilities. The values the table offers are the $\lambda_i$.
-The probabilities must be built from the coordinates — nothing else
-about the state is available — and three things are known about
-them: they are nonnegative; they add up to one for every unit state;
-and the probability of the $i$-th value is one when the state is
-$|a_i\rangle$ itself and zero when the state has no component along
-it (the second post: a state orthogonal to $|a_i\rangle$ is
-perfectly distinguishable from it). Landau and Lifshitz add the
-principle of their §2 — every probability is an expression bilinear
-in the coordinates and their conjugates — and conclude (§3, p. 23)
-that the only essentially positive quantity satisfying these
-conditions is the squared modulus of the coefficient, $|c_i|^2$. The
-proof is under the cut.
+From here on $c_i = \langle a_i | \psi \rangle$ are the coordinates
+of the state in this basis, $|\psi\rangle = \sum_i c_i |a_i\rangle$.
+
+**Can the weights be anything else?** The reading "the $|c_i|^2$ are
+the probabilities of the outcomes" was a guess made to fit the
+formula. Here is why it is the only guess available. Whatever the
+probabilities are, they must be built from the coordinates — nothing
+else about the state is available — and three things are known
+about them: they are nonnegative; they add up to one for every unit
+state; and the probability of the $i$-th outcome is one when the
+state is $|a_i\rangle$ itself and zero when the state has no
+component along it (the second post: a state orthogonal to
+$|a_i\rangle$ is perfectly distinguishable from it). Landau and
+Lifshitz add the principle of their §2 — every probability is an
+expression bilinear in the coordinates and their conjugates — and
+conclude (§3, p. 23) that the only essentially positive quantity
+satisfying these conditions is the squared modulus of the
+coefficient, $|c_i|^2$. The proof is under the cut.
 
 <details>
 <summary>Why the weights are the squared moduli (Landau and Lifshitz's argument)</summary>
@@ -533,16 +570,16 @@ $p_i = |c_i|^2$.
 
 </details>
 
-So in the basis where the table is diagonal, the average is
+So the guess is forced, and the formula is an average in the plain
+sense:
 
 $$
 \langle A \rangle = \sum_i \lambda_i\, |c_i|^2 ,
 $$
 
-a weighted average of the numbers on the diagonal, with weights that
-form a probability distribution — Landau and Lifshitz's (3.7). And
-the weights are the rule the
-[second post](/posts/states-are-vectors/#what-the-geometry-means-physically)
+the outcomes on the diagonal, weighted by a probability
+distribution — Landau and Lifshitz's (3.7). The weights are the rule
+the [second post](/posts/states-are-vectors/#what-the-geometry-means-physically)
 took on credit:
 
 > **The Born rule.** If $|\psi\rangle = \sum_i c_i |a_i\rangle$ in the
@@ -562,10 +599,12 @@ assumption costs nothing.)
 
 ### The same bracket in every basis
 
-The formula was written in the one basis where the table is
-diagonal. In another orthonormal basis $\{|e_j\rangle\}$ — the $z$
-basis of the spin, say, for the table of the $x$ question — the
-table is not diagonal, and the average has to be computed from it.
+The formula holds in the one basis where the table is diagonal.
+In another orthonormal basis $\{|e_j\rangle\}$ — the $z$ basis of
+the spin, for the table of the $x$ question — the table is not
+diagonal, and the average has to be computed from it. The claim is
+that the bracket $\langle \psi | \hat A | \psi \rangle$ we started
+from is the answer in every basis.
 Write $U_{ij} = \langle a_i | e_j \rangle$ for the inner products
 between the two bases. By "coordinates are inner products" its
 columns are the coordinates of the new basis vectors in the old,
