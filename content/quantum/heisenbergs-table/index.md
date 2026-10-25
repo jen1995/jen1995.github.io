@@ -668,10 +668,11 @@ the coordinates and their conjugates, that is, of the same shape as
 the average itself,
 
 $$
-p_i = \sum_{j,k} M_{jk}\, c_j^*\, c_k
+p_i = \sum_{j,k} M_{jk}\, c_j^*\, c_k = \langle \psi | \hat M | \psi \rangle
 $$
 
-for some matrix $M$ that depends on $i$. With this they conclude
+for some operator $\hat M$, with matrix $M_{jk} = \langle a_j | \hat M | a_k \rangle$
+in the basis $\{|a_i\rangle\}$, that depends on $i$. With this they conclude
 (§3, p. 23) that the only such expression satisfying the three
 conditions is the squared modulus $|c_i|^2$. The argument is short.
 
