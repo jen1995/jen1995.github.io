@@ -685,10 +685,11 @@ deliberately does not.
   linear in the coordinates does not — each term picks up
   $e^{i\theta}$ — so degree one in $\psi$ and one in $\psi^*$ is the
   lowest that qualifies.
-- It keeps its shape under a change of orthonormal basis: the cut
-  above showed $c \mapsto U c$, $M \mapsto U M U^\dagger$. So a
-  bilinear law written in one basis is a bilinear law in every
-  basis, which a law about the state must be.
+- Its value does not depend on the basis: the cut above showed that
+  $\langle \psi | \hat M | \psi \rangle$ computed in any orthonormal
+  basis is the same number, $c^\dagger M c = d^\dagger M' d$. A
+  probability must be a property of the state, not of the
+  coordinates chosen to write it, and a bilinear expression is one.
 - Probabilities of exclusive outcomes add, and they should: the
   probability of "$\lambda_i$ or $\lambda_j$" is $p_i + p_j$, the
   operator of the combined outcome being $\hat M_i + \hat M_j$.
