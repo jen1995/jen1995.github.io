@@ -302,7 +302,7 @@ $$
 $$
 
 For $|l\rangle$, the first fact allows any half-and-half combination,
-but the second pins it down (up to the usual freedom — see the cut):
+but the second pins it down (up to the usual freedom, discussed just below):
 
 $$
 |l\rangle = \frac{1}{\sqrt 2} |u\rangle - \frac{1}{\sqrt 2} |d\rangle.
@@ -313,9 +313,7 @@ $\langle r | l \rangle = \frac{1}{2} \langle u | u \rangle - \frac{1}{2} \langle
 Two states, each an equal-weight blend of up and down, and yet
 perfectly distinguishable by the apparatus with its arrow along $x$.
 
-<details>
-<summary>The leftover freedom: global phase</summary>
-
+<a id="global-phase"></a>**The leftover freedom: global phase.**
 The two facts do not fix $|l\rangle$ uniquely: any multiple
 $e^{i\theta} |l\rangle$ satisfies them too, since a factor of unit
 magnitude changes neither squared amplitudes nor orthogonality. The
@@ -325,8 +323,6 @@ so states are really unit vectors *up to global phase*. We will count
 the surviving parameters carefully in the qubit post, where this
 redundancy is exactly what squeezes the four real numbers of
 $\mathbb C^2$ down to the two angles of a sphere.
-
-</details>
 
 And the $y$ axis? Its two states $|i\rangle, |o\rangle$ (*in* and
 *out*) must be fifty-fifty in the $z$ basis **and** fifty-fifty in the
