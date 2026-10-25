@@ -257,11 +257,12 @@ posts away.)
 
 **Normalized means total probability one.** Here we must borrow from
 the future, and the loan is the largest of this post. *How exactly*
-the weights encode probabilities is a genuinely deep question — deep
-enough that a whole post of this road is reserved for it: there is a
-beautiful argument that, once weights carry probabilities at all,
-consistency across bases forces one specific formula and no other. For
-today we take that formula on credit. For a state
+the weights encode probabilities is a genuinely deep question, and a
+later post of this road, on observables, answers it: once the
+averages an apparatus reports are written in the basis of definite
+states, the squared magnitudes turn out to be the only weights that
+can serve as probabilities. For today we take that formula on
+credit. For a state
 $|A\rangle = \alpha_u |u\rangle + \alpha_d |d\rangle$, the probability
 that a $z$ measurement answers $+1$ is
 
