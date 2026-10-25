@@ -713,11 +713,13 @@ p(\psi) &= \langle \psi_1 + \psi_2 \,|\, \hat M \,|\, \psi_1 + \psi_2 \rangle \\
 $$
 
 The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
-are conjugates of each other when $p$ is real for every state —
-which it is, being a probability — since then
-$\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$
-(polarization, just below), and a number
-plus its conjugate is twice its real part:
+are conjugates of each other,
+$\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$,
+because $p$ is real for every state, being a probability — this is
+the second consequence of the polarization argument, proved just
+below, applied to $|\varphi\rangle = |\psi_2\rangle$ and
+$|\psi\rangle = |\psi_1\rangle$. A number plus its conjugate is twice
+its real part:
 
 $$
 p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
