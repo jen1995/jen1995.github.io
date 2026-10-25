@@ -728,7 +728,7 @@ superposition, and the quantum content of the assumption. The spin
 shows it in two lines, under the cut.
 
 <details>
-<summary>Interference on the spin: the same two pieces, opposite cross terms</summary>
+<summary>Interference on the spin</summary>
 
 Ask the $z$ question of the two $x$-definite states: the probability
 of "up" is $p = \langle \psi | u \rangle \langle u | \psi \rangle = |\langle u | \psi \rangle|^2$,
