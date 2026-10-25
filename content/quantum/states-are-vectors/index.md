@@ -259,9 +259,9 @@ posts away.)
 the future, and the loan is the largest of this post. *How exactly*
 the weights encode probabilities is a genuinely deep question, and a
 later post of this road, on observables, answers it: once the
-averages an apparatus reports are written in the basis of definite
-states, the squared magnitudes turn out to be the only weights that
-can serve as probabilities. For today we take that formula on
+averages an apparatus reports are written in the basis of the states
+the apparatus prepares, the squared magnitudes turn out to be the only
+weights that can serve as probabilities. For today we take that formula on
 credit. For a state
 $|A\rangle = \alpha_u |u\rangle + \alpha_d |d\rangle$, the probability
 that a $z$ measurement answers $+1$ is

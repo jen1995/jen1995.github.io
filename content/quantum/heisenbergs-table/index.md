@@ -41,8 +41,9 @@ the state is the next post's subject.
 Three facts from the earlier posts are used throughout.
 
 - A measurement along an axis has two outcomes, $+1$ and $-1$, and
-  two **definite states** — the states that the measurement prepares
-  and then confirms on every repetition. For the $z$ axis they are
+  two states that the measurement prepares and then confirms on every
+  repetition (the first post's experiment one). This post needs a
+  name for them: **definite states**. For the $z$ axis they are
   $|u\rangle$ and $|d\rangle$; for the $x$ axis, $|r\rangle$ and
   $|l\rangle$, which the
   [second post built](/quantum/states-are-vectors/#the-machinery-earns-its-keep-right-and-left)
