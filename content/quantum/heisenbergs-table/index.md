@@ -675,8 +675,69 @@ $$
 for some operator $\hat M$, with matrix $M_{jk} = \langle a_j | \hat M | a_k \rangle$
 in the basis $\{|a_i\rangle\}$, that depends on $i$.
 
-One fact about bilinear expressions
-$\langle \psi | \hat M | \psi \rangle$ is used twice below.
+What recommends this shape? Three things it gets right, and one it
+deliberately does not.
+
+- A unit factor on the state, $|\psi\rangle \mapsto e^{i\theta}|\psi\rangle$,
+  changes no measurement (the second post,
+  ["The leftover freedom: global phase"](/quantum/states-are-vectors/#global-phase)).
+  A bilinear expression has this property automatically: each term
+  $c_j^* c_k$ picks up $e^{-i\theta} e^{i\theta} = 1$. An expression
+  linear in the coordinates does not — each term picks up
+  $e^{i\theta}$ — so degree one in $\psi$ and one in $\psi^*$ is the
+  lowest that qualifies.
+- Its value does not depend on the basis: the cut above showed that
+  $\langle \psi | \hat M | \psi \rangle$ computed in any orthonormal
+  basis is the same number, $c^\dagger M c = d^\dagger M' d$. A
+  probability must be a property of the state, not of the
+  coordinates chosen to write it, and a bilinear expression is one.
+- Probabilities of exclusive outcomes add, and they should: the
+  probability of "$\lambda_i$ or $\lambda_j$" is $p_i + p_j$, the
+  operator of the combined outcome being $\hat M_i + \hat M_j$.
+  Gleason's theorem, in the references, runs this in reverse: in a
+  state space of dimension three and more, any assignment of
+  probabilities that adds over exclusive outcomes *is* bilinear. In
+  two dimensions — our spin — it is not forced, and there it stays
+  an assumption.
+
+What bilinearity does *not* give is additivity in the state. Take
+$|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$ and expand the
+bracket, using linearity in the ket and conjugate linearity in the
+bra:
+
+$$
+\begin{aligned}
+p(\psi) &= \langle \psi_1 + \psi_2 \,|\, \hat M \,|\, \psi_1 + \psi_2 \rangle \\
+&= \langle \psi_1 | \hat M | \psi_1 \rangle + \langle \psi_2 | \hat M | \psi_2 \rangle + \langle \psi_1 | \hat M | \psi_2 \rangle + \langle \psi_2 | \hat M | \psi_1 \rangle .
+\end{aligned}
+$$
+
+The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
+are conjugates of each other,
+$\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$,
+because $p$ is real for every state, being a probability, and
+polarization — stated just below — then makes the bracket
+conjugate-symmetric. A number plus its conjugate is twice its real
+part:
+
+$$
+p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
+$$
+
+The cross term is interference. When states are added, their
+coordinates add: $c_i = \langle a_i | \psi \rangle$, the *probability
+amplitudes* of the second post. The probabilities, their squared
+magnitudes, do not add; this is the
+[second post's remark](/quantum/states-are-vectors/#what-the-geometry-means-physically)
+that amplitudes can cancel in a superposition, and it is the quantum
+content of the assumption. A worked example on the spin, with the
+same two pieces reinforcing in one combination and cancelling in the
+other, closes this subsection.
+
+
+The step that paired the cross terms used one fact about bilinear
+expressions $\langle \psi | \hat M | \psi \rangle$. It is needed again
+below, so here it is in full.
 
 > **Polarization.** The values $\langle \psi | \hat M | \psi \rangle$
 > on single states determine every $\langle \varphi | \hat M | \psi \rangle$.
@@ -750,65 +811,6 @@ $|\varphi\rangle + i|\psi\rangle$ detects.
   everywhere.
 
 </details>
-
-What recommends this shape? Three things it gets right, and one it
-deliberately does not.
-
-- A unit factor on the state, $|\psi\rangle \mapsto e^{i\theta}|\psi\rangle$,
-  changes no measurement (the second post,
-  ["The leftover freedom: global phase"](/quantum/states-are-vectors/#global-phase)).
-  A bilinear expression has this property automatically: each term
-  $c_j^* c_k$ picks up $e^{-i\theta} e^{i\theta} = 1$. An expression
-  linear in the coordinates does not — each term picks up
-  $e^{i\theta}$ — so degree one in $\psi$ and one in $\psi^*$ is the
-  lowest that qualifies.
-- Its value does not depend on the basis: the cut above showed that
-  $\langle \psi | \hat M | \psi \rangle$ computed in any orthonormal
-  basis is the same number, $c^\dagger M c = d^\dagger M' d$. A
-  probability must be a property of the state, not of the
-  coordinates chosen to write it, and a bilinear expression is one.
-- Probabilities of exclusive outcomes add, and they should: the
-  probability of "$\lambda_i$ or $\lambda_j$" is $p_i + p_j$, the
-  operator of the combined outcome being $\hat M_i + \hat M_j$.
-  Gleason's theorem, in the references, runs this in reverse: in a
-  state space of dimension three and more, any assignment of
-  probabilities that adds over exclusive outcomes *is* bilinear. In
-  two dimensions — our spin — it is not forced, and there it stays
-  an assumption.
-
-What bilinearity does *not* give is additivity in the state. Take
-$|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$ and expand the
-bracket, using linearity in the ket and conjugate linearity in the
-bra:
-
-$$
-\begin{aligned}
-p(\psi) &= \langle \psi_1 + \psi_2 \,|\, \hat M \,|\, \psi_1 + \psi_2 \rangle \\
-&= \langle \psi_1 | \hat M | \psi_1 \rangle + \langle \psi_2 | \hat M | \psi_2 \rangle + \langle \psi_1 | \hat M | \psi_2 \rangle + \langle \psi_2 | \hat M | \psi_1 \rangle .
-\end{aligned}
-$$
-
-The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
-are conjugates of each other,
-$\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$,
-because $p$ is real for every state, being a probability, and
-polarization then makes the bracket conjugate-symmetric. A number
-plus its conjugate is twice its real part:
-
-$$
-p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
-$$
-
-The cross term is interference. When states are added, their
-coordinates add: $c_i = \langle a_i | \psi \rangle$, the *probability
-amplitudes* of the second post. The probabilities, their squared
-magnitudes, do not add; this is the
-[second post's remark](/quantum/states-are-vectors/#what-the-geometry-means-physically)
-that amplitudes can cancel in a superposition, and it is the quantum
-content of the assumption. A worked example on the spin, with the
-same two pieces reinforcing in one combination and cancelling in the
-other, closes this subsection.
-
 
 With this condition Landau and Lifshitz conclude that the only expression of this
 form satisfying the three conditions is the squared modulus
