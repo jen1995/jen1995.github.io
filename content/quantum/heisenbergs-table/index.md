@@ -713,16 +713,13 @@ p(\psi) &= \langle \psi_1 + \psi_2 \,|\, \hat M \,|\, \psi_1 + \psi_2 \rangle \\
 \end{aligned}
 $$
 
-The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
-are conjugates of each other: $p$ is real for every state, being a
-probability, and polarization — stated just below — then makes the
-bracket conjugate-symmetric,
+The first two terms are $p(\psi_1)$ and $p(\psi_2)$. Since $p$ is
+real for every state, being a probability, polarization — stated
+just below — gives
 $\langle \varphi | \hat M | \psi \rangle = \langle \psi | \hat M | \varphi \rangle^*$
-for all $|\varphi\rangle, |\psi\rangle$; with
-$|\varphi\rangle = |\psi_2\rangle$ and $|\psi\rangle = |\psi_1\rangle$
-this reads
-$\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$.
-A number plus its conjugate is twice its real part:
+for all $|\varphi\rangle, |\psi\rangle$, so the last two terms are
+conjugates of each other. A number plus its conjugate is twice its
+real part:
 
 $$
 p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
