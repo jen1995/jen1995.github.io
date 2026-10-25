@@ -713,13 +713,17 @@ p(\psi) &= \langle \psi_1 + \psi_2 \,|\, \hat M \,|\, \psi_1 + \psi_2 \rangle \\
 \end{aligned}
 $$
 
-The first two terms are $p(\psi_1)$ and $p(\psi_2)$. Since $p$ is
-real for every state, being a probability, polarization — stated
-just below — gives
-$\langle \varphi | \hat M | \psi \rangle = \langle \psi | \hat M | \varphi \rangle^*$
-for all $|\varphi\rangle, |\psi\rangle$, so the last two terms are
-conjugates of each other. A number plus its conjugate is twice its
-real part:
+The first two terms are $p(\psi_1)$ and $p(\psi_2)$. Call the last
+two $X = \langle \psi_1 | \hat M | \psi_2 \rangle$ and
+$Y = \langle \psi_2 | \hat M | \psi_1 \rangle$. Since $p$ is real,
+being a probability, $X + Y$ is real — but that alone allows
+$X = 1$, $Y = -1$, say. What settles it is that $p$ is real for
+*every* state, including $|\psi_1\rangle + i|\psi_2\rangle$, whose
+expansion has the cross terms $i X - i Y$; so $X - Y$ is purely
+imaginary as well. Writing $X = a + ib$ and $Y = c + id$, the first
+condition gives $d = -b$ and the second $c = a$: $Y = X^*$, the two
+cross terms are conjugates of each other, and a number plus its
+conjugate is twice its real part:
 
 $$
 p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
@@ -736,13 +740,14 @@ same two pieces reinforcing in one combination and cancelling in the
 other, closes this subsection.
 
 
-The pairing of the cross terms rests on the following lemma, which
-is also used in the argument below. It is not automatic: reality of
-$p$ is a condition on the values $\langle \psi | \hat M | \psi \rangle$,
-one number per state, while conjugate symmetry is a condition on
+The trick with $|\psi_1\rangle + i|\psi_2\rangle$ is worth stating in
+general, since it is used again in the argument below and later in
+the chapter. It is not automatic: reality of $p$ is a condition on
+the values $\langle \psi | \hat M | \psi \rangle$, one number per
+state, while conjugate symmetry is a condition on
 $\langle \varphi | \hat M | \psi \rangle$, one number per *pair* of
-states — and the step from the first to the second fails over the
-real numbers.
+states — and without the complex $i$ the step from the first to the
+second fails.
 
 > **Polarization.** The values $\langle \psi | \hat M | \psi \rangle$
 > on single states determine every $\langle \varphi | \hat M | \psi \rangle$.
