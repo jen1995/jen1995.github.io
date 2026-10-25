@@ -502,8 +502,8 @@ Its vectors are about to be read as the states in which the outcome
 is certain, and the
 [second post](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 showed that states an apparatus tells apart with certainty are
-orthogonal. And the weights $|c_i|^2$ could be read as
-probabilities only because they add up to one,
+orthogonal. And the weights $|c_i|^2$ can be read as
+probabilities only if they add up to one,
 $\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$ — the condition the
 next subsection will put on them — and that step holds only in an
 orthonormal basis; in any other the squared coordinates do not add
