@@ -329,8 +329,9 @@ So Heisenberg needed a multiplication rule.
 Classically the coefficients of $x^2$ came out as
 $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$ — the computation
 [under *The classical picture*](#the-classical-picture) above — a sum
-over pairs of harmonics of one orbit. Heisenberg's reasoning for the
-quantum rule was bookkeeping, in three steps.
+over pairs of harmonics of one orbit. Heisenberg arrived at the quantum
+rule not from a physical picture of what multiplication means, but
+from three formal requirements that the rule had to satisfy.
 
 1. **$x^2$ is a measurable quantity too.** So its representative must
    be a set of the same kind as that of $x$:
