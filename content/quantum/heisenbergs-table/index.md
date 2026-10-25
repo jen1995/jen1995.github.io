@@ -675,8 +675,9 @@ $$
 for some operator $\hat M$, with matrix $M_{jk} = \langle a_j | \hat M | a_k \rangle$
 in the basis $\{|a_i\rangle\}$, that depends on $i$.
 
-What recommends this shape? Three things it gets right, and one it
-deliberately does not.
+Why should probabilities be bilinear in the coordinates? Three
+things the bilinear form gets right, and one it deliberately does
+not.
 
 - A unit factor on the state, $|\psi\rangle \mapsto e^{i\theta}|\psi\rangle$,
   changes no measurement (the second post,
