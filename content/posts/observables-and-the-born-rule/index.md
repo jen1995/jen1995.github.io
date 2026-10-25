@@ -365,8 +365,10 @@ $y(n, n - \alpha)\, x(n - \alpha, n - \beta)$ are different numbers —
 and found the point disturbing. He did not recognize the rule: it is the multiplication of
 matrices, "something unknown to Heisenberg in July 1925". Max Born
 did recognize it within weeks; he and Jordan then wrote down the
-commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
-Cambridge built the same structure as an algebra of non-commuting
+commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$ between
+position and momentum — the relation behind the uncertainty
+principle, which the road will take up when momentum gets its
+operator — Dirac in Cambridge built the same structure as an algebra of non-commuting
 "q-numbers", and the "three-man paper" of Born, Heisenberg and Jordan
 completed matrix mechanics before the year was out. The reading of
 the sum as "all ways of getting from $n$ to $n - \beta$ through an
