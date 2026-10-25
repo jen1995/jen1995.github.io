@@ -825,8 +825,8 @@ for the form $\langle \varphi | \hat M | \psi \rangle$.
 </details>
 
 Now back to the weights. Landau and Lifshitz conclude that the only
-bilinear expression satisfying the three conditions listed at the
-start of this subsection — nonnegative, summing to one on unit
+bilinear expression satisfying **the three conditions** listed at
+the start of this subsection — nonnegative, summing to one on unit
 states, equal to one on $|a_i\rangle$ and to zero on states with
 $c_i = 0$ — is the squared modulus $|c_i|^2$. In terms of the
 matrix: $M$ has a single $1$, in the $i$-th place on the diagonal,
