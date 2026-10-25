@@ -527,12 +527,15 @@ gives $\sum_{i,l} c_i^*\, A'_{il}\, c_l$ with the coordinates and
 the table of that basis — and it is the same bracket on the left.
 The coordinates change, the table changes, the number does not.
 
-In matrix language the two bases are related by a
+The same fact has a more standard linear-algebra form, without
+bra-ket notation, which is how a linear algebra course states it.
+The two bases are related by a
 [unitary](https://en.wikipedia.org/wiki/Unitary_matrix) matrix
-$U$, $U^\dagger U = I$ (Panov, §3.4, Proposition 3.4.2), the
-coordinates and the table go as $c = U d$ and $A' = U A U^\dagger$ —
-the change-of-basis law of a sesquilinear form, Panov §5.1 — and
-the same conclusion reads $c^\dagger A' c = d^\dagger U^\dagger U A U^\dagger U d = d^\dagger A d$.
+$U$, $U^\dagger U = I$ (Panov, §3.4, Proposition 3.4.2); the
+coordinates and the table go as $c = U d$ and $A' = U A U^\dagger$,
+the change-of-basis law for the matrix of a sesquilinear form
+(Panov, §5.1); and the same conclusion reads
+$c^\dagger A' c = d^\dagger U^\dagger U A U^\dagger U d = d^\dagger A d$.
 
 </details>
 
