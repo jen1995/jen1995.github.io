@@ -504,8 +504,10 @@ that basis gets a name of its own.
 Over the complex numbers every square matrix has at least one
 direction that it merely rescales: the characteristic polynomial
 $\det(A - \lambda I)$ has a root, by the fundamental theorem of
-algebra. But it need not have $n$ independent such directions. The
-matrix
+algebra, and a root of it is a rescaling factor (Panov's lectures,
+§2.6, Proposition 2.6.2 and Theorem 2.6.3). But it need not have
+$n$ independent such directions (§2.7, the criterion of
+diagonalizability). The matrix
 
 $$
 \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
@@ -1020,7 +1022,10 @@ experiments, and measurement itself as a projection.
   [Wikipedia's account](https://en.wikipedia.org/wiki/Gleason%27s_theorem)
   is a good first reading.
 - Т. Е. Панов. [*Лекции по линейной алгебре*](http://higeom.math.msu.su/people/taras/teaching/panov-linalg.pdf)
-  (in Russian) — §4.1 (adjoint operators; the matrix of the adjoint
+  (in Russian) — §2.6 (the characteristic polynomial: Proposition
+  2.6.2, eigenvalues are its roots, and Theorem 2.6.3, over
+  $\mathbb C$ every operator has an eigenvector, p. 35), §2.7
+  (diagonalizable operators and the criterion, p. 37), §4.1 (adjoint operators; the matrix of the adjoint
   is the conjugate transpose, p. 65), §4.2 (self-adjoint
   operators: Theorem 4.2.3 on the orthonormal eigenbasis, with Lemmas
   4.2.4 and 4.2.5, pp. 66–67), §4.7 (normal operators: Theorem 4.7.3,
