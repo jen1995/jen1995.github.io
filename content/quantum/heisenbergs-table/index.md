@@ -786,14 +786,7 @@ X = \tfrac12 \big[ p(\psi_1 + \psi_2) - p(\psi_1) - p(\psi_2) \big] - \tfrac{i}{
 $$
 
 every bracket $\langle \psi_1 | \hat M | \psi_2 \rangle$ is a
-combination of four values on single states — the claim. The name
-comes from the geometry of conics: for a quadric $Q(x) = 0$ the
-*polar* of a point $y$ is the set of $x$ with $B(x, y) = 0$, where
-$B$ is the symmetric bilinear form with $Q(x) = B(x, x)$; so $B$ is
-the *polar form* of $Q$, recovering it from $Q$ is *polarization*,
-and the formula above is the
-[polarization identity](https://en.wikipedia.org/wiki/Polarization_identity)
-for the form $\langle \varphi | \hat M | \psi \rangle$. The two
+combination of four values on single states — the claim. The two
 consequences follow at once. If $p$ is real on every state, then
 $X + Y$ is real and $X - Y$ is purely imaginary; with $X = a + ib$
 and $Y = c + id$ this gives $d = -b$ and $c = a$, so $Y = X^*$: the
@@ -816,6 +809,14 @@ the bra, the same matrix gives
 $c^\dagger M c = c_1^* c_2 - c_2^* c_1 = 2i\,\mathrm{Im}(c_1^* c_2)$,
 which is not identically zero — the expansion on
 $|\psi_1\rangle + i|\psi_2\rangle$ detects it.
+
+The name "polarization" comes from the geometry of conics: for a
+quadric $Q(x) = 0$ the *polar* of a point $y$ is the set of $x$ with
+$B(x, y) = 0$, where $B$ is the symmetric bilinear form with
+$Q(x) = B(x, x)$; so $B$ is the *polar form* of $Q$, recovering it
+from $Q$ is *polarization*, and the formula for $X$ above is the
+[polarization identity](https://en.wikipedia.org/wiki/Polarization_identity)
+for the form $\langle \varphi | \hat M | \psi \rangle$.
 
 </details>
 
