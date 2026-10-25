@@ -383,10 +383,13 @@ pairs of states.**
 ### A table for a question
 
 The same shape appears in the laboratory of the first post, in
-Feynman's treatment of it (volume III, chapter 5). There, any device
-placed between two Stern–Gerlach filters is described completely by
-the amplitudes $\langle j | A | i \rangle$ that an atom entering the
-device in the base state $i$ leaves it in the base state $j$ — nine
+Feynman's treatment of it (volume III, chapter 5). Feynman's apparatus is
+the real one behind the [first post's black box](/posts/the-apparatus-and-the-arrow/#the-apparatus),
+a Stern–Gerlach magnet, used as a *filter*: it lets through only the
+atoms in one definite state and blocks the rest. Any device placed
+between two such filters is described completely by the amplitudes
+$\langle j | A | i \rangle$ that an atom entering the device in the
+base state $i$ leaves it in the base state $j$ — nine
 numbers for a spin-one atom with its three base states, which, in
 his words, are "usually written as a square matrix, called the matrix
 $A$"; and two devices in series are described by the matrix product
