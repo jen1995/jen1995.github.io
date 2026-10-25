@@ -804,7 +804,7 @@ M = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}
 $$
 
 shows it: $x^{\mathsf T} M x = x_1 x_2 - x_2 x_1 = 0$ for every real
-$x$, yet $M \neq 0$. With complex coordinates and the conjugation in
+$x$, yet $M$ is not the zero matrix. With complex coordinates and the conjugation in
 the bra, the same matrix gives
 $c^\dagger M c = c_1^* c_2 - c_2^* c_1 = 2i\,\mathrm{Im}(c_1^* c_2)$,
 which is not identically zero — the expansion on
