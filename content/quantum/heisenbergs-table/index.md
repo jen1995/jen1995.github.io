@@ -498,7 +498,7 @@ in whichever orthonormal basis makes the table diagonal, and there
 it is $\sum_i \lambda_i |c_i|^2$.
 
 <details>
-<summary>The bracket is the same in every orthonormal basis</summary>
+<summary>The average is the same in every orthonormal basis</summary>
 
 Let $\{|e_j\rangle\}$ be the basis in use and $\{|a_i\rangle\}$
 another orthonormal basis, and set $U_{ij} = \langle a_i | e_j \rangle$.
