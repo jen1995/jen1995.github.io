@@ -498,30 +498,68 @@ that basis gets a name of its own.
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
 > with numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
 
-<details>
-<summary>This assumption is not free</summary>
+This is a real restriction. Not every table has such a basis, and
+the ones that do form a definite class: a matrix is diagonal in some
+orthonormal basis exactly when it commutes with its conjugate
+transpose — the matrix with rows and columns swapped and every entry
+conjugated —
 
-Over the complex numbers every square matrix has at least one
-direction that it merely rescales: the characteristic polynomial
-$\det(A - \lambda I)$ has a root, by the fundamental theorem of
-algebra, and a root of it is a rescaling factor (Panov's lectures,
-§2.6, Proposition 2.6.2 and Theorem 2.6.3). But it need not have
-$n$ independent such directions (§2.7, the criterion of
-diagonalizability). The matrix
+$$
+A \bar A^{\mathsf T} = \bar A^{\mathsf T} A .
+$$
+
+Such matrices are called [**normal**](https://en.wikipedia.org/wiki/Normal_matrix)
+(Panov's lectures, §4.7, Theorem 4.7.3). So the requirement has cut
+the $n^2$ arbitrary entries down to a class, and the end of the
+chapter says what the cut costs: nothing beyond the reality of the
+readings. The cut below is optional — for readers who want to see
+why the restriction is real.
+
+<details>
+<summary>For the linear algebra lovers: what can go wrong without normality</summary>
+
+Two things, in order of severity.
+
+*There may be no eigenbasis at all.* Over the complex numbers every
+square matrix has at least one direction that it merely rescales:
+the characteristic polynomial $\det(A - \lambda I)$ has a root, by
+the fundamental theorem of algebra, and a root of it is a rescaling
+factor (Panov, §2.6, Proposition 2.6.2 and Theorem 2.6.3). But it
+need not have $n$ independent such directions (§2.7, the criterion
+of diagonalizability). The matrix
 
 $$
 \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
 $$
 
 has the single root $\lambda = 0$ and rescales only the multiples of
-$(1, 0)^{\mathsf T}$; no change of basis makes it diagonal. And a
-basis that is also *orthonormal* is a further restriction: a matrix
-is diagonal in some orthonormal basis exactly when it commutes with
-its conjugate transpose, $A \bar A^{\mathsf T} = \bar A^{\mathsf T} A$
-(such matrices are called *normal*; Panov, §4.7, Theorem 4.7.3). So
-the assumption is a genuine condition on the table of a question.
-What it costs is settled below: nothing beyond the reality of the
-readings.
+$(1, 0)^{\mathsf T}$; no change of basis makes it diagonal.
+
+*There may be an eigenbasis, but not an orthonormal one.* Take
+
+$$
+A = \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix},
+$$
+
+with the two distinct roots $1$ and $2$ and the eigenvectors
+$(1, 0)^{\mathsf T}$ and $(1, 1)^{\mathsf T}$: a basis, so $A$ is
+diagonalizable, but the angle between the two vectors is $45°$, not
+$90°$. Gram–Schmidt does not help here. Inside one eigenspace any
+combination of eigenvectors is again an eigenvector, so
+orthogonalizing *within* a repeated eigenvalue is harmless; but
+orthogonalizing $(1, 1)^{\mathsf T}$ against $(1, 0)^{\mathsf T}$
+gives $(0, 1)^{\mathsf T}$, and $A (0, 1)^{\mathsf T} = (1, 2)^{\mathsf T}$
+is not an eigenvector. Eigenspaces of *different* eigenvalues are
+orthogonal only for special matrices, and the computation that
+proves it for Hermitian ones, later in this chapter, uses
+$\hat A^\dagger = \hat A$ in its middle step; for this $A$ the step
+fails, and indeed $A \bar A^{\mathsf T} \neq \bar A^{\mathsf T} A$.
+
+So "diagonalizable" ($A = S \Lambda S^{-1}$ for some invertible $S$)
+and "diagonalizable in an orthonormal basis" ($A = U \Lambda U^\dagger$
+with $U$ unitary) are different classes, the second strictly inside
+the first, and Theorem 4.7.3 identifies the second with the normal
+matrices.
 
 </details>
 
