@@ -386,7 +386,11 @@ The same shape appears in the laboratory of the first post, in
 Feynman's treatment of it (volume III, chapter 5). Feynman's apparatus is
 the real one behind the [first post's black box](/posts/the-apparatus-and-the-arrow/#the-apparatus),
 a Stern–Gerlach magnet, used as a *filter*: it lets through only the
-atoms in one definite state and blocks the rest. Put any device $A$ between two such filters. It is described
+atoms in one definite state and blocks the rest.
+
+![Feynman's arrangement: a source of atoms, a Stern–Gerlach filter that passes only the state i, a device A, a second filter that passes only the state j, and a counter; the counting rate is the squared amplitude ⟨j|A|i⟩, one number per pair of states — for the spin of this blog, a two-by-two table](feynman_filters.png)
+
+Put any device $A$ between two such filters. It is described
 completely by the amplitudes $\langle j | A | i \rangle$ that an atom
 entering the device in the base state $i$ leaves it in the base state
 $j$. For Feynman's spin-one atom, with three base states, that is
@@ -394,11 +398,7 @@ nine numbers, "usually written as a square matrix, called the matrix
 $A$". Two devices in series are described by the product of their
 matrices, and the order matters. Feynman's $A$ is a
 device that acts on states, not yet a measurable quantity; what we
-borrow is the shape.
-
-![Feynman's arrangement: a source of atoms, a Stern–Gerlach filter that passes only the state i, a device A, a second filter that passes only the state j, and a counter; the counting rate is the squared amplitude ⟨j|A|i⟩, one number per pair of states — for the spin of this blog, a two-by-two table](feynman_filters.png)
-
-Fix the $z$ basis $\{|u\rangle, |d\rangle\}$. A
+borrow is the shape. Fix the $z$ basis $\{|u\rangle, |d\rangle\}$. A
 question $A$ asked of the spin is to be described by four numbers —
 one for each ordered pair of basis states:
 
