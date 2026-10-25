@@ -546,6 +546,8 @@ Here is the assumption, with the basis given a name of its own.
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
 > with numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
 
+### Which tables have such a basis
+
 This is a real restriction. Not every table has such a basis, and
 the ones that do form a definite class: a matrix is diagonal in some
 orthonormal basis exactly when it commutes with its conjugate
@@ -622,11 +624,13 @@ matrices.
 
 </details>
 
-**Can the weights be anything else?** The reading "the $|c_i|^2$ are
-the probabilities of the outcomes" was a guess made to fit the
-formula. Here is why it is the only guess available. Whatever the
-probabilities are, they must be built from the coordinates of the
-state in this basis, $c_i = \langle a_i | \psi \rangle$ with
+### The weights are the probabilities
+
+The reading "the $|c_i|^2$ are the probabilities of the outcomes"
+was a guess made to fit the formula. Here is why it is the only
+guess available. Whatever the probabilities are, they must be built
+from the coordinates of the state in this basis,
+$c_i = \langle a_i | \psi \rangle$ with
 $|\psi\rangle = \sum_i c_i |a_i\rangle$ — nothing else about the
 state is available — and three things are known about them:
 
@@ -637,40 +641,41 @@ state is available — and three things are known about them:
   along $|a_i\rangle$ (the second post: a state orthogonal to
   $|a_i\rangle$ is perfectly distinguishable from it).
 
-Landau and Lifshitz add the principle of their §2 — every probability is an
-expression bilinear in the coordinates and their conjugates — and
-conclude (§3, p. 23) that the only essentially positive quantity
-satisfying these conditions is the squared modulus of the
-coefficient, $|c_i|^2$. The proof is under the cut.
-
-<details>
-<summary>Why the weights are the squared moduli (Landau and Lifshitz's argument)</summary>
-
-Fix $i$ and write the bilinear expression as
-$p_i = \sum_{j,k} M_{jk}\, c_j^* c_k$ with some matrix $M$. The state
-$|a_i\rangle$ has $c_i = 1$ and the other coordinates zero, so
-$M_{ii} = 1$. Every state with $c_i = 0$ gives $p_i = 0$, so the
-expression vanishes identically on the span of the other basis
-vectors, and an expression of this form that vanishes identically has
-zero matrix (the polarization argument in the cut on Hermitian
-operators below): $M_{jk} = 0$ whenever $j \neq i$ and $k \neq i$.
-Only the $i$-th row and column remain. Take the state with
-$c_i = \varepsilon$, $c_k = \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$
-for one $k \neq i$, and zero elsewhere:
+These three do not yet pin the probabilities down: $|c_i|^2$
+satisfies them, but so does $|c_i|^4 / \sum_j |c_j|^4$. Landau and
+Lifshitz add one more condition, the principle of their §2: the
+probability of the $i$-th outcome is an expression *bilinear* in
+the coordinates and their conjugates, that is, of the same shape as
+the average itself,
 
 $$
-p_i = \varepsilon^2 + \varepsilon \sqrt{1 - \varepsilon^2}\, \big( M_{ik}\, e^{i\varphi} + M_{ki}\, e^{-i\varphi} \big) .
+p_i = \sum_{j,k} M_{jk}\, c_j^*\, c_k
 $$
 
-For small $\varepsilon$ the second term dominates, and unless it is
-zero for every $\varphi$, some choice of $\varphi$ makes $p_i$
-negative. So $M_{ik} = M_{ki} = 0$ for every $k \neq i$, and
-$p_i = |c_i|^2$.
+for some matrix $M$ that depends on $i$. With this they conclude
+(§3, p. 23) that the only such expression satisfying the three
+conditions is the squared modulus $|c_i|^2$. The argument is short.
 
-</details>
+1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
+   zero, so the third condition gives $M_{ii} = 1$.
+2. Every state with $c_i = 0$ gives $p_i = 0$, so the expression
+   vanishes identically on the span of the other basis vectors, and
+   an expression of this form that vanishes identically has zero
+   matrix (the polarization argument, in the cut on Hermitian
+   operators later in this chapter): $M_{jk} = 0$ whenever $j \neq i$
+   and $k \neq i$. Only the $i$-th row and column of $M$ remain.
+3. Take the state with $c_i = \varepsilon$,
+   $c_k = \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$ for one $k \neq i$,
+   and zero elsewhere. Then
+   $p_i = \varepsilon^2 + \varepsilon \sqrt{1 - \varepsilon^2}\, ( M_{ik}\, e^{i\varphi} + M_{ki}\, e^{-i\varphi} )$.
+   For small $\varepsilon$ the second term dominates, and unless it is
+   zero for every $\varphi$, some choice of $\varphi$ makes $p_i$
+   negative, against the first condition. So $M_{ik} = M_{ki} = 0$
+   for every $k \neq i$.
 
-So the guess is forced, and the formula is an average in the plain
-sense:
+What is left of $M$ is a single $1$ in the $i$-th place, and
+$p_i = |c_i|^2$. So the guess is forced, and the formula is an
+average in the plain sense:
 
 $$
 \langle A \rangle = \sum_i \lambda_i\, |c_i|^2 ,
