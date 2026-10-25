@@ -319,9 +319,9 @@ A table of numbers is not yet a mechanics. The classical equation of
 motion of a one-dimensional system is Newton's $\ddot x + f(x) = 0$,
 with a force $f(x)$ that is in general a nonlinear function of the
 position — Heisenberg tested his scheme on the simplest such systems,
-oscillators with a restoring force $\omega_0^2 x + \lambda x^2$ or
-$\omega_0^2 x + \lambda x^3$, whose classical motion is periodic and so
-has a Fourier description. To translate such an equation into the
+oscillators with $f(x) = \omega_0^2 x + \lambda x^2$ or
+$f(x) = \omega_0^2 x + \lambda x^3$, whose classical motion is periodic
+and so has a Fourier description. To translate such an equation into the
 language of tables one has to know what the table of $x^2$ or $x^3$
 is, given the table of $x$: positions have to be *multiplied*. So
 Heisenberg needed a multiplication rule, and here the measured
