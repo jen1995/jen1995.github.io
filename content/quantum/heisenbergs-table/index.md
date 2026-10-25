@@ -820,9 +820,11 @@ for the form $\langle \varphi | \hat M | \psi \rangle$.
 
 </details>
 
-With this condition Landau and Lifshitz conclude that the only expression of this
-form satisfying the three conditions is the squared modulus
-$|c_i|^2$. The argument is short.
+Now back to the weights. Landau and Lifshitz conclude that the only
+bilinear expression satisfying the three conditions listed at the
+start of this subsection — nonnegative, summing to one on unit
+states, equal to one on $|a_i\rangle$ and to zero on states with
+$c_i = 0$ — is the squared modulus $|c_i|^2$. The argument is short.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so the third condition gives $M_{ii} = 1$.
