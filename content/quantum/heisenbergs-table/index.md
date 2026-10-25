@@ -6,12 +6,13 @@ tags: ["quantum", "math", "physics"]
 summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; a quantity is a table with two indices — an operator, the object Heisenberg found in the spectral lines; in the basis where the table is diagonal the average is a weighted average of the outcomes, with the Born probabilities as weights, and the same bracket in every basis; real readings make the table Hermitian, and the spectral theorem closes the circle."
 math: true
 weight: 50
+aliases: ["/posts/heisenbergs-table/"]
 ---
 
-The [first post](/posts/the-apparatus-and-the-arrow/#the-wishlist) of
+The [first post](/quantum/the-apparatus-and-the-arrow/#the-wishlist) of
 the quantum road ended with a wishlist. Items 1 and 2 — a state
 object, and a way to blend outcomes into states — were paid in the
-[second post](/posts/states-are-vectors/): states are unit vectors in
+[second post](/quantum/states-are-vectors/): states are unit vectors in
 a Hilbert space, blends are superpositions. Item 3 is still open:
 *measurable quantities as actors, not numbers*. The first post found
 that the electron does not carry a value of "spin along $\hat n$"
@@ -44,7 +45,7 @@ Three facts from the earlier posts are used throughout.
   and then confirms on every repetition. For the $z$ axis they are
   $|u\rangle$ and $|d\rangle$; for the $x$ axis, $|r\rangle$ and
   $|l\rangle$, which the
-  [second post built](/posts/states-are-vectors/#the-machinery-earns-its-keep-right-and-left)
+  [second post built](/quantum/states-are-vectors/#the-machinery-earns-its-keep-right-and-left)
   from the experiments.
 - Each axis donates an **orthonormal basis**: its two definite states
   are perfectly distinguishable by the apparatus, hence orthogonal,
@@ -52,7 +53,7 @@ Three facts from the earlier posts are used throughout.
   bases, with coordinates that are inner products,
   $c_i = \langle E_i | \psi \rangle$.
 - The outer product $|E_i\rangle\langle E_i|$ is a
-  [projector](/posts/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
+  [projector](/quantum/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
   onto the $i$-th basis direction, and the projectors of a basis add
   up to the identity: $\sum_i |E_i\rangle\langle E_i| = \hat I$.
 
@@ -66,7 +67,7 @@ has none yet.
 ### What the apparatus gives us: averages
 
 Go back to the [first post's third
-experiment](/posts/the-apparatus-and-the-arrow/#experiment-three-turning-the-arrow).
+experiment](/quantum/the-apparatus-and-the-arrow/#experiment-three-turning-the-arrow).
 A single reading of the window is random: $+1$ or $-1$, and no
 preparation makes the next reading of a tilted apparatus predictable.
 What *is* predictable is the average over many rounds —
@@ -95,7 +96,7 @@ from a gas of atoms is a signal in time; a prism or a diffraction
 grating performs its Fourier analysis physically, spreading the power
 over frequency, and a **spectral line** is a frequency at which that
 power is concentrated — a sharp peak in the same kind of plot as
-[Part 2's reading of $|X[k]|^2$](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure).
+[Part 2's reading of $|X[k]|^2$](/fourier/fourier-series-to-spectrogram-part-2/#what-does-xk-measure).
 Hydrogen's spectrum is a handful of such peaks, not a continuous
 band.
 
@@ -204,7 +205,7 @@ orbit with label $n$ moves as a classical particle, periodically,
 with a period $T(n)$ that depends on the orbit and an orbital
 frequency $\omega(n) = 2\pi / T(n)$. Any periodic motion is a sum of
 harmonics of its fundamental frequency — a
-[Fourier series](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series),
+[Fourier series](/fourier/fourier-series-to-spectrogram-part-1/#the-fourier-series),
 as on the Fourier road:
 
 $$
@@ -373,7 +374,7 @@ pairs of states.**
 
 The same shape appears in the laboratory of the first post, in
 Feynman's treatment of it (volume III, chapter 5). Feynman's apparatus is
-the real one behind the [first post's black box](/posts/the-apparatus-and-the-arrow/#the-apparatus),
+the real one behind the [first post's black box](/quantum/the-apparatus-and-the-arrow/#the-apparatus),
 a Stern–Gerlach magnet, used as a *filter*: it lets through only the
 atoms in one definite state and blocks the rest.
 
@@ -476,7 +477,7 @@ $$
 Look at this formula. The numbers $|c_i|^2$ are nonnegative and add
 up to one, $\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$ — the
 normalization of unit states, written in this form in the
-[second post's "Any finite menu"](/posts/states-are-vectors/#any-finite-menu).
+[second post's "Any finite menu"](/quantum/states-are-vectors/#any-finite-menu).
 If they were the *probabilities*
 of something, and if the numbers $\lambda_i$ on the diagonal were the
 *possible outcomes* of the question — $+1$ and $-1$ for the spin —
@@ -575,7 +576,7 @@ $$
 
 the outcomes on the diagonal, weighted by a probability
 distribution — Landau and Lifshitz's (3.7). The weights are the rule
-the [second post](/posts/states-are-vectors/#what-the-geometry-means-physically)
+the [second post](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 took on credit:
 
 > **The Born rule.** If $|\psi\rangle = \sum_i c_i |a_i\rangle$ in the
@@ -851,7 +852,7 @@ $c_i = 1$ and $c_j = 0$ for $j \neq i$: the whole weight sits on the
 single outcome $\lambda_i$, the average is $\lambda_i$, and by the
 Born rule the outcome $\lambda_i$ has probability one. A state whose
 outcome is certain, and which the measurement therefore confirms on
-every repetition, is what the [first post](/posts/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
+every repetition, is what the [first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
 called a definite state. And the second post found that states a
 measurement tells apart with certainty are orthogonal — which the
 eigenvectors of a Hermitian operator are.

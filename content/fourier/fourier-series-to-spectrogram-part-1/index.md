@@ -6,6 +6,7 @@ tags: ["fourier", "dsp", "speech"]
 summary: "Part 1 of 3: from air pressure and a guitar string, through sampling and the Fourier series — to the DFT, derived honestly, delta functions and all."
 math: true
 weight: 10
+aliases: ["/posts/fourier-series-to-spectrogram-part-1/"]
 ---
 
 Open any tutorial on speech processing and you will meet the spectrogram in the
@@ -689,11 +690,11 @@ So here is what this part promised: an honest model of sampling, a periodic
 extension, and the Fourier series *itself* handed us the DFT — no axioms
 required. The machinery for "which piano keys were pressed?" is built.
 
-In **[Part 2](/posts/fourier-series-to-spectrogram-part-2/)** we put the
+In **[Part 2](/fourier/fourier-series-to-spectrogram-part-2/)** we put the
 machinery to work and learn to read its output:
 what the $N$ complex numbers $X[k]$ actually say about the sound, which
 physical frequencies they correspond to, why half of them mirror the other
 half, and what limits the frequency resolution. In
-**[Part 3](/posts/fourier-series-to-spectrogram-part-3/)** the DFT starts
+**[Part 3](/fourier/fourier-series-to-spectrogram-part-3/)** the DFT starts
 sliding along the signal — windows, the short-time Fourier transform, and
 finally the spectrogram itself.

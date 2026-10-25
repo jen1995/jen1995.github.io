@@ -6,14 +6,15 @@ tags: ["fourier", "dsp", "math"]
 summary: "Kotelnikov, Shannon, Nyquist — the sampling theorem, proved with machinery we already own: sampling periodizes the spectrum, separated copies mean nothing was lost, and a train of sincs rebuilds the signal between its samples."
 math: true
 weight: 45
+aliases: ["/posts/the-theorem-with-three-names/"]
 ---
 
 This post collects two old debts. Back in
-[Part 2 of the spectrogram series](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
+[Part 2 of the spectrogram series](/fourier/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
 we *stated* the sampling theorem — a discrete recording, taken fast
 enough, loses nothing at all about a continuous signal — and promised the
 proof for later. Then
-[Four Shades of Fourier](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum)
+[Four Shades of Fourier](/fourier/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum)
 built the machinery and even drew the proof without saying so: row 2 of
 the copies picture, the one where the spectral copies sit apart with the
 original intact inside each, *is* the theorem — waiting to be read out
@@ -23,7 +24,7 @@ every value between the samples — and what wagon wheels in old westerns
 have to do with any of it.
 
 Here is today's journey on [the map of Four
-Shades](/posts/four-shades-of-fourier/#the-square). Of all the roads on
+Shades](/fourier/four-shades-of-fourier/#the-square). Of all the roads on
 it we are crossing the dashed one, in bold below — *backwards* along
 bridge three, from the sampled world to the analog one, paying the toll
 written on it:
@@ -48,7 +49,7 @@ represent.
 
 Two honest remarks before we lean on this definition. First, strictly
 band-limited signals are idealizations: Four Shades
-[proved](/posts/four-shades-of-fourier/#do-the-roads-run-back) that a
+[proved](/fourier/four-shades-of-fourier/#do-the-roads-run-back) that a
 nonzero signal cannot be band-limited and time-limited at once, and every
 real recording ends — so no signal in practice satisfies the definition
 exactly. Second, engineering makes the definition true *by force*: before
@@ -73,7 +74,7 @@ then the samples $x(nT)$ determine the continuous signal *completely*:
 every value between the samples can be rebuilt, exactly, by the explicit
 formula $(\star)$ below.
 
-Both landmarks of [Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
+Both landmarks of [Part 2](/fourier/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
 reappear here with names attached: $2B$ — twice the band — is the
 **Nyquist rate**: sample faster than it, and the signal is exactly
 recoverable from the samples; sample at it or slower, and recovery is no
@@ -86,7 +87,7 @@ the counterexample where the boundary case fails.
 ## The proof we already drew
 
 Start from the identity that [bridge three of Four
-Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum)
+Shades](/fourier/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum)
 derived: sampling a signal every $T$ periodizes its spectrum,
 
 $$
@@ -99,7 +100,7 @@ $X_d(f) = \sum_n x(nT)\, e^{-2 \pi i f n T}$ is the DTFT — the spectrum
 computed from the samples alone; and each integer $m$ contributes one
 term $X(f - m f_s)$, a *copy* of the original spectrum slid $m$ grid
 steps along the frequency axis (the picture is [the copies figure of
-Four Shades](/posts/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum);
+Four Shades](/fourier/four-shades-of-fourier/#the-copies-what-sampling-does-to-a-spectrum);
 today we need **row 2** of it):
 
 ![The copies picture, with row 2 — the theorem's row — at full strength and the other rows dimmed](copies_row2.png)
@@ -153,7 +154,7 @@ integral (the by-now-familiar juncture: honest for absolutely summable
 samples, by the same Weierstrass argument as in Four Shades). The
 remaining integral is an old friend: it is the [rectangle-to-sinc
 computation from bridge two of Four
-Shades](/posts/four-shades-of-fourier/#bridge-two-fourier-transform--fourier-series),
+Shades](/fourier/four-shades-of-fourier/#bridge-two-fourier-transform--fourier-series),
 run with the roles of time and frequency swapped. Writing $\tau = t - nT$:
 
 $$
@@ -196,9 +197,9 @@ sincs speak at once, and their sum fills in the continuous curve — the
 values the recording never measured, restored by the theorem. This is
 the third interpolation of our series, kin to two we have already met —
 [Part 2's green
-model](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
+model](/fourier/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
 threading every sample, and the Dirichlet reconstruction of [Four
-Shades' return roads](/posts/four-shades-of-fourier/#do-the-roads-run-back).
+Shades' return roads](/fourier/four-shades-of-fourier/#do-the-roads-run-back).
 Those two lived in periodic worlds with finitely many samples per
 period; the sinc train is their full-line sibling — infinitely many
 samples, no period, the entire time axis rebuilt.
@@ -413,7 +414,7 @@ the surface, and secretly a continuation. In quantum mechanics a
 particle's position and momentum descriptions are a *Fourier pair* — the momentum wavefunction is the
 Fourier transform of the position one — and the uncertainty principle
 is [Part 3's time–frequency
-trade-off](/posts/fourier-series-to-spectrogram-part-3/#the-trade-off-you-cannot-escape)
+trade-off](/fourier/fourier-series-to-spectrogram-part-3/#the-trade-off-you-cannot-escape)
 wearing a lab coat: a signal cannot be narrow in time and in frequency
 at once, and a particle cannot be sharp in position and in momentum at
 once — for exactly the same mathematical reason. The map stays open;

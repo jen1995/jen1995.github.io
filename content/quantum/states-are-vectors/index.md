@@ -6,9 +6,10 @@ tags: ["quantum", "math"]
 summary: "The wreckage of the last post demanded a state object that blends outcomes with weights. We build one — inside the smallest quantum system there is — and discover that the blueprint was linear algebra all along: kets, inner products, bras, and one theorem of Riesz."
 math: true
 weight: 48
+aliases: ["/posts/states-are-vectors/"]
 ---
 
-[Last time](/posts/the-apparatus-and-the-arrow/) we ran three
+[Last time](/quantum/the-apparatus-and-the-arrow/) we ran three
 experiments and wrote down a wishlist over the wreckage of classical
 measurement. Item 1 asked for a *state object* — one mathematical thing
 per electron, carrying all possible outcomes with probabilities
@@ -683,9 +684,9 @@ f = \sum_{n=-\infty}^{\infty} \langle e_n | f \rangle \, e_n,
 $$
 
 which is "coordinates are inner products" in the Hilbert space $L^2$ —
-and it is the [Fourier series of Part 1](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series),
+and it is the [Fourier series of Part 1](/fourier/fourier-series-to-spectrogram-part-1/#the-fourier-series),
 with the Fourier coefficients as the coordinates.
-[Part 2's reading of the DFT](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
+[Part 2's reading of the DFT](/fourier/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
 — each coefficient $X[k]$ is the inner product of the signal with one
 basis oscillation — is the same statement in $\mathbb C^N$.
 
@@ -731,7 +732,7 @@ of the wavefunction line need an orthogonality relation, and it cannot
 be a Kronecker delta — the guest post that opens the door walks from
 Kronecker's $\delta_{ij}$ to Dirac's $\delta(x-y)$ by an explicit
 continuum limit, meeting the delta that [Part 1 of the Fourier
-road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+road](/fourier/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
 built coming the other way. After that: observables as operators, and the
 Born rule — the squared-magnitude rule we took on credit today — earned
 rather than postulated.

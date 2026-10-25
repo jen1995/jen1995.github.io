@@ -6,9 +6,10 @@ tags: ["quantum", "math"]
 summary: "The last post derived the Born rule from the average of a yes/no question. Here it is earned a second time, from the requirement that probabilities must not depend on the basis a state is written in — and the rest follows: no state outside the eigenvectors has a certain outcome, applying an operator is not measuring, two of the three Pauli matrices come out of the spin experiments, and a measurement is a projection."
 math: true
 weight: 51
+aliases: ["/posts/the-born-rule-earned/"]
 ---
 
-The [last post](/posts/heisenbergs-table/) built the object that
+The [last post](/quantum/heisenbergs-table/) built the object that
 stands for a measurable quantity: a Hermitian operator $\hat A$, whose
 average in a state $|\psi\rangle$ is $\langle \psi | \hat A | \psi \rangle$.
 Written in the orthonormal eigenbasis $\{|a_i\rangle\}$ of the
@@ -21,15 +22,15 @@ $$
 
 and the eigenvalues $\lambda_i$ turned out to be the possible outcomes
 and the squared coordinates $|c_i|^2$ their probabilities — the
-[Born rule](/posts/states-are-vectors/#what-the-geometry-means-physically),
+[Born rule](/quantum/states-are-vectors/#what-the-geometry-means-physically),
 which the second post had taken on credit and the
-[delta post](/posts/from-kronecker-to-dirac/) borrowed again in
+[delta post](/quantum/from-kronecker-to-dirac/) borrowed again in
 passing.
 
 That derivation rests on one assumption, that probabilities are
 bilinear in the coordinates of the state. This post gives the rule a
 second derivation that does not use it, and then pays the last open item of the
-[first post's wishlist](/posts/the-apparatus-and-the-arrow/#the-wishlist),
+[first post's wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist),
 *measurement as an operation on states*. It collects what falls out
 along the way: no state outside the eigenvectors has a certain
 outcome, applying an operator is not the same as measuring, and two
@@ -46,7 +47,7 @@ Three facts from the earlier posts are used throughout.
   and then confirms on every repetition. For the $z$ axis they are
   $|u\rangle$ and $|d\rangle$; for the $x$ axis, $|r\rangle$ and
   $|l\rangle$, which the
-  [second post built](/posts/states-are-vectors/#the-machinery-earns-its-keep-right-and-left)
+  [second post built](/quantum/states-are-vectors/#the-machinery-earns-its-keep-right-and-left)
   from the experiments:
 
   $$
@@ -54,7 +55,7 @@ Three facts from the earlier posts are used throughout.
   $$
 
 - The outer product $|a_i\rangle\langle a_i|$ is a
-  [projector](/posts/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
+  [projector](/quantum/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
   onto the direction of $|a_i\rangle$, and the projectors of an
   orthonormal basis add up to the identity.
 - An observable is a Hermitian operator; in its orthonormal
@@ -62,7 +63,7 @@ Three facts from the earlier posts are used throughout.
   the eigenvectors are its definite states, and the probability of
   the outcome $\lambda_i$ is the average of the projector
   $|a_i\rangle\langle a_i|$, which is $|c_i|^2$
-  (the [last post](/posts/heisenbergs-table/)).
+  (the [last post](/quantum/heisenbergs-table/)).
 
 ## The Born rule, from basis independence
 

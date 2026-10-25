@@ -6,9 +6,10 @@ tags: ["fourier", "dsp", "math"]
 summary: "The family reunion: the Fourier series, the Fourier transform, the DTFT and the DFT — and the five bridges that connect them, all built from one law: discrete in one domain means periodic in the other."
 math: true
 weight: 40
+aliases: ["/posts/four-shades-of-fourier/"]
 ---
 
-Back in [Part 1 of the spectrogram series](/posts/fourier-series-to-spectrogram-part-1/)
+Back in [Part 1 of the spectrogram series](/fourier/fourier-series-to-spectrogram-part-1/)
 we promised that several *different* creatures answer to the name
 "Fourier", showed a 2×2 table as a teaser, and walked its bottom row — from
 the Fourier **series** to the **discrete** Fourier transform. (Throughout
@@ -30,7 +31,7 @@ Two conventions carried over from the trilogy: frequencies live in hertz
 (the exponentials are $e^{\pm 2 \pi i f t}$, no loose $\omega$'s), and all
 the machinery for *discrete* signals — the delta function, the sifting
 property, the comb — is the one built honestly in
-[Part 1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft);
+[Part 1](/fourier/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft);
 we will lean on it without re-deriving. And a calibration of rigor: most
 steps today are honest, and where the classical fine print matters we
 will say so and point to it. One physicist's shortcut does remain, in
@@ -247,7 +248,7 @@ $$
 Both moves are fully covered by Part 1's machinery: a *finite* sum
 crosses the integral by plain linearity, and then the [sifting property
 proved in Part
-1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft)
+1](/fourier/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft)
 collapses each integral — every delta samples the exponential at its own
 grid instant $t = nT$.
 
@@ -362,7 +363,7 @@ DTFT contains an intact, undamaged copy of $X$: **nothing about the analog
 signal was lost by sampling it.** Cut that copy out, run the Fourier
 integral, and the continuous signal comes back — every value between the
 samples included. That is precisely the [sampling theorem stated in
-Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
+Part 2](/fourier/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
 — and row 2 of the picture above *is* its proof, one post away from
 being written out. If the copies do overlap (row 3), they add up
 where they collide, and no cutting recovers $X$ — aliasing, the theorem's
@@ -371,7 +372,7 @@ dark twin, again exactly as promised.
 ## Bridge four: Fourier series → DFT
 
 The fourth shade needs no new work at all: it is the road
-[Part 1](/posts/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft)
+[Part 1](/fourier/fourier-series-to-spectrogram-part-1/#from-the-series-to-the-dft)
 walked end to end — the *bottom edge* of the map. Take $N$ samples,
 periodize with period $NT$, feed the comb into the Fourier *series*, let
 sifting collapse the integral:
@@ -388,11 +389,11 @@ domains, the fully quantized corner of the table.
 Note that this one road makes *two* moves at once — it samples the
 signal, and it periodizes it — so both faces of the law fire together.
 The sampling made the spectrum periodic: [one line,
-$c_{k+N} = c_k$](/posts/fourier-series-to-spectrogram-part-1/#only-n-distinct-coefficients).
+$c_{k+N} = c_k$](/fourier/fourier-series-to-spectrogram-part-1/#only-n-distinct-coefficients).
 The periodization made the spectrum discrete: a Fourier series hands
 over coefficients on a grid by its very construction.
 This is where [Part 2 of the spectrogram series, *Reading the
-DFT*,](/posts/fourier-series-to-spectrogram-part-2/) first met both faces
+DFT*,](/fourier/fourier-series-to-spectrogram-part-2/) first met both faces
 of the law — by direct computation, before any general principle was in
 sight.
 
@@ -420,7 +421,7 @@ signal* — the glued copies. Sampling the spectrum periodizes the signal,
 exactly as sampling the signal periodized the spectrum. Part 2 even drew
 what that costs:
 [the DFT's model of a signal repeats forever with the window's
-period](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
+period](/fourier/fourier-series-to-spectrogram-part-2/#what-does-xk-measure)
 — that repetition *is* the time-domain periodization that bridge five
 smuggles in. (Bridges four and five agree to the letter:
 $c_k = \frac{1}{NT} X_d(f_k)$ — the envelope relation of bridge two, one
@@ -455,13 +456,13 @@ other domain is limited.**
   Part 3's spectrograms — the road leads back to the DTFT *of the
   window*, not of the signal, and the gap between the two is exactly
   [the leakage Part 3
-  measured](/posts/fourier-series-to-spectrogram-part-3/#the-price-of-cutting-spectral-leakage).
+  measured](/fourier/fourier-series-to-spectrogram-part-3/#the-price-of-cutting-spectral-leakage).
   For a discrete signal stretching over the whole time axis, no finite
   batch of readings pins the curve down at all.
 - **DFT → FS.** If a periodic signal contains only $N$ harmonics, its $N$
   coefficients rebuild it exactly — this is the trigonometric
   interpolation of [Part 2's green
-  model](/posts/fourier-series-to-spectrogram-part-2/#what-does-xk-measure),
+  model](/fourier/fourier-series-to-spectrogram-part-2/#what-does-xk-measure),
   the curve through every sample.
 - **DTFT → FT.** The copies picture already said it: if the signal was
   band-limited below $\frac{f_s}{2}$, the copies never touch, and one
@@ -530,7 +531,7 @@ series leaves no freedom: inside its radius of convergence the
 coefficients are forced — they can only be $\frac{x^{(k)}(t_0)}{k!}$.
 So the behavior of $x$ on any tiny interval around $t_0$, which already
 pins down all the derivatives there, pins down $x$ everywhere. (Part 1's
-["why not Taylor?"](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series)
+["why not Taylor?"](/fourier/fourier-series-to-spectrogram-part-1/#the-fourier-series)
 inset complained that Taylor coefficients are rigidly global creatures —
 here, at last, that rigidity does useful work.)
 

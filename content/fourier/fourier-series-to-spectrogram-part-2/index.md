@@ -6,9 +6,10 @@ tags: ["fourier", "dsp", "speech"]
 summary: "Part 2 of 3: learning to read the DFT's output — which bin is which frequency, why resolution is one over duration, the mirror symmetry, and the Nyquist frequency."
 math: true
 weight: 20
+aliases: ["/posts/fourier-series-to-spectrogram-part-2/"]
 ---
 
-[Part 1](/posts/fourier-series-to-spectrogram-part-1/) ended with the machinery
+[Part 1](/fourier/fourier-series-to-spectrogram-part-1/) ended with the machinery
 built. The Discrete Fourier Transform takes the $N$ samples of a recording and
 returns $N$ complex numbers:
 
@@ -20,7 +21,7 @@ $N$ numbers in, $N$ numbers out — and every trace of physical time gone: the
 formula sees only the two integers $k$ and $n$. That was a feature during the
 derivation, but it leaves us unable to answer the simplest practical question.
 Remember the hum? Back in Part 1, [arguing that the frequency view is worth
-having](/posts/fourier-series-to-spectrogram-part-1/#why-the-waveform-is-not-enough),
+having](/fourier/fourier-series-to-spectrogram-part-1/#why-the-waveform-is-not-enough),
 we took a recording polluted by the 50 Hz buzz of the power line — hopeless
 to fix in the time domain, where the hum is smeared over every sample — and
 fixed it in the frequency domain, where the hum is a single column:
@@ -57,7 +58,7 @@ leans along another. As $n$ runs through the $N$ samples, the exponent of
 $w_k$ grows to $2 \pi i k$: the basis oscillation makes exactly $k$ full
 turns across the recording — Part 1's ["only oscillations that fit a whole
 number of times into the
-period"](/posts/fourier-series-to-spectrogram-part-1/#the-fourier-series)
+period"](/fourier/fourier-series-to-spectrogram-part-1/#the-fourier-series)
 rule, wearing its discrete clothes. Here is the whole cast at once, drawn
 over one window of $N = 8$ samples:
 
@@ -168,7 +169,7 @@ through every sample it saw, but its periodic continuation has nothing to
 do with the real signal — the top one never even goes negative, the bottom
 one continues in counter-phase — and at every seam the curve kinks. Those
 kinks have a price in the spectrum, and Part 3 charges it under the name
-[spectral leakage](/posts/fourier-series-to-spectrogram-part-3/#the-price-of-cutting-spectral-leakage).
+[spectral leakage](/fourier/fourier-series-to-spectrogram-part-3/#the-price-of-cutting-spectral-leakage).
 
 Turn the "whole turns" rule around, and it becomes a restriction important
 enough to put in bold: **whole numbers of turns are all the DFT has.** Its
@@ -431,7 +432,7 @@ column of numbers for the whole phrase — every phoneme's frequencies
 stacked into the same bins, and *when* is gone entirely. A chord is a fine
 thing to summarize with one spectrum; a sentence is not: "which frequencies
 appear" is not the same as "which frequencies appear *when*". In
-**[Part 3](/posts/fourier-series-to-spectrogram-part-3/)**
+**[Part 3](/fourier/fourier-series-to-spectrogram-part-3/)**
 we make the Fourier view local — slide a window along the recording, pay
 the resolution bill we just learned about at every stop, and stack the
 results into the picture this series is named after: the spectrogram.

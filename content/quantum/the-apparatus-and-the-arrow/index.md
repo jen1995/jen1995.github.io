@@ -6,10 +6,11 @@ tags: ["quantum", "physics"]
 summary: "The quantum road begins with no mathematics at all: a black box with an arrow, a window that only ever shows +1 or −1, and three experiments that quietly break the classical idea of what a measurement is."
 math: true
 weight: 47
+aliases: ["/posts/the-apparatus-and-the-arrow/"]
 ---
 
 The Fourier road of this blog [ended with a
-promise](/posts/the-theorem-with-three-names/#onward): see you in the
+promise](/fourier/the-theorem-with-three-names/#onward): see you in the
 quantum world. Welcome — this post opens the quantum road.
 
 The plan of the road is deliberately modest. We will not build the whole

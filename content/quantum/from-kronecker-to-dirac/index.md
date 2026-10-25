@@ -7,12 +7,13 @@ tags: ["quantum", "math"]
 summary: "The last post wrote a state as an integral over position kets and left two symbols on credit: what is |x⟩, and what is ⟨x|y⟩? A guest post pays the debt by discretizing honestly — and watching the Kronecker delta of an orthonormal grid turn, in the only sense available, into the Dirac delta."
 math: true
 weight: 49
+aliases: ["/posts/from-kronecker-to-dirac/"]
 ---
 
 *A guest post by Ivan Petrov, edited together for the quantum road — the
 first of, we hope, many.*
 
-[Last time](/posts/states-are-vectors/#when-the-menu-is-infinite) the
+[Last time](/quantum/states-are-vectors/#when-the-menu-is-infinite) the
 quantum road reached the continuous menu. A particle on a line has a
 position, every real number is a possible reading, and the state had
 to be written as an integral over position kets:
@@ -28,7 +29,7 @@ Kronecker delta, $\langle E_i | E_j \rangle = \delta_{ij}$. For the
 continuous basis it *cannot* be, and finding out what replaces it is
 this post's whole job. The answer is an old friend of this blog: the
 **Dirac delta**, which the Fourier road's
-[Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+[Part 1](/fourier/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
 built as the limit of a shrinking averaging window. Today it will
 arrive by a completely different road — as the limit of an
 orthonormal grid — and the two roads will meet at the same object.
@@ -121,7 +122,7 @@ into an integral; the state and its wavefunction are one object.
 
 In the finite case the coordinates come out of the basis by a one-line
 computation, which the
-[last post](/posts/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
+[last post](/quantum/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
 did: hit the expansion with a basis bra, and orthonormality collapses
 the sum,
 
@@ -166,7 +167,7 @@ $$
 $$
 
 The right-hand side is the inner product of the
-[space of square-integrable wavefunctions](/posts/states-are-vectors/#when-the-menu-is-infinite),
+[space of square-integrable wavefunctions](/quantum/states-are-vectors/#when-the-menu-is-infinite),
 $L^2(\mathbb R)$, which the last post wrote down as
 $\langle f | g \rangle = \int f^* g\, dx$.
 
@@ -249,7 +250,7 @@ The object that actually does a
 coordinate object's job is not a function at all, as the rest of the
 post will show. Readers of the Fourier road
 have met this exact predicament: in
-[Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+[Part 1](/fourier/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
 the "perfect instrument" that reads off a signal's value at one
 instant could not be a function either, and the Dirac delta had to
 be built as a limit of averaging windows. Here the same object will
@@ -650,7 +651,7 @@ and every delta-like sequence converges weakly to $\delta$ (chapter I,
 height $1/\Delta x$ centered at $x$, satisfy both conditions on sight,
 so the identification above is a special case of that theorem. So
 are the averaging windows of
-[Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+[Part 1](/fourier/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
 — rectangles of width $\tau$ and height $1/\tau$ — which is how the
 two roads of the opening figure end at the same object: both are
 delta-like sequences, and both converge weakly to the same $\delta$.
@@ -912,7 +913,7 @@ $\Delta x$. (The coupling does have a direction: with $\Delta y \gt \Delta x$
 a cell may contain no sample point, and the sum misses the spike.)
 
 The iterated version is shorter — it is the shrinking-window argument
-of [Part 1](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
+of [Part 1](/fourier/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal)
 of the Fourier road — but on it the Kronecker delta
 disappears at the first step, as soon as the sum becomes an integral.
 The point of this post was to keep the state a finite sum, the kernel
@@ -1007,4 +1008,4 @@ identified with the delta.
   this post, in Dirac's form; the delta is then modelled as the limit
   of a Gaussian (p. 61).
 - This blog's own first meeting with the delta:
-  [Part 1 of the Fourier road](/posts/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal).
+  [Part 1 of the Fourier road](/fourier/fourier-series-to-spectrogram-part-1/#an-honest-model-of-a-discrete-signal).

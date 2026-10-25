@@ -6,7 +6,7 @@ Live at: https://jen1995.github.io/
 
 ## Repository layout
 
-- `content/posts/` — published posts (each post is a folder: `index.md` + its images)
+- `content/fourier/`, `content/quantum/`, `content/ml/` — the three courses ("roads"); each post is a folder inside its course: `index.md` + its images. Each course has an `_index.md` cover (title, description, weight) that becomes its page and its block on the home page.
 - `drafts/` — shared scratch space for work-in-progress; never published (see `drafts/README.md`)
 - `notebooks/` — hands-on notebooks referenced from posts
 
@@ -31,7 +31,7 @@ Each post is a *page bundle* — a folder with `index.md` and its images next to
 ```
 
 ```
-content/posts/my-post-name/
+content/<course>/my-post-name/
 ├── index.md
 └── figure1.png        # referenced as ![caption](figure1.png)
 ```

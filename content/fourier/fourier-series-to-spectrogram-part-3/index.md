@@ -6,9 +6,10 @@ tags: ["fourier", "dsp", "speech"]
 summary: "Part 3 of 3: cut the signal into frames, pay for the cut with leakage, patch it with windows, stack the columns — the spectrogram, and its mel-compressed cousin that speech models actually consume."
 math: true
 weight: 30
+aliases: ["/posts/fourier-series-to-spectrogram-part-3/"]
 ---
 
-[Part 2](/posts/fourier-series-to-spectrogram-part-2/) ended on an
+[Part 2](/fourier/fourier-series-to-spectrogram-part-2/) ended on an
 asymmetry. The waveform of a spoken phrase knows *when* — you can count the
 words in it — but no frequencies. Its spectrum knows *what* — every
 frequency of every phoneme — but stacked into one column of numbers with no
@@ -195,7 +196,7 @@ second of signal.
 > the harmonics of a typical voice. The next section is about why you
 > cannot have both at once. And the third number, the sampling rate:
 > consumer audio's 44.1 kHz exists precisely so that the ceiling
-> [$f_s/2$ from Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
+> [$f_s/2$ from Part 2](/fourier/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency)
 > — here 22.05 kHz — clears the upper limit of the
 > [human hearing range](https://en.wikipedia.org/wiki/Hearing_range),
 > about 20 kHz. Speech systems, whose signal of interest ends far lower,
@@ -204,7 +205,7 @@ second of signal.
 
 ## The trade-off you cannot escape
 
-Part 2 [proved a hard law](/posts/fourier-series-to-spectrogram-part-2/#from-the-index-to-hertz):
+Part 2 [proved a hard law](/fourier/fourier-series-to-spectrogram-part-2/#from-the-index-to-hertz):
 the DFT's probe frequencies form a grid whose step is set by nothing but
 the length of the recording,
 
@@ -235,7 +236,7 @@ under two different window lengths:
 
 First, note what the two pictures share and what they do not. The vertical
 axis is the same on both: it runs from $0$ to $f_s/2$ — the [Nyquist
-ceiling from Part 2](/posts/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency),
+ceiling from Part 2](/fourier/fourier-series-to-spectrogram-part-2/#the-nyquist-frequency),
 the grid's edge that the Kotelnikov–Shannon–Nyquist sampling theorem is
 about — and that *range* is fixed by the sampling rate alone. What differs is the grid packed inside
 it: the left picture has $129$ rows spaced $31.2$ Hz apart, the right one

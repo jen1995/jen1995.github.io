@@ -16,15 +16,15 @@ Shades (introduces the Fourier *transform* and connects all four creatures)
 Based on the DSP lecture (see `lecture_digest.md`; deck: [Google Slides](https://docs.google.com/presentation/d/1Cte6w0t8yTJRFirde6GPxKB29VX3SrX1mhAkKYEN-n4/)).
 
 - **Part 1: From Sound to the DFT** — **published 2026-07-26** ✔
-  (`content/posts/fourier-series-to-spectrogram-part-1/`).
+  (`content/fourier/fourier-series-to-spectrogram-part-1/`).
 - **Part 2: Reading the DFT** — **published 2026-07-26** ✔
-  (`content/posts/fourier-series-to-spectrogram-part-2/`), with the
+  (`content/fourier/fourier-series-to-spectrogram-part-2/`), with the
   companion notebook `notebooks/reading_the_dft.ipynb`.
 - **Part 3: From the DFT to the Spectrogram** — **published 2026-07-26** ✔
-  (`content/posts/fourier-series-to-spectrogram-part-3/`), with the
+  (`content/fourier/fourier-series-to-spectrogram-part-3/`), with the
   companion notebook `notebooks/building_the_spectrogram.ipynb`.
 
-### Act two, post 1. Four Shades of Fourier — **drafted in full** (content/posts/four-shades-of-fourier/, draft:true), under review
+### Act two, post 1. Four Shades of Fourier — **drafted in full** (content/fourier/four-shades-of-fourier/, draft:true), under review
 Role in the series: introduces the **Fourier transform** proper (continuous
 time, continuous frequency — the one shade we have never defined) and builds
 the bridges between all four shades; the "discrete in one domain ⇔ periodic
