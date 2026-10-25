@@ -672,7 +672,11 @@ p_i = \sum_{j,k} M_{jk}\, c_j^*\, c_k = \langle \psi | \hat M | \psi \rangle
 $$
 
 for some operator $\hat M$, with matrix $M_{jk} = \langle a_j | \hat M | a_k \rangle$
-in the basis $\{|a_i\rangle\}$, that depends on $i$. With this they conclude
+in the basis $\{|a_i\rangle\}$, that depends on $i$. They do not
+argue for it: it is stated as a postulate, generalizing the one
+probability their book starts from — $|\Psi(q)|^2\, dq$ for the
+coordinates, which is of this form — to every measurement. With this
+they conclude
 (§3, p. 23) that the only such expression satisfying the three
 conditions is the squared modulus $|c_i|^2$. The argument is short.
 
