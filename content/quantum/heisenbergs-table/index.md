@@ -716,12 +716,10 @@ assumption costs nothing.)
 
 ![The average of a question is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
 
-### The average, in any basis
-
-The formula was obtained in the basis where the table is diagonal,
-and the change-of-basis law above says that the same number comes
-out in every orthonormal basis, as the same expression in the
-coordinates and the entries:
+The formula is the bracket $\langle \psi | \hat A | \psi \rangle$
+computed in the diagonal basis, and the cut above says that the
+bracket is the same in every orthonormal basis. So the rule can be
+stated without reference to the diagonal basis at all:
 
 > **The average.** In the state $|\psi\rangle$, the average of the
 > outcomes of the question with operator $\hat A$ is
@@ -733,18 +731,14 @@ This is the bracket of the first post, $\langle \sigma \rangle$, with
 its meaning finally spelled out: the operator of the question between
 the bra and the ket of the state. Landau and Lifshitz *define* the
 operator of a quantity by this requirement, that the bracket return
-the mean (their (3.8)). Two checks. Different questions must have
-different tables, since two questions with the same average in every
-state are not distinguishable by any experiment — and an expression
-of this form determines its matrix (the polarization cut below), so
-the table of a question is fixed by its averages. And Dirac's check
-(*Principles*, chapter II, §12): the yes/no question "did the outcome
-equal $\lambda_i$?" is answered by the same apparatus with its window
-read differently, $1$ for $\lambda_i$ and $0$ for every other
-outcome, so its table in the diagonal basis has a single $1$ in the
-$i$-th place: it is the projector $|a_i\rangle\langle a_i|$. Its
-average is $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
-the probability of "yes" — the Born rule, read off the average rule.
+the mean (their (3.8)). One check, Dirac's (*Principles*, chapter II,
+§12): the yes/no question "did the outcome equal $\lambda_i$?" is
+answered by the same apparatus with its window read differently, $1$
+for $\lambda_i$ and $0$ for every other outcome, so its table in the
+diagonal basis has a single $1$ in the $i$-th place: it is the
+projector $|a_i\rangle\langle a_i|$. Its average is
+$\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$, the
+probability of "yes" — the Born rule, read off the average rule.
 
 ### The diagonal basis is the eigenbasis
 
