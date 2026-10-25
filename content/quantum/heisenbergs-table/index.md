@@ -903,10 +903,12 @@ took on credit:
 > measurement of it returns $\lambda_i$ is
 > $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
 
-The assumption behind this derivation is the bilinear one. By
-Gleason's theorem it costs nothing in dimension three and more; for
-the two-state spin it is a genuine assumption, and it is the one
-this road makes.
+The derivation rests on one assumption beyond the three conditions:
+that the probabilities are bilinear in the coordinates of the state.
+In dimension three and more Gleason's theorem derives this from
+additivity over exclusive outcomes, as noted above; for the
+two-state spin it cannot be derived, and this road takes it as a
+postulate.
 
 ![The average of a question is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
 
