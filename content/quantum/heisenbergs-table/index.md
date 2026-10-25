@@ -724,13 +724,14 @@ p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \ps
 $$
 
 The cross term is interference. When states are added, their
-coordinates add — $c_i = \langle a_i | \psi \rangle$, the
-*probability amplitudes* of the second post — but the probabilities,
-their squared magnitudes, do not — the
+coordinates add: $c_i = \langle a_i | \psi \rangle$, the *probability
+amplitudes* of the second post. The probabilities, their squared
+magnitudes, do not add; this is the
 [second post's remark](/quantum/states-are-vectors/#what-the-geometry-means-physically)
-that amplitudes can cancel in a superposition. That is the quantum
-content of the assumption. The spin shows it in two lines, at the end
-of this subsection.
+that amplitudes can cancel in a superposition, and it is the quantum
+content of the assumption. A worked example on the spin, with the
+same two pieces reinforcing in one combination and cancelling in the
+other, closes this subsection.
 
 
 **Polarization: the diagonal values determine the whole bracket.**
