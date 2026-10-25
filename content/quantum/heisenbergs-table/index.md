@@ -675,31 +675,6 @@ $$
 for some operator $\hat M$, with matrix $M_{jk} = \langle a_j | \hat M | a_k \rangle$
 in the basis $\{|a_i\rangle\}$, that depends on $i$.
 
-What recommends this shape? Three things it gets right, and one it
-deliberately does not.
-
-- A unit factor on the state, $|\psi\rangle \mapsto e^{i\theta}|\psi\rangle$,
-  changes no measurement (the second post,
-  ["The leftover freedom: global phase"](/quantum/states-are-vectors/#global-phase)).
-  A bilinear expression has this property automatically: each term
-  $c_j^* c_k$ picks up $e^{-i\theta} e^{i\theta} = 1$. An expression
-  linear in the coordinates does not — each term picks up
-  $e^{i\theta}$ — so degree one in $\psi$ and one in $\psi^*$ is the
-  lowest that qualifies.
-- Its value does not depend on the basis: the cut above showed that
-  $\langle \psi | \hat M | \psi \rangle$ computed in any orthonormal
-  basis is the same number, $c^\dagger M c = d^\dagger M' d$. A
-  probability must be a property of the state, not of the
-  coordinates chosen to write it, and a bilinear expression is one.
-- Probabilities of exclusive outcomes add, and they should: the
-  probability of "$\lambda_i$ or $\lambda_j$" is $p_i + p_j$, the
-  operator of the combined outcome being $\hat M_i + \hat M_j$.
-  Gleason's theorem, in the references, runs this in reverse: in a
-  state space of dimension three and more, any assignment of
-  probabilities that adds over exclusive outcomes *is* bilinear. In
-  two dimensions — our spin — it is not forced, and there it stays
-  an assumption.
-
 One fact about bilinear expressions
 $\langle \psi | \hat M | \psi \rangle$ is used twice below.
 
@@ -775,6 +750,31 @@ $|\varphi\rangle + i|\psi\rangle$ detects.
   everywhere.
 
 </details>
+
+What recommends this shape? Three things it gets right, and one it
+deliberately does not.
+
+- A unit factor on the state, $|\psi\rangle \mapsto e^{i\theta}|\psi\rangle$,
+  changes no measurement (the second post,
+  ["The leftover freedom: global phase"](/quantum/states-are-vectors/#global-phase)).
+  A bilinear expression has this property automatically: each term
+  $c_j^* c_k$ picks up $e^{-i\theta} e^{i\theta} = 1$. An expression
+  linear in the coordinates does not — each term picks up
+  $e^{i\theta}$ — so degree one in $\psi$ and one in $\psi^*$ is the
+  lowest that qualifies.
+- Its value does not depend on the basis: the cut above showed that
+  $\langle \psi | \hat M | \psi \rangle$ computed in any orthonormal
+  basis is the same number, $c^\dagger M c = d^\dagger M' d$. A
+  probability must be a property of the state, not of the
+  coordinates chosen to write it, and a bilinear expression is one.
+- Probabilities of exclusive outcomes add, and they should: the
+  probability of "$\lambda_i$ or $\lambda_j$" is $p_i + p_j$, the
+  operator of the combined outcome being $\hat M_i + \hat M_j$.
+  Gleason's theorem, in the references, runs this in reverse: in a
+  state space of dimension three and more, any assignment of
+  probabilities that adds over exclusive outcomes *is* bilinear. In
+  two dimensions — our spin — it is not forced, and there it stays
+  an assumption.
 
 What bilinearity does *not* give is additivity in the state. Take
 $|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$ and expand the
