@@ -739,19 +739,20 @@ says is less obvious than it looks. Reality of $p$ is a condition on
 the values $\langle \psi | \hat M | \psi \rangle$, one number per
 state; conjugate symmetry is a condition on
 $\langle \varphi | \hat M | \psi \rangle$, one number per *pair* of
-states. That the first implies the second is true only because the
-coordinates are complex.
+states.
 
-> **Polarization.** The values $\langle \psi | \hat M | \psi \rangle$
-> on single states determine every $\langle \varphi | \hat M | \psi \rangle$.
-> In particular, if the values vanish for every $|\psi\rangle$ in a
-> subspace, the block of the matrix of $\hat M$ on that subspace is
-> zero; and if the values are real for every $|\psi\rangle$, the
-> bracket is conjugate-symmetric,
+> **Polarization.** Over the complex numbers, the values
+> $\langle \psi | \hat M | \psi \rangle$ on single states determine
+> every $\langle \varphi | \hat M | \psi \rangle$. In particular, if the
+> values vanish for every $|\psi\rangle$ in a subspace, the block of
+> the matrix of $\hat M$ on that subspace is zero; and if the values
+> are real for every $|\psi\rangle$, the bracket is
+> conjugate-symmetric,
 > $$\langle \varphi | \hat M | \psi \rangle = \langle \psi | \hat M | \varphi \rangle^* .$$
+> Over the real numbers none of this holds: a real quadratic form
+> $x^{\mathsf T} M x$ does not see the antisymmetric part of $M$.
 
-The proof is under the cut; it needs the complex scalar $i$, and
-fails over the real numbers.
+The proof is under the cut, together with the real counterexample.
 
 <details>
 <summary>Proof of polarization, and why it needs complex numbers</summary>
