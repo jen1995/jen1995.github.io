@@ -775,8 +775,7 @@ Two consequences are used in this chapter.
   $|\varphi\rangle = |\psi\rangle$; by the claim it vanishes
   everywhere.
 
-
-With this condition they conclude that the only expression of this
+With this condition Landau and Lifshitz conclude that the only expression of this
 form satisfying the three conditions is the squared modulus
 $|c_i|^2$. The argument is short.
 
