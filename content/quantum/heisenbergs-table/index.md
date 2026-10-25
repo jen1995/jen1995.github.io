@@ -849,10 +849,10 @@ onto $|a_i\rangle$, one for each outcome. The argument is short.
    term $j = k = i$ survives, and the third condition gives
    $M_{ii} = 1$ — the entry of $M$ in row $i$, column $i$, the row
    and the column that belong to $|a_i\rangle$.
-2. Next, the states with $c_i = 0$: the combinations
+2. Now take a state with $c_i = 0$, that is, any combination
    $|\psi\rangle = \sum_{j \neq i} c_j |a_j\rangle$ of the *other*
-   basis vectors. They have no component along $|a_i\rangle$, so by
-   the third condition $p_i(\psi) = 0$ for every one of them. In the
+   basis vectors. It has no component along $|a_i\rangle$, so by the
+   third condition $p_i(\psi) = 0$. In the
    sum $\sum_{j,k} M_{jk}\, c_j^* c_k$ every term with $j = i$ or
    $k = i$ contains the factor $c_i = 0$, so what the condition says
    is
