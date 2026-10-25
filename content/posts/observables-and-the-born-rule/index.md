@@ -397,8 +397,10 @@ $j$. For Feynman's spin-one atom, with three base states, that is
 nine numbers, "usually written as a square matrix, called the matrix
 $A$". Two devices in series are described by the product of their
 matrices, and the order matters. Feynman's $A$ is a
-device that acts on states, not yet a measurable quantity; what we
-borrow is the shape. Fix the $z$ basis $\{|u\rangle, |d\rangle\}$. A
+device that acts on states, not yet a measurable quantity. What we
+take from his setup is only the form of the description — one number
+for every ordered pair of basis states — and apply it to a question.
+Fix the $z$ basis $\{|u\rangle, |d\rangle\}$. A
 question $A$ asked of the spin is to be described by four numbers —
 one for each ordered pair of basis states:
 
