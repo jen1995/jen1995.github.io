@@ -628,12 +628,16 @@ formula. Here is why it is the only guess available. Whatever the
 probabilities are, they must be built from the coordinates of the
 state in this basis, $c_i = \langle a_i | \psi \rangle$ with
 $|\psi\rangle = \sum_i c_i |a_i\rangle$ — nothing else about the
-state is available — and three things are known about them: they are nonnegative; they add up to one for every unit
-state; and the probability of the $i$-th outcome is one when the
-state is $|a_i\rangle$ itself and zero when the state has no
-component along it (the second post: a state orthogonal to
-$|a_i\rangle$ is perfectly distinguishable from it). Landau and
-Lifshitz add the principle of their §2 — every probability is an
+state is available — and three things are known about them.
+
+- They are nonnegative.
+- They add up to one for every unit state.
+- The probability of the $i$-th outcome is one when the state is
+  $|a_i\rangle$ itself, and zero when the state has no component
+  along $|a_i\rangle$ (the second post: a state orthogonal to
+  $|a_i\rangle$ is perfectly distinguishable from it).
+
+Landau and Lifshitz add the principle of their §2 — every probability is an
 expression bilinear in the coordinates and their conjugates — and
 conclude (§3, p. 23) that the only essentially positive quantity
 satisfying these conditions is the squared modulus of the
