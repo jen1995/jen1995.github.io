@@ -733,14 +733,14 @@ same two pieces reinforcing in one combination and cancelling in the
 other, closes this subsection.
 
 
-The pairing of the cross terms rests on the following lemma, which
-is also used in the argument below and later in the chapter. It is
-not automatic: reality of $p$ is a condition on the values
-$\langle \psi | \hat M | \psi \rangle$, one number per state, while
-conjugate symmetry is a condition on
+Here is the lemma the pairing of the cross terms rested on; it is
+used again in the argument below and later in the chapter. What it
+says is less obvious than it looks. Reality of $p$ is a condition on
+the values $\langle \psi | \hat M | \psi \rangle$, one number per
+state; conjugate symmetry is a condition on
 $\langle \varphi | \hat M | \psi \rangle$, one number per *pair* of
-states — and without the complex $i$ the step from the first to the
-second fails.
+states. That the first implies the second is true only because the
+coordinates are complex.
 
 > **Polarization.** The values $\langle \psi | \hat M | \psi \rangle$
 > on single states determine every $\langle \varphi | \hat M | \psi \rangle$.
