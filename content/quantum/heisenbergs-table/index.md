@@ -557,11 +557,12 @@ A \bar A^{\mathsf T} = \bar A^{\mathsf T} A .
 $$
 
 Such matrices are called [**normal**](https://en.wikipedia.org/wiki/Normal_matrix)
-(Panov's lectures, §4.7, Theorem 4.7.3). So the requirement has cut
-the $n^2$ arbitrary entries down to a class, and the end of the
-chapter says what the cut costs: nothing beyond the reality of the
-readings. The cut below is optional — for readers who want to see
-why the restriction is real.
+(Panov's lectures, §4.7, Theorem 4.7.3). So the assumption
+restricts the tables of questions to normal matrices. Whether that
+restriction excludes anything physical is answered at the end of
+the chapter: it does not, because it follows from the readings of
+an apparatus being real numbers. The cut below is optional — for
+readers who want to see why the restriction is real.
 
 <details>
 <summary>For the linear algebra lovers: what can go wrong without normality</summary>
