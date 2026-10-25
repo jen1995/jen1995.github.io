@@ -382,11 +382,19 @@ pairs of states.**
 
 ### A table for a question
 
-The same shape appears in the laboratory of the first post, following
-Feynman (volume III, chapter 5). Fix the $z$ basis
-$\{|u\rangle, |d\rangle\}$. A question $A$ asked of the spin is to be
-described by four numbers — one for each ordered pair of basis
-states:
+The same shape appears in the laboratory of the first post, in
+Feynman's treatment of it (volume III, chapter 5). There, any device
+placed between two Stern–Gerlach filters is described completely by
+the amplitudes $\langle j | A | i \rangle$ that an atom entering the
+device in the base state $i$ leaves it in the base state $j$ — nine
+numbers for a spin-one atom with its three base states, which, in
+his words, are "usually written as a square matrix, called the matrix
+$A$"; and two devices in series are described by the matrix product
+of their two matrices, in which the order matters. Feynman's $A$ is a
+device that acts on states, not yet a measurable quantity; what we
+borrow is the shape. Fix the $z$ basis $\{|u\rangle, |d\rangle\}$. A
+question $A$ asked of the spin is to be described by four numbers —
+one for each ordered pair of basis states:
 
 $$
 A_{ij} = \langle E_i |\, A\, | E_j \rangle, \qquad E_i, E_j \in \{u, d\},
@@ -1020,9 +1028,11 @@ ordinary sphere.
   Physics*, vol. III (Russian edition: *Фейнмановские лекции по
   физике*, вып. 8–9 *Квантовая механика*, Мир, 1978) — chapter 5,
   "Spin One", §5-6 "The machinery of quantum mechanics" (Russian ed.
-  глава 3, §6, p. 75): an apparatus between Stern–Gerlach filters is
-  described by a table of amplitudes $\langle j | A | i \rangle$, "a
-  set of nine numbers, called a matrix"; and chapter 20, "Operators",
+  глава 3, §6, pp. 75–78): any apparatus between Stern–Gerlach
+  filters is described by the nine amplitudes
+  $\langle j | A | i \rangle$, written as a square matrix (eq. 3.33),
+  and two apparatuses in series by the matrix product (eq. 3.36),
+  "the order being essential, $AB \neq BA$"; and chapter 20, "Operators",
   §20-2 "Average energies" (глава 18, §2, pp. 469–473): the average
   energy as $\sum_i P_i E_i$ with $P_i = |C_i|^2$ (18.11), rewritten
   as $\langle \psi | \hat H | \psi \rangle$. Free online at
