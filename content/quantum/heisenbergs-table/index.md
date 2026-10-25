@@ -722,7 +722,7 @@ $$
 p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
 $$
 
-The cross term is interference. When states are added, their
+The cross term is **interference**. When states are added, their
 coordinates add: $c_i = \langle a_i | \psi \rangle$, the *probability
 amplitudes* of the second post. The probabilities, their squared
 magnitudes, do not add; this is the
