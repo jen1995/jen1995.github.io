@@ -722,10 +722,12 @@ $$
 p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
 $$
 
-The cross term is interference: amplitudes add, probabilities do
-not — the second post's remark that amplitudes can cancel in a
-superposition, and the quantum content of the assumption. The spin
-shows it in two lines, under the cut.
+The cross term is interference. When states are added, their
+coordinates add — $c_i = \langle a_i | \psi \rangle$, the
+*probability amplitudes* of the second post — but the probabilities,
+their squared magnitudes, do not: the second post's remark that
+amplitudes can cancel in a superposition. That is the quantum content
+of the assumption. The spin shows it in two lines, under the cut.
 
 <details>
 <summary>Interference on the spin</summary>
