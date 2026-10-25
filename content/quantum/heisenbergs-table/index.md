@@ -488,14 +488,51 @@ true: the numbers on the diagonal are the outcomes, and the squared
 coordinates are the probabilities.
 
 The computation assumed that the table is diagonal in the basis we
-happened to be using. That is too much to ask: for the spin, the
+happened to be using, and that is too much to ask: for the spin, the
 table of the $x$ question is not diagonal in the $z$ basis. What can
 be asked is weaker — that *some* orthonormal basis exists in which
-the table is diagonal. The computation then goes through in that
-basis, with the coordinates of the state taken along it, and the
-formula is the same. Orthonormal, and not just any basis, for two
-reasons. The vectors of this basis are about to be read as the
-states in which the outcome is certain, and the
+the table is diagonal — because the number
+$\langle \psi | \hat A | \psi \rangle$ does not depend on the basis it
+is computed in. Here is the law. Let $\{|e_j\rangle\}$ be the basis
+in use, with the state's coordinates $d_j = \langle e_j | \psi \rangle$
+and the table $A_{jk} = \langle e_j | \hat A | e_k \rangle$, and let
+$\{|a_i\rangle\}$ be another orthonormal basis, with coordinates
+$c_i = \langle a_i | \psi \rangle$ and table
+$A'_{il} = \langle a_i | \hat A | a_l \rangle$. Write
+$U_{ij} = \langle a_i | e_j \rangle$ for the inner products between
+the two bases. This matrix is
+[**unitary**](https://en.wikipedia.org/wiki/Unitary_matrix),
+$U^\dagger U = I$: the entry
+$(U^\dagger U)_{jk} = \sum_i \langle e_j | a_i \rangle \langle a_i | e_k \rangle$
+is $\langle e_j | e_k \rangle = \delta_{jk}$ by the resolution of
+identity. Inserting the resolution of identity
+$\sum_j |e_j\rangle\langle e_j| = \hat I$ in the same way expresses
+the new coordinates and the new table through the old:
+
+$$
+\begin{aligned}
+c_i &= \langle a_i | \psi \rangle = \sum_j U_{ij}\, d_j , \\
+A'_{il} &= \langle a_i | \hat A | a_l \rangle = \sum_{j,k} U_{ij}\, A_{jk}\, U_{lk}^* ,
+\end{aligned}
+$$
+
+that is, $c = U d$ and $A' = U A U^\dagger$. This is the
+change-of-basis law of a sesquilinear form, $M' = \bar C^{\mathsf T} M C$
+with $C = U^\dagger$ the transition matrix (Panov's lectures, §5.1).
+Now substitute into the number:
+
+$$
+\sum_{i,l} c_i^*\, A'_{il}\, c_l = (U d)^\dagger\, U A U^\dagger\, (U d) = \sum_{j,k} d_j^*\, A_{jk}\, d_k ,
+$$
+
+since $U^\dagger U = I$ twice over. The coordinates change, the
+table changes, the number does not. So it may be computed in
+whichever orthonormal basis makes the table diagonal, and there it
+is $\sum_i \lambda_i |c_i|^2$.
+
+Orthonormal, and not just any basis, for two reasons. The vectors
+of this basis are about to be read as the states in which the
+outcome is certain, and the
 [second post](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 showed that states an apparatus tells apart with certainty are
 orthogonal. And the step $\sum_i |c_i|^2 = \langle \psi | \psi \rangle$
@@ -645,46 +682,12 @@ assumption costs nothing.)
 
 ![The average of a question is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
 
-### The same bracket in every basis
+### The average, in any basis
 
-The formula holds in the one basis where the table is diagonal.
-In another orthonormal basis $\{|e_j\rangle\}$ — the $z$ basis of
-the spin, for the table of the $x$ question — the table is not
-diagonal, and the average has to be computed from it. The claim is
-that the bracket $\langle \psi | \hat A | \psi \rangle$ we started
-from is the answer in every basis.
-Write $U_{ij} = \langle a_i | e_j \rangle$ for the inner products
-between the two bases. By "coordinates are inner products" its
-columns are the coordinates of the new basis vectors in the old,
-$|e_j\rangle = \sum_i U_{ij}\, |a_i\rangle$, and it is
-[**unitary**](https://en.wikipedia.org/wiki/Unitary_matrix),
-$U^\dagger U = I$: the entry $(U^\dagger U)_{jk} = \sum_i \langle e_j | a_i \rangle \langle a_i | e_k \rangle$
-is $\langle e_j | e_k \rangle = \delta_{jk}$ by the resolution of
-identity. Inserting the resolution of identity in the same way
-gives the table and the coordinates in the new basis:
-
-$$
-\begin{aligned}
-A'_{jk} &= \langle e_j | \hat A | e_k \rangle = \sum_i U_{ij}^*\, \lambda_i\, U_{ik}, \\
-d_j &= \langle e_j | \psi \rangle = \sum_i U_{ij}^*\, c_i ,
-\end{aligned}
-$$
-
-that is, $A' = U^\dagger \Lambda U$ with $\Lambda$ the diagonal table,
-and $d = U^\dagger c$. This is the change-of-basis law of a
-sesquilinear form, $M' = \bar C^{\mathsf T} M C$ (Panov's lectures,
-§5.1), with a unitary $C$. The table changes; the average does not.
-Substitute:
-
-$$
-\sum_{j,k} d_j^*\, A'_{jk}\, d_k = \sum_{j,k} \langle \psi | e_j \rangle \langle e_j | \hat A | e_k \rangle \langle e_k | \psi \rangle = \langle \psi | \hat A | \psi \rangle ,
-$$
-
-by the resolution of identity twice, and the same bracket evaluated
-in the diagonal basis is $\sum_i \lambda_i |c_i|^2$. So the average
-is a number built from the state and the operator with no basis
-mentioned, and in any orthonormal basis it is the same expression
-in the coordinates and the entries:
+The formula was obtained in the basis where the table is diagonal,
+and the change-of-basis law above says that the same number comes
+out in every orthonormal basis, as the same expression in the
+coordinates and the entries:
 
 > **The average.** In the state $|\psi\rangle$, the average of the
 > outcomes of the question with operator $\hat A$ is
