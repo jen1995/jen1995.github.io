@@ -841,13 +841,19 @@ onto $|a_i\rangle$, one for each outcome. The argument is short.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so the third condition gives $M_{ii} = 1$.
-2. Every state with $c_i = 0$ has no component along $|a_i\rangle$,
-   so by the third condition it gives $p_i = 0$; the expression
-   vanishes identically on the span of the other basis vectors, and
-   an expression of this form that vanishes identically has zero
-   matrix (polarization, the first consequence): $M_{jk} = 0$
-   whenever $j \neq i$
-   and $k \neq i$. Only the $i$-th row and column of $M$ remain.
+2. Next, the states with $c_i = 0$: the combinations
+   $|\psi\rangle = \sum_{j \neq i} c_j |a_j\rangle$ of the *other*
+   basis vectors. They have no component along $|a_i\rangle$, so by
+   the third condition $p_i(\psi) = 0$ for every one of them. In the
+   sum $\sum_{j,k} M_{jk}\, c_j^* c_k$ every term with $j = i$ or
+   $k = i$ contains the factor $c_i = 0$, so what the condition says
+   is
+   $$\sum_{j \neq i,\, k \neq i} M_{jk}\, c_j^*\, c_k = 0 \quad \text{for all values of the } c_j,\ j \neq i .$$
+   This is a bilinear expression in the coordinates $c_j$, $j \neq i$,
+   that vanishes for every choice of them, and polarization — the
+   first consequence — says its matrix is zero: $M_{jk} = 0$ whenever
+   $j \neq i$ and $k \neq i$. Only the $i$-th row and the $i$-th
+   column of $M$ can be nonzero.
 3. Take the state with $c_i = \varepsilon$,
    $c_k = \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$ for one $k \neq i$,
    and zero elsewhere. Then
