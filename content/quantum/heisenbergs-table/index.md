@@ -500,10 +500,12 @@ orthogonal. And the step $\sum_i |c_i|^2 = \langle \psi | \psi \rangle$
 holds only in an orthonormal basis; in any other the squared
 coordinates do not add up to one.
 
-The weaker demand is enough, because the average does not depend
-on which orthonormal basis it is computed in (the proof is under the
-cut). So it may be computed in whichever orthonormal basis makes the
-table diagonal, and there it is $\sum_i \lambda_i |c_i|^2$.
+So the demand is this: there exists *some* orthonormal basis in
+which the table is diagonal. It is enough, because the average does
+not depend on which orthonormal basis it is computed in (the proof
+is under the cut). So it may be computed in the orthonormal basis
+that makes the table diagonal, and there it is
+$\sum_i \lambda_i |c_i|^2$.
 
 <details>
 <summary>The average is the same in every orthonormal basis</summary>
