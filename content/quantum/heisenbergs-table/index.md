@@ -490,12 +490,20 @@ coordinates are the probabilities.
 The computation assumed that the table is diagonal in the basis we
 happened to be using, and that is too much to ask: for the spin, the
 table of the $x$ question is not diagonal in the $z$ basis. What can
-be asked is weaker — that *some* orthonormal basis exists in which
-the table is diagonal — because the number
-$\langle \psi | \hat A | \psi \rangle$ does not depend on the basis it
-is computed in (the proof is under the cut). So it may be computed
-in whichever orthonormal basis makes the table diagonal, and there
-it is $\sum_i \lambda_i |c_i|^2$.
+be asked is weaker — that some *other* basis exists in which the
+table is diagonal. That basis must be orthonormal, for two reasons.
+Its vectors are about to be read as the states in which the outcome
+is certain, and the
+[second post](/quantum/states-are-vectors/#what-the-geometry-means-physically)
+showed that states an apparatus tells apart with certainty are
+orthogonal. And the step $\sum_i |c_i|^2 = \langle \psi | \psi \rangle$
+holds only in an orthonormal basis; in any other the squared
+coordinates do not add up to one.
+
+The weaker demand is enough, because the average does not depend
+on which orthonormal basis it is computed in (the proof is under the
+cut). So it may be computed in whichever orthonormal basis makes the
+table diagonal, and there it is $\sum_i \lambda_i |c_i|^2$.
 
 <details>
 <summary>The average is the same in every orthonormal basis</summary>
@@ -524,15 +532,7 @@ The coordinates change, the table changes, the number does not.
 
 </details>
 
-Orthonormal, and not just any basis, for two reasons. The vectors
-of this basis are about to be read as the states in which the
-outcome is certain, and the
-[second post](/quantum/states-are-vectors/#what-the-geometry-means-physically)
-showed that states an apparatus tells apart with certainty are
-orthogonal. And the step $\sum_i |c_i|^2 = \langle \psi | \psi \rangle$
-holds only in an orthonormal basis; in any other the squared
-coordinates do not add up to one. Here is the assumption, with the
-basis given a name of its own.
+Here is the assumption, with the basis given a name of its own.
 
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the question is diagonal,
