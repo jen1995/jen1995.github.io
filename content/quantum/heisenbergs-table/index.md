@@ -862,14 +862,26 @@ onto $|a_i\rangle$, one for each outcome. The argument is short.
    first consequence — says its matrix is zero: $M_{jk} = 0$ whenever
    $j \neq i$ and $k \neq i$. Only the $i$-th row and the $i$-th
    column of $M$ can be nonzero.
-3. Take the state with $c_i = \varepsilon$,
-   $c_k = \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$ for one $k \neq i$,
-   and zero elsewhere. Then
-   $p_i = \varepsilon^2 + \varepsilon \sqrt{1 - \varepsilon^2}\, ( M_{ik}\, e^{i\varphi} + M_{ki}\, e^{-i\varphi} )$.
-   For small $\varepsilon$ the second term dominates, and unless it is
-   zero for every $\varphi$, some choice of $\varphi$ makes $p_i$
-   negative, against the first condition. So $M_{ik} = M_{ki} = 0$
-   for every $k \neq i$.
+3. After the first two steps the sum has only the terms with $j = i$
+   or $k = i$ left:
+   $$p_i = M_{ii}\, |c_i|^2 + \sum_{k \neq i} \big( M_{ik}\, c_i^* c_k + M_{ki}\, c_k^* c_i \big) , \qquad M_{ii} = 1 .$$
+   To isolate one pair $M_{ik}, M_{ki}$, take the state with
+   $c_i = \varepsilon$, $c_k = \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$
+   for one $k \neq i$, and zero elsewhere (a unit state, since
+   $\varepsilon^2 + (1 - \varepsilon^2) = 1$). Only one term of the sum
+   survives, and with $c_i^* c_k = \varepsilon \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$
+   and $c_k^* c_i = \varepsilon \sqrt{1 - \varepsilon^2}\, e^{-i\varphi}$:
+   $$p_i = \varepsilon^2 + \varepsilon \sqrt{1 - \varepsilon^2}\, \big( M_{ik}\, e^{i\varphi} + M_{ki}\, e^{-i\varphi} \big) .$$
+   Since $p_i$ is real for every state, polarization gives
+   $M_{ki} = M_{ik}^*$, so the bracket is
+   $M_{ik} e^{i\varphi} + (M_{ik} e^{i\varphi})^* = 2\,\mathrm{Re}(M_{ik} e^{i\varphi})$,
+   and we are free to choose $\varphi$. Choose it so that
+   $M_{ik} e^{i\varphi}$ is the negative real number $-|M_{ik}|$:
+   $$p_i = \varepsilon^2 - 2 \varepsilon \sqrt{1 - \varepsilon^2}\, |M_{ik}| .$$
+   If $M_{ik} \neq 0$, this is negative for small $\varepsilon$ — the
+   first term shrinks like $\varepsilon^2$, the second only like
+   $\varepsilon$ — against the first condition. So $M_{ik} = 0$, hence
+   $M_{ki} = 0$, for every $k \neq i$.
 
 What is left of $M$ is the single $1$ in the $i$-th place, and
 $p_i = |c_i|^2$. So the guess is forced, and the formula is an
