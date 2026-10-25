@@ -699,14 +699,30 @@ deliberately does not.
   two dimensions — our spin — it is not forced, and there it stays
   an assumption.
 
-What bilinearity does *not* give is additivity in the state. For
-$|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$,
+What bilinearity does *not* give is additivity in the state. Take
+$|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$ and expand the
+bracket, using linearity in the ket and conjugate linearity in the
+bra:
 
 $$
-p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle ,
+\begin{aligned}
+p(\psi) &= \langle \psi_1 + \psi_2 \,|\, \hat M \,|\, \psi_1 + \psi_2 \rangle \\
+&= \langle \psi_1 | \hat M | \psi_1 \rangle + \langle \psi_2 | \hat M | \psi_2 \rangle + \langle \psi_1 | \hat M | \psi_2 \rangle + \langle \psi_2 | \hat M | \psi_1 \rangle .
+\end{aligned}
 $$
 
-and the cross term is interference: amplitudes add, probabilities
+The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
+are conjugates of each other when $p$ is real for every state —
+which it is, being a probability — since then
+$\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$
+(the polarization cut later in the chapter shows this), and a number
+plus its conjugate is twice its real part:
+
+$$
+p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
+$$
+
+The cross term is interference: amplitudes add, probabilities
 do not — the second post's remark that amplitudes can cancel in a
 superposition. That cross term is the quantum content of the
 assumption.
