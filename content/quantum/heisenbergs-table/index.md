@@ -878,10 +878,12 @@ onto $|a_i\rangle$, one for each outcome. The argument takes three steps.
    and we are free to choose $\varphi$. Choose it so that
    $M_{ik} e^{i\varphi}$ is the negative real number $-|M_{ik}|$:
    $$p_i = \varepsilon^2 - 2 \varepsilon \sqrt{1 - \varepsilon^2}\, |M_{ik}| .$$
-   If $M_{ik} \neq 0$, this is negative for small $\varepsilon$ — the
-   first term shrinks like $\varepsilon^2$, the second only like
-   $\varepsilon$ — against the first condition. So $M_{ik} = 0$, hence
-   $M_{ki} = 0$, for every $k \neq i$.
+   Factor out $\varepsilon$:
+   $$p_i = \varepsilon \Big( \varepsilon - 2 \sqrt{1 - \varepsilon^2}\, |M_{ik}| \Big) .$$
+   As $\varepsilon \to 0$ the bracket tends to $-2|M_{ik}|$. So if
+   $M_{ik} \neq 0$, then for all small enough $\varepsilon$ the bracket
+   is negative and $p_i \lt 0$, against the first condition. Hence
+   $M_{ik} = 0$, and with it $M_{ki} = 0$, for every $k \neq i$.
 
 What is left of $M$ is the single $1$ in the $i$-th place, and
 $p_i = |c_i|^2$. So the guess is forced, and the formula is an
