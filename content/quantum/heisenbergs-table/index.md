@@ -628,7 +628,7 @@ formula. Here is why it is the only guess available. Whatever the
 probabilities are, they must be built from the coordinates of the
 state in this basis, $c_i = \langle a_i | \psi \rangle$ with
 $|\psi\rangle = \sum_i c_i |a_i\rangle$ — nothing else about the
-state is available — and three things are known about them.
+state is available — and three things are known about them:
 
 - They are nonnegative.
 - They add up to one for every unit state.
