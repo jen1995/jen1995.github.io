@@ -825,10 +825,15 @@ for the form $\langle \varphi | \hat M | \psi \rangle$.
 </details>
 
 Now back to the weights. Landau and Lifshitz conclude that the only
-bilinear expression satisfying **the three conditions** listed at
-the start of this subsection — nonnegative, summing to one on unit
-states, equal to one on $|a_i\rangle$ and to zero on states with
-$c_i = 0$ — is the squared modulus $|c_i|^2$. In terms of the
+bilinear expression satisfying the three conditions listed at the
+start of this subsection is the squared modulus $|c_i|^2$. Here are
+the conditions again, in formulas, to keep beside the argument:
+
+1. $p_i(\psi) \geq 0$ for every state;
+2. $\sum_i p_i(\psi) = 1$ for every unit state;
+3. $p_i(a_i) = 1$, and $p_i(\psi) = 0$ whenever $c_i = \langle a_i | \psi \rangle = 0$.
+
+In terms of the
 matrix: $M$ has a single $1$, in the $i$-th place on the diagonal,
 and zeros everywhere else. For the spin and the outcome "up",
 
