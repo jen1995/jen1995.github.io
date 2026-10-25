@@ -622,15 +622,13 @@ matrices.
 
 </details>
 
-From here on $c_i = \langle a_i | \psi \rangle$ are the coordinates
-of the state in this basis, $|\psi\rangle = \sum_i c_i |a_i\rangle$.
-
 **Can the weights be anything else?** The reading "the $|c_i|^2$ are
 the probabilities of the outcomes" was a guess made to fit the
 formula. Here is why it is the only guess available. Whatever the
-probabilities are, they must be built from the coordinates — nothing
-else about the state is available — and three things are known
-about them: they are nonnegative; they add up to one for every unit
+probabilities are, they must be built from the coordinates of the
+state in this basis, $c_i = \langle a_i | \psi \rangle$ with
+$|\psi\rangle = \sum_i c_i |a_i\rangle$ — nothing else about the
+state is available — and three things are known about them: they are nonnegative; they add up to one for every unit
 state; and the probability of the $i$-th outcome is one when the
 state is $|a_i\rangle$ itself and zero when the state has no
 component along it (the second post: a state orthogonal to
