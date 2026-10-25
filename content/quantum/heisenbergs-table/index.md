@@ -493,32 +493,31 @@ table of the $x$ question is not diagonal in the $z$ basis. What can
 be asked is weaker — that *some* orthonormal basis exists in which
 the table is diagonal — because the number
 $\langle \psi | \hat A | \psi \rangle$ does not depend on the basis it
-is computed in. In matrix form: if $U$ is the
-[**unitary**](https://en.wikipedia.org/wiki/Unitary_matrix) matrix
-($U^\dagger U = I$) that takes the column $d$ of the state's
-coordinates in one orthonormal basis to its column $c = U d$ in
-another, then the table goes to $A' = U A U^\dagger$ — the
-change-of-basis law of a sesquilinear form, Panov's lectures, §5.1 —
-and
-
-$$
-c^\dagger A' c = d^\dagger U^\dagger\, U A U^\dagger\, U d = d^\dagger A d .
-$$
-
-The coordinates change, the table changes, the number does not. So
-it may be computed in whichever orthonormal basis makes the table
-diagonal, and there it is $\sum_i \lambda_i |c_i|^2$.
+is computed in (the proof is under the cut). So it may be computed
+in whichever orthonormal basis makes the table diagonal, and there
+it is $\sum_i \lambda_i |c_i|^2$.
 
 <details>
-<summary>Where $U$ and the law come from (one line each)</summary>
+<summary>The bracket is the same in every orthonormal basis</summary>
 
-Let $\{|e_j\rangle\}$ be the basis in use and $\{|a_i\rangle\}$ the
-other one, and set $U_{ij} = \langle a_i | e_j \rangle$. Then by the
-resolution of identity $\sum_j |e_j\rangle\langle e_j| = \hat I$:
+Let $\{|e_j\rangle\}$ be the basis in use and $\{|a_i\rangle\}$
+another orthonormal basis, and set $U_{ij} = \langle a_i | e_j \rangle$.
+By the resolution of identity $\sum_j |e_j\rangle\langle e_j| = \hat I$:
 
-- $U$ is unitary: $(U^\dagger U)_{jk} = \sum_i \langle e_j | a_i \rangle \langle a_i | e_k \rangle = \langle e_j | e_k \rangle = \delta_{jk}$;
-- the coordinates: $c_i = \langle a_i | \psi \rangle = \sum_j U_{ij}\, d_j$;
-- the table: $A'_{il} = \langle a_i | \hat A | a_l \rangle = \sum_{j,k} U_{ij}\, A_{jk}\, U_{lk}^*$, which is $(U A U^\dagger)_{il}$.
+- $U$ is [**unitary**](https://en.wikipedia.org/wiki/Unitary_matrix): $(U^\dagger U)_{jk} = \sum_i \langle e_j | a_i \rangle \langle a_i | e_k \rangle = \langle e_j | e_k \rangle = \delta_{jk}$;
+- the column of coordinates goes to $c = U d$: $c_i = \langle a_i | \psi \rangle = \sum_j U_{ij}\, d_j$;
+- the table goes to $A' = U A U^\dagger$: $A'_{il} = \langle a_i | \hat A | a_l \rangle = \sum_{j,k} U_{ij}\, A_{jk}\, U_{lk}^*$.
+
+The last line is the change-of-basis law of a sesquilinear form,
+$M' = \bar C^{\mathsf T} M C$ with $C = U^\dagger$ (Panov's lectures,
+§5.1). Substitute:
+
+$$
+c^\dagger A' c = d^\dagger U^\dagger\, U A U^\dagger\, U d = d^\dagger A d ,
+$$
+
+since $U^\dagger U = I$. The coordinates change, the table changes,
+the number does not.
 
 </details>
 
