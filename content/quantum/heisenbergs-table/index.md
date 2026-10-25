@@ -669,14 +669,15 @@ an expression *bilinear* in the coordinates and their conjugates,
 that is, of the same shape as the average itself,
 
 $$
-p_i = \sum_{j,k} M_{jk}\, c_j^*\, c_k = \langle \psi | \hat M | \psi \rangle
+p_i = \sum_{j,k} M^{(i)}_{jk}\, c_j^*\, c_k = \langle \psi | \hat M_i | \psi \rangle
 $$
 
-for some operator $\hat M$, with matrix $M_{jk} = \langle a_j | \hat M | a_k \rangle$
-in the basis $\{|a_i\rangle\}$, that depends on $i$. (On notation:
-the index names the outcome, and the probability depends on the
-state — $p_i(\psi)$ in full. Where the outcome is fixed the index is
-dropped and the state is written, $p(\psi)$.)
+for some operator $\hat M_i$, one per outcome, with matrix
+$M^{(i)}_{jk} = \langle a_j | \hat M_i | a_k \rangle$ in the basis
+$\{|a_i\rangle\}$. (On notation: the index names the outcome, and
+the probability depends on the state — $p_i(\psi)$ in full. Where
+the outcome is fixed the index is dropped on both $p$ and $\hat M$,
+and the state is written: $p(\psi) = \langle \psi | \hat M | \psi \rangle$.)
 
 Why should probabilities be bilinear in the coordinates? Three
 things the bilinear form gets right, and one it deliberately does
