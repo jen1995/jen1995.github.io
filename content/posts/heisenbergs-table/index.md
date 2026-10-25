@@ -475,7 +475,9 @@ $$
 
 Look at this formula. The numbers $|c_i|^2$ are nonnegative and add
 up to one, $\sum_i |c_i|^2 = \langle \psi | \psi \rangle = 1$ — the
-normalization of the second post. If they were the *probabilities*
+normalization of unit states, written in this form in the
+[second post's "Any finite menu"](/posts/states-are-vectors/#any-finite-menu).
+If they were the *probabilities*
 of something, and if the numbers $\lambda_i$ on the diagonal were the
 *possible outcomes* of the question — $+1$ and $-1$ for the spin —
 then this would be the sum of outcomes times their probabilities:
