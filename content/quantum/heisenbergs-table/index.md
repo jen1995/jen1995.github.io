@@ -661,24 +661,67 @@ state is available — and three things are known about them:
   $|a_i\rangle$ is perfectly distinguishable from it).
 
 These three do not yet pin the probabilities down: $|c_i|^2$
-satisfies them, but so does $|c_i|^4 / \sum_j |c_j|^4$. Landau and
-Lifshitz add one more condition, the principle of their §2: the
-probability of the $i$-th outcome is an expression *bilinear* in
-the coordinates and their conjugates, that is, of the same shape as
-the average itself,
+satisfies them, but so does $|c_i|^4 / \sum_j |c_j|^4$. One more
+condition is needed, and it is the one Landau and Lifshitz take as
+the principle of their §2: the probability of the $i$-th outcome is
+an expression *bilinear* in the coordinates and their conjugates,
+that is, of the same shape as the average itself,
 
 $$
 p_i = \sum_{j,k} M_{jk}\, c_j^*\, c_k = \langle \psi | \hat M | \psi \rangle
 $$
 
 for some operator $\hat M$, with matrix $M_{jk} = \langle a_j | \hat M | a_k \rangle$
-in the basis $\{|a_i\rangle\}$, that depends on $i$. They do not
-argue for it: it is stated as a postulate, generalizing the one
-probability their book starts from — $|\Psi(q)|^2\, dq$ for the
-coordinates, which is of this form — to every measurement. With this
-they conclude
-(§3, p. 23) that the only such expression satisfying the three
-conditions is the squared modulus $|c_i|^2$. The argument is short.
+in the basis $\{|a_i\rangle\}$, that depends on $i$.
+
+What recommends this shape? Three things it gets right, and one it
+deliberately does not.
+
+- A unit factor on the state, $|\psi\rangle \mapsto e^{i\theta}|\psi\rangle$,
+  changes no measurement (the second post). A bilinear expression
+  is unchanged by it, since $e^{-i\theta} e^{i\theta} = 1$; a linear
+  one is not. Degree one in $\psi$ and one in $\psi^*$ is the lowest
+  that qualifies.
+- It keeps its shape under a change of orthonormal basis: the cut
+  above showed $c \mapsto U c$, $M \mapsto U M U^\dagger$. So a
+  bilinear law written in one basis is a bilinear law in every
+  basis, which a law about the state must be.
+- Probabilities of exclusive outcomes add, and they should: the
+  probability of "$\lambda_i$ or $\lambda_j$" is $p_i + p_j$, the
+  operator of the combined outcome being $\hat M_i + \hat M_j$.
+  Gleason's theorem, in the references, runs this in reverse: in a
+  state space of dimension three and more, any assignment of
+  probabilities that adds over exclusive outcomes *is* bilinear. In
+  two dimensions — our spin — it is not forced, and the next post
+  derives the rule by a different route.
+
+What bilinearity does *not* give is additivity in the state. For
+$|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$,
+
+$$
+p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle ,
+$$
+
+and the cross term is interference: amplitudes add, probabilities
+do not — the second post's remark that amplitudes can cancel in a
+superposition. That cross term is the quantum content of the
+assumption.
+
+<details>
+<summary>Where Landau and Lifshitz take the condition from</summary>
+
+They do not argue for it. Their §2 (p. 20) states it as a
+postulate — "all these probabilities are given by expressions
+bilinear in $\Psi$ and $\Psi^*$", with the general form (2.1) — and
+the only support offered is that the one probability their book
+starts from, $|\Psi(q)|^2\, dq$ for the coordinates, is of this form
+(their footnote 2). The argument below is theirs, §3, p. 23.
+
+</details>
+
+With this condition they conclude that the only expression of this
+form satisfying the three conditions is the squared modulus
+$|c_i|^2$. The argument is short.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so the third condition gives $M_{ii} = 1$.
