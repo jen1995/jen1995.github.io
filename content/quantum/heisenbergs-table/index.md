@@ -510,27 +510,29 @@ $\sum_i \lambda_i |c_i|^2$.
 <details>
 <summary>The average is the same in every orthonormal basis</summary>
 
-Let $d$ be the column of the state's coordinates in one orthonormal
-basis and $A$ the table in it, so that the average is
-$d^\dagger A d$. The transition between
-two orthonormal bases is described by a
-[unitary](https://en.wikipedia.org/wiki/Unitary_matrix) matrix $U$,
-one with $U^\dagger U = I$ (Panov, §3.4, Proposition 3.4.2), and
-the change-of-basis law for the matrix of a sesquilinear form (Panov's lectures, §5.1,
-$M' = \bar C^{\mathsf T} M C$ with the transition matrix $C = U^\dagger$)
-says that the coordinates and the table become
+The bracket $\langle \psi | \hat A | \psi \rangle$ is defined without
+any basis: a bra, an operator, a ket. A basis enters only when the
+bracket is written out in coordinates, and that is done by inserting
+the resolution of identity of the chosen basis,
+$\sum_j |e_j\rangle\langle e_j| = \hat I$, twice:
 
 $$
-c = U d, \qquad A' = U A U^\dagger .
+\langle \psi | \hat A | \psi \rangle = \sum_{j,k} \langle \psi | e_j \rangle \langle e_j | \hat A | e_k \rangle \langle e_k | \psi \rangle = \sum_{j,k} d_j^*\, A_{jk}\, d_k ,
 $$
 
-Compute the average in the new basis and substitute:
-
-$$
-c^\dagger A' c = d^\dagger U^\dagger\, U A U^\dagger\, U d = d^\dagger A d .
-$$
-
+with $d_j = \langle e_j | \psi \rangle$ the coordinates and
+$A_{jk} = \langle e_j | \hat A | e_k \rangle$ the table in that basis.
+Doing the same with another orthonormal basis $\{|a_i\rangle\}$
+gives $\sum_{i,l} c_i^*\, A'_{il}\, c_l$ with the coordinates and
+the table of that basis — and it is the same bracket on the left.
 The coordinates change, the table changes, the number does not.
+
+In matrix language the two bases are related by a
+[unitary](https://en.wikipedia.org/wiki/Unitary_matrix) matrix
+$U$, $U^\dagger U = I$ (Panov, §3.4, Proposition 3.4.2), the
+coordinates and the table go as $c = U d$ and $A' = U A U^\dagger$ —
+the change-of-basis law of a sesquilinear form, Panov §5.1 — and
+the same conclusion reads $c^\dagger A' c = d^\dagger U^\dagger U A U^\dagger U d = d^\dagger A d$.
 
 </details>
 
