@@ -484,8 +484,14 @@ of something, and if the numbers $\lambda_i$ on the diagonal were the
 then this would be the sum of outcomes times their probabilities:
 an expectation value, exactly the average that the apparatus
 reports. So one formula does the whole job, provided two things are
-true: the numbers on the diagonal are the outcomes, and the squared
-coordinates are the probabilities.
+true:
+
+- the numbers on the diagonal are the outcomes;
+- the squared coordinates are the probabilities.
+
+The next two subsections take them in turn.
+
+### The numbers on the diagonal are the outcomes
 
 The computation assumed that the table is diagonal in the basis we
 happened to be using, and that is too much to ask: for the spin, the
@@ -546,8 +552,6 @@ throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 > which the table of the question is diagonal,
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
 > with numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
-
-### The assumption selects the normal matrices
 
 Which tables satisfy the assumption? Not all of them, and the ones
 that do form a definite class: a matrix is diagonal in some
@@ -624,6 +628,16 @@ the first, and Theorem 4.7.3 identifies the second with the normal
 matrices.
 
 </details>
+
+With the assumption in place, the first reading is settled as far
+as it can be before the second. In any state the average is a
+combination of the numbers $\lambda_i$ and nothing else; in the
+basis state $|a_i\rangle$, whose only nonzero coordinate is
+$c_i = 1$, it is exactly $\lambda_i$. So the numbers on the diagonal
+are the values the question can return, and $\lambda_i$ is the
+value it returns in $|a_i\rangle$. That this value is returned
+*with certainty* there is the statement that the weight $|c_i|^2 = 1$
+is a probability — the second reading.
 
 ### The weights are the probabilities
 
