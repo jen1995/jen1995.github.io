@@ -1,12 +1,11 @@
 ---
-title: "The Born Rule, Earned"
+title: "What a Measurement Does"
 date: 2026-10-25
 draft: true
 tags: ["quantum", "math"]
-summary: "The last post derived the Born rule from the average of a yes/no question. Here it is earned a second time, from the requirement that probabilities must not depend on the basis a state is written in — and the rest follows: no state outside the eigenvectors has a certain outcome, applying an operator is not measuring, two of the three Pauli matrices come out of the spin experiments, and a measurement is a projection."
+summary: "The last post built the operator of a question and derived the Born rule. This post uses them: applying an operator is not measuring, two of the three Pauli matrices come out of the spin experiments, the Born rule on a line turns the weights into a density, and a measurement is a projection onto a definite state — the last item of the first post's wishlist."
 math: true
 weight: 51
-aliases: ["/posts/the-born-rule-earned/"]
 ---
 
 The [last post](/quantum/heisenbergs-table/) built the object that
@@ -27,16 +26,15 @@ which the second post had taken on credit and the
 [delta post](/quantum/from-kronecker-to-dirac/) borrowed again in
 passing.
 
-That derivation rests on one assumption, that probabilities are
-bilinear in the coordinates of the state. This post gives the rule a
-second derivation that does not use it, and then pays the last open item of the
-[first post's wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist),
-*measurement as an operation on states*. It collects what falls out
-along the way: no state outside the eigenvectors has a certain
-outcome, applying an operator is not the same as measuring, and two
-of the three Pauli matrices can be read off the spin experiments. As in the second post, the spin of the
-first post is the running example, and its operators are constructed
-from the experiments as in lecture 3 of Susskind and Friedman.
+This post puts the object to work and pays the last open item of
+the [first post's wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist),
+*measurement as an operation on states*. On the way: applying an
+operator is not the same as measuring, two of the three Pauli
+matrices can be read off the spin experiments, and on a line the
+Born rule turns the weights into a density. As in the second post,
+the spin of the first post is the running example, and its operators
+are constructed from the experiments as in lecture 3 of Susskind and
+Friedman.
 
 ## Where we stand
 
@@ -65,115 +63,7 @@ Three facts from the earlier posts are used throughout.
   $|a_i\rangle\langle a_i|$, which is $|c_i|^2$
   (the [last post](/quantum/heisenbergs-table/)).
 
-## The Born rule, from basis independence
-
-The last post's derivation uses the assumption that probabilities
-are bilinear in the coordinates. The following argument for the
-squared magnitude uses no such assumption — only that probabilities must not depend on
-the basis the state happens to be written in. It follows video 8 of
-the Quantum Sense series.
-
-Suppose the probability of the outcome $\lambda_i$ is some function
-of the coordinate, $P_i = f(c_i)$ — the same function for every
-outcome and every observable, since nothing in the formalism singles
-one out. Take real coefficients first, in two dimensions, and try the
-simplest guess: the probability is the magnitude, $P_i = |c_i|$, so
-that $|c_1| + |c_2| = 1$. For the fifty-fifty state this gives
-$c_1 = c_2 = \frac12$. Now write the *same* state in another
-orthonormal basis — one obtained by rotating the first, which is what
-a different measurement axis does. In the rotated basis the
-coordinates of the vector $(\frac12, \frac12)$ are, say,
-$(\frac{1}{\sqrt{10}}, -\frac{2}{\sqrt{10}})$, and the sum of
-magnitudes is no longer one:
-
-$$
-\tfrac{1}{\sqrt{10}} + \tfrac{2}{\sqrt{10}} = \tfrac{3}{\sqrt{10}} \approx 0.95 .
-$$
-
-The coefficients in the new basis no longer add up to a probability
-distribution, and the vector would have to be rescaled by hand every
-time the basis changes. But the state is the same physical state
-whichever apparatus we point at it; a rule that needs a rescaling
-depending on the basis cannot be a law about the state.
-
-![The same state vector in two orthonormal bases: the sum of the magnitudes of its coordinates changes with the basis, while the sum of their squares — the squared length — does not](born_counterexample.png)
-
-What *is* the same in every orthonormal basis is the length of the
-vector: for a unit state, $\sum_i c_i^2 = 1$ in every one of them
-(real case). So $f$ must produce a probability distribution on every
-unit vector, in every orthonormal basis, from the coordinates alone.
-Write down what that requires, for real coefficients.
-
-1. **Normalization.** $\sum_i f(c_i) = 1$ whenever $\sum_i c_i^2 = 1$.
-2. **A single function.** The same $f$ serves every coordinate, every
-   basis, every observable.
-3. **Sign does not matter.** $f(-c) = f(c)$: the state $-|\psi\rangle$
-   is the same physical state as $|\psi\rangle$ (the second post: a
-   unit scalar factor changes no measurement), so flipping the sign of
-   one coordinate cannot change a probability.
-
-Condition 1 ties $n$ numbers by one equation. Solve the tie for the
-last coordinate, $c_n = \sqrt{1 - \sum_{i \lt n} c_i^2}$ (condition 3
-lets us take the positive root), and condition 1 becomes an identity
-in the $n - 1$ *independent* variables $c_1, \dots, c_{n-1}$:
-
-$$
-\sum_{i=1}^{n-1} f(c_i) + f\!\left(\sqrt{1 - \textstyle\sum_{i=1}^{n-1} c_i^2}\right) = 1 .
-$$
-
-An identity in independent variables can be differentiated with
-respect to any of them. Differentiate with respect to $c_1$ (assume
-$f$ differentiable; this is the argument's technical assumption):
-
-$$
-f'(c_1) - f'(c_n)\, \frac{c_1}{c_n} = 0 \qquad\Longrightarrow\qquad \frac{f'(c_1)}{c_1} = \frac{f'(c_n)}{c_n} .
-$$
-
-Differentiating with respect to $c_2$ instead gives the same
-right-hand side, so
-
-$$
-\frac{f'(c_1)}{c_1} = \frac{f'(c_2)}{c_2}
-$$
-
-for all admissible values of two independent variables. A function of
-$c_1$ alone that equals a function of $c_2$ alone is a constant:
-
-$$
-\frac{f'(c)}{c} = \lambda \qquad\Longrightarrow\qquad f(c) = \frac{\lambda}{2}\, c^2 + \mu .
-$$
-
-Two physical boundary conditions fix the constants. A state with
-$c_i = 0$ has no component along $|a_i\rangle$ — it is orthogonal to
-it, hence perfectly distinguishable from it — so the outcome
-$\lambda_i$ never occurs: $f(0) = 0$, and $\mu = 0$. A state with
-$c_i = 1$ *is* $|a_i\rangle$, and then $\lambda_i$ is certain:
-$f(1) = 1$, so $\lambda = 2$. Therefore $f(c) = c^2$.
-
-The coefficients are complex in general. One observation extends the
-result. The eigenvector $|a_i\rangle$ is fixed by the physics only up
-to a unit factor: $e^{i\theta}|a_i\rangle$ is the same physical
-state, still an eigenvector with the same eigenvalue, still of length
-one. So $\{e^{i\theta_i}|a_i\rangle\}$ is also an orthonormal eigenbasis
-of the same observable, and in it the coordinates of $|\psi\rangle$
-are $e^{-i\theta_i} c_i$. The probabilities cannot know which of these
-bases was used; hence $f$ depends on $c_i$ only through $|c_i|$.
-Apply the real result to the nonnegative numbers $|c_i|$, which
-satisfy $\sum_i |c_i|^2 = 1$:
-
-> **The Born rule.** If $|\psi\rangle = \sum_i c_i |a_i\rangle$ in the
-> orthonormal eigenbasis of an observable, the probability that a
-> measurement of it returns $\lambda_i$ is
-> $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
-
-Squared magnitudes, because the squared length is the quantity that
-does not change between orthonormal bases. The two derivations meet:
-the weights that diagonalization produced are the only weights that
-basis independence allows. (The argument assumed a differentiable
-$f$, the same for every coordinate; Gleason's theorem removes the
-assumptions in dimension three and more.)
-
-### The continuous menu
+## The Born rule on a line
 
 For a particle on a line the definite states of position are the kets
 $|x\rangle$ of the last post, the expansion is
@@ -204,45 +94,7 @@ the state.
 
 ![The Born rule on the line: |ψ(x)|² is a probability density, and the probability of a cell of width Δx is the density times the width](born_density.png)
 
-## Outcomes, definite states, and the spin
-
-### Eigenvectors are the definite states
-
-The last post showed that every eigenvector is a definite state: in
-$|a_i\rangle$ the outcome $\lambda_i$ has probability one. The converse
-is what makes the eigenvectors *all* the definite states, and it
-needs the Born rule. The first post's experiment one says that some
-states give a certain answer: measure again and again, and the window
-repeats itself. In the language of averages, a certain answer is one
-with no spread — the average of the squared deviation from the mean
-is zero. Compute that spread, the **variance**, in the eigenbasis:
-
-$$
-\langle (A - \langle A \rangle)^2 \rangle = \sum_i |c_i|^2\, (\lambda_i - \langle A \rangle)^2 .
-$$
-
-Every term is nonnegative, so the sum vanishes only if every
-$c_i$ with $\lambda_i \neq \langle A \rangle$ is zero — that is, only
-if $|\psi\rangle$ has components along eigenvectors of a single
-eigenvalue, which makes it an eigenvector itself. So:
-
-> **Definite states are eigenvectors.** A state in which the outcome
-> of the question $\hat A$ is certain is an eigenvector of $\hat A$,
-> and the certain outcome is its eigenvalue.
-
-This is the statement textbooks start from — Susskind's principles 1
-and 2 — and here it arrives last, as a consequence of the average
-rule of the last post. For the spin: the definite states $|u\rangle$,
-$|d\rangle$ of the $z$ question are the eigenvectors of its operator
-$\sigma_z$, with eigenvalues $+1$ and $-1$; the first post's "the
-measurement prepares a state that repeats its answer" is the
-statement that the state after a measurement is an eigenvector.
-
-From now on the word **observable** is used both for the measurable
-quantity and for its Hermitian operator. The three conditions one
-would otherwise have to *demand* of such an operator — real outcomes,
-definite states that span the space, definite states that are
-orthogonal — are the spectral theorem, proved in the last post.
+## Operators at work
 
 ### Applying the operator is not measuring
 
@@ -329,7 +181,7 @@ them.
 
 ![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
 
-### Measurement, completed
+## Measurement, completed
 
 Wishlist item 4 asked how measurement changes the state. Everything
 needed is now available.
@@ -378,8 +230,7 @@ The wishlist, with two more items paid:
 
 1. **A state object** — a unit vector in a Hilbert space. ✓ (second post)
 2. **A way to blend outcomes** — superposition; probabilities are
-   squared amplitudes, derived in the last post from averages and
-   *here from basis independence*. ✓
+   squared amplitudes. ✓ (last post)
 3. **Measurable quantities as actors** — Hermitian operators, whose
    eigenvalues are the outcomes and whose eigenvectors are the
    definite states; the average of a quantity is
@@ -409,8 +260,8 @@ ordinary sphere.
   теория)*, Теоретическая физика, т. III — chapter I, §3
   "Операторы" (pp. 22–28 of the 6th Russian edition; §3 "Operators"
   in the English *Quantum Mechanics: Non-Relativistic Theory*): the
-  road of the last post, and one more derivation of the Born rule:
-  $|a_n|^2$ as the only admissible bilinear probability, the mean value (3.7), the
+  road of the last post: $|a_n|^2$ as the only admissible bilinear
+  probability, the mean value (3.7), the
   operator *defined* by the mean value (3.8), eigenfunctions (3.12),
   Hermiticity from the reality of the mean (3.15–3.17).
 - P. A. M. Dirac. *The Principles of Quantum Mechanics*, 4th ed.
@@ -436,14 +287,7 @@ ordinary sphere.
   the atom), and videos 7 ([observables as linear
   operators](https://youtu.be/ANLRQ7X6h5A)), 8 ([why the probability
   is the squared amplitude](https://youtu.be/PZUZgOUOOIU)) and 9
-  ([Hermitian operators](https://youtu.be/da1rH0Hq62Q)); the
-  basis-independence derivation of the Born rule follows video 8.
-- A. M. Gleason. *Measures on the closed subspaces of a Hilbert
-  space.* Journal of Mathematics and Mechanics 6 (1957), 885–893 — the
-  theorem that on a Hilbert space of dimension at least three every
-  additive probability assignment is a quadratic form;
-  [Wikipedia's account](https://en.wikipedia.org/wiki/Gleason%27s_theorem)
-  is a good first reading.
+  ([Hermitian operators](https://youtu.be/da1rH0Hq62Q)).
 - Т. Е. Панов. [*Лекции по линейной алгебре*](http://higeom.math.msu.su/people/taras/teaching/panov-linalg.pdf)
   (in Russian) — §4.1 (adjoint operators; the matrix of the adjoint
   is the conjugate transpose, p. 65) and §4.2 (self-adjoint

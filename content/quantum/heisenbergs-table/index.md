@@ -696,8 +696,8 @@ deliberately does not.
   Gleason's theorem, in the references, runs this in reverse: in a
   state space of dimension three and more, any assignment of
   probabilities that adds over exclusive outcomes *is* bilinear. In
-  two dimensions — our spin — it is not forced, and the next post
-  derives the rule by a different route.
+  two dimensions — our spin — it is not forced, and there it stays
+  an assumption.
 
 What bilinearity does *not* give is additivity in the state. For
 $|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$,
@@ -762,13 +762,10 @@ took on credit:
 > measurement of it returns $\lambda_i$ is
 > $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
 
-The assumption behind this derivation is the bilinear one. The next
-post gives a second derivation that does not use it — only that
-probabilities must not depend on the basis the state is written in.
-(A theorem of Gleason, in the references, shows that for state spaces
-of dimension three and more *every* consistent assignment of
-probabilities is of this bilinear form, so in those dimensions the
-assumption costs nothing.)
+The assumption behind this derivation is the bilinear one. By
+Gleason's theorem it costs nothing in dimension three and more; for
+the two-state spin it is a genuine assumption, and it is the one
+this road makes.
 
 ![The average of a question is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
 
@@ -995,16 +992,39 @@ called a definite state. And the second post found that states a
 measurement tells apart with certainty are orthogonal — which the
 eigenvectors of a Hermitian operator are.
 
-> **Definite states are eigenvectors.** The eigenvectors of the
-> operator of a question are its definite states, and the certain
-> outcome in $|a_i\rangle$ is the eigenvalue $\lambda_i$.
+The converse also holds: no state outside the eigenvectors has a
+certain outcome. In the language of averages, a certain answer is
+one with no spread — the average of the squared deviation from the
+mean is zero. The squared deviation is the same question with its
+window relabeled, $\lambda_i \mapsto (\lambda_i - \langle A \rangle)^2$,
+so by the average rule its mean, the **variance**, is
 
+$$
+\langle (A - \langle A \rangle)^2 \rangle = \sum_i |c_i|^2\, (\lambda_i - \langle A \rangle)^2 .
+$$
+
+Every term is nonnegative, so the sum vanishes only if every $c_i$
+with $\lambda_i \neq \langle A \rangle$ is zero — that is, only if
+$|\psi\rangle$ has components along eigenvectors of a single
+eigenvalue, which makes it an eigenvector itself. So:
+
+> **Definite states are eigenvectors.** A state in which the outcome
+> of a question is certain is an eigenvector of its operator, and
+> the certain outcome is the eigenvalue; and every eigenvector
+> $|a_i\rangle$ is such a state, with the certain outcome $\lambda_i$.
+
+This is the statement textbooks start from — Susskind's principles 1
+and 2 — and here it arrives as a consequence of the average rule.
 For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
 $z$ question, are the eigenvectors of its operator $\sigma_z$, with
-eigenvalues $+1$ and $-1$. The next post proves the converse, that no
-state outside the eigenvectors has a certain outcome, and builds
-$\sigma_z$ and $\sigma_x$ from the definite states by the spectral
-decomposition.
+eigenvalues $+1$ and $-1$; the first post's "the measurement
+prepares a state that repeats its answer" is the statement that the
+state after a measurement is an eigenvector, which the next post
+makes precise. From now on the word **observable** is used both for
+the measurable quantity and for its Hermitian operator. The three
+conditions one would otherwise have to *demand* of such an operator
+— real outcomes, definite states that span the space, definite
+states that are orthogonal — are the spectral theorem above.
 
 ### Degeneracy and the continuous spectrum
 
@@ -1077,19 +1097,17 @@ Wishlist item 3 is paid: **a measurable quantity is a Hermitian
 operator**, whose eigenvalues are the outcomes, whose eigenvectors are
 the definite states, whose average in a state is
 $\langle \psi | \hat A | \psi \rangle$, and whose outcome
-probabilities are the squared coordinates $|c_i|^2$. Two things
-remain. The Born rule was derived from the assumption that
-probabilities are bilinear in the coordinates, and deserves a reason
-that does not depend on it; and nothing has been said about what a
-measurement does to the state. Both are the next post.
+probabilities are the squared coordinates $|c_i|^2$. One thing
+remains: nothing has been said about what a measurement does to the
+state. That is the next post.
 
 ## Onward
 
-Next stop: the Born rule, earned a second time — from the
-requirement that probabilities must not depend on the basis a state
-is written in; then the warning that applying an operator is not
-measuring, two of the three Pauli matrices read off the spin
-experiments, and measurement itself as a projection.
+Next stop: what a measurement does. The warning that applying an
+operator is not measuring; two of the three Pauli matrices read off
+the spin experiments; the Born rule on a line, where the weights
+become a density; and measurement itself as a projection, the last
+item of the wishlist.
 
 ## References
 

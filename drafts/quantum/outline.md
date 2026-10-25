@@ -136,6 +136,24 @@ The longest post; notes §9–13 + the classical interlude.
    twin ψ̃(p), squeeze one and watch the other spread (the uncertainty
    trade-off, interactive; reuses the Fourier road's machinery).
 
+## Status (2026-10-25, evening): Born rule derived once
+
+- The Born rule has ONE derivation now, in `heisenbergs-table`: the
+  average computed in the diagonal basis, the three conditions on the
+  weights, bilinearity (Landau–Lifshitz §2 postulate; our reasons:
+  phase invariance, basis independence, additivity over exclusive
+  outcomes; what it denies: additivity in the state = interference),
+  the three-step argument ⇒ |c_i|². Dimension 2 keeps bilinearity as an
+  assumption (Gleason needs ≥ 3).
+- The basis-independence derivation (Quantum Sense video 8, f(c) = c²)
+  is parked in `drafts/quantum/born_basis_independence.md` with its
+  figure in `drafts/quantum/figures/`.
+- The variance converse (definite states ⇔ eigenvectors) moved into
+  post 1, section "Definite states are eigenvectors".
+- Post 2 renamed: folder `what-a-measurement-does`, title "What a
+  Measurement Does" (weight 51): Born rule on a line → operators at
+  work (applying ≠ measuring; σ_z, σ_x) → measurement, completed.
+
 ## Status (2026-10-25, QM-3 split and reordered)
 
 - QM-3 is two drafts: `heisenbergs-table` (weight 50) and
