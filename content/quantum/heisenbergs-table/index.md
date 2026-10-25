@@ -758,10 +758,13 @@ The proof is under the cut, together with the real counterexample.
 <details>
 <summary>Proof of polarization, and why it needs complex numbers</summary>
 
-*The cross terms first.* Call them
-$X = \langle \psi_1 | \hat M | \psi_2 \rangle$ and
-$Y = \langle \psi_2 | \hat M | \psi_1 \rangle$. Reality of
-$p(\psi_1 + \psi_2)$ says only that $X + Y$ is real, and that alone
+*The cross terms first.* The expansion above was
+
+$$
+p(\psi_1 + \psi_2) = p(\psi_1) + p(\psi_2) + X + Y, \qquad X = \langle \psi_1 | \hat M | \psi_2 \rangle, \quad Y = \langle \psi_2 | \hat M | \psi_1 \rangle .
+$$
+
+Reality of $p(\psi_1 + \psi_2)$ says only that $X + Y$ is real, and that alone
 allows $X = 1$, $Y = -1$, say. What settles it is that $p$ is real
 for *every* state, including $|\psi_1\rangle + i|\psi_2\rangle$, whose
 expansion has the cross terms $i X - i Y$; so $X - Y$ is purely
