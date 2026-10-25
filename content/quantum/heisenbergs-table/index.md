@@ -752,8 +752,11 @@ $$
 
 Multiply the second line by $-i$ and add it to the first:
 $2\,\langle \varphi | \hat M | \psi \rangle = 0$ for all
-$|\varphi\rangle, |\psi\rangle$. Choosing $|\varphi\rangle = \hat M|\psi\rangle$
-gives $\lVert \hat M \psi \rVert^2 = 0$, so $\hat M = 0$. The
+$|\varphi\rangle, |\psi\rangle$. Fix any $|\psi\rangle$ and choose
+$|\varphi\rangle = \hat M|\psi\rangle$: this gives
+$\lVert \hat M \psi \rVert^2 = 0$, so $\hat M|\psi\rangle = 0$. As
+$|\psi\rangle$ was arbitrary, $\hat M$ sends every vector to zero:
+$\hat M = 0$. The
 complex scalar $i$ was essential: over the real numbers a quadratic
 form does not determine the antisymmetric part of its matrix.
 
