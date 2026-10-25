@@ -678,7 +678,9 @@ What recommends this shape? Three things it gets right, and one it
 deliberately does not.
 
 - A unit factor on the state, $|\psi\rangle \mapsto e^{i\theta}|\psi\rangle$,
-  changes no measurement (the second post). A bilinear expression
+  changes no measurement (the second post's cut
+  ["The leftover freedom: global phase"](/quantum/states-are-vectors/#the-machinery-earns-its-keep-right-and-left)).
+  A bilinear expression
   is unchanged by it, since $e^{-i\theta} e^{i\theta} = 1$; a linear
   one is not. Degree one in $\psi$ and one in $\psi^*$ is the lowest
   that qualifies.
