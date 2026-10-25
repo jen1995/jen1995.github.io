@@ -414,11 +414,34 @@ with respect to an orthonormal basis, *is* a linear operator — a
 machine $\hat A : V \to V$ that sends vectors to vectors and respects
 sums and scalar multiples,
 $\hat A(\alpha|\psi\rangle + \beta|\varphi\rangle) = \alpha\hat A|\psi\rangle + \beta\hat A|\varphi\rangle$.
-In coordinates the machine multiplies the column of $|\psi\rangle$ by
-the table:
+Here is the correspondence in detail. The entry
+$A_{ij} = \langle E_i | A | E_j \rangle$ is, by the second post's
+"coordinates are inner products", the $i$-th coordinate of the
+vector that the machine returns when fed the basis vector
+$|E_j\rangle$; so the $j$-th column of the table lists the
+coordinates of $\hat A |E_j\rangle$:
 
 $$
-\hat A\, |\psi\rangle = \sum_{i} \Big( \sum_j A_{ij}\, c_j \Big) |E_i\rangle, \qquad c_j = \langle E_j | \psi \rangle .
+\hat A\, |E_j\rangle = \sum_i A_{ij}\, |E_i\rangle .
+$$
+
+That fixes the machine on the basis vectors, and linearity fixes it
+everywhere else. Feed it a state $|\psi\rangle = \sum_j c_j |E_j\rangle$
+with $c_j = \langle E_j | \psi \rangle$:
+
+$$
+\begin{aligned}
+\hat A\, |\psi\rangle &= \hat A \sum_j c_j\, |E_j\rangle = \sum_j c_j\, \hat A |E_j\rangle \\
+&= \sum_j c_j \sum_i A_{ij}\, |E_i\rangle = \sum_i \Big( \sum_j A_{ij}\, c_j \Big) |E_i\rangle .
+\end{aligned}
+$$
+
+The $i$-th coordinate of the output is $\sum_j A_{ij} c_j$ — the
+$i$-th row of the table times the column of the input — which is
+the matrix times the column. For the spin:
+
+$$
+\hat A \begin{pmatrix} c_u \\ c_d \end{pmatrix} = \begin{pmatrix} A_{uu} & A_{ud} \\ A_{du} & A_{dd} \end{pmatrix} \begin{pmatrix} c_u \\ c_d \end{pmatrix} = \begin{pmatrix} A_{uu} c_u + A_{ud} c_d \\ A_{du} c_u + A_{dd} c_d \end{pmatrix} .
 $$
 
 A table with two indices and a linear operator are one object in two
