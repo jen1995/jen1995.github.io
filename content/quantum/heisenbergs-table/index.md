@@ -737,7 +737,12 @@ other, closes this subsection.
 
 
 The pairing of the cross terms rests on the following lemma, which
-is also used in the argument below.
+is also used in the argument below. It is not automatic: reality of
+$p$ is a condition on the values $\langle \psi | \hat M | \psi \rangle$,
+one number per state, while conjugate symmetry is a condition on
+$\langle \varphi | \hat M | \psi \rangle$, one number per *pair* of
+states — and the step from the first to the second fails over the
+real numbers.
 
 > **Polarization.** The values $\langle \psi | \hat M | \psi \rangle$
 > on single states determine every $\langle \varphi | \hat M | \psi \rangle$.
