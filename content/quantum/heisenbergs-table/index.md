@@ -502,10 +502,11 @@ it is $\sum_i \lambda_i |c_i|^2$.
 
 Let $d$ be the column of the state's coordinates in one orthonormal
 basis and $A$ the table in it, so that the average is
-$d^\dagger A d = \sum_{j,k} d_j^* A_{jk} d_k$. Passing to another
-orthonormal basis is a [unitary](https://en.wikipedia.org/wiki/Unitary_matrix)
-matrix $U$, $U^\dagger U = I$, and the change-of-basis law for the
-matrix of a sesquilinear form (Panov's lectures, §5.1,
+$d^\dagger A d = \sum_{j,k} d_j^* A_{jk} d_k$. The transition between
+two orthonormal bases is described by a
+[unitary](https://en.wikipedia.org/wiki/Unitary_matrix) matrix $U$,
+one with $U^\dagger U = I$ (Panov, §3.4, Proposition 3.4.2), and
+the change-of-basis law for the matrix of a sesquilinear form (Panov's lectures, §5.1,
 $M' = \bar C^{\mathsf T} M C$ with the transition matrix $C = U^\dagger$)
 says that the coordinates and the table become
 
