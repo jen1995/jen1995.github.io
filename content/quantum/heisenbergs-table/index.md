@@ -722,7 +722,14 @@ $$
 p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
 $$
 
-The cross term is interference, and the spin shows it in two lines.
+The cross term is interference: amplitudes add, probabilities do
+not — the second post's remark that amplitudes can cancel in a
+superposition, and the quantum content of the assumption. The spin
+shows it in two lines, under the cut.
+
+<details>
+<summary>Interference on the spin: the same two pieces, opposite cross terms</summary>
+
 Ask the $z$ question of the two $x$-definite states: the probability
 of "up" is $p = \langle \psi | u \rangle \langle u | \psi \rangle = |\langle u | \psi \rangle|^2$,
 and since $|r\rangle$ and $|l\rangle$ are each half up and half down,
@@ -746,8 +753,9 @@ Amplitudes add, and the probability is the squared magnitude of
 the sum, so the pieces can reinforce or cancel. This is the second
 post's remark that amplitudes can cancel in a superposition, and it
 is the two-slit experiment of volume III, chapter 1 of Feynman in
-the smallest possible setting. The cross term is the quantum
-content of the assumption.
+the smallest possible setting. 
+
+</details>
 
 <details>
 <summary>Polarization: the diagonal values determine the whole bracket</summary>
