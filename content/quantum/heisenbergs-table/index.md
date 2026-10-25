@@ -550,7 +550,8 @@ This is a real restriction. Not every table has such a basis, and
 the ones that do form a definite class: a matrix is diagonal in some
 orthonormal basis exactly when it commutes with its conjugate
 transpose — the matrix with rows and columns swapped and every entry
-conjugated —
+conjugated, written $\bar A^{\mathsf T}$, the bar for the conjugation
+and the $\mathsf T$ for the transposition:
 
 $$
 A \bar A^{\mathsf T} = \bar A^{\mathsf T} A .
@@ -630,8 +631,14 @@ $(\lambda_2 - \lambda_1) \langle \varphi_1 | \varphi_2 \rangle = 0$ and
 the eigenvectors are orthogonal. The last step is the one that
 needs normality. For the matrix above,
 $\bar A^{\mathsf T} (1, 0)^{\mathsf T} = (1, 1)^{\mathsf T}$ is not a
-multiple of $(1, 0)^{\mathsf T}$, the chain breaks, and indeed
-$A \bar A^{\mathsf T} \neq \bar A^{\mathsf T} A$. For a Hermitian
+multiple of $(1, 0)^{\mathsf T}$, and the chain breaks. And
+indeed the matrix is not normal:
+
+$$
+A \bar A^{\mathsf T} = \begin{pmatrix} 2 & 2 \\ 2 & 4 \end{pmatrix}, \qquad \bar A^{\mathsf T} A = \begin{pmatrix} 1 & 1 \\ 1 & 5 \end{pmatrix} .
+$$
+
+For a Hermitian
 operator $\hat A^\dagger = \hat A$, the lemma is not even needed, and
 that is the version proved later in this chapter.
 
