@@ -210,7 +210,7 @@ intensities of its spectral lines. To see what that programme does
 to the description of the electron, start with what the classical
 picture says the light should be, then compare with what is measured.
 
-**The classical picture.** In Bohr's picture the electron on the
+<a id="the-classical-picture"></a>**The classical picture.** In Bohr's picture the electron on the
 orbit with label $n$ moves as a classical particle, periodically,
 with a period $T(n)$ that depends on the orbit and an orbital
 frequency $\omega(n) = 2\pi / T(n)$. Any periodic motion is a sum of
@@ -326,8 +326,9 @@ language of tables one has to know what the table of $x^2$ or $x^3$
 is, given the table of $x$: positions have to be *multiplied*. So
 Heisenberg needed a multiplication rule, and here the measured
 spectrum dictates the answer. Classically the coefficients
-of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$,
-a sum over pairs of harmonics of one orbit. For the table, a product
+of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$
+— the computation [under *The classical picture*](#the-classical-picture)
+above — a sum over pairs of harmonics of one orbit. For the table, a product
 of two amplitudes carries the frequency $\omega(n, n - \beta)$ only if
 the two transitions form a chain through an intermediate level
 $n - \alpha$, so to end up with the right frequency it is, in
