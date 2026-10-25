@@ -829,17 +829,14 @@ start of this subsection — nonnegative, summing to one on unit
 states, equal to one on $|a_i\rangle$ and to zero on states with
 $c_i = 0$ — is the squared modulus $|c_i|^2$. In terms of the
 matrix: $M$ has a single $1$, in the $i$-th place on the diagonal,
-and zeros everywhere else — for the spin and the outcome "up",
+and zeros everywhere else. For the spin and the outcome "up",
 
 $$
-M = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \qquad c^\dagger M c = |c_u|^2 ,
+M = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \qquad c^\dagger M c = |c_u|^2 .
 $$
 
-not the identity matrix, whose form $|c_u|^2 + |c_d|^2 = 1$ is the
-probability of "some outcome". So $\hat M = |a_i\rangle\langle a_i|$,
-the projector onto $|a_i\rangle$, one per outcome; summed over the
-outcomes they give the resolution of identity of the second post.
-The argument is short.
+In operator form, $\hat M = |a_i\rangle\langle a_i|$: the projector
+onto $|a_i\rangle$, one for each outcome. The argument is short.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so the third condition gives $M_{ii} = 1$.
