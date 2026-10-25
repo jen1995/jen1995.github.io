@@ -758,80 +758,57 @@ The proof is under the cut, together with the real counterexample.
 <details>
 <summary>Proof of polarization, and why it needs complex numbers</summary>
 
-*The cross terms first.* With
-$X = \langle \psi_1 | \hat M | \psi_2 \rangle$ and
-$Y = \langle \psi_2 | \hat M | \psi_1 \rangle$, the expansion above
+Take any two states $|\psi_1\rangle, |\psi_2\rangle$ and write
+$X = \langle \psi_1 | \hat M | \psi_2 \rangle$,
+$Y = \langle \psi_2 | \hat M | \psi_1 \rangle$. The expansion above
 was
 
 $$
 p(\psi_1 + \psi_2) = p(\psi_1) + p(\psi_2) + X + Y .
 $$
 
-Reality of $p(\psi_1 + \psi_2)$ says only that $X + Y$ is real, and that alone
-allows $X = 1$, $Y = -1$, say. What settles it is that $p$ is real
-for *every* state, including $|\psi_1\rangle + i|\psi_2\rangle$, whose
-expansion has the cross terms $i X - i Y$; so $X - Y$ is purely
-imaginary as well. Writing $X = a + ib$ and $Y = c + id$, the first
-condition gives $d = -b$ and the second $c = a$: $Y = X^*$. The
-general statement is the same trick with the roles of the two states
-left open.
-
-*The claim.* If $\langle \psi | \hat M | \psi \rangle = 0$ for every
-$|\psi\rangle$, then $\langle \varphi | \hat M | \psi \rangle = 0$ for
-every $|\varphi\rangle$ and $|\psi\rangle$, and $\hat M = 0$. Expand
-the bracket on $|\varphi\rangle + |\psi\rangle$ and on
-$|\varphi\rangle + i|\psi\rangle$, using linearity in the ket and
-conjugate linearity in the bra:
+Now expand on $|\psi_1\rangle + i|\psi_2\rangle$ instead. The factor
+$i$ comes out of the ket as $i$ and out of the bra as $-i$, so
+$\langle \psi_1 | \hat M | i\psi_2 \rangle = iX$,
+$\langle i\psi_2 | \hat M | \psi_1 \rangle = -iY$, and
+$\langle i\psi_2 | \hat M | i\psi_2 \rangle = p(\psi_2)$:
 
 $$
-0 = \langle \varphi + \psi \,|\, \hat M \,|\, \varphi + \psi \rangle = \langle \varphi | \hat M | \psi \rangle + \langle \psi | \hat M | \varphi \rangle ,
+p(\psi_1 + i\psi_2) = p(\psi_1) + p(\psi_2) + iX - iY .
 $$
 
+Subtract $p(\psi_1) + p(\psi_2)$ from both and combine: the first
+line gives $X + Y$, the second gives $i(X - Y)$, and
+$(X + Y) - i \cdot i(X - Y) = 2X$. So
+
 $$
-0 = \langle \varphi + i\psi \,|\, \hat M \,|\, \varphi + i\psi \rangle = i\,\langle \varphi | \hat M | \psi \rangle - i\,\langle \psi | \hat M | \varphi \rangle .
+X = \tfrac12 \big[ p(\psi_1 + \psi_2) - p(\psi_1) - p(\psi_2) \big] - \tfrac{i}{2} \big[ p(\psi_1 + i\psi_2) - p(\psi_1) - p(\psi_2) \big] ,
 $$
 
-Multiply the second line by $-i$ and add it to the first:
-$2\,\langle \varphi | \hat M | \psi \rangle = 0$ for all
-$|\varphi\rangle, |\psi\rangle$. Fix any $|\psi\rangle$ and choose
-$|\varphi\rangle = \hat M|\psi\rangle$: this gives
-$\lVert \hat M \psi \rVert^2 = 0$, so $\hat M|\psi\rangle = 0$. As
-$|\psi\rangle$ was arbitrary, $\hat M$ sends every vector to zero:
-$\hat M = 0$. The
-complex scalar $i$ was essential. Over the real numbers the claim is
-false: the matrix
+every bracket $\langle \psi_1 | \hat M | \psi_2 \rangle$ is a
+combination of four values on single states — the claim. The two
+consequences follow at once. If $p$ is real on every state, then
+$X + Y$ is real and $X - Y$ is purely imaginary; with $X = a + ib$
+and $Y = c + id$ this gives $d = -b$ and $c = a$, so $Y = X^*$: the
+bracket is conjugate-symmetric. If $p$ vanishes on every state of a
+subspace, take $|\psi_1\rangle, |\psi_2\rangle$ in it: $X + Y = 0$
+and $X - Y = 0$, so $X = 0$ — every bracket between two vectors of
+the subspace vanishes, and the block of the matrix is zero.
+
+Over the real numbers the state $|\psi_1\rangle + i|\psi_2\rangle$
+cannot be formed, the second equation is missing, and $X + Y$ alone
+does not determine $X$. The matrix
 
 $$
 M = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}
 $$
 
-gives $x^{\mathsf T} M x = x_1 x_2 - x_2 x_1 = 0$ for every real
-$x$, yet $M \neq 0$ — a real quadratic form is blind to the
-antisymmetric part of its matrix. With complex coordinates and the
-conjugation in the bra, the same matrix gives
+shows it: $x^{\mathsf T} M x = x_1 x_2 - x_2 x_1 = 0$ for every real
+$x$, yet $M \neq 0$. With complex coordinates and the conjugation in
+the bra, the same matrix gives
 $c^\dagger M c = c_1^* c_2 - c_2^* c_1 = 2i\,\mathrm{Im}(c_1^* c_2)$,
-which is not identically zero, and that is what the expansion on
-$|\varphi\rangle + i|\psi\rangle$ detects.
-
-*The two consequences.*
-
-- *A block that vanishes on the diagonal vanishes.* If
-  $\langle \psi | \hat M | \psi \rangle = 0$ for every $|\psi\rangle$
-  in a subspace, the two expansions above, with $|\varphi\rangle$
-  and $|\psi\rangle$ taken in that subspace, give
-  $\langle \varphi | \hat M | \psi \rangle = 0$ for all of them — the
-  block of the matrix of $\hat M$ on that subspace is zero.
-- *Real diagonal values make the bracket conjugate-symmetric.* If
-  $\langle \psi | \hat M | \psi \rangle$ is real for every
-  $|\psi\rangle$, then
-  $\langle \varphi | \hat M | \psi \rangle = \langle \psi | \hat M | \varphi \rangle^*$
-  for all $|\varphi\rangle, |\psi\rangle$. The difference
-  $D(\varphi, \psi) = \langle \varphi | \hat M | \psi \rangle - \langle \psi | \hat M | \varphi \rangle^*$
-  is linear in $|\psi\rangle$ and conjugate-linear in
-  $|\varphi\rangle$, like a bracket, so it is the bracket of some
-  operator (its matrix is $D(a_j, a_k)$), and it vanishes when
-  $|\varphi\rangle = |\psi\rangle$; by the claim it vanishes
-  everywhere.
+which is not identically zero — the expansion on
+$|\psi_1\rangle + i|\psi_2\rangle$ detects it.
 
 </details>
 
