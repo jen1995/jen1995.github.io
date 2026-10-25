@@ -395,7 +395,11 @@ his words, are "usually written as a square matrix, called the matrix
 $A$"; and two devices in series are described by the matrix product
 of their two matrices, in which the order matters. Feynman's $A$ is a
 device that acts on states, not yet a measurable quantity; what we
-borrow is the shape. Fix the $z$ basis $\{|u\rangle, |d\rangle\}$. A
+borrow is the shape.
+
+![Feynman's arrangement: a source of atoms, a Stern–Gerlach filter that passes only the state i, a device A, a second filter that passes only the state j, and a counter; the counting rate is the squared amplitude ⟨j|A|i⟩, one number per pair of states — for the spin of this blog, a two-by-two table](feynman_filters.png)
+
+Fix the $z$ basis $\{|u\rangle, |d\rangle\}$. A
 question $A$ asked of the spin is to be described by four numbers —
 one for each ordered pair of basis states:
 
