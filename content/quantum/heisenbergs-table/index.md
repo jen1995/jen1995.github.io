@@ -845,7 +845,10 @@ In operator form, $\hat M = |a_i\rangle\langle a_i|$: the projector
 onto $|a_i\rangle$, one for each outcome. The argument is short.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
-   zero, so the third condition gives $M_{ii} = 1$.
+   zero, so of the whole sum $\sum_{j,k} M_{jk}\, c_j^* c_k$ only the
+   term $j = k = i$ survives, and the third condition gives
+   $M_{ii} = 1$ — the entry of $M$ in row $i$, column $i$, the row
+   and the column that belong to $|a_i\rangle$.
 2. Next, the states with $c_i = 0$: the combinations
    $|\psi\rangle = \sum_{j \neq i} c_j |a_j\rangle$ of the *other*
    basis vectors. They have no component along $|a_i\rangle$, so by
