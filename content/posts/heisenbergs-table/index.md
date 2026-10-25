@@ -45,12 +45,7 @@ Three facts from the earlier posts are used throughout.
   $|u\rangle$ and $|d\rangle$; for the $x$ axis, $|r\rangle$ and
   $|l\rangle$, which the
   [second post built](/posts/states-are-vectors/#the-machinery-earns-its-keep-right-and-left)
-  from the experiments:
-
-  $$
-  |r\rangle = \tfrac{1}{\sqrt 2}\,|u\rangle + \tfrac{1}{\sqrt 2}\,|d\rangle, \qquad |l\rangle = \tfrac{1}{\sqrt 2}\,|u\rangle - \tfrac{1}{\sqrt 2}\,|d\rangle.
-  $$
-
+  from the experiments.
 - Each axis donates an **orthonormal basis**: its two definite states
   are perfectly distinguishable by the apparatus, hence orthogonal,
   and normalized to length one. Any state expands in any of these
@@ -631,6 +626,12 @@ that way:
 > question, and $|c_i|^2$ is the probability of the outcome
 > $\lambda_i$ in the state $|\psi\rangle$.
 
+The first half of this reading is forced: the average of a question
+in every state is a mean of the $\lambda_i$, so no other values ever
+contribute. The second half — that the weights are the
+probabilities, and not just numbers that happen to sum to one — is
+read off here and *proved* in the next post, in two independent ways.
+
 ![The average of a question is a weighted average of the eigenvalues of its operator: the eigenvalues sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
 
 This is where the eigenbasis comes from: it is the basis in which
@@ -659,8 +660,10 @@ being the whole real line — a **continuous spectrum**, with
 $\hat x = \int x\, |x\rangle\langle x|\, dx$ as its spectral
 decomposition. The problems ahead show all three kinds: the particle
 in a box has a purely discrete spectrum, the tunneling problem a
-purely continuous one, and hydrogen both at once. For general
-self-adjoint operators the spectral theorem survives in this
+purely continuous one, and hydrogen both at once. In infinite dimensions the spectral theorem holds in the same form
+as above for *compact* self-adjoint operators (the Hilbert–Schmidt
+theorem; Sergeev's lectures, Theorem 40, in the references), and for
+general self-adjoint operators such as position it survives in this
 integral form, which the delta post's Appendix A pointed at.
 
 ## What we built
@@ -711,7 +714,7 @@ experiments, and measurement itself as a projection.
   measuring $\xi$ in the state $|x\rangle$ is $\langle x | \xi | x \rangle$
   (p. 68), and the probability of the value $a$ as the average of the
   function $\delta_{\xi a}$ of the observable, $P_a = \langle x | \delta_{\xi a} | x \rangle$,
-  eq. (45) (p. 69) — the projector route of this post.
+  eq. (45) (p. 69) — the route the next post takes to the Born rule.
 - R. P. Feynman, R. B. Leighton, M. Sands. *The Feynman Lectures on
   Physics*, vol. III (Russian edition: *Фейнмановские лекции по
   физике*, вып. 8–9 *Квантовая механика*, Мир, 1978) — chapter 5,
