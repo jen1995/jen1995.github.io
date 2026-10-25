@@ -715,7 +715,7 @@ The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
 are conjugates of each other when $p$ is real for every state —
 which it is, being a probability — since then
 $\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$
-(the polarization cut later in the chapter shows this), and a number
+(the polarization cut below), and a number
 plus its conjugate is twice its real part:
 
 $$
@@ -726,6 +726,53 @@ The cross term is interference: amplitudes add, probabilities
 do not — the second post's remark that amplitudes can cancel in a
 superposition. That cross term is the quantum content of the
 assumption.
+
+<details>
+<summary>Polarization: the diagonal values determine the whole bracket</summary>
+
+*Claim.* If $\langle \psi | \hat M | \psi \rangle = 0$ for every
+$|\psi\rangle$, then $\langle \varphi | \hat M | \psi \rangle = 0$ for
+every $|\varphi\rangle$ and $|\psi\rangle$, and $\hat M = 0$. Expand
+the bracket on $|\varphi\rangle + |\psi\rangle$ and on
+$|\varphi\rangle + i|\psi\rangle$, as in the interference
+computation above:
+
+$$
+0 = \langle \varphi + \psi \,|\, \hat M \,|\, \varphi + \psi \rangle = \langle \varphi | \hat M | \psi \rangle + \langle \psi | \hat M | \varphi \rangle ,
+$$
+
+$$
+0 = \langle \varphi + i\psi \,|\, \hat M \,|\, \varphi + i\psi \rangle = i\,\langle \varphi | \hat M | \psi \rangle - i\,\langle \psi | \hat M | \varphi \rangle .
+$$
+
+Multiply the second line by $-i$ and add it to the first:
+$2\,\langle \varphi | \hat M | \psi \rangle = 0$ for all
+$|\varphi\rangle, |\psi\rangle$. Choosing $|\varphi\rangle = \hat M|\psi\rangle$
+gives $\lVert \hat M \psi \rVert^2 = 0$, so $\hat M = 0$. The
+complex scalar $i$ was essential: over the real numbers a quadratic
+form does not determine the antisymmetric part of its matrix.
+
+Two consequences are used in this chapter.
+
+- *A block that vanishes on the diagonal vanishes.* If
+  $\langle \psi | \hat M | \psi \rangle = 0$ for every $|\psi\rangle$
+  in a subspace, the two expansions above, with $|\varphi\rangle$
+  and $|\psi\rangle$ taken in that subspace, give
+  $\langle \varphi | \hat M | \psi \rangle = 0$ for all of them — the
+  block of the matrix of $\hat M$ on that subspace is zero.
+- *Real diagonal values make the bracket conjugate-symmetric.* If
+  $\langle \psi | \hat M | \psi \rangle$ is real for every
+  $|\psi\rangle$, then
+  $\langle \varphi | \hat M | \psi \rangle = \langle \psi | \hat M | \varphi \rangle^*$
+  for all $|\varphi\rangle, |\psi\rangle$. The difference
+  $D(\varphi, \psi) = \langle \varphi | \hat M | \psi \rangle - \langle \psi | \hat M | \varphi \rangle^*$
+  is linear in $|\psi\rangle$ and conjugate-linear in
+  $|\varphi\rangle$, like a bracket, so it is the bracket of some
+  operator (its matrix is $D(a_j, a_k)$), and it vanishes when
+  $|\varphi\rangle = |\psi\rangle$; by the claim it vanishes
+  everywhere.
+
+</details>
 
 <details>
 <summary>Where Landau and Lifshitz take the condition from</summary>
@@ -748,8 +795,8 @@ $|c_i|^2$. The argument is short.
 2. Every state with $c_i = 0$ gives $p_i = 0$, so the expression
    vanishes identically on the span of the other basis vectors, and
    an expression of this form that vanishes identically has zero
-   matrix (the polarization argument, in the cut on Hermitian
-   operators later in this chapter): $M_{jk} = 0$ whenever $j \neq i$
+   matrix (the first consequence in the polarization cut above):
+   $M_{jk} = 0$ whenever $j \neq i$
    and $k \neq i$. Only the $i$-th row and column of $M$ remain.
 3. Take the state with $c_i = \varepsilon$,
    $c_k = \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$ for one $k \neq i$,
@@ -918,40 +965,15 @@ $X_{-\alpha}(n) = X_\alpha(n)^*$ in the notation of the
 **And back.** The assumption that opened the chapter was promised a
 price. Suppose only what the apparatus guarantees — that the average
 $\langle \psi | \hat A | \psi \rangle$ is a real number in every
-state. Then $\hat A$ is Hermitian: the proof is a page of algebra,
-under the cut.
-
-<details>
-<summary>A real quadratic form has a Hermitian operator (polarization)</summary>
-
-One direction is a line. If $\hat A^\dagger = \hat A$, then
-$\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$
-by the Hermitian symmetry of the inner product, so the number equals
-its own conjugate. For the other direction let
-$\hat B = \hat A - \hat A^\dagger$. If $\langle \psi | \hat A \psi \rangle$
-is real for all $\psi$, then
-$\langle \psi | \hat B \psi \rangle = \langle \psi | \hat A \psi \rangle - \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle - \langle \psi | \hat A \psi \rangle^* = 0$
-for all $\psi$. The claim is that an operator whose quadratic form
-vanishes identically is the zero operator. Expand the form on
-$|\varphi\rangle + |\psi\rangle$ and on $|\varphi\rangle + i|\psi\rangle$:
-
-$$
-0 = \langle \varphi + \psi \,|\, \hat B(\varphi + \psi) \rangle = \langle \varphi | \hat B \psi \rangle + \langle \psi | \hat B \varphi \rangle ,
-$$
-
-$$
-0 = \langle \varphi + i\psi \,|\, \hat B(\varphi + i\psi) \rangle = i\,\langle \varphi | \hat B \psi \rangle - i\,\langle \psi | \hat B \varphi \rangle .
-$$
-
-Multiply the second line by $-i$ and add it to the first:
-$2\,\langle \varphi | \hat B \psi \rangle = 0$ for all $\varphi, \psi$.
-Choosing $|\varphi\rangle = \hat B|\psi\rangle$ gives
-$\lVert \hat B \psi \rVert^2 = 0$, so $\hat B = 0$ and
-$\hat A = \hat A^\dagger$. The complex scalar $i$ was essential: over
-the real numbers a quadratic form does not determine the
-antisymmetric part of its matrix.
-
-</details>
+state. Then $\hat A$ is Hermitian, by the polarization cut of the
+weights section: real diagonal values make the bracket
+conjugate-symmetric,
+$\langle \varphi | \hat A \psi \rangle = \langle \psi | \hat A \varphi \rangle^* = \langle \hat A \varphi | \psi \rangle$
+for all $|\varphi\rangle, |\psi\rangle$, and the outer equality is
+the definition of $\hat A^\dagger = \hat A$. (The other direction is
+a line: if $\hat A^\dagger = \hat A$, then
+$\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$,
+so the average equals its own conjugate.)
 
 And a Hermitian operator has exactly the basis the assumption asked
 for:
