@@ -333,8 +333,11 @@ reasoning for the table was bookkeeping, not a picture. First, $x^2$
 is itself a measurable quantity, so its representative must be a set
 of the same kind, $Y(n, n - \beta)\, e^{i\omega(n, n - \beta) t}$, with
 transition frequencies obeying the Ritz rule. Second, it should be
-built from the $x$-quantities the way the classical one was: as a sum
-of products of two of them. Third, the frequencies must come out
+built from the $x$-quantities the way the classical one was. Squaring
+a Fourier series meant multiplying every term by every term, so each
+coefficient of $x^2$ became a sum of products of two coefficients of
+$x$; the quantum $Y$ should likewise be a sum of products of two
+$X$'s. Third, the frequencies must come out
 right — and here the chain appears. A product
 $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t} \cdot X(k, k - \gamma)\, e^{i\omega(k, k - \gamma) t}$
 oscillates at the sum of the two frequencies, and that sum is a
