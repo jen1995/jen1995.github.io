@@ -638,9 +638,9 @@ combination of the numbers $\lambda_i$ and nothing else; in the
 basis state $|a_i\rangle$, whose only nonzero coordinate is
 $c_i = 1$, it is exactly $\lambda_i$. So the numbers on the diagonal
 are the values the question can return, and $\lambda_i$ is the
-value it returns in $|a_i\rangle$. That this value is returned
-*with certainty* there is the statement that the weight $|c_i|^2 = 1$
-is a probability — the second reading.
+value it returns in $|a_i\rangle$. Whether it returns $\lambda_i$
+there *every time* depends on what the weight $|c_i|^2 = 1$ means —
+and that is the second reading.
 
 ### The weights are the probabilities
 
