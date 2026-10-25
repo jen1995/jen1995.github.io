@@ -749,8 +749,9 @@ states.
 > are real for every $|\psi\rangle$, the bracket is
 > conjugate-symmetric,
 > $$\langle \varphi | \hat M | \psi \rangle = \langle \psi | \hat M | \varphi \rangle^* .$$
-> Over the real numbers none of this holds: a real quadratic form
-> $x^{\mathsf T} M x$ does not see the antisymmetric part of $M$.
+> Over the real numbers none of this holds: the values
+> $x^{\mathsf T} M x$ on single vectors do not determine the rest of
+> the matrix $M$.
 
 The proof is under the cut, together with the real counterexample.
 
