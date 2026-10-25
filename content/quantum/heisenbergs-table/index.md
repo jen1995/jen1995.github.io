@@ -720,8 +720,8 @@ fails over the real numbers.
 $|\psi\rangle$, then $\langle \varphi | \hat M | \psi \rangle = 0$ for
 every $|\varphi\rangle$ and $|\psi\rangle$, and $\hat M = 0$. Expand
 the bracket on $|\varphi\rangle + |\psi\rangle$ and on
-$|\varphi\rangle + i|\psi\rangle$, as in the interference
-computation above:
+$|\varphi\rangle + i|\psi\rangle$, using linearity in the ket and
+conjugate linearity in the bra:
 
 $$
 0 = \langle \varphi + \psi \,|\, \hat M \,|\, \varphi + \psi \rangle = \langle \varphi | \hat M | \psi \rangle + \langle \psi | \hat M | \varphi \rangle ,
