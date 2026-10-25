@@ -700,7 +700,8 @@ deliberately does not.
   two dimensions — our spin — it is not forced, and there it stays
   an assumption.
 
-One fact about expressions of this shape is used twice below.
+One fact about bilinear expressions
+$\langle \psi | \hat M | \psi \rangle$ is used twice below.
 
 > **Polarization.** The values $\langle \psi | \hat M | \psi \rangle$
 > on single states determine every $\langle \varphi | \hat M | \psi \rangle$.
