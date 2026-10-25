@@ -487,10 +487,11 @@ reports. So one formula does the whole job, provided two things are
 true: the numbers on the diagonal are the outcomes, and the squared
 coordinates are the probabilities.
 
-First the assumption, stated for the record. The basis in which the
-table is diagonal will not, in general, be the basis one started
-with — for the spin, the table of the $x$ question is not diagonal
-in the $z$ basis — so it gets a name of its own.
+Write down what was assumed. The table was taken to be diagonal in
+the basis in use, and that will not be true in general: for the
+spin, the table of the $x$ question is not diagonal in the $z$
+basis. So the assumption is about the existence of a basis, and
+that basis gets a name of its own.
 
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the question is diagonal,
