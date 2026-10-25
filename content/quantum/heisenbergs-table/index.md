@@ -487,18 +487,21 @@ reports. So one formula does the whole job, provided two things are
 true: the numbers on the diagonal are the outcomes, and the squared
 coordinates are the probabilities.
 
-Write down what was assumed. The table was taken to be diagonal in
-the basis in use, and that will not be true in general: for the
-spin, the table of the $x$ question is not diagonal in the $z$
-basis. So the assumption is about the existence of a basis, and
-that basis gets a name of its own. It must be an *orthonormal*
-basis, for two reasons. Its vectors are about to be read as the
+The computation assumed that the table is diagonal in the basis we
+happened to be using. That is too much to ask: for the spin, the
+table of the $x$ question is not diagonal in the $z$ basis. What can
+be asked is weaker — that *some* orthonormal basis exists in which
+the table is diagonal. The computation then goes through in that
+basis, with the coordinates of the state taken along it, and the
+formula is the same. Orthonormal, and not just any basis, for two
+reasons. The vectors of this basis are about to be read as the
 states in which the outcome is certain, and the
 [second post](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 showed that states an apparatus tells apart with certainty are
 orthogonal. And the step $\sum_i |c_i|^2 = \langle \psi | \psi \rangle$
-above holds only when the basis is orthonormal; in any other basis
-the squared coordinates do not add up to one.
+holds only in an orthonormal basis; in any other the squared
+coordinates do not add up to one. Here is the assumption, with the
+basis given a name of its own.
 
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the question is diagonal,
