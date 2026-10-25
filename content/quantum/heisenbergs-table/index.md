@@ -757,8 +757,20 @@ $|\varphi\rangle = \hat M|\psi\rangle$: this gives
 $\lVert \hat M \psi \rVert^2 = 0$, so $\hat M|\psi\rangle = 0$. As
 $|\psi\rangle$ was arbitrary, $\hat M$ sends every vector to zero:
 $\hat M = 0$. The
-complex scalar $i$ was essential: over the real numbers a quadratic
-form does not determine the antisymmetric part of its matrix.
+complex scalar $i$ was essential. Over the real numbers the claim is
+false: the matrix
+
+$$
+M = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}
+$$
+
+gives $x^{\mathsf T} M x = x_1 x_2 - x_2 x_1 = 0$ for every real
+$x$, yet $M \neq 0$ — a real quadratic form is blind to the
+antisymmetric part of its matrix. With complex coordinates and the
+conjugation in the bra, the same matrix gives
+$c^\dagger M c = c_1^* c_2 - c_2^* c_1 = 2i\,\mathrm{Im}(c_1^* c_2)$,
+which is not identically zero, and that is what the expansion on
+$|\varphi\rangle + i|\psi\rangle$ detects.
 
 Two consequences are used in this chapter.
 
