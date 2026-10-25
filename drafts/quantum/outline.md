@@ -146,8 +146,11 @@ The longest post; notes §9–13 + the classical interlude.
 - Material cut from the delta post and kept for later posts is in
   `drafts/quantum/delta_post_cuts.md` (Born-rule/density remark, separability
   remark, the very-large-box section).
-- QM-3 drafted 2026-10-18 as content/posts/observables-and-the-born-rule/
-  (weight 50, draft: true): operators from the spin, the three conditions,
+- QM-3 drafted 2026-10-18, rewritten along the averages-first road and on
+  2026-10-25 split in two: content/posts/heisenbergs-table/ (weight 50,
+  'Heisenberg's Table: Where the Matrices Come From' — up to the diagonalized
+  average) and content/posts/the-born-rule-earned/ (weight 51 — Born rule two
+  ways, definite states, σ_z/σ_x, measurement). Original single-post plan: operators from the spin, the three conditions,
   the Born rule from basis independence (her §7), expectation values,
   Hermitian operators, σ_z and σ_x from the experiments (σ_y waits for the
   i/o states in QM-4), measurement as projection. Under review.
