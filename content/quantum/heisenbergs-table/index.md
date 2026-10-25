@@ -680,10 +680,11 @@ deliberately does not.
 - A unit factor on the state, $|\psi\rangle \mapsto e^{i\theta}|\psi\rangle$,
   changes no measurement (the second post,
   ["The leftover freedom: global phase"](/quantum/states-are-vectors/#global-phase)).
-  A bilinear expression
-  is unchanged by it, since $e^{-i\theta} e^{i\theta} = 1$; a linear
-  one is not. Degree one in $\psi$ and one in $\psi^*$ is the lowest
-  that qualifies.
+  A bilinear expression has this property automatically: each term
+  $c_j^* c_k$ picks up $e^{-i\theta} e^{i\theta} = 1$. An expression
+  linear in the coordinates does not — each term picks up
+  $e^{i\theta}$ — so degree one in $\psi$ and one in $\psi^*$ is the
+  lowest that qualifies.
 - It keeps its shape under a change of orthonormal basis: the cut
   above showed $c \mapsto U c$, $M \mapsto U M U^\dagger$. So a
   bilinear law written in one basis is a bilinear law in every
