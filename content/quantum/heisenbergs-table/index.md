@@ -824,7 +824,10 @@ Now back to the weights. Landau and Lifshitz conclude that the only
 bilinear expression satisfying the three conditions listed at the
 start of this subsection — nonnegative, summing to one on unit
 states, equal to one on $|a_i\rangle$ and to zero on states with
-$c_i = 0$ — is the squared modulus $|c_i|^2$. The argument is short.
+$c_i = 0$ — is the squared modulus $|c_i|^2$. In terms of the
+matrix: $M$ has a single $1$, in the $i$-th place on the diagonal,
+and zeros everywhere else, so that $\hat M = |a_i\rangle\langle a_i|$,
+the projector onto $|a_i\rangle$. The argument is short.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so the third condition gives $M_{ii} = 1$.
@@ -843,7 +846,7 @@ $c_i = 0$ — is the squared modulus $|c_i|^2$. The argument is short.
    negative, against the first condition. So $M_{ik} = M_{ki} = 0$
    for every $k \neq i$.
 
-What is left of $M$ is a single $1$ in the $i$-th place, and
+What is left of $M$ is the single $1$ in the $i$-th place, and
 $p_i = |c_i|^2$. So the guess is forced, and the formula is an
 average in the plain sense:
 
