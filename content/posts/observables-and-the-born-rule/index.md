@@ -328,12 +328,22 @@ Heisenberg needed a multiplication rule, and here the measured
 spectrum dictates the answer. Classically the coefficients
 of $x^2$ came out as $Y_\beta = \sum_\alpha X_\alpha X_{\beta - \alpha}$
 — the computation [under *The classical picture*](#the-classical-picture)
-above — a sum over pairs of harmonics of one orbit. For the table, a product
-of two amplitudes carries the frequency $\omega(n, n - \beta)$ only if
-the two transitions form a chain through an intermediate level
-$n - \alpha$, so to end up with the right frequency it is, in
-Heisenberg's words, "almost necessary" to sum over the intermediate
-level:
+above — a sum over pairs of harmonics of one orbit. Heisenberg's
+reasoning for the table was bookkeeping, not a picture. First, $x^2$
+is itself a measurable quantity, so its representative must be a set
+of the same kind, $Y(n, n - \beta)\, e^{i\omega(n, n - \beta) t}$, with
+transition frequencies obeying the Ritz rule. Second, it should be
+built from the $x$-quantities the way the classical one was: as a sum
+of products of two of them. Third, the frequencies must come out
+right — and here the chain appears. A product
+$X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t} \cdot X(k, k - \gamma)\, e^{i\omega(k, k - \gamma) t}$
+oscillates at the sum of the two frequencies, and that sum is a
+transition frequency only when the second jump starts where the first
+ended, $k = n - \alpha$; every other pairing produces a frequency the
+atom does not emit. So the only products allowed into
+$Y(n, n - \beta)$ are the chains through an intermediate level
+$n - \alpha$, and it is, in Heisenberg's words, "almost necessary" to
+sum over that level:
 
 $$
 Y(n, n - \beta) = \sum_\alpha X(n, n - \alpha)\, X(n - \alpha, n - \beta) .
@@ -350,7 +360,11 @@ did recognize it within weeks; he and Jordan then wrote down the
 commutation relation $\hat x \hat p - \hat p \hat x = i\hbar$, Dirac in
 Cambridge built the same structure as an algebra of non-commuting
 "q-numbers", and the "three-man paper" of Born, Heisenberg and Jordan
-completed matrix mechanics before the year was out.
+completed matrix mechanics before the year was out. The reading of
+the sum as "all ways of getting from $n$ to $n - \beta$ through an
+intermediate state" came later, with the matrix formulation and then
+with Dirac; in July 1925 it was the only combination that had the
+right frequencies and the right classical limit.
 
 What survives from that summer, for this post, is the shape of the
 object: **a measurable quantity is a table of numbers indexed by
