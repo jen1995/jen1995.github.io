@@ -736,9 +736,8 @@ same two pieces reinforcing in one combination and cancelling in the
 other, closes this subsection.
 
 
-The step that paired the cross terms used one fact about bilinear
-expressions $\langle \psi | \hat M | \psi \rangle$. It is needed again
-below, so here it is in full.
+The pairing of the cross terms rests on the following lemma, which
+is also used in the argument below.
 
 > **Polarization.** The values $\langle \psi | \hat M | \psi \rangle$
 > on single states determine every $\langle \varphi | \hat M | \psi \rangle$.
