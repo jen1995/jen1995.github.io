@@ -841,7 +841,8 @@ onto $|a_i\rangle$, one for each outcome. The argument is short.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so the third condition gives $M_{ii} = 1$.
-2. Every state with $c_i = 0$ gives $p_i = 0$, so the expression
+2. Every state with $c_i = 0$ has no component along $|a_i\rangle$,
+   so by the third condition it gives $p_i = 0$; the expression
    vanishes identically on the span of the other basis vectors, and
    an expression of this form that vanishes identically has zero
    matrix (polarization, the first consequence): $M_{jk} = 0$
