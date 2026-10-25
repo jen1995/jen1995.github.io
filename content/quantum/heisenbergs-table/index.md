@@ -700,44 +700,23 @@ deliberately does not.
   two dimensions — our spin — it is not forced, and there it stays
   an assumption.
 
-What bilinearity does *not* give is additivity in the state. Take
-$|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$ and expand the
-bracket, using linearity in the ket and conjugate linearity in the
-bra:
+One fact about expressions of this shape is used twice below.
 
-$$
-\begin{aligned}
-p(\psi) &= \langle \psi_1 + \psi_2 \,|\, \hat M \,|\, \psi_1 + \psi_2 \rangle \\
-&= \langle \psi_1 | \hat M | \psi_1 \rangle + \langle \psi_2 | \hat M | \psi_2 \rangle + \langle \psi_1 | \hat M | \psi_2 \rangle + \langle \psi_2 | \hat M | \psi_1 \rangle .
-\end{aligned}
-$$
+> **Polarization.** The values $\langle \psi | \hat M | \psi \rangle$
+> on single states determine every $\langle \varphi | \hat M | \psi \rangle$.
+> In particular, if the values vanish for every $|\psi\rangle$ in a
+> subspace, the block of the matrix of $\hat M$ on that subspace is
+> zero; and if the values are real for every $|\psi\rangle$, the
+> bracket is conjugate-symmetric,
+> $$\langle \varphi | \hat M | \psi \rangle = \langle \psi | \hat M | \varphi \rangle^* .$$
 
-The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
-are conjugates of each other,
-$\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$,
-because $p$ is real for every state, being a probability — this is
-the second consequence of the polarization argument, proved just
-below, applied to $|\varphi\rangle = |\psi_2\rangle$ and
-$|\psi\rangle = |\psi_1\rangle$. A number plus its conjugate is twice
-its real part:
+The proof is under the cut; it needs the complex scalar $i$, and
+fails over the real numbers.
 
-$$
-p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
-$$
+<details>
+<summary>Proof of polarization, and why it needs complex numbers</summary>
 
-The cross term is interference. When states are added, their
-coordinates add: $c_i = \langle a_i | \psi \rangle$, the *probability
-amplitudes* of the second post. The probabilities, their squared
-magnitudes, do not add; this is the
-[second post's remark](/quantum/states-are-vectors/#what-the-geometry-means-physically)
-that amplitudes can cancel in a superposition, and it is the quantum
-content of the assumption. A worked example on the spin, with the
-same two pieces reinforcing in one combination and cancelling in the
-other, closes this subsection.
-
-
-**Polarization: the diagonal values determine the whole bracket.**
-If $\langle \psi | \hat M | \psi \rangle = 0$ for every
+*The claim.* If $\langle \psi | \hat M | \psi \rangle = 0$ for every
 $|\psi\rangle$, then $\langle \varphi | \hat M | \psi \rangle = 0$ for
 every $|\varphi\rangle$ and $|\psi\rangle$, and $\hat M = 0$. Expand
 the bracket on $|\varphi\rangle + |\psi\rangle$ and on
@@ -774,7 +753,7 @@ $c^\dagger M c = c_1^* c_2 - c_2^* c_1 = 2i\,\mathrm{Im}(c_1^* c_2)$,
 which is not identically zero, and that is what the expansion on
 $|\varphi\rangle + i|\psi\rangle$ detects.
 
-Two consequences are used in this chapter.
+*The two consequences.*
 
 - *A block that vanishes on the diagonal vanishes.* If
   $\langle \psi | \hat M | \psi \rangle = 0$ for every $|\psi\rangle$
@@ -794,6 +773,42 @@ Two consequences are used in this chapter.
   $|\varphi\rangle = |\psi\rangle$; by the claim it vanishes
   everywhere.
 
+</details>
+
+What bilinearity does *not* give is additivity in the state. Take
+$|\psi\rangle = |\psi_1\rangle + |\psi_2\rangle$ and expand the
+bracket, using linearity in the ket and conjugate linearity in the
+bra:
+
+$$
+\begin{aligned}
+p(\psi) &= \langle \psi_1 + \psi_2 \,|\, \hat M \,|\, \psi_1 + \psi_2 \rangle \\
+&= \langle \psi_1 | \hat M | \psi_1 \rangle + \langle \psi_2 | \hat M | \psi_2 \rangle + \langle \psi_1 | \hat M | \psi_2 \rangle + \langle \psi_2 | \hat M | \psi_1 \rangle .
+\end{aligned}
+$$
+
+The first two terms are $p(\psi_1)$ and $p(\psi_2)$. The last two
+are conjugates of each other,
+$\langle \psi_2 | \hat M | \psi_1 \rangle = \langle \psi_1 | \hat M | \psi_2 \rangle^*$,
+because $p$ is real for every state, being a probability, and
+polarization then makes the bracket conjugate-symmetric. A number
+plus its conjugate is twice its real part:
+
+$$
+p(\psi) = p(\psi_1) + p(\psi_2) + 2\,\mathrm{Re}\, \langle \psi_1 | \hat M | \psi_2 \rangle .
+$$
+
+The cross term is interference. When states are added, their
+coordinates add: $c_i = \langle a_i | \psi \rangle$, the *probability
+amplitudes* of the second post. The probabilities, their squared
+magnitudes, do not add; this is the
+[second post's remark](/quantum/states-are-vectors/#what-the-geometry-means-physically)
+that amplitudes can cancel in a superposition, and it is the quantum
+content of the assumption. A worked example on the spin, with the
+same two pieces reinforcing in one combination and cancelling in the
+other, closes this subsection.
+
+
 With this condition Landau and Lifshitz conclude that the only expression of this
 form satisfying the three conditions is the squared modulus
 $|c_i|^2$. The argument is short.
@@ -803,8 +818,8 @@ $|c_i|^2$. The argument is short.
 2. Every state with $c_i = 0$ gives $p_i = 0$, so the expression
    vanishes identically on the span of the other basis vectors, and
    an expression of this form that vanishes identically has zero
-   matrix (the first consequence in the polarization cut above):
-   $M_{jk} = 0$ whenever $j \neq i$
+   matrix (polarization, the first consequence): $M_{jk} = 0$
+   whenever $j \neq i$
    and $k \neq i$. Only the $i$-th row and column of $M$ remain.
 3. Take the state with $c_i = \varepsilon$,
    $c_k = \sqrt{1 - \varepsilon^2}\, e^{i\varphi}$ for one $k \neq i$,
