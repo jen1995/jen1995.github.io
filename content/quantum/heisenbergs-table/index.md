@@ -493,42 +493,34 @@ table of the $x$ question is not diagonal in the $z$ basis. What can
 be asked is weaker — that *some* orthonormal basis exists in which
 the table is diagonal — because the number
 $\langle \psi | \hat A | \psi \rangle$ does not depend on the basis it
-is computed in. Here is the law. Let $\{|e_j\rangle\}$ be the basis
-in use, with the state's coordinates $d_j = \langle e_j | \psi \rangle$
-and the table $A_{jk} = \langle e_j | \hat A | e_k \rangle$, and let
-$\{|a_i\rangle\}$ be another orthonormal basis, with coordinates
-$c_i = \langle a_i | \psi \rangle$ and table
-$A'_{il} = \langle a_i | \hat A | a_l \rangle$. Write
-$U_{ij} = \langle a_i | e_j \rangle$ for the inner products between
-the two bases. This matrix is
-[**unitary**](https://en.wikipedia.org/wiki/Unitary_matrix),
-$U^\dagger U = I$: the entry
-$(U^\dagger U)_{jk} = \sum_i \langle e_j | a_i \rangle \langle a_i | e_k \rangle$
-is $\langle e_j | e_k \rangle = \delta_{jk}$ by the resolution of
-identity. Inserting the resolution of identity
-$\sum_j |e_j\rangle\langle e_j| = \hat I$ in the same way expresses
-the new coordinates and the new table through the old:
+is computed in. In matrix form: if $U$ is the
+[**unitary**](https://en.wikipedia.org/wiki/Unitary_matrix) matrix
+($U^\dagger U = I$) that takes the column $d$ of the state's
+coordinates in one orthonormal basis to its column $c = U d$ in
+another, then the table goes to $A' = U A U^\dagger$ — the
+change-of-basis law of a sesquilinear form, Panov's lectures, §5.1 —
+and
 
 $$
-\begin{aligned}
-c_i &= \langle a_i | \psi \rangle = \sum_j U_{ij}\, d_j , \\
-A'_{il} &= \langle a_i | \hat A | a_l \rangle = \sum_{j,k} U_{ij}\, A_{jk}\, U_{lk}^* ,
-\end{aligned}
+c^\dagger A' c = d^\dagger U^\dagger\, U A U^\dagger\, U d = d^\dagger A d .
 $$
 
-that is, $c = U d$ and $A' = U A U^\dagger$. This is the
-change-of-basis law of a sesquilinear form, $M' = \bar C^{\mathsf T} M C$
-with $C = U^\dagger$ the transition matrix (Panov's lectures, §5.1).
-Now substitute into the number:
+The coordinates change, the table changes, the number does not. So
+it may be computed in whichever orthonormal basis makes the table
+diagonal, and there it is $\sum_i \lambda_i |c_i|^2$.
 
-$$
-\sum_{i,l} c_i^*\, A'_{il}\, c_l = (U d)^\dagger\, U A U^\dagger\, (U d) = \sum_{j,k} d_j^*\, A_{jk}\, d_k ,
-$$
+<details>
+<summary>Where $U$ and the law come from (one line each)</summary>
 
-since $U^\dagger U = I$ twice over. The coordinates change, the
-table changes, the number does not. So it may be computed in
-whichever orthonormal basis makes the table diagonal, and there it
-is $\sum_i \lambda_i |c_i|^2$.
+Let $\{|e_j\rangle\}$ be the basis in use and $\{|a_i\rangle\}$ the
+other one, and set $U_{ij} = \langle a_i | e_j \rangle$. Then by the
+resolution of identity $\sum_j |e_j\rangle\langle e_j| = \hat I$:
+
+- $U$ is unitary: $(U^\dagger U)_{jk} = \sum_i \langle e_j | a_i \rangle \langle a_i | e_k \rangle = \langle e_j | e_k \rangle = \delta_{jk}$;
+- the coordinates: $c_i = \langle a_i | \psi \rangle = \sum_j U_{ij}\, d_j$;
+- the table: $A'_{il} = \langle a_i | \hat A | a_l \rangle = \sum_{j,k} U_{ij}\, A_{jk}\, U_{lk}^*$, which is $(U A U^\dagger)_{il}$.
+
+</details>
 
 Orthonormal, and not just any basis, for two reasons. The vectors
 of this basis are about to be read as the states in which the
