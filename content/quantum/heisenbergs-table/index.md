@@ -491,7 +491,14 @@ Write down what was assumed. The table was taken to be diagonal in
 the basis in use, and that will not be true in general: for the
 spin, the table of the $x$ question is not diagonal in the $z$
 basis. So the assumption is about the existence of a basis, and
-that basis gets a name of its own.
+that basis gets a name of its own. It must be an *orthonormal*
+basis, for two reasons. Its vectors are about to be read as the
+states in which the outcome is certain, and the
+[second post](/quantum/states-are-vectors/#what-the-geometry-means-physically)
+showed that states an apparatus tells apart with certainty are
+orthogonal. And the step $\sum_i |c_i|^2 = \langle \psi | \psi \rangle$
+above holds only when the basis is orthonormal; in any other basis
+the squared coordinates do not add up to one.
 
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the question is diagonal,
