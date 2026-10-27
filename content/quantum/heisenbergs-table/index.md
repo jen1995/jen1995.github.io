@@ -369,9 +369,12 @@ right frequencies and the right classical limit.
 
 What survives from that summer, for this post, is the shape of the
 object: **a measurable quantity is a table of numbers indexed by
-pairs of states.**
+pairs of states.** And a word. Heisenberg's programme admitted only
+observable quantities, and the name stuck: from here on a measurable
+quantity — what the first post called a *question* asked of the
+system — is an **observable**.
 
-### A table for a question
+### A table for an observable
 
 The same shape appears in the laboratory of the first post, in
 Feynman's treatment of it (volume III, chapter 5). Feynman's apparatus is
@@ -390,9 +393,9 @@ $A$". Two devices in series are described by the product of their
 matrices, and the order matters. Feynman's $A$ is a
 device that acts on states, not yet a measurable quantity. What we
 take from his setup is only the form of the description — one number
-for every ordered pair of basis states — and apply it to a question.
+for every ordered pair of basis states — and apply it to an observable.
 Fix the $z$ basis $\{|u\rangle, |d\rangle\}$. A
-question $A$ asked of the spin is to be described by four numbers —
+observable $A$ of the spin is to be described by four numbers —
 one for each ordered pair of basis states:
 
 $$
@@ -440,18 +443,18 @@ $$
 
 A table with two indices and a linear operator are one object in two
 notations, as a column of coordinates and a vector are. So
-the wishlist's "object per question" is a linear operator on the
+the wishlist's "object per quantity" is a linear operator on the
 space of states, written with a hat: $\hat E$ for
 energy, $\sigma_z$ for the spin along $z$ (the spin operators are
 written without a hat, by convention). Nothing has been said yet about
-which operator belongs to which question, or about eigenvectors. That
+which operator belongs to which observable, or about eigenvectors. That
 is what the averages will decide.
 
 ## What the averages decide
 
 ### Suppose the table is diagonal
 
-We now have a table for a question and a column for a state, and the
+We now have a table for an observable and a column for a state, and the
 requirement set at the
 [start of this chapter](#what-the-apparatus-gives-us-averages),
 before the detour through 1925: the object assigned to a measurable
@@ -481,7 +484,7 @@ normalization of unit states, written in this form in the
 [second post's "Any finite menu"](/quantum/states-are-vectors/#any-finite-menu).
 If they were the *probabilities*
 of something, and if the numbers $\lambda_i$ on the diagonal were the
-*possible outcomes* of the question — $+1$ and $-1$ for the spin —
+*possible outcomes* of the observable — $+1$ and $-1$ for the spin —
 then this would be the sum of outcomes times their probabilities:
 an expectation value, exactly the average that the apparatus
 reports. So one formula does the whole job, provided two things are
@@ -496,7 +499,7 @@ The next two subsections take them in turn.
 
 The computation assumed that the table is diagonal in the basis we
 happened to be using, and that is too much to ask: for the spin, the
-table of the $x$ question is not diagonal in the $z$ basis. What can
+table of the $x$ observable is not diagonal in the $z$ basis. What can
 be asked is weaker — that some *other* basis exists in which the
 table is diagonal. That basis must be orthonormal, for two reasons.
 Its vectors are about to be read as the states in which the outcome
@@ -553,7 +556,7 @@ So the assumption is this. The basis it speaks of will be used
 throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
-> which the table of the question is diagonal,
+> which the table of the observable is diagonal,
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
 > with numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
 
@@ -570,7 +573,7 @@ $$
 
 Such matrices are called [**normal**](https://en.wikipedia.org/wiki/Normal_matrix)
 (Panov's lectures, §4.7, Theorem 4.7.3). So the assumption
-restricts the tables of questions to normal matrices. Whether that
+restricts the tables of observables to normal matrices. Whether that
 restriction excludes anything physical is answered at the end of
 the chapter: it does not, because it follows from the readings of
 an apparatus being real numbers. The cut below is optional — for
@@ -638,7 +641,7 @@ as it can be before the second. In any state the average is a
 combination of the numbers $\lambda_i$ and nothing else; in the
 basis state $|a_i\rangle$, whose only nonzero coordinate is
 $c_i = 1$, it is exactly $\lambda_i$. So the numbers on the diagonal
-are the values the question can return, and $\lambda_i$ is the
+are the values the observable can return, and $\lambda_i$ is the
 value it returns in $|a_i\rangle$. In that state the weight of
 $\lambda_i$ is $|c_i|^2 = 1$ and every other weight is zero; whether
 this means that $\lambda_i$ is returned *every time* depends on
@@ -923,8 +926,8 @@ the [second post](/quantum/states-are-vectors/#what-the-geometry-means-physicall
 took on credit:
 
 > **The Born rule.** If $|\psi\rangle = \sum_i c_i |a_i\rangle$ in the
-> basis where the table of the question is diagonal, the probability
-> that a measurement of the question returns $\lambda_i$ is
+> basis where the table of the observable is diagonal, the probability
+> that a measurement of the observable returns $\lambda_i$ is
 > $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
 
 The derivation rests on one assumption beyond the three conditions:
@@ -934,7 +937,7 @@ additivity over exclusive outcomes, as noted above; for the
 two-state spin it cannot be derived, and this road takes it as a
 postulate.
 
-![The average of a question is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
+![The average of an observable is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
 
 The formula is the bracket $\langle \psi | \hat A | \psi \rangle$
 computed in the diagonal basis, and the cut above says that the
@@ -942,17 +945,17 @@ bracket is the same in every orthonormal basis. So the rule can be
 stated without reference to the diagonal basis at all:
 
 > **The average.** In the state $|\psi\rangle$, the average of the
-> outcomes of the question with operator $\hat A$ is
+> outcomes of the observable with operator $\hat A$ is
 > $$\langle A \rangle = \langle \psi | \hat A | \psi \rangle = \sum_{j,k} d_j^*\, A_{jk}\, d_k$$
 > in any orthonormal basis, with $d_j$ the coordinates of the state
 > and $A_{jk}$ the entries of the table in that basis.
 
 This is the bracket of the first post, $\langle \sigma \rangle$, with
-its meaning finally spelled out: the operator of the question between
+its meaning finally spelled out: the operator of the observable between
 the bra and the ket of the state. Landau and Lifshitz *define* the
 operator of a quantity by this requirement, that the bracket return
 the mean (their (3.8)). One check, Dirac's (*Principles*, chapter II,
-§12): the yes/no question "did the outcome equal $\lambda_i$?" is
+§12): the yes/no observable "did the outcome equal $\lambda_i$?" is
 answered by the same apparatus with its window read differently, $1$
 for $\lambda_i$ and $0$ for every other outcome, so its table in the
 diagonal basis has a single $1$ in the $i$-th place: it is the
@@ -960,7 +963,7 @@ projector $|a_i\rangle\langle a_i|$. Its average is
 $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$, the
 probability of "yes" — the Born rule, read off the average rule.
 
-**Interference on the spin.** Ask the $z$ question of the two $x$-definite states: the probability
+**Interference on the spin.** Measure the spin along $z$ in the two $x$-definite states: the probability
 of "up" is $p = \langle \psi | u \rangle \langle u | \psi \rangle = |\langle u | \psi \rangle|^2$,
 and since $|r\rangle$ and $|l\rangle$ are each half up and half down,
 $|\langle u | r \rangle|^2 = |\langle u | l \rangle|^2 = \tfrac12$. Now
@@ -1001,7 +1004,7 @@ $\hat A|v\rangle = \lambda|v\rangle$, and $\lambda$ is the
 corresponding **eigenvalue**; the set of eigenvalues is the
 **spectrum** of $\hat A$. A diagonal table says exactly this about
 its basis vectors. By the column rule of
-["A table for a question"](#a-table-for-a-question),
+["A table for an observable"](#a-table-for-an-observable),
 $\hat A |a_j\rangle = \sum_i A_{ij} |a_i\rangle$, and with
 $A_{ij} = \lambda_i \delta_{ij}$ only one term survives:
 
@@ -1011,7 +1014,7 @@ $$
 
 So the basis of the assumption is a basis of eigenvectors, the
 numbers on the diagonal are the eigenvalues, and the possible
-outcomes of a question are the spectrum of its operator. Rewriting
+outcomes of an observable are the spectrum of its operator. Rewriting
 the diagonal table without coordinates gives the operator as a sum
 over its own definite directions,
 
@@ -1025,7 +1028,7 @@ $\langle a_i | \psi \rangle = c_i$ to see that it is the same
 operator.) Set every $\lambda_i$ to $1$ and it collapses to the
 resolution of identity of the second post; keep a single $\lambda_i$
 equal to $1$ and set the rest to $0$ and it is the projector of
-Dirac's yes/no question.
+Dirac's yes/no observable.
 
 ### Real outcomes make the table Hermitian
 
@@ -1074,7 +1077,7 @@ basis, since the definition mentions no basis. In the diagonal basis
 the statement is plain — a diagonal matrix equals its conjugate
 transpose exactly when its diagonal is real — and it carries over
 unchanged to the $z$ basis of the spin, where the table of the $x$
-question is not diagonal at all.
+observable is not diagonal at all.
 
 > **The table of every measurable quantity is Hermitian.**
 
@@ -1088,7 +1091,7 @@ the spectral decomposition, and anything assembled that way is
 Hermitian. A table that is not Hermitian would need a complex
 outcome, or a pair of definite states that are not orthogonal, and
 no apparatus produces either. Tables that are not Hermitian do
-appear in the theory, as *devices* rather than questions: Feynman's
+appear in the theory, as *devices* rather than observables: Feynman's
 apparatus matrix, a rotation of the spin, the evolution of a state
 in time — these are unitary, the subject of a later post. And the
 first table in history passed the test by itself. Heisenberg's
@@ -1169,7 +1172,7 @@ eigenvectors of a Hermitian operator are.
 The converse also holds: no state outside the eigenvectors has a
 certain outcome. In the language of averages, a certain answer is
 one with no spread — the average of the squared deviation from the
-mean is zero. The squared deviation is the same question with its
+mean is zero. The squared deviation is the same observable with its
 window relabeled, $\lambda_i \mapsto (\lambda_i - \langle A \rangle)^2$,
 so by the average rule its mean, the **variance**, is
 
@@ -1183,20 +1186,21 @@ $|\psi\rangle$ has components along eigenvectors of a single
 eigenvalue, which makes it an eigenvector itself. So:
 
 > **Definite states are eigenvectors.** A state in which the outcome
-> of a question is certain is an eigenvector of its operator, and
+> of an observable is certain is an eigenvector of its operator, and
 > the certain outcome is the eigenvalue; and every eigenvector
 > $|a_i\rangle$ is such a state, with the certain outcome $\lambda_i$.
 
 This is the statement textbooks start from — Susskind's principles 1
 and 2 — and here it arrives as a consequence of the average rule.
 For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
-$z$ question, are the eigenvectors of its operator $\sigma_z$, with
+$z$ observable, are the eigenvectors of its operator $\sigma_z$, with
 eigenvalues $+1$ and $-1$; the first post's "the measurement
 prepares a state that repeats its answer" is the statement that the
 state after a measurement is an eigenvector, which the next post
-makes precise. From now on the word **observable** is used both for
-the measurable quantity and for its Hermitian operator. The three
-conditions one would otherwise have to *demand* of such an operator
+makes precise. From now on the word *observable* is used for the
+Hermitian operator as well as for the quantity it stands for. The
+three conditions one would otherwise have to *demand* of such an
+operator
 — real outcomes, definite states that span the space, definite
 states that are orthogonal — are the spectral theorem above.
 
@@ -1235,14 +1239,14 @@ observable, we must determine the eigenbasis of the corresponding
 operator and find the projection of $|\psi\rangle$ along all its
 eigenkets." A working habit follows, also his: there is no need to
 change basis each time. One keeps the state written in the eigenbasis
-of a chosen question and computes the eigenvectors of any other
-question as columns in that basis. Landau and Lifshitz go further and
+of a chosen observable and computes the eigenvectors of any other
+observable as columns in that basis. Landau and Lifshitz go further and
 open their §3 with the eigenfunctions: the wave functions of the
 states in which the quantity has a definite value are the first
 objects they name, and the operator is built afterwards to fit them.
 
-For the problems of this road the chosen question is the energy, and
-the first step — which operator belongs to the question — is what
+For the problems of this road the chosen observable is the energy, and
+the first step — which operator belongs to the observable — is what
 the posts on dynamics settle. The second step is then the whole
 work: for a particle on a line the eigenvectors are functions, and
 "find the eigenbasis" means solving a differential equation. The
@@ -1254,7 +1258,7 @@ expansion of the state in that basis.
 ## What we built
 
 The chain of the post. What an apparatus gives us is averages. A
-question is a table with two indices — an operator, the object
+observable is a table with two indices — an operator, the object
 Heisenberg found in 1925 in the spectral lines of the atom. In the
 orthonormal basis where the table is diagonal, the average is a
 weighted average of the numbers on the diagonal: they are the
