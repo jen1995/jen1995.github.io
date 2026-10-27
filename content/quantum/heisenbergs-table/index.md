@@ -938,37 +938,79 @@ out: the operator of the observable between the bra and the ket of
 the state. Landau and Lifshitz *define* the operator of a quantity
 by this requirement, that the bracket return the mean (their (3.8)).
 
-**Interference on the spin.** Measure the spin along $z$ in the two $x$-definite states: the probability
-of "up" is $p = \langle \psi | u \rangle \langle u | \psi \rangle = |\langle u | \psi \rangle|^2$,
-and since $|r\rangle$ and $|l\rangle$ are each half up and half down,
-$|\langle u | r \rangle|^2 = |\langle u | l \rangle|^2 = \tfrac12$. Now
-combine them. The two states
-$\tfrac{1}{\sqrt 2}|r\rangle + \tfrac{1}{\sqrt 2}|l\rangle$ and
-$\tfrac{1}{\sqrt 2}|r\rangle - \tfrac{1}{\sqrt 2}|l\rangle$ are built
-from the same two pieces, each piece contributing
-$p(\tfrac{1}{\sqrt 2} r) = p(\tfrac{1}{\sqrt 2} l) = \tfrac14$; the
-cross term is $\pm 2 \cdot \tfrac12 \cdot \tfrac12 = \pm \tfrac12$, so
-the probabilities of "up" are $\tfrac14 + \tfrac14 + \tfrac12 = 1$
-and $\tfrac14 + \tfrac14 - \tfrac12 = 0$. The first combination is
-$|u\rangle$ and the second is $|d\rangle$ — the second post's
-formulas for $|r\rangle$ and $|l\rangle$, read backwards — so the
-answers are right; but they came out of the *same* two pieces with
-*opposite* cross terms. A classical mixture — an electron that is
-$|r\rangle$ half the time and $|l\rangle$ the other half — would
-give $\tfrac12$ either way: that is what "the probability of a sum
-is the sum of the probabilities" would mean, and it is wrong.
-Amplitudes add, and the probability is the squared magnitude of
-the sum, so the pieces can reinforce or cancel. This is the second
-post's remark, in
+### The spin along $z$: operator, average, interference
+
+Before going on, the whole chapter on the one observable this road
+started from: the spin along $z$. Its two outcomes are $+1$ and
+$-1$, its definite states are $|u\rangle$ and $|d\rangle$, and in that
+basis its table is diagonal with the outcomes on the diagonal. The
+operator is written $\sigma_z$:
+
+$$
+\sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}, \qquad \sigma_z |u\rangle = |u\rangle, \quad \sigma_z |d\rangle = -|d\rangle .
+$$
+
+**The average.** Take the state $|r\rangle$ of the second post,
+spin $+1$ along $x$, whose coordinates in the $z$ basis are
+$c_u = c_d = \tfrac{1}{\sqrt 2}$:
+
+$$
+\langle r | \sigma_z | r \rangle = (+1)\, |c_u|^2 + (-1)\, |c_d|^2 = \tfrac12 - \tfrac12 = 0 .
+$$
+
+This is the first post's $\langle \sigma \rangle = \cos\theta$ at
+$\theta = 90°$, the angle between the $x$ preparation and the $z$
+measurement. In a general state
+$|\psi\rangle = c_u |u\rangle + c_d |d\rangle$ the same computation
+gives $\langle \sigma_z \rangle = |c_u|^2 - |c_d|^2$: the Born
+probabilities $|c_u|^2$ and $|c_d|^2$ of the two outcomes, weighted
+by the outcomes.
+
+**Interference.** The probability of "up" in a state $|\psi\rangle$
+is the Born weight of $|u\rangle$,
+
+$$
+p_u(\psi) = |\langle u | \psi \rangle|^2 ,
+$$
+
+and for the two $x$-definite states it is the same number, since
+$|r\rangle$ and $|l\rangle$ are each half up and half down:
+
+$$
+p_u(r) = p_u(l) = \tfrac12 .
+$$
+
+Now add them. The two combinations
+
+$$
+\tfrac{1}{\sqrt 2}\,|r\rangle + \tfrac{1}{\sqrt 2}\,|l\rangle = |u\rangle, \qquad \tfrac{1}{\sqrt 2}\,|r\rangle - \tfrac{1}{\sqrt 2}\,|l\rangle = |d\rangle
+$$
+
+— the second post's formulas for $|r\rangle$ and $|l\rangle$, read
+backwards — are built from the same two pieces,
+$\tfrac{1}{\sqrt 2}|r\rangle$ and $\pm\tfrac{1}{\sqrt 2}|l\rangle$.
+Each piece alone contributes a quarter,
+$p_u(\tfrac{1}{\sqrt 2} r) = p_u(\tfrac{1}{\sqrt 2} l) = \tfrac14$, and
+the cross term $2\,\mathrm{Re}\,\langle \tfrac{1}{\sqrt 2} r | u \rangle \langle u | \pm \tfrac{1}{\sqrt 2} l \rangle$
+is $\pm 2 \cdot \tfrac12 \cdot \tfrac12 = \pm\tfrac12$:
+
+$$
+p_u(u) = \tfrac14 + \tfrac14 + \tfrac12 = 1, \qquad p_u(d) = \tfrac14 + \tfrac14 - \tfrac12 = 0 .
+$$
+
+Both answers are right, and they came out of the *same* two pieces
+with *opposite* cross terms. A classical mixture — an electron that
+is $|r\rangle$ half the time and $|l\rangle$ the other half — would
+give $\tfrac12$ either way; that is what "the probability of a sum is
+the sum of the probabilities" would mean, and it is wrong. Amplitudes
+add, and the probability is the squared magnitude of the sum, so the
+pieces can reinforce or cancel. This is the second post's remark, in
 ["What the geometry means physically"](/quantum/states-are-vectors/#what-the-geometry-means-physically),
 that amplitudes can cancel in a superposition, and it is the two-slit
-experiment of volume III, chapter 1 of Feynman in
-the smallest possible setting. 
-
-
+experiment of volume III, chapter 1 of Feynman in the smallest
+possible setting.
 
 ![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
-
 
 ### The diagonal basis is the eigenbasis
 
