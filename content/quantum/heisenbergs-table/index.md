@@ -930,38 +930,13 @@ took on credit:
 > that a measurement of the observable returns $\lambda_i$ is
 > $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
 
-The derivation rests on one assumption beyond the three conditions:
-that the probabilities are bilinear in the coordinates of the state.
-In dimension three and more Gleason's theorem derives this from
-additivity over exclusive outcomes, as noted above; for the
-two-state spin it cannot be derived, and this road takes it as a
-postulate.
-
 ![The average of an observable is a weighted average of the numbers on the diagonal of its table: the outcomes sit on the axis, the squared coordinates of the state are the weights, and their sum is one](eigenvalue_average.png)
 
-The formula is the bracket $\langle \psi | \hat A | \psi \rangle$
-computed in the diagonal basis, and the cut above says that the
-bracket is the same in every orthonormal basis. So the rule can be
-stated without reference to the diagonal basis at all:
-
-> **The average.** In the state $|\psi\rangle$, the average of the
-> outcomes of the observable with operator $\hat A$ is
-> $$\langle A \rangle = \langle \psi | \hat A | \psi \rangle = \sum_{j,k} d_j^*\, A_{jk}\, d_k$$
-> in any orthonormal basis, with $d_j$ the coordinates of the state
-> and $A_{jk}$ the entries of the table in that basis.
-
-This is the bracket of the first post, $\langle \sigma \rangle$, with
-its meaning finally spelled out: the operator of the observable between
-the bra and the ket of the state. Landau and Lifshitz *define* the
-operator of a quantity by this requirement, that the bracket return
-the mean (their (3.8)). One check, Dirac's (*Principles*, chapter II,
-§12): the yes/no observable "did the outcome equal $\lambda_i$?" is
-answered by the same apparatus with its window read differently, $1$
-for $\lambda_i$ and $0$ for every other outcome, so its table in the
-diagonal basis has a single $1$ in the $i$-th place: it is the
-projector $|a_i\rangle\langle a_i|$. Its average is
-$\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$, the
-probability of "yes" — the Born rule, read off the average rule.
+The average $\langle \psi | \hat A | \psi \rangle$ is the bracket of the
+first post, $\langle \sigma \rangle$, with its meaning finally spelled
+out: the operator of the observable between the bra and the ket of
+the state. Landau and Lifshitz *define* the operator of a quantity
+by this requirement, that the bracket return the mean (their (3.8)).
 
 **Interference on the spin.** Measure the spin along $z$ in the two $x$-definite states: the probability
 of "up" is $p = \langle \psi | u \rangle \langle u | \psi \rangle = |\langle u | \psi \rangle|^2$,
