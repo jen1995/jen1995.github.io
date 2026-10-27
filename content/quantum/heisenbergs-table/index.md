@@ -940,10 +940,10 @@ by this requirement, that the bracket return the mean (their (3.8)).
 
 ### The spin along $z$: operator, average, interference
 
-Before going on, the whole chapter on the one observable this road
-started from: the spin along $z$. Its two outcomes are $+1$ and
-$-1$, its definite states are $|u\rangle$ and $|d\rangle$, and in that
-basis its table is diagonal with the outcomes on the diagonal. The
+Here is what the chapter says about the observable the first post
+started from, the spin along $z$. Its outcomes are $+1$ and $-1$,
+its definite states are $|u\rangle$ and $|d\rangle$, and in that basis
+its table is diagonal with the outcomes on the diagonal. The
 operator is written $\sigma_z$:
 
 $$
@@ -958,8 +958,8 @@ $$
 \langle r | \sigma_z | r \rangle = (+1)\, |c_u|^2 + (-1)\, |c_d|^2 = \tfrac12 - \tfrac12 = 0 .
 $$
 
-This is the first post's $\langle \sigma \rangle = \cos\theta$ at
-$\theta = 90°$, the angle between the $x$ preparation and the $z$
+This agrees with the first post's $\langle \sigma \rangle = \cos\theta$
+at $\theta = 90°$, the angle between the $x$ preparation and the $z$
 measurement. In a general state
 $|\psi\rangle = c_u |u\rangle + c_d |d\rangle$ the same computation
 gives $\langle \sigma_z \rangle = |c_u|^2 - |c_d|^2$: the Born
@@ -980,7 +980,7 @@ $$
 p_u(r) = p_u(l) = \tfrac12 .
 $$
 
-Now add them. The two combinations
+Next, superpose them. The two combinations
 
 $$
 \tfrac{1}{\sqrt 2}\,|r\rangle + \tfrac{1}{\sqrt 2}\,|l\rangle = |u\rangle, \qquad \tfrac{1}{\sqrt 2}\,|r\rangle - \tfrac{1}{\sqrt 2}\,|l\rangle = |d\rangle
@@ -998,17 +998,19 @@ $$
 p_u(u) = \tfrac14 + \tfrac14 + \tfrac12 = 1, \qquad p_u(d) = \tfrac14 + \tfrac14 - \tfrac12 = 0 .
 $$
 
-Both answers are right, and they came out of the *same* two pieces
-with *opposite* cross terms. A classical mixture — an electron that
-is $|r\rangle$ half the time and $|l\rangle$ the other half — would
-give $\tfrac12$ either way; that is what "the probability of a sum is
-the sum of the probabilities" would mean, and it is wrong. Amplitudes
-add, and the probability is the squared magnitude of the sum, so the
-pieces can reinforce or cancel. This is the second post's remark, in
-["What the geometry means physically"](/quantum/states-are-vectors/#what-the-geometry-means-physically),
-that amplitudes can cancel in a superposition, and it is the two-slit
-experiment of volume III, chapter 1 of Feynman in the smallest
-possible setting.
+The two probabilities are correct — $|u\rangle$ is certainly up and
+$|d\rangle$ certainly down — and they came from the *same* two pieces
+with *opposite* cross terms. Compare a classical mixture, an electron
+that is $|r\rangle$ half the time and $|l\rangle$ the other half: its
+probability of "up" is $\tfrac12$ whichever way the pieces are
+combined, because for a mixture the probability of a sum is the sum
+of the probabilities. For a superposition it is not: amplitudes add,
+the probability is the squared magnitude of the sum, and the pieces
+can reinforce or cancel. The second post said this in
+["What the geometry means physically"](/quantum/states-are-vectors/#what-the-geometry-means-physically)
+— amplitudes can cancel in a superposition — and it is the two-slit
+experiment of volume III, chapter 1 of Feynman, with two states in
+place of two slits.
 
 ![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
 
