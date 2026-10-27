@@ -560,7 +560,7 @@ throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
 > with *real* numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
 
-The numbers are required to be real because they are about to be
+The numbers $\lambda_i$ are required to be real because they are about to be
 read as the outcomes of a measurement, and the readings of an
 apparatus are real numbers.
 
@@ -586,7 +586,7 @@ what the assumption rules out.
 <details>
 <summary>For the linear algebra lovers: what the assumption rules out</summary>
 
-Two things can go wrong, the second milder than the first.
+Three things can go wrong, each milder than the one before.
 
 *There may be no eigenbasis at all.* Over the complex numbers every
 square matrix has at least one direction that it merely rescales:
@@ -621,11 +621,26 @@ is not an eigenvector. Eigenspaces of *different* eigenvalues are
 orthogonal only for special matrices. The computation that proves
 it, in the next post, moves the operator across the bracket,
 $\langle \varphi_1 | \hat A \varphi_2 \rangle = \langle \hat A^\dagger \varphi_1 | \varphi_2 \rangle$,
-and then needs $\varphi_1$ to be an eigenvector of $\hat A^\dagger$ as
-well. For a Hermitian operator that is automatic, since
+where $\hat A^\dagger$ is the operator of the conjugate transpose
+(defined properly there), and then needs $\varphi_1$ to be an
+eigenvector of $\hat A^\dagger$ as well. For a Hermitian operator that is automatic, since
 $\hat A^\dagger = \hat A$; for the matrix above it fails, and indeed
 the matrix is not Hermitian — its conjugate transpose is
 $\begin{pmatrix} 1 & 0 \\ 1 & 2 \end{pmatrix}$.
+
+*There may be an orthonormal eigenbasis, but with complex numbers on
+the diagonal.* The rotation by $90°$,
+
+$$
+A = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix},
+$$
+
+has the orthonormal eigenvectors $\tfrac{1}{\sqrt 2}(1, \mp i)^{\mathsf T}$
+with eigenvalues $\pm i$. It satisfies everything in the assumption
+except the reality of the diagonal, and it is not Hermitian — its
+conjugate transpose is $-A$. Matrices of this kind do appear in the
+theory, as rotations and as time evolution, but as *devices* acting
+on states, not as observables; the next post returns to them.
 
 So "diagonalizable" ($A = S \Lambda S^{-1}$ for some invertible $S$)
 and "diagonalizable in an orthonormal basis" ($A = U \Lambda U^\dagger$
