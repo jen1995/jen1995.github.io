@@ -1098,7 +1098,9 @@ the count at those points — which no mixture can do, since adding
 an alternative to a mixture can only add probability. (The single
 slit spot is drawn as a plain hump, as Feynman draws it; the exact
 shape of a single slit's diffraction pattern has small side lobes,
-which change nothing here.) What the amplitudes $\phi_1$ and
+which change nothing here.)
+
+What the amplitudes $\phi_1$ and
 $\phi_2$ are as functions of the distances is a question for the
 Schrödinger equation, and a later post of this road will compute
 the fringes from it. Here only two facts about them were used:
