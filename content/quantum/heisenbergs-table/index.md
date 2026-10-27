@@ -732,13 +732,11 @@ amplitudes* of the second post. The probabilities, their squared
 magnitudes, do not add; this is the
 [second post's remark](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 that amplitudes can cancel in a superposition, and it is the quantum
-content of the assumption. The figure shows it on the spin: the same
-two pieces reinforce in one combination and cancel in the other,
-while a classical mixture of the same pieces would give one half
-either way. The computation behind the figure closes this
-subsection.
+content of the assumption. A worked example on the spin, with the
+same two pieces reinforcing in one combination and cancelling in the
+other, closes this subsection.
 
-![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
+![Interference: the coordinate of a sum of states is the sum of the coordinates, but the probability, the squared magnitude, is not the sum of the probabilities — a cross term is added, positive or negative](interference.png)
 
 
 Here is the lemma the pairing of the cross terms rested on; it is
@@ -972,6 +970,9 @@ that amplitudes can cancel in a superposition, and it is the two-slit
 experiment of volume III, chapter 1 of Feynman in
 the smallest possible setting. 
 
+
+
+![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
 
 </details>
 
