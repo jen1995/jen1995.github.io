@@ -573,11 +573,22 @@ $$
 
 Such matrices are called [**normal**](https://en.wikipedia.org/wiki/Normal_matrix)
 (Panov's lectures, §4.7, Theorem 4.7.3). So the assumption
-restricts the tables of observables to normal matrices. Whether that
-restriction excludes anything physical is answered in the next
-post: it does not, because it follows from the readings of an
-apparatus being real numbers. The cut below is optional — for
-readers who want to see why the restriction is real.
+restricts the tables of observables to normal matrices. The road
+will narrow the class once more, and then stop: the numbers
+$\lambda_i$ on the diagonal are about to be read as the outcomes of
+a measurement, which are real, and a normal matrix with a real
+diagonal in its diagonalizing basis equals its own conjugate
+transpose,
+
+$$
+A = \bar A^{\mathsf T} .
+$$
+
+Such matrices are called **Hermitian**, and the next post is about
+them: that every observable is Hermitian, that Hermitian is enough
+for the assumed basis to exist, and so that the assumption excludes
+nothing physical. The cut below is optional — for readers who want
+to see why the restriction to normal matrices is real.
 
 <details>
 <summary>For the linear algebra lovers: what can go wrong without normality</summary>
@@ -1082,14 +1093,14 @@ physical.
 
 ## Onward
 
-Next stop: the sentence most modern textbooks start from —
-"observables are Hermitian operators" — reached as a conclusion,
-the way Landau and Lifshitz and Dirac reach it. The diagonal basis is the eigenbasis of the operator and
-the outcomes are its eigenvalues; real outcomes make the operator
-Hermitian, and Hermitian is enough for such a basis to exist;
-definite states are eigenvectors; and the spectrum can repeat a
-value or fill an interval, which is the situation in every problem
-of this road, from the particle in a box to the hydrogen atom.
+Next stop: the Hermitian operators promised above, and with them
+the sentence most modern textbooks start from — "observables are
+Hermitian operators" — reached as a conclusion, the way Landau and
+Lifshitz and Dirac reach it. The diagonal basis is the eigenbasis
+of the operator and the outcomes are its eigenvalues; definite
+states are eigenvectors; and the spectrum can repeat a value or
+fill an interval, which is the situation in every problem of this
+road, from the particle in a box to the hydrogen atom.
 
 ## References
 
