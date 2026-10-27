@@ -1082,8 +1082,9 @@ physical.
 
 ## Onward
 
-Next stop: the postulate every textbook starts from, reached as a
-conclusion. The diagonal basis is the eigenbasis of the operator and
+Next stop: the sentence most modern textbooks start from —
+"observables are Hermitian operators" — reached as a conclusion,
+the way Landau and Lifshitz and Dirac reach it. The diagonal basis is the eigenbasis of the operator and
 the outcomes are its eigenvalues; real outcomes make the operator
 Hermitian, and Hermitian is enough for such a basis to exist;
 definite states are eigenvectors; and the spectrum can repeat a

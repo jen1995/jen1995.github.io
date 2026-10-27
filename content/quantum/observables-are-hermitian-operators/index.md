@@ -3,7 +3,7 @@ title: "Observables Are Hermitian Operators"
 date: 2026-10-27
 draft: true
 tags: ["quantum", "math"]
-summary: "The postulate every textbook starts from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors, in both directions; and the spectrum can be degenerate or continuous — which is where every calculation of this road will start."
+summary: "The postulate most modern textbooks start from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors, in both directions; and the spectrum can be degenerate or continuous — which is where every calculation of this road will start."
 math: true
 weight: 51
 ---
@@ -21,8 +21,13 @@ the only admissible probabilities — the Born rule. The assumption
 was also shown to be a real restriction: it selects the *normal*
 tables, and a price was promised.
 
-This post pays it, and arrives at the sentence most textbooks open
-with — "observables are Hermitian operators" — as the last line.
+This post pays it, and arrives at the sentence most modern
+textbooks open with — "observables are Hermitian operators" — as
+the last line. Not all of them do: Landau and Lifshitz define the
+operator by the mean value and derive Hermiticity from the reality
+of the mean, and Dirac defines an observable as a real dynamical
+variable with a complete set of eigenstates; this road follows
+them.
 The basis of the assumption is the eigenbasis of the operator, and
 the outcomes are its eigenvalues. Readings of an apparatus are real
 numbers, and that alone makes the operator Hermitian; the spectral
