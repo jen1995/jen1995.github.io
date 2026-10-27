@@ -1060,11 +1060,18 @@ post introduces.)
 place of two states, is the experiment that opens volume III of
 Feynman (chapter 1, §1). An electron leaves a source $s$, passes a
 wall with two slits, and lands at a point $x$ of a screen. Feynman
-names the stages of the trip by kets: $|s\rangle$ is the electron
-leaving the source, $|1\rangle$ and $|2\rangle$ the electron at slit
-1 or slit 2, and $|x\rangle$ the electron at the point $x$ — the
-position ket of the [delta post](/quantum/from-kronecker-to-dirac/).
-The amplitude of a path is the product of the amplitudes of its two
+names the stages of the trip by kets:
+
+$$
+\begin{aligned}
+|s\rangle &\;\text{— the electron leaving the source,} \\
+|1\rangle,\ |2\rangle &\;\text{— the electron at slit 1 or slit 2,} \\
+|x\rangle &\;\text{— the electron at the point } x \text{ of the screen,}
+\end{aligned}
+$$
+
+the last being the position ket of the
+[delta post](/quantum/from-kronecker-to-dirac/). The amplitude of a path is the product of the amplitudes of its two
 legs, source to slit and slit to screen, so the two ways of reaching
 $x$ have the amplitudes
 
