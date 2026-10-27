@@ -296,7 +296,7 @@ integral form, which the delta post's Appendix A pointed at.
 
 ### Where every calculation starts
 
-The chapter ends where a textbook begins. Shankar's *Principles*
+The post ends where a textbook begins. Shankar's *Principles*
 states the content of this post as postulates and then gives the
 procedure for using them (§4.2, p. 117): construct the operator of
 the quantity; find its orthonormal eigenvectors $|\omega_i\rangle$
