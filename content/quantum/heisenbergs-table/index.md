@@ -858,9 +858,9 @@ $$
 Here is why no other matrix $M$ will do, in three steps.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
-   zero, so of the whole sum $\sum_{j,k} M_{jk}\, c_j^* c_k$ only the
-   term $j = k = i$ survives, and the third condition gives
-   $M_{ii} = 1$ — the entry of $M$ in row $i$, column $i$, the row
+   zero, so of the whole sum $p_i(\psi) = \sum_{j,k} M_{jk}\, c_j^* c_k$
+   only the term $j = k = i$ survives: $p_i(a_i) = M_{ii}$, and the
+   third condition gives $M_{ii} = 1$ — the entry of $M$ in row $i$, column $i$, the row
    and the column that belong to $|a_i\rangle$.
 2. Now take a state with $c_i = 0$, that is, any combination
    $|\psi\rangle = \sum_{j \neq i} c_j |a_j\rangle$ of the *other*
