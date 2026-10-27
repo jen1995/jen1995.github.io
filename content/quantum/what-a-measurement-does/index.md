@@ -3,13 +3,15 @@ title: "What a Measurement Does"
 date: 2026-10-25
 draft: true
 tags: ["quantum", "math"]
-summary: "The last post built the operator of a question and derived the Born rule. This post uses them: applying an operator is not measuring, two of the three Pauli matrices come out of the spin experiments, the Born rule on a line turns the weights into a density, and a measurement is a projection onto a definite state — the last item of the first post's wishlist."
+summary: "The last two posts built the operator of an observable, derived the Born rule and earned the Hermitian postulate. This post uses them: applying an operator is not measuring, two of the three Pauli matrices come out of the spin experiments, the Born rule on a line turns the weights into a density, and a measurement is a projection onto a definite state — the last item of the first post's wishlist."
 math: true
-weight: 51
+weight: 52
 ---
 
-The [last post](/quantum/heisenbergs-table/) built the object that
-stands for a measurable quantity: a Hermitian operator $\hat A$, whose
+The last two posts — [Heisenberg's Table](/quantum/heisenbergs-table/)
+and [Observables Are Hermitian Operators](/quantum/observables-are-hermitian-operators/)
+— built the object that stands for a measurable quantity: a
+Hermitian operator $\hat A$, whose
 average in a state $|\psi\rangle$ is $\langle \psi | \hat A | \psi \rangle$.
 Written in the orthonormal eigenbasis $\{|a_i\rangle\}$ of the
 operator, $\hat A |a_i\rangle = \lambda_i |a_i\rangle$, with
@@ -61,15 +63,15 @@ Three facts from the earlier posts are used throughout.
   the eigenvectors are its definite states, and the probability of
   the outcome $\lambda_i$ is the average of the projector
   $|a_i\rangle\langle a_i|$, which is $|c_i|^2$
-  (the [last post](/quantum/heisenbergs-table/)).
+  (the last two posts).
 
 ## The Born rule on a line
 
 For a particle on a line the definite states of position are the kets
-$|x\rangle$ of the last post, the expansion is
+$|x\rangle$ of the [delta post](/quantum/from-kronecker-to-dirac/), the expansion is
 $|\psi\rangle = \int \psi(x)\,|x\rangle\,dx$, and the "coordinates"
 $\psi(x) = \langle x | \psi \rangle$ are a function. The Born rule
-carries over with one change of wording, which the last post's grid
+carries over with one change of wording, which the delta post's grid
 makes exact. Cut the line into cells of width $\Delta x$; the cell
 states $|\hat x_i\rangle$ are an orthonormal basis of $L^2$, and the
 coordinate of $|\psi\rangle$ along the cell containing $x_i$ is
@@ -230,11 +232,11 @@ The wishlist, with two more items paid:
 
 1. **A state object** — a unit vector in a Hilbert space. ✓ (second post)
 2. **A way to blend outcomes** — superposition; probabilities are
-   squared amplitudes. ✓ (last post)
+   squared amplitudes. ✓ (Heisenberg's Table)
 3. **Measurable quantities as actors** — Hermitian operators, whose
    eigenvalues are the outcomes and whose eigenvectors are the
    definite states; the average of a quantity is
-   $\langle \psi | \hat A | \psi \rangle$. ✓ (last post)
+   $\langle \psi | \hat A | \psi \rangle$. ✓ (the last two posts)
 4. **Measurement as an operation on states** — projection onto a
    definite state, with the Born probability. ✓
 5. **Geometry must enter** — still open: the dictionary between
@@ -260,7 +262,7 @@ ordinary sphere.
   теория)*, Теоретическая физика, т. III — chapter I, §3
   "Операторы" (pp. 22–28 of the 6th Russian edition; §3 "Operators"
   in the English *Quantum Mechanics: Non-Relativistic Theory*): the
-  road of the last post: $|a_n|^2$ as the only admissible bilinear
+  road of Heisenberg's Table: $|a_n|^2$ as the only admissible bilinear
   probability, the mean value (3.7), the
   operator *defined* by the mean value (3.8), eigenfunctions (3.12),
   Hermiticity from the reality of the mean (3.15–3.17).
@@ -274,7 +276,7 @@ ordinary sphere.
   measuring $\xi$ in the state $|x\rangle$ is $\langle x | \xi | x \rangle$
   (p. 68), and the probability of the value $a$ as the average of the
   function $\delta_{\xi a}$ of the observable, $P_a = \langle x | \delta_{\xi a} | x \rangle$,
-  eq. (45) (p. 69) — the projector route of the last post.
+  eq. (45) (p. 69) — the projector route of Heisenberg's Table.
 - Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
   Minimum*. Basic Books, 2014 — lecture 3, "Principles of Quantum
   Mechanics": §3.1 (linear operators, Hermitian conjugation), §3.2

@@ -136,6 +136,25 @@ The longest post; notes §9–13 + the classical interlude.
    twin ψ̃(p), squeeze one and watch the other spread (the uncertainty
    trade-off, interactive; reuses the Fourier road's machinery).
 
+## Status (2026-10-27): QM-3 is now three posts
+
+- `heisenbergs-table` (weight 50, "Heisenberg's Table: Where the
+  Matrices Come From"): averages → Heisenberg's table → table/operator
+  → diagonal assumption (normal matrices) → outcomes → weights are
+  probabilities (LL argument, polarization, interference) → Born rule
+  → spin: σ_z, average, interference, mixture vs superposition,
+  two-slit experiment. Ends at interference.
+- `observables-are-hermitian-operators` (weight 51, "Observables Are
+  Hermitian Operators"): diagonal basis = eigenbasis, spectral
+  decomposition → real outcomes ⇒ Hermitian; "and back" (polarization
+  → spectral theorem); the worry about non-Hermitian tables → definite
+  states ⇔ eigenvectors (variance) → degeneracy, continuous spectrum,
+  Hilbert–Schmidt → Shankar's recipe and the bridge to the problems.
+- `what-a-measurement-does` (weight 52): unchanged content; references
+  updated to "the last two posts".
+- Promised in post 1's mixture paragraph: the density matrix "in a
+  later post" — slot it into QM-4 (qubit) or a short post after it.
+
 ## Status (2026-10-25, evening): Born rule derived once
 
 - The Born rule has ONE derivation now, in `heisenbergs-table`: the

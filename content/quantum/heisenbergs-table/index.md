@@ -3,7 +3,7 @@ title: "Heisenberg's Table: Where the Matrices Come From"
 date: 2026-10-25
 draft: true
 tags: ["quantum", "math", "physics"]
-summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; a quantity is a table with two indices — an operator, the object Heisenberg found in the spectral lines; in the basis where the table is diagonal the average is a weighted average of the outcomes, with the Born probabilities as weights, and the same bracket in every basis; real readings make the table Hermitian, and the spectral theorem closes the circle."
+summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; a quantity is a table with two indices — an operator, the object Heisenberg found in the spectral lines; in the basis where the table is diagonal the average is a weighted average of the outcomes, and the only admissible weights are the squared coordinates — the Born rule, earned. The price of the bilinear assumption is interference, computed on the spin and seen in the two-slit experiment."
 math: true
 weight: 50
 aliases: ["/posts/heisenbergs-table/"]
@@ -26,15 +26,15 @@ This post builds that object, and it answers one question on the
 way: where do the matrices of quantum mechanics come from, and how
 are they tied to what an experiment measures? Most textbooks open
 this chapter with a postulate — "observables are Hermitian
-operators" — and derive the rest from it. Here the postulate is the
-last line, not the first: the post starts from what an apparatus
+operators" — and derive the rest from it. Here the postulate comes
+last, in the next post: this one starts from what an apparatus
 actually gives us and follows that as far as it goes. That is the
 road of chapter II of Dirac's *Principles* and of §3 of Landau and
-Lifshitz (see the references); Heisenberg
-took its first steps in 1925 without knowing where they led, and the
-middle of the post retells how. The Born rule, which the second
-post took on credit, is paid on the way; what a measurement does to
-the state is the next post's subject.
+Lifshitz (see the references); Heisenberg took its first steps in
+1925 without knowing where they led, and the middle of the post
+retells how. The Born rule, which the second post took on credit, is
+paid on the way, and the post ends where quantum mechanics parts
+from classical probability: at interference.
 
 ## Where we stand
 
@@ -574,9 +574,9 @@ $$
 Such matrices are called [**normal**](https://en.wikipedia.org/wiki/Normal_matrix)
 (Panov's lectures, §4.7, Theorem 4.7.3). So the assumption
 restricts the tables of observables to normal matrices. Whether that
-restriction excludes anything physical is answered at the end of
-the chapter: it does not, because it follows from the readings of
-an apparatus being real numbers. The cut below is optional — for
+restriction excludes anything physical is answered in the next
+post: it does not, because it follows from the readings of an
+apparatus being real numbers. The cut below is optional — for
 readers who want to see why the restriction is real.
 
 <details>
@@ -615,7 +615,7 @@ orthogonalizing $(1, 1)^{\mathsf T}$ against $(1, 0)^{\mathsf T}$
 gives $(0, 1)^{\mathsf T}$, and $A (0, 1)^{\mathsf T} = (1, 2)^{\mathsf T}$
 is not an eigenvector. Eigenspaces of *different* eigenvalues are
 orthogonal only for special matrices. The computation that proves
-it, later in this chapter, moves the operator across the bracket,
+it, in the next post, moves the operator across the bracket,
 $\langle \varphi_1 | \hat A \varphi_2 \rangle = \langle \hat A^\dagger \varphi_1 | \varphi_2 \rangle$,
 and then needs $\varphi_1$ to be an eigenvector of $\hat A^\dagger$ as
 well. For a Hermitian operator that is automatic, since
@@ -743,14 +743,15 @@ other — ends this subsection.
 
 
 Here is the polarization lemma that the pairing of the cross terms
-rested on; it is used again in the argument below and later in the
-chapter. What it
+rested on; it is used again in the argument below and in the next
+post. What it
 says is less obvious than it looks. Reality of $p$ is a condition on
 the values $\langle \psi | \hat M | \psi \rangle$, one number per
 state; conjugate symmetry is a condition on
 $\langle \varphi | \hat M | \psi \rangle$, one number per *pair* of
 states.
 
+<a id="polarization"></a>
 > **Polarization.** Over the complex numbers, the values
 > $\langle \psi | \hat M | \psi \rangle$ on single states determine
 > every $\langle \varphi | \hat M | \psi \rangle$. In particular, if the
@@ -1056,297 +1057,36 @@ slit spot is drawn as a plain hump, as Feynman draws it; the exact
 shape of a single slit's diffraction pattern has small side lobes,
 which change nothing here.)
 
-### The diagonal basis is the eigenbasis
-
-Recall the definitions. A nonzero vector $|v\rangle$ is an
-[**eigenvector**](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
-of $\hat A$ if the operator merely rescales it,
-$\hat A|v\rangle = \lambda|v\rangle$, and $\lambda$ is the
-corresponding **eigenvalue**; the set of eigenvalues is the
-**spectrum** of $\hat A$. A diagonal table says exactly this about
-its basis vectors. By the column rule of
-["A table for an observable"](#a-table-for-an-observable),
-$\hat A |a_j\rangle = \sum_i A_{ij} |a_i\rangle$, and with
-$A_{ij} = \lambda_i \delta_{ij}$ only one term survives:
-
-$$
-\hat A\, |a_j\rangle = \lambda_j\, |a_j\rangle .
-$$
-
-So the basis of the assumption is a basis of eigenvectors, the
-numbers on the diagonal are the eigenvalues, and the possible
-outcomes of an observable are the spectrum of its operator. Rewriting
-the diagonal table without coordinates gives the operator as a sum
-over its own definite directions,
-
-$$
-\boxed{\; \hat A = \sum_i \lambda_i\, |a_i\rangle\langle a_i| \;}
-$$
-
-— the **spectral decomposition**: each outcome times the projector
-onto its eigenvector. (Apply both sides to $|\psi\rangle$ and use
-$\langle a_i | \psi \rangle = c_i$ to see that it is the same
-operator.) Set every $\lambda_i$ to $1$ and it collapses to the
-resolution of identity of the second post; keep a single $\lambda_i$
-equal to $1$ and set the rest to $0$ and it is the projector of
-Dirac's yes/no observable.
-
-### Real outcomes make the table Hermitian
-
-Readings of an apparatus are real numbers. So the eigenvalues
-$\lambda_i$ are real, and this leaves a mark on the table in every
-basis, not only in the diagonal one. The mark has a name, and the
-name needs a notion.
-
-Write $|\hat M \psi\rangle$ for the vector $\hat M$ returns when fed
-$|\psi\rangle$, so that
-$\langle \varphi | \hat M | \psi \rangle = \langle \varphi | \hat M \psi \rangle$.
-The [**adjoint**](https://en.wikipedia.org/wiki/Hermitian_adjoint)
-$\hat M^\dagger$ of $\hat M$ is the operator that lets the operator
-act on the bra instead:
-
-$$
-\langle \varphi | \hat M \psi \rangle = \langle \hat M^\dagger \varphi | \psi \rangle \qquad \text{for all } |\varphi\rangle, |\psi\rangle .
-$$
-
-It exists and is unique by the second post's Riesz theorem (for fixed
-$|\varphi\rangle$ the left side is a linear functional of
-$|\psi\rangle$, hence an inner product with a unique vector, which we
-name $\hat M^\dagger|\varphi\rangle$). In a matrix with respect to an
-orthonormal basis the adjoint is the **conjugate transpose**,
-$(M^\dagger)_{ij} = M_{ji}^*$ (Panov's lectures, §4.1); three rules
-follow from the definition: $(\hat A^\dagger)^\dagger = \hat A$,
-$(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$,
-$(\hat A\hat B)^\dagger = \hat B^\dagger \hat A^\dagger$. The adjoint
-of a ket is its bra, $(|v\rangle)^\dagger = \langle v|$ — the second
-post's bra–ket correspondence in this notation — and a scalar comes
-out conjugated, $(\lambda \hat A)^\dagger = \lambda^* \hat A^\dagger$.
-
-Now take the adjoint of the spectral decomposition. By the rules,
-$(|a_i\rangle\langle a_i|)^\dagger = (\langle a_i|)^\dagger (|a_i\rangle)^\dagger = |a_i\rangle\langle a_i|$,
-so
-
-$$
-\hat A^\dagger = \sum_i \lambda_i^*\, |a_i\rangle\langle a_i| .
-$$
-
-With real eigenvalues, $\lambda_i^* = \lambda_i$, the right side is
-$\hat A$ again. An operator equal to its own adjoint,
-$\hat A^\dagger = \hat A$, is called **Hermitian** (or self-adjoint);
-its matrix equals its own conjugate transpose, in every orthonormal
-basis, since the definition mentions no basis. In the diagonal basis
-the statement is plain — a diagonal matrix equals its conjugate
-transpose exactly when its diagonal is real — and it carries over
-unchanged to the $z$ basis of the spin, where the table of the $x$
-observable is not diagonal at all.
-
-> **The table of every measurable quantity is Hermitian.**
-
-A worry at this point. A table of $n^2$ complex numbers could have
-been anything, and the chapter has just forced it to be Hermitian;
-an experiment cannot be ordered to produce symmetric tables. It
-need not be, because the experiment never hands us a table. It
-hands us outcomes, which are real numbers, and definite states,
-which are orthogonal; the table is assembled from these two lists by
-the spectral decomposition, and anything assembled that way is
-Hermitian. A table that is not Hermitian would need a complex
-outcome, or a pair of definite states that are not orthogonal, and
-no apparatus produces either. Tables that are not Hermitian do
-appear in the theory, as *devices* rather than observables: Feynman's
-apparatus matrix, a rotation of the spin, the evolution of a state
-in time — these are unitary, the subject of a later post. And the
-first table in history passed the test by itself. Heisenberg's
-amplitudes satisfy $X(m, n) = X(n, m)^*$, because the coordinate
-$x(t)$ they describe is real — the same condition that makes the
-Fourier coefficients of a real signal come in conjugate pairs,
-$X_{-\alpha}(n) = X_\alpha(n)^*$ in the notation of the
-[classical picture](#the-classical-picture).
-
-**And back.** The assumption that opened the chapter was promised a
-price. Suppose only what the apparatus guarantees — that the average
-$\langle \psi | \hat A | \psi \rangle$ is a real number in every
-state. Then $\hat A$ is Hermitian, by the polarization cut of the
-weights section: real diagonal values make the bracket
-conjugate-symmetric,
-$\langle \varphi | \hat A \psi \rangle = \langle \psi | \hat A \varphi \rangle^* = \langle \hat A \varphi | \psi \rangle$
-for all $|\varphi\rangle, |\psi\rangle$, and the outer equality is
-the definition of $\hat A^\dagger = \hat A$. (The other direction is
-a line: if $\hat A^\dagger = \hat A$, then
-$\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$,
-so the average equals its own conjugate.)
-
-And a Hermitian operator has exactly the basis the assumption asked
-for:
-
-> **Spectral theorem** (finite dimensions). A Hermitian operator has
-> real eigenvalues and an orthonormal basis of eigenvectors.
-
-Two of its three claims are one line each, with the operator moved
-across the bracket; the third is cited.
-
-*Real eigenvalues.* If $\hat A|\varphi\rangle = \lambda|\varphi\rangle$
-with $|\varphi\rangle \neq 0$, then
-
-$$
-\lambda\, \langle \varphi | \varphi \rangle = \langle \varphi | \hat A \varphi \rangle = \langle \hat A \varphi | \varphi \rangle = \lambda^*\, \langle \varphi | \varphi \rangle ,
-$$
-
-and $\langle \varphi | \varphi \rangle \gt 0$ gives $\lambda = \lambda^*$.
-
-*Orthogonal eigenvectors.* If $\hat A|\varphi_1\rangle = \lambda_1|\varphi_1\rangle$,
-$\hat A|\varphi_2\rangle = \lambda_2|\varphi_2\rangle$ and
-$\lambda_1 \neq \lambda_2$, then
-
-$$
-\lambda_2\, \langle \varphi_1 | \varphi_2 \rangle = \langle \varphi_1 | \hat A \varphi_2 \rangle = \langle \hat A \varphi_1 | \varphi_2 \rangle = \lambda_1\, \langle \varphi_1 | \varphi_2 \rangle ,
-$$
-
-so $(\lambda_2 - \lambda_1)\langle \varphi_1 | \varphi_2 \rangle = 0$
-and the inner product vanishes.
-
-*The eigenvectors fill the space.* That there are enough of them to
-form a basis is the part that needs the finite dimension and a page
-of algebra: Panov, §4.2, Theorem 4.2.3 (its Lemmas 4.2.4 and 4.2.5
-are the two facts just proved). Within a repeated eigenvalue the
-eigenvectors are not orthogonal automatically, and Gram–Schmidt makes
-them so.
-
-So the two roads meet. "Diagonal in some orthonormal basis, with real
-numbers on the diagonal" and "real average in every state" are the
-same condition on a table, and both say *Hermitian*. The textbook
-postulate — "observables are Hermitian operators" — is this
-equivalence, stated as a definition.
-
-### Definite states are eigenvectors
-
-One more reading of the average formula, this time for the basis
-vectors themselves. In the state $|a_i\rangle$ the coordinates are
-$c_i = 1$ and $c_j = 0$ for $j \neq i$: the whole weight sits on the
-single outcome $\lambda_i$, the average is $\lambda_i$, and by the
-Born rule the outcome $\lambda_i$ has probability one. A state whose
-outcome is certain, and which the measurement therefore confirms on
-every repetition, is what the [first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
-called a definite state. And the second post found that states a
-measurement tells apart with certainty are orthogonal — which the
-eigenvectors of a Hermitian operator are.
-
-The converse also holds: no state outside the eigenvectors has a
-certain outcome. In the language of averages, a certain answer is
-one with no spread — the average of the squared deviation from the
-mean is zero. The squared deviation is the same observable with its
-window relabeled, $\lambda_i \mapsto (\lambda_i - \langle A \rangle)^2$,
-so by the average rule its mean, the **variance**, is
-
-$$
-\langle (A - \langle A \rangle)^2 \rangle = \sum_i |c_i|^2\, (\lambda_i - \langle A \rangle)^2 .
-$$
-
-Every term is nonnegative, so the sum vanishes only if every $c_i$
-with $\lambda_i \neq \langle A \rangle$ is zero — that is, only if
-$|\psi\rangle$ has components along eigenvectors of a single
-eigenvalue, which makes it an eigenvector itself. So:
-
-> **Definite states are eigenvectors.** A state in which the outcome
-> of an observable is certain is an eigenvector of its operator, and
-> the certain outcome is the eigenvalue; and every eigenvector
-> $|a_i\rangle$ is such a state, with the certain outcome $\lambda_i$.
-
-This is the statement textbooks start from — Susskind's principles 1
-and 2 — and here it arrives as a consequence of the average rule.
-For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
-$z$ observable, are the eigenvectors of its operator $\sigma_z$, with
-eigenvalues $+1$ and $-1$; the first post's "the measurement
-prepares a state that repeats its answer" is the statement that the
-state after a measurement is an eigenvector, which the next post
-makes precise. From now on the word *observable* is used for the
-Hermitian operator as well as for the quantity it stands for. The
-three conditions one would otherwise have to *demand* of such an
-operator
-— real outcomes, definite states that span the space, definite
-states that are orthogonal — are the spectral theorem above.
-
-### Degeneracy and the continuous spectrum
-
-Two refinements. An eigenvalue may belong to more than one
-independent eigenvector; it is then called **degenerate**, and the
-outcome does not determine the state, only the subspace it lands in
-— the hydrogen atom will make this concrete, with several orbitals
-sharing one energy. And in infinite dimensions the spectrum need not
-be a list of eigenvalues with eigenvectors inside the space: the
-position operator of the last post is the first example, its
-"eigenvectors" $|x\rangle$ living just outside $L^2$ and its spectrum
-being the whole real line — a **continuous spectrum**, with
-$\hat x = \int x\, |x\rangle\langle x|\, dx$ as its spectral
-decomposition. The problems ahead show all three kinds: the particle
-in a box has a purely discrete spectrum, the tunneling problem a
-purely continuous one, and hydrogen both at once. In infinite dimensions the spectral theorem holds in the same form
-as above for *compact* self-adjoint operators (the Hilbert–Schmidt
-theorem; Sergeev's lectures, Theorem 40, in the references), and for
-general self-adjoint operators such as position it survives in this
-integral form, which the delta post's Appendix A pointed at.
-
-### Where every calculation starts
-
-The chapter ends where a textbook begins. Shankar's *Principles*
-states the content of this post as postulates and then gives the
-procedure for using them (§4.2, p. 117): construct the operator of
-the quantity; find its orthonormal eigenvectors $|\omega_i\rangle$
-and eigenvalues $\omega_i$; expand the state in that basis,
-$|\psi\rangle = \sum_i |\omega_i\rangle\langle\omega_i|\psi\rangle$;
-the probability of the result $\omega_i$ is
-$|\langle\omega_i|\psi\rangle|^2$. The last three steps are this
-chapter. In his words (p. 119): "To extract this information for any
-observable, we must determine the eigenbasis of the corresponding
-operator and find the projection of $|\psi\rangle$ along all its
-eigenkets." A working habit follows, also his: there is no need to
-change basis each time. One keeps the state written in the eigenbasis
-of a chosen observable and computes the eigenvectors of any other
-observable as columns in that basis. Landau and Lifshitz go further and
-open their §3 with the eigenfunctions: the wave functions of the
-states in which the quantity has a definite value are the first
-objects they name, and the operator is built afterwards to fit them.
-
-For the problems of this road the chosen observable is the energy, and
-the first step — which operator belongs to the observable — is what
-the posts on dynamics settle. The second step is then the whole
-work: for a particle on a line the eigenvectors are functions, and
-"find the eigenbasis" means solving a differential equation. The
-particle in a box, the tunneling barrier, the harmonic oscillator and
-the hydrogen atom each begin by finding the eigenfunctions of their
-energy operator, and everything else about them is read off the
-expansion of the state in that basis.
-
 ## What we built
 
-The chain of the post. What an apparatus gives us is averages. A
+The chain of the post. What an apparatus gives us is averages. An
 observable is a table with two indices — an operator, the object
-Heisenberg found in 1925 in the spectral lines of the atom. In the
-orthonormal basis where the table is diagonal, the average is a
-weighted average of the numbers on the diagonal: they are the
-outcomes, and the weights $|c_i|^2$ are the only admissible
-probabilities — the Born rule. The average is the bracket
-$\langle \psi | \hat A | \psi \rangle$, the same in every basis,
-which is how a table that is not diagonal is used. The diagonal
-basis is the eigenbasis of the operator and the outcomes are its
-eigenvalues. Readings are real, so the operator is Hermitian; and
-Hermitian is also enough, by the spectral theorem, for such a basis
-to exist.
+Heisenberg found in 1925 in the spectral lines of the atom. Assume
+an orthonormal basis in which the table is diagonal; then the
+average $\langle \psi | \hat A | \psi \rangle$, the same number in
+every basis, is a weighted average of the numbers on the diagonal.
+They are the outcomes, and the weights $|c_i|^2$ are the only
+probabilities compatible with the apparatus and with bilinearity —
+the Born rule, which the second post took on credit. Bilinearity has
+a price: probabilities of superposed states do not add, the cross
+term is interference, and the spin and the two-slit experiment show
+it.
 
-Wishlist item 3 is paid: **a measurable quantity is a Hermitian
-operator**, whose eigenvalues are the outcomes, whose eigenvectors are
-the definite states, whose average in a state is
-$\langle \psi | \hat A | \psi \rangle$, and whose outcome
-probabilities are the squared coordinates $|c_i|^2$. One thing
-remains: nothing has been said about what a measurement does to the
-state. That is the next post.
+Wishlist item 3 is half paid: **an observable is an operator**,
+whose average in a state is $\langle \psi | \hat A | \psi \rangle$ and
+whose outcome probabilities are the squared coordinates $|c_i|^2$ in
+the basis where its table is diagonal. What that basis is, what the
+reality of the outcomes does to the table, and what the assumption
+cost — nothing, it will turn out — is the next post.
 
 ## Onward
 
-Next stop: what a measurement does. The warning that applying an
-operator is not measuring; two of the three Pauli matrices read off
-the spin experiments; the Born rule on a line, where the weights
-become a density; and measurement itself as a projection, the last
-item of the wishlist.
+Next stop: the postulate every textbook starts from, earned. The
+diagonal basis is the eigenbasis of the operator and the outcomes
+are its eigenvalues; real outcomes make the operator Hermitian, and
+Hermitian is enough for such a basis to exist; definite states are
+eigenvectors; and the spectrum can be degenerate or continuous,
+which is where the problems of this road begin.
 
 ## References
 
@@ -1370,7 +1110,8 @@ item of the wishlist.
   measuring $\xi$ in the state $|x\rangle$ is $\langle x | \xi | x \rangle$
   (p. 68), and the probability of the value $a$ as the average of the
   function $\delta_{\xi a}$ of the observable, $P_a = \langle x | \delta_{\xi a} | x \rangle$,
-  eq. (45) (p. 69) — the route this post takes to the Born rule.
+  eq. (45) (p. 69) — the same road as this post's, which reaches the
+  projector by Landau and Lifshitz's argument instead.
 - R. P. Feynman, R. B. Leighton, M. Sands. *The Feynman Lectures on
   Physics*, vol. III (Russian edition: *Фейнмановские лекции по
   физике*, вып. 8–9 *Квантовая механика*, Мир, 1978) — chapter 1,
@@ -1421,23 +1162,10 @@ item of the wishlist.
   (in Russian) — §2.6 (the characteristic polynomial: Proposition
   2.6.2, eigenvalues are its roots, and Theorem 2.6.3, over
   $\mathbb C$ every operator has an eigenvector, p. 35), §2.7
-  (diagonalizable operators and the criterion, p. 37), §4.1 (adjoint operators; the matrix of the adjoint
-  is the conjugate transpose, p. 65), §4.2 (self-adjoint
-  operators: Theorem 4.2.3 on the orthonormal eigenbasis, with Lemmas
-  4.2.4 and 4.2.5, pp. 66–67), §4.7 (normal operators: Theorem 4.7.3,
+  (diagonalizable operators and the criterion, p. 37), §3.4
+  (transition matrices between orthonormal bases are unitary,
+  Proposition 3.4.2), §4.7 (normal operators: Theorem 4.7.3,
   an operator is diagonalizable in an orthonormal basis if and only
   if it commutes with its adjoint, p. 76) and §5.1 (bilinear and
   sesquilinear forms, their matrices and the change-of-basis law,
   pp. 79–81; Definition 5.1.7 is the sesquilinear case).
-- R. Shankar. *Principles of Quantum Mechanics*, 2nd ed. Plenum, 1994 —
-  chapter 4, "The Postulates — a General Discussion", §4.2, pp. 117–119:
-  the four-step procedure (construct the operator, find its
-  eigenbasis, expand the state, square the projections) and the
-  remark that the eigenbasis of every observable must be found, but
-  the basis one works in need not change.
-- А. Г. Сергеев. [*Лекции по функциональному анализу*](https://mi-ras.ru/noc/13_14/2/sergeev/funkan.pdf)
-  (in Russian) — Theorem 40, the Hilbert–Schmidt theorem, p. 81: the
-  spectral theorem for compact self-adjoint operators in infinite
-  dimensions.
-- 3Blue1Brown, [*Eigenvectors and eigenvalues*](https://youtu.be/PFDu9oVAE-g)
-  — the geometric picture of an eigenvector, in twenty minutes.
