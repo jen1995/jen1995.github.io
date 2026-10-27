@@ -829,17 +829,16 @@ for the form $\langle \varphi | \hat M | \psi \rangle$.
 
 </details>
 
-Now back to the weights. Landau and Lifshitz conclude that the only
-bilinear expression satisfying the three conditions listed at the
-start of this subsection is the squared modulus $|c_i|^2$. Here are
-the conditions again, in formulas, to keep beside the argument:
+Now back to the weights. Recall what was required of the
+probabilities at the start of this subsection, in formulas:
 
 1. $p_i(\psi) \geq 0$ for every state;
 2. $\sum_i p_i(\psi) = 1$ for every unit state;
 3. $p_i(a_i) = 1$, and $p_i(\psi) = 0$ whenever $c_i = \langle a_i | \psi \rangle = 0$.
 
-In terms of the
-matrix of the bilinear expression: $M$ has a single $1$, in the
+Landau and Lifshitz conclude that the only bilinear expression
+satisfying these three conditions is the squared modulus $|c_i|^2$.
+In terms of the matrix of the bilinear expression: $M$ has a single $1$, in the
 $i$-th place on the diagonal, and zeros everywhere else. For the spin
 and the outcome "up",
 
