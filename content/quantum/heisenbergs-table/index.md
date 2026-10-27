@@ -1067,26 +1067,28 @@ average $\langle \psi | \hat A | \psi \rangle$, the same number in
 every basis, is a weighted average of the numbers on the diagonal.
 They are the outcomes, and the weights $|c_i|^2$ are the only
 probabilities compatible with the apparatus and with bilinearity —
-the Born rule, which the second post took on credit. Bilinearity has
-a price: probabilities of superposed states do not add, the cross
-term is interference, and the spin and the two-slit experiment show
-it.
+the Born rule, which the second post took on credit. The same
+bilinearity means that probabilities of superposed states do not
+add: the cross term is interference, computed on the spin and seen
+in the two-slit experiment.
 
-Wishlist item 3 is half paid: **an observable is an operator**,
+Wishlist item 3 is paid in part: **an observable is an operator**,
 whose average in a state is $\langle \psi | \hat A | \psi \rangle$ and
 whose outcome probabilities are the squared coordinates $|c_i|^2$ in
-the basis where its table is diagonal. What that basis is, what the
-reality of the outcomes does to the table, and what the assumption
-cost — nothing, it will turn out — is the next post.
+the basis where its table is diagonal. Three questions are left for
+the next post: what that basis is, what the reality of the outcomes
+does to the table, and whether the assumption excludes anything
+physical.
 
 ## Onward
 
-Next stop: the postulate every textbook starts from, earned. The
-diagonal basis is the eigenbasis of the operator and the outcomes
-are its eigenvalues; real outcomes make the operator Hermitian, and
-Hermitian is enough for such a basis to exist; definite states are
-eigenvectors; and the spectrum can be degenerate or continuous,
-which is where the problems of this road begin.
+Next stop: the postulate every textbook starts from, reached as a
+conclusion. The diagonal basis is the eigenbasis of the operator and
+the outcomes are its eigenvalues; real outcomes make the operator
+Hermitian, and Hermitian is enough for such a basis to exist;
+definite states are eigenvectors; and the spectrum can repeat a
+value or fill an interval, which is the situation in every problem
+of this road, from the particle in a box to the hydrogen atom.
 
 ## References
 
