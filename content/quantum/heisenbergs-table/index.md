@@ -1011,6 +1011,8 @@ The two probabilities are correct — $|u\rangle$ is certainly up and
 $|d\rangle$ certainly down — and they came from the *same* two pieces
 with *opposite* cross terms.
 
+![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
+
 **Superposition is not a mixture.** Compare a classical mixture: an
 electron that is $|r\rangle$ half the time and $|l\rangle$ the other
 half. There the probability of "up" is the weighted sum of the two
@@ -1027,9 +1029,11 @@ the sum, and the pieces can reinforce or cancel. The second post said
 this in
 ["What the geometry means physically"](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 — amplitudes can cancel in a superposition — and here it is
-computed. The same arithmetic, with two slits in place of two
-states, is the two-slit experiment that opens volume III of Feynman
-(chapter 1, §1, eq. 1.3): an electron can reach a point $x$ of the
+computed.
+
+**The two-slit experiment.** The same arithmetic, with two slits in
+place of two states, is the experiment that opens volume III of
+Feynman (chapter 1, §1, eq. 1.3): an electron can reach a point $x$ of the
 screen through slit 1 or through slit 2, with amplitudes
 $\phi_1 = \langle x | 1 \rangle \langle 1 | s \rangle$ and
 $\phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle$; with one slit
@@ -1038,8 +1042,6 @@ $P_2 = |\phi_2|^2$, and with both open they are not $P_1 + P_2$ but
 $P_{12} = |\phi_1 + \phi_2|^2$, the fringes.
 
 ![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
-
-![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
 
 ### The diagonal basis is the eigenbasis
 
