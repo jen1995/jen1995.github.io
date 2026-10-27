@@ -564,20 +564,22 @@ The $\lambda_i$ will be read as the outcomes of a measurement, and
 an apparatus reads out real numbers; that is why they are required
 to be real.
 
-The assumption does not hold for every table. A matrix that is
-diagonal in some orthonormal basis, with real numbers on the
-diagonal, equals its own conjugate transpose — the matrix with rows
-and columns swapped and every entry conjugated, written
-$\bar A^{\mathsf T}$, the bar for the conjugation and the
-$\mathsf T$ for the transposition:
+The assumption does not hold for every table, and the tables it
+does hold for have a name. Write $\bar A^{\mathsf T}$ for the
+*conjugate transpose* of a matrix $A$: rows and columns swapped (the
+$\mathsf T$) and every entry conjugated (the bar). A matrix equal to
+its own conjugate transpose,
 
 $$
-A = \bar A^{\mathsf T} .
+A = \bar A^{\mathsf T} ,
 $$
 
-Such matrices are called
-[**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix), and
-the assumption restricts the tables of observables to them. The next
+is called [**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix).
+Every table that satisfies the assumption is Hermitian: if $A$ is
+diagonal in some orthonormal basis with real numbers on the
+diagonal, then $A = \bar A^{\mathsf T}$ (the next post proves this in
+one line, by conjugating the diagonal form). So the assumption
+restricts the tables of observables to Hermitian matrices. The next
 post shows that the restriction is no loss: it already follows from
 the reality of the readings, and it is enough for the assumed basis
 to exist. The cut below is optional — for readers who want to see
