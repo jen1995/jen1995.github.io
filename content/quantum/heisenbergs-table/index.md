@@ -856,7 +856,7 @@ $$
 |u\rangle\langle u| = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \begin{pmatrix} 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} .
 $$
 
-The argument takes three steps.
+Here is why no other matrix $M$ will do, in three steps.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so of the whole sum $\sum_{j,k} M_{jk}\, c_j^* c_k$ only the
