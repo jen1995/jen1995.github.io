@@ -1083,11 +1083,7 @@ $$
 of matrices: in a bracket $\langle b | a \rangle$ the starting
 condition stands on the right and the final one on the left, so the
 electron goes from $s$ to the slit and then to $x$ — Feynman warns
-that the equation "seems to be written backwards". The amplitudes
-themselves, as functions of the distances, need the Schrödinger
-equation; the road returns to the two slits with exact formulas
-when it has it. Nothing below uses them; only that there are two
-amplitudes and they add.
+that the equation "seems to be written backwards".
 
 ![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
 
@@ -1102,7 +1098,11 @@ the count at those points — which no mixture can do, since adding
 an alternative to a mixture can only add probability. (The single
 slit spot is drawn as a plain hump, as Feynman draws it; the exact
 shape of a single slit's diffraction pattern has small side lobes,
-which change nothing here.)
+which change nothing here.) What the amplitudes $\phi_1$ and
+$\phi_2$ are as functions of the distances is a question for the
+Schrödinger equation, and a later post of this road will compute
+the fringes from it. Here only two facts about them were used:
+there are two of them, and they add.
 
 ## What we built
 
