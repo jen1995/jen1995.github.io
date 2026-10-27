@@ -747,8 +747,6 @@ state; conjugate symmetry is a condition on
 $\langle \varphi | \hat M | \psi \rangle$, one number per *pair* of
 states.
 
-![What polarization gives: from the real values of ⟨ψ|M|ψ⟩ on single states — on the basis states, the diagonal of M — every entry of the matrix is determined, in conjugate pairs; over the real numbers this fails, as the antisymmetric 2×2 matrix shows](polarization.png)
-
 > **Polarization.** Over the complex numbers, the values
 > $\langle \psi | \hat M | \psi \rangle$ on single states determine
 > every $\langle \varphi | \hat M | \psi \rangle$. In particular, if the
@@ -760,6 +758,8 @@ states.
 > Over the real numbers none of this holds: the values
 > $x^{\mathsf T} M x$ on single vectors do not determine the rest of
 > the matrix $M$.
+
+![What polarization gives: from the real values of ⟨ψ|M|ψ⟩ on single states — on the basis states, the diagonal of M — every entry of the matrix is determined, in conjugate pairs; over the real numbers this fails, as the antisymmetric 2×2 matrix shows](polarization.png)
 
 The proof is under the cut, together with the real counterexample.
 
