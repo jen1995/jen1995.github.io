@@ -847,8 +847,15 @@ $$
 p_u = c^\dagger M c = \begin{pmatrix} c_u^* & c_d^* \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} c_u \\ c_d \end{pmatrix} = |c_u|^2 .
 $$
 
-In operator form, $\hat M = |a_i\rangle\langle a_i|$: the projector
-onto $|a_i\rangle$, one for each outcome. The argument takes three steps.
+In operator form, $\hat M = |a_i\rangle\langle a_i|$, the projector
+onto $|a_i\rangle$, one for each outcome — for the spin, a column
+times a row:
+
+$$
+|u\rangle\langle u| = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \begin{pmatrix} 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} .
+$$
+
+The argument takes three steps.
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so of the whole sum $\sum_{j,k} M_{jk}\, c_j^* c_k$ only the
