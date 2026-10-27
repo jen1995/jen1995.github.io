@@ -940,8 +940,9 @@ by this requirement, that the bracket return the mean (their (3.8)).
 
 ### The spin along $z$: operator, average, interference
 
-Here is what the chapter says about the observable the first post
-started from, the spin along $z$. Its outcomes are $+1$ and $-1$,
+Let us now compute the objects of this chapter — the table, the
+average, the probabilities — for the observable the road began with,
+the spin along $z$. Its outcomes are $+1$ and $-1$,
 its definite states are $|u\rangle$ and $|d\rangle$, and in that basis
 its table is diagonal with the outcomes on the diagonal. The
 operator is written $\sigma_z$:
