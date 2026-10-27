@@ -1040,9 +1040,11 @@ Feynman (chapter 1, §1, eq. 1.3): an electron can reach a point $x$ of the
 screen through slit 1 or through slit 2, with amplitudes
 $\phi_1 = \langle x | 1 \rangle \langle 1 | s \rangle$ and
 $\phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle$; with one slit
-open at a time the counts are $P_1 = |\phi_1|^2$ and
-$P_2 = |\phi_2|^2$, and with both open they are not $P_1 + P_2$ but
-$P_{12} = |\phi_1 + \phi_2|^2$, the fringes.
+open at a time the counts across the screen form one smooth spot,
+$P_1 = |\phi_1|^2$ or $P_2 = |\phi_2|^2$; with both open they are not
+the sum $P_1 + P_2$ but $P_{12} = |\phi_1 + \phi_2|^2$, a pattern of
+fringes — and in the dark fringes opening the second slit has
+*reduced* the count.
 
 ![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
 
