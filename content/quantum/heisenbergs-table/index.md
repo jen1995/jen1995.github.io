@@ -732,9 +732,13 @@ amplitudes* of the second post. The probabilities, their squared
 magnitudes, do not add; this is the
 [second post's remark](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 that amplitudes can cancel in a superposition, and it is the quantum
-content of the assumption. A worked example on the spin, with the
-same two pieces reinforcing in one combination and cancelling in the
-other, closes this subsection.
+content of the assumption. The figure shows it on the spin: the same
+two pieces reinforce in one combination and cancel in the other,
+while a classical mixture of the same pieces would give one half
+either way. The computation behind the figure closes this
+subsection.
+
+![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
 
 
 Here is the lemma the pairing of the cross terms rested on; it is
@@ -744,6 +748,8 @@ the values $\langle \psi | \hat M | \psi \rangle$, one number per
 state; conjugate symmetry is a condition on
 $\langle \varphi | \hat M | \psi \rangle$, one number per *pair* of
 states.
+
+![What polarization gives: from the real values of ⟨ψ|M|ψ⟩ on single states — on the basis states, the diagonal of M — every entry of the matrix is determined, in conjugate pairs; over the real numbers this fails, as the antisymmetric 2×2 matrix shows](polarization.png)
 
 > **Polarization.** Over the complex numbers, the values
 > $\langle \psi | \hat M | \psi \rangle$ on single states determine
@@ -966,8 +972,6 @@ that amplitudes can cancel in a superposition, and it is the two-slit
 experiment of volume III, chapter 1 of Feynman in
 the smallest possible setting. 
 
-
-![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
 
 </details>
 
