@@ -855,7 +855,11 @@ $$
 |u\rangle\langle u| = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \begin{pmatrix} 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} .
 $$
 
-Here is why no other matrix $M$ will do, in three steps.
+The proof that no other matrix $M$ will do takes three steps, under
+the cut.
+
+<details>
+<summary>Why the matrix must be the projector (Landau and Lifshitz, §3)</summary>
 
 1. The state $|a_i\rangle$ has $c_i = 1$ and every other coordinate
    zero, so of the whole sum $p_i(\psi) = \sum_{j,k} M_{jk}\, c_j^* c_k$
@@ -902,7 +906,11 @@ Here is why no other matrix $M$ will do, in three steps.
    $M_{ik} = 0$, and with it $M_{ki} = 0$, for every $k \neq i$.
 
 What is left of $M$ is the single $1$ in the $i$-th place, and
-$p_i = |c_i|^2$. So the guess is forced, and the formula is an
+$p_i = |c_i|^2$.
+
+</details>
+
+So the guess is forced, and the formula is an
 average in the plain sense:
 
 $$
