@@ -560,33 +560,33 @@ throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
 > with *real* numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
 
-Real, because the $\lambda_i$ are about to be read as the outcomes
-of a measurement, and the readings of an apparatus are real numbers.
+The numbers are required to be real because they are about to be
+read as the outcomes of a measurement, and the readings of an
+apparatus are real numbers.
 
-Which tables satisfy the assumption? Not all of them, and the ones
-that do form a definite class: a matrix that is diagonal in some
-orthonormal basis, with real numbers on the diagonal, equals its own
-conjugate transpose — the matrix with rows and columns swapped and
-every entry conjugated, written $\bar A^{\mathsf T}$, the bar for the
-conjugation and the $\mathsf T$ for the transposition:
+The assumption does not hold for every table. A matrix that is
+diagonal in some orthonormal basis, with real numbers on the
+diagonal, equals its own conjugate transpose — the matrix with rows
+and columns swapped and every entry conjugated, written
+$\bar A^{\mathsf T}$, the bar for the conjugation and the
+$\mathsf T$ for the transposition:
 
 $$
 A = \bar A^{\mathsf T} .
 $$
 
 Such matrices are called
-[**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix). So
-the assumption restricts the tables of observables to Hermitian
-matrices, and the next post is about them: that the restriction
-follows from the reality of the readings alone, that it is enough
-for the assumed basis to exist, and so that the assumption excludes
-nothing physical. The cut below is optional — for readers who want
-to see what the assumption rules out.
+[**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix), and
+the assumption restricts the tables of observables to them. The next
+post shows that the restriction is no loss: it already follows from
+the reality of the readings, and it is enough for the assumed basis
+to exist. The cut below is optional — for readers who want to see
+what the assumption rules out.
 
 <details>
 <summary>For the linear algebra lovers: what the assumption rules out</summary>
 
-Two things, in order of severity.
+Two things can go wrong, the second milder than the first.
 
 *There may be no eigenbasis at all.* Over the complex numbers every
 square matrix has at least one direction that it merely rescales:
