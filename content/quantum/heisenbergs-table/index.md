@@ -734,7 +734,7 @@ magnitudes, do not add; this is the
 that amplitudes can cancel in a superposition, and it is the quantum
 content of the assumption. A worked example on the spin — the same
 two pieces reinforcing in one combination and cancelling in the
-other — waits under a cut at the end of this subsection.
+other — ends this subsection.
 
 ![Interference: the coordinate of a sum of states is the sum of the coordinates, but the probability, the squared magnitude, is not the sum of the probabilities — a cross term is added, positive or negative](interference.png)
 
@@ -941,10 +941,7 @@ projector $|a_i\rangle\langle a_i|$. Its average is
 $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$, the
 probability of "yes" — the Born rule, read off the average rule.
 
-<details>
-<summary>Interference on the spin</summary>
-
-Ask the $z$ question of the two $x$-definite states: the probability
+**Interference on the spin.** Ask the $z$ question of the two $x$-definite states: the probability
 of "up" is $p = \langle \psi | u \rangle \langle u | \psi \rangle = |\langle u | \psi \rangle|^2$,
 and since $|r\rangle$ and $|l\rangle$ are each half up and half down,
 $|\langle u | r \rangle|^2 = |\langle u | l \rangle|^2 = \tfrac12$. Now
@@ -975,7 +972,6 @@ the smallest possible setting.
 
 ![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
 
-</details>
 
 ### The diagonal basis is the eigenbasis
 
