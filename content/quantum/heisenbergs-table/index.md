@@ -1039,7 +1039,11 @@ place of two states, is the experiment that opens volume III of
 Feynman (chapter 1, §1, eq. 1.3): an electron can reach a point $x$ of the
 screen through slit 1 or through slit 2, with amplitudes
 $\phi_1 = \langle x | 1 \rangle \langle 1 | s \rangle$ and
-$\phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle$; with one slit
+$\phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle$.
+
+![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
+
+With one slit
 open at a time the counts across the screen form one smooth spot
 opposite the slit, $P_1 = |\phi_1|^2$ or $P_2 = |\phi_2|^2$, with no
 fringes. With both open they are not the sum $P_1 + P_2$ but
@@ -1051,8 +1055,6 @@ an alternative to a mixture can only add probability. (The single
 slit spot is drawn as a plain hump, as Feynman draws it; the exact
 shape of a single slit's diffraction pattern has small side lobes,
 which change nothing here.)
-
-![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
 
 ### The diagonal basis is the eigenbasis
 
