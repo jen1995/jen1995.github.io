@@ -154,6 +154,12 @@ The longest post; notes §9–13 + the classical interlude.
   updated to "the last two posts".
 - Promised in post 1's mixture paragraph: the density matrix "in a
   later post" — slot it into QM-4 (qubit) or a short post after it.
+- Promised in post 1's two-slit paragraph: "the road returns to the
+  two slits with exact formulas when it has the Schrödinger
+  equation" — in QM-5 (or the free-particle/tunneling post), redo
+  Feynman III ch. 1 §1 with his eq. (1.7), the free-particle
+  amplitude e^{ipr/ħ}/r (wavenumber p/ħ), and compute the fringes
+  explicitly; notebook candidate.
 
 ## Status (2026-10-25, evening): Born rule derived once
 
