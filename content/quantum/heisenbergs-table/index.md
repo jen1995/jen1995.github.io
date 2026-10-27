@@ -1061,7 +1061,14 @@ place of two states, is the experiment that opens volume III of
 Feynman (chapter 1, §1, eq. 1.3): an electron can reach a point $x$ of the
 screen through slit 1 or through slit 2, with amplitudes
 $\phi_1 = \langle x | 1 \rangle \langle 1 | s \rangle$ and
-$\phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle$.
+$\phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle$. The kets are
+Feynman's names for the stages of the trip: $|s\rangle$ is the
+electron leaving the source, $|1\rangle$ the electron at slit 1,
+$|x\rangle$ the electron at the point $x$ — the position ket of the
+[delta post](/quantum/from-kronecker-to-dirac/) — and each
+amplitude is a product of the amplitudes of the two legs, source to
+slit and slit to screen. Nothing below uses this structure; only
+that there are two amplitudes and they add.
 
 ![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
 
