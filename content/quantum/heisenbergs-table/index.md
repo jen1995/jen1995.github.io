@@ -888,8 +888,11 @@ Here is why no other matrix $M$ will do, in three steps.
    Since $p_i$ is real for every state, polarization gives
    $M_{ki} = M_{ik}^*$, so the bracket is
    $M_{ik} e^{i\varphi} + (M_{ik} e^{i\varphi})^* = 2\,\mathrm{Re}(M_{ik} e^{i\varphi})$,
-   and we are free to choose $\varphi$. Choose it so that
-   $M_{ik} e^{i\varphi}$ is the negative real number $-|M_{ik}|$:
+   and we are free to choose $\varphi$. Write the complex number
+   $M_{ik}$ as modulus times phase, $M_{ik} = |M_{ik}|\, e^{i\alpha}$;
+   then $M_{ik} e^{i\varphi} = |M_{ik}|\, e^{i(\alpha + \varphi)}$, and
+   choosing $\varphi = \pi - \alpha$ makes it the negative real number
+   $-|M_{ik}|$, with real part $-|M_{ik}|$:
    $$p_i = \varepsilon^2 - 2 \varepsilon \sqrt{1 - \varepsilon^2}\, |M_{ik}| .$$
    Factor out $\varepsilon$:
    $$p_i = \varepsilon \Big( \varepsilon - 2 \sqrt{1 - \varepsilon^2}\, |M_{ik}| \Big) .$$
