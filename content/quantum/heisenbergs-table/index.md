@@ -848,8 +848,9 @@ p_u = c^\dagger M c = \begin{pmatrix} c_u^* & c_d^* \end{pmatrix} \begin{pmatrix
 $$
 
 In operator form, $\hat M = |a_i\rangle\langle a_i|$, the projector
-onto $|a_i\rangle$, one for each outcome — for the spin, a column
-times a row:
+onto $|a_i\rangle$, one for each outcome. In coordinates an outer
+product is a column times a row, and for the spin and "up" it gives
+the matrix above:
 
 $$
 |u\rangle\langle u| = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \begin{pmatrix} 1 & 0 \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} .
