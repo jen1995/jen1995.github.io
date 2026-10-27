@@ -739,8 +739,9 @@ other — waits under a cut at the end of this subsection.
 ![Interference: the coordinate of a sum of states is the sum of the coordinates, but the probability, the squared magnitude, is not the sum of the probabilities — a cross term is added, positive or negative](interference.png)
 
 
-Here is the lemma the pairing of the cross terms rested on; it is
-used again in the argument below and later in the chapter. What it
+Here is the polarization lemma that the pairing of the cross terms
+rested on; it is used again in the argument below and later in the
+chapter. What it
 says is less obvious than it looks. Reality of $p$ is a condition on
 the values $\langle \psi | \hat M | \psi \rangle$, one number per
 state; conjugate symmetry is a condition on
