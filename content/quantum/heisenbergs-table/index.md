@@ -1,7 +1,7 @@
 ---
 title: "Heisenberg's Table: Where the Matrices Come From"
-date: 2026-10-25
-draft: true
+date: 2026-10-27
+draft: false
 tags: ["quantum", "math", "physics"]
 summary: "The measurable quantities of the first post get mathematical objects of their own, by the road Heisenberg, Dirac and Landau took: what an apparatus gives us is averages; a quantity is a table with two indices — an operator, the object Heisenberg found in the spectral lines; in the basis where the table is diagonal the average is a weighted average of the outcomes, and the only admissible weights are the squared coordinates — the Born rule, earned. The price of the bilinear assumption is interference, computed on the spin and seen in the two-slit experiment."
 math: true
@@ -868,7 +868,10 @@ $i$-th place on the diagonal, and zeros everywhere else. For the spin
 and the outcome "up",
 
 $$
-p_u = c^\dagger M c = \begin{pmatrix} c_u^* & c_d^* \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} c_u \\ c_d \end{pmatrix} = |c_u|^2 .
+\begin{aligned}
+p_u = c^\dagger M c &= \begin{pmatrix} c_u^* & c_d^* \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} c_u \\ c_d \end{pmatrix} \\
+&= |c_u|^2 .
+\end{aligned}
 $$
 
 In operator form, $\hat M = |a_i\rangle\langle a_i|$, the projector
@@ -1019,7 +1022,10 @@ contributes a quarter, $p_u(\psi_1) = p_u(\psi_2) = \tfrac14$, and the
 cross term is
 
 $$
-2\,\mathrm{Re}\, \langle \psi_1 | u \rangle \langle u | \psi_2 \rangle = 2 \cdot \tfrac{1}{\sqrt 2} \langle r | u \rangle \cdot \big(\pm \tfrac{1}{\sqrt 2}\big) \langle u | l \rangle = \pm\, 2 \cdot \tfrac12 \cdot \tfrac12 = \pm \tfrac12 ,
+\begin{aligned}
+2\,\mathrm{Re}\, \langle \psi_1 | u \rangle \langle u | \psi_2 \rangle &= 2 \cdot \tfrac{1}{\sqrt 2} \langle r | u \rangle \cdot \big(\pm \tfrac{1}{\sqrt 2}\big) \langle u | l \rangle \\
+&= \pm\, 2 \cdot \tfrac12 \cdot \tfrac12 = \pm \tfrac12 ,
+\end{aligned}
 $$
 
 using $\langle r | u \rangle = \langle u | l \rangle = \tfrac{1}{\sqrt 2}$.
@@ -1042,7 +1048,10 @@ $1 - w$, we just do not know which. Then every probability is a
 weighted sum of conditional probabilities,
 
 $$
-P(\text{up}) = w\, P(\text{up} \mid r) + (1 - w)\, P(\text{up} \mid l) = w \cdot \tfrac12 + (1 - w) \cdot \tfrac12 = \tfrac12 ,
+\begin{aligned}
+P(\text{up}) &= w\, P(\text{up} \mid r) + (1 - w)\, P(\text{up} \mid l) \\
+&= w \cdot \tfrac12 + (1 - w) \cdot \tfrac12 = \tfrac12 ,
+\end{aligned}
 $$
 
 for every $w$: probabilities of alternatives add, and no choice of
