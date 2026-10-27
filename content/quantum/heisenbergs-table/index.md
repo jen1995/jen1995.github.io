@@ -650,7 +650,9 @@ with $U$ unitary) are different classes, the second strictly inside
 the first. The second class, without the requirement of a real
 diagonal, is the class of *normal* matrices, those with
 $A \bar A^{\mathsf T} = \bar A^{\mathsf T} A$ (Panov, §4.7, Theorem
-4.7.3); with a real diagonal it is the Hermitian matrices, and those
+4.7.3); with a real diagonal it is the Hermitian matrices (Panov,
+§4.2: Proposition 4.2.2 for the matrix form, Theorem 4.2.3 with
+Lemma 4.2.4 for the eigenbasis and the real eigenvalues), and those
 are the only ones this road will need.
 
 </details>
@@ -1186,7 +1188,10 @@ road, from the particle in a box to the hydrogen atom.
   $\mathbb C$ every operator has an eigenvector, p. 35), §2.7
   (diagonalizable operators and the criterion, p. 37), §3.4
   (transition matrices between orthonormal bases are unitary,
-  Proposition 3.4.2), §4.7 (normal operators: Theorem 4.7.3,
+  Proposition 3.4.2), §4.2 (self-adjoint operators: Proposition
+  4.2.2, Hermitian matrix in an orthonormal basis; Theorem 4.2.3 and
+  Lemma 4.2.4, the orthonormal eigenbasis with real eigenvalues,
+  pp. 66–67), §4.7 (normal operators: Theorem 4.7.3,
   an operator is diagonalizable in an orthonormal basis if and only
   if it commutes with its adjoint, p. 76) and §5.1 (bilinear and
   sesquilinear forms, their matrices and the change-of-basis law,
