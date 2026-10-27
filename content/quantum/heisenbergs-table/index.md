@@ -579,7 +579,12 @@ Every table that satisfies the assumption is Hermitian: if $A$ is
 diagonal in some orthonormal basis with real numbers on the
 diagonal, then $A = \bar A^{\mathsf T}$ (the next post proves this in
 one line, by conjugating the diagonal form). So the assumption
-restricts the tables of observables to Hermitian matrices. The next
+restricts the tables of observables to Hermitian matrices — and
+this restriction carries the reality of the $\lambda_i$ with it: a
+Hermitian matrix cannot rescale any vector by a complex factor, as
+the next post also shows, so a table that is diagonal in an
+orthonormal basis with complex numbers on the diagonal is excluded
+twice over. The next
 post shows that the restriction is no loss: it already follows from
 the reality of the readings, and it is enough for the assumed basis
 to exist. The cut below is optional — for readers who want to see
