@@ -923,8 +923,8 @@ the [second post](/quantum/states-are-vectors/#what-the-geometry-means-physicall
 took on credit:
 
 > **The Born rule.** If $|\psi\rangle = \sum_i c_i |a_i\rangle$ in the
-> basis where the question is diagonal, the probability that a
-> measurement of it returns $\lambda_i$ is
+> basis where the table of the question is diagonal, the probability
+> that a measurement of the question returns $\lambda_i$ is
 > $$P(\lambda_i) = |c_i|^2 = |\langle a_i | \psi \rangle|^2 .$$
 
 The derivation rests on one assumption beyond the three conditions:
