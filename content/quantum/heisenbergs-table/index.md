@@ -1040,11 +1040,17 @@ Feynman (chapter 1, §1, eq. 1.3): an electron can reach a point $x$ of the
 screen through slit 1 or through slit 2, with amplitudes
 $\phi_1 = \langle x | 1 \rangle \langle 1 | s \rangle$ and
 $\phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle$; with one slit
-open at a time the counts across the screen form one smooth spot,
-$P_1 = |\phi_1|^2$ or $P_2 = |\phi_2|^2$; with both open they are not
-the sum $P_1 + P_2$ but $P_{12} = |\phi_1 + \phi_2|^2$, a pattern of
-fringes — and in the dark fringes opening the second slit has
-*reduced* the count.
+open at a time the counts across the screen form one smooth spot
+opposite the slit, $P_1 = |\phi_1|^2$ or $P_2 = |\phi_2|^2$, with no
+fringes. With both open they are not the sum $P_1 + P_2$ but
+$P_{12} = |\phi_1 + \phi_2|^2$: a pattern of fringes whose envelope is
+roughly $P_1 + P_2$, but in whose dark fringes there are *fewer*
+electrons than with one slit alone. Opening a second path reduced
+the count at those points — which no mixture can do, since adding
+an alternative to a mixture can only add probability. (The single
+slit spot is drawn as a plain hump, as Feynman draws it; the exact
+shape of a single slit's diffraction pattern has small side lobes,
+which change nothing here.)
 
 ![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
 
