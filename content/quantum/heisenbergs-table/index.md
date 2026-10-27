@@ -1079,8 +1079,13 @@ $$
 \phi_1 = \langle x | 1 \rangle \langle 1 | s \rangle, \qquad \phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle
 $$
 
-(his eq. 1.5). Nothing below uses this structure; only that there
-are two amplitudes and they add.
+(his eq. 1.5). The formulas read from right to left, like a product
+of matrices: in a bracket $\langle b | a \rangle$ the starting
+condition stands on the right and the final one on the left, so the
+electron goes from $s$ to the slit and then to $x$ — Feynman warns
+that the equation "seems to be written backwards". Nothing below
+uses this structure; only that there are two amplitudes and they
+add.
 
 ![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
 
