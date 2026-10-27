@@ -583,11 +583,14 @@ The cut below is optional — for readers who want to see
 what the assumption rules out.
 
 <details>
-<summary>For the linear algebra lovers: what the assumption rules out</summary>
+<summary>For the linear algebra lovers: each requirement of the assumption is needed</summary>
 
-Three things can go wrong, each milder than the one before.
+The assumption asks for three things: a basis of directions the
+table merely rescales, that basis orthonormal, and the rescaling
+factors real. Here is one matrix for each requirement, satisfying
+the others and failing that one.
 
-*There may be no eigenbasis at all.* Over the complex numbers every
+*No eigenbasis at all.* Over the complex numbers every
 square matrix has at least one direction that it merely rescales:
 the characteristic polynomial $\det(A - \lambda I)$ has a root, by
 the fundamental theorem of algebra, and a root of it is a rescaling
@@ -602,7 +605,7 @@ $$
 has the single root $\lambda = 0$ and rescales only the multiples of
 $(1, 0)^{\mathsf T}$; no change of basis makes it diagonal.
 
-*There may be an eigenbasis, but not an orthonormal one.* Take
+*An eigenbasis, but not an orthonormal one.* Take
 
 $$
 A = \begin{pmatrix} 1 & 1 \\ 0 & 2 \end{pmatrix},
@@ -627,8 +630,8 @@ $\hat A^\dagger = \hat A$; for the matrix above it fails, and indeed
 the matrix is not Hermitian — its conjugate transpose is
 $\begin{pmatrix} 1 & 0 \\ 1 & 2 \end{pmatrix}$.
 
-*There may be an orthonormal eigenbasis, but with complex numbers on
-the diagonal.* The rotation by $90°$,
+*An orthonormal eigenbasis, but complex numbers on the diagonal.*
+The rotation by $90°$,
 
 $$
 A = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix},
