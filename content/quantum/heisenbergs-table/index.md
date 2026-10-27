@@ -1010,12 +1010,13 @@ $$
 The two probabilities are correct — $|u\rangle$ is certainly up and
 $|d\rangle$ certainly down — and they came from the *same* two pieces
 with *opposite* cross terms. Compare a classical mixture, an electron
-that is $|r\rangle$ half the time and $|l\rangle$ the other half: its
-probability of "up" is $\tfrac12$ whichever way the pieces are
-combined, because for a mixture the probability of a sum is the sum
-of the probabilities. For a superposition it is not: amplitudes add,
-the probability is the squared magnitude of the sum, and the pieces
-can reinforce or cancel. The second post said this in
+that is $|r\rangle$ half the time and $|l\rangle$ the other half. There
+the probability of "up" is the weighted sum of the two conditional
+probabilities, $\tfrac12 \cdot \tfrac12 + \tfrac12 \cdot \tfrac12 = \tfrac12$,
+and no sign can enter: probabilities of alternatives add. In a
+superposition the alternatives are not weighted, they are added as
+vectors; amplitudes add, the probability is the squared magnitude of
+the sum, and the pieces can reinforce or cancel. The second post said this in
 ["What the geometry means physically"](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 — amplitudes can cancel in a superposition — and it is the two-slit
 experiment of volume III, chapter 1 of Feynman, with two states in
