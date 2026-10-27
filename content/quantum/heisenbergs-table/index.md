@@ -839,8 +839,7 @@ the conditions again, in formulas, to keep beside the argument:
 3. $p_i(a_i) = 1$, and $p_i(\psi) = 0$ whenever $c_i = \langle a_i | \psi \rangle = 0$.
 
 In terms of the
-matrix of the bilinear expression,
-$p_i = \sum_{j,k} M_{jk}\, c_j^* c_k$: $M$ has a single $1$, in the
+matrix of the bilinear expression: $M$ has a single $1$, in the
 $i$-th place on the diagonal, and zeros everywhere else. For the spin
 and the outcome "up",
 
