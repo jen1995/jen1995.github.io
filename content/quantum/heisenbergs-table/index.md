@@ -1009,18 +1009,35 @@ $$
 
 The two probabilities are correct — $|u\rangle$ is certainly up and
 $|d\rangle$ certainly down — and they came from the *same* two pieces
-with *opposite* cross terms. Compare a classical mixture, an electron
-that is $|r\rangle$ half the time and $|l\rangle$ the other half. There
-the probability of "up" is the weighted sum of the two conditional
-probabilities, $\tfrac12 \cdot \tfrac12 + \tfrac12 \cdot \tfrac12 = \tfrac12$,
+with *opposite* cross terms.
+
+**Superposition is not a mixture.** Compare a classical mixture: an
+electron that is $|r\rangle$ half the time and $|l\rangle$ the other
+half. There the probability of "up" is the weighted sum of the two
+conditional probabilities,
+
+$$
+P(\text{up}) = \tfrac12\, P(\text{up} \mid r) + \tfrac12\, P(\text{up} \mid l) = \tfrac12 \cdot \tfrac12 + \tfrac12 \cdot \tfrac12 = \tfrac12 ,
+$$
+
 and no sign can enter: probabilities of alternatives add. In a
 superposition the alternatives are not weighted, they are added as
 vectors; amplitudes add, the probability is the squared magnitude of
-the sum, and the pieces can reinforce or cancel. The second post said this in
+the sum, and the pieces can reinforce or cancel. The second post said
+this in
 ["What the geometry means physically"](/quantum/states-are-vectors/#what-the-geometry-means-physically)
-— amplitudes can cancel in a superposition — and it is the two-slit
-experiment of volume III, chapter 1 of Feynman, with two states in
-place of two slits.
+— amplitudes can cancel in a superposition — and here it is
+computed. The same arithmetic, with two slits in place of two
+states, is the two-slit experiment that opens volume III of Feynman
+(chapter 1, §1, eq. 1.3): an electron can reach a point $x$ of the
+screen through slit 1 or through slit 2, with amplitudes
+$\phi_1 = \langle x | 1 \rangle \langle 1 | s \rangle$ and
+$\phi_2 = \langle x | 2 \rangle \langle 2 | s \rangle$; with one slit
+open at a time the counts are $P_1 = |\phi_1|^2$ and
+$P_2 = |\phi_2|^2$, and with both open they are not $P_1 + P_2$ but
+$P_{12} = |\phi_1 + \phi_2|^2$, the fringes.
+
+![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
 
 ![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
 
@@ -1341,7 +1358,11 @@ item of the wishlist.
   eq. (45) (p. 69) — the route this post takes to the Born rule.
 - R. P. Feynman, R. B. Leighton, M. Sands. *The Feynman Lectures on
   Physics*, vol. III (Russian edition: *Фейнмановские лекции по
-  физике*, вып. 8–9 *Квантовая механика*, Мир, 1978) — chapter 5,
+  физике*, вып. 8–9 *Квантовая механика*, Мир, 1978) — chapter 1,
+  "Quantum Behavior", §1-1 (Russian ed. глава 1, §1, pp. 11–12):
+  the two-slit experiment, with $P_{12} = |\phi_1 + \phi_2|^2$ as
+  eq. (1.3) and $\phi_1 = \langle x | 1 \rangle \langle 1 | s \rangle$
+  as eq. (1.5); chapter 5,
   "Spin One", §5-6 "The machinery of quantum mechanics" (Russian ed.
   глава 3, §6, pp. 75–78): any apparatus between Stern–Gerlach
   filters is described by the nine amplitudes
