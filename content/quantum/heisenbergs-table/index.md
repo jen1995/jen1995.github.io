@@ -845,7 +845,7 @@ $i$-th place on the diagonal, and zeros everywhere else. For the spin
 and the outcome "up",
 
 $$
-M = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \qquad c^\dagger M c = |c_u|^2 .
+p_u = c^\dagger M c = \begin{pmatrix} c_u^* & c_d^* \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} c_u \\ c_d \end{pmatrix} = |c_u|^2 .
 $$
 
 In operator form, $\hat M = |a_i\rangle\langle a_i|$: the projector
