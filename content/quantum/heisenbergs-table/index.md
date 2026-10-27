@@ -1083,9 +1083,15 @@ $$
 of matrices: in a bracket $\langle b | a \rangle$ the starting
 condition stands on the right and the final one on the left, so the
 electron goes from $s$ to the slit and then to $x$ — Feynman warns
-that the equation "seems to be written backwards". Nothing below
-uses this structure; only that there are two amplitudes and they
-add.
+that the equation "seems to be written backwards". He also gives
+the amplitudes themselves, for a free particle: the amplitude to go
+from a point $r_1$ to a point $r_2$ is $e^{i p r_{12}/\hbar} / r_{12}$
+up to a constant, with $r_{12}$ the distance and $p$ the momentum
+(his eq. 1.7) — a wave with wavenumber $p/\hbar$, which is where the
+fringes come from. On this road that formula arrives with the
+momentum operator and the Schrödinger equation, several posts
+ahead. Nothing below uses it; only that there are two amplitudes
+and they add.
 
 ![Feynman's two-slit experiment: two paths to the same point of the screen, with amplitudes φ₁ and φ₂; with one slit open at a time the distributions P₁ and P₂ are smooth, and with both open the distribution is |φ₁+φ₂|², with interference fringes, not the sum P₁+P₂](two_slits.png)
 
