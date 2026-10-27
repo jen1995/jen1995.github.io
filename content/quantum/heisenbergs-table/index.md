@@ -575,19 +575,15 @@ A = \bar A^{\mathsf T} ,
 $$
 
 is called [**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix).
-Every table that satisfies the assumption is Hermitian: if $A$ is
-diagonal in some orthonormal basis with real numbers on the
-diagonal, then $A = \bar A^{\mathsf T}$ (the next post proves this in
-one line, by conjugating the diagonal form). So the assumption
-restricts the tables of observables to Hermitian matrices — and
-this restriction carries the reality of the $\lambda_i$ with it: a
-Hermitian matrix cannot rescale any vector by a complex factor, as
-the next post also shows, so a table that is diagonal in an
-orthonormal basis with complex numbers on the diagonal is excluded
-twice over. The next
-post shows that the restriction is no loss: it already follows from
-the reality of the readings, and it is enough for the assumed basis
-to exist. The cut below is optional — for readers who want to see
+The tables that satisfy the assumption turn out to be the Hermitian
+matrices, and nothing else. This is a theorem, in two halves. That
+a table diagonal in some orthonormal basis with real numbers on the
+diagonal is Hermitian takes one line, conjugating the diagonal form;
+that every Hermitian matrix has such a basis, with real numbers on
+the diagonal, is the spectral theorem. The next post proves both,
+and also shows that Hermiticity follows from the reality of the
+readings alone, so the assumption excludes nothing physical.
+The cut below is optional — for readers who want to see
 what the assumption rules out.
 
 <details>
