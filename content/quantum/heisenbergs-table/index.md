@@ -990,10 +990,18 @@ $$
 — the second post's formulas for $|r\rangle$ and $|l\rangle$, read
 backwards — are built from the same two pieces,
 $\tfrac{1}{\sqrt 2}|r\rangle$ and $\pm\tfrac{1}{\sqrt 2}|l\rangle$.
-Each piece alone contributes a quarter,
-$p_u(\tfrac{1}{\sqrt 2} r) = p_u(\tfrac{1}{\sqrt 2} l) = \tfrac14$, and
-the cross term $2\,\mathrm{Re}\,\langle \tfrac{1}{\sqrt 2} r | u \rangle \langle u | \pm \tfrac{1}{\sqrt 2} l \rangle$
-is $\pm 2 \cdot \tfrac12 \cdot \tfrac12 = \pm\tfrac12$:
+Apply the interference formula with $\hat M = |u\rangle\langle u|$,
+$|\psi_1\rangle = \tfrac{1}{\sqrt 2}|r\rangle$ and
+$|\psi_2\rangle = \pm\tfrac{1}{\sqrt 2}|l\rangle$. Each piece alone
+contributes a quarter, $p_u(\psi_1) = p_u(\psi_2) = \tfrac14$, and the
+cross term is
+
+$$
+2\,\mathrm{Re}\, \langle \psi_1 | u \rangle \langle u | \psi_2 \rangle = 2 \cdot \tfrac{1}{\sqrt 2} \langle r | u \rangle \cdot \big(\pm \tfrac{1}{\sqrt 2}\big) \langle u | l \rangle = \pm\, 2 \cdot \tfrac12 \cdot \tfrac12 = \pm \tfrac12 ,
+$$
+
+using $\langle r | u \rangle = \langle u | l \rangle = \tfrac{1}{\sqrt 2}$.
+So
 
 $$
 p_u(u) = \tfrac14 + \tfrac14 + \tfrac12 = 1, \qquad p_u(d) = \tfrac14 + \tfrac14 - \tfrac12 = 0 .
