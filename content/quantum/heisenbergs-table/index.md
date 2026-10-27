@@ -1100,11 +1100,10 @@ slit spot is drawn as a plain hump, as Feynman draws it; the exact
 shape of a single slit's diffraction pattern has small side lobes,
 which change nothing here.)
 
-What the amplitudes $\phi_1$ and
-$\phi_2$ are as functions of the distances is a question for the
-Schrödinger equation, and a later post of this road will compute
-the fringes from it. Here only two facts about them were used:
-there are two of them, and they add.
+Computing the amplitudes $\phi_1$ and $\phi_2$ as functions of the
+distances requires the Schrödinger equation; a later post of this
+road will do it and obtain the fringes. This post used nothing
+about them except that there are two and that they add.
 
 ## What we built
 
