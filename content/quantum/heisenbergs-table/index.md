@@ -732,9 +732,9 @@ amplitudes* of the second post. The probabilities, their squared
 magnitudes, do not add; this is the
 [second post's remark](/quantum/states-are-vectors/#what-the-geometry-means-physically)
 that amplitudes can cancel in a superposition, and it is the quantum
-content of the assumption. A worked example on the spin, with the
-same two pieces reinforcing in one combination and cancelling in the
-other, closes this subsection.
+content of the assumption. A worked example on the spin — the same
+two pieces reinforcing in one combination and cancelling in the
+other — waits under a cut at the end of this subsection.
 
 ![Interference: the coordinate of a sum of states is the sum of the coordinates, but the probability, the squared magnitude, is not the sum of the probabilities — a cross term is added, positive or negative](interference.png)
 
