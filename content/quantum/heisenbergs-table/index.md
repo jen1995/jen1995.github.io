@@ -558,40 +558,33 @@ throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the observable is diagonal,
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
-> with numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
+> with *real* numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
+
+Real, because the $\lambda_i$ are about to be read as the outcomes
+of a measurement, and the readings of an apparatus are real numbers.
 
 Which tables satisfy the assumption? Not all of them, and the ones
-that do form a definite class: a matrix is diagonal in some
-orthonormal basis exactly when it commutes with its conjugate
-transpose — the matrix with rows and columns swapped and every entry
-conjugated, written $\bar A^{\mathsf T}$, the bar for the conjugation
-and the $\mathsf T$ for the transposition:
-
-$$
-A \bar A^{\mathsf T} = \bar A^{\mathsf T} A .
-$$
-
-Such matrices are called [**normal**](https://en.wikipedia.org/wiki/Normal_matrix)
-(Panov's lectures, §4.7, Theorem 4.7.3). So the assumption
-restricts the tables of observables to normal matrices. The road
-will narrow the class once more, and then stop: the numbers
-$\lambda_i$ on the diagonal are about to be read as the outcomes of
-a measurement, which are real, and a normal matrix with a real
-diagonal in its diagonalizing basis equals its own conjugate
-transpose,
+that do form a definite class: a matrix that is diagonal in some
+orthonormal basis, with real numbers on the diagonal, equals its own
+conjugate transpose — the matrix with rows and columns swapped and
+every entry conjugated, written $\bar A^{\mathsf T}$, the bar for the
+conjugation and the $\mathsf T$ for the transposition:
 
 $$
 A = \bar A^{\mathsf T} .
 $$
 
-Such matrices are called **Hermitian**, and the next post is about
-them: that every observable is Hermitian, that Hermitian is enough
+Such matrices are called
+[**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix). So
+the assumption restricts the tables of observables to Hermitian
+matrices, and the next post is about them: that the restriction
+follows from the reality of the readings alone, that it is enough
 for the assumed basis to exist, and so that the assumption excludes
 nothing physical. The cut below is optional — for readers who want
-to see why the restriction to normal matrices is real.
+to see what the assumption rules out.
 
 <details>
-<summary>For the linear algebra lovers: what can go wrong without normality</summary>
+<summary>For the linear algebra lovers: what the assumption rules out</summary>
 
 Two things, in order of severity.
 
@@ -630,20 +623,18 @@ it, in the next post, moves the operator across the bracket,
 $\langle \varphi_1 | \hat A \varphi_2 \rangle = \langle \hat A^\dagger \varphi_1 | \varphi_2 \rangle$,
 and then needs $\varphi_1$ to be an eigenvector of $\hat A^\dagger$ as
 well. For a Hermitian operator that is automatic, since
-$\hat A^\dagger = \hat A$; for a normal one it is Panov's Lemma 4.7.2
-(an eigenvector of a normal operator with eigenvalue $\lambda$ is an
-eigenvector of its adjoint with eigenvalue $\lambda^*$); for the
-matrix above it fails, and indeed the matrix is not normal:
-
-$$
-A \bar A^{\mathsf T} = \begin{pmatrix} 2 & 2 \\ 2 & 4 \end{pmatrix}, \qquad \bar A^{\mathsf T} A = \begin{pmatrix} 1 & 1 \\ 1 & 5 \end{pmatrix} .
-$$
+$\hat A^\dagger = \hat A$; for the matrix above it fails, and indeed
+the matrix is not Hermitian — its conjugate transpose is
+$\begin{pmatrix} 1 & 0 \\ 1 & 2 \end{pmatrix}$.
 
 So "diagonalizable" ($A = S \Lambda S^{-1}$ for some invertible $S$)
 and "diagonalizable in an orthonormal basis" ($A = U \Lambda U^\dagger$
 with $U$ unitary) are different classes, the second strictly inside
-the first, and Theorem 4.7.3 identifies the second with the normal
-matrices.
+the first. The second class, without the requirement of a real
+diagonal, is the class of *normal* matrices, those with
+$A \bar A^{\mathsf T} = \bar A^{\mathsf T} A$ (Panov, §4.7, Theorem
+4.7.3); with a real diagonal it is the Hermitian matrices, and those
+are the only ones this road will need.
 
 </details>
 
