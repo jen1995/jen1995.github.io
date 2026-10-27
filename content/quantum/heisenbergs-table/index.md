@@ -560,9 +560,9 @@ throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$
 > with *real* numbers $\lambda_1, \dots, \lambda_n$ on the diagonal.
 
-The numbers $\lambda_i$ are required to be real because they are about to be
-read as the outcomes of a measurement, and the readings of an
-apparatus are real numbers.
+The $\lambda_i$ will be read as the outcomes of a measurement, and
+an apparatus reads out real numbers; that is why they are required
+to be real.
 
 The assumption does not hold for every table. A matrix that is
 diagonal in some orthonormal basis, with real numbers on the
