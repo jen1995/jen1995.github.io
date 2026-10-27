@@ -1013,23 +1013,26 @@ with *opposite* cross terms.
 
 ![Interference on the spin: the amplitudes of the two pieces along |u⟩ add to 1 for the sum and to 0 for the difference, so the probabilities of "up" are 1 and 0, while a classical mixture of the same two pieces would give one half](interference_spin.png)
 
-**Superposition is not a mixture.** Compare a classical mixture: an
-electron that is $|r\rangle$ half the time and $|l\rangle$ the other
-half. There the probability of "up" is the weighted sum of the two
-conditional probabilities,
+**Superposition is not a mixture.** Suppose one tried to model the
+spin without amplitudes, as a classical *mixture*: an electron that
+is $|r\rangle$ with probability $w$ and $|l\rangle$ with probability
+$1 - w$, we just do not know which. Then every probability is a
+weighted sum of conditional probabilities,
 
 $$
-P(\text{up}) = \tfrac12\, P(\text{up} \mid r) + \tfrac12\, P(\text{up} \mid l) = \tfrac12 \cdot \tfrac12 + \tfrac12 \cdot \tfrac12 = \tfrac12 ,
+P(\text{up}) = w\, P(\text{up} \mid r) + (1 - w)\, P(\text{up} \mid l) = w \cdot \tfrac12 + (1 - w) \cdot \tfrac12 = \tfrac12 ,
 $$
 
-and no sign can enter: probabilities of alternatives add. In a
-superposition the alternatives are not weighted, they are added as
-vectors; amplitudes add, the probability is the squared magnitude of
-the sum, and the pieces can reinforce or cancel. The second post said
-this in
-["What the geometry means physically"](/quantum/states-are-vectors/#what-the-geometry-means-physically)
-— amplitudes can cancel in a superposition — and here it is
-computed.
+for every $w$: probabilities of alternatives add, and no choice of
+weights makes "up" certain. No mixture of $|r\rangle$ and $|l\rangle$
+is $|u\rangle$. In a superposition the alternatives are not weighted,
+they are added as vectors; amplitudes add, the probability is the
+squared magnitude of the sum, and the pieces can reinforce — the
+combination $|u\rangle$ above, with $P(\text{up}) = 1$ — or cancel.
+(In probability theory a weighted sum of distributions is a *mixture
+distribution*; in quantum mechanics a state of this kind is a *mixed
+state*, and it has its own object, the density matrix, which a later
+post introduces.)
 
 **The two-slit experiment.** The same arithmetic, with two slits in
 place of two states, is the experiment that opens volume III of
