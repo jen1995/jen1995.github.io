@@ -575,14 +575,10 @@ A = \bar A^{\mathsf T} ,
 $$
 
 is called [**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix).
-The tables that satisfy the assumption turn out to be the Hermitian
-matrices, and nothing else. This is a theorem, in two halves. That
-a table diagonal in some orthonormal basis with real numbers on the
-diagonal is Hermitian takes one line, conjugating the diagonal form;
-that every Hermitian matrix has such a basis, with real numbers on
-the diagonal, is the spectral theorem. The next post proves both,
-and also shows that Hermiticity follows from the reality of the
-readings alone, so the assumption excludes nothing physical.
+There is a theorem that the matrices satisfying the assumption are
+exactly the Hermitian ones. The next post proves it, and shows that
+the reality of the readings alone already makes the table Hermitian,
+so the assumption excludes nothing physical.
 The cut below is optional — for readers who want to see
 what the assumption rules out.
 
