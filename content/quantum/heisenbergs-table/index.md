@@ -295,6 +295,9 @@ step — the first of what Aitchison and his coauthors call his
 $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
 position $x(t)$: not a function of time any more, but a table of
 numbers indexed by pairs of states.
+
+![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes](heisenberg_table.png)
+
 <a id="conjugate-pairs"></a>The reality of $x(t)$ survives the
 reinterpretation, by the same replacement. The harmonic $\alpha$
 became the jump from $n$ down to $n - \alpha$; the harmonic $-\alpha$,
@@ -310,8 +313,6 @@ $$
 
 the amplitude of a jump read from the other end is the complex
 conjugate (Aitchison and coauthors, eqs. 44–45).
-
-![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes](heisenberg_table.png)
 
 In this reinterpretation every classical quantity has a measured
 counterpart, and the correspondence is one to one:
