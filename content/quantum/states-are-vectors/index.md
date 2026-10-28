@@ -325,7 +325,7 @@ the surviving parameters carefully in the qubit post, where this
 redundancy is exactly what squeezes the four real numbers of
 $\mathbb C^2$ down to the two angles of a sphere.
 
-And the $y$ axis? Its two states $|i\rangle, |o\rangle$ (*in* and
+<a id="the-y-axis"></a>And the $y$ axis? Its two states $|i\rangle, |o\rangle$ (*in* and
 *out*) must be fifty-fifty in the $z$ basis **and** fifty-fifty in the
 $x$ basis **and** mutually exclusive. Try to satisfy all three with
 real weights — it cannot be done, and that is the promised moment

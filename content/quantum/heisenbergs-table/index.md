@@ -404,8 +404,8 @@ $$
 
 a two-by-two table. Its entries are complex numbers in general: the
 columns of the table will turn out to be coordinates of vectors, and
-the second post found that the coordinates of the $y$-axis states
-cannot all be real. The notation already says how the table acts: the
+the [second post found](/quantum/states-are-vectors/#the-y-axis)
+that the coordinates of the $y$-axis states cannot all be real. The notation already says how the table acts: the
 second post showed that an $n \times n$ table of numbers, written
 with respect to an orthonormal basis, *is* a linear operator — a
 machine $\hat A : V \to V$ that sends vectors to vectors and respects
