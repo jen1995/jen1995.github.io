@@ -233,6 +233,20 @@ $\{|e_j\rangle\}$ the entries $\langle e_j | \hat A^\dagger | e_k \rangle$
 and $\langle e_j | \hat A | e_k \rangle$ are inner products of the same
 two vectors, so they agree entry by entry.
 
+The same thing in matrix language, with the change-of-basis law of
+the [last post](/quantum/heisenbergs-table/#the-numbers-on-the-diagonal-are-the-outcomes):
+if $\Lambda$ is the diagonal table and $U$ the unitary matrix
+taking the eigenbasis to another orthonormal basis, the table there
+is $A = U \Lambda U^\dagger$, and by the rules for the conjugate
+transpose — order reversed, $(U^\dagger)^\dagger = U$ —
+
+$$
+A^\dagger = (U \Lambda U^\dagger)^\dagger = U\, \Lambda^\dagger\, U^\dagger = U \Lambda U^\dagger = A ,
+$$
+
+since $\Lambda^\dagger = \Lambda$ for a diagonal matrix with real
+entries.
+
 </details>
 
 Combine it with the previous paragraph: in
