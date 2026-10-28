@@ -89,17 +89,19 @@ So the basis of the assumption is a basis of eigenvectors, the
 numbers on the diagonal are the eigenvalues, and the possible
 outcomes of an observable are the spectrum of its operator.
 
-The word is a coincidence that became a theorem. Hilbert chose
-"spectrum" around 1906 for the set of values attached to a
-quadratic form in infinitely many variables, with no physics in
-mind; the spectrum of an atom was Kirchhoff's and Bunsen's word for
-its lines, from Newton's spectrum of light. Twenty years later
-matrix mechanics made Hilbert's spectrum of the energy operator
-*be* the atom's spectrum of levels. Hilbert, in Constance Reid's
-biography: he had developed the theory "from purely mathematical
-interests, and even called it spectral analysis without any
-presentiment that it would later find application to the actual
-spectrum of physics." Rewriting
+> 💡 **Where the word comes from.** The two spectra of this road
+> met by accident. Hilbert chose "spectrum" around 1906 for the set
+> of values attached to a quadratic form in infinitely many
+> variables, with no physics in mind; the spectrum of an atom was
+> Kirchhoff's and Bunsen's word for its lines, from Newton's
+> spectrum of light. Twenty years later matrix mechanics made
+> Hilbert's spectrum of the energy operator *be* the atom's spectrum
+> of levels. Hilbert, in Constance Reid's biography: he had
+> developed the theory "from purely mathematical interests, and
+> even called it spectral analysis without any presentiment that it
+> would later find application to the actual spectrum of physics."
+
+Rewriting
 the diagonal table without coordinates gives the operator as a sum
 over its own definite directions,
 
