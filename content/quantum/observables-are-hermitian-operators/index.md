@@ -261,9 +261,13 @@ the laboratory but a consequence of how the table is built from
 what the laboratory gives. A table that is not Hermitian would need a complex
 outcome, or a pair of definite states that are not orthogonal, and
 no apparatus produces either. Tables that are not Hermitian do
-appear in the theory, as *devices* rather than observables: Feynman's
-apparatus matrix, a rotation of the spin, the evolution of a state
-in time — these are unitary, the subject of a later post. And the
+appear in the theory, but as operators that *transform* states
+rather than ask questions of them: Feynman's apparatus matrix from
+the last post, which sends the state entering a device to the state
+leaving it; a rotation of the spin from one axis to another; the
+evolution of a state in time. These are *unitary*, $U^\dagger U = \hat I$,
+the subject of a later post, and their eigenvalues are unit complex
+numbers $e^{i\theta}$ rather than real outcomes. And the
 first table in history passed the test by itself. Heisenberg's
 amplitudes satisfy $X(m, n) = X(n, m)^*$, because the coordinate
 $x(t)$ they describe is real — the same condition that makes the
