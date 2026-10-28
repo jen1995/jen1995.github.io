@@ -329,8 +329,8 @@ themselves may be complex. The one exception is $\alpha = 0$, the
 "jump" from $n$ to itself: there the pairing reads
 $X(n, n) = X(n, n)^*$, and a number equal to its own conjugate is
 real. So this is what is left of the reality of $x(t)$: real numbers
-on the diagonal of the table, and conjugate pairs across it. Later
-in this post that shape gets a name, Hermitian.
+on the diagonal of the table, and conjugate pairs across it. That
+shape [gets a name later in this post](#hermitian): Hermitian.
 
 The replacement rule works the same way for every classical
 quantity: each has a measured counterpart, and the correspondence is
@@ -625,7 +625,7 @@ $$
 A = \bar A^{\mathsf T} ,
 $$
 
-is called [**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix).
+is called <a id="hermitian"></a>[**Hermitian**](https://en.wikipedia.org/wiki/Hermitian_matrix).
 There is a theorem that the matrices satisfying the assumption are
 exactly the Hermitian ones. The next post proves it, and shows that
 the reality of the readings alone already makes the table Hermitian,
