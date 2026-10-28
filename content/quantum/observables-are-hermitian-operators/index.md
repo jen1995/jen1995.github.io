@@ -228,10 +228,7 @@ The computation above established it by checking it on the
 eigenbasis $\{|a_i\rangle\}$ and using linearity:
 $\hat A^\dagger |a_i\rangle = \lambda_i^* |a_i\rangle = \lambda_i |a_i\rangle = \hat A |a_i\rangle$
 for each $i$, hence on every combination of them, which is every
-vector. Matrices then follow: in any orthonormal basis
-$\{|e_j\rangle\}$ the entries $\langle e_j | \hat A^\dagger | e_k \rangle$
-and $\langle e_j | \hat A | e_k \rangle$ are inner products of the same
-two vectors, so they agree entry by entry.
+vector.
 
 The same thing in matrix language, with the change-of-basis law of
 the [last post](/quantum/heisenbergs-table/#the-numbers-on-the-diagonal-are-the-outcomes):
