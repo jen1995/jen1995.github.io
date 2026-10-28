@@ -159,9 +159,13 @@ Why such an operator exists: fix $|\varphi\rangle$; the number
 $\langle \varphi | \hat M \psi \rangle$ depends linearly on
 $|\psi\rangle$, so by the second post's
 [Riesz theorem](/quantum/states-are-vectors/#bras-and-why-the-bracket-splits)
-it is the inner product of $|\psi\rangle$ with one definite vector,
-and that vector is what $\hat M^\dagger$ returns on $|\varphi\rangle$.
-In a matrix with respect to an
+there is exactly one vector $|\chi\rangle$ with
+$\langle \varphi | \hat M \psi \rangle = \langle \chi | \psi \rangle$ for
+all $|\psi\rangle$. *Define* $\hat M^\dagger |\varphi\rangle$ to be
+that vector; the displayed equation then holds by construction, and
+the map $|\varphi\rangle \mapsto |\chi\rangle$ is linear because the
+left side is conjugate-linear in $|\varphi\rangle$ and so is
+$\langle \chi |$ in $|\chi\rangle$. In a matrix with respect to an
 orthonormal basis the adjoint is the **conjugate transpose**,
 $(M^\dagger)_{ij} = M_{ji}^*$ (Panov's lectures, §4.1); three rules
 follow from the definition: $(\hat A^\dagger)^\dagger = \hat A$,
