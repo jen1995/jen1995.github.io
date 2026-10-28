@@ -35,19 +35,9 @@ being his word for a linear operator standing for a physical
 quantity, and "real" his word for self-adjoint, chosen because a
 measurement returns a real number; this road follows them.
 
-The plan. First, the vectors of the assumed basis are shown to be
-what linear algebra calls the eigenvectors of the operator, and the
-outcomes its eigenvalues — the words are defined on the way. A table that
-is diagonal in such a basis, with real numbers on the diagonal, is
-Hermitian; by the spectral theorem, every Hermitian table has such
-a basis; and a table whose averages are real is Hermitian without
-any assumption at all. The definite states of the first post are
-the eigenvectors, and only they. Finally, the set of eigenvalues
-need not be a short list of distinct numbers: a value can repeat,
-and in infinite dimensions the set can be an interval. The box, the
-barrier, the oscillator and the hydrogen atom, the problems of this
-road, show all of these. The sources are Landau and Lifshitz's §3
-and chapter II of Dirac's *Principles*, as in the last post.
+The road is Landau and Lifshitz's §3 and chapter II of Dirac's
+*Principles*, as in the last post; the linear algebra is Panov's
+lectures, chapter 4.
 
 ## Where we stand
 
