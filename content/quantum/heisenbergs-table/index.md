@@ -216,7 +216,9 @@ $$
 one amplitude $X_\alpha(n)$ per harmonic. The position $x(n, t)$ is a
 real number, so the amplitudes come in conjugate pairs,
 $X_{-\alpha}(n) = X_\alpha(n)^*$, as the Fourier coefficients of any
-real signal do. By Maxwell such an electron
+real signal do (the Fourier road,
+[Part 1](/fourier/fourier-series-to-spectrogram-part-1/#the-exponential-form):
+$c_{-n} = \overline{c_n}$). By Maxwell such an electron
 radiates at exactly these harmonic frequencies, $\omega(n)\alpha$, with
 the intensity of the $\alpha$-th line proportional to
 $|X_\alpha(n)|^2$: the spectrum of an orbit is an evenly spaced
@@ -299,8 +301,9 @@ numbers indexed by pairs of states.
 ![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes](heisenberg_table.png)
 
 <a id="conjugate-pairs"></a>What becomes of the reality of $x(t)$?
-Classically it was the conjugate pairing of the harmonics; apply
-the same replacement to the pairing. The harmonic $\alpha$
+Classically it was the
+[conjugate pairing](/fourier/fourier-series-to-spectrogram-part-1/#the-exponential-form)
+of the harmonics; apply the same replacement to the pairing. The harmonic $\alpha$
 became the jump from $n$ down to $n - \alpha$; the harmonic $-\alpha$,
 with the opposite frequency, becomes the jump in the opposite
 direction, from $n - \alpha$ up to $n$, since
