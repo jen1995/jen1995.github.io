@@ -252,7 +252,7 @@ consulted about them. Why should an apparatus, which can give any
 numbers it likes, produce a table with the mirror symmetry just
 described?
 
-Because the experiment never hands us a table. It hands us two
+Because the experiment *never* hands us a table. It hands us two
 lists — the outcomes, which are real numbers, and the definite
 states, which are orthogonal — and the table is *assembled* from
 these two lists by the spectral decomposition. Anything assembled
