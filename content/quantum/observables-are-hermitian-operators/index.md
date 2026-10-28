@@ -143,9 +143,10 @@ basis of the spin, say, for the $x$ observable? The answer is a
 property of the table that does not mention any basis, and to state
 it one more notion is needed.
 
-Write $|\hat M \psi\rangle$ for the vector $\hat M$ returns when fed
-$|\psi\rangle$, so that
-$\langle \varphi | \hat M | \psi \rangle = \langle \varphi | \hat M \psi \rangle$.
+Write $|\hat M \psi\rangle$ for the vector $\hat M |\psi\rangle$, so
+that the bracket $\langle \varphi | \hat M | \psi \rangle$ can also be
+read as the inner product $\langle \varphi | \hat M \psi \rangle$ of two
+vectors.
 The [**adjoint**](https://en.wikipedia.org/wiki/Hermitian_adjoint)
 $\hat M^\dagger$ of $\hat M$ is the operator that lets the operator
 act on the bra instead:
