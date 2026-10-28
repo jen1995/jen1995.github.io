@@ -29,9 +29,11 @@ This post proves it, and arrives at the sentence most modern
 textbooks open with — "observables are Hermitian operators" — as
 the last line. Not all of them do: Landau and Lifshitz define the
 operator by the mean value and derive Hermiticity from the reality
-of the mean, and Dirac defines an observable as a real dynamical
-variable with a complete set of eigenstates; this road follows
-them.
+of the mean, and Dirac defines an observable as a *real dynamical
+variable* with a complete set of eigenstates — "dynamical variable"
+being his word for a linear operator standing for a physical
+quantity, and "real" his word for self-adjoint, chosen because a
+measurement returns a real number; this road follows them.
 
 The basis of the assumption is the eigenbasis of the operator, and
 the outcomes are its eigenvalues. A table diagonal in such a basis
@@ -391,8 +393,13 @@ item of the wishlist.
 - P. A. M. Dirac. *The Principles of Quantum Mechanics*, 4th ed.
   Oxford University Press, 1958 (Russian translation: П. А. М. Дирак,
   *Принципы квантовой механики*, 2-е изд., Наука, 1979, под ред.
-  В. А. Фока) — chapter II, §10 "Observables" (Russian ed. p. 52):
-  real dynamical variables, their eigenvalues and eigenstates.
+  В. А. Фока) — chapter II, §8 "Conjugate relations" (Russian ed.
+  p. 42: a self-adjoint linear operator "corresponds to a real
+  dynamical variable, and may therefore be called a real linear
+  operator") and §10 "Observables" (pp. 52–53: a measurement gives a
+  real number, so a measurable dynamical variable must be real; the
+  eigenstates of a real variable, and an observable as a real
+  dynamical variable whose eigenstates form a complete set).
 - W. Heisenberg. *Über quantentheoretische Umdeutung kinematischer
   und mechanischer Beziehungen.* Zeitschrift für Physik 33 (1925),
   879–893; English translation in B. L. van der Waerden (ed.),
