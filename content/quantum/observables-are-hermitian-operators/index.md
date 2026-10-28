@@ -332,11 +332,26 @@ purely continuous one, and hydrogen both at once.
 
 ![Three kinds of energy spectrum: the discrete levels of a particle in a box, the continuous band of a tunneling barrier, and hydrogen with bound levels below zero and a continuum above](spectra_kinds.png)
 
-In infinite dimensions the spectral theorem holds in the same form
-as above for *compact* self-adjoint operators (the Hilbert–Schmidt
-theorem; Sergeev's lectures, Theorem 40, in the references), and for
-general self-adjoint operators such as position it survives in this
-integral form, which the delta post's Appendix A pointed at.
+**What carries over, and what does not.** Everything in this post
+was proved for an $n \times n$ table. The state space of a particle
+on a line is $L^2$, infinite-dimensional, and the problems of this
+road live there. Here is the honest inventory, with the post where
+each gap is taken up; none of the gaps is filled here, only named.
+
+| statement | finite dimensions (this post) | infinite dimensions |
+|---|---|---|
+| the operator | an $n \times n$ table, defined on every vector | may be *unbounded*: $\hat x$ multiplies $\psi(x)$ by $x$, and $x\,\psi(x)$ need not stay in $L^2$, so the operator is defined only on a dense subspace — the dynamics posts |
+| real averages $\Rightarrow$ Hermitian | proved, by polarization | the same argument; but for unbounded operators "equal to its adjoint" needs care with domains, and *symmetric* and *self-adjoint* come apart — named in the dynamics posts |
+| real eigenvalues, orthogonal eigenvectors | one line each | the same one line each, for the eigenvectors that exist |
+| an orthonormal eigenbasis exists | Panov, Theorem 4.2.3 | not in general: $\hat x$ has no eigenvector in $L^2$ at all. True for *compact* self-adjoint operators (the Hilbert–Schmidt theorem; Sergeev, Theorem 40) — the particle in a box |
+| the spectrum | a finite list of eigenvalues | discrete (box), continuous (barrier) or mixed (hydrogen); the continuous part has no eigenvectors in the space, only *generalized* ones like $\lvert x\rangle$, normalized to a delta — the delta post, the tunneling post |
+| spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ — the delta post's Appendix A |
+| the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved | a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part — the Born rule on a line, next post |
+
+The spectral theorem for self-adjoint operators on a Hilbert space,
+which makes the right column precise, is a theorem of functional
+analysis rather than of this road; the road names it where it is
+used and takes it from the references.
 
 ### Where every calculation starts
 
