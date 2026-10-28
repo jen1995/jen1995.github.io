@@ -402,10 +402,10 @@ $$
 A_{ij} = \langle E_i |\, A\, | E_j \rangle, \qquad E_i, E_j \in \{u, d\},
 $$
 
-a two-by-two table. Its entries are complex numbers in general — they
-are amplitudes, like the coordinates of a state, and the second post
-showed that real amplitudes are not enough for the spin. The notation
-already says how the table acts: the
+a two-by-two table. Its entries are complex numbers in general: the
+columns of the table will turn out to be coordinates of vectors, and
+the second post found that the coordinates of the $y$-axis states
+cannot all be real. The notation already says how the table acts: the
 second post showed that an $n \times n$ table of numbers, written
 with respect to an orthonormal basis, *is* a linear operator — a
 machine $\hat A : V \to V$ that sends vectors to vectors and respects
