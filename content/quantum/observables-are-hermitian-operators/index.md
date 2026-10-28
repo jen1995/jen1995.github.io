@@ -95,9 +95,11 @@ quadratic form in infinitely many variables, with no physics in
 mind; the spectrum of an atom was Kirchhoff's and Bunsen's word for
 its lines, from Newton's spectrum of light. Twenty years later
 matrix mechanics made Hilbert's spectrum of the energy operator
-*be* the atom's spectrum of levels, and Hilbert is reported to have
-said he had never suspected his spectra would turn out to be the
-physicists' spectra. Rewriting
+*be* the atom's spectrum of levels. Hilbert, in Constance Reid's
+biography: he had developed the theory "from purely mathematical
+interests, and even called it spectral analysis without any
+presentiment that it would later find application to the actual
+spectrum of physics." Rewriting
 the diagonal table without coordinates gives the operator as a sum
 over its own definite directions,
 
@@ -411,6 +413,9 @@ item of the wishlist.
   *Sources of Quantum Mechanics*, North-Holland, 1967 — the
   conjugate symmetry of the transition amplitudes,
   $X(m, n) = X(n, m)^*$, follows from the reality of the coordinate.
+- Constance Reid. *Hilbert*. Springer, 1970 — the source of
+  Hilbert's remark on the word "spectrum", in the chapter on his
+  work on integral equations.
 - [Quantum Sense](https://www.youtube.com/@quantumsensechannel), *Maths
   of Quantum Mechanics* — video 9
   ([Hermitian operators](https://youtu.be/da1rH0Hq62Q)).
