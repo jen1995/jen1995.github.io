@@ -185,7 +185,11 @@ is $\alpha|\chi_1\rangle + \beta|\chi_2\rangle$, by uniqueness.
 
 In a matrix with respect to an orthonormal basis the adjoint is the
 **conjugate transpose**, $(M^\dagger)_{ij} = M_{ji}^*$ (Panov's
-lectures, §4.1). Four rules follow from the definition:
+lectures, §4.1).
+
+![The conjugate transpose: the matrix is flipped across its diagonal and every entry is conjugated, so the diagonal entries stay in place and the off-diagonal entries swap in pairs](conjugate_transpose.png)
+
+Four rules follow from the definition:
 
 - $(\hat A^\dagger)^\dagger = \hat A$;
 - $(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$;
