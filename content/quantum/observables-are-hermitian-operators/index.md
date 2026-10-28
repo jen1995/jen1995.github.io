@@ -17,11 +17,11 @@ average of the observable in the state
 $|\psi\rangle = \sum_i c_i |a_i\rangle$ came out as
 $\langle A \rangle = \sum_i \lambda_i |c_i|^2$, the $\lambda_i$ were
 read as the outcomes, and the weights $|c_i|^2$ were shown to be
-the only admissible probabilities — the Born rule. The assumption
-was also shown to be a restriction: the tables that satisfy it are
-Hermitian, equal to their own conjugate transpose, and a theorem was
-promised — that those are exactly the tables satisfying it, and that
-the restriction costs nothing.
+the only admissible probabilities — the Born rule. Every table that
+satisfies the assumption is Hermitian, equal to its own conjugate
+transpose. Two things were left unproved: that every Hermitian table
+satisfies the assumption, and that the assumption does not exclude
+any observable.
 
 ![The road of the two posts: measurements give averages; an operator is the object that returns the average in every state; the conditions on that operator are this post's subject](road_map.png)
 
