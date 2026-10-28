@@ -456,7 +456,7 @@ system can be in: it is not a unit vector in general, and no
 experiment produces it. It is a step in a computation. The numbers
 that mean something are built *from* it — the average, as the next
 chapter shows, is the inner product of $\hat A|\psi\rangle$ with
-$|\psi\rangle$ itself — and a later post works out what applying an
+$|\psi\rangle$ itself — and the next post works out what applying an
 operator does and does not have to do with measuring.
 
 Nothing has been said yet about

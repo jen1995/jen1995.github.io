@@ -3,7 +3,7 @@ title: "Observables Are Hermitian Operators"
 date: 2026-10-27
 draft: true
 tags: ["quantum", "math"]
-summary: "The postulate most modern textbooks start from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors, in both directions; and the spectrum can be degenerate or continuous — which is where every calculation of this road will start."
+summary: "The postulate most modern textbooks start from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors, and a measurement projects the state onto one of them; and the spectrum can be degenerate or continuous — which is where every calculation of this road will start."
 math: true
 weight: 51
 ---
@@ -371,13 +371,92 @@ For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
 $z$ observable, are the eigenvectors of its operator $\sigma_z$, with
 eigenvalues $+1$ and $-1$; the first post's "the measurement
 prepares a state that repeats its answer" is the statement that the
-state after a measurement is an eigenvector, which the next post
-makes precise. From now on the word *observable* is used for the
+state after a measurement is an eigenvector, made precise below. From now on the word *observable* is used for the
 Hermitian operator as well as for the quantity it stands for. The
 three conditions one would otherwise have to *demand* of such an
 operator
 — real outcomes, definite states that span the space, definite
 states that are orthogonal — are the spectral theorem above.
+
+## What a measurement does
+
+### Applying the operator is not measuring
+
+The notation invites a confusion, so it is addressed first.
+Applying an operator to a state is a *mathematical* operation that
+returns a vector; a measurement is a *physical* operation that
+returns a number and changes the state. They are not the same
+thing, and the last post's warning about the output of the machine
+can now be made concrete on the spin.
+
+Apply $\sigma_z$ to the $x$-definite state $|r\rangle$, using
+$\sigma_z|u\rangle = |u\rangle$, $\sigma_z|d\rangle = -|d\rangle$ and
+linearity:
+
+$$
+\sigma_z\, |r\rangle = \tfrac{1}{\sqrt 2}\, \sigma_z |u\rangle + \tfrac{1}{\sqrt 2}\, \sigma_z |d\rangle = \tfrac{1}{\sqrt 2}\, |u\rangle - \tfrac{1}{\sqrt 2}\, |d\rangle = |l\rangle .
+$$
+
+The operator turned *right* into *left*. No $z$ measurement of an
+electron prepared along $x$ ever produces an electron pointing left
+along $x$: it produces $|u\rangle$ or $|d\rangle$, at random. So
+$\sigma_z|r\rangle$ is not the state after a measurement. Written in
+the eigenbasis of $\sigma_z$, the input
+$|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
+lists the possible answers as its basis directions, and the operator
+has multiplied each direction by the answer's value — the
+coordinates tagged with their outcomes, not yet squared into
+probabilities. (Susskind and Friedman devote their §3.5, "A common
+misconception", to this point.)
+
+![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
+
+### Measurement
+
+Wishlist item 4 of the
+[first post](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
+asked how a measurement changes the state. Everything needed is now
+available: the outcomes are the eigenvalues, their probabilities are
+the Born weights, and the states a measurement prepares are the
+eigenvectors.
+
+> **Measurement.** Measuring the observable $\hat A$ in the state
+> $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
+> eigenvalues $\lambda_i$, with probability $|c_i|^2$; immediately
+> after a measurement that returned $\lambda_i$, the state is the
+> definite state $|a_i\rangle$.
+
+In the language of projectors: the outcome $\lambda_i$ projects the
+state onto the $i$-th definite direction and renormalizes it,
+
+$$
+|\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle ,
+$$
+
+a unit factor times $|a_i\rangle$ — the same physical state. The
+probability of the outcome is the average of the projector,
+$\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$, as in the
+last post's derivation of the Born rule.
+
+![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
+
+Read the first post's three experiments in this language.
+
+- *Repetition confirms.* After a $z$ measurement the state is
+  $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$; measuring
+  $\sigma_z$ again finds coefficient $1$ on that eigenvector and
+  returns the same value with probability one.
+- *Flipping negates.* The apparatus turned upside down measures
+  $-\sigma_z$, whose definite states are the same two vectors with
+  the outcomes exchanged.
+- *A new axis erases the old answer.* Measure the spin along $x$ in
+  the state $|u\rangle = \frac{1}{\sqrt 2}|r\rangle + \frac{1}{\sqrt 2}|l\rangle$:
+  the outcome is $\pm 1$ with probability $\frac12$ each, and the
+  state becomes $|r\rangle$ or $|l\rangle$. Measure along $z$ once
+  more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$, half
+  $|d\rangle$, so the old certainty is gone — probability $\frac12$
+  for either answer. The erasure of the first post is the statement
+  that the $z$ and $x$ observables have no eigenvector in common.
 
 ## Beyond the spin
 
@@ -467,25 +546,37 @@ adjoint: Hermitian. And Hermitian is enough: a Hermitian operator
 has real eigenvalues and an orthonormal eigenbasis, so the
 assumption of the last post costs nothing beyond the reality of the
 readings. The eigenvectors are exactly the definite states of the
-first post. In more than two dimensions an eigenvalue can repeat,
-and in infinite dimensions the spectrum can be continuous, as it is
-for position.
+first post, and a measurement projects the state onto one of them.
+In more than two dimensions an eigenvalue can repeat, and in
+infinite dimensions the spectrum can be continuous, as it is for
+position.
 
-Wishlist item 3 is paid: **an observable is a Hermitian operator**,
-whose eigenvalues are the outcomes, whose eigenvectors are the
-definite states, whose average in a state is
-$\langle \psi | \hat A | \psi \rangle$, and whose outcome
-probabilities are the squared coordinates $|c_i|^2$ in the
-eigenbasis. One thing remains: nothing has been said about what a
-measurement does to the state. That is the next post.
+The wishlist of the first post, with two more items paid:
+
+1. **A state object** — a unit vector in a Hilbert space. ✓ (second post)
+2. **A way to blend outcomes** — superposition; probabilities are
+   squared amplitudes. ✓ (last post)
+3. **Measurable quantities as actors** — Hermitian operators, whose
+   eigenvalues are the outcomes and whose eigenvectors are the
+   definite states; the average of a quantity is
+   $\langle \psi | \hat A | \psi \rangle$. ✓ (last post and this one)
+4. **Measurement as an operation on states** — projection onto a
+   definite state, with the Born probability. ✓
+5. **Geometry must enter** — still open: the dictionary between
+   directions in the laboratory and operators on the two-dimensional
+   state space, with the cosine of the first post as its first entry.
 
 ## Onward
 
-Next stop: what a measurement does. The warning that applying an
-operator is not measuring; two of the three Pauli matrices read off
-the spin experiments; the Born rule on a line, where the weights
-become a density; and measurement itself as a projection, the last
-item of the wishlist.
+Next stop: the qubit and the Bloch sphere. The spin operators
+$\sigma_z$ and $\sigma_x$ are read off the definite states by the
+spectral decomposition; the $y$-axis states are built and complex
+amplitudes become unavoidable; $\sigma_y$ joins the other two, and
+the spin operator along an arbitrary direction $\hat n$ turns out to
+be $\hat n \cdot \vec\sigma$ — from which the first post's
+$\langle \sigma \rangle = \cos\theta$ follows in one line, and a
+two-dimensional complex state space acquires the geometry of an
+ordinary sphere.
 
 ## References
 
@@ -512,6 +603,9 @@ item of the wishlist.
   *Sources of Quantum Mechanics*, North-Holland, 1967 — the
   conjugate symmetry of the transition amplitudes,
   $X(m, n) = X(n, m)^*$, follows from the reality of the coordinate.
+- Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
+  Minimum*. Basic Books, 2014 — lecture 3, §3.5 "A common
+  misconception": applying an operator is not measuring.
 - Constance Reid. *Hilbert*. Springer, 1970 — the source of
   Hilbert's remark on the word "spectrum", in the chapter on his
   work on integral equations.

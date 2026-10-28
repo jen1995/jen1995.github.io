@@ -136,6 +136,21 @@ The longest post; notes §9–13 + the classical interlude.
    twin ψ̃(p), squeeze one and watch the other spread (the uncertainty
    trade-off, interactive; reuses the Fourier road's machinery).
 
+## Status (2026-10-28): measurement folded into post 51; post 52 dissolved
+
+- `observables-are-hermitian-operators` (weight 51) now ends with
+  "## What a measurement does" (applying ≠ measuring with
+  operator_machine.png; the Measurement box, projection,
+  measurement_projection.png, the three experiments) and pays
+  wishlist item 4. Figures added today: road_map, spectral_decomposition,
+  two_roads, variance_spin, spectra_kinds, conjugate_transpose,
+  hermitian_matrix. Table "what carries over to infinite dimensions".
+- `what-a-measurement-does` is dissolved into
+  drafts/quantum/what-a-measurement-does/: "Two of the three Pauli
+  matrices" (+ pauli_from_bases.png) → opening of QM-4; "The Born rule
+  on a line" (+ born_density.png) → particle-in-a-box post.
+- Next post after 51 is QM-4, the qubit (weight 52).
+
 ## Status (2026-10-27): QM-3 is now three posts
 
 - `heisenbergs-table` (weight 50, "Heisenberg's Table: Where the
