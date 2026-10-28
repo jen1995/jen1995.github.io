@@ -110,9 +110,23 @@ $$
 $$
 
 — the **spectral decomposition**: each outcome times the projector
-onto its eigenvector. (Apply both sides to $|\psi\rangle$ and use
-$\langle a_i | \psi \rangle = c_i$ to see that it is the same
-operator.) Set every $\lambda_i$ to $1$ and it collapses to the
+onto its eigenvector. To check that the right side is the same
+operator, apply it to a state $|\psi\rangle = \sum_j c_j |a_j\rangle$,
+with $\langle a_i | \psi \rangle = c_i$:
+
+$$
+\Big( \sum_i \lambda_i\, |a_i\rangle\langle a_i| \Big) |\psi\rangle = \sum_i \lambda_i\, |a_i\rangle \langle a_i | \psi \rangle = \sum_i \lambda_i c_i\, |a_i\rangle ,
+$$
+
+while applying $\hat A$ directly, by linearity and
+$\hat A |a_j\rangle = \lambda_j |a_j\rangle$,
+
+$$
+\hat A\, |\psi\rangle = \sum_j c_j\, \hat A |a_j\rangle = \sum_j \lambda_j c_j\, |a_j\rangle .
+$$
+
+The two agree on every state, so the operators are equal. Set every
+$\lambda_i$ to $1$ and the decomposition collapses to the
 resolution of identity of the second post; keep a single $\lambda_i$
 equal to $1$ and set the rest to $0$ and it is the projector
 $|a_i\rangle\langle a_i|$ whose average was the Born weight $|c_i|^2$
