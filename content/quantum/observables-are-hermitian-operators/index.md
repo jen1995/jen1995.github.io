@@ -67,9 +67,14 @@ Three facts from the earlier posts are used throughout.
 Recall the definitions. A nonzero vector $|v\rangle$ is an
 [**eigenvector**](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
 of $\hat A$ if the operator merely rescales it,
-$\hat A|v\rangle = \lambda|v\rangle$, and $\lambda$ is the
-corresponding **eigenvalue**; the set of eigenvalues is the
-**spectrum** of $\hat A$. A diagonal table says exactly this about
+
+$$
+\hat A\, |v\rangle = \lambda\, |v\rangle ,
+$$
+
+and the factor $\lambda$ is the corresponding **eigenvalue**; the
+set of eigenvalues is the **spectrum** of $\hat A$. A diagonal table
+says exactly this about
 its basis vectors. By the column rule of
 ["A table for an observable"](/quantum/heisenbergs-table/#a-table-for-an-observable),
 $\hat A |a_j\rangle = \sum_i A_{ij} |a_i\rangle$, and with
