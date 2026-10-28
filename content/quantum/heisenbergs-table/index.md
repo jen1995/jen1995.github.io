@@ -448,7 +448,18 @@ notations, as a column of coordinates and a vector are. So
 the wishlist's "object per quantity" is a linear operator on the
 space of states, written with a hat: $\hat E$ for
 energy, $\sigma_z$ for the spin along $z$ (the spin operators are
-written without a hat, by convention). Nothing has been said yet about
+written without a hat, by convention).
+
+One warning about the output. The machine takes a state and returns
+a vector, $\hat A |\psi\rangle$, but that vector is *not* a state the
+system can be in: it is not a unit vector in general, and no
+experiment produces it. It is a step in a computation. The numbers
+that mean something are built *from* it — the average, as the next
+chapter shows, is the inner product of $\hat A|\psi\rangle$ with
+$|\psi\rangle$ itself — and a later post works out what applying an
+operator does and does not have to do with measuring.
+
+Nothing has been said yet about
 which operator belongs to which observable, or about eigenvectors. That
 is what the averages will decide.
 
