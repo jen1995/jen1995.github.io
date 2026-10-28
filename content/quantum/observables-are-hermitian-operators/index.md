@@ -184,14 +184,18 @@ is $\alpha|\chi_1\rangle + \beta|\chi_2\rangle$, by uniqueness.
 </details>
 
 In a matrix with respect to an orthonormal basis the adjoint is the
-**conjugate transpose**,
-$(M^\dagger)_{ij} = M_{ji}^*$ (Panov's lectures, §4.1); three rules
-follow from the definition: $(\hat A^\dagger)^\dagger = \hat A$,
-$(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$,
-$(\hat A\hat B)^\dagger = \hat B^\dagger \hat A^\dagger$. The adjoint
-of a ket is its bra, $(|v\rangle)^\dagger = \langle v|$ — the second
-post's bra–ket correspondence in this notation — and a scalar comes
-out conjugated, $(\lambda \hat A)^\dagger = \lambda^* \hat A^\dagger$.
+**conjugate transpose**, $(M^\dagger)_{ij} = M_{ji}^*$ (Panov's
+lectures, §4.1). Four rules follow from the definition:
+
+- $(\hat A^\dagger)^\dagger = \hat A$;
+- $(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$;
+- $(\hat A\hat B)^\dagger = \hat B^\dagger \hat A^\dagger$ — the order
+  reverses;
+- $(\lambda \hat A)^\dagger = \lambda^* \hat A^\dagger$ — a scalar comes
+  out conjugated.
+
+The adjoint of a ket is its bra, $(|v\rangle)^\dagger = \langle v|$ —
+the second post's bra–ket correspondence in this notation.
 
 Now take the adjoint of the spectral decomposition. By the rules,
 $(|a_i\rangle\langle a_i|)^\dagger = (\langle a_i|)^\dagger (|a_i\rangle)^\dagger = |a_i\rangle\langle a_i|$,
