@@ -136,12 +136,12 @@ in the last post.
 
 ### Real outcomes make the table Hermitian
 
-The assumption asked for real numbers on the diagonal. In the
-diagonal basis that is all it says; but the same table, written in
-any other orthonormal basis — the $z$ basis of the spin, for the $x$
-observable — is not diagonal, and the reality of the $\lambda_i$
-leaves a mark on it there too. The mark has a name, and the name
-needs a notion.
+The assumption asked for real numbers on the diagonal, in one
+particular basis. What does that condition look like in another
+orthonormal basis, where the same table is not diagonal — in the $z$
+basis of the spin, say, for the $x$ observable? The answer is a
+property of the table that does not mention any basis, and to state
+it one more notion is needed.
 
 Write $|\hat M \psi\rangle$ for the vector $\hat M$ returns when fed
 $|\psi\rangle$, so that
