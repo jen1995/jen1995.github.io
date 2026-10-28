@@ -233,14 +233,8 @@ orthonormal basis, not only in the diagonal one.
 
 </details>
 
-In the diagonal basis the matrix condition is plain — a diagonal
-matrix equals its conjugate transpose exactly when its diagonal is
-real. In the $z$ basis of the spin, where the table of the $x$
-observable is not diagonal at all, the same condition holds by the
-computation in the cut, and that is the answer to the question that
-opened this section.
-
-> **The table of every measurable quantity is Hermitian.**
+> **The table of every measurable quantity is Hermitian** — equal
+> to its own conjugate transpose in every orthonormal basis.
 
 A worry at this point. A table of $n^2$ complex numbers could have
 been anything, and the argument has just forced it to be Hermitian;
