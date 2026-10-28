@@ -155,7 +155,13 @@ $$
 \langle \varphi | \hat M \psi \rangle = \langle \hat M^\dagger \varphi | \psi \rangle \qquad \text{for all } |\varphi\rangle, |\psi\rangle .
 $$
 
-Why such an operator exists: fix $|\varphi\rangle$; the number
+Such an operator exists and is unique; the proof, from the second
+post's Riesz theorem, is under the cut.
+
+<details>
+<summary>Why the adjoint exists</summary>
+
+Fix $|\varphi\rangle$. The number
 $\langle \varphi | \hat M \psi \rangle$ depends linearly on
 $|\psi\rangle$, so by the second post's
 [Riesz theorem](/quantum/states-are-vectors/#bras-and-why-the-bracket-splits)
@@ -174,6 +180,8 @@ $$
 
 so the Riesz vector of $\alpha|\varphi_1\rangle + \beta|\varphi_2\rangle$
 is $\alpha|\chi_1\rangle + \beta|\chi_2\rangle$, by uniqueness.
+
+</details>
 
 In a matrix with respect to an orthonormal basis the adjoint is the
 **conjugate transpose**,
