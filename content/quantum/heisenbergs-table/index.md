@@ -296,10 +296,20 @@ $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
 position $x(t)$: not a function of time any more, but a table of
 numbers indexed by pairs of states.
 <a id="conjugate-pairs"></a>The reality of $x(t)$ survives the
-reinterpretation: the classical pairing $X_{-\alpha}(n) = X_\alpha(n)^*$
-becomes $X(n - \alpha, n) = X(n, n - \alpha)^*$ — the amplitude of a
-jump read from the other end is the complex conjugate (Aitchison and
-coauthors, eqs. 44–45).
+reinterpretation, by the same replacement. The harmonic $\alpha$
+became the jump from $n$ down to $n - \alpha$; the harmonic $-\alpha$,
+with the opposite frequency, becomes the jump in the opposite
+direction, from $n - \alpha$ up to $n$, since
+$\omega(n - \alpha, n) = -\omega(n, n - \alpha)$. So
+$X_\alpha(n) \to X(n, n - \alpha)$ and $X_{-\alpha}(n) \to X(n - \alpha, n)$,
+and the classical pairing $X_{-\alpha}(n) = X_\alpha(n)^*$ becomes
+
+$$
+X(n - \alpha, n) = X(n, n - \alpha)^* :
+$$
+
+the amplitude of a jump read from the other end is the complex
+conjugate (Aitchison and coauthors, eqs. 44–45).
 
 ![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes](heisenberg_table.png)
 
