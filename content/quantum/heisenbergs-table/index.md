@@ -314,8 +314,9 @@ $$
 the amplitude of a jump read from the other end is the complex
 conjugate (Aitchison and coauthors, eqs. 44–45).
 
-In this reinterpretation every classical quantity has a measured
-counterpart, and the correspondence is one to one:
+The replacement rule works the same way for every classical
+quantity: each has a measured counterpart, and the correspondence is
+one to one:
 
 | | classical orbit | Heisenberg's reinterpretation |
 |---|---|---|
