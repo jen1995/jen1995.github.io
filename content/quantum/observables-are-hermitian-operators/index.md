@@ -220,18 +220,8 @@ holds in every basis (the cut says why).
 <details>
 <summary>Why an equality of operators does not depend on the basis</summary>
 
-Two operators are equal when they return the same vector on every
-input: $\hat A^\dagger = \hat A$ means
-$\hat A^\dagger |\psi\rangle = \hat A |\psi\rangle$ for every
-$|\psi\rangle$. Neither side of that statement mentions a basis.
-The computation above established it by checking it on the
-eigenbasis $\{|a_i\rangle\}$ and using linearity:
-$\hat A^\dagger |a_i\rangle = \lambda_i^* |a_i\rangle = \lambda_i |a_i\rangle = \hat A |a_i\rangle$
-for each $i$, hence on every combination of them, which is every
-vector.
-
-The same thing in matrix language, with the change-of-basis law of
-the [last post](/quantum/heisenbergs-table/#the-numbers-on-the-diagonal-are-the-outcomes):
+In matrix language, with the change-of-basis law of the
+[last post](/quantum/heisenbergs-table/#the-numbers-on-the-diagonal-are-the-outcomes):
 if $\Lambda$ is the diagonal table and $U$ the unitary matrix
 taking the eigenbasis to another orthonormal basis, the table there
 is $A = U \Lambda U^\dagger$, and by the rules for the conjugate
@@ -242,7 +232,8 @@ A^\dagger = (U \Lambda U^\dagger)^\dagger = U\, \Lambda^\dagger\, U^\dagger = U 
 $$
 
 since $\Lambda^\dagger = \Lambda$ for a diagonal matrix with real
-entries.
+entries. So the matrix equals its conjugate transpose in every
+orthonormal basis, not only in the diagonal one.
 
 </details>
 
