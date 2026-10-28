@@ -25,7 +25,7 @@ any observable.
 
 ![The road of the two posts: measurements give averages; an operator is the object that returns the average in every state; the conditions on that operator are this post's subject](road_map.png)
 
-This post proves it, and arrives at the sentence most modern
+This post proves both, and arrives at the sentence most modern
 textbooks open with — "observables are Hermitian operators" — as
 the last line. Not all of them do: Landau and Lifshitz define the
 operator by the mean value and derive Hermiticity from the reality
@@ -33,11 +33,10 @@ of the mean, and Dirac defines an observable as a *real dynamical
 variable* with a complete set of eigenstates — "dynamical variable"
 being his word for a linear operator standing for a physical
 quantity, and "real" his word for self-adjoint, chosen because a
-measurement returns a real number; this road follows them.
-
-The road is Landau and Lifshitz's §3 and chapter II of Dirac's
-*Principles*, as in the last post; the linear algebra is Panov's
-lectures, chapter 4.
+measurement returns a real number. This road follows them — Landau
+and Lifshitz's §3 and chapter II of Dirac's *Principles*, as in the
+last post — and takes its linear algebra from chapter 4 of Panov's
+lectures.
 
 ## Where we stand
 
