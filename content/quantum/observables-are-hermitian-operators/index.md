@@ -155,13 +155,13 @@ $$
 \langle \varphi | \hat M \psi \rangle = \langle \hat M^\dagger \varphi | \psi \rangle \qquad \text{for all } |\varphi\rangle, |\psi\rangle .
 $$
 
-Such an operator exists, by
-[Riesz's theorem](/quantum/states-are-vectors/#bras-and-why-the-bracket-splits)
-of the second post. Fix $|\varphi\rangle$. The number
+Why such an operator exists: fix $|\varphi\rangle$; the number
 $\langle \varphi | \hat M \psi \rangle$ depends linearly on
-$|\psi\rangle$, so by Riesz it is the inner product of $|\psi\rangle$
-with one definite vector; that vector is what $\hat M^\dagger$
-returns on $|\varphi\rangle$. In a matrix with respect to an
+$|\psi\rangle$, so by the second post's
+[Riesz theorem](/quantum/states-are-vectors/#bras-and-why-the-bracket-splits)
+it is the inner product of $|\psi\rangle$ with one definite vector,
+and that vector is what $\hat M^\dagger$ returns on $|\varphi\rangle$.
+In a matrix with respect to an
 orthonormal basis the adjoint is the **conjugate transpose**,
 $(M^\dagger)_{ij} = M_{ji}^*$ (Panov's lectures, §4.1); three rules
 follow from the definition: $(\hat A^\dagger)^\dagger = \hat A$,
