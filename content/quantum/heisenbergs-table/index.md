@@ -298,8 +298,9 @@ numbers indexed by pairs of states.
 
 ![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes](heisenberg_table.png)
 
-<a id="conjugate-pairs"></a>The reality of $x(t)$ survives the
-reinterpretation, by the same replacement. The harmonic $\alpha$
+<a id="conjugate-pairs"></a>What becomes of the reality of $x(t)$?
+Classically it was the conjugate pairing of the harmonics; apply
+the same replacement to the pairing. The harmonic $\alpha$
 became the jump from $n$ down to $n - \alpha$; the harmonic $-\alpha$,
 with the opposite frequency, becomes the jump in the opposite
 direction, from $n - \alpha$ up to $n$, since
@@ -320,8 +321,9 @@ X(n - \alpha, n) = X(n, n - \alpha)^* .
 $$
 
 The amplitude of a jump read from the other end is the complex
-conjugate (Aitchison and coauthors, eqs. 44–45). The amplitudes
-themselves may be complex; only for $\alpha = 0$, the "jump" from
+conjugate (Aitchison and coauthors, eqs. 44–45). This is all that
+is left of the reality of $x(t)$: the amplitudes themselves may be
+complex, and only for $\alpha = 0$, the "jump" from
 $n$ to itself, does the pairing say $X(n, n) = X(n, n)^*$, a number
 equal to its own conjugate, that is, real. So the table has real
 numbers on its diagonal and conjugate pairs across it — the shape
