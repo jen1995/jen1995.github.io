@@ -418,9 +418,10 @@ vector that the machine returns when fed the basis vector
 $|E_j\rangle$; so the $j$-th column of the table lists the
 coordinates of $\hat A |E_j\rangle$:
 
-$$
-\hat A\, |E_j\rangle = \sum_i A_{ij}\, |E_i\rangle .
-$$
+<a id="column-rule"></a>
+> **The column rule.** The $j$-th column of the table is the vector
+> the operator returns on the $j$-th basis vector:
+> $$\hat A\, |E_j\rangle = \sum_i A_{ij}\, |E_i\rangle .$$
 
 That fixes the machine on the basis vectors, and linearity fixes it
 everywhere else. Feed it a state $|\psi\rangle = \sum_j c_j |E_j\rangle$

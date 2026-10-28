@@ -75,8 +75,9 @@ $$
 and the factor $\lambda$ is the corresponding **eigenvalue**; the
 set of eigenvalues is the **spectrum** of $\hat A$. A diagonal table
 says exactly this about
-its basis vectors. By the column rule of
-["A table for an observable"](/quantum/heisenbergs-table/#a-table-for-an-observable),
+its basis vectors. By the
+[column rule](/quantum/heisenbergs-table/#column-rule) of the last
+post,
 $\hat A |a_j\rangle = \sum_i A_{ij} |a_i\rangle$, and with
 $A_{ij} = \lambda_i \delta_{ij}$ only one term survives:
 
