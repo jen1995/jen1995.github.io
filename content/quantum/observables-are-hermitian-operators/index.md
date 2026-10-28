@@ -215,7 +215,27 @@ $\hat A^\dagger = \hat A$, is called **Hermitian** (or self-adjoint).
 
 The computation used one basis, the diagonal one, but its
 conclusion is about the operator, and an equality of operators
-holds in every basis. Combine it with the previous paragraph: in
+holds in every basis (the cut says why).
+
+<details>
+<summary>Why an equality of operators does not depend on the basis</summary>
+
+Two operators are equal when they return the same vector on every
+input: $\hat A^\dagger = \hat A$ means
+$\hat A^\dagger |\psi\rangle = \hat A |\psi\rangle$ for every
+$|\psi\rangle$. Neither side of that statement mentions a basis.
+The computation above established it by checking it on the
+eigenbasis $\{|a_i\rangle\}$ and using linearity:
+$\hat A^\dagger |a_i\rangle = \lambda_i^* |a_i\rangle = \lambda_i |a_i\rangle = \hat A |a_i\rangle$
+for each $i$, hence on every combination of them, which is every
+vector. Matrices then follow: in any orthonormal basis
+$\{|e_j\rangle\}$ the entries $\langle e_j | \hat A^\dagger | e_k \rangle$
+and $\langle e_j | \hat A | e_k \rangle$ are inner products of the same
+two vectors, so they agree entry by entry.
+
+</details>
+
+Combine it with the previous paragraph: in
 any orthonormal basis the matrix of $\hat A^\dagger$ is the conjugate
 transpose of the matrix of $\hat A$, and $\hat A^\dagger = \hat A$, so
 the matrix of $\hat A$ equals its own conjugate transpose there. In
