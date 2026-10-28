@@ -303,15 +303,23 @@ reinterpretation, by the same replacement. The harmonic $\alpha$
 became the jump from $n$ down to $n - \alpha$; the harmonic $-\alpha$,
 with the opposite frequency, becomes the jump in the opposite
 direction, from $n - \alpha$ up to $n$, since
-$\omega(n - \alpha, n) = -\omega(n, n - \alpha)$. So
-$X_\alpha(n) \to X(n, n - \alpha)$ and $X_{-\alpha}(n) \to X(n - \alpha, n)$,
-and the classical pairing $X_{-\alpha}(n) = X_\alpha(n)^*$ becomes
+$\omega(n - \alpha, n) = -\omega(n, n - \alpha)$. So the two
+replacements are
 
 $$
-X(n - \alpha, n) = X(n, n - \alpha)^* :
+X_\alpha(n) \;\to\; X(n, n - \alpha), \qquad X_{-\alpha}(n) \;\to\; X(n - \alpha, n) .
 $$
 
-the amplitude of a jump read from the other end is the complex
+Make them on both sides of the classical pairing
+$X_{-\alpha}(n) = X_\alpha(n)^*$ — the left side by the second
+replacement, the right side by the first, with the conjugation
+staying where it is:
+
+$$
+X(n - \alpha, n) = X(n, n - \alpha)^* .
+$$
+
+The amplitude of a jump read from the other end is the complex
 conjugate (Aitchison and coauthors, eqs. 44–45).
 
 The replacement rule works the same way for every classical
