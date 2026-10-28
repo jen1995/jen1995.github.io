@@ -320,7 +320,12 @@ X(n - \alpha, n) = X(n, n - \alpha)^* .
 $$
 
 The amplitude of a jump read from the other end is the complex
-conjugate (Aitchison and coauthors, eqs. 44–45).
+conjugate (Aitchison and coauthors, eqs. 44–45). The amplitudes
+themselves may be complex; only for $\alpha = 0$, the "jump" from
+$n$ to itself, does the pairing say $X(n, n) = X(n, n)^*$, a number
+equal to its own conjugate, that is, real. So the table has real
+numbers on its diagonal and conjugate pairs across it — the shape
+the next post will call Hermitian.
 
 The replacement rule works the same way for every classical
 quantity: each has a measured counterpart, and the correspondence is
