@@ -324,13 +324,13 @@ X(n - \alpha, n) = X(n, n - \alpha)^* .
 $$
 
 The amplitude of a jump read from the other end is the complex
-conjugate (Aitchison and coauthors, eqs. 44–45). This is all that
-is left of the reality of $x(t)$: the amplitudes themselves may be
-complex, and only for $\alpha = 0$, the "jump" from
-$n$ to itself, does the pairing say $X(n, n) = X(n, n)^*$, a number
-equal to its own conjugate, that is, real. So the table has real
-numbers on its diagonal and conjugate pairs across it — the shape
-the next post will call Hermitian.
+conjugate (Aitchison and coauthors, eqs. 44–45). The amplitudes
+themselves may be complex. The one exception is $\alpha = 0$, the
+"jump" from $n$ to itself: there the pairing reads
+$X(n, n) = X(n, n)^*$, and a number equal to its own conjugate is
+real. So this is what is left of the reality of $x(t)$: real numbers
+on the diagonal of the table, and conjugate pairs across it. Later
+in this post that shape gets a name, Hermitian.
 
 The replacement rule works the same way for every classical
 quantity: each has a measured counterpart, and the correspondence is
