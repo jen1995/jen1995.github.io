@@ -265,8 +265,13 @@ no apparatus produces either.
 The first table in history passed the test by itself. Heisenberg's
 amplitudes satisfy $X(n - \alpha, n) = X(n, n - \alpha)^*$, as the
 [last post noted](/quantum/heisenbergs-table/#conjugate-pairs),
-because the coordinate $x(t)$ they describe is real; in the language
-of this post that is exactly $\langle n - \alpha | \hat x | n \rangle = \langle n | \hat x | n - \alpha \rangle^*$,
+because the coordinate $x(t)$ they describe is real. In the language
+of this post: let $|n\rangle$ be the state of the atom with energy
+$W(n)$, the $n$-th of Bohr's levels, and $\hat x$ the operator of
+the electron's position; Heisenberg's table is the matrix of $\hat x$
+in the basis of the levels, $X(n, n - \alpha) = \langle n | \hat x | n - \alpha \rangle$,
+and his pairing is exactly
+$\langle n - \alpha | \hat x | n \rangle = \langle n | \hat x | n - \alpha \rangle^*$,
 the mirror symmetry of a Hermitian table.
 
 Tables that are not Hermitian do appear in the theory, but as
