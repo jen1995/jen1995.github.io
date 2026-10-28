@@ -35,8 +35,9 @@ being his word for a linear operator standing for a physical
 quantity, and "real" his word for self-adjoint, chosen because a
 measurement returns a real number; this road follows them.
 
-The plan. The basis of the assumption is a basis of eigenvectors
-of the operator, and the outcomes are the eigenvalues. A table that
+The plan. First, the vectors of the assumed basis are shown to be
+what linear algebra calls the eigenvectors of the operator, and the
+outcomes its eigenvalues — the words are defined on the way. A table that
 is diagonal in such a basis, with real numbers on the diagonal, is
 Hermitian; by the spectral theorem, every Hermitian table has such
 a basis; and a table whose averages are real is Hermitian without
