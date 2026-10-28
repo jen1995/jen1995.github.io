@@ -35,19 +35,18 @@ being his word for a linear operator standing for a physical
 quantity, and "real" his word for self-adjoint, chosen because a
 measurement returns a real number; this road follows them.
 
-The basis of the assumption is the eigenbasis of the operator, and
-the outcomes are its eigenvalues. A table diagonal in such a basis
-with real numbers on the diagonal is Hermitian in one line; the
-spectral theorem runs the road back, so that every Hermitian table
-has such a basis; and the reality of the readings alone, without
-the assumption, already makes the table Hermitian, so the
-assumption costs nothing. The definite states of the first post turn out to be the
-eigenvectors, in both directions. And the spectrum of an operator
-need not be a short list of numbers: it can repeat, and in infinite
-dimensions it can be a whole interval, which is where the problems
-of this road — the box, the barrier, the oscillator, the hydrogen
-atom — will begin. The road is Landau and Lifshitz's §3 and chapter
-II of Dirac's *Principles*, as in the last post.
+The plan. The basis of the assumption is a basis of eigenvectors
+of the operator, and the outcomes are the eigenvalues. A table that
+is diagonal in such a basis, with real numbers on the diagonal, is
+Hermitian; by the spectral theorem, every Hermitian table has such
+a basis; and a table whose averages are real is Hermitian without
+any assumption at all. The definite states of the first post are
+the eigenvectors, and only they. Finally, the set of eigenvalues
+need not be a short list of distinct numbers: a value can repeat,
+and in infinite dimensions the set can be an interval. The box, the
+barrier, the oscillator and the hydrogen atom, the problems of this
+road, show all of these. The sources are Landau and Lifshitz's §3
+and chapter II of Dirac's *Principles*, as in the last post.
 
 ## Where we stand
 
