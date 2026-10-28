@@ -246,13 +246,13 @@ imaginary parts.
 
 ![A Hermitian matrix: real diagonal, mirror entries complex conjugates of each other; a numerical example that is Hermitian but not symmetric; and a real symmetric matrix as the special case](hermitian_matrix.png)
 
-**An objection, and its answer.** The objection: a table has $n^2$
-complex entries, and nature was not consulted about them. Why
-should an experiment, which can give any numbers it likes, produce a
-table with the mirror symmetry just described? Nothing forces a
-laboratory to be Hermitian.
+**But what guarantees that every table an experiment produces is
+Hermitian?** A table has $n^2$ complex entries, and nature was not
+consulted about them. Why should an apparatus, which can give any
+numbers it likes, produce a table with the mirror symmetry just
+described?
 
-The answer: the experiment never hands us a table. It hands us two
+Because the experiment never hands us a table. It hands us two
 lists — the outcomes, which are real numbers, and the definite
 states, which are orthogonal — and the table is *assembled* from
 these two lists by the spectral decomposition. Anything assembled
