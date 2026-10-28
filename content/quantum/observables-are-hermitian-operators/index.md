@@ -23,6 +23,8 @@ Hermitian, equal to their own conjugate transpose, and a theorem was
 promised — that those are exactly the tables satisfying it, and that
 the restriction costs nothing.
 
+![The road of the two posts: measurements give averages; an operator is the object that returns the average in every state; the conditions on that operator are this post's subject](road_map.png)
+
 This post proves it, and arrives at the sentence most modern
 textbooks open with — "observables are Hermitian operators" — as
 the last line. Not all of them do: Landau and Lifshitz define the
@@ -105,12 +107,16 @@ equal to $1$ and set the rest to $0$ and it is the projector
 $|a_i\rangle\langle a_i|$ whose average was the Born weight $|c_i|^2$
 in the last post.
 
+![The spectral decomposition: the diagonal table of an observable is the sum of its outcomes times the projectors onto its definite states, one projector per outcome](spectral_decomposition.png)
+
 ### Real outcomes make the table Hermitian
 
-Readings of an apparatus are real numbers. So the eigenvalues
-$\lambda_i$ are real, and this leaves a mark on the table in every
-basis, not only in the diagonal one. The mark has a name, and the
-name needs a notion.
+The assumption asked for real numbers on the diagonal. In the
+diagonal basis that is all it says; but the same table, written in
+any other orthonormal basis — the $z$ basis of the spin, for the $x$
+observable — is not diagonal, and the reality of the $\lambda_i$
+leaves a mark on it there too. The mark has a name, and the name
+needs a notion.
 
 Write $|\hat M \psi\rangle$ for the vector $\hat M$ returns when fed
 $|\psi\rangle$, so that
@@ -232,18 +238,16 @@ same condition on a table, and both say *Hermitian*. The textbook
 postulate — "observables are Hermitian operators" — is this
 equivalence, stated as a definition.
 
+![Three conditions on a table that are one condition: diagonal in an orthonormal basis with a real diagonal, real average in every state, and Hermitian — with the one-line arguments and the two theorems that connect them](two_roads.png)
+
 ### Definite states are eigenvectors
 
-One more reading of the average formula, this time for the basis
-vectors themselves. In the state $|a_i\rangle$ the coordinates are
-$c_i = 1$ and $c_j = 0$ for $j \neq i$: the whole weight sits on the
-single outcome $\lambda_i$, the average is $\lambda_i$, and by the
-Born rule the outcome $\lambda_i$ has probability one. A state whose
+The last post read the average formula in the basis state
+$|a_i\rangle$: all the weight sits on the single outcome $\lambda_i$,
+so by the Born rule that outcome has probability one. A state whose
 outcome is certain, and which the measurement therefore confirms on
 every repetition, is what the [first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
-called a definite state. And the second post found that states a
-measurement tells apart with certainty are orthogonal — which the
-eigenvectors of a Hermitian operator are.
+called a definite state. So every eigenvector is a definite state.
 
 The converse also holds: no state outside the eigenvectors has a
 certain outcome. In the language of averages, a certain answer is
@@ -265,6 +269,8 @@ eigenvalue, which makes it an eigenvector itself. So:
 > of an observable is certain is an eigenvector of its operator, and
 > the certain outcome is the eigenvalue; and every eigenvector
 > $|a_i\rangle$ is such a state, with the certain outcome $\lambda_i$.
+
+![The variance of σ_z in three states of the spin: zero in the eigenvector |u⟩, where all the weight sits on one outcome, and positive in |r⟩ and in a lopsided superposition](variance_spin.png)
 
 This is the statement textbooks start from — Susskind's principles 1
 and 2 — and here it arrives as a consequence of the average rule.
@@ -297,7 +303,11 @@ being the whole real line — a **continuous spectrum**, with
 $\hat x = \int x\, |x\rangle\langle x|\, dx$ as its spectral
 decomposition. The problems ahead show all three kinds: the particle
 in a box has a purely discrete spectrum, the tunneling problem a
-purely continuous one, and hydrogen both at once. In infinite dimensions the spectral theorem holds in the same form
+purely continuous one, and hydrogen both at once.
+
+![Three kinds of energy spectrum: the discrete levels of a particle in a box, the continuous band of a tunneling barrier, and hydrogen with bound levels below zero and a continuum above](spectra_kinds.png)
+
+In infinite dimensions the spectral theorem holds in the same form
 as above for *compact* self-adjoint operators (the Hilbert–Schmidt
 theorem; Sergeev's lectures, Theorem 40, in the references), and for
 general self-adjoint operators such as position it survives in this
@@ -307,13 +317,17 @@ integral form, which the delta post's Appendix A pointed at.
 
 The post ends where a textbook begins. Shankar's *Principles*
 states the content of this post as postulates and then gives the
-procedure for using them (§4.2, p. 117): construct the operator of
-the quantity; find its orthonormal eigenvectors $|\omega_i\rangle$
-and eigenvalues $\omega_i$; expand the state in that basis,
-$|\psi\rangle = \sum_i |\omega_i\rangle\langle\omega_i|\psi\rangle$;
-the probability of the result $\omega_i$ is
-$|\langle\omega_i|\psi\rangle|^2$. The last three steps are the last
-post and this one. In his words (p. 119): "To extract this information for any
+procedure for using them (§4.2, p. 117):
+
+1. construct the operator of the quantity;
+2. find its orthonormal eigenvectors $|\omega_i\rangle$ and
+   eigenvalues $\omega_i$;
+3. expand the state in that basis,
+   $|\psi\rangle = \sum_i |\omega_i\rangle\langle\omega_i|\psi\rangle$;
+4. the probability of the result $\omega_i$ is
+   $|\langle\omega_i|\psi\rangle|^2$.
+
+Steps 2–4 are the last post and this one. In his words (p. 119): "To extract this information for any
 observable, we must determine the eigenbasis of the corresponding
 operator and find the projection of $|\psi\rangle$ along all its
 eigenkets." A working habit follows, also his: there is no need to
