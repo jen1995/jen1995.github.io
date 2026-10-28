@@ -211,13 +211,19 @@ $$
 
 With real eigenvalues, $\lambda_i^* = \lambda_i$, the right side is
 $\hat A$ again. An operator equal to its own adjoint,
-$\hat A^\dagger = \hat A$, is called **Hermitian** (or self-adjoint);
-its matrix equals its own conjugate transpose, in every orthonormal
-basis, since the definition mentions no basis. In the diagonal basis
-the statement is plain — a diagonal matrix equals its conjugate
-transpose exactly when its diagonal is real — and it carries over
-unchanged to the $z$ basis of the spin, where the table of the $x$
-observable is not diagonal at all.
+$\hat A^\dagger = \hat A$, is called **Hermitian** (or self-adjoint).
+
+The computation used one basis, the diagonal one, but its
+conclusion is about the operator, and an equality of operators
+holds in every basis. Combine it with the previous paragraph: in
+any orthonormal basis the matrix of $\hat A^\dagger$ is the conjugate
+transpose of the matrix of $\hat A$, and $\hat A^\dagger = \hat A$, so
+the matrix of $\hat A$ equals its own conjugate transpose there. In
+the diagonal basis this is plain — a diagonal matrix equals its
+conjugate transpose exactly when its diagonal is real. In the $z$
+basis of the spin, where the table of the $x$ observable is not
+diagonal at all, it is the answer to the question that opened this
+section.
 
 > **The table of every measurable quantity is Hermitian.**
 
