@@ -166,8 +166,10 @@ $|\chi\rangle$, and an assignment of a vector to every vector is an
 operator; call it $\hat M^\dagger$. The displayed equation holds for
 it by construction, and it is linear because the Riesz vector of a
 combination of $|\varphi\rangle$'s is the same combination of their
-Riesz vectors. In a matrix with respect to an
-orthonormal basis the adjoint is the **conjugate transpose**,
+Riesz vectors.
+
+In a matrix with respect to an orthonormal basis the adjoint is the
+**conjugate transpose**,
 $(M^\dagger)_{ij} = M_{ji}^*$ (Panov's lectures, §4.1); three rules
 follow from the definition: $(\hat A^\dagger)^\dagger = \hat A$,
 $(\hat A + \hat B)^\dagger = \hat A^\dagger + \hat B^\dagger$,
