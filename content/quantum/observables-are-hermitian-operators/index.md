@@ -161,10 +161,12 @@ $|\psi\rangle$, so by the second post's
 [Riesz theorem](/quantum/states-are-vectors/#bras-and-why-the-bracket-splits)
 there is exactly one vector $|\chi\rangle$ with
 $\langle \varphi | \hat M \psi \rangle = \langle \chi | \psi \rangle$ for
-all $|\psi\rangle$. *Define* $\hat M^\dagger |\varphi\rangle$ to be
-that vector; the displayed equation then holds by construction, and
-a short check shows that the map $|\varphi\rangle \mapsto |\chi\rangle$
-is linear. In a matrix with respect to an
+all $|\psi\rangle$. This assigns to every $|\varphi\rangle$ a vector
+$|\chi\rangle$, and an assignment of a vector to every vector is an
+operator; call it $\hat M^\dagger$. The displayed equation holds for
+it by construction, and it is linear because the Riesz vector of a
+combination of $|\varphi\rangle$'s is the same combination of their
+Riesz vectors. In a matrix with respect to an
 orthonormal basis the adjoint is the **conjugate transpose**,
 $(M^\dagger)_{ij} = M_{ji}^*$ (Panov's lectures, §4.1); three rules
 follow from the definition: $(\hat A^\dagger)^\dagger = \hat A$,
