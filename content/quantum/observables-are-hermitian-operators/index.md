@@ -233,6 +233,9 @@ orthonormal basis, not only in the diagonal one.
 
 </details>
 
+This answers the question the section opened with. The condition
+"real numbers on the diagonal" becomes, in any basis:
+
 > **The table of every measurable quantity is Hermitian** — equal
 > to its own conjugate transpose in every orthonormal basis.
 
