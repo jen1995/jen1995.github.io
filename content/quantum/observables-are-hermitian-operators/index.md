@@ -11,29 +11,33 @@ weight: 51
 The [last post](/quantum/heisenbergs-table/) ended with an
 observable as a table with two indices — an operator $\hat A$ —
 and one assumption about it: that there is an orthonormal basis
-$\{|a_i\rangle\}$ in which the table is diagonal, with numbers
+$\{|a_i\rangle\}$ in which the table is diagonal, with real numbers
 $\lambda_1, \dots, \lambda_n$ on the diagonal. In that basis the
 average of the observable in the state
 $|\psi\rangle = \sum_i c_i |a_i\rangle$ came out as
 $\langle A \rangle = \sum_i \lambda_i |c_i|^2$, the $\lambda_i$ were
 read as the outcomes, and the weights $|c_i|^2$ were shown to be
 the only admissible probabilities — the Born rule. The assumption
-was also shown to be a real restriction: it selects the *normal*
-tables, and a price was promised.
+was also shown to be a restriction: the tables that satisfy it are
+Hermitian, equal to their own conjugate transpose, and a theorem was
+promised — that those are exactly the tables satisfying it, and that
+the restriction costs nothing.
 
-This post pays it, and arrives at the sentence most modern
+This post proves it, and arrives at the sentence most modern
 textbooks open with — "observables are Hermitian operators" — as
 the last line. Not all of them do: Landau and Lifshitz define the
 operator by the mean value and derive Hermiticity from the reality
 of the mean, and Dirac defines an observable as a real dynamical
 variable with a complete set of eigenstates; this road follows
 them.
+
 The basis of the assumption is the eigenbasis of the operator, and
-the outcomes are its eigenvalues. Readings of an apparatus are real
-numbers, and that alone makes the operator Hermitian; the spectral
-theorem then runs the road back, so that Hermitian is also enough
-for the assumed basis to exist, and the assumption costs nothing.
-The definite states of the first post turn out to be the
+the outcomes are its eigenvalues. A table diagonal in such a basis
+with real numbers on the diagonal is Hermitian in one line; the
+spectral theorem runs the road back, so that every Hermitian table
+has such a basis; and the reality of the readings alone, without
+the assumption, already makes the table Hermitian, so the
+assumption costs nothing. The definite states of the first post turn out to be the
 eigenvectors, in both directions. And the spectrum of an operator
 need not be a short list of numbers: it can repeat, and in infinite
 dimensions it can be a whole interval, which is where the problems
