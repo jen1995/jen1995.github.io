@@ -213,7 +213,10 @@ $$
 x(n, t) = \sum_\alpha X_\alpha(n)\, e^{i\omega(n)\alpha t},
 $$
 
-one amplitude $X_\alpha(n)$ per harmonic. By Maxwell such an electron
+one amplitude $X_\alpha(n)$ per harmonic. The position $x(n, t)$ is a
+real number, so the amplitudes come in conjugate pairs,
+$X_{-\alpha}(n) = X_\alpha(n)^*$, as the Fourier coefficients of any
+real signal do. By Maxwell such an electron
 radiates at exactly these harmonic frequencies, $\omega(n)\alpha$, with
 the intensity of the $\alpha$-th line proportional to
 $|X_\alpha(n)|^2$: the spectrum of an orbit is an evenly spaced
@@ -292,6 +295,11 @@ step — the first of what Aitchison and his coauthors call his
 $X(n, n - \alpha)\, e^{i\omega(n, n - \alpha) t}$ *stand for* the
 position $x(t)$: not a function of time any more, but a table of
 numbers indexed by pairs of states.
+<a id="conjugate-pairs"></a>The reality of $x(t)$ survives the
+reinterpretation: the classical pairing $X_{-\alpha}(n) = X_\alpha(n)^*$
+becomes $X(n - \alpha, n) = X(n, n - \alpha)^*$ — the amplitude of a
+jump read from the other end is the complex conjugate (Aitchison and
+coauthors, eqs. 44–45).
 
 ![Heisenberg's table: every spectral line joins two levels, so every observable quantity carries two indices — a table of transition amplitudes](heisenberg_table.png)
 

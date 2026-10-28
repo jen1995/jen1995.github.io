@@ -263,11 +263,11 @@ outcome, or a pair of definite states that are not orthogonal, and
 no apparatus produces either.
 
 The first table in history passed the test by itself. Heisenberg's
-amplitudes satisfy $X(m, n) = X(n, m)^*$, because the coordinate
-$x(t)$ they describe is real — the same condition that makes the
-Fourier coefficients of a real signal come in conjugate pairs,
-$X_{-\alpha}(n) = X_\alpha(n)^*$ in the notation of the
-[classical picture](/quantum/heisenbergs-table/#the-classical-picture).
+amplitudes satisfy $X(n - \alpha, n) = X(n, n - \alpha)^*$, as the
+[last post noted](/quantum/heisenbergs-table/#conjugate-pairs),
+because the coordinate $x(t)$ they describe is real; in the language
+of this post that is exactly $\langle n - \alpha | \hat x | n \rangle = \langle n | \hat x | n - \alpha \rangle^*$,
+the mirror symmetry of a Hermitian table.
 
 Tables that are not Hermitian do appear in the theory, but as
 operators that *transform* states rather than ask questions of them:
@@ -609,6 +609,11 @@ ordinary sphere.
 - Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
   Minimum*. Basic Books, 2014 — lecture 3, §3.5 "A common
   misconception": applying an operator is not measuring.
+- I. J. R. Aitchison, D. A. MacManus, T. M. Snyder. [*Understanding
+  Heisenberg's "magical" paper of July 1925*](https://arxiv.org/abs/quant-ph/0404009).
+  American Journal of Physics 72 (2004), 1370–1379 — eqs. (44)–(45):
+  the conjugate pairing of the transition amplitudes from the
+  reality of $x(t)$, "nothing but" the Hermiticity of $\hat x$.
 - Constance Reid. *Hilbert*. Springer, 1970 — the source of
   Hilbert's remark on the word "spectrum", in the chapter on his
   work on integral equations.
