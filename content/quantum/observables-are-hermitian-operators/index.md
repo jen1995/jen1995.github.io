@@ -164,9 +164,16 @@ $\langle \varphi | \hat M \psi \rangle = \langle \chi | \psi \rangle$ for
 all $|\psi\rangle$. This assigns to every $|\varphi\rangle$ a vector
 $|\chi\rangle$, and an assignment of a vector to every vector is an
 operator; call it $\hat M^\dagger$. The displayed equation holds for
-it by construction, and it is linear because the Riesz vector of a
-combination of $|\varphi\rangle$'s is the same combination of their
-Riesz vectors.
+it by construction. It is also linear: if $|\chi_1\rangle$ and
+$|\chi_2\rangle$ are the Riesz vectors of $|\varphi_1\rangle$ and
+$|\varphi_2\rangle$, then for every $|\psi\rangle$
+
+$$
+\langle \alpha\varphi_1 + \beta\varphi_2 \,|\, \hat M \psi \rangle = \alpha^* \langle \chi_1 | \psi \rangle + \beta^* \langle \chi_2 | \psi \rangle = \langle \alpha\chi_1 + \beta\chi_2 \,|\, \psi \rangle ,
+$$
+
+so the Riesz vector of $\alpha|\varphi_1\rangle + \beta|\varphi_2\rangle$
+is $\alpha|\chi_1\rangle + \beta|\chi_2\rangle$, by uniqueness.
 
 In a matrix with respect to an orthonormal basis the adjoint is the
 **conjugate transpose**,
