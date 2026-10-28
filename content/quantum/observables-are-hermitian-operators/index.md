@@ -244,7 +244,7 @@ every entry below the diagonal the complex conjugate of its mirror
 image above it. A real symmetric matrix is the special case with no
 imaginary parts.
 
-![A Hermitian matrix: real diagonal, mirror entries complex conjugates of each other; a real symmetric matrix as the special case; and a numerical example that is Hermitian but not symmetric](hermitian_matrix.png)
+![A Hermitian matrix: real diagonal, mirror entries complex conjugates of each other; a numerical example that is Hermitian but not symmetric; and a real symmetric matrix as the special case](hermitian_matrix.png)
 
 A worry at this point. A table of $n^2$ complex numbers could have
 been anything, and the argument has just forced it to be Hermitian;
