@@ -586,9 +586,12 @@ what the assumption rules out.
 <summary>For the linear algebra lovers: each requirement of the assumption is needed</summary>
 
 The assumption asks for three things: a basis of directions the
-table merely rescales, that basis orthonormal, and the rescaling
-factors real. Here is one matrix for each requirement, satisfying
-the others and failing that one.
+table merely rescales — in the language of linear algebra, a basis
+of *eigenvectors*, an *eigenbasis*, with the rescaling factors as
+the *eigenvalues*; the next post introduces these words properly —
+that basis orthonormal, and the rescaling factors real. Here is one
+matrix for each requirement, satisfying the others and failing that
+one.
 
 *No eigenbasis at all.* Over the complex numbers every
 square matrix has at least one direction that it merely rescales:
