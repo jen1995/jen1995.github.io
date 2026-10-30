@@ -488,14 +488,10 @@ space of states, written with a hat: $\hat E$ for
 energy, $\sigma_z$ for the spin along $z$ (the spin operators are
 written without a hat, by convention).
 
-One warning about the output. The machine takes a state and returns
-a vector, $\hat A |\psi\rangle$, but that vector is *not* a state the
-system can be in: it is not a unit vector in general, and no
-experiment produces it. It is a step in a computation. The numbers
-that mean something are built *from* it — the average, as the next
-chapter shows, is the inner product of $\hat A|\psi\rangle$ with
-$|\psi\rangle$ itself — and the next post works out what applying an
-operator does and does not have to do with measuring.
+One warning about the output: the vector $\hat A |\psi\rangle$ the
+machine returns is *not* a state the system can be in. What it is
+for is the subject of the [last subsection](#what-the-operator-returns-and-what-the-brackets-mean)
+of this post, once the averages are in hand.
 
 Nothing has been said yet about
 which operator belongs to which observable, or about eigenvectors. That
@@ -993,7 +989,10 @@ $p_i = |c_i|^2$.
 </details>
 
 So the guess is forced, and the formula is an
-average in the plain sense:
+average in the plain sense. Write $\langle A \rangle$ for the average
+of the observable $A$ in the state at hand — the first post's
+$\langle \sigma \rangle$, with the name of the observable inside the
+angle brackets:
 
 $$
 \langle A \rangle = \sum_i \lambda_i\, |c_i|^2 ,
@@ -1167,6 +1166,48 @@ Computing the amplitudes $\phi_1$ and $\phi_2$ as functions of the
 distances requires the Schrödinger equation; a later post of this
 road will do it and obtain the fringes. This post used nothing
 about them except that there are two and that they add.
+
+### What the operator returns, and what the brackets mean
+
+The operator was introduced for one purpose: to return, for every
+state, the average of the outcomes. Two questions were left open on
+the way. The machine takes a state $|\psi\rangle$ and returns a
+vector $\hat A|\psi\rangle$ — what is that vector? And its table has
+entries $\langle \varphi | \hat A | \psi \rangle$ for every pair of states
+— what do the entries with $\varphi \neq \psi$ mean?
+
+The vector first. $\hat A|\psi\rangle$ is *not* a state: it is not of
+unit length in general, no experiment produces it, and nothing in
+this chapter has read it as one. In the diagonal basis it is
+$\sum_i \lambda_i c_i |a_i\rangle$ — the coordinates of the state, each
+multiplied by its outcome, not yet squared into probabilities. It is
+a step in a computation; every number the chapter has used is built
+from it with one more inner product, and those numbers are the
+brackets. Three kinds appeared.
+
+- $\langle \psi | \hat A | \psi \rangle$, the same state on both sides:
+  the average of the readings of the observable $A$ in the state
+  $|\psi\rangle$. This is what the operator was built to return.
+- $\langle \varphi | \hat A | \psi \rangle$, two different states: not
+  the average of anything. It is an entry of the table, needed so
+  that the average can be computed in a basis where the table is not
+  diagonal; the [polarization lemma](#polarization) says that the
+  averages, taken over all states, determine these entries.
+- $\langle \varphi | \psi \rangle$, no operator inside, two *states*:
+  an amplitude. Its squared magnitude is the probability of the
+  outcome $|\varphi\rangle$ when $|\psi\rangle$ is measured along a
+  basis that contains $|\varphi\rangle$ — the Born rule — and the
+  resolution of identity of the second post,
+  $\langle x | s \rangle = \sum_i \langle x | i \rangle \langle i | s \rangle$,
+  is the rule that amplitudes of alternatives add. This is how
+  Feynman's $\langle x | 1 \rangle$ and $\langle 1 | s \rangle$ were read
+  above. His $\langle j | A | i \rangle$ for a *device* $A$ is an
+  amplitude for a different reason: a device returns a state, $A|i\rangle$
+  is the atom after it, of unit length, and $\langle j | A | i \rangle$ is
+  the inner product of two states — the amplitude for an atom
+  entering in $i$ to leave in $j$. An observable returns no state, so
+  for it the bracket with two different states is not an amplitude
+  of anything.
 
 ## What we built
 
