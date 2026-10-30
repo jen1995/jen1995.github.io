@@ -602,6 +602,7 @@ $c^\dagger A' c = d^\dagger U^\dagger U A U^\dagger U d = d^\dagger A d$.
 So the assumption is this. The basis it speaks of will be used
 throughout the chapter, so its vectors get a name, $|a_i\rangle$.
 
+<a id="assumption"></a>
 > **Assumption.** There is an orthonormal basis $\{|a_i\rangle\}$ in
 > which the table of the observable is diagonal,
 > $$\langle a_i | \hat A | a_j \rangle = \lambda_i\, \delta_{ij},$$

@@ -85,8 +85,11 @@ $$
 \hat A\, |a_j\rangle = \lambda_j\, |a_j\rangle .
 $$
 
-So the basis of the assumption is a basis of eigenvectors, the
-numbers on the diagonal are the eigenvalues, and the possible
+So the basis of the
+[assumption](/quantum/heisenbergs-table/#assumption) — the
+orthonormal basis in which the table is diagonal, with real numbers
+on the diagonal — is a basis of eigenvectors, the numbers on the
+diagonal are the eigenvalues, and the possible
 outcomes of an observable are the spectrum of its operator.
 
 > 💡 **Where the word comes from.** The two spectra of this road
