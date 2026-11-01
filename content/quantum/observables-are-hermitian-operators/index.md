@@ -298,22 +298,42 @@ are *unitary*, $U^\dagger U = \hat I$, the subject of a later post, and
 their eigenvalues are unit complex numbers $e^{i\theta}$ rather than
 real outcomes.
 
-**And back.** The assumption that opened the last post was promised a
-price. Suppose only what the apparatus guarantees — that the average
-$\langle \psi | \hat A | \psi \rangle$ is a real number in every
-state. Then $\hat A$ is Hermitian, by the
+### And back: the three conditions are one
+
+The assumption that opened the last post was promised a price. Here
+is the account. Three conditions on the table of an observable have
+appeared on the road:
+
+<a id="three-conditions"></a>
+> 1. **The assumption.** There is an orthonormal basis in which the
+>    table is diagonal, with real numbers on the diagonal.
+> 2. **Hermitian.** $\hat A^\dagger = \hat A$.
+> 3. **What the apparatus guarantees.** The average
+>    $\langle \psi | \hat A | \psi \rangle$ is a real number in every
+>    state.
+>
+> **Theorem.** The three conditions are equivalent.
+
+Two of the four implications are already in hand. That 1 implies 2
+was the computation above: conjugate the spectral decomposition.
+That 2 implies 3 is one line: if $\hat A^\dagger = \hat A$, then
+$\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$,
+so the average equals its own conjugate. What remains is the road
+back, from 3 to 2 and from 2 to 1 — and it is this road that pays
+the price: condition 3 is all the apparatus gives, and if it already
+implies the assumption, the assumption excluded nothing.
+
+**3 implies 2.** Suppose only that $\langle \psi | \hat A | \psi \rangle$
+is real in every state. Then $\hat A$ is Hermitian, by the
 [polarization lemma](/quantum/heisenbergs-table/#polarization) of
 the last post: real diagonal values make the bracket
 conjugate-symmetric,
 $\langle \varphi | \hat A \psi \rangle = \langle \psi | \hat A \varphi \rangle^* = \langle \hat A \varphi | \psi \rangle$
 for all $|\varphi\rangle, |\psi\rangle$, and the outer equality is
-the definition of $\hat A^\dagger = \hat A$. (The other direction is
-a line: if $\hat A^\dagger = \hat A$, then
-$\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$,
-so the average equals its own conjugate.)
+the definition of $\hat A^\dagger = \hat A$.
 
-And a Hermitian operator has exactly the basis the assumption asked
-for:
+**2 implies 1.** A Hermitian operator has exactly the basis the
+assumption asked for:
 
 > **Spectral theorem** (finite dimensions). A Hermitian operator has
 > real eigenvalues and an orthonormal basis of eigenvectors.
@@ -348,11 +368,11 @@ are the two facts just proved). Within a repeated eigenvalue the
 eigenvectors are not orthogonal automatically, and Gram–Schmidt makes
 them so.
 
-So the two roads meet. "Diagonal in some orthonormal basis, with real
-numbers on the diagonal" and "real average in every state" are the
-same condition on a table, and both say *Hermitian*. The textbook
-postulate — "observables are Hermitian operators" — is this
-equivalence, stated as a definition.
+That closes the circle: $1 \Rightarrow 2 \Rightarrow 3 \Rightarrow 2 \Rightarrow 1$.
+"Diagonal in some orthonormal basis, with real numbers on the
+diagonal", "Hermitian" and "real average in every state" are one
+condition on a table. The textbook postulate — "observables are
+Hermitian operators" — is this equivalence, stated as a definition.
 
 ![Three conditions on a table that are one condition: diagonal in an orthonormal basis with a real diagonal, real average in every state, and Hermitian — with the one-line arguments and the two theorems that connect them](two_roads.png)
 
