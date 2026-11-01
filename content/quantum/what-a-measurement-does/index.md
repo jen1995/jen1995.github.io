@@ -22,8 +22,7 @@ is still open: *measurement as an operation on states* — what a
 measurement does to the state it is performed on. This post pays
 it, after clearing one confusion that the notation invites.
 
-
-### Applying the operator is not measuring
+## Applying the operator is not measuring
 
 The notation invites a confusion, so it is addressed first.
 Applying an operator to a state is a *mathematical* operation that
@@ -56,7 +55,7 @@ misconception", to this point.)
 
 ![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
 
-### Measurement
+## Measurement
 
 Wishlist item 4 of the
 [first post](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
