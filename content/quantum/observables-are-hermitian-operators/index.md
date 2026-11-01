@@ -438,7 +438,9 @@ every repetition, is what the [first post](/quantum/the-apparatus-and-the-arrow/
 called a definite state. So every eigenvector is a definite state.
 
 The converse also holds: no state outside the eigenvectors has a
-certain outcome. In the language of averages, a certain answer is
+certain outcome. Take a state
+$|\psi\rangle = \sum_i c_i |a_i\rangle$ in which the outcome is
+certain. In the language of averages, a certain answer is
 one with no spread — the average of the squared deviation from the
 mean $\langle A \rangle$ is zero. The squared deviation
 $(A - \langle A \rangle)^2$ is an observable in its own right: the same
@@ -474,10 +476,23 @@ $$
 \langle (A - \langle A \rangle)^2 \rangle = \sum_i |c_i|^2\, (\lambda_i - \langle A \rangle)^2 .
 $$
 
-Every term is nonnegative, so the sum vanishes only if every $c_i$
-with $\lambda_i \neq \langle A \rangle$ is zero — that is, only if
-$|\psi\rangle$ has components along eigenvectors of a single
-eigenvalue, which makes it an eigenvector itself. So:
+A certain outcome means this sum is zero. Every term is nonnegative,
+so each term is zero on its own: for every $i$, either $c_i = 0$ or
+$\lambda_i = \langle A \rangle$. So $|\psi\rangle$ has nonzero
+coordinates only along basis vectors with one and the same
+eigenvalue, $\lambda = \langle A \rangle$.
+
+- If the $\lambda_i$ are all different, that is a single basis vector
+  $|a_i\rangle$, and $|\psi\rangle = c_i |a_i\rangle$ with
+  $|c_i| = 1$: the eigenvector $|a_i\rangle$ up to a
+  [global phase](/quantum/states-are-vectors/#global-phase).
+- If several basis vectors share the eigenvalue $\lambda$ (the
+  [degenerate case](#degeneracy-and-the-continuous-spectrum) below),
+  $|\psi\rangle$ is a combination of them, and it is still an
+  eigenvector:
+  $\hat A |\psi\rangle = \sum_i c_i \lambda\, |a_i\rangle = \lambda\, |\psi\rangle$.
+
+So:
 
 > **Definite states are eigenvectors.** A state in which the outcome
 > of an observable is certain is an eigenvector of its operator, and
