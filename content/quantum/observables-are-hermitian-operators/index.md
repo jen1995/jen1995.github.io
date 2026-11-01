@@ -265,9 +265,12 @@ numbers it likes, produce a table with the mirror symmetry just
 described?
 
 Because the experiment *never* hands us a table. It hands us two
-lists — the outcomes, which are real numbers, and the definite
-states, which are orthogonal — and the table is *assembled* from
-these two lists by the spectral decomposition. Anything assembled
+lists: the outcomes, which are real numbers, and the definite
+states, which the apparatus tells apart with certainty. The second
+post translated that certainty into the model as orthogonality, so
+in the model the definite states are an orthonormal set, and the
+table is *assembled* from the two lists by the spectral
+decomposition. Anything assembled
 that way is Hermitian; the mirror symmetry is not a constraint on
 the laboratory but a consequence of how the table is built from
 what the laboratory gives. A table that is not Hermitian would need a complex
