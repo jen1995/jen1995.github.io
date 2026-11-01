@@ -553,12 +553,13 @@ wave functions of the states in which the quantity has a definite
 value are the first objects they name, and the operator is built
 afterwards to fit them.
 
-**The qubit, both ways.** The spin is the one case where every step
-can be done by hand, and the link between an operator and its
-definite states can be followed in both directions: from the definite
-states to the operator, by the spectral decomposition, and from the
-operator to the definite states, by finding its eigenbasis. Start
-with the first direction. Work in the $z$ basis, with
+The spin is the one case where every step can be done by hand, and
+the link between an operator and its definite states can be followed
+in both directions: from the definite states to the operator, by the
+spectral decomposition, and from the operator to the definite states,
+by finding its eigenbasis.
+
+**From the states to the operator.** Work in the $z$ basis, with
 $|u\rangle = (1, 0)^{\mathsf T}$ and $|d\rangle = (0, 1)^{\mathsf T}$ as in
 the second post. For the $z$ spin the decomposition is immediate,
 outcomes $\pm 1$ on the projectors onto its definite states:
@@ -720,8 +721,8 @@ basis we chose to write in. This is
 [the statement in the box above](#quantity-is-basis) in the form of
 matrices.
 
-The second direction is the recipe itself: given the operator, find
-its eigenbasis. Take $\sigma_x$ as given and forget where it came
+**From the operator to the states.** This direction is the recipe
+itself: given the operator, find its eigenbasis. Take $\sigma_x$ as given and forget where it came
 from. Its eigenvalues are the roots of the characteristic
 polynomial,
 
