@@ -380,12 +380,7 @@ and the inner product vanishes.
 *The eigenvectors fill the space.* That there are enough of them to
 form an orthonormal basis is proved by induction on the dimension
 (Panov, §4.2, Theorem 4.2.3), and the induction uses the same trick
-once more.
-
-<details>
-<summary>Proof that a Hermitian operator has an orthonormal eigenbasis</summary>
-
-Let $\hat A$ be Hermitian on a space of dimension $n$. If $n = 1$
+once more. Let $\hat A$ be Hermitian on a space of dimension $n$. If $n = 1$
 there is nothing to prove. For $n \gt 1$, three steps.
 
 1. *One eigenvector exists.* Over the complex numbers the
@@ -412,8 +407,6 @@ root. In infinite dimensions that step can fail: the position
 operator has no eigenvector in $L^2$ at all, as the
 [section on spectra](#degeneracy-and-the-continuous-spectrum) below
 and the [delta post](/quantum/from-kronecker-to-dirac/) discuss.
-
-</details>
 
 </details>
 
