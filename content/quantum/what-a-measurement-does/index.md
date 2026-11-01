@@ -114,10 +114,9 @@ projection rule.
 
 ## Onward
 
-Next stop: the qubit and the Bloch sphere. The $y$-axis states are
-built, complex amplitudes become unavoidable, $\sigma_y$ joins
-$\sigma_z$ and $\sigma_x$, and the spin operator along an arbitrary
-direction $\hat n$ turns out to be $\hat n \cdot \vec\sigma$ — from
+Next stop: the qubit and the Bloch sphere. The spin operator along an
+arbitrary direction $\hat n$ turns out to be
+$\hat n \cdot \vec\sigma$, built from the three Pauli matrices — from
 which the first post's $\langle \sigma \rangle = \cos\theta$ follows
 in one line, and a two-dimensional complex state space acquires the
 geometry of an ordinary sphere.

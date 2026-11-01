@@ -94,9 +94,8 @@ the state doesn't.
 ## QM-4. The qubit and the Bloch sphere (everything, applied)
 
 The smallest quantum system carries every concept from QM-1..3 at once —
-and answers "why complex numbers": deriving |i⟩, |o⟩ from the three
-experimental constraints forces imaginary amplitudes (her notes' explicit
-computation). u/d, l/r, i/o triples; global phase does not matter →
+and takes the three pairs u/d, l/r, i/o from post 51, where deriving
+|i⟩, |o⟩ forces imaginary amplitudes. Explains the sign choice of |i⟩. global phase does not matter →
 two real parameters → the Bloch sphere with θ/2 (why HALF the angle — the
 sphere-vs-Hilbert-space geometry, her "Замечание" about orthogonal-in-ℂ² =
 antipodal-on-sphere); apparatus at angle θ ⇒ P(+1) = cos²(θ/2), closing
@@ -157,6 +156,11 @@ The longest post; notes §9–13 + the classical interlude.
   promise in post 51's recipe subsection points here. The teaser
   "Degeneracy and the continuous spectrum" in post 51 stays as is.
 - Then QM-4 qubit (weight 53).
+- Later on 2026-11-01: the derivation of |i⟩, |o⟩ and sigma_y moved from
+  QM-4 into post 51, subsection "The third matrix: σ_y" (anchor #sigma-y,
+  figure y_phase.png). States Are Vectors and Heisenberg's Table now link
+  there. QM-4 keeps the Bloch sphere, θ/2, cos²(θ/2), n·σ, and owes the
+  explanation of the sign choice: |i⟩ = (1, i)/√2 makes x, y, z right-handed.
 
 ## Status (2026-10-28): measurement folded into post 51; post 52 dissolved
 

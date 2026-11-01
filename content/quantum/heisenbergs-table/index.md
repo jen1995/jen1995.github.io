@@ -444,7 +444,8 @@ a two-by-two table. Its entries are complex numbers in general: the
 columns of the table will turn out to be coordinates of vectors in
 the complex state space of the second post, which
 [promised](/quantum/states-are-vectors/#the-y-axis) to show on the
-$y$ axis, in the qubit post, that real coordinates are not enough. The notation already says how the table acts: the
+$y$ axis that real coordinates are not enough, and
+[the next post does](/quantum/observables-are-hermitian-operators/#sigma-y). The notation already says how the table acts: the
 second post showed that an $n \times n$ table of numbers, written
 with respect to an orthonormal basis, *is* a linear operator — a
 machine $\hat A : V \to V$ that sends vectors to vectors and respects

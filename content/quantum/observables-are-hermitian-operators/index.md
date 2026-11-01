@@ -3,7 +3,7 @@ title: "Observables Are Hermitian Operators"
 date: 2026-10-27
 draft: true
 tags: ["quantum", "math"]
-summary: "The postulate most modern textbooks start from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors. The theorem dictates the method — find the eigenbasis first — and the qubit shows it both ways: from the definite states to the Pauli matrices, and back."
+summary: "The postulate most modern textbooks start from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors. The theorem dictates the method — find the eigenbasis first — and the qubit shows it both ways: from the definite states to the Pauli matrices, and back. The y axis forces complex coordinates and gives the third Pauli matrix."
 math: true
 weight: 51
 ---
@@ -590,9 +590,9 @@ These are two of the three
 [**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
 obtained here from the experiments, through the definite states the
 second post extracted from them, and not copied from a table. The
-third, $\sigma_y$, waits for the $y$-axis states, which the post
-after next builds; its entries are not real, and it is Hermitian all
-the same.
+third, $\sigma_y$, needs the $y$-axis states and comes
+[at the end of this section](#sigma-y); its entries are not real, and
+it is Hermitian all the same.
 
 ![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
 
@@ -651,6 +651,108 @@ returns the two states the second post had to extract from the
 experiments by hand. That is the recipe working: the eigenbasis of
 $\sigma_x$ *is* the pair of definite states of the $x$ measurement,
 and from here on any observable of the spin is handled the same way.
+
+<a id="sigma-y"></a>
+### The third matrix: $\sigma_y$
+
+The third axis goes through the same steps, with one new thing: the
+coordinates of its definite states cannot be real. The
+[second post](/quantum/states-are-vectors/#the-y-axis) named these
+states $|i\rangle$ and $|o\rangle$, *in* and *out*, and left the
+derivation open. The $y$ axis is perpendicular to both $z$ and $x$.
+By [experiment three of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-three-turning-the-arrow),
+an electron prepared along one axis and measured along a perpendicular
+one has the average $\cos 90^\circ = 0$. With outcomes $\pm 1$, an
+average of zero means probability $\tfrac12$ for each outcome. So the
+two states must satisfy three requirements:
+
+1. measured along $z$, each gives $\pm 1$ with probability $\tfrac12$;
+2. measured along $x$, each gives $\pm 1$ with probability $\tfrac12$;
+3. they are mutually exclusive, $\langle i | o \rangle = 0$.
+
+Take a state with coordinates $(a, b)^{\mathsf T}$. Requirement 1 says
+$|a|^2 = |b|^2 = \tfrac12$. A
+[global phase](/quantum/states-are-vectors/#global-phase) changes
+nothing measurable, so multiply the state by one that makes $a$ real
+and positive. What remains is one unknown angle $\varphi$:
+
+$$
+|\psi\rangle = \tfrac{1}{\sqrt 2} (1, e^{i\varphi})^{\mathsf T} .
+$$
+
+Requirement 2 determines $\varphi$. By the Born rule, the probability
+of $+1$ along $x$ is
+
+$$
+\begin{aligned}
+|\langle r | \psi \rangle|^2 &= \tfrac14\, |1 + e^{i\varphi}|^2 \\
+&= \tfrac14\, (1 + e^{i\varphi})(1 + e^{-i\varphi}) \\
+&= \tfrac12\, (1 + \cos\varphi) .
+\end{aligned}
+$$
+
+Setting this equal to $\tfrac12$ gives $\cos\varphi = 0$, so
+$e^{i\varphi} = i$ or $e^{i\varphi} = -i$. This is what the second post
+promised. Real coordinates would require $e^{i\varphi} = \pm 1$, and
+those two values give $|r\rangle$ and $|l\rangle$ themselves, with
+probabilities $1$ and $0$. No real choice gives $\tfrac12$.
+
+![The phase of the second coordinate: of the values of e^(iφ) on the unit circle, +1 and −1 give the states |r⟩ and |l⟩, with probabilities 1 and 0 of +1 along x; the probability equals one half only at +i and −i](y_phase.png)
+
+The two solutions also satisfy requirement 3. The bra conjugates the
+coordinates, so the inner product of $\tfrac{1}{\sqrt 2}(1, -i)^{\mathsf T}$
+with $\tfrac{1}{\sqrt 2}(1, i)^{\mathsf T}$ is
+$\tfrac12 (1 \cdot 1 + i \cdot i) = 0$. So these are the two definite
+states of the $y$ axis. The requirements do not say which one to call
+$|i\rangle$, and exchanging the names changes the sign of $\sigma_y$.
+The standard choice is
+
+$$
+|i\rangle = \tfrac{1}{\sqrt 2} (1, i)^{\mathsf T}, \qquad |o\rangle = \tfrac{1}{\sqrt 2} (1, -i)^{\mathsf T} ,
+$$
+
+and the qubit post explains it: this choice makes the axes $x, y, z$ a
+right-handed triple.
+
+Now the same recipe, with outcomes $+1$ on $|i\rangle$ and $-1$ on
+$|o\rangle$. The bras are $\langle i| = \tfrac{1}{\sqrt 2}(1, -i)$ and
+$\langle o| = \tfrac{1}{\sqrt 2}(1, i)$, so
+
+$$
+|i\rangle\langle i| = \tfrac12 \begin{pmatrix} 1 & -i \\ i & 1 \end{pmatrix}, \qquad |o\rangle\langle o| = \tfrac12 \begin{pmatrix} 1 & i \\ -i & 1 \end{pmatrix},
+$$
+
+and subtracting the second from the first gives
+
+$$
+\sigma_y = |i\rangle\langle i| - |o\rangle\langle o| = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} .
+$$
+
+This matrix is neither real nor symmetric, and it is Hermitian.
+Transposing it and then conjugating the entries returns the same
+matrix:
+
+$$
+\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}^{\mathsf T} = \begin{pmatrix} 0 & i \\ -i & 0 \end{pmatrix}, \qquad \begin{pmatrix} 0 & i \\ -i & 0 \end{pmatrix}^{*} = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} .
+$$
+
+Its entries are not real, but its eigenvalues are, as the theorem says
+they must be:
+
+$$
+\det(\sigma_y - \lambda I) = \det \begin{pmatrix} -\lambda & -i \\ i & -\lambda \end{pmatrix} = \lambda^2 - 1 ,
+$$
+
+so $\lambda = \pm 1$. The imaginary entries come from writing $\sigma_y$
+in the $z$ basis: in its own eigenbasis $|i\rangle, |o\rangle$ its matrix
+has $+1$ and $-1$ on the diagonal, like the other two in the
+[table above](#pauli-other-basis). All three
+[Pauli matrices](https://en.wikipedia.org/wiki/Pauli_matrices) are now
+obtained from the experiments:
+
+$$
+\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} .
+$$
 
 ## Beyond the spin
 
@@ -721,7 +823,9 @@ dimensions an eigenvalue can repeat, and in infinite dimensions the
 spectrum can be continuous, as it is for position. And the theorem
 dictates the method: a calculation starts by finding the eigenbasis
 of the operator at hand, which for the spin returns the states the
-second post found by hand.
+second post found by hand. The same steps on the $y$ axis force complex
+coordinates and give the third Pauli matrix, $\sigma_y$, which is
+Hermitian with entries that are not real.
 
 Wishlist item 3 is paid: **an observable is a Hermitian operator**,
 whose eigenvalues are the outcomes, whose eigenvectors are the
@@ -736,8 +840,8 @@ measurement does to the state. That is the next post.
 Next stop: what a measurement does. The warning that applying an
 operator is not measuring, and measurement itself as a projection
 onto a definite state — the last item of the wishlist but one.
-After that, the qubit and the Bloch sphere: the $y$-axis states,
-$\sigma_y$, and the spin operator along an arbitrary direction.
+After that, the qubit and the Bloch sphere: all the states of the spin
+on one sphere, and the spin operator along an arbitrary direction.
 
 ## References
 
@@ -765,9 +869,9 @@ $\sigma_y$, and the spin operator along an arbitrary direction.
   conjugate symmetry of the transition amplitudes,
   $X(m, n) = X(n, m)^*$, follows from the reality of the coordinate.
 - Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
-  Minimum*. Basic Books, 2014 — lecture 3, §§3.3–3.4: the spin
-  operators $\sigma_z$ and $\sigma_x$ constructed from the
-  experiments.
+  Minimum*. Basic Books, 2014 — lecture 2: the states $|i\rangle$ and
+  $|o\rangle$ from the same requirements; lecture 3, §§3.3–3.4: the
+  spin operators constructed from the experiments.
 - I. J. R. Aitchison, D. A. MacManus, T. M. Snyder. [*Understanding
   Heisenberg's "magical" paper of July 1925*](https://arxiv.org/abs/quant-ph/0404009).
   American Journal of Physics 72 (2004), 1370–1379 — eqs. (44)–(45):

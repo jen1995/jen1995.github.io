@@ -330,7 +330,8 @@ $\mathbb C^2$ down to the two angles of a sphere.
 $x$ basis **and** mutually exclusive. Try to satisfy all three with
 real weights — it cannot be done, and that is the promised moment
 where complex numbers stop being a convenience. We save the derivation
-for the qubit post; it deserves the full stage.
+for [the post on observables](/quantum/observables-are-hermitian-operators/#sigma-y),
+where it also gives the third Pauli matrix.
 
 ## Bras, and why the bracket splits
 
