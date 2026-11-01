@@ -507,14 +507,6 @@ eigenvalue, $\lambda = \langle A \rangle$.
 
 ![The variance of σ_z in three states of the spin: zero in the eigenvector |u⟩, where all the weight sits on one outcome, and positive in |r⟩ and in a lopsided superposition](variance_spin.png)
 
-This is a statement most textbooks start from, as a postulate
-about measurement; here it is a consequence of the average rule.
-Measurement itself, and what it does to the state, is the subject of
-the [next post](/quantum/what-a-measurement-does/). There the first
-post's "the measurement prepares a state that repeats its answer"
-becomes the statement that the state after a measurement is an
-eigenvector.
-
 For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
 $z$ observable, are the eigenvectors of its operator $\sigma_z$, with
 eigenvalues $+1$ and $-1$.
@@ -648,7 +640,7 @@ each gap is taken up; none of the gaps is filled here, only named.
 | an orthonormal eigenbasis exists | Panov, Theorem 4.2.3 | not in general: $\hat x$ has no eigenvector in $L^2$ at all. True for *compact* self-adjoint operators (the Hilbert–Schmidt theorem; Sergeev, Theorem 40) — the particle in a box |
 | the spectrum | a finite list of eigenvalues | discrete (box), continuous (barrier) or mixed (hydrogen); the continuous part has no eigenvectors in the space, only *generalized* ones like $\lvert x\rangle$, normalized to a delta — the delta post, the tunneling post |
 | spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ — the delta post's Appendix A |
-| the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved | a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part — the Born rule on a line, next post |
+| the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved | a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part — the Born rule on a line, a later post |
 
 The spectral theorem for self-adjoint operators on a Hilbert space,
 which makes the right column precise, is a theorem of functional
