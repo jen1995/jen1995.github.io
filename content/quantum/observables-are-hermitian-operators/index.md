@@ -300,9 +300,9 @@ real outcomes.
 
 ### And back: the three conditions are one
 
-The assumption that opened the last post was promised a price. Here
-is the account. Three conditions on the table of an observable have
-appeared on the road:
+The last post left one question open: does the assumption exclude
+any observable? To answer it, put side by side the three conditions
+on a table that have appeared so far:
 
 <a id="three-conditions"></a>
 > 1. **The assumption.** There is an orthonormal basis in which the
@@ -314,14 +314,14 @@ appeared on the road:
 >
 > **Theorem.** The three conditions are equivalent.
 
-Two of the four implications are already in hand. That 1 implies 2
+Two of the four implications are already proved. That 1 implies 2
 was the computation above: conjugate the spectral decomposition.
 That 2 implies 3 is one line: if $\hat A^\dagger = \hat A$, then
 $\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$,
-so the average equals its own conjugate. What remains is the road
-back, from 3 to 2 and from 2 to 1 — and it is this road that pays
-the price: condition 3 is all the apparatus gives, and if it already
-implies the assumption, the assumption excluded nothing.
+so the average equals its own conjugate. The two that remain go the
+other way, from 3 to 2 and from 2 to 1, and they answer the open
+question: condition 3 is all the apparatus gives, so if it implies
+condition 1, the assumption excluded nothing.
 
 **3 implies 2.** Suppose only that $\langle \psi | \hat A | \psi \rangle$
 is real in every state. Then $\hat A$ is Hermitian, by the
@@ -368,11 +368,13 @@ are the two facts just proved). Within a repeated eigenvalue the
 eigenvectors are not orthogonal automatically, and Gram–Schmidt makes
 them so.
 
-That closes the circle: $1 \Rightarrow 2 \Rightarrow 3 \Rightarrow 2 \Rightarrow 1$.
-"Diagonal in some orthonormal basis, with real numbers on the
-diagonal", "Hermitian" and "real average in every state" are one
-condition on a table. The textbook postulate — "observables are
-Hermitian operators" — is this equivalence, stated as a definition.
+With $1 \Rightarrow 2 \Rightarrow 3 \Rightarrow 2 \Rightarrow 1$ the
+theorem is proved. "Diagonal in some orthonormal basis, with real
+numbers on the diagonal", "Hermitian" and "real average in every
+state" are one condition on a table, and the assumption of the last
+post excluded no observable. The textbook postulate — "observables
+are Hermitian operators" — is this equivalence, stated as a
+definition.
 
 ![Three conditions on a table that are one condition: diagonal in an orthonormal basis with a real diagonal, real average in every state, and Hermitian — with the one-line arguments and the two theorems that connect them](two_roads.png)
 
