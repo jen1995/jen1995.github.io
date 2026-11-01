@@ -584,15 +584,54 @@ $$
 \end{aligned}
 $$
 
-Both matrices are Hermitian, as the theorem says they must be —
-real and symmetric. These are two of the three
+Both matrices are Hermitian, as the theorem says they must be. The
+theorem requires real numbers only on the diagonal; that all the
+entries here are real comes from the coordinates of the four states,
+and for real entries Hermitian means symmetric. These are two of the three
 [**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
 obtained here from the experiments, through the definite states the
 second post extracted from them, and not copied from a table. The
-third, $\sigma_y$, waits for the $y$-axis states, which the next
-post builds.
+third, $\sigma_y$, waits for the $y$-axis states, which the post
+after next builds; its entries are not real, and it is Hermitian all
+the same.
 
 ![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
+
+<a id="pauli-other-basis"></a>
+All of this is written in the $z$ basis, and that is why $\sigma_z$
+came out diagonal and $\sigma_x$ did not. The operators do not depend
+on the basis, but their matrices do, so write both in the basis
+$|r\rangle, |l\rangle$ instead. The entry in row $i$, column $j$ is
+$\langle a_i | \hat A | a_j \rangle$. For $\sigma_x$ the decomposition
+above gives the entries at once: $+1$ and $-1$ on the diagonal, zero
+elsewhere. For $\sigma_z$, applying its matrix to the coordinates of
+$|r\rangle$ and $|l\rangle$ shows that it swaps them:
+
+$$
+\sigma_z |r\rangle = |l\rangle, \qquad \sigma_z |l\rangle = |r\rangle ,
+$$
+
+so the entries are
+
+$$
+\begin{aligned}
+\langle r | \sigma_z | r \rangle &= \langle r | l \rangle = 0, & \langle r | \sigma_z | l \rangle &= \langle r | r \rangle = 1, \\
+\langle l | \sigma_z | r \rangle &= \langle l | l \rangle = 1, & \langle l | \sigma_z | l \rangle &= \langle l | r \rangle = 0 .
+\end{aligned}
+$$
+
+The two matrices trade places:
+
+| Operator | in the basis $\lvert u\rangle, \lvert d\rangle$ | in the basis $\lvert r\rangle, \lvert l\rangle$ |
+|---|---|---|
+| $\sigma_z$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ |
+| $\sigma_x$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ |
+
+Each operator has the matrix with $+1$ and $-1$ on the diagonal in its
+own eigenbasis. The $z$ basis has no special standing: it was only the
+basis we chose to write in. This is
+[the statement in the box above](#quantity-is-basis) in the form of
+matrices.
 
 The second direction is the recipe itself: given the operator, find
 its eigenbasis. Take $\sigma_x$ as given and forget where it came
