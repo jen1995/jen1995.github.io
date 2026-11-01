@@ -424,10 +424,15 @@ distinguishable definite states — and from nothing else.
 
 ### Definite states are eigenvectors
 
-The last post read the average formula in the basis state
-$|a_i\rangle$. Its coordinates are $c_i = 1$ and $c_j = 0$ for
-$j \neq i$, so by the Born rule the outcome $\lambda_i$ has
-probability one and every other outcome probability zero. A state whose
+Take the basis state $|a_i\rangle$ itself. Its coordinates and, by
+the Born rule, its outcome probabilities are
+
+$$
+c_j = \langle a_j | a_i \rangle = \delta_{ij}, \qquad P(\lambda_j) = |c_j|^2 = \delta_{ij} ,
+$$
+
+so the outcome $\lambda_i$ is certain and every other outcome has
+probability zero. A state whose
 outcome is certain, and which the measurement therefore confirms on
 every repetition, is what the [first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
 called a definite state. So every eigenvector is a definite state.
