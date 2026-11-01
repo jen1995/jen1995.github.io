@@ -414,9 +414,11 @@ there is nothing to prove. For $n \gt 1$, three steps.
 So "diagonal in some orthonormal basis, with real numbers on the
 diagonal", "Hermitian" and "real average in every state" are one
 condition on a table, and the assumption of the last post excluded
-no observable. The textbook postulate — "observables
-are Hermitian operators" — is this equivalence, stated as a
-definition.
+no observable. This is also where the road meets the textbooks.
+They begin by *postulating* that observables are Hermitian
+operators; here that sentence is the conclusion of the theorem,
+reached from what an apparatus gives — real outcomes and
+distinguishable definite states — and from nothing else.
 
 ![Three conditions on a table that are one condition: diagonal in an orthonormal basis with a real diagonal, real average in every state, and Hermitian — with the one-line arguments and the two theorems that connect them](two_roads.png)
 
