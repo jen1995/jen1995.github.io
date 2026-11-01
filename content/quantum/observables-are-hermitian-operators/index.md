@@ -647,12 +647,12 @@ promised. Real coordinates would require $e^{i\varphi} = \pm 1$, and
 those two values give $|r\rangle$ and $|l\rangle$ themselves, with
 probabilities $1$ and $0$. No real choice gives $\tfrac12$.
 
-The figure plots this function of $\varphi$. It is not a wavefunction:
-the horizontal axis is the phase, not a position, and each point of the
-curve is a separate state of the spin, with its own probability of $+1$
-along $x$.
+On the unit circle, the point $e^{i\varphi}$ has the horizontal
+coordinate $\cos\varphi$ and the vertical coordinate $\sin\varphi$. The
+probability depends only on $\cos\varphi$, so the condition
+$\cos\varphi = 0$ selects the two points on the vertical axis:
 
-![The phase of the second coordinate: of the values of e^(iφ) on the unit circle, +1 and −1 give the states |r⟩ and |l⟩, with probabilities 1 and 0 of +1 along x; the probability equals one half only at +i and −i](y_phase.png)
+![The unit circle of the values of e^(iφ), with cos φ on the horizontal axis and sin φ on the vertical: the points +1 and −1 are the states |r⟩ and |l⟩, with probabilities 1 and 0 of +1 along x, and the probability equals one half only at the points +i and −i on the vertical axis](y_phase.png)
 
 The two solutions also satisfy requirement 3: the bra conjugates the
 coordinates, so the inner product of $\tfrac{1}{\sqrt 2}(1, -i)^{\mathsf T}$
