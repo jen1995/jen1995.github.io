@@ -347,8 +347,9 @@ assumption asked for:
 > **Spectral theorem** (finite dimensions). A Hermitian operator has
 > real eigenvalues and an orthonormal basis of eigenvectors.
 
-Two of its three claims are one line each, with the operator moved
-across the bracket; the third is cited.
+The theorem makes three claims. The first two take one line each —
+the trick in both is to move the operator from the ket to the bra —
+and the third is quoted from Panov.
 
 *Real eigenvalues.* If $\hat A|\varphi\rangle = \lambda|\varphi\rangle$
 with $|\varphi\rangle \neq 0$, then
