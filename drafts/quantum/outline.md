@@ -98,8 +98,9 @@ and takes the three pairs u/d, l/r, i/o from post 51, where deriving
 |i⟩, |o⟩ forces imaginary amplitudes. Explains the sign choice of |i⟩. global phase does not matter →
 two real parameters → the Bloch sphere with θ/2 (why HALF the angle — the
 sphere-vs-Hilbert-space geometry, her "Замечание" about orthogonal-in-ℂ² =
-antipodal-on-sphere); apparatus at angle θ ⇒ P(+1) = cos²(θ/2), closing
-the loop to QM-1's cos θ average. Geometric emphasis: what the device's
+antipodal-on-sphere); the spin operator along an arbitrary axis n·σ and
+its eigenstates, computed from the matrix (promised in post 51); apparatus
+at angle θ ⇒ P(+1) = cos²(θ/2), closing the loop to QM-1's cos θ average. Geometric emphasis: what the device's
 *position in space* selects — the measurement basis. Notebook:
 **nb-bloch** — interactive sphere: drag the state, drag the apparatus
 axis, fire measurements, see the collapse jump.
@@ -161,6 +162,9 @@ The longest post; notes §9–13 + the classical interlude.
   figure y_phase.png). States Are Vectors and Heisenberg's Table now link
   there. QM-4 keeps the Bloch sphere, θ/2, cos²(θ/2), n·σ, and owes the
   explanation of the sign choice: |i⟩ = (1, i)/√2 makes x, y, z right-handed.
+- Post 51 promises that the qubit post shows: the spin along an arbitrary
+  direction is n·σ = n_x σ_x + n_y σ_y + n_z σ_z, and its definite states
+  are computed from that matrix (no separate experiment for each axis).
 
 ## Status (2026-10-28): measurement folded into post 51; post 52 dissolved
 

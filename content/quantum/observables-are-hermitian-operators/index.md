@@ -752,6 +752,37 @@ $\sigma_y v = v$ reads $(-i v_2, i v_1) = (v_1, v_2)$, so $v_2 = i v_1$,
 and normalizing returns $|i\rangle$. For $\lambda = -1$, $v_2 = -i v_1$
 returns $|o\rangle$.
 
+On the spin this direction is only a check: the matrices were built
+from these same states a moment ago. In general an operator is not
+built from its definite states, which are what we are looking for. It
+can come from three other places.
+
+- **The laws of motion.** This is the main case. The energy operator
+  is derived from the dynamics, in later posts, and nobody has to
+  measure its eigenvalues first. They come out as predictions: the
+  energy levels of hydrogen are the answer to an eigenvalue problem,
+  and the measured spectrum is then compared with them.
+- **Operators already known.** As the qubit post shows, the spin along
+  an arbitrary direction $\hat n$ is
+  $\hat n \cdot \vec\sigma = n_x \sigma_x + n_y \sigma_y + n_z \sigma_z$.
+  This matrix is built from the three above, with no separate
+  experiment for each axis, and its definite states are then computed
+  from it.
+- **Measured averages.** An apparatus gives averages, and by
+  [polarization](/quantum/heisenbergs-table/#polarization) the averages
+  in all states determine the whole table. For the spin four states are
+  enough. A Hermitian table has real numbers $a$ and $d$ on the diagonal
+  and a pair $b$, $b^*$ off it, and
+  $$\begin{aligned} \langle u | \hat A | u \rangle &= a, \qquad \langle d | \hat A | d \rangle = d, \\ \langle r | \hat A | r \rangle &= \tfrac12 (a + d) + \operatorname{Re} b, \\ \langle i | \hat A | i \rangle &= \tfrac12 (a + d) - \operatorname{Im} b. \end{aligned}$$
+  Heisenberg's table also began with measured spectral lines. But this
+  source needs an apparatus that already measures the quantity, whose
+  outcomes can then be read directly, and the table of an atom is
+  infinite.
+
+So the main road in physics runs from the operator to its definite
+states. The spin is the case where the answer can be compared with
+states we already know.
+
 ## Beyond the spin
 
 ### Degeneracy and the continuous spectrum
