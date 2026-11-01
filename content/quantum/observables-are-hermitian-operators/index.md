@@ -548,16 +548,21 @@ Steps 2–4 are the last post and this one. In his words (p. 119):
 "To extract this information for any observable, we must determine
 the eigenbasis of the corresponding operator and find the
 projection of $|\psi\rangle$ along all its eigenkets." Landau and
-Lifshitz go further and open their §3 with the eigenfunctions: the
-wave functions of the states in which the quantity has a definite
-value are the first objects they name, and the operator is built
-afterwards to fit them.
+Lifshitz take the opposite order in their §3: the wave functions of
+the states in which the quantity has a definite value are the first
+objects they name, and the operator is built afterwards to fit them.
+So the link between an operator and its definite states can be
+followed in two directions:
 
-The spin is the one case where every step can be done by hand, and
-the link between an operator and its definite states can be followed
-in both directions: from the definite states to the operator, by the
-spectral decomposition, and from the operator to the definite states,
-by finding its eigenbasis.
+<a id="two-directions"></a>
+> **Two directions.**
+>
+> - **From the definite states to the operator**, by the spectral
+>   decomposition. This is the order of Landau and Lifshitz.
+> - **From the operator to the definite states**, by finding its
+>   eigenbasis. This is the order of Shankar.
+
+The spin is the one case where every step of both can be done by hand.
 
 **From the states to the operator.** Work in the $z$ basis, with
 $|u\rangle = (1, 0)^{\mathsf T}$ and $|d\rangle = (0, 1)^{\mathsf T}$ as in
@@ -881,7 +886,8 @@ on one sphere, and the spin operator along an arbitrary direction.
   in the English *Quantum Mechanics: Non-Relativistic Theory*): the
   operator *defined* by the mean value (3.8), eigenfunctions (3.12),
   Hermiticity from the reality of the mean (3.15–3.17), and the
-  orthogonality of eigenfunctions.
+  orthogonality of eigenfunctions. The order here is from the states
+  to the operator.
 - P. A. M. Dirac. *The Principles of Quantum Mechanics*, 4th ed.
   Oxford University Press, 1958 (Russian translation: П. А. М. Дирак,
   *Принципы квантовой механики*, 2-е изд., Наука, 1979, под ред.
@@ -923,7 +929,8 @@ on one sphere, and the spin operator along an arbitrary direction.
   the four-step procedure (construct the operator, find its
   eigenbasis, expand the state, square the projections) and the
   remark that the eigenbasis of every observable must be found, but
-  the basis one works in need not change.
+  the basis one works in need not change. The order here is from the
+  operator to the states.
 - А. Г. Сергеев. [*Лекции по функциональному анализу*](https://mi-ras.ru/noc/13_14/2/sergeev/funkan.pdf)
   (in Russian) — Theorem 40, the Hilbert–Schmidt theorem, p. 81: the
   spectral theorem for compact self-adjoint operators in infinite
