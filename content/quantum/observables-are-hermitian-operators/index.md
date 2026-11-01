@@ -402,9 +402,10 @@ there is nothing to prove. For $n \gt 1$, three steps.
    basis.
 
 Finite dimension enters in step 1 only, through the existence of a
-root; in infinite dimensions that step can fail, as the position
-operator shows. Gram–Schmidt is not needed: the induction produces
-the orthonormal basis by itself, also within a repeated eigenvalue.
+root. In infinite dimensions that step can fail: the position
+operator has no eigenvector in $L^2$ at all, as the
+[section on spectra](#degeneracy-and-the-continuous-spectrum) below
+and the [delta post](/quantum/from-kronecker-to-dirac/) discuss.
 
 </details>
 
