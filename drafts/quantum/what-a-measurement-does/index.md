@@ -1,4 +1,4 @@
-<!-- DISSOLVED 2026-10-28: "Applying the operator is not measuring" and "Measurement" moved into observables-are-hermitian-operators; "Two of the three Pauli matrices" (pauli_from_bases.png) goes to QM-4 (qubit); "The Born rule on a line" (born_density.png) goes to the particle-in-a-box post. Kept here as source. -->
+<!-- 2026-11-01: measurement is a post again (content/quantum/what-a-measurement-does, weight 52); Pauli section moved into observables-are-hermitian-operators. Only "The Born rule on a line" (+ born_density.png) still waits here for the particle-in-a-box post. Earlier note — DISSOLVED 2026-10-28: "Applying the operator is not measuring" and "Measurement" moved into observables-are-hermitian-operators; "Two of the three Pauli matrices" (pauli_from_bases.png) goes to QM-4 (qubit); "The Born rule on a line" (born_density.png) goes to the particle-in-a-box post. Kept here as source. -->
 
 ---
 title: "What a Measurement Does"

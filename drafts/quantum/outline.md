@@ -136,6 +136,28 @@ The longest post; notes §9–13 + the classical interlude.
    twin ψ̃(p), squeeze one and watch the other spread (the uncertainty
    trade-off, interactive; reuses the Fourier road's machinery).
 
+## Status (2026-11-01): measurement is its own post again; eigenfunctions post added
+
+- `observables-are-hermitian-operators` (weight 51) ends with
+  "## Beyond the spin": "Degeneracy and the continuous spectrum"
+  (kept as the teaser + the finite/infinite table) and "The recipe,
+  and the qubit as its first case" (theorem ⇒ method: find the
+  eigenbasis first; σ_z and σ_x from the definite states by spectral
+  decomposition, pauli_from_bases.png; then the reverse: eigenbasis of
+  σ_x from its matrix returns |r⟩, |l⟩). No measurement here.
+- `what-a-measurement-does` (weight 52) is a post again: applying ≠
+  measuring (operator_machine.png), the Measurement box, projection
+  (measurement_projection.png), the three experiments. Short post.
+- NEW post before the problems (after QM-5 dynamics, before the box;
+  weight to be assigned): **"Finding the eigenfunctions"** — how step 2
+  of the recipe is done when the state space is L²: no characteristic
+  polynomial; the eigenvalue equation is a differential equation;
+  boundary conditions select the spectrum; normalization (discrete vs
+  delta); degenerate and continuous cases with the examples; the
+  promise in post 51's recipe subsection points here. The teaser
+  "Degeneracy and the continuous spectrum" in post 51 stays as is.
+- Then QM-4 qubit (weight 53).
+
 ## Status (2026-10-28): measurement folded into post 51; post 52 dissolved
 
 - `observables-are-hermitian-operators` (weight 51) now ends with

@@ -3,7 +3,7 @@ title: "Observables Are Hermitian Operators"
 date: 2026-10-27
 draft: true
 tags: ["quantum", "math"]
-summary: "The postulate most modern textbooks start from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors, and a measurement projects the state onto one of them; and the spectrum can be degenerate or continuous — which is where every calculation of this road will start."
+summary: "The postulate most modern textbooks start from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors. The theorem dictates the method — find the eigenbasis first — and the qubit shows it both ways: from the definite states to the Pauli matrices, and back."
 math: true
 weight: 51
 ---
@@ -462,89 +462,10 @@ For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
 $z$ observable, are the eigenvectors of its operator $\sigma_z$, with
 eigenvalues $+1$ and $-1$; the first post's "the measurement
 prepares a state that repeats its answer" is the statement that the
-state after a measurement is an eigenvector, made precise below.
+state after a measurement is an eigenvector, which the next post
+makes precise.
 From now on the word *observable* is used for the Hermitian
 operator as well as for the quantity it stands for.
-
-## What a measurement does
-
-### Applying the operator is not measuring
-
-The notation invites a confusion, so it is addressed first.
-Applying an operator to a state is a *mathematical* operation that
-returns a vector; a measurement is a *physical* operation that
-returns a number and changes the state. They are not the same
-thing, and the last post's warning about the output of the machine
-can now be made concrete on the spin.
-
-Apply $\sigma_z$ to the $x$-definite state $|r\rangle$, using
-$\sigma_z|u\rangle = |u\rangle$, $\sigma_z|d\rangle = -|d\rangle$ and
-linearity:
-
-$$
-\sigma_z\, |r\rangle = \tfrac{1}{\sqrt 2}\, \sigma_z |u\rangle + \tfrac{1}{\sqrt 2}\, \sigma_z |d\rangle = \tfrac{1}{\sqrt 2}\, |u\rangle - \tfrac{1}{\sqrt 2}\, |d\rangle = |l\rangle .
-$$
-
-The operator turned *right* into *left*. No $z$ measurement of an
-electron prepared along $x$ ever produces an electron pointing left
-along $x$: it produces $|u\rangle$ or $|d\rangle$, at random. So
-$\sigma_z|r\rangle$ is not the state after a measurement. Written in
-the eigenbasis of $\sigma_z$, the input
-$|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
-lists the possible answers as its basis directions, and the operator
-has multiplied each direction by the answer's value — the
-coordinates tagged with their outcomes, not yet squared into
-probabilities. (Susskind and Friedman devote their §3.5, "A common
-misconception", to this point.)
-
-![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
-
-### Measurement
-
-Wishlist item 4 of the
-[first post](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
-asked how a measurement changes the state. Everything needed is now
-available: the outcomes are the eigenvalues, their probabilities are
-the Born weights, and the states a measurement prepares are the
-eigenvectors.
-
-> **Measurement.** Measuring the observable $\hat A$ in the state
-> $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
-> eigenvalues $\lambda_i$, with probability $|c_i|^2$; immediately
-> after a measurement that returned $\lambda_i$, the state is the
-> definite state $|a_i\rangle$.
-
-In the language of projectors: the outcome $\lambda_i$ projects the
-state onto the $i$-th definite direction and renormalizes it,
-
-$$
-|\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle ,
-$$
-
-a unit factor times $|a_i\rangle$ — the same physical state. The
-probability of the outcome is the average of the projector,
-$\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$, as in the
-last post's derivation of the Born rule.
-
-![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
-
-Read the first post's three experiments in this language.
-
-- *Repetition confirms.* After a $z$ measurement the state is
-  $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$; measuring
-  $\sigma_z$ again finds coefficient $1$ on that eigenvector and
-  returns the same value with probability one.
-- *Flipping negates.* The apparatus turned upside down measures
-  $-\sigma_z$, whose definite states are the same two vectors with
-  the outcomes exchanged.
-- *A new axis erases the old answer.* Measure the spin along $x$ in
-  the state $|u\rangle = \frac{1}{\sqrt 2}|r\rangle + \frac{1}{\sqrt 2}|l\rangle$:
-  the outcome is $\pm 1$ with probability $\frac12$ each, and the
-  state becomes $|r\rangle$ or $|l\rangle$. Measure along $z$ once
-  more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$, half
-  $|d\rangle$, so the old certainty is gone — probability $\frac12$
-  for either answer. The erasure of the first post is the statement
-  that the $z$ and $x$ observables have no eigenvector in common.
 
 ## Beyond the spin
 
@@ -588,11 +509,22 @@ which makes the right column precise, is a theorem of functional
 analysis rather than of this road; the road names it where it is
 used and takes it from the references.
 
-### Where every calculation starts
+### The recipe, and the qubit as its first case
 
-The post ends where a textbook begins. Shankar's *Principles*
-states the content of this post as postulates and then gives the
-procedure for using them (§4.2, p. 117):
+Step back and look at what the theorem does to the way problems are
+solved. It says that every measurable quantity comes with an
+orthonormal basis of its own, the eigenbasis of its operator, and
+that this basis is not a convenience chosen by the calculator, as a
+coordinate system is in geometry, but a physical fact about the
+quantity: its vectors are the states in which the quantity has a
+definite value. The $z$ spin has one such basis, $|u\rangle, |d\rangle$;
+the $x$ spin has another, $|r\rangle, |l\rangle$; and the question
+"which quantity are we measuring?" is the same as "in which
+eigenbasis are we writing the state?" So a calculation in quantum
+mechanics begins by finding the eigenbasis of the operator at hand,
+and the rest of the calculation is reading coordinates off it. In
+Shankar's *Principles* (§4.2, p. 117) the procedure is stated in
+four steps:
 
 1. construct the operator of the quantity;
 2. find its orthonormal eigenvectors $|\omega_i\rangle$ and
@@ -602,26 +534,85 @@ procedure for using them (§4.2, p. 117):
 4. the probability of the result $\omega_i$ is
    $|\langle\omega_i|\psi\rangle|^2$.
 
-Steps 2–4 are the last post and this one. In his words (p. 119): "To extract this information for any
-observable, we must determine the eigenbasis of the corresponding
-operator and find the projection of $|\psi\rangle$ along all its
-eigenkets." A working habit follows, also his: there is no need to
-change basis each time. One keeps the state written in the eigenbasis
-of a chosen observable and computes the eigenvectors of any other
-observable as columns in that basis. Landau and Lifshitz go further and
-open their §3 with the eigenfunctions: the wave functions of the
-states in which the quantity has a definite value are the first
-objects they name, and the operator is built afterwards to fit them.
+Steps 2–4 are the last post and this one. In his words (p. 119):
+"To extract this information for any observable, we must determine
+the eigenbasis of the corresponding operator and find the
+projection of $|\psi\rangle$ along all its eigenkets." Landau and
+Lifshitz go further and open their §3 with the eigenfunctions: the
+wave functions of the states in which the quantity has a definite
+value are the first objects they name, and the operator is built
+afterwards to fit them.
 
-For the problems of this road the chosen observable is the energy, and
-the first step — which operator belongs to the observable — is what
-the posts on dynamics settle. The second step is then the whole
-work: for a particle on a line the eigenvectors are functions, and
-"find the eigenbasis" means solving a differential equation. The
-particle in a box, the tunneling barrier, the harmonic oscillator and
-the hydrogen atom each begin by finding the eigenfunctions of their
-energy operator, and everything else about them is read off the
-expansion of the state in that basis.
+**The qubit, both ways.** The spin is the one case where every step
+can be done by hand, and it can be run in both directions. The
+first direction goes from the definite states to the operator, by
+the spectral decomposition. Work in the $z$ basis, with
+$|u\rangle = (1, 0)^{\mathsf T}$ and $|d\rangle = (0, 1)^{\mathsf T}$ as in
+the second post. For the $z$ spin the decomposition is immediate,
+outcomes $\pm 1$ on the projectors onto its definite states:
+
+$$
+\sigma_z = (+1)\,|u\rangle\langle u| + (-1)\,|d\rangle\langle d| = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+$$
+
+For the $x$ spin the definite states are $|r\rangle = \tfrac{1}{\sqrt 2}(1, 1)^{\mathsf T}$
+and $|l\rangle = \tfrac{1}{\sqrt 2}(1, -1)^{\mathsf T}$, found from the
+experiments in the second post, with outcomes $+1$ and $-1$. The
+same recipe gives $\sigma_x = |r\rangle\langle r| - |l\rangle\langle l|$,
+and the two outer products are
+
+$$
+|r\rangle\langle r| = \tfrac12 \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}, \qquad |l\rangle\langle l| = \tfrac12 \begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix},
+$$
+
+so that
+
+$$
+\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.
+$$
+
+Both matrices are Hermitian, as the theorem says they must be —
+real and symmetric. These are two of the three
+[**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
+obtained here from the experiments, through the definite states the
+second post extracted from them, and not copied from a table. The
+third, $\sigma_y$, waits for the $y$-axis states, which the next
+post builds.
+
+![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
+
+The second direction is the recipe itself: given the operator, find
+its eigenbasis. Take $\sigma_x$ as given and forget where it came
+from. Its eigenvalues are the roots of the characteristic
+polynomial,
+
+$$
+\det(\sigma_x - \lambda I) = \det \begin{pmatrix} -\lambda & 1 \\ 1 & -\lambda \end{pmatrix} = \lambda^2 - 1 ,
+$$
+
+so $\lambda = \pm 1$ — real, as they must be. The eigenvector for
+$\lambda = +1$ solves $\sigma_x v = v$, that is, $(v_2, v_1) = (v_1, v_2)$,
+so $v_1 = v_2$; normalized, $v = \tfrac{1}{\sqrt 2}(1, 1)^{\mathsf T}$.
+For $\lambda = -1$, $v_1 = -v_2$ and $v = \tfrac{1}{\sqrt 2}(1, -1)^{\mathsf T}$.
+The two are orthogonal, as the spectral theorem says — and they are
+$|r\rangle$ and $|l\rangle$. Linear algebra, given only the matrix,
+returns the two states the second post had to extract from the
+experiments by hand. That is the recipe working: the eigenbasis of
+$\sigma_x$ *is* the pair of definite states of the $x$ measurement,
+and from here on any observable of the spin is handled the same way.
+
+For the problems of this road the operator is the energy, and step 1
+— which operator belongs to the energy — is what the posts on
+dynamics settle. Step 2 is then the whole work, and in a new
+setting: for a particle on a line the state space is $L^2$, the
+eigenvectors are functions, and "find the eigenbasis" means solving
+a differential equation. How that is done, and what replaces the
+characteristic polynomial when there is no polynomial, is a post of
+its own before the first problem; the particle in a box, the
+tunneling barrier, the harmonic oscillator and the hydrogen atom
+each begin by finding the eigenfunctions of their energy operator,
+and everything else about them is read off the expansion of the
+state in that basis.
 
 ## What we built
 
@@ -632,39 +623,29 @@ operator is the sum of outcomes times projectors, its spectral
 decomposition. Readings are real, so the operator equals its own
 adjoint: Hermitian. And Hermitian is enough: a Hermitian operator
 has real eigenvalues and an orthonormal eigenbasis, so the
-assumption of the last post costs nothing beyond the reality of the
-readings. The eigenvectors are exactly the definite states of the
-first post, and a measurement projects the state onto one of them.
-In more than two dimensions an eigenvalue can repeat, and in
-infinite dimensions the spectrum can be continuous, as it is for
-position.
+assumption of the last post excluded no observable. The eigenvectors
+are exactly the definite states of the first post. In more than two
+dimensions an eigenvalue can repeat, and in infinite dimensions the
+spectrum can be continuous, as it is for position. And the theorem
+dictates the method: a calculation starts by finding the eigenbasis
+of the operator at hand, which for the spin returns the states the
+second post found by hand.
 
-The wishlist of the first post, with two more items paid:
-
-1. **A state object** — a unit vector in a Hilbert space. ✓ (second post)
-2. **A way to blend outcomes** — superposition; probabilities are
-   squared amplitudes. ✓ (last post)
-3. **Measurable quantities as actors** — Hermitian operators, whose
-   eigenvalues are the outcomes and whose eigenvectors are the
-   definite states; the average of a quantity is
-   $\langle \psi | \hat A | \psi \rangle$. ✓ (last post and this one)
-4. **Measurement as an operation on states** — projection onto a
-   definite state, with the Born probability. ✓
-5. **Geometry must enter** — still open: the dictionary between
-   directions in the laboratory and operators on the two-dimensional
-   state space, with the cosine of the first post as its first entry.
+Wishlist item 3 is paid: **an observable is a Hermitian operator**,
+whose eigenvalues are the outcomes, whose eigenvectors are the
+definite states, whose average in a state is
+$\langle \psi | \hat A | \psi \rangle$, and whose outcome
+probabilities are the squared coordinates $|c_i|^2$ in the
+eigenbasis. One thing remains: nothing has been said about what a
+measurement does to the state. That is the next post.
 
 ## Onward
 
-Next stop: the qubit and the Bloch sphere. The spin operators
-$\sigma_z$ and $\sigma_x$ are read off the definite states by the
-spectral decomposition; the $y$-axis states are built and complex
-amplitudes become unavoidable; $\sigma_y$ joins the other two, and
-the spin operator along an arbitrary direction $\hat n$ turns out to
-be $\hat n \cdot \vec\sigma$ — from which the first post's
-$\langle \sigma \rangle = \cos\theta$ follows in one line, and a
-two-dimensional complex state space acquires the geometry of an
-ordinary sphere.
+Next stop: what a measurement does. The warning that applying an
+operator is not measuring, and measurement itself as a projection
+onto a definite state — the last item of the wishlist but one.
+After that, the qubit and the Bloch sphere: the $y$-axis states,
+$\sigma_y$, and the spin operator along an arbitrary direction.
 
 ## References
 
@@ -692,8 +673,9 @@ ordinary sphere.
   conjugate symmetry of the transition amplitudes,
   $X(m, n) = X(n, m)^*$, follows from the reality of the coordinate.
 - Leonard Susskind, Art Friedman. *Quantum Mechanics: The Theoretical
-  Minimum*. Basic Books, 2014 — lecture 3, §3.5 "A common
-  misconception": applying an operator is not measuring.
+  Minimum*. Basic Books, 2014 — lecture 3, §§3.3–3.4: the spin
+  operators $\sigma_z$ and $\sigma_x$ constructed from the
+  experiments.
 - I. J. R. Aitchison, D. A. MacManus, T. M. Snyder. [*Understanding
   Heisenberg's "magical" paper of July 1925*](https://arxiv.org/abs/quant-ph/0404009).
   American Journal of Physics 72 (2004), 1370–1379 — eqs. (44)–(45):
