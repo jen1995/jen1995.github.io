@@ -548,7 +548,7 @@ Steps 2–4 are the last post and this one. In his words (p. 119):
 "To extract this information for any observable, we must determine
 the eigenbasis of the corresponding operator and find the
 projection of $|\psi\rangle$ along all its eigenkets." Landau and
-Lifshitz take the opposite order in their §3: the wave functions of
+Lifshitz take the opposite order in their §3: the wavefunctions of
 the states in which the quantity has a definite value are the first
 objects they name, and the operator is built afterwards to fit them.
 So the link between an operator and its definite states can be
@@ -646,6 +646,11 @@ $e^{i\varphi} = i$ or $e^{i\varphi} = -i$. This is what the second post
 promised. Real coordinates would require $e^{i\varphi} = \pm 1$, and
 those two values give $|r\rangle$ and $|l\rangle$ themselves, with
 probabilities $1$ and $0$. No real choice gives $\tfrac12$.
+
+The figure plots this function of $\varphi$. It is not a wavefunction:
+the horizontal axis is the phase, not a position, and each point of the
+curve is a separate state of the spin, with its own probability of $+1$
+along $x$.
 
 ![The phase of the second coordinate: of the values of e^(iφ) on the unit circle, +1 and −1 give the states |r⟩ and |l⟩, with probabilities 1 and 0 of +1 along x; the probability equals one half only at +i and −i](y_phase.png)
 
