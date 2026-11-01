@@ -649,7 +649,7 @@ probabilities $1$ and $0$. No real choice gives $\tfrac12$.
 
 ![The phase of the second coordinate: of the values of e^(iφ) on the unit circle, +1 and −1 give the states |r⟩ and |l⟩, with probabilities 1 and 0 of +1 along x; the probability equals one half only at +i and −i](y_phase.png)
 
-The two solutions also satisfy requirement 3. The bra conjugates the
+The two solutions also satisfy requirement 3: the bra conjugates the
 coordinates, so the inner product of $\tfrac{1}{\sqrt 2}(1, -i)^{\mathsf T}$
 with $\tfrac{1}{\sqrt 2}(1, i)^{\mathsf T}$ is
 $\tfrac12 (1 \cdot 1 + i \cdot i) = 0$. So these are the two definite
