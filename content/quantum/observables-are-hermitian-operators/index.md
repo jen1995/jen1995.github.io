@@ -522,10 +522,16 @@ that this basis is not a convenience chosen by the calculator, as a
 coordinate system is in geometry, but a physical fact about the
 quantity: its vectors are the states in which the quantity has a
 definite value. The $z$ spin has one such basis, $|u\rangle, |d\rangle$;
-the $x$ spin has another, $|r\rangle, |l\rangle$; and the question
-"which quantity are we measuring?" is the same as "in which
-eigenbasis are we writing the state?" So a calculation in quantum
-mechanics begins by finding the eigenbasis of the operator at hand,
+the $x$ spin has another, $|r\rangle, |l\rangle$. By the Born rule,
+the probabilities of the outcomes of a quantity are the squared
+coordinates of the state in its eigenbasis. So:
+
+<a id="quantity-is-basis"></a>
+> **Choosing the quantity is choosing the basis.** The question
+> "which quantity are we measuring?" is the same as "in which
+> eigenbasis are we writing the state?"
+
+A calculation in quantum mechanics therefore begins by finding the eigenbasis of the operator at hand,
 and the rest of the calculation is reading coordinates off it. In
 Shankar's *Principles* (§4.2, p. 117) the procedure is stated in
 four steps:
