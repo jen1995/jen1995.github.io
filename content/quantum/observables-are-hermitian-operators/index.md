@@ -597,7 +597,7 @@ entries happen to be real, Hermitian here simply means symmetric.
 
 ![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
 
-<a id="sigma-y"></a>**The third matrix.** The $y$ axis goes through the
+<a id="sigma-y"></a>**The third matrix, $\sigma_y$.** The $y$ axis goes through the
 same steps, with one new thing: the coordinates of its definite states
 cannot be real. The
 [second post](/quantum/states-are-vectors/#the-y-axis) named these
