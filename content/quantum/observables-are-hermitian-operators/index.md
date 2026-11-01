@@ -326,7 +326,7 @@ can be measured at all has a table of the assumed kind — an
 orthonormal basis of definite states with the real outcomes on the
 diagonal — and the assumption, which looked like a restriction on
 the tables, restricted nothing: there is no measurable quantity it
-leaves out.
+leaves out. Here are the two implications.
 
 **3 implies 2.** Suppose only that $\langle \psi | \hat A | \psi \rangle$
 is real in every state. Then $\hat A$ is Hermitian, by the
