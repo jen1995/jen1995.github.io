@@ -315,26 +315,24 @@ on a table that have appeared so far:
 > **Theorem.** The three conditions are equivalent.
 
 For three conditions to be equivalent it is enough to close one
-cycle, $1 \Rightarrow 2 \Rightarrow 3 \Rightarrow 1$. Two of the
-three arrows are already proved, and the third is the one that
-answers the open question: condition 3 is all that an apparatus
-guarantees about its observable, so if it implies condition 1, then
-every observable that can be measured at all has a table of the
-assumed kind — an orthonormal basis of definite states with the
-real outcomes on the diagonal — and the assumption, which looked
-like a restriction on the tables, restricted nothing. The third
-arrow goes through 2, in two steps, so there are four short
-arguments in all.
+cycle, $1 \Rightarrow 2 \Rightarrow 3 \Rightarrow 1$; the last arrow
+is taken in two steps, through 2.
 
-**$1 \Rightarrow 2$.** This was the computation above: conjugate the
-spectral decomposition.
+**$1 \Rightarrow 2$.** Already proved: this was the computation
+above, conjugating the spectral decomposition.
 
 **$2 \Rightarrow 3$.** One line: if $\hat A^\dagger = \hat A$, then
 $\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$,
 so the average equals its own conjugate.
 
-**$3 \Rightarrow 2$.** Suppose only that $\langle \psi | \hat A | \psi \rangle$
-is real in every state. Then $\hat A$ is Hermitian, by the
+**$3 \Rightarrow 2$.** This is the step that answers the open
+question. Condition 3 is all that an apparatus guarantees about its
+observable; if it is enough to reach condition 1, then every
+observable that can be measured at all has a table of the assumed
+kind, and the assumption, which looked like a restriction on the
+tables, restricted nothing. So suppose only that
+$\langle \psi | \hat A | \psi \rangle$ is real in every state. Then
+$\hat A$ is Hermitian, by the
 [polarization lemma](/quantum/heisenbergs-table/#polarization) of
 the last post: real diagonal values make the bracket
 conjugate-symmetric,
