@@ -424,21 +424,30 @@ distinguishable definite states — and from nothing else.
 
 ### Definite states are eigenvectors
 
-Take the basis state $|a_i\rangle$ itself. Its coordinates and, by
-the Born rule, its outcome probabilities are
+The [first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
+called a state *definite* if the outcome of the measurement in it is
+certain, so that repetition confirms it every time. The eigenbasis
+gives all such states:
+
+<a id="definite-states"></a>
+> **Definite states are eigenvectors.**
+>
+> - **(a)** Every eigenvector $|a_i\rangle$ is a definite state, with
+>   the certain outcome $\lambda_i$.
+> - **(b)** Conversely, every definite state is an eigenvector of
+>   $\hat A$, and the certain outcome is its eigenvalue.
+
+**(a) Eigenvector ⇒ definite.** Take the basis state $|a_i\rangle$.
+Its coordinates and, by the Born rule, its outcome probabilities are
 
 $$
 c_j = \langle a_j | a_i \rangle = \delta_{ij}, \qquad P(\lambda_j) = |c_j|^2 = \delta_{ij} ,
 $$
 
 so in the state $|a_i\rangle$ the outcome $\lambda_i$ is certain and
-every other outcome has probability zero. A state whose
-outcome is certain, and which the measurement therefore confirms on
-every repetition, is what the [first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
-called a definite state. So every eigenvector is a definite state.
+every other outcome has probability zero.
 
-The converse also holds: no state outside the eigenvectors has a
-certain outcome. Take a state
+**(b) Definite ⇒ eigenvector.** Take a state
 $|\psi\rangle = \sum_i c_i |a_i\rangle$ in which the outcome is
 certain. In the language of averages, a certain answer is
 one with no spread — the average of the squared deviation from the
@@ -491,13 +500,6 @@ eigenvalue, $\lambda = \langle A \rangle$.
   $|\psi\rangle$ is a combination of them, and it is still an
   eigenvector:
   $\hat A |\psi\rangle = \sum_i c_i \lambda\, |a_i\rangle = \lambda\, |\psi\rangle$.
-
-So:
-
-> **Definite states are eigenvectors.** A state in which the outcome
-> of an observable is certain is an eigenvector of its operator, and
-> the certain outcome is the eigenvalue; and every eigenvector
-> $|a_i\rangle$ is such a state, with the certain outcome $\lambda_i$.
 
 ![The variance of σ_z in three states of the spin: zero in the eigenvector |u⟩, where all the weight sits on one outcome, and positive in |r⟩ and in a lopsided superposition](variance_spin.png)
 
