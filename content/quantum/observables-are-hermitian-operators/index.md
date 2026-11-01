@@ -424,10 +424,14 @@ distinguishable definite states — and from nothing else.
 
 ### Definite states are eigenvectors
 
-The [first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
-called a state *definite* if the outcome of the measurement in it is
-certain, so that repetition confirms it every time. The eigenbasis
-gives all such states:
+[Heisenberg's Table](/quantum/heisenbergs-table/) gave the name
+**definite states** to the states that a measurement prepares and
+then confirms. Measure an electron along $z$, then measure the same
+electron along $z$ again without touching it in between: the second
+measurement repeats the first answer, and so does every following
+one ([the first post's experiment one](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)).
+So in a definite state the outcome is certain. The eigenbasis gives
+all such states:
 
 <a id="definite-states"></a>
 > **Definite states are eigenvectors.**
