@@ -372,11 +372,41 @@ so $(\lambda_2 - \lambda_1)\langle \varphi_1 | \varphi_2 \rangle = 0$
 and the inner product vanishes.
 
 *The eigenvectors fill the space.* That there are enough of them to
-form a basis is the part that needs the finite dimension and a page
-of algebra: Panov, §4.2, Theorem 4.2.3 (its Lemmas 4.2.4 and 4.2.5
-are the two facts just proved). Within a repeated eigenvalue the
-eigenvectors are not orthogonal automatically, and Gram–Schmidt makes
-them so.
+form an orthonormal basis is proved by induction on the dimension
+(Panov, §4.2, Theorem 4.2.3), and the induction uses the same trick
+once more.
+
+<details>
+<summary>Proof that a Hermitian operator has an orthonormal eigenbasis</summary>
+
+Let $\hat A$ be Hermitian on a space of dimension $n$. If $n = 1$
+there is nothing to prove. For $n \gt 1$, three steps.
+
+1. *One eigenvector exists.* Over the complex numbers the
+   characteristic polynomial of $\hat A$ has a root $\lambda$, and a
+   root is an eigenvalue (Panov, §2.6, Theorem 2.6.3); take an
+   eigenvector $|v\rangle$ of unit length, $\hat A|v\rangle = \lambda|v\rangle$.
+   By the first claim, $\lambda$ is real.
+2. *The orthogonal complement is invariant.* Let $W^\perp$ be the
+   set of vectors orthogonal to $|v\rangle$; it has dimension
+   $n - 1$. If $|u\rangle$ is in it, so is $\hat A|u\rangle$: move the
+   operator across the bracket,
+   $$\langle v | \hat A u \rangle = \langle \hat A v | u \rangle = \lambda\, \langle v | u \rangle = 0 .$$
+   So $\hat A$ sends $W^\perp$ to itself, and restricted to $W^\perp$ it
+   is still Hermitian — the defining equation
+   $\langle \varphi | \hat A \psi \rangle = \langle \hat A \varphi | \psi \rangle$
+   holds for all vectors, so in particular for those of $W^\perp$.
+3. *Induction.* By the induction hypothesis $W^\perp$ has an
+   orthonormal basis of eigenvectors of $\hat A$. Add $|v\rangle$ to
+   it: $n$ orthonormal eigenvectors in a space of dimension $n$, a
+   basis.
+
+Finite dimension enters in step 1 only, through the existence of a
+root; in infinite dimensions that step can fail, as the position
+operator shows. Gram–Schmidt is not needed: the induction produces
+the orthonormal basis by itself, also within a repeated eigenvalue.
+
+</details>
 
 With the four arrows in place the theorem is proved. "Diagonal in some orthonormal basis, with real
 numbers on the diagonal", "Hermitian" and "real average in every
