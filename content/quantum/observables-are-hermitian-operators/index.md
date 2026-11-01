@@ -584,9 +584,9 @@ $$
 \end{aligned}
 $$
 
-Both matrices are Hermitian, as the theorem says they must be, and
-since the coordinates of the four states are real, so are all their
-entries, which makes them symmetric. These are two of the three
+Both matrices are Hermitian, as the theorem requires, and since their
+entries happen to be real, Hermitian here simply means symmetric.
+These are two of the three
 [**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
 obtained here from the experiments, through the definite states the
 second post extracted from them, and not copied from a table. The
