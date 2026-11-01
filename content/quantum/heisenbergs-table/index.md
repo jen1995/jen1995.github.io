@@ -1,5 +1,5 @@
 ---
-title: "Heisenberg's Table: Where the Matrices Come From"
+title: "Heisenberg's Table: Where the Matrices and the Born Rule Come From"
 date: 2026-10-27
 draft: false
 tags: ["quantum", "math", "physics"]
@@ -719,7 +719,8 @@ $\lambda_i$ is $|c_i|^2 = 1$ and every other weight is zero; whether
 this means that $\lambda_i$ is returned *every time* depends on
 whether the weights are probabilities — the second reading.
 
-### The weights are the probabilities
+<a id="the-weights-are-the-probabilities"></a>
+### The weights are the probabilities: the Born rule
 
 The reading "the $|c_i|^2$ are the probabilities of the outcomes"
 was a guess made to fit the formula. Here is why it is the only
