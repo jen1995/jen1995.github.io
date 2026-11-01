@@ -645,12 +645,11 @@ Setting this equal to $\tfrac12$ gives $\cos\varphi = 0$, so
 $e^{i\varphi} = i$ or $e^{i\varphi} = -i$. This is what the second post
 promised. Real coordinates would require $e^{i\varphi} = \pm 1$, and
 those two values give $|r\rangle$ and $|l\rangle$ themselves, with
-probabilities $1$ and $0$. No real choice gives $\tfrac12$.
-
-On the unit circle, the point $e^{i\varphi}$ has the horizontal
-coordinate $\cos\varphi$ and the vertical coordinate $\sin\varphi$. The
-probability depends only on $\cos\varphi$, so the condition
-$\cos\varphi = 0$ selects the two points on the vertical axis:
+probabilities $1$ and $0$. No real choice gives $\tfrac12$: on the unit
+circle, the point $e^{i\varphi}$ has the horizontal coordinate
+$\cos\varphi$ and the vertical coordinate $\sin\varphi$, the probability
+depends only on $\cos\varphi$, and the condition $\cos\varphi = 0$
+selects the two points on the vertical axis.
 
 ![The unit circle of the values of e^(iφ), with cos φ on the horizontal axis and sin φ on the vertical: the points +1 and −1 are the states |r⟩ and |l⟩, with probabilities 1 and 0 of +1 along x, and the probability equals one half only at the points +i and −i on the vertical axis](y_phase.png)
 
