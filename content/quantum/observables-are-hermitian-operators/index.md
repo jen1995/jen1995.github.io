@@ -271,7 +271,8 @@ post translated that certainty into the model as orthogonality, so
 in the model the definite states are an orthonormal set, and the
 table is *assembled* from the two lists by the spectral
 decomposition. Anything assembled
-that way is Hermitian; the mirror symmetry is not a constraint on
+that way is Hermitian, as shown above by conjugating the
+decomposition; the mirror symmetry is not a constraint on
 the laboratory but a consequence of how the table is built from
 what the laboratory gives. A table that is not Hermitian would need a complex
 outcome, or a pair of definite states that are not orthogonal, and
