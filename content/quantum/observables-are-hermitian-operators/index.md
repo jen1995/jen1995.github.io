@@ -509,12 +509,15 @@ eigenvalue, $\lambda = \langle A \rangle$.
 
 This is a statement most textbooks start from, as a postulate
 about measurement; here it is a consequence of the average rule.
+Measurement itself, and what it does to the state, is the subject of
+the [next post](/quantum/what-a-measurement-does/). There the first
+post's "the measurement prepares a state that repeats its answer"
+becomes the statement that the state after a measurement is an
+eigenvector.
+
 For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
 $z$ observable, are the eigenvectors of its operator $\sigma_z$, with
-eigenvalues $+1$ and $-1$; the first post's "the measurement
-prepares a state that repeats its answer" is the statement that the
-state after a measurement is an eigenvector, which the next post
-makes precise.
+eigenvalues $+1$ and $-1$.
 From now on the word *observable* is used for the Hermitian
 operator as well as for the quantity it stands for.
 
