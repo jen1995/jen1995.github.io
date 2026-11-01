@@ -324,6 +324,8 @@ in the middle and shows that each of the other two is equivalent to
 it, and the step from 2 to 1 is the spectral theorem of linear
 algebra.
 
+![Three conditions on a table that are one condition: diagonal in an orthonormal basis with a real diagonal, real average in every state, and Hermitian — with the one-line arguments and the two theorems that connect them](two_roads.png)
+
 <details>
 <summary>Proof: the three conditions are equivalent</summary>
 
@@ -419,8 +421,6 @@ They begin by *postulating* that observables are Hermitian
 operators; here that sentence is the conclusion of the theorem,
 reached from what an apparatus gives — real outcomes and
 distinguishable definite states — and from nothing else.
-
-![Three conditions on a table that are one condition: diagonal in an orthonormal basis with a real diagonal, real average in every state, and Hermitian — with the one-line arguments and the two theorems that connect them](two_roads.png)
 
 ### Definite states are eigenvectors
 
