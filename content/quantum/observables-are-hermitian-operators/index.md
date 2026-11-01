@@ -434,9 +434,11 @@ called a definite state. So every eigenvector is a definite state.
 The converse also holds: no state outside the eigenvectors has a
 certain outcome. In the language of averages, a certain answer is
 one with no spread — the average of the squared deviation from the
-mean is zero. The squared deviation is the same observable with its
-window relabeled, $\lambda_i \mapsto (\lambda_i - \langle A \rangle)^2$,
-so by the average rule its mean, the **variance**, is
+mean $\langle A \rangle$ is zero. The squared deviation
+$(A - \langle A \rangle)^2$ is an observable in its own right, with the
+same definite states $|a_i\rangle$ and the outcomes
+$(\lambda_i - \langle A \rangle)^2$, so by the average rule of the last
+post its mean, the **variance**, is
 
 $$
 \langle (A - \langle A \rangle)^2 \rangle = \sum_i |c_i|^2\, (\lambda_i - \langle A \rangle)^2 .
@@ -454,18 +456,15 @@ eigenvalue, which makes it an eigenvector itself. So:
 
 ![The variance of σ_z in three states of the spin: zero in the eigenvector |u⟩, where all the weight sits on one outcome, and positive in |r⟩ and in a lopsided superposition](variance_spin.png)
 
-This is the statement textbooks start from — Susskind's principles 1
-and 2 — and here it arrives as a consequence of the average rule.
+This is a statement most textbooks start from, as a postulate
+about measurement; here it is a consequence of the average rule.
 For the spin: $|u\rangle$ and $|d\rangle$, the definite states of the
 $z$ observable, are the eigenvectors of its operator $\sigma_z$, with
 eigenvalues $+1$ and $-1$; the first post's "the measurement
 prepares a state that repeats its answer" is the statement that the
-state after a measurement is an eigenvector, made precise below. From now on the word *observable* is used for the
-Hermitian operator as well as for the quantity it stands for. The
-three conditions one would otherwise have to *demand* of such an
-operator
-— real outcomes, definite states that span the space, definite
-states that are orthogonal — are the spectral theorem above.
+state after a measurement is an eigenvector, made precise below.
+From now on the word *observable* is used for the Hermitian
+operator as well as for the quantity it stands for.
 
 ## What a measurement does
 
