@@ -314,10 +314,21 @@ on a table that have appeared so far:
 >
 > **Theorem.** The three conditions are equivalent.
 
-The proof puts condition 2 in the middle and shows that each of the
-other two is equivalent to it: four arrows,
-$1 \Rightarrow 2$, $2 \Rightarrow 3$, $3 \Rightarrow 2$ and
-$2 \Rightarrow 1$.
+The answer to the open question is in the arrow from 3 back to 1:
+condition 3 is all that an apparatus guarantees about its
+observable, so if it implies condition 1, then every observable
+that can be measured at all has a table of the assumed kind, and
+the assumption, which looked like a restriction on the tables,
+restricted nothing. The proof is under the cut; it puts condition 2
+in the middle and shows that each of the other two is equivalent to
+it, and the step from 2 to 1 is the spectral theorem of linear
+algebra.
+
+<details>
+<summary>Proof: the three conditions are equivalent</summary>
+
+Four arrows: $1 \Rightarrow 2$, $2 \Rightarrow 3$, $3 \Rightarrow 2$
+and $2 \Rightarrow 1$.
 
 **$1 \Rightarrow 2$.** Already proved: this was the computation
 above, conjugating the spectral decomposition.
@@ -326,12 +337,7 @@ above, conjugating the spectral decomposition.
 $\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$,
 so the average equals its own conjugate.
 
-**$3 \Rightarrow 2$.** This arrow, with the next, answers the open
-question. Condition 3 is all that an apparatus guarantees about its
-observable; if it is enough to reach condition 1, then every
-observable that can be measured at all has a table of the assumed
-kind, and the assumption, which looked like a restriction on the
-tables, restricted nothing. So suppose only that
+**$3 \Rightarrow 2$.** Suppose only that
 $\langle \psi | \hat A | \psi \rangle$ is real in every state. Then
 $\hat A$ is Hermitian, by the
 [polarization lemma](/quantum/heisenbergs-table/#polarization) of
@@ -409,10 +415,12 @@ and the [delta post](/quantum/from-kronecker-to-dirac/) discuss.
 
 </details>
 
-With the four arrows in place the theorem is proved. "Diagonal in some orthonormal basis, with real
-numbers on the diagonal", "Hermitian" and "real average in every
-state" are one condition on a table, and the assumption of the last
-post excluded no observable. The textbook postulate — "observables
+</details>
+
+So "diagonal in some orthonormal basis, with real numbers on the
+diagonal", "Hermitian" and "real average in every state" are one
+condition on a table, and the assumption of the last post excluded
+no observable. The textbook postulate — "observables
 are Hermitian operators" — is this equivalence, stated as a
 definition.
 
