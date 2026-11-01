@@ -444,10 +444,10 @@ mean $\langle A \rangle$ is zero. The squared deviation
 $(A - \langle A \rangle)^2$ is an observable in its own right: the same
 apparatus, with its window reading $(\lambda_i - \langle A \rangle)^2$
 in place of $\lambda_i$. Its operator is $(\hat A - \langle A \rangle \hat I)^2$,
-and the definite states are unchanged. Apply
-$\hat A - \langle A \rangle \hat I$ to $|a_i\rangle$ once, using
+and the definite states are unchanged: applying
+$\hat A - \langle A \rangle \hat I$ to $|a_i\rangle$ once, with
 $\hat A |a_i\rangle = \lambda_i |a_i\rangle$ and
-$\hat I |a_i\rangle = |a_i\rangle$:
+$\hat I |a_i\rangle = |a_i\rangle$, gives
 
 $$
 (\hat A - \langle A \rangle \hat I)\, |a_i\rangle = \lambda_i |a_i\rangle - \langle A \rangle |a_i\rangle = (\lambda_i - \langle A \rangle)\, |a_i\rangle .
