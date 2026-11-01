@@ -441,10 +441,17 @@ The converse also holds: no state outside the eigenvectors has a
 certain outcome. In the language of averages, a certain answer is
 one with no spread — the average of the squared deviation from the
 mean $\langle A \rangle$ is zero. The squared deviation
-$(A - \langle A \rangle)^2$ is an observable in its own right, with the
-same definite states $|a_i\rangle$ and the outcomes
-$(\lambda_i - \langle A \rangle)^2$, so by the average rule of the last
-post its mean, the **variance**, is
+$(A - \langle A \rangle)^2$ is an observable in its own right: the same
+apparatus, with its window reading $(\lambda_i - \langle A \rangle)^2$
+in place of $\lambda_i$. Its operator is $(\hat A - \langle A \rangle \hat I)^2$,
+and the definite states are unchanged, since
+
+$$
+(\hat A - \langle A \rangle \hat I)^2\, |a_i\rangle = (\lambda_i - \langle A \rangle)^2\, |a_i\rangle
+$$
+
+by applying $\hat A - \langle A \rangle \hat I$ twice. So by the average
+rule of the last post its mean, the **variance**, is
 
 $$
 \langle (A - \langle A \rangle)^2 \rangle = \sum_i |c_i|^2\, (\lambda_i - \langle A \rangle)^2 .
