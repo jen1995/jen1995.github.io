@@ -586,77 +586,12 @@ $$
 
 Both matrices are Hermitian, as the theorem requires, and since their
 entries happen to be real, Hermitian here simply means symmetric.
-These are two of the three
-[**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
-obtained here from the experiments, through the definite states the
-second post extracted from them, and not copied from a table. The
-third, $\sigma_y$, needs the $y$-axis states and comes
-[at the end of this section](#sigma-y); its entries are not real, and
-it is Hermitian all the same.
 
 ![The z and x measurements as operators: each is the difference of the projectors onto its two definite states, and in the z basis they are the Pauli matrices σ_z and σ_x](pauli_from_bases.png)
 
-<a id="pauli-other-basis"></a>
-All of this is written in the $z$ basis, and that is why $\sigma_z$
-came out diagonal and $\sigma_x$ did not. The operators do not depend
-on the basis, but their matrices do, so write both in the basis
-$|r\rangle, |l\rangle$ instead. The entry in row $i$, column $j$ is
-$\langle a_i | \hat A | a_j \rangle$. For $\sigma_x$ the decomposition
-above gives the entries at once: $+1$ and $-1$ on the diagonal, zero
-elsewhere. For $\sigma_z$, applying its matrix to the coordinates of
-$|r\rangle$ and $|l\rangle$ shows that it swaps them:
-
-$$
-\sigma_z |r\rangle = |l\rangle, \qquad \sigma_z |l\rangle = |r\rangle ,
-$$
-
-so the entries are
-
-$$
-\begin{aligned}
-\langle r | \sigma_z | r \rangle &= \langle r | l \rangle = 0, & \langle r | \sigma_z | l \rangle &= \langle r | r \rangle = 1, \\
-\langle l | \sigma_z | r \rangle &= \langle l | l \rangle = 1, & \langle l | \sigma_z | l \rangle &= \langle l | r \rangle = 0 .
-\end{aligned}
-$$
-
-The two matrices trade places:
-
-| Operator | in the basis $\lvert u\rangle, \lvert d\rangle$ | in the basis $\lvert r\rangle, \lvert l\rangle$ |
-|---|---|---|
-| $\sigma_z$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ |
-| $\sigma_x$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ |
-
-Each operator has the matrix with $+1$ and $-1$ on the diagonal in its
-own eigenbasis. The $z$ basis has no special standing: it was only the
-basis we chose to write in. This is
-[the statement in the box above](#quantity-is-basis) in the form of
-matrices.
-
-The second direction is the recipe itself: given the operator, find
-its eigenbasis. Take $\sigma_x$ as given and forget where it came
-from. Its eigenvalues are the roots of the characteristic
-polynomial,
-
-$$
-\det(\sigma_x - \lambda I) = \det \begin{pmatrix} -\lambda & 1 \\ 1 & -\lambda \end{pmatrix} = \lambda^2 - 1 ,
-$$
-
-so $\lambda = \pm 1$ — real, as they must be. The eigenvector for
-$\lambda = +1$ solves $\sigma_x v = v$, that is, $(v_2, v_1) = (v_1, v_2)$,
-so $v_1 = v_2$; normalized, $v = \tfrac{1}{\sqrt 2}(1, 1)^{\mathsf T}$.
-For $\lambda = -1$, $v_1 = -v_2$ and $v = \tfrac{1}{\sqrt 2}(1, -1)^{\mathsf T}$.
-The two are orthogonal, as the spectral theorem says — and they are
-$|r\rangle$ and $|l\rangle$. Linear algebra, given only the matrix,
-returns the two states the second post had to extract from the
-experiments by hand. That is the recipe working: the eigenbasis of
-$\sigma_x$ *is* the pair of definite states of the $x$ measurement,
-and from here on any observable of the spin is handled the same way.
-
-<a id="sigma-y"></a>
-### The third matrix: $\sigma_y$
-
-The third axis goes through the same steps, with one new thing: the
-coordinates of its definite states cannot be real. The
+<a id="sigma-y"></a>**The third matrix.** The $y$ axis goes through the
+same steps, with one new thing: the coordinates of its definite states
+cannot be real. The
 [second post](/quantum/states-are-vectors/#the-y-axis) named these
 states $|i\rangle$ and $|o\rangle$, *in* and *out*, and left the
 derivation open. The $y$ axis is perpendicular to both $z$ and $x$.
@@ -736,23 +671,84 @@ $$
 \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}^{\mathsf T} = \begin{pmatrix} 0 & i \\ -i & 0 \end{pmatrix}, \qquad \begin{pmatrix} 0 & i \\ -i & 0 \end{pmatrix}^{*} = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} .
 $$
 
-Its entries are not real, but its eigenvalues are, as the theorem says
-they must be:
+These are the three
+[**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
+obtained here from the experiments, through the definite states, and
+not copied from a table:
+
+$$
+\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} .
+$$
+
+<a id="pauli-other-basis"></a>
+All of this is written in the $z$ basis, and that is why $\sigma_z$
+came out diagonal and the other two did not. The operators do not depend
+on the basis, but their matrices do, so write $\sigma_z$ and $\sigma_x$
+in the basis $|r\rangle, |l\rangle$ instead. The entry in row $i$, column $j$ is
+$\langle a_i | \hat A | a_j \rangle$. For $\sigma_x$ the decomposition
+above gives the entries at once: $+1$ and $-1$ on the diagonal, zero
+elsewhere. For $\sigma_z$, applying its matrix to the coordinates of
+$|r\rangle$ and $|l\rangle$ shows that it swaps them:
+
+$$
+\sigma_z |r\rangle = |l\rangle, \qquad \sigma_z |l\rangle = |r\rangle ,
+$$
+
+so the entries are
+
+$$
+\begin{aligned}
+\langle r | \sigma_z | r \rangle &= \langle r | l \rangle = 0, & \langle r | \sigma_z | l \rangle &= \langle r | r \rangle = 1, \\
+\langle l | \sigma_z | r \rangle &= \langle l | l \rangle = 1, & \langle l | \sigma_z | l \rangle &= \langle l | r \rangle = 0 .
+\end{aligned}
+$$
+
+The two matrices trade places:
+
+| Operator | in the basis $\lvert u\rangle, \lvert d\rangle$ | in the basis $\lvert r\rangle, \lvert l\rangle$ |
+|---|---|---|
+| $\sigma_z$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ |
+| $\sigma_x$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ |
+
+Each operator has the matrix with $+1$ and $-1$ on the diagonal in its
+own eigenbasis, and so does $\sigma_y$ in the basis
+$|i\rangle, |o\rangle$: its imaginary entries come from writing it in the
+$z$ basis. The $z$ basis has no special standing: it was only the
+basis we chose to write in. This is
+[the statement in the box above](#quantity-is-basis) in the form of
+matrices.
+
+The second direction is the recipe itself: given the operator, find
+its eigenbasis. Take $\sigma_x$ as given and forget where it came
+from. Its eigenvalues are the roots of the characteristic
+polynomial,
+
+$$
+\det(\sigma_x - \lambda I) = \det \begin{pmatrix} -\lambda & 1 \\ 1 & -\lambda \end{pmatrix} = \lambda^2 - 1 ,
+$$
+
+so $\lambda = \pm 1$ — real, as they must be. The eigenvector for
+$\lambda = +1$ solves $\sigma_x v = v$, that is, $(v_2, v_1) = (v_1, v_2)$,
+so $v_1 = v_2$; normalized, $v = \tfrac{1}{\sqrt 2}(1, 1)^{\mathsf T}$.
+For $\lambda = -1$, $v_1 = -v_2$ and $v = \tfrac{1}{\sqrt 2}(1, -1)^{\mathsf T}$.
+The two are orthogonal, as the spectral theorem says — and they are
+$|r\rangle$ and $|l\rangle$. Linear algebra, given only the matrix,
+returns the two states the second post had to extract from the
+experiments by hand. That is the recipe working: the eigenbasis of
+$\sigma_x$ *is* the pair of definite states of the $x$ measurement,
+and from here on any observable of the spin is handled the same way.
+
+For $\sigma_y$ the entries are not real, but the eigenvalues are, as
+the theorem says they must be:
 
 $$
 \det(\sigma_y - \lambda I) = \det \begin{pmatrix} -\lambda & -i \\ i & -\lambda \end{pmatrix} = \lambda^2 - 1 ,
 $$
 
-so $\lambda = \pm 1$. The imaginary entries come from writing $\sigma_y$
-in the $z$ basis: in its own eigenbasis $|i\rangle, |o\rangle$ its matrix
-has $+1$ and $-1$ on the diagonal, like the other two in the
-[table above](#pauli-other-basis). All three
-[Pauli matrices](https://en.wikipedia.org/wiki/Pauli_matrices) are now
-obtained from the experiments:
-
-$$
-\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} .
-$$
+so again $\lambda = \pm 1$. For $\lambda = +1$, the equation
+$\sigma_y v = v$ reads $(-i v_2, i v_1) = (v_1, v_2)$, so $v_2 = i v_1$,
+and normalizing returns $|i\rangle$. For $\lambda = -1$, $v_2 = -i v_1$
+returns $|o\rangle$.
 
 ## Beyond the spin
 

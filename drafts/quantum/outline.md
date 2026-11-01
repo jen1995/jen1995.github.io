@@ -157,7 +157,7 @@ The longest post; notes §9–13 + the classical interlude.
   "Degeneracy and the continuous spectrum" in post 51 stays as is.
 - Then QM-4 qubit (weight 53).
 - Later on 2026-11-01: the derivation of |i⟩, |o⟩ and sigma_y moved from
-  QM-4 into post 51, subsection "The third matrix: σ_y" (anchor #sigma-y,
+  QM-4 into post 51, recipe subsection, right after σ_x (anchor #sigma-y,
   figure y_phase.png). States Are Vectors and Heisenberg's Table now link
   there. QM-4 keeps the Bloch sphere, θ/2, cos²(θ/2), n·σ, and owes the
   explanation of the sign choice: |i⟩ = (1, i)/√2 makes x, y, z right-handed.
