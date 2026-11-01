@@ -15,3 +15,11 @@
     overflow-y: hidden;
     padding: 2px 0;
 }
+
+/* PaperMod's `details .inner { margin: 0 2.4rem }` (meant for the table of
+   contents) also hits KaTeX's `.rlap > .inner`, which draws the slash of
+   \neq, \notin and the like: inside a cut the slash slid to the right. */
+.post-content details .katex .inner {
+    margin: 0;
+    padding-bottom: 0;
+}
