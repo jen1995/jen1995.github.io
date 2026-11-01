@@ -575,10 +575,13 @@ $$
 |r\rangle\langle r| = \tfrac12 \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}, \qquad |l\rangle\langle l| = \tfrac12 \begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix},
 $$
 
-so that
+and subtracting the second from the first, entry by entry, gives
 
 $$
-\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.
+\begin{aligned}
+\sigma_x &= \tfrac12 \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} - \tfrac12 \begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix} \\
+&= \tfrac12 \begin{pmatrix} 0 & 2 \\ 2 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.
+\end{aligned}
 $$
 
 Both matrices are Hermitian, as the theorem says they must be —
