@@ -614,10 +614,17 @@ two states must satisfy three requirements:
 3. they are mutually exclusive, $\langle i | o \rangle = 0$.
 
 Take a state with coordinates $(a, b)^{\mathsf T}$. Requirement 1 says
-$|a|^2 = |b|^2 = \tfrac12$. A
-[global phase](/quantum/states-are-vectors/#global-phase) changes
-nothing measurable, so multiply the state by one that makes $a$ real
-and positive. What remains is one unknown angle $\varphi$:
+$|a|^2 = |b|^2 = \tfrac12$, so the moduli are known and only the phases
+are not. Write both coordinates in polar form, modulus times phase:
+
+$$
+a = \tfrac{1}{\sqrt 2}\, e^{i\alpha}, \qquad b = \tfrac{1}{\sqrt 2}\, e^{i\beta} .
+$$
+
+A [global phase](/quantum/states-are-vectors/#global-phase) changes
+nothing measurable, so multiply the state by $e^{-i\alpha}$. The first
+coordinate becomes real and positive, and one unknown angle remains,
+$\varphi = \beta - \alpha$:
 
 $$
 |\psi\rangle = \tfrac{1}{\sqrt 2} (1, e^{i\varphi})^{\mathsf T} .
