@@ -688,8 +688,7 @@ $$
 
 These are the three
 [**Pauli matrices**](https://en.wikipedia.org/wiki/Pauli_matrices),
-obtained here from the experiments, through the definite states, and
-not copied from a table:
+obtained here from the experiments through their definite states:
 
 $$
 \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} .
