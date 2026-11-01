@@ -258,25 +258,24 @@ imaginary parts.
 
 ![A Hermitian matrix: real diagonal, mirror entries complex conjugates of each other; a numerical example that is Hermitian but not symmetric; and a real symmetric matrix as the special case](hermitian_matrix.png)
 
-**But what guarantees that every table an experiment produces is
-Hermitian?** A table has $n^2$ complex entries, and nature was not
-consulted about them. Why should an apparatus, which can give any
-numbers it likes, produce a table with the mirror symmetry just
-described?
-
-Because the experiment *never* hands us a table. It hands us two
-lists: the outcomes, which are real numbers, and the definite
-states, which the apparatus tells apart with certainty. The second
-post translated that certainty into the model as orthogonality, so
-in the model the definite states are an orthonormal set, and the
-table is *assembled* from the two lists by the spectral
-decomposition. Anything assembled
-that way is Hermitian, as shown above by conjugating the
-decomposition; the mirror symmetry is not a constraint on
-the laboratory but a consequence of how the table is built from
-what the laboratory gives. A table that is not Hermitian would need a complex
-outcome, or a pair of definite states that are not orthogonal, and
-no apparatus produces either.
+> 💡 **But what guarantees that every table an experiment produces is Hermitian?** A table has $n^2$ complex entries, and nature was not
+> consulted about them. Why should an apparatus, which can give any
+> numbers it likes, produce a table with the mirror symmetry just
+> described?
+>
+> Because the experiment *never* hands us a table. It hands us two
+> lists: the outcomes, which are real numbers, and the definite
+> states, which the apparatus tells apart with certainty. The second
+> post translated that certainty into the model as orthogonality, so
+> in the model the definite states are an orthonormal set, and the
+> table is *assembled* from the two lists by the spectral
+> decomposition. Anything assembled
+> that way is Hermitian, as shown above by conjugating the
+> decomposition; the mirror symmetry is not a constraint on
+> the laboratory but a consequence of how the table is built from
+> what the laboratory gives. A table that is not Hermitian would need a complex
+> outcome, or a pair of definite states that are not orthogonal, and
+> no apparatus produces either.
 
 The first table in history passed the test by itself. Heisenberg's
 amplitudes satisfy $X(n - \alpha, n) = X(n, n - \alpha)^*$, as the
