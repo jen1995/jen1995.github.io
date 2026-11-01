@@ -204,7 +204,18 @@ Four rules follow from the definition:
 The adjoint of a ket is its bra, $(|v\rangle)^\dagger = \langle v|$ —
 the second post's bra–ket correspondence in this notation.
 
-Now take the adjoint of the spectral decomposition. By the rules,
+Now use the assumption. It gave the spectral decomposition of the
+previous subsection,
+
+$$
+\hat A = \sum_i \lambda_i\, |a_i\rangle\langle a_i| ,
+$$
+
+with no Hermiticity assumed anywhere — only the diagonal table and
+the column rule. (The converse road, below, starts from
+$\hat A^\dagger = \hat A$ alone and proves that such a basis exists; the
+two roads do not lean on each other.) Take the adjoint of the
+decomposition. By the rules,
 $(|a_i\rangle\langle a_i|)^\dagger = (\langle a_i|)^\dagger (|a_i\rangle)^\dagger = |a_i\rangle\langle a_i|$,
 so
 
