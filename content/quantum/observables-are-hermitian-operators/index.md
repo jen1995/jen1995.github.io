@@ -444,13 +444,30 @@ mean $\langle A \rangle$ is zero. The squared deviation
 $(A - \langle A \rangle)^2$ is an observable in its own right: the same
 apparatus, with its window reading $(\lambda_i - \langle A \rangle)^2$
 in place of $\lambda_i$. Its operator is $(\hat A - \langle A \rangle \hat I)^2$,
-and the definite states are unchanged, since
+and the definite states are unchanged. Apply
+$\hat A - \langle A \rangle \hat I$ to $|a_i\rangle$ once, using
+$\hat A |a_i\rangle = \lambda_i |a_i\rangle$ and
+$\hat I |a_i\rangle = |a_i\rangle$:
 
 $$
-(\hat A - \langle A \rangle \hat I)^2\, |a_i\rangle = (\lambda_i - \langle A \rangle)^2\, |a_i\rangle
+(\hat A - \langle A \rangle \hat I)\, |a_i\rangle = \lambda_i |a_i\rangle - \langle A \rangle |a_i\rangle = (\lambda_i - \langle A \rangle)\, |a_i\rangle .
 $$
 
-by applying $\hat A - \langle A \rangle \hat I$ twice. So by the average
+So $|a_i\rangle$ comes back multiplied by the number
+$\lambda_i - \langle A \rangle$. Apply the same operator a second time;
+the number passes through by linearity:
+
+$$
+\begin{aligned}
+(\hat A - \langle A \rangle \hat I)^2\, |a_i\rangle
+&= (\hat A - \langle A \rangle \hat I)\, \big[ (\lambda_i - \langle A \rangle)\, |a_i\rangle \big] \\
+&= (\lambda_i - \langle A \rangle)\, (\hat A - \langle A \rangle \hat I)\, |a_i\rangle \\
+&= (\lambda_i - \langle A \rangle)^2\, |a_i\rangle .
+\end{aligned}
+$$
+
+Each $|a_i\rangle$ is an eigenvector of the squared deviation, with
+eigenvalue $(\lambda_i - \langle A \rangle)^2$. So by the average
 rule of the last post its mean, the **variance**, is
 
 $$
