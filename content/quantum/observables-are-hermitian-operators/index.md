@@ -314,9 +314,10 @@ on a table that have appeared so far:
 >
 > **Theorem.** The three conditions are equivalent.
 
-For three conditions to be equivalent it is enough to close one
-cycle, $1 \Rightarrow 2 \Rightarrow 3 \Rightarrow 1$; the last arrow
-is taken in two steps, through 2.
+The proof puts condition 2 in the middle and shows that each of the
+other two is equivalent to it: four arrows,
+$1 \Rightarrow 2$, $2 \Rightarrow 3$, $3 \Rightarrow 2$ and
+$2 \Rightarrow 1$.
 
 **$1 \Rightarrow 2$.** Already proved: this was the computation
 above, conjugating the spectral decomposition.
@@ -325,7 +326,7 @@ above, conjugating the spectral decomposition.
 $\langle \psi | \hat A \psi \rangle = \langle \hat A \psi | \psi \rangle = \langle \psi | \hat A \psi \rangle^*$,
 so the average equals its own conjugate.
 
-**$3 \Rightarrow 2$.** This is the step that answers the open
+**$3 \Rightarrow 2$.** This arrow, with the next, answers the open
 question. Condition 3 is all that an apparatus guarantees about its
 observable; if it is enough to reach condition 1, then every
 observable that can be measured at all has a table of the assumed
@@ -376,8 +377,7 @@ are the two facts just proved). Within a repeated eigenvalue the
 eigenvectors are not orthogonal automatically, and Gram–Schmidt makes
 them so.
 
-With $3 \Rightarrow 2 \Rightarrow 1$ the cycle is closed and the
-theorem is proved. "Diagonal in some orthonormal basis, with real
+With the four arrows in place the theorem is proved. "Diagonal in some orthonormal basis, with real
 numbers on the diagonal", "Hermitian" and "real average in every
 state" are one condition on a table, and the assumption of the last
 post excluded no observable. The textbook postulate — "observables
