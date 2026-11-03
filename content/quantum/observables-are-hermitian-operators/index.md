@@ -544,7 +544,7 @@ four steps:
 4. the probability of the result $\omega_i$ is
    $|\langle\omega_i|\psi\rangle|^2$.
 
-Steps 2–4 are the last post and this one. In his words (p. 119):
+Steps 2–4 are the last post and this one. In Shankar's words (p. 119):
 "To extract this information for any observable, we must determine
 the eigenbasis of the corresponding operator and find the
 projection of $|\psi\rangle$ along all its eigenkets." Landau and
