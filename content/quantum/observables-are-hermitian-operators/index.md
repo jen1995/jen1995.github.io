@@ -789,8 +789,8 @@ can come from three other places.
 - **Measured averages.** An apparatus gives averages, and by
   [polarization](/quantum/heisenbergs-table/#polarization) the averages
   in all states determine the whole table. For the spin four states are
-  enough. A Hermitian table there has four real unknowns: the numbers
-  $a$ and $d$ on the diagonal, and the real and imaginary parts of the
+  enough: a Hermitian table there has four real unknowns, the numbers
+  $a$ and $d$ on the diagonal and the real and imaginary parts of the
   pair $b$, $b^*$ off it. Each average gives one real equation, and
   these four give all the unknowns:
   $$\begin{aligned} \langle u | \hat A | u \rangle &= a, \qquad \langle d | \hat A | d \rangle = d, \\ \langle r | \hat A | r \rangle &= \tfrac12 (a + d) + \operatorname{Re} b, \\ \langle i | \hat A | i \rangle &= \tfrac12 (a + d) - \operatorname{Im} b. \end{aligned}$$
