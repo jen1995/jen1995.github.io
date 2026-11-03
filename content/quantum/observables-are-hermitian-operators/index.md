@@ -886,9 +886,16 @@ and which post takes up each gap.
 | spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ |
 | the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved in [Heisenberg's Table](/quantum/heisenbergs-table/) | a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part: the Born rule with a density $\lvert\psi(\lambda)\rvert^2$ in place of the weights $\lvert c_i\rvert^2$. This continuous case is a later post |
 
-The right column is made precise by von Neumann's
+The last three rows are made precise by von Neumann's
 [spectral theorem for unbounded self-adjoint operators](https://en.wikipedia.org/wiki/Spectral_theorem),
-a result of functional analysis that we use without proof.
+a result of functional analysis that we use without proof. The
+Hilbert–Schmidt theorem is not enough for them: a compact operator has a
+discrete spectrum, so it covers the box and the oscillator, through the
+inverses of their energy operators, but not position, the barrier or
+hydrogen. The generalized eigenvectors $|x\rangle$ in the spectrum row
+need a theorem of their own, due to Gelfand and Vilenkin, which the
+[delta post](/quantum/from-kronecker-to-dirac/#appendix-a-the-price-the-position-kets-are-not-states)
+names.
 
 For the problems of this road the operator is the energy, and the
 posts on dynamics supply it: that is step 1 of the recipe. The work is
