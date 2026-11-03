@@ -801,9 +801,10 @@ can come from three other places.
     with such an apparatus the outcomes can be read from its window
     without any matrix.
   - It requires states prepared with known coordinates.
-  - It requires the size of the table, the number of independent states,
-    and the readings of one apparatus give only a lower bound on it,
-    since an eigenvalue can repeat.
+  - It requires the size of the table, which is the number of
+    independent states. One apparatus does not give this number: several
+    independent states can share one reading, so there can be fewer
+    readings than states.
   - The table of an atom is infinite, so it cannot be measured entry by
     entry.
 
