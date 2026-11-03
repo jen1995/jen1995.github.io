@@ -576,7 +576,7 @@ $$
 For the $x$ spin the definite states are $|r\rangle = \tfrac{1}{\sqrt 2}(1, 1)^{\mathsf T}$
 and $|l\rangle = \tfrac{1}{\sqrt 2}(1, -1)^{\mathsf T}$, found from the
 experiments in the second post, with outcomes $+1$ and $-1$. The
-same recipe gives $\sigma_x = |r\rangle\langle r| - |l\rangle\langle l|$,
+same decomposition gives $\sigma_x = |r\rangle\langle r| - |l\rangle\langle l|$,
 and the two outer products are
 
 $$
@@ -668,7 +668,7 @@ $$
 and the qubit post explains it: this choice makes the axes $x, y, z$ a
 right-handed triple.
 
-Now the same recipe, with outcomes $+1$ on $|i\rangle$ and $-1$ on
+Now the same decomposition, with outcomes $+1$ on $|i\rangle$ and $-1$ on
 $|o\rangle$. The bras are $\langle i| = \tfrac{1}{\sqrt 2}(1, -i)$ and
 $\langle o| = \tfrac{1}{\sqrt 2}(1, i)$, so
 
