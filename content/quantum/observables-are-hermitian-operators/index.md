@@ -701,40 +701,42 @@ $$
 <a id="pauli-other-basis"></a>
 All of this is written in the $z$ basis, and that is why $\sigma_z$
 came out diagonal and the other two did not. The operators do not depend
-on the basis, but their matrices do, so write $\sigma_z$ and $\sigma_x$
-in the basis $|r\rangle, |l\rangle$ instead. The entry in row $i$, column $j$ is
-$\langle a_i | \hat A | a_j \rangle$. For $\sigma_x$ the decomposition
-above gives the entries at once: $+1$ and $-1$ on the diagonal, zero
-elsewhere. For $\sigma_z$, applying its matrix to the coordinates of
-$|r\rangle$ and $|l\rangle$ shows that it swaps them:
-
-$$
-\sigma_z |r\rangle = |l\rangle, \qquad \sigma_z |l\rangle = |r\rangle ,
-$$
-
-so the entries are
-
-$$
-\begin{aligned}
-\langle r | \sigma_z | r \rangle &= \langle r | l \rangle = 0, & \langle r | \sigma_z | l \rangle &= \langle r | r \rangle = 1, \\
-\langle l | \sigma_z | r \rangle &= \langle l | l \rangle = 1, & \langle l | \sigma_z | l \rangle &= \langle l | r \rangle = 0 .
-\end{aligned}
-$$
-
-The two matrices trade places:
-
-| Operator | in the basis $\lvert u\rangle, \lvert d\rangle$ | in the basis $\lvert r\rangle, \lvert l\rangle$ |
-|---|---|---|
-| $\sigma_z$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ |
-| $\sigma_x$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ |
-
-Each operator has the matrix with $+1$ and $-1$ on the diagonal in its
-own eigenbasis, and so does $\sigma_y$ in the basis
-$|i\rangle, |o\rangle$: its imaginary entries come from writing it in the
-$z$ basis. The $z$ basis has no special standing: it was only the
-basis we chose to write in. This is
+on the basis, but their matrices do. In its own eigenbasis each of the
+three has $+1$ and $-1$ on the diagonal, and the imaginary entries of
+$\sigma_y$ come from writing it in the $z$ basis. The $z$ basis has no
+special standing: it was only the basis we chose to write in. This is
 [the statement in the box above](#quantity-is-basis) in the form of
 matrices.
+
+<details>
+<summary>All three matrices in all three bases</summary>
+
+By the [column rule](/quantum/heisenbergs-table/#column-rule), column
+$j$ of a table holds the coordinates of what the operator returns on the
+$j$-th basis vector. Applying each matrix to the coordinates of the
+basis states gives:
+
+| | on $\lvert r\rangle, \lvert l\rangle$ | on $\lvert i\rangle, \lvert o\rangle$ |
+|---|---|---|
+| $\sigma_x$ | $\sigma_x \lvert r\rangle = \lvert r\rangle$, $\sigma_x \lvert l\rangle = -\lvert l\rangle$ | $\sigma_x \lvert i\rangle = i \lvert o\rangle$, $\sigma_x \lvert o\rangle = -i \lvert i\rangle$ |
+| $\sigma_y$ | $\sigma_y \lvert r\rangle = -i \lvert l\rangle$, $\sigma_y \lvert l\rangle = i \lvert r\rangle$ | $\sigma_y \lvert i\rangle = \lvert i\rangle$, $\sigma_y \lvert o\rangle = -\lvert o\rangle$ |
+| $\sigma_z$ | $\sigma_z \lvert r\rangle = \lvert l\rangle$, $\sigma_z \lvert l\rangle = \lvert r\rangle$ | $\sigma_z \lvert i\rangle = \lvert o\rangle$, $\sigma_z \lvert o\rangle = \lvert i\rangle$ |
+
+For example, $\sigma_y |r\rangle = -i |l\rangle$ has the coordinates
+$(0, -i)$ in the basis $|r\rangle, |l\rangle$, so this is the first
+column of $\sigma_y$ in that basis. Reading off all the columns:
+
+| Operator | in the basis $\lvert u\rangle, \lvert d\rangle$ | in the basis $\lvert r\rangle, \lvert l\rangle$ | in the basis $\lvert i\rangle, \lvert o\rangle$ |
+|---|---|---|---|
+| $\sigma_x$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ | $\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}$ |
+| $\sigma_y$ | $\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}$ | $\begin{pmatrix} 0 & i \\ -i & 0 \end{pmatrix}$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ |
+| $\sigma_z$ | $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ | $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ |
+
+Each row has the diagonal matrix once, in the column of that operator's
+own eigenbasis. All nine matrices are Hermitian, as the theorem says
+they must be in every orthonormal basis.
+
+</details>
 
 **From the operator to the states.** This direction is the recipe
 itself: given the operator, find its eigenbasis. Take $\sigma_x$ as given and forget where it came
