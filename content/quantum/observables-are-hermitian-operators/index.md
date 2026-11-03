@@ -795,10 +795,17 @@ can come from three other places.
   $\operatorname{Re} b$ and $\operatorname{Im} b$:
   $$\begin{aligned} \langle u | \hat A | u \rangle &= a, \qquad \langle d | \hat A | d \rangle = d, \\ \langle r | \hat A | r \rangle &= \tfrac12 (a + d) + \operatorname{Re} b, \\ \langle i | \hat A | i \rangle &= \tfrac12 (a + d) - \operatorname{Im} b. \end{aligned}$$
   Heisenberg's table also began with measured spectral lines. This
-  source has two limits. It requires an apparatus that already measures
-  the quantity, and with such an apparatus the outcomes can be read from
-  its window without any matrix. And the table of an atom is infinite,
-  so it cannot be measured entry by entry.
+  source has four limits:
+
+  - It requires an apparatus that already measures the quantity, and
+    with such an apparatus the outcomes can be read from its window
+    without any matrix.
+  - It requires states prepared with known coordinates.
+  - It requires the size of the table, the number of independent states,
+    and the readings of one apparatus give only a lower bound on it,
+    since an eigenvalue can repeat.
+  - The table of an atom is infinite, so it cannot be measured entry by
+    entry.
 
 So the main road in physics runs from the operator to its definite
 states. The spin is the case where the answer can be compared with
