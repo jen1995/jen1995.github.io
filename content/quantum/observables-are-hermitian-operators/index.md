@@ -880,7 +880,7 @@ and which post takes up each gap.
 |---|---|---|
 | the operator | an $n \times n$ table, defined on every vector | may be *unbounded*: the ratio $\lVert \hat A \psi \rVert / \lVert \psi \rVert$ has no upper limit. For $\hat x$ it grows as the state moves farther from the origin, and for some $\psi$ in $L^2$ the function $x\,\psi(x)$ is not in $L^2$ at all, so $\hat x$ is not defined on every state. The details are in the dynamics posts |
 | real averages $\Rightarrow$ Hermitian | proved, by polarization | the same argument; but for unbounded operators "equal to its adjoint" needs care with domains, and *symmetric* and *self-adjoint* differ; see the dynamics posts |
-| real eigenvalues, orthogonal eigenvectors | one line each | the same one-line arguments, for the eigenvectors that exist |
+| real eigenvalues, orthogonal eigenvectors | proved above | the same proofs work, for the eigenvectors that exist |
 | an orthonormal eigenbasis exists | proved above, by induction | not in general: $\hat x$ has no eigenvector in $L^2$ at all. True for *compact* self-adjoint operators (the Hilbert–Schmidt theorem; Sergeev, Theorem 40). The particle in a box qualifies through the inverse of its energy operator |
 | the spectrum | a finite list of eigenvalues | discrete (box), continuous (barrier) or mixed (hydrogen); the continuous part has no eigenvectors in the space, only *generalized* ones like $\lvert x\rangle$, normalized to a delta; see the delta post and the tunneling post |
 | spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ |
