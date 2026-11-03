@@ -738,8 +738,8 @@ they must be in every orthonormal basis.
 
 </details>
 
-**From the operator to the states.** This direction is the recipe
-itself: given the operator, find its eigenbasis. Take $\sigma_x$ as given and forget where it came
+**From the operator to the states.** Given the operator, find its
+eigenbasis: this is step 2 of the procedure above. Take $\sigma_x$ as given and forget where it came
 from. Its eigenvalues are the roots of the characteristic
 polynomial,
 
