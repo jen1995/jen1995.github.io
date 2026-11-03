@@ -827,13 +827,47 @@ with eigenvectors inside the space. Position is the first example. Its
 outcomes fill the whole real line, a **continuous spectrum**, and the
 kets $|x\rangle$ of the
 [delta post](/quantum/from-kronecker-to-dirac/#appendix-a-the-price-the-position-kets-are-not-states)
-lie outside $L^2$. Its operator $\hat x$ multiplies $\psi(x)$ by $x$,
-and its spectral decomposition is
-$\hat x = \int x\, |x\rangle\langle x|\, dx$. The energy spectra ahead
-come in three kinds: discrete in the box, continuous at the barrier,
+lie outside $L^2$. The energy spectra ahead come in three kinds: discrete in the box, continuous at the barrier,
 and both in hydrogen.
 
 ![Three kinds of energy spectrum: the discrete levels of a particle in a box, the continuous band of a tunneling barrier, and hydrogen with bound levels below zero and a continuum above](spectra_kinds.png)
+
+### Position: a diagonal table with a continuous index
+
+The operator of position comes from the same spectral decomposition.
+Its outcomes are the numbers $x$, and its definite states are the kets
+$|x\rangle$. The
+[second post](/quantum/states-are-vectors/#when-the-menu-is-infinite)
+turned the sum over basis vectors into an integral, with the
+wavefunction $\psi(x) = \langle x | \psi \rangle$ as the coordinates, and
+the [delta post](/quantum/from-kronecker-to-dirac/#the-kernel-is-the-dirac-delta)
+turned the Kronecker delta into the Dirac delta. The same replacements
+in the spectral decomposition give the operator:
+
+| | a list of outcomes | position |
+|---|---|---|
+| outcomes | $\lambda_i$ | $x$ |
+| definite states | $\lvert a_i\rangle$ | $\lvert x\rangle$ |
+| orthogonality | $\langle a_j \vert a_i\rangle = \delta_{ji}$ | $\langle y \vert x\rangle = \delta(y - x)$ |
+| coordinates of a state | $c_i = \langle a_i \vert \psi\rangle$ | $\psi(x) = \langle x \vert \psi\rangle$ |
+| spectral decomposition | $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | $\hat x = \int x\, \lvert x\rangle\langle x\rvert\, dx$ |
+
+We take the last row by analogy and do not prove it. Now apply each
+operator to a state and read the coordinates of the result:
+
+$$
+\begin{aligned}
+\langle a_j | \hat A | \psi \rangle &= \sum_i \lambda_i\, \langle a_j | a_i \rangle \langle a_i | \psi \rangle = \sum_i \lambda_i\, \delta_{ji}\, c_i = \lambda_j c_j , \\
+\langle y | \hat x | \psi \rangle &= \int x\, \langle y | x \rangle \langle x | \psi \rangle\, dx = \int x\, \delta(y - x)\, \psi(x)\, dx = y\, \psi(y) .
+\end{aligned}
+$$
+
+The two lines are one computation. An operator written in its own
+eigenbasis multiplies each coordinate by its outcome, which is what a
+[diagonal table](/quantum/heisenbergs-table/#assumption) does. So
+$\hat x$ multiplies $\psi(x)$ by $x$ because $\psi(x)$ is the coordinate
+with the index $x$, and in the position basis the table of $\hat x$ is
+diagonal, with the outcome $x$ at the index $x$.
 
 ### What carries over to infinite dimensions
 

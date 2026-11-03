@@ -122,7 +122,9 @@ The longest post; notes §9–13 + the classical interlude.
    argument for Ĥ = energy, ħ for dimensions — flagged honestly as the
    act's physicist juncture (her own "натягивание совы" note becomes the
    post's honesty cut).
-(Promised in post 51's table: name, in a cut, unbounded operators with
+(Post 51 derives x̂ as multiplication by x from the spectral decomposition,
+   taking the integral form by analogy; the dynamics post can start from it.)
+   (Promised in post 51's table: name, in a cut, unbounded operators with
    dense domains and the difference between symmetric and self-adjoint.)
 4. Translation operator ⇒ momentum operator p̂ = −iħ d/dx (§13),
    Schrödinger in the coordinate basis.
