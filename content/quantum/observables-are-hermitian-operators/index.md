@@ -894,8 +894,10 @@ through the inverses of their energy operators, but not position, the
 barrier or hydrogen.
 
 For the problems of this road the operator is the energy, and the
-posts on dynamics supply it: that is step 1 of the recipe. The work is
-then in step 2, and it falls in the right column of the table. For a
+posts on dynamics supply it: that is step 1 of
+[Shankar's recipe](#the-recipe-and-the-qubit-as-its-first-case),
+constructing the operator. The work is then in step 2, finding its
+eigenbasis, and it falls in the right column of the table. For a
 particle on a line the eigenvectors are functions, and "find the eigenbasis" means solving a differential
 equation, with no characteristic polynomial to take roots of. How
 that is done is a post of its own, before the first problem. The
