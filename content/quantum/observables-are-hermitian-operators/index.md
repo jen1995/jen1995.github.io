@@ -1,7 +1,7 @@
 ---
 title: "Observables Are Hermitian Operators"
-date: 2026-10-27
-draft: true
+date: 2026-11-03
+draft: false
 tags: ["quantum", "math"]
 summary: "The postulate most modern textbooks start from, reached as a conclusion: the basis in which an observable's table is diagonal is its eigenbasis and the outcomes are its eigenvalues; real outcomes make the operator Hermitian, and the spectral theorem makes Hermitian enough; definite states are eigenvectors. The theorem dictates the method — find the eigenbasis first — and the qubit shows it both ways: from the definite states to the Pauli matrices, and back. The y axis forces complex coordinates and gives the third Pauli matrix."
 math: true
