@@ -878,7 +878,7 @@ and which post takes up each gap.
 
 | statement | finite dimensions | infinite dimensions |
 |---|---|---|
-| the operator | an $n \times n$ table, defined on every vector | may be *unbounded*: $\hat x$ multiplies $\psi(x)$ by $x$, and $x\,\psi(x)$ need not stay in $L^2$, so the operator is defined only on a dense subspace; see the dynamics posts |
+| the operator | an $n \times n$ table, defined on every vector | may be *unbounded*: the ratio $\lVert \hat A \psi \rVert / \lVert \psi \rVert$ has no upper limit. For $\hat x$ it grows as the state moves farther from the origin, and for some $\psi$ in $L^2$ the function $x\,\psi(x)$ is not in $L^2$ at all, so $\hat x$ is not defined on every state. The details are in the dynamics posts |
 | real averages $\Rightarrow$ Hermitian | proved, by polarization | the same argument; but for unbounded operators "equal to its adjoint" needs care with domains, and *symmetric* and *self-adjoint* differ; see the dynamics posts |
 | real eigenvalues, orthogonal eigenvectors | one line each | the same one-line arguments, for the eigenvectors that exist |
 | an orthonormal eigenbasis exists | proved above, by induction | not in general: $\hat x$ has no eigenvector in $L^2$ at all. True for *compact* self-adjoint operators (the Hilbert–Schmidt theorem; Sergeev, Theorem 40). The particle in a box qualifies through the inverse of its energy operator |
