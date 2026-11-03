@@ -907,38 +907,46 @@ expansion of the state in that basis.
 
 ## What we built
 
-The chain of the post. The orthonormal basis in which an
-observable's table is diagonal is a basis of eigenvectors, and the
-numbers on the diagonal — the outcomes — are the eigenvalues; the
-operator is the sum of outcomes times projectors, its spectral
-decomposition. Readings are real, so the operator equals its own
-adjoint: Hermitian. And Hermitian is enough: a Hermitian operator
-has real eigenvalues and an orthonormal eigenbasis, so the
-assumption of the last post excluded no observable. The eigenvectors
-are exactly the definite states of the first post. In more than two
-dimensions an eigenvalue can repeat, and in infinite dimensions the
-spectrum can be continuous, as it is for position. And the theorem
-dictates the method: a calculation starts by finding the eigenbasis
-of the operator at hand, which for the spin returns the states the
-second post found by hand. The same steps on the $y$ axis force complex
-coordinates and give the third Pauli matrix, $\sigma_y$, which is
-Hermitian with entries that are not real.
+The post went through these steps:
+
+1. The orthonormal basis in which an observable's table is diagonal is
+   a basis of eigenvectors, and the outcomes on the diagonal are the
+   eigenvalues. The operator is the sum of outcomes times projectors,
+   its spectral decomposition.
+2. Readings are real, so the operator equals its own adjoint: it is
+   Hermitian. Conversely, a Hermitian operator has real eigenvalues and
+   an orthonormal eigenbasis, so the assumption of the last post
+   excluded no observable.
+3. The eigenvectors are exactly the definite states.
+4. The link between an operator and its definite states runs in both
+   directions, and on the spin both can be done by hand. From the
+   definite states we built the three Pauli matrices. The $y$ axis forced
+   complex coordinates, and $\sigma_y$ is Hermitian with entries that are
+   not real. From the matrices, finding the eigenbasis returned the same
+   states.
+5. An eigenvalue can repeat, and in infinite dimensions the spectrum can
+   be continuous. Position is the first example: its operator is a
+   diagonal table with a continuous index.
 
 Wishlist item 3 is paid: **an observable is a Hermitian operator**,
-whose eigenvalues are the outcomes, whose eigenvectors are the
-definite states, whose average in a state is
-$\langle \psi | \hat A | \psi \rangle$, and whose outcome
-probabilities are the squared coordinates $|c_i|^2$ in the
-eigenbasis. One thing remains: nothing has been said about what a
-measurement does to the state. That is the next post.
+whose eigenvalues are the outcomes, whose eigenvectors are the definite
+states, whose average in a state is
+$\langle \psi | \hat A | \psi \rangle$, and whose outcome probabilities
+are the squared coordinates $|c_i|^2$ in the eigenbasis.
+
+![What the apparatus shows and what stands for it: the measured quantity is a Hermitian operator, the outcomes are its eigenvalues, the definite states are its eigenvectors, the average is the bracket, and the probabilities are the squared coordinates, each with its example for the spin along z and for position. Two arrows join the operator and its eigenvectors: the spectral decomposition up, finding the eigenbasis down](dictionary.png)
+
+Item 4 remains: nothing has been said yet about what a measurement does
+to the state.
 
 ## Onward
 
-Next stop: what a measurement does. The warning that applying an
-operator is not measuring, and measurement itself as a projection
-onto a definite state — the last item of the wishlist but one.
-After that, the qubit and the Bloch sphere: all the states of the spin
-on one sphere, and the spin operator along an arbitrary direction.
+Next stop: what a measurement does. The next post explains why applying
+an operator is not measuring, and describes a measurement as a
+projection onto a definite state, which pays wishlist item 4. After that
+comes the qubit and the Bloch sphere: all the states of the spin on one
+sphere, the spin operator along an arbitrary direction, and the cosine
+of wishlist item 5.
 
 ## References
 
