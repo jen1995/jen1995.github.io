@@ -705,8 +705,8 @@ on the basis, but their matrices do. In its own eigenbasis each of the
 three has $+1$ and $-1$ on the diagonal, and the imaginary entries of
 $\sigma_y$ come from writing it in the $z$ basis. The $z$ basis has no
 special standing: it was only the basis we chose to write in. This is
-[the statement in the box above](#quantity-is-basis) in the form of
-matrices.
+["choosing the quantity is choosing the basis"](#quantity-is-basis) in
+the form of matrices.
 
 <details>
 <summary>All three matrices in all three bases</summary>
