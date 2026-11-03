@@ -856,10 +856,9 @@ Hilbert space, and the generalized vectors, with $|x\rangle \in \Phi^*$
 Gelfand and Kostyuchenko (1955), and the theorem that every honest state
 expands along generalized eigenvectors is known as the Gelfand–Maurin
 theorem; Gelfand and Vilenkin's *Generalized Functions*, vol. 4, sets
-both out. The
-gentlest entry is de la Madrid's article on the role of the rigged
-Hilbert space in quantum mechanics, which works it all out on one
-solvable example — both are in the references.
+both out. The gentlest entry is de la Madrid's article on the role of
+the rigged Hilbert space in quantum mechanics, which works it all out
+on one solvable example. The book and the article are in the references.
 
 The construction also leaves one thing open: the sequence that
 approaches the limit. The cell states are one sequence of states
