@@ -882,12 +882,12 @@ and which post takes up each gap.
 | real averages $\Rightarrow$ Hermitian | proved, by polarization | the same argument; but for unbounded operators "equal to its adjoint" needs care with domains, and *symmetric* and *self-adjoint* differ; see the dynamics posts |
 | real eigenvalues, orthogonal eigenvectors | proved above | the same proofs work, for the eigenvectors that exist |
 | an orthonormal eigenbasis exists | proved above, by induction | not in general: $\hat x$ has no eigenvector in $L^2$ at all. True for *compact* self-adjoint operators (the Hilbert–Schmidt theorem; Sergeev, Theorem 40). The particle in a box qualifies through the inverse of its energy operator |
-| the spectrum | a finite list of eigenvalues | discrete (box), continuous (barrier) or mixed (hydrogen), by von Neumann's [spectral theorem for unbounded self-adjoint operators](https://en.wikipedia.org/wiki/Spectral_theorem). The continuous part has no eigenvectors in the space, only *generalized* ones like $\lvert x\rangle$, normalized to a delta, by a theorem of Gelfand and Vilenkin; see the [delta post](/quantum/from-kronecker-to-dirac/#appendix-a-the-price-the-position-kets-are-not-states) and the tunneling post |
+| the spectrum | a finite list of eigenvalues | discrete (box), continuous (barrier) or mixed (hydrogen), by von Neumann's [spectral theorem for unbounded self-adjoint operators](https://en.wikipedia.org/wiki/Spectral_theorem). The continuous part has no eigenvectors in the space, only *generalized* ones like $\lvert x\rangle$, normalized to a delta, by the Gelfand–Maurin theorem; see the [delta post](/quantum/from-kronecker-to-dirac/#appendix-a-the-price-the-position-kets-are-not-states) and the tunneling post |
 | spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum, by von Neumann's theorem; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ |
 | the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved in [Heisenberg's Table](/quantum/heisenbergs-table/) | by von Neumann's theorem, a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part: the Born rule with a density $\lvert\psi(\lambda)\rvert^2$ in place of the weights $\lvert c_i\rvert^2$. This continuous case is a later post |
 
-The theorems of Hilbert and Schmidt, von Neumann, and Gelfand and
-Vilenkin are results of functional analysis that we use without proof.
+The Hilbert–Schmidt theorem, von Neumann's theorem and the
+Gelfand–Maurin theorem are results of functional analysis that we use without proof.
 The Hilbert–Schmidt theorem alone is not enough: a compact
 operator has a discrete spectrum, so it covers the box and the oscillator,
 through the inverses of their energy operators, but not position, the
