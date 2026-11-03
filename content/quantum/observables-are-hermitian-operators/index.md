@@ -899,8 +899,10 @@ posts on dynamics supply it: that is step 1 of
 constructing the operator. The work is then in step 2, finding its
 eigenbasis, and it falls in the right column of the table. For a
 particle on a line the eigenvectors are functions, and "find the eigenbasis" means solving a differential
-equation, with no characteristic polynomial to take roots of. How
-that is done is a post of its own, before the first problem. The
+equation. Such an equation can have a characteristic polynomial of its
+own, as in the box, but its roots only give the form of the solutions:
+the eigenvalues are selected by the boundary conditions. How that is
+done is a post of its own, before the first problem. The
 particle in a box, the tunneling barrier, the harmonic oscillator and
 the hydrogen atom each begin by finding the eigenfunctions of their
 energy operator, and everything else about them is read off the
