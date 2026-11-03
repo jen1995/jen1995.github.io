@@ -794,10 +794,11 @@ can come from three other places.
   Each average gives one real equation, and these four give $a$, $d$,
   $\operatorname{Re} b$ and $\operatorname{Im} b$:
   $$\begin{aligned} \langle u | \hat A | u \rangle &= a, \qquad \langle d | \hat A | d \rangle = d, \\ \langle r | \hat A | r \rangle &= \tfrac12 (a + d) + \operatorname{Re} b, \\ \langle i | \hat A | i \rangle &= \tfrac12 (a + d) - \operatorname{Im} b. \end{aligned}$$
-  Heisenberg's table also began with measured spectral lines. But this
-  source needs an apparatus that already measures the quantity, whose
-  outcomes can then be read directly, and the table of an atom is
-  infinite.
+  Heisenberg's table also began with measured spectral lines. This
+  source has two limits. It requires an apparatus that already measures
+  the quantity, and with such an apparatus the outcomes can be read from
+  its window without any matrix. And the table of an atom is infinite,
+  so it cannot be measured entry by entry.
 
 So the main road in physics runs from the operator to its definite
 states. The spin is the case where the answer can be compared with
