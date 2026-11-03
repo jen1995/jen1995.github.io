@@ -886,8 +886,9 @@ and which post takes up each gap.
 | spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum, by von Neumann's theorem; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ |
 | the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved in [Heisenberg's Table](/quantum/heisenbergs-table/) | by von Neumann's theorem, a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part: the Born rule with a density $\lvert\psi(\lambda)\rvert^2$ in place of the weights $\lvert c_i\rvert^2$. This continuous case is a later post |
 
-These three theorems are results of functional analysis that we use
-without proof. The Hilbert–Schmidt theorem alone is not enough: a compact
+The theorems of Hilbert and Schmidt, von Neumann, and Gelfand and
+Vilenkin are results of functional analysis that we use without proof.
+The Hilbert–Schmidt theorem alone is not enough: a compact
 operator has a discrete spectrum, so it covers the box and the oscillator,
 through the inverses of their energy operators, but not position, the
 barrier or hydrogen.
