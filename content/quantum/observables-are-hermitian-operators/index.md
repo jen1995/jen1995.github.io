@@ -357,7 +357,7 @@ assumption asked for:
 
 The theorem makes three claims. The first two take one line each —
 the trick in both is to move the operator from the ket to the bra —
-and the third is quoted from Panov.
+and the third takes an induction.
 
 *Real eigenvalues.* If $\hat A|\varphi\rangle = \lambda|\varphi\rangle$
 with $|\varphi\rangle \neq 0$, then
@@ -816,49 +816,51 @@ states we already know.
 
 ### Degeneracy and the continuous spectrum
 
-Two refinements. An eigenvalue may belong to more than one
-independent eigenvector; it is then called **degenerate**, and the
-outcome does not determine the state, only the subspace it lands in
-— the hydrogen atom will make this concrete, with several orbitals
-sharing one energy. And in infinite dimensions the spectrum need not
-be a list of eigenvalues with eigenvectors inside the space: the
-position operator of the [delta post](/quantum/from-kronecker-to-dirac/)
-is the first example, its
-"eigenvectors" $|x\rangle$ living just outside $L^2$ and its spectrum
-being the whole real line — a **continuous spectrum**, with
-$\hat x = \int x\, |x\rangle\langle x|\, dx$ as its spectral
-decomposition. The problems ahead show all three kinds: the particle
-in a box has a purely discrete spectrum, the tunneling problem a
-purely continuous one, and hydrogen both at once.
+An eigenvalue may belong to more than one independent eigenvector. It
+is then called **degenerate**, and a certain outcome does not determine
+the state: any combination of those eigenvectors gives the same
+outcome. The hydrogen atom will make this concrete, with several
+orbitals sharing one energy.
+
+In infinite dimensions the spectrum need not be a list of eigenvalues
+with eigenvectors inside the space. Position is the first example. Its
+outcomes fill the whole real line, a **continuous spectrum**, and the
+kets $|x\rangle$ of the
+[delta post](/quantum/from-kronecker-to-dirac/#appendix-a-the-price-the-position-kets-are-not-states)
+lie outside $L^2$. Its operator $\hat x$ multiplies $\psi(x)$ by $x$,
+and its spectral decomposition is
+$\hat x = \int x\, |x\rangle\langle x|\, dx$. The energy spectra ahead
+come in three kinds: discrete in the box, continuous at the barrier,
+and both in hydrogen.
 
 ![Three kinds of energy spectrum: the discrete levels of a particle in a box, the continuous band of a tunneling barrier, and hydrogen with bound levels below zero and a continuum above](spectra_kinds.png)
 
-**What carries over, and what does not.** Everything in this post
-was proved for an $n \times n$ table. The state space of a particle
-on a line is $L^2$, infinite-dimensional, and the problems of this
-road live there. Here is the honest inventory, with the post where
-each gap is taken up; none of the gaps is filled here, only named.
+### What carries over to infinite dimensions
 
-| statement | finite dimensions (this post) | infinite dimensions |
+Everything in this post was proved for an $n \times n$ table. The state
+space of a particle on a line is $L^2$, which is infinite-dimensional,
+and the problems of this road live there. The table lists what changes,
+and which post takes up each gap.
+
+| statement | finite dimensions | infinite dimensions |
 |---|---|---|
-| the operator | an $n \times n$ table, defined on every vector | may be *unbounded*: $\hat x$ multiplies $\psi(x)$ by $x$, and $x\,\psi(x)$ need not stay in $L^2$, so the operator is defined only on a dense subspace — the dynamics posts |
-| real averages $\Rightarrow$ Hermitian | proved, by polarization | the same argument; but for unbounded operators "equal to its adjoint" needs care with domains, and *symmetric* and *self-adjoint* come apart — named in the dynamics posts |
-| real eigenvalues, orthogonal eigenvectors | one line each | the same one line each, for the eigenvectors that exist |
-| an orthonormal eigenbasis exists | Panov, Theorem 4.2.3 | not in general: $\hat x$ has no eigenvector in $L^2$ at all. True for *compact* self-adjoint operators (the Hilbert–Schmidt theorem; Sergeev, Theorem 40) — the particle in a box |
-| the spectrum | a finite list of eigenvalues | discrete (box), continuous (barrier) or mixed (hydrogen); the continuous part has no eigenvectors in the space, only *generalized* ones like $\lvert x\rangle$, normalized to a delta — the delta post, the tunneling post |
-| spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ — the delta post's Appendix A |
-| the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved | a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part: the Born rule with a density $\lvert\psi(\lambda)\rvert^2$ in place of the weights $\lvert c_i\rvert^2$. [Heisenberg's Table](/quantum/heisenbergs-table/) proved only the discrete case; the continuous one is a later post |
+| the operator | an $n \times n$ table, defined on every vector | may be *unbounded*: $\hat x$ multiplies $\psi(x)$ by $x$, and $x\,\psi(x)$ need not stay in $L^2$, so the operator is defined only on a dense subspace; see the dynamics posts |
+| real averages $\Rightarrow$ Hermitian | proved, by polarization | the same argument; but for unbounded operators "equal to its adjoint" needs care with domains, and *symmetric* and *self-adjoint* differ; see the dynamics posts |
+| real eigenvalues, orthogonal eigenvectors | one line each | the same one-line arguments, for the eigenvectors that exist |
+| an orthonormal eigenbasis exists | proved above, by induction | not in general: $\hat x$ has no eigenvector in $L^2$ at all. True for *compact* self-adjoint operators (the Hilbert–Schmidt theorem; Sergeev, Theorem 40). The particle in a box qualifies through the inverse of its energy operator |
+| the spectrum | a finite list of eigenvalues | discrete (box), continuous (barrier) or mixed (hydrogen); the continuous part has no eigenvectors in the space, only *generalized* ones like $\lvert x\rangle$, normalized to a delta; see the delta post and the tunneling post |
+| spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ |
+| the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved in [Heisenberg's Table](/quantum/heisenbergs-table/) | a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part: the Born rule with a density $\lvert\psi(\lambda)\rvert^2$ in place of the weights $\lvert c_i\rvert^2$. This continuous case is a later post |
 
-The spectral theorem for self-adjoint operators on a Hilbert space,
-which makes the right column precise, is a theorem of functional
-analysis rather than of this road; the road names it where it is
-used and takes it from the references.
+The spectral theorem for self-adjoint operators on a Hilbert space
+makes the right column precise. It is a theorem of functional analysis.
+We do not prove it: we name it where it is used and cite it from the
+references.
 
-For the problems of this road the operator is the energy, and step 1
-of the recipe — which operator belongs to the energy — is what the
-posts on dynamics settle. Step 2 is then the whole work, and in the
-right column of the table: for a particle on a line the eigenvectors
-are functions, and "find the eigenbasis" means solving a differential
+For the problems of this road the operator is the energy, and the
+posts on dynamics supply it: that is step 1 of the recipe. The work is
+then in step 2, and it falls in the right column of the table. For a
+particle on a line the eigenvectors are functions, and "find the eigenbasis" means solving a differential
 equation, with no characteristic polynomial to take roots of. How
 that is done is a post of its own, before the first problem. The
 particle in a box, the tunneling barrier, the harmonic oscillator and

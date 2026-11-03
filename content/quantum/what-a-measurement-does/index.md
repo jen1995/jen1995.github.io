@@ -82,6 +82,17 @@ probability of the outcome is the average of the projector,
 $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$, as in the
 derivation of the Born rule in Heisenberg's Table.
 
+All of this assumes that each outcome belongs to one eigenvector. If
+the outcome $\lambda$ is
+[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
+it does not single out one direction. Its probability is the sum of
+$|c_j|^2$ over the eigenvectors with $\lambda_j = \lambda$, and the state
+is projected onto the subspace they span, then renormalized:
+
+$$
+|\psi\rangle \;\longmapsto\; \frac{\hat P |\psi\rangle}{\lVert \hat P |\psi\rangle \rVert}, \qquad \hat P = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| .
+$$
+
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
 Read the first post's three experiments in this language.
