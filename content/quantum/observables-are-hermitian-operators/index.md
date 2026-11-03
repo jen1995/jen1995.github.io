@@ -789,10 +789,10 @@ can come from three other places.
 - **Measured averages.** An apparatus gives averages, and by
   [polarization](/quantum/heisenbergs-table/#polarization) the averages
   in all states determine the whole table. For the spin four states are
-  enough: a Hermitian table there has four real unknowns, the numbers
-  $a$ and $d$ on the diagonal and the real and imaginary parts of the
-  pair $b$, $b^*$ off it. Each average gives one real equation, and
-  these four give all the unknowns:
+  enough: a Hermitian table there is
+  $$\hat A = \begin{pmatrix} a & b \\ b^* & d \end{pmatrix}, \qquad a, d \in \mathbb R .$$
+  Each average gives one real equation, and these four give $a$, $d$,
+  $\operatorname{Re} b$ and $\operatorname{Im} b$:
   $$\begin{aligned} \langle u | \hat A | u \rangle &= a, \qquad \langle d | \hat A | d \rangle = d, \\ \langle r | \hat A | r \rangle &= \tfrac12 (a + d) + \operatorname{Re} b, \\ \langle i | \hat A | i \rangle &= \tfrac12 (a + d) - \operatorname{Im} b. \end{aligned}$$
   Heisenberg's table also began with measured spectral lines. But this
   source needs an apparatus that already measures the quantity, whose
