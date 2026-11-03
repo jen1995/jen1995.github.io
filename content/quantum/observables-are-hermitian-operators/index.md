@@ -886,10 +886,9 @@ and which post takes up each gap.
 | spectral decomposition $\hat A = \sum_i \lambda_i \lvert a_i\rangle\langle a_i\rvert$ | proved | becomes an integral over the spectrum; for position, $\hat x = \int x\,\lvert x\rangle\langle x\rvert\,dx$ |
 | the average $\sum_i \lambda_i \lvert c_i\rvert^2$ | proved in [Heisenberg's Table](/quantum/heisenbergs-table/) | a sum over the discrete part plus an integral $\int \lambda\,\lvert\psi(\lambda)\rvert^2\,d\lambda$ over the continuous part: the Born rule with a density $\lvert\psi(\lambda)\rvert^2$ in place of the weights $\lvert c_i\rvert^2$. This continuous case is a later post |
 
-The spectral theorem for self-adjoint operators on a Hilbert space
-makes the right column precise. It is a theorem of functional analysis.
-We do not prove it: we name it where it is used and cite it from the
-references.
+The right column is made precise by von Neumann's
+[spectral theorem for unbounded self-adjoint operators](https://en.wikipedia.org/wiki/Spectral_theorem),
+a result of functional analysis that we use without proof.
 
 For the problems of this road the operator is the energy, and the
 posts on dynamics supply it: that is step 1 of the recipe. The work is
