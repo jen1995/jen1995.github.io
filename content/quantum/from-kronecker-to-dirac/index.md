@@ -852,9 +852,11 @@ themselves stand just outside the space. The rigorous home for this
 arrangement is a *rigged Hilbert space* — a triple
 $\Phi \subset \mathcal H \subset \Phi^*$ of nice test states, the
 Hilbert space, and the generalized vectors, with $|x\rangle \in \Phi^*$
-— which we name and do not build. The construction, and the theorem
-that every honest state expands along generalized eigenvectors, are
-due to Gelfand and Vilenkin (*Generalized Functions*, vol. 4); the
+— which we name and do not build. The construction goes back to
+Gelfand and Kostyuchenko (1955), and the theorem that every honest state
+expands along generalized eigenvectors is known as the Gelfand–Maurin
+theorem; Gelfand and Vilenkin's *Generalized Functions*, vol. 4, sets
+both out. The
 gentlest entry is de la Madrid's article on the role of the rigged
 Hilbert space in quantum mechanics, which works it all out on one
 solvable example — both are in the references.
