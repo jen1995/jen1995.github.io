@@ -88,24 +88,27 @@ to several basis vectors; it is then called
 and a certain outcome no longer determines the state.
 
 Take first the case where each eigenvalue belongs to one eigenvector.
-Then the state after a measurement can be found in three steps. Steps
-1 and 3 use results of the earlier posts, and step 2 adds an
-assumption.
+The question is: a measurement of $\hat A$ has returned $\lambda_i$;
+what is the state now?
 
-1. The outcomes are the eigenvalues, and the outcome $\lambda_i$ has
-   probability $|c_i|^2$, by the Born rule.
-2. A second measurement right after the first repeats its answer.
-   [Experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
-   showed this for the spin; for other observables we assume it, and
-   call such measurements *repeatable*. Not every real measurement is
-   repeatable: a detector that absorbs a photon leaves no photon to
-   measure again. So after the outcome $\lambda_i$ of a repeatable
-   measurement the state is one in which $\lambda_i$ is certain: a
-   definite state with the outcome $\lambda_i$.
-3. By [definite states are eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states),
-   such a state is an eigenvector with the eigenvalue $\lambda_i$. Since
-   $\lambda_i$ belongs to one eigenvector, that is $|a_i\rangle$, up to
-   a [global phase](/quantum/states-are-vectors/#global-phase).
+The answer rests on one fact from the experiments. In
+[experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms),
+a second measurement made right after the first always repeated its
+answer. We assume the same for every measurement we consider, and call
+such measurements *repeatable*. This is an assumption, not a law: a
+detector that absorbs a photon leaves no photon to measure again.
+
+For a repeatable measurement the argument is short. Right after the
+outcome $\lambda_i$, measuring again gives $\lambda_i$ with
+probability one, so in the new state the outcome $\lambda_i$ is
+certain. A state with a certain outcome is a definite state, and
+definite states are
+[eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states):
+the new state is an eigenvector of $\hat A$ with the eigenvalue
+$\lambda_i$. Only one basis vector has this eigenvalue, so the new state
+is $|a_i\rangle$, up to a
+[global phase](/quantum/states-are-vectors/#global-phase). Together
+with the Born rule for the probabilities:
 
 > **Measurement** (repeatable, each eigenvalue belonging to one
 > eigenvector).
@@ -141,8 +144,8 @@ state.
 
 Read the first post's three experiments in this language.
 
-- *Repetition confirms.* This experiment was the input of step 2, so
-  here the rule only checks itself. After a $z$ measurement the state is
+- *Repetition confirms.* This experiment was the input of the
+  argument above, so here the rule only checks itself. After a $z$ measurement the state is
   $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$. Measuring
   $\sigma_z$ again finds the coefficient $1$ on that eigenvector and
   returns the same value with probability one.
@@ -160,9 +163,10 @@ Read the first post's three experiments in this language.
   common.
 
 **The degenerate case.** If the outcome $\lambda$ is degenerate,
-the argument above stops at step 3. The state after the measurement
-lies in the subspace spanned by the eigenvectors with $\lambda_j = \lambda$,
-but repeatability does not say where in that subspace. The probability of
+the argument above stops one step short. The state after the measurement
+is still an eigenvector with the eigenvalue $\lambda$, so it lies in the
+subspace spanned by the eigenvectors with $\lambda_j = \lambda$, but
+repeatability does not say where in that subspace. The probability of
 $\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
 eigenvectors. For the state, the standard answer is an extra postulate,
 the **Lüders rule**: the state is projected onto that subspace and
