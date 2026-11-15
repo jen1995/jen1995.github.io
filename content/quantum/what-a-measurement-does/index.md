@@ -41,19 +41,24 @@ $$
 \sigma_z\, |r\rangle = \tfrac{1}{\sqrt 2}\, \sigma_z |u\rangle + \tfrac{1}{\sqrt 2}\, \sigma_z |d\rangle = \tfrac{1}{\sqrt 2}\, |u\rangle - \tfrac{1}{\sqrt 2}\, |d\rangle = |l\rangle .
 $$
 
+![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩, a different state, but not the state after a measurement](operator_machine.png)
+
 The operator turned *right* into *left*. But a $z$ measurement of an
 electron prepared along $x$ never leaves it in the state $|l\rangle$:
 it leaves it in $|u\rangle$ or $|d\rangle$, at random. So
-$\sigma_z|r\rangle$ is not the state after a measurement. What the
-operator did is visible in the eigenbasis of $\sigma_z$. The input
+$\sigma_z|r\rangle$ is not the state after a measurement. Susskind and
+Friedman devote their §3.5, "A common misconception", to exactly this
+mistake: the belief that measuring an observable means applying its
+operator to the state.
+
+What the operator did is visible in the eigenbasis of $\sigma_z$, as
+the two left panels of the figure show. The input
 $|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
 has one coordinate per possible answer, and $\sigma_z$ multiplied each
 coordinate by the value of its answer, $+1$ or $-1$. The probabilities
 are the squared magnitudes of the coordinates, and the operator does
-not produce them. Susskind and Friedman devote their §3.5, "A common
-misconception", to this point.
+not produce them.
 
-![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩, a different state, but not the state after a measurement](operator_machine.png)
 
 ## Measurement
 
