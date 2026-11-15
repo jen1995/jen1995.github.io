@@ -78,20 +78,60 @@ alone does not produce them.
 
 ## Measurement
 
-Recall what the
-[spectral theorem](/quantum/observables-are-hermitian-operators/#three-conditions)
-gives: a Hermitian operator $\hat A$ has an orthonormal basis of
-eigenvectors $|a_i\rangle$ with real eigenvalues $\lambda_i$. It does
-not say that the eigenvalues are different. One eigenvalue can belong
-to several basis vectors; it is then called
-[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
-and a certain outcome no longer determines the state.
+Item 4 of the wishlist asks what a measurement does to the state. Here
+is the answer in the simplest case: each eigenvalue of $\hat A$ belongs
+to one eigenvector, and a second measurement made right after the
+first repeats its answer, as the $z$ measurement of the first post
+does. The rest of the section explains the answer and then drops these
+conditions.
 
-Take first the case where each eigenvalue belongs to one eigenvector.
-The question is: a measurement of $\hat A$ has returned $\lambda_i$;
-what is the state now?
+> **Measurement** (the simplest case). Measuring the observable
+> $\hat A$ in the state $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns
+> one of the eigenvalues $\lambda_i$, with probability $|c_i|^2$;
+> immediately after a measurement that returned $\lambda_i$, the state
+> is the definite state $|a_i\rangle$.
 
-The answer rests on one fact from the experiments. In
+In other words, the measurement picks an outcome at random and
+projects the state onto the definite direction of that outcome, then
+renormalizes it:
+
+$$
+|\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle .
+$$
+
+The result is a unit factor times $|a_i\rangle$, which is the same
+physical state, since a
+[global phase](/quantum/states-are-vectors/#global-phase) changes
+nothing measurable.
+
+![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
+
+### The three experiments
+
+The first post's three experiments are three cases of this rule.
+
+- *Repetition confirms.* After a $z$ measurement the state is
+  $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$. Measuring
+  $\sigma_z$ again finds the coefficient $1$ on that eigenvector and
+  returns the same value with probability one. The next subsection
+  shows that this experiment is in fact the reason for the rule.
+- *Flipping negates.* The apparatus turned upside down measures
+  $-\sigma_z$, whose definite states are the same two vectors with
+  the outcomes exchanged.
+- *A new axis erases the old answer.* Measure the spin along $x$ in
+  the state $|u\rangle = \frac{1}{\sqrt 2}|r\rangle + \frac{1}{\sqrt 2}|l\rangle$:
+  the outcome is $\pm 1$ with probability $\frac12$ each, and the
+  state becomes $|r\rangle$ or $|l\rangle$. Measure along $z$ once
+  more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$ and half
+  $|d\rangle$, so the old certainty is gone, and either answer has
+  probability $\frac12$. The erasure of the first post is the
+  statement that the $z$ and $x$ observables have no eigenvector in
+  common.
+
+### Why the state becomes $|a_i\rangle$
+
+The probabilities in the box are the Born rule. The state after the
+measurement follows from one more fact. In
 [experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms),
 a second measurement made right after the first always repeated its
 answer. Measurements with this property are called **ideal**, or
@@ -105,61 +145,25 @@ definite states are
 [eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states):
 the new state is an eigenvector of $\hat A$ with the eigenvalue
 $\lambda_i$. Only one basis vector has this eigenvalue, so the new state
-is $|a_i\rangle$, up to a
-[global phase](/quantum/states-are-vectors/#global-phase). Together
-with the Born rule for the probabilities:
+is $|a_i\rangle$, up to a global phase.
 
-> **Measurement.** Assume two things: the measurement is ideal, and
-> each eigenvalue of $\hat A$ belongs to one eigenvector. Then measuring
-> the observable $\hat A$ in the state
-> $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
-> eigenvalues $\lambda_i$, with probability $|c_i|^2$; immediately
-> after a measurement that returned $\lambda_i$, the state is the
-> definite state $|a_i\rangle$.
+Not every real measurement is ideal. A detector that absorbs a photon
+leaves no photon to measure again, so there is no second answer to
+compare. For such a measurement the part of the box about the state
+afterwards does not apply. The part about the outcomes still holds:
+the outcomes and their probabilities come from the Born rule, which was
+derived from averages. An average comes from many measurements, each on
+a fresh system prepared in the same state, and it does not matter
+whether each of them is ideal.
 
-The two assumptions are of different kinds. The second is about the
-observable, and the end of this section drops it. The first is about
-the apparatus: an ideal measurement can be repeated on the same system
-and then gives the same answer. Not every real measurement is ideal. A
-detector that absorbs a photon leaves no photon to measure again, so
-there is no second answer to compare. For such a measurement the part of
-the box about the state afterwards does not apply. The part about the
-outcomes still holds: the outcomes and their probabilities come from the
-Born rule, which was derived from averages. An average comes from many
-measurements, each on a fresh system prepared in the same state, and
-it does not matter whether each of them is ideal.
+### A projector, not the operator of the observable
 
-In the language of projectors, a measurement with the outcome
-$\lambda_i$ projects the state onto the $i$-th definite direction and
-renormalizes it:
-
-$$
-|\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle .
-$$
-
-The result is a unit factor times $|a_i\rangle$, which is the same
-physical state. The probability of the outcome is the average of the
-projector $\hat P_i = |a_i\rangle\langle a_i|$, computed the same way as
-the average of $\sigma_z$ above: apply the operator, then take the
-inner product with $|\psi\rangle$. With $\langle a_i | \psi \rangle = c_i$
-and $\langle \psi | a_i \rangle = c_i^*$,
-
-$$
-\begin{aligned}
-\hat P_i |\psi\rangle &= |a_i\rangle \langle a_i | \psi \rangle = c_i\, |a_i\rangle , \\
-\langle \psi | \hat P_i | \psi \rangle &= c_i\, \langle \psi | a_i \rangle = c_i\, c_i^* = |c_i|^2 ,
-\end{aligned}
-$$
-
-as in the
-[derivation of the Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule).
-
-This does not contradict the first section. The state after a
-measurement is obtained by applying an operator, but not $\hat A$: it
-is the projector onto the definite state of the outcome, the outcome
-is chosen at random with its Born probability, and the result is
-renormalized. A measurement never applies $\hat A$ itself to the
-state.
+The rule does apply an operator to the state: the projector
+$\hat P_i = |a_i\rangle\langle a_i|$ onto the definite state of the
+outcome, followed by renormalization. This does not contradict the
+first section, because the operator is $\hat P_i$, not $\hat A$, and
+the outcome $i$ is chosen at random. A measurement never applies
+$\hat A$ itself to the state.
 
 Both come from the spectral decomposition
 $\hat A = \sum_i \lambda_i \hat P_i$. A measurement uses one of the
@@ -175,6 +179,22 @@ measurement is random, while $\hat A|\psi\rangle$ is one fixed vector,
 and in general not an eigenvector. Its inner product with
 $|\psi\rangle$ is the average, $\sum_i \lambda_i |c_i|^2$.
 
+The projector also gives the probability of its outcome, as its
+average, computed the same way as the average of $\sigma_z$ in the
+first section: apply the operator, then take the inner product with
+$|\psi\rangle$. With $\langle a_i | \psi \rangle = c_i$ and
+$\langle \psi | a_i \rangle = c_i^*$,
+
+$$
+\begin{aligned}
+\hat P_i |\psi\rangle &= |a_i\rangle \langle a_i | \psi \rangle = c_i\, |a_i\rangle , \\
+\langle \psi | \hat P_i | \psi \rangle &= c_i\, \langle \psi | a_i \rangle = c_i\, c_i^* = |c_i|^2 ,
+\end{aligned}
+$$
+
+as in the
+[derivation of the Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule).
+
 In linear algebra, the repetition of the answer is *idempotence*:
 projecting twice is the same as projecting once. Both properties of the
 projectors that matter here follow from the orthonormality of the
@@ -189,37 +209,23 @@ the same outcome changes nothing. For $j \ne i$ it is
 $\hat P_i \hat P_j = 0$: after the outcome $\lambda_i$, no other outcome
 can follow.
 
-![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
+### The degenerate case
 
-Read the first post's three experiments in this language.
-
-- *Repetition confirms.* This experiment was the input of the
-  argument above, so here the rule only checks itself. After a $z$ measurement the state is
-  $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$. Measuring
-  $\sigma_z$ again finds the coefficient $1$ on that eigenvector and
-  returns the same value with probability one.
-- *Flipping negates.* The apparatus turned upside down measures
-  $-\sigma_z$, whose definite states are the same two vectors with
-  the outcomes exchanged.
-- *A new axis erases the old answer.* Measure the spin along $x$ in
-  the state $|u\rangle = \frac{1}{\sqrt 2}|r\rangle + \frac{1}{\sqrt 2}|l\rangle$:
-  the outcome is $\pm 1$ with probability $\frac12$ each, and the
-  state becomes $|r\rangle$ or $|l\rangle$. Measure along $z$ once
-  more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$ and half
-  $|d\rangle$, so the old certainty is gone, and either answer has
-  probability $\frac12$. The erasure of the first post is the
-  statement that the $z$ and $x$ observables have no eigenvector in
-  common.
-
-**The degenerate case.** If the outcome $\lambda$ is degenerate,
-the argument above stops one step short. The state after the measurement
-is still an eigenvector with the eigenvalue $\lambda$, so it lies in the
-subspace spanned by the eigenvectors with $\lambda_j = \lambda$, but
-the repetition of the answer does not say where in that subspace. The probability of
-$\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
-eigenvectors. For the state, the standard answer is an extra postulate,
-the **Lüders rule**: the state is projected onto that subspace and
-renormalized,
+The [spectral theorem](/quantum/observables-are-hermitian-operators/#three-conditions)
+gives a Hermitian operator an orthonormal basis of eigenvectors with
+real eigenvalues, but it does not say that the eigenvalues are
+different. One eigenvalue can belong to several basis vectors; it is
+then called
+[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum).
+If the outcome $\lambda$ is degenerate, the argument for the state
+stops one step short. The state after the measurement is still an
+eigenvector with the eigenvalue $\lambda$, so it lies in the subspace
+spanned by the eigenvectors with $\lambda_j = \lambda$, but the
+repetition of the answer does not say where in that subspace. The
+probability of $\lambda$ is still determined: it is the sum of
+$|c_j|^2$ over those eigenvectors. For the state, the standard answer
+is an extra postulate, the **Lüders rule**: the state is projected onto
+that subspace and renormalized,
 
 $$
 |\psi\rangle \;\longmapsto\; \frac{\hat P |\psi\rangle}{\lVert \hat P |\psi\rangle \rVert}, \qquad \hat P = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| .
