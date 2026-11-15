@@ -183,17 +183,7 @@ $$
 For $j = i$ this is $\hat P_i^2 = \hat P_i$: a second projection with
 the same outcome changes nothing. For $j \ne i$ it is
 $\hat P_i \hat P_j = 0$: after the outcome $\lambda_i$, no other outcome
-can follow. The operator $\hat A$ itself is idempotent only in a special
-case. By the same formula,
-
-$$
-\hat A^2 = \sum_{i,j} \lambda_i \lambda_j\, \hat P_i \hat P_j = \sum_i \lambda_i^2\, \hat P_i ,
-$$
-
-so $\hat A^2 = \hat A$ exactly when every $\lambda_i$ is $0$ or $1$. Then
-$\hat A$ is a projector, a yes-or-no observable. The projector
-$\hat P_i$ is one: it asks whether the outcome is $\lambda_i$, and its
-average, computed above, is the probability of "yes".
+can follow.
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
