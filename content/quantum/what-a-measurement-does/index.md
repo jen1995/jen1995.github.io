@@ -59,16 +59,20 @@ coordinate by the value of its answer, $+1$ or $-1$. The figure shows
 this on the basis vectors in the two left panels, and on $|r\rangle$
 in the right one: the coordinate along $|u\rangle$ stays, the one along
 $|d\rangle$ changes sign, and the arrow is reflected into $|l\rangle$.
-The vector $\sigma_z|r\rangle$ is what the average is computed from:
-its inner product with $|r\rangle$ is
+Heisenberg's Table introduced the operator for exactly one job:
+[given a state, return the average](/quantum/heisenbergs-table/#what-the-apparatus-gives-us-averages)
+of the outcomes. The vector $\sigma_z|r\rangle$ is the middle step of
+that job, and its inner product with $|r\rangle$ finishes it:
 
 $$
 \langle r | \sigma_z | r \rangle = \tfrac12 \cdot (+1) + \tfrac12 \cdot (-1) = 0 ,
 $$
 
-the average of $z$ measurements in the state $|r\rangle$. The
-probabilities $\tfrac12$ enter only here, as the squared magnitudes of
-the coordinates; the operator alone does not produce them.
+the average of $z$ measurements in the state $|r\rangle$, which
+[Heisenberg's Table computed](/quantum/heisenbergs-table/#the-spin-along-z-operator-average-interference)
+on the same example. The probabilities $\tfrac12$ enter only in this
+last step, as the squared magnitudes of the coordinates; the operator
+alone does not produce them.
 
 
 ## Measurement
