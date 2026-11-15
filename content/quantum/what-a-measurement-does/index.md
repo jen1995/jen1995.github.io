@@ -97,10 +97,10 @@ a second measurement made right after the first always repeated its
 answer. The rule below is for measurements with this property, which
 textbooks call *ideal*, or *measurements of the first kind*. Not every
 real measurement is ideal: a detector that absorbs a photon leaves no
-photon to measure again. This limits only the rule for the state after
-a measurement. The outcomes and their probabilities do not depend on
-it: the Born rule was derived from averages, and averages are what any
-measurement of $\hat A$ provides.
+photon to measure again. For such a measurement the box below does not
+say what the state becomes. It still gives the outcomes and their
+probabilities, because the Born rule was derived from averages, and
+any measurement of $\hat A$ provides averages.
 
 For an ideal measurement the argument is short. Right after the
 outcome $\lambda_i$, measuring again gives $\lambda_i$ with
