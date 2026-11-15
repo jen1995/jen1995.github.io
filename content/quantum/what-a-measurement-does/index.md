@@ -51,13 +51,21 @@ Friedman devote their §3.5, "A common misconception", to exactly this
 mistake: the belief that measuring an observable means applying its
 operator to the state.
 
-What the operator did is visible in the eigenbasis of $\sigma_z$, as
-the two left panels of the figure show. The input
+If $\sigma_z|r\rangle$ is not the state after a measurement, what is
+it? In the eigenbasis of $\sigma_z$ the answer is short. The input
 $|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
-has one coordinate per possible answer, and $\sigma_z$ multiplied each
-coordinate by the value of its answer, $+1$ or $-1$. The probabilities
-are the squared magnitudes of the coordinates, and the operator does
-not produce them.
+has one coordinate per possible answer, and $\sigma_z$ multiplies each
+coordinate by the value of its answer, $+1$ or $-1$; the two left panels
+of the figure show this on the basis vectors themselves. The result is
+a step towards the average. Its inner product with $|r\rangle$ is
+
+$$
+\langle r | \sigma_z | r \rangle = \tfrac12 \cdot (+1) + \tfrac12 \cdot (-1) = 0 ,
+$$
+
+the average of $z$ measurements in the state $|r\rangle$. The
+probabilities $\tfrac12$ enter only here, as the squared magnitudes of
+the coordinates; the operator alone does not produce them.
 
 
 ## Measurement
