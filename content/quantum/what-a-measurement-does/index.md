@@ -69,7 +69,7 @@ $$
 $$
 
 the average of $z$ measurements in the state $|r\rangle$, which
-[Heisenberg's Table computed](/quantum/heisenbergs-table/#the-spin-along-z-operator-average-interference)
+[Heisenberg's Table computed](/quantum/heisenbergs-table/#the-spin-along--operator-average-interference)
 on the same example. The probabilities $\tfrac12$ enter only in this
 last step, as the squared magnitudes of the coordinates; the operator
 alone does not produce them.
