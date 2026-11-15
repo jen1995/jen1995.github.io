@@ -78,7 +78,16 @@ alone does not produce them.
 
 ## Measurement
 
-Take first the case where each outcome belongs to one eigenvector.
+Recall what the
+[spectral theorem](/quantum/observables-are-hermitian-operators/#three-conditions)
+gives: a Hermitian operator $\hat A$ has an orthonormal basis of
+eigenvectors $|a_i\rangle$ with real eigenvalues $\lambda_i$. It does
+not say that the eigenvalues are different. One eigenvalue can belong
+to several basis vectors; it is then called
+[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
+and a certain outcome no longer determines the state.
+
+Take first the case where each eigenvalue belongs to one eigenvector.
 Then the state after a measurement can be found in three steps. Steps
 1 and 3 use results of the earlier posts, and step 2 adds an
 assumption.
@@ -150,8 +159,7 @@ Read the first post's three experiments in this language.
   statement that the $z$ and $x$ observables have no eigenvector in
   common.
 
-**The degenerate case.** If the outcome $\lambda$ is
-[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
+**The degenerate case.** If the outcome $\lambda$ is degenerate,
 the argument above stops at step 3. The state after the measurement
 lies in the subspace spanned by the eigenvectors with $\lambda_j = \lambda$,
 but repeatability does not say where in that subspace. The probability of
