@@ -56,9 +56,9 @@ misconception", to this point.
 
 ## Measurement
 
-Item 4 of the wishlist asks how a measurement changes the state. When
-each outcome belongs to one eigenvector, the answer follows from what
-the last posts established, in three steps.
+When each outcome belongs to one eigenvector, the state after a
+measurement follows from what the earlier posts established, in three
+steps.
 
 1. The outcomes are the eigenvalues, and the outcome $\lambda_i$ has
    probability $|c_i|^2$, by the Born rule.
@@ -67,7 +67,7 @@ the last posts established, in three steps.
    after the outcome $\lambda_i$ the state is one in which $\lambda_i$
    is certain: a definite state with the outcome $\lambda_i$.
 3. By [definite states are eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states),
-   such a state is an eigenvector with the eigenvalue $\lambda_i$. When
+   such a state is an eigenvector with the eigenvalue $\lambda_i$. Since
    $\lambda_i$ belongs to one eigenvector, that is $|a_i\rangle$, up to
    a global phase.
 
@@ -88,13 +88,16 @@ $$
 The result is a unit factor times $|a_i\rangle$, which is the same
 physical state. The probability of the outcome is the average of the
 projector, $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
-as in the derivation of the Born rule in Heisenberg's Table.
+as in the
+[derivation of the Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule)
+in Heisenberg's Table.
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
 Read the first post's three experiments in this language.
 
-- *Repetition confirms.* After a $z$ measurement the state is
+- *Repetition confirms.* This experiment was the input of step 2, so
+  here the rule only checks itself. After a $z$ measurement the state is
   $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$. Measuring
   $\sigma_z$ again finds the coefficient $1$ on that eigenvector and
   returns the same value with probability one.
@@ -113,8 +116,8 @@ Read the first post's three experiments in this language.
 
 **The degenerate case.** If the outcome $\lambda$ is
 [degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
-the argument above stops at step 3. The state after the measurement lies in
-the subspace spanned by the eigenvectors with $\lambda_j = \lambda$,
+the argument above stops at step 3. The state after the measurement
+lies in the subspace spanned by the eigenvectors with $\lambda_j = \lambda$,
 but repetition does not say where in that subspace. The probability of
 $\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
 eigenvectors. For the state, the standard answer is an extra postulate,
