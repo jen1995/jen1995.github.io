@@ -3,7 +3,7 @@ title: "What a Measurement Does"
 date: 2026-11-01
 draft: true
 tags: ["quantum", "math"]
-summary: "Item 4 of the first post's wishlist: applying an operator to a state is not measuring, and a measurement projects the state onto a definite state, an eigenvector of the observable chosen with the Born probability. For a non-degenerate outcome this follows from repetition; for a degenerate one it is an extra postulate, the Lüders rule. The three experiments of the first post read in this language."
+summary: "Item 4 of the first post's wishlist: applying an operator to a state is not measuring, and a measurement projects the state onto a definite state, an eigenvector of the observable chosen with the Born probability. For a non-degenerate outcome this follows from repeatability; for a degenerate one it is an extra postulate, the Lüders rule. The post then reads the three experiments of the first post in this language."
 math: true
 weight: 52
 ---
@@ -62,16 +62,21 @@ steps.
 
 1. The outcomes are the eigenvalues, and the outcome $\lambda_i$ has
    probability $|c_i|^2$, by the Born rule.
-2. By [experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms),
-   a second measurement right after the first repeats its answer. So
-   after the outcome $\lambda_i$ the state is one in which $\lambda_i$
-   is certain: a definite state with the outcome $\lambda_i$.
+2. A second measurement right after the first repeats its answer.
+   [Experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms)
+   showed this for the spin; for other observables we assume it, and
+   call such measurements *repeatable*. Not every real measurement is
+   repeatable: a detector that absorbs a photon leaves no photon to
+   measure again. So after the outcome $\lambda_i$ of a repeatable
+   measurement the state is one in which $\lambda_i$ is certain: a
+   definite state with the outcome $\lambda_i$.
 3. By [definite states are eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states),
    such a state is an eigenvector with the eigenvalue $\lambda_i$. Since
    $\lambda_i$ belongs to one eigenvector, that is $|a_i\rangle$, up to
-   a global phase.
+   a [global phase](/quantum/states-are-vectors/#global-phase).
 
-> **Measurement** (each eigenvalue belongs to one eigenvector).
+> **Measurement** (repeatable, each eigenvalue belonging to one
+> eigenvector).
 > Measuring the observable $\hat A$ in the state
 > $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
 > eigenvalues $\lambda_i$, with probability $|c_i|^2$; immediately
@@ -138,7 +143,7 @@ Wishlist item 4 is paid. A measurement of $\hat A$ returns an
 eigenvalue $\lambda_i$ with probability $|c_i|^2$ and leaves the
 system in the eigenvector $|a_i\rangle$: the state is projected onto
 that definite direction and renormalized. For a non-degenerate outcome
-this follows from repetition and the previous post; for a degenerate
+this follows from repeatability and the previous post; for a degenerate
 one, the projection onto a subspace is an extra postulate. Applying
 the operator to a state is a different operation: it is part of a
 calculation, not a measurement. The three experiments of the first
