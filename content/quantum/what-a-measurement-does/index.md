@@ -166,8 +166,34 @@ $$
 \hat A |\psi\rangle = \sum_i \lambda_i\, \hat P_i |\psi\rangle = \sum_i \lambda_i c_i\, |a_i\rangle .
 $$
 
-This vector is not the state after a measurement. Its inner product with
+This vector is not the state after a measurement: the outcome of a
+measurement is random, while $\hat A|\psi\rangle$ is one fixed vector,
+and in general not an eigenvector. Its inner product with
 $|\psi\rangle$ is the average, $\sum_i \lambda_i |c_i|^2$.
+
+In linear algebra, the repetition of the answer is *idempotence*:
+projecting twice is the same as projecting once. Both properties of the
+projectors that matter here follow from the orthonormality of the
+eigenbasis, $\langle a_i | a_j \rangle = \delta_{ij}$:
+
+$$
+\hat P_i \hat P_j = |a_i\rangle \langle a_i | a_j \rangle \langle a_j| = \delta_{ij}\, |a_i\rangle\langle a_j| .
+$$
+
+For $j = i$ this is $\hat P_i^2 = \hat P_i$: a second projection with
+the same outcome changes nothing. For $j \ne i$ it is
+$\hat P_i \hat P_j = 0$: after the outcome $\lambda_i$, no other outcome
+can follow. The operator $\hat A$ itself is idempotent only in a special
+case. By the same formula,
+
+$$
+\hat A^2 = \sum_{i,j} \lambda_i \lambda_j\, \hat P_i \hat P_j = \sum_i \lambda_i^2\, \hat P_i ,
+$$
+
+so $\hat A^2 = \hat A$ exactly when every $\lambda_i$ is $0$ or $1$. Then
+$\hat A$ is a projector, a yes-or-no observable. The projector
+$\hat P_i$ is one: it asks whether the outcome is $\lambda_i$, and its
+average, computed above, is the probability of "yes".
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
