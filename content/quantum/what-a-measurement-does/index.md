@@ -238,17 +238,21 @@ the box above.
 ## What we built
 
 Wishlist item 4 is paid. A measurement of $\hat A$ returns an
-eigenvalue $\lambda_i$ with probability $|c_i|^2$ and leaves the
-system in the eigenvector $|a_i\rangle$: the state is projected onto
-that definite direction and renormalized. For a non-degenerate outcome
-of an ideal measurement this follows from the repetition of the answer
-and the theorem that
-[definite states are eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states);
-for a degenerate one, the projection onto a subspace is an extra
-postulate. Applying $\hat A$ to a state is a different operation: it
-is a step in computing the average, not a measurement. The three experiments of the first
-post agree with the projection rule: the first was its input, and the
-other two follow from it.
+eigenvalue $\lambda_i$ with probability $|c_i|^2$ and leaves the system
+in the eigenvector $|a_i\rangle$: the state is projected onto that
+definite direction and renormalized. The three experiments of the first
+post are cases of this rule. Three refinements came after it:
+
+- For an ideal measurement and a non-degenerate outcome, the rule
+  follows from the repetition of the answer and the theorem that
+  [definite states are eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states).
+  The first experiment is this repetition, so it is the input of the
+  rule rather than a consequence.
+- A measurement applies a projector, chosen at random. Applying
+  $\hat A$ to a state is a different operation: it is a step in
+  computing the average.
+- For a degenerate outcome, the projection onto a subspace is an extra
+  postulate, the Lüders rule.
 
 ## Onward
 
