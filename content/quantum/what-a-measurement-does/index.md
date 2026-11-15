@@ -78,9 +78,9 @@ alone does not produce them.
 
 ## Measurement
 
-The rule for a measurement uses the spectral theorem of
-[*Observables Are Hermitian Operators*](/quantum/observables-are-hermitian-operators/#three-conditions),
-so here it is again:
+Recall the spectral theorem of
+[*Observables Are Hermitian Operators*](/quantum/observables-are-hermitian-operators/#three-conditions);
+the rule for a measurement below rests on it.
 
 > **Spectral theorem** (finite dimensions). A Hermitian operator
 > $\hat A$ has real eigenvalues $\lambda_i$ and an orthonormal basis of
@@ -97,8 +97,8 @@ Item 4 of the
 asks what a measurement does to the state. Here is the answer in the simplest case: no eigenvalue of $\hat A$ is
 degenerate, and a second measurement made right after the
 first repeats its answer, as the $z$ measurement of the first post
-does. The rest of the section explains the answer and then drops these
-conditions.
+does. The rest of the section explains the answer, then says what
+remains of it when these conditions fail.
 
 > **Measurement** (the simplest case). Measuring the observable
 > $\hat A$ in the state $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns
@@ -145,8 +145,9 @@ The first post's three experiments are three cases of this rule.
 
 ### Why the state becomes $|a_i\rangle$
 
-The probabilities in the box are the Born rule. The state after the
-measurement follows from one more fact. In
+The probabilities in the box are the
+[Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule).
+The state after the measurement follows from one more fact. In
 [experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms),
 a second measurement made right after the first always repeated its
 answer. Measurements with this property are called **ideal**, or
@@ -183,9 +184,10 @@ the new state, but together with a number: one random choice of $i$
 gives both the outcome $\lambda_i$ in the window of the apparatus and
 the projector $\hat P_i$ applied to the state.
 
-Both come from the spectral decomposition
-$\hat A = \sum_i \lambda_i \hat P_i$. A measurement uses one of the
-projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
+The measurement and the operator $\hat A$ are related by the spectral
+decomposition $\hat A = \sum_i \lambda_i \hat P_i$, which the spectral
+theorem at the start of this section provides. A measurement uses one
+of the projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
 them at once, each weighted by its outcome:
 
 $$
