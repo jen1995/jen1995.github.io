@@ -30,7 +30,8 @@ a vector. A measurement is a physical operation: it returns a number
 and changes the state.
 [Heisenberg's Table](/quantum/heisenbergs-table/#what-the-operator-returns-and-what-the-brackets-mean)
 warned that the vector the operator returns need not be a state at all.
-Here is the same point on the spin.
+On the spin the output can be a state, and it is still not the state
+after a measurement.
 
 Apply $\sigma_z$ to the $x$-definite state $|r\rangle$, using
 $\sigma_z|u\rangle = |u\rangle$, $\sigma_z|d\rangle = -|d\rangle$ and
