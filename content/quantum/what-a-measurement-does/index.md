@@ -59,7 +59,8 @@ coordinate by the value of its answer, $+1$ or $-1$. The figure shows
 this on the basis vectors in the two left panels, and on $|r\rangle$
 in the right one: the coordinate along $|u\rangle$ stays, the one along
 $|d\rangle$ changes sign, and the arrow is reflected into $|l\rangle$.
-The result is a step towards the average. Its inner product with $|r\rangle$ is
+The vector $\sigma_z|r\rangle$ is what the average is computed from:
+its inner product with $|r\rangle$ is
 
 $$
 \langle r | \sigma_z | r \rangle = \tfrac12 \cdot (+1) + \tfrac12 \cdot (-1) = 0 ,
