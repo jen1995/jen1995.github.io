@@ -122,9 +122,9 @@ observable, and the end of this section drops it. The first is about
 the apparatus: an ideal measurement can be repeated on the same system
 and then gives the same answer. Not every real measurement is ideal. A
 detector that absorbs a photon leaves no photon to measure again, so
-there is no second answer to compare. For such a measurement the second
-half of the box, about the state afterwards, does not apply. The first
-half still holds: the outcomes and their probabilities come from the
+there is no second answer to compare. For such a measurement the part of
+the box about the state afterwards does not apply. The part about the
+outcomes still holds: the outcomes and their probabilities come from the
 Born rule, which was derived from averages. An average comes from many
 measurements, each on a fresh system prepared in the same state, and
 it does not matter whether each of them is ideal.
