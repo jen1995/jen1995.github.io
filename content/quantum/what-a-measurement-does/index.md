@@ -94,7 +94,7 @@ what is the state now?
 The answer rests on one fact from the experiments. In
 [experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms),
 a second measurement made right after the first always repeated its
-answer. Measurements with this property are called *ideal*, or
+answer. Measurements with this property are called **ideal**, or
 *measurements of the first kind*.
 
 For an ideal measurement the argument is short. Right after the
