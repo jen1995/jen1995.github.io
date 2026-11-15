@@ -80,16 +80,20 @@ alone does not produce them.
 
 Item 4 of the
 [wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
-asks what a measurement does to the state. Recall what the
+asks what a measurement does to the state. The answer is simplest when
+each outcome points to one definite state, so recall first when that
+happens. The
 [spectral theorem](/quantum/observables-are-hermitian-operators/#three-conditions)
-gives: a Hermitian operator $\hat A$ has an orthonormal basis of
-eigenvectors $|a_i\rangle$ with real eigenvalues $\lambda_i$. It does
-not say that the eigenvalues are different. One eigenvalue can belong
-to several basis vectors; it is then called
-[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum).
+gives a Hermitian operator $\hat A$ an orthonormal basis of
+eigenvectors $|a_i\rangle$ with real eigenvalues $\lambda_i$, the
+definite states and the outcomes. It does not say that the eigenvalues
+are different. One eigenvalue can belong to several basis vectors; it is
+then called
+[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
+and one outcome then points to several definite states.
 
-Here is the answer in the simplest case: each eigenvalue of $\hat A$
-belongs to one eigenvector, and a second measurement made right after the
+Here is the answer in the simplest case: no eigenvalue of $\hat A$ is
+degenerate, and a second measurement made right after the
 first repeats its answer, as the $z$ measurement of the first post
 does. The rest of the section explains the answer and then drops these
 conditions.
