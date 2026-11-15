@@ -97,8 +97,7 @@ Item 4 of the
 asks what a measurement does to the state. Take first the simplest case, in which no eigenvalue of $\hat A$ is
 degenerate and a second measurement made right after the first repeats
 its answer, as the $z$ measurement of the first post does. In this case
-the answer is the rule below. The rest of the section explains it, then
-says what remains of it when these conditions fail.
+the answer is the rule below.
 
 > **Measurement** (the simplest case). Measuring the observable
 > $\hat A$ in the state $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns
