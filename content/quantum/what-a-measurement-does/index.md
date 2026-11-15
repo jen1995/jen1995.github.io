@@ -165,7 +165,10 @@ $\hat P_i = |a_i\rangle\langle a_i|$ onto the definite state of the
 outcome, followed by renormalization. This does not contradict the
 first section, because the operator is $\hat P_i$, not $\hat A$, and
 the outcome $i$ is chosen at random. A measurement never applies
-$\hat A$ itself to the state.
+$\hat A$ itself to the state. So a measurement does produce a vector,
+the new state, but together with a number: one random choice of $i$
+gives both the outcome $\lambda_i$ in the window of the apparatus and
+the projector $\hat P_i$ applied to the state.
 
 Both come from the spectral decomposition
 $\hat A = \sum_i \lambda_i \hat P_i$. A measurement uses one of the
