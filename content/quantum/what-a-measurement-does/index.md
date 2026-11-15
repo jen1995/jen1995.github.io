@@ -8,9 +8,9 @@ math: true
 weight: 52
 ---
 
-[Heisenberg's Table](/quantum/heisenbergs-table/) and
-[Observables Are Hermitian Operators](/quantum/observables-are-hermitian-operators/)
-built the object that stands for a measurable quantity: a Hermitian
+The [post before last](/quantum/heisenbergs-table/) and the
+[last post](/quantum/observables-are-hermitian-operators/) built the
+object that stands for a measurable quantity: a Hermitian
 operator $\hat A$ with an orthonormal basis of eigenvectors
 $\{|a_i\rangle\}$, the definite states, and real eigenvalues
 $\lambda_i$, the outcomes. In a state
@@ -28,7 +28,7 @@ since the notation makes the two easy to confuse.
 Applying an operator to a state is a mathematical operation: it returns
 a vector. A measurement is a physical operation: it returns a number
 and changes the state.
-[Heisenberg's Table](/quantum/heisenbergs-table/#what-the-operator-returns-and-what-the-brackets-mean)
+The [post before last](/quantum/heisenbergs-table/#what-the-operator-returns-and-what-the-brackets-mean)
 warned that the vector the operator returns need not be a state at all.
 On the spin the output can be a state, and it is still not the state
 after a measurement.
@@ -59,7 +59,7 @@ coordinate by the value of its answer, $+1$ or $-1$. The figure shows
 this on the basis vectors in the two left panels, and on $|r\rangle$
 in the right one: the coordinate along $|u\rangle$ stays, the one along
 $|d\rangle$ changes sign, and the arrow is reflected into $|l\rangle$.
-Heisenberg's Table introduced the operator for exactly one job:
+The operator was introduced for exactly one job:
 [given a state, return the average](/quantum/heisenbergs-table/#what-the-apparatus-gives-us-averages)
 of the outcomes. The vector $\sigma_z|r\rangle$ is the middle step of
 that job, and its inner product with $|r\rangle$ finishes it:
@@ -68,9 +68,9 @@ $$
 \langle r | \sigma_z | r \rangle = \tfrac12 \cdot (+1) + \tfrac12 \cdot (-1) = 0 ,
 $$
 
-the average of $z$ measurements in the state $|r\rangle$, which
-[Heisenberg's Table computed](/quantum/heisenbergs-table/#the-spin-along--operator-average-interference)
-on the same example. The probabilities $\tfrac12$ enter only in this
+the average of $z$ measurements in the state $|r\rangle$, which the
+post before last
+[computed on the same example](/quantum/heisenbergs-table/#the-spin-along--operator-average-interference). The probabilities $\tfrac12$ enter only in this
 last step, as the squared magnitudes of the coordinates; the operator
 alone does not produce them.
 
@@ -117,7 +117,7 @@ physical state. The probability of the outcome is the average of the
 projector, $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
 as in the
 [derivation of the Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule)
-in Heisenberg's Table.
+in the post before last.
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
