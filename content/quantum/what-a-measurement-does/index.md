@@ -72,10 +72,9 @@ $$
 
 the average of $z$ measurements in the state $|r\rangle$, which the
 first of the two earlier posts
-[computed on the same example](/quantum/heisenbergs-table/#the-spin-along--operator-average-interference). The probabilities $\tfrac12$ enter only in this
-last step, as the squared magnitudes of the coordinates; the operator
+[computed on the same example](/quantum/heisenbergs-table/#the-spin-along--operator-average-interference).
+The probabilities $\tfrac12$ enter only in this last step, as the squared magnitudes of the coordinates; the operator
 alone does not produce them.
-
 
 ## Measurement
 
@@ -116,9 +115,17 @@ $$
 
 The result is a unit factor times $|a_i\rangle$, which is the same
 physical state. The probability of the outcome is the average of the
-projector, $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
+projector, computed the same way as the average of $\sigma_z$ above:
+$\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
 as in the
 [derivation of the Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule).
+
+This does not contradict the first section. The state after a
+measurement is obtained by applying an operator, but not $\hat A$: it
+is the projector onto the definite state of the outcome, the outcome
+is chosen at random with its Born probability, and the result is
+renormalized. A measurement never applies $\hat A$ itself to the
+state.
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
@@ -166,10 +173,11 @@ Wishlist item 4 is paid. A measurement of $\hat A$ returns an
 eigenvalue $\lambda_i$ with probability $|c_i|^2$ and leaves the
 system in the eigenvector $|a_i\rangle$: the state is projected onto
 that definite direction and renormalized. For a non-degenerate outcome
-this follows from repeatability and the previous post; for a degenerate
-one, the projection onto a subspace is an extra postulate. Applying
-the operator to a state is a different operation: it is part of a
-calculation, not a measurement. The three experiments of the first
+this follows from repeatability and the theorem that
+[definite states are eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states);
+for a degenerate one, the projection onto a subspace is an extra
+postulate. Applying $\hat A$ to a state is a different operation: it
+is a step in computing the average, not a measurement. The three experiments of the first
 post agree with the projection rule: the first was its input, and the
 other two follow from it.
 
