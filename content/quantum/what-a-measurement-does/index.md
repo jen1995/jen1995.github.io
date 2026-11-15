@@ -109,16 +109,20 @@ is $|a_i\rangle$, up to a
 [global phase](/quantum/states-are-vectors/#global-phase). Together
 with the Born rule for the probabilities:
 
-> **Measurement** (ideal, each eigenvalue belonging to one
-> eigenvector).
-> Measuring the observable $\hat A$ in the state
+> **Measurement.** Assume two things: the measurement is ideal, and
+> each eigenvalue of $\hat A$ belongs to one eigenvector. Then measuring
+> the observable $\hat A$ in the state
 > $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
 > eigenvalues $\lambda_i$, with probability $|c_i|^2$; immediately
 > after a measurement that returned $\lambda_i$, the state is the
 > definite state $|a_i\rangle$.
 
-Not every real measurement is ideal: a detector that absorbs a photon
-leaves no photon to measure again. For such a measurement the second
+The two assumptions are of different kinds. The second is about the
+observable, and the end of this section drops it. The first is about
+the apparatus: an ideal measurement can be repeated on the same system
+and then gives the same answer. Not every real measurement is ideal. A
+detector that absorbs a photon leaves no photon to measure again, so
+there is no second answer to compare. For such a measurement the second
 half of the box, about the state afterwards, does not apply. The first
 half still holds: the outcomes and their probabilities come from the
 Born rule, which was derived from averages. An average comes from many
