@@ -78,9 +78,10 @@ alone does not produce them.
 
 ## Measurement
 
-When each outcome belongs to one eigenvector, the state after a
-measurement follows in three steps, from what the earlier posts
-established and one assumption, made in step 2.
+Take first the case where each outcome belongs to one eigenvector.
+Then the state after a measurement can be found in three steps. Steps
+1 and 3 use results of the earlier posts, and step 2 adds an
+assumption.
 
 1. The outcomes are the eigenvalues, and the outcome $\lambda_i$ has
    probability $|c_i|^2$, by the Born rule.
