@@ -135,8 +135,18 @@ $$
 
 The result is a unit factor times $|a_i\rangle$, which is the same
 physical state. The probability of the outcome is the average of the
-projector, computed the same way as the average of $\sigma_z$ above:
-$\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
+projector $\hat P_i = |a_i\rangle\langle a_i|$, computed the same way as
+the average of $\sigma_z$ above: apply the operator, then take the
+inner product with $|\psi\rangle$. With $\langle a_i | \psi \rangle = c_i$
+and $\langle \psi | a_i \rangle = c_i^*$,
+
+$$
+\begin{aligned}
+\hat P_i |\psi\rangle &= |a_i\rangle \langle a_i | \psi \rangle = c_i\, |a_i\rangle , \\
+\langle \psi | \hat P_i | \psi \rangle &= c_i\, \langle \psi | a_i \rangle = c_i\, c_i^* = |c_i|^2 ,
+\end{aligned}
+$$
+
 as in the
 [derivation of the Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule).
 
