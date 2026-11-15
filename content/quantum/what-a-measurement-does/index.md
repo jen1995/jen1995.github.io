@@ -157,6 +157,18 @@ is chosen at random with its Born probability, and the result is
 renormalized. A measurement never applies $\hat A$ itself to the
 state.
 
+Both come from the spectral decomposition
+$\hat A = \sum_i \lambda_i \hat P_i$. A measurement uses one of the
+projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
+them at once, each weighted by its outcome:
+
+$$
+\hat A |\psi\rangle = \sum_i \lambda_i\, \hat P_i |\psi\rangle = \sum_i \lambda_i c_i\, |a_i\rangle .
+$$
+
+This vector is not the state after a measurement. Its inner product with
+$|\psi\rangle$ is the average, $\sum_i \lambda_i |c_i|^2$.
+
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
 Read the first post's three experiments in this language.
