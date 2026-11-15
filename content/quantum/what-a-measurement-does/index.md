@@ -121,8 +121,9 @@ Not every real measurement is ideal: a detector that absorbs a photon
 leaves no photon to measure again. For such a measurement the second
 half of the box, about the state afterwards, does not apply. The first
 half still holds: the outcomes and their probabilities come from the
-Born rule, which was derived from averages, and any measurement of
-$\hat A$ provides averages.
+Born rule, which was derived from averages. An average comes from many
+measurements, each on a fresh system prepared in the same state, and
+it does not matter whether each of them is ideal.
 
 In the language of projectors, a measurement with the outcome
 $\lambda_i$ projects the state onto the $i$-th definite direction and
