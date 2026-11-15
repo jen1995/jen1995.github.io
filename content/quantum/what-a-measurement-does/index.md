@@ -99,11 +99,11 @@ degenerate and a second measurement made right after the first repeats
 its answer, as the $z$ measurement of the first post does. In this case
 the answer is the rule below.
 
-> **Measurement** (the simplest case). Measuring the observable
-> $\hat A$ in the state $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns
-> one of the eigenvalues $\lambda_i$, with probability $|c_i|^2$;
-> immediately after a measurement that returned $\lambda_i$, the state
-> is the definite state $|a_i\rangle$.
+> **Measurement** (the simplest case). A measurement of the observable
+> $\hat A$ in the state $|\psi\rangle = \sum_i c_i|a_i\rangle$ has two
+> results: a number, one of the eigenvalues $\lambda_i$, which comes out
+> with probability $|c_i|^2$; and a new state, the definite state
+> $|a_i\rangle$ of that eigenvalue.
 
 In other words, the measurement picks an outcome at random and
 projects the state onto the definite direction of that outcome, then
@@ -164,8 +164,10 @@ is $|a_i\rangle$, up to a global phase.
 
 Not every real measurement is ideal. A detector that absorbs a photon
 leaves no photon to measure again, so there is no second answer to
-compare. For such a measurement the part of the box about the state
-afterwards does not apply. The part about the outcomes still holds:
+compare. For such a measurement the part of the box about the new state does
+not apply; measurements of this kind need a more general description,
+by a set of operators with one operator per outcome, which this road
+does not need. The part about the number still holds:
 the outcomes and their probabilities come from the Born rule, which was
 derived from averages. An average comes from many measurements, each on
 a fresh system prepared in the same state, and it does not matter
@@ -293,3 +295,14 @@ sphere.
   process](https://arxiv.org/abs/quant-ph/0403007), *Annalen der Physik*
   15 (2006), 663–670 — the projection rule for degenerate outcomes, and
   why von Neumann's earlier proposal is rejected.
+- R. Shankar. *Principles of Quantum Mechanics*, 2nd ed. Plenum, 1994 —
+  chapter 4, §4.1, p. 116: Postulate III, the measurement yields one of
+  the eigenvalues and changes the state to the eigenvector, with a
+  footnote that this is an ideal measurement.
+- M. A. Nielsen, I. L. Chuang. *Quantum Computation and Quantum
+  Information*, 10th anniversary ed. Cambridge University Press, 2010 —
+  §2.2.3, Postulate 3, pp. 84–85: the general description of a
+  measurement by a set of measurement operators; §2.2.5, p. 88:
+  projective measurements, with the observable written as its spectral
+  decomposition $M = \sum_m m P_m$, which is the rule of this post,
+  degenerate outcomes included.
