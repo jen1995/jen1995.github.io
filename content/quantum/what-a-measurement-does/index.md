@@ -3,7 +3,7 @@ title: "What a Measurement Does"
 date: 2026-11-01
 draft: true
 tags: ["quantum", "math"]
-summary: "Item 4 of the first post's wishlist: applying an operator to a state is not measuring, and a measurement projects the state onto a definite state, an eigenvector of the observable chosen with the Born probability. For a non-degenerate outcome this follows from repeatability; for a degenerate one it is an extra postulate, the Lüders rule. The post then reads the three experiments of the first post in this language."
+summary: "Item 4 of the first post's wishlist: applying an operator to a state is not measuring, and a measurement projects the state onto a definite state, an eigenvector of the observable chosen with the Born probability. For an ideal measurement and a non-degenerate outcome this follows from the repetition of the answer; for a degenerate one it is an extra postulate, the Lüders rule. The post then reads the three experiments of the first post in this language."
 math: true
 weight: 52
 ---
@@ -94,11 +94,15 @@ what is the state now?
 The answer rests on one fact from the experiments. In
 [experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms),
 a second measurement made right after the first always repeated its
-answer. We assume the same for every measurement we consider, and call
-such measurements *repeatable*. This is an assumption, not a law: a
-detector that absorbs a photon leaves no photon to measure again.
+answer. The rule below is for measurements with this property, which
+textbooks call *ideal*, or *measurements of the first kind*. Not every
+real measurement is ideal: a detector that absorbs a photon leaves no
+photon to measure again. This limits only the rule for the state after
+a measurement. The outcomes and their probabilities do not depend on
+it: the Born rule was derived from averages, and averages are what any
+measurement of $\hat A$ provides.
 
-For a repeatable measurement the argument is short. Right after the
+For an ideal measurement the argument is short. Right after the
 outcome $\lambda_i$, measuring again gives $\lambda_i$ with
 probability one, so in the new state the outcome $\lambda_i$ is
 certain. A state with a certain outcome is a definite state, and
@@ -110,7 +114,7 @@ is $|a_i\rangle$, up to a
 [global phase](/quantum/states-are-vectors/#global-phase). Together
 with the Born rule for the probabilities:
 
-> **Measurement** (repeatable, each eigenvalue belonging to one
+> **Measurement** (ideal, each eigenvalue belonging to one
 > eigenvector).
 > Measuring the observable $\hat A$ in the state
 > $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
@@ -166,7 +170,7 @@ Read the first post's three experiments in this language.
 the argument above stops one step short. The state after the measurement
 is still an eigenvector with the eigenvalue $\lambda$, so it lies in the
 subspace spanned by the eigenvectors with $\lambda_j = \lambda$, but
-repeatability does not say where in that subspace. The probability of
+the repetition of the answer does not say where in that subspace. The probability of
 $\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
 eigenvectors. For the state, the standard answer is an extra postulate,
 the **Lüders rule**: the state is projected onto that subspace and
@@ -186,7 +190,8 @@ Wishlist item 4 is paid. A measurement of $\hat A$ returns an
 eigenvalue $\lambda_i$ with probability $|c_i|^2$ and leaves the
 system in the eigenvector $|a_i\rangle$: the state is projected onto
 that definite direction and renormalized. For a non-degenerate outcome
-this follows from repeatability and the theorem that
+of an ideal measurement this follows from the repetition of the answer
+and the theorem that
 [definite states are eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states);
 for a degenerate one, the projection onto a subspace is an extra
 postulate. Applying $\hat A$ to a state is a different operation: it
