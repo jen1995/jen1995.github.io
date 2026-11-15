@@ -78,21 +78,23 @@ alone does not produce them.
 
 ## Measurement
 
-Item 4 of the
-[wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
-asks what a measurement does to the state. The answer is simplest when
-each outcome points to one definite state, so recall first when that
-happens. The
-[spectral theorem](/quantum/observables-are-hermitian-operators/#three-conditions)
-gives a Hermitian operator $\hat A$ an orthonormal basis of
-eigenvectors $|a_i\rangle$ with real eigenvalues $\lambda_i$, the
-definite states and the outcomes. It does not say that the eigenvalues
-are different. One eigenvalue can belong to several basis vectors; it is
-then called
+The rule for a measurement uses the spectral theorem of
+[*Observables Are Hermitian Operators*](/quantum/observables-are-hermitian-operators/#three-conditions),
+so here it is again:
+
+> **Spectral theorem** (finite dimensions). A Hermitian operator
+> $\hat A$ has real eigenvalues $\lambda_i$ and an orthonormal basis of
+> eigenvectors $|a_i\rangle$.
+
+The eigenvectors are the definite states, and the eigenvalues are the
+outcomes. The theorem does not say that the eigenvalues are different.
+One eigenvalue can belong to several basis vectors; it is then called
 [degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
 and one outcome then points to several definite states.
 
-Here is the answer in the simplest case: no eigenvalue of $\hat A$ is
+Item 4 of the
+[wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
+asks what a measurement does to the state. Here is the answer in the simplest case: no eigenvalue of $\hat A$ is
 degenerate, and a second measurement made right after the
 first repeats its answer, as the $z$ measurement of the first post
 does. The rest of the section explains the answer and then drops these
