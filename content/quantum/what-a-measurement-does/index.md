@@ -78,7 +78,9 @@ alone does not produce them.
 
 ## Measurement
 
-Item 4 of the wishlist asks what a measurement does to the state. Here
+Item 4 of the
+[wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
+asks what a measurement does to the state. Here
 is the answer in the simplest case: each eigenvalue of $\hat A$ belongs
 to one eigenvector, and a second measurement made right after the
 first repeats its answer, as the $z$ measurement of the first post
