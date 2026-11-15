@@ -94,13 +94,8 @@ what is the state now?
 The answer rests on one fact from the experiments. In
 [experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms),
 a second measurement made right after the first always repeated its
-answer. The rule below is for measurements with this property, which
-textbooks call *ideal*, or *measurements of the first kind*. Not every
-real measurement is ideal: a detector that absorbs a photon leaves no
-photon to measure again. For such a measurement the box below does not
-say what the state becomes. It still gives the outcomes and their
-probabilities, because the Born rule was derived from averages, and
-any measurement of $\hat A$ provides averages.
+answer. Measurements with this property are called *ideal*, or
+*measurements of the first kind*.
 
 For an ideal measurement the argument is short. Right after the
 outcome $\lambda_i$, measuring again gives $\lambda_i$ with
@@ -121,6 +116,13 @@ with the Born rule for the probabilities:
 > eigenvalues $\lambda_i$, with probability $|c_i|^2$; immediately
 > after a measurement that returned $\lambda_i$, the state is the
 > definite state $|a_i\rangle$.
+
+Not every real measurement is ideal: a detector that absorbs a photon
+leaves no photon to measure again. For such a measurement the second
+half of the box, about the state afterwards, does not apply. The first
+half still holds: the outcomes and their probabilities come from the
+Born rule, which was derived from averages, and any measurement of
+$\hat A$ provides averages.
 
 In the language of projectors, a measurement with the outcome
 $\lambda_i$ projects the state onto the $i$-th definite direction and
