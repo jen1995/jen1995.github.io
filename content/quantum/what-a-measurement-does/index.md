@@ -53,7 +53,7 @@ are the squared magnitudes of the coordinates, and the operator does
 not produce them. Susskind and Friedman devote their §3.5, "A common
 misconception", to this point.
 
-![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
+![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩, a different state, but not the state after a measurement](operator_machine.png)
 
 ## Measurement
 
