@@ -8,9 +8,10 @@ math: true
 weight: 52
 ---
 
-The [post before last](/quantum/heisenbergs-table/) and the
-[last post](/quantum/observables-are-hermitian-operators/) built the
-object that stands for a measurable quantity: a Hermitian
+Two earlier posts,
+[*Heisenberg's Table: Where the Matrices and the Born Rule Come From*](/quantum/heisenbergs-table/)
+and [*Observables Are Hermitian Operators*](/quantum/observables-are-hermitian-operators/),
+built the object that stands for a measurable quantity: a Hermitian
 operator $\hat A$ with an orthonormal basis of eigenvectors
 $\{|a_i\rangle\}$, the definite states, and real eigenvalues
 $\lambda_i$, the outcomes. In a state
@@ -28,8 +29,9 @@ since the notation makes the two easy to confuse.
 Applying an operator to a state is a mathematical operation: it returns
 a vector. A measurement is a physical operation: it returns a number
 and changes the state.
-The [post before last](/quantum/heisenbergs-table/#what-the-operator-returns-and-what-the-brackets-mean)
-warned that the vector the operator returns need not be a state at all.
+The first of the two earlier posts
+[warned](/quantum/heisenbergs-table/#what-the-operator-returns-and-what-the-brackets-mean)
+that the vector the operator returns need not be a state at all.
 On the spin the output can be a state, and it is still not the state
 after a measurement.
 
@@ -69,7 +71,7 @@ $$
 $$
 
 the average of $z$ measurements in the state $|r\rangle$, which the
-post before last
+first of the two earlier posts
 [computed on the same example](/quantum/heisenbergs-table/#the-spin-along--operator-average-interference). The probabilities $\tfrac12$ enter only in this
 last step, as the squared magnitudes of the coordinates; the operator
 alone does not produce them.
@@ -116,8 +118,7 @@ The result is a unit factor times $|a_i\rangle$, which is the same
 physical state. The probability of the outcome is the average of the
 projector, $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
 as in the
-[derivation of the Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule)
-in the post before last.
+[derivation of the Born rule](/quantum/heisenbergs-table/#the-weights-are-the-probabilities-the-born-rule).
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
 
