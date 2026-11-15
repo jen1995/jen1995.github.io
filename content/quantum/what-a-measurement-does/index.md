@@ -118,7 +118,7 @@ physical state, since a
 [global phase](/quantum/states-are-vectors/#global-phase) changes
 nothing measurable.
 
-![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
+![Measurement as projection: the state is projected onto each axis (dashed: c1|a1⟩ and c2|a2⟩), and after the outcome λ_i it becomes the renormalized projection, the unit vector |a_i⟩ (bold); the probabilities are c1² = 0.64 and c2² = 0.36](measurement_projection.png)
 
 ### The three experiments
 
