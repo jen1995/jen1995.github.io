@@ -83,8 +83,9 @@ steps.
 > after a measurement that returned $\lambda_i$, the state is the
 > definite state $|a_i\rangle$.
 
-In the language of projectors, the outcome $\lambda_i$ projects the
-state onto the $i$-th definite direction and renormalizes it:
+In the language of projectors, a measurement with the outcome
+$\lambda_i$ projects the state onto the $i$-th definite direction and
+renormalizes it:
 
 $$
 |\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle .
@@ -123,7 +124,7 @@ Read the first post's three experiments in this language.
 [degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
 the argument above stops at step 3. The state after the measurement
 lies in the subspace spanned by the eigenvectors with $\lambda_j = \lambda$,
-but repetition does not say where in that subspace. The probability of
+but repeatability does not say where in that subspace. The probability of
 $\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
 eigenvectors. For the state, the standard answer is an extra postulate,
 the **Lüders rule**: the state is projected onto that subspace and
@@ -147,7 +148,8 @@ this follows from repeatability and the previous post; for a degenerate
 one, the projection onto a subspace is an extra postulate. Applying
 the operator to a state is a different operation: it is part of a
 calculation, not a measurement. The three experiments of the first
-post are three cases of the projection rule.
+post agree with the projection rule: the first was its input, and the
+other two follow from it.
 
 ## Onward
 
