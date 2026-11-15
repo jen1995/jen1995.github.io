@@ -21,13 +21,13 @@ $\langle \psi | \hat A | \psi \rangle$. Two items of the
 [first post's wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
 are still open. This post answers item 4, *measurement as an operation
 on states*, that is, what a measurement does to the state it is
-performed on. First it separates measuring from applying the operator,
-since the notation makes the two easy to confuse.
+performed on. First it separates measuring from applying the operator
+of the observable, since the notation makes the two easy to confuse.
 
-## Applying the operator is not measuring
+## Applying the operator of an observable is not measuring
 
-Applying an operator to a state is a mathematical operation: it returns
-a vector. A measurement is a physical operation: it returns a number
+Applying the operator of an observable to a state is a mathematical
+operation: it returns a vector. A measurement is a physical operation: it returns a number
 and changes the state.
 The first of the two earlier posts
 [warned](/quantum/heisenbergs-table/#what-the-operator-returns-and-what-the-brackets-mean)
