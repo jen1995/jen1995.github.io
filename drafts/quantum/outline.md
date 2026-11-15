@@ -140,6 +140,33 @@ The longest post; notes §9–13 + the classical interlude.
    twin ψ̃(p), squeeze one and watch the other spread (the uncertainty
    trade-off, interactive; reuses the Fourier road's machinery).
 
+## Status (2026-11-15): a spin-off before dynamics, for her club talk
+
+- Post 51 published 2026-11-03. Post 52 (measurement) is a draft she has
+  not read yet.
+- Her decision: three posts as a SPIN-OFF, not a change of the road's
+  order; to be woven in more smoothly later. Published early with a
+  [DRAFT] disclaimer is fine (no regular readership to upset).
+  1. QM-4 the qubit and the Bloch sphere (as planned; n·σ, θ/2, the sign
+     choice of |i⟩).
+  2. Uncertainty for observables, on the spin: commutator, Robertson
+     ΔA ΔB ≥ ½|⟨[A,B]⟩| with the Cauchy–Schwarz proof, variance from post
+     51; [σ_x, σ_y] = 2iσ_z ⇒ Δσ_x Δσ_y ≥ |⟨σ_z⟩|, equality in |u⟩; the
+     first post's "a new axis erases the old answer". x–p stays in QM-5
+     after p̂ (her call), this post is its teaser.
+  3. Two qubits and entanglement: tensor product (new), product vs
+     entangled states, measuring one qubit = the degenerate measurement of
+     post 52, Bell/CHSH with n·σ from post 1; optionally unitary gates
+     (CNOT makes entanglement) and the density matrix (the reduced state;
+     promised since Heisenberg's Table). Schrödinger's cat as the closing
+     section: an entangled atom+cat state; the cat alone is a mixture, not
+     a superposition (post 50's "superposition is not a mixture");
+     decoherence as the bridge to quantum computing. Verify the 1935
+     history (EPR; Schrödinger's cat paper and "Verschränkung") against
+     sources before writing it.
+- Order of dependence: 3 needs 1 (n·σ) and 52 (measurement); 2 is
+  independent. Weights to assign when the posts exist (52 is taken).
+
 ## Status (2026-11-01): measurement is its own post again; eigenfunctions post added
 
 - `observables-are-hermitian-operators` (weight 51) ends with
