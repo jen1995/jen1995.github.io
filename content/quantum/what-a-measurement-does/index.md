@@ -16,11 +16,11 @@ $\{|a_i\rangle\}$, the definite states, and real eigenvalues
 $\lambda_i$, the outcomes. In a state
 $|\psi\rangle = \sum_i c_i |a_i\rangle$ the outcome $\lambda_i$ has
 probability $|c_i|^2$ and the average is
-$\langle \psi | \hat A | \psi \rangle$. One item of the
+$\langle \psi | \hat A | \psi \rangle$. Two items of the
 [first post's wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
-is still open, item 4: *measurement as an operation on states*, that
-is, what a measurement does to the state it is performed on. This post
-answers it. First it separates measuring from applying the operator,
+are still open. This post answers item 4, *measurement as an operation
+on states*, that is, what a measurement does to the state it is
+performed on. First it separates measuring from applying the operator,
 since the notation makes the two easy to confuse.
 
 ## Applying the operator is not measuring
@@ -41,15 +41,15 @@ $$
 $$
 
 The operator turned *right* into *left*. But a $z$ measurement of an
-electron prepared along $x$ never produces an electron pointing left
-along $x$: it produces $|u\rangle$ or $|d\rangle$, at random. So
+electron prepared along $x$ never leaves it in the state $|l\rangle$:
+it leaves it in $|u\rangle$ or $|d\rangle$, at random. So
 $\sigma_z|r\rangle$ is not the state after a measurement. What the
 operator did is visible in the eigenbasis of $\sigma_z$. The input
 $|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
 has one coordinate per possible answer, and $\sigma_z$ multiplied each
 coordinate by the value of its answer, $+1$ or $-1$. The probabilities
-are the squares of the coordinates, and the operator does not produce
-them. Susskind and Friedman devote their §3.5, "A common
+are the squared magnitudes of the coordinates, and the operator does
+not produce them. Susskind and Friedman devote their §3.5, "A common
 misconception", to this point.
 
 ![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
@@ -71,7 +71,8 @@ the last posts established, in three steps.
    $\lambda_i$ belongs to one eigenvector, that is $|a_i\rangle$, up to
    a global phase.
 
-> **Measurement.** Measuring the observable $\hat A$ in the state
+> **Measurement** (each eigenvalue belongs to one eigenvector).
+> Measuring the observable $\hat A$ in the state
 > $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
 > eigenvalues $\lambda_i$, with probability $|c_i|^2$; immediately
 > after a measurement that returned $\lambda_i$, the state is the
@@ -81,7 +82,7 @@ In the language of projectors, the outcome $\lambda_i$ projects the
 state onto the $i$-th definite direction and renormalizes it:
 
 $$
-|\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle ,
+|\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle .
 $$
 
 The result is a unit factor times $|a_i\rangle$, which is the same
@@ -90,24 +91,6 @@ projector, $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
 as in the derivation of the Born rule in Heisenberg's Table.
 
 ![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
-
-**The degenerate case.** If the outcome $\lambda$ is
-[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
-the argument stops at step 3. The state after the measurement lies in
-the subspace spanned by the eigenvectors with $\lambda_j = \lambda$,
-but repetition does not say where in that subspace. The probability of
-$\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
-eigenvectors. For the state, the standard answer is an extra postulate,
-the **Lüders rule**: the state is projected onto that subspace and
-renormalized,
-
-$$
-|\psi\rangle \;\longmapsto\; \frac{\hat P |\psi\rangle}{\lVert \hat P |\psi\rangle \rVert}, \qquad \hat P = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| .
-$$
-
-Among the states in the subspace, this one is the closest to
-$|\psi\rangle$, and for a non-degenerate outcome the rule reduces to
-the box above.
 
 Read the first post's three experiments in this language.
 
@@ -127,6 +110,24 @@ Read the first post's three experiments in this language.
   probability $\frac12$. The erasure of the first post is the
   statement that the $z$ and $x$ observables have no eigenvector in
   common.
+
+**The degenerate case.** If the outcome $\lambda$ is
+[degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
+the argument above stops at step 3. The state after the measurement lies in
+the subspace spanned by the eigenvectors with $\lambda_j = \lambda$,
+but repetition does not say where in that subspace. The probability of
+$\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
+eigenvectors. For the state, the standard answer is an extra postulate,
+the **Lüders rule**: the state is projected onto that subspace and
+renormalized,
+
+$$
+|\psi\rangle \;\longmapsto\; \frac{\hat P |\psi\rangle}{\lVert \hat P |\psi\rangle \rVert}, \qquad \hat P = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| .
+$$
+
+Among the states in the subspace, this one is the closest to
+$|\psi\rangle$, and for a non-degenerate outcome the rule reduces to
+the box above.
 
 ## What we built
 
