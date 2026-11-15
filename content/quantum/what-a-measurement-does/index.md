@@ -3,35 +3,34 @@ title: "What a Measurement Does"
 date: 2026-11-01
 draft: true
 tags: ["quantum", "math"]
-summary: "The last item of the first post's wishlist but one: applying an operator to a state is not measuring, and a measurement is a projection onto a definite state — one of the eigenvectors of the observable, chosen with the Born probability — read back on the three experiments the road started from."
+summary: "Item 4 of the first post's wishlist: applying an operator to a state is not measuring, and a measurement projects the state onto a definite state, an eigenvector of the observable chosen with the Born probability. For a non-degenerate outcome this follows from repetition; for a degenerate one it is an extra postulate, the Lüders rule. The three experiments of the first post read in this language."
 math: true
 weight: 52
 ---
 
-The last two posts — [Heisenberg's Table](/quantum/heisenbergs-table/)
-and [Observables Are Hermitian Operators](/quantum/observables-are-hermitian-operators/)
-— built the object that stands for a measurable quantity: a
-Hermitian operator $\hat A$ with an orthonormal basis of
-eigenvectors $\{|a_i\rangle\}$, the definite states, and real
-eigenvalues $\lambda_i$, the outcomes. In a state
+[Heisenberg's Table](/quantum/heisenbergs-table/) and
+[Observables Are Hermitian Operators](/quantum/observables-are-hermitian-operators/)
+built the object that stands for a measurable quantity: a Hermitian
+operator $\hat A$ with an orthonormal basis of eigenvectors
+$\{|a_i\rangle\}$, the definite states, and real eigenvalues
+$\lambda_i$, the outcomes. In a state
 $|\psi\rangle = \sum_i c_i |a_i\rangle$ the outcome $\lambda_i$ has
 probability $|c_i|^2$ and the average is
 $\langle \psi | \hat A | \psi \rangle$. One item of the
 [first post's wishlist](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
-is still open: *measurement as an operation on states* — what a
-measurement does to the state it is performed on. This post pays
-it, after clearing one confusion that the notation invites.
+is still open, item 4: *measurement as an operation on states*, that
+is, what a measurement does to the state it is performed on. This post
+answers it. First it separates measuring from applying the operator,
+since the notation makes the two easy to confuse.
 
 ## Applying the operator is not measuring
 
-The notation invites a confusion, so it is addressed first.
-Applying an operator to a state is a *mathematical* operation that
-returns a vector; a measurement is a *physical* operation that
-returns a number and changes the state. They are not the same
-thing, and the warning of
+Applying an operator to a state is a mathematical operation: it returns
+a vector. A measurement is a physical operation: it returns a number
+and changes the state.
 [Heisenberg's Table](/quantum/heisenbergs-table/#what-the-operator-returns-and-what-the-brackets-mean)
-about the output of the machine can now be made concrete on the
-spin.
+warned that the vector the operator returns need not be a state at all.
+Here is the same point on the spin.
 
 Apply $\sigma_z$ to the $x$-definite state $|r\rangle$, using
 $\sigma_z|u\rangle = |u\rangle$, $\sigma_z|d\rangle = -|d\rangle$ and
@@ -41,28 +40,36 @@ $$
 \sigma_z\, |r\rangle = \tfrac{1}{\sqrt 2}\, \sigma_z |u\rangle + \tfrac{1}{\sqrt 2}\, \sigma_z |d\rangle = \tfrac{1}{\sqrt 2}\, |u\rangle - \tfrac{1}{\sqrt 2}\, |d\rangle = |l\rangle .
 $$
 
-The operator turned *right* into *left*. No $z$ measurement of an
-electron prepared along $x$ ever produces an electron pointing left
+The operator turned *right* into *left*. But a $z$ measurement of an
+electron prepared along $x$ never produces an electron pointing left
 along $x$: it produces $|u\rangle$ or $|d\rangle$, at random. So
-$\sigma_z|r\rangle$ is not the state after a measurement. Written in
-the eigenbasis of $\sigma_z$, the input
+$\sigma_z|r\rangle$ is not the state after a measurement. What the
+operator did is visible in the eigenbasis of $\sigma_z$. The input
 $|r\rangle = \frac{1}{\sqrt 2}|u\rangle + \frac{1}{\sqrt 2}|d\rangle$
-lists the possible answers as its basis directions, and the operator
-has multiplied each direction by the answer's value — the
-coordinates tagged with their outcomes, not yet squared into
-probabilities. (Susskind and Friedman devote their §3.5, "A common
-misconception", to this point.)
+has one coordinate per possible answer, and $\sigma_z$ multiplied each
+coordinate by the value of its answer, $+1$ or $-1$. The probabilities
+are the squares of the coordinates, and the operator does not produce
+them. Susskind and Friedman devote their §3.5, "A common
+misconception", to this point.
 
 ![The operator σ_z as a machine: it returns |u⟩ unchanged, flips the sign of |d⟩, and sends the superposition |r⟩ to |l⟩ — a different state, not a measurement outcome](operator_machine.png)
 
 ## Measurement
 
-Wishlist item 4 of the
-[first post](/quantum/the-apparatus-and-the-arrow/#the-wishlist)
-asked how a measurement changes the state. Everything needed is now
-available from the last two posts: the outcomes are the
-eigenvalues, their probabilities are the Born weights, and the
-states a measurement prepares are the eigenvectors.
+Item 4 of the wishlist asks how a measurement changes the state. When
+each outcome belongs to one eigenvector, the answer follows from what
+the last posts established, in three steps.
+
+1. The outcomes are the eigenvalues, and the outcome $\lambda_i$ has
+   probability $|c_i|^2$, by the Born rule.
+2. By [experiment one of the first post](/quantum/the-apparatus-and-the-arrow/#experiment-one-the-window-shows-1--and-repetition-confirms),
+   a second measurement right after the first repeats its answer. So
+   after the outcome $\lambda_i$ the state is one in which $\lambda_i$
+   is certain: a definite state with the outcome $\lambda_i$.
+3. By [definite states are eigenvectors](/quantum/observables-are-hermitian-operators/#definite-states),
+   such a state is an eigenvector with the eigenvalue $\lambda_i$. When
+   $\lambda_i$ belongs to one eigenvector, that is $|a_i\rangle$, up to
+   a global phase.
 
 > **Measurement.** Measuring the observable $\hat A$ in the state
 > $|\psi\rangle = \sum_i c_i|a_i\rangle$ returns one of the
@@ -70,36 +77,43 @@ states a measurement prepares are the eigenvectors.
 > after a measurement that returned $\lambda_i$, the state is the
 > definite state $|a_i\rangle$.
 
-In the language of projectors: the outcome $\lambda_i$ projects the
-state onto the $i$-th definite direction and renormalizes it,
+In the language of projectors, the outcome $\lambda_i$ projects the
+state onto the $i$-th definite direction and renormalizes it:
 
 $$
 |\psi\rangle \;\longmapsto\; \frac{|a_i\rangle\langle a_i | \psi \rangle}{\lVert\, |a_i\rangle\langle a_i | \psi \rangle \,\rVert} = \frac{c_i}{|c_i|}\, |a_i\rangle ,
 $$
 
-a unit factor times $|a_i\rangle$ — the same physical state. The
-probability of the outcome is the average of the projector,
-$\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$, as in the
-derivation of the Born rule in Heisenberg's Table.
+The result is a unit factor times $|a_i\rangle$, which is the same
+physical state. The probability of the outcome is the average of the
+projector, $\langle \psi | a_i \rangle \langle a_i | \psi \rangle = |c_i|^2$,
+as in the derivation of the Born rule in Heisenberg's Table.
 
-All of this assumes that each outcome belongs to one eigenvector. If
-the outcome $\lambda$ is
+![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
+
+**The degenerate case.** If the outcome $\lambda$ is
 [degenerate](/quantum/observables-are-hermitian-operators/#degeneracy-and-the-continuous-spectrum),
-it does not single out one direction. Its probability is the sum of
-$|c_j|^2$ over the eigenvectors with $\lambda_j = \lambda$, and the state
-is projected onto the subspace they span, then renormalized:
+the argument stops at step 3. The state after the measurement lies in
+the subspace spanned by the eigenvectors with $\lambda_j = \lambda$,
+but repetition does not say where in that subspace. The probability of
+$\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
+eigenvectors. For the state, the standard answer is an extra postulate,
+the **Lüders rule**: the state is projected onto that subspace and
+renormalized,
 
 $$
 |\psi\rangle \;\longmapsto\; \frac{\hat P |\psi\rangle}{\lVert \hat P |\psi\rangle \rVert}, \qquad \hat P = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| .
 $$
 
-![Measurement as projection: a state is projected onto one of the definite directions of the observable, with probability given by the squared coordinate, and renormalized](measurement_projection.png)
+Among the states in the subspace, this one is the closest to
+$|\psi\rangle$, and for a non-degenerate outcome the rule reduces to
+the box above.
 
 Read the first post's three experiments in this language.
 
 - *Repetition confirms.* After a $z$ measurement the state is
-  $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$; measuring
-  $\sigma_z$ again finds coefficient $1$ on that eigenvector and
+  $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$. Measuring
+  $\sigma_z$ again finds the coefficient $1$ on that eigenvector and
   returns the same value with probability one.
 - *Flipping negates.* The apparatus turned upside down measures
   $-\sigma_z$, whose definite states are the same two vectors with
@@ -108,29 +122,32 @@ Read the first post's three experiments in this language.
   the state $|u\rangle = \frac{1}{\sqrt 2}|r\rangle + \frac{1}{\sqrt 2}|l\rangle$:
   the outcome is $\pm 1$ with probability $\frac12$ each, and the
   state becomes $|r\rangle$ or $|l\rangle$. Measure along $z$ once
-  more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$, half
-  $|d\rangle$, so the old certainty is gone — probability $\frac12$
-  for either answer. The erasure of the first post is the statement
-  that the $z$ and $x$ observables have no eigenvector in common.
+  more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$ and half
+  $|d\rangle$, so the old certainty is gone, and either answer has
+  probability $\frac12$. The erasure of the first post is the
+  statement that the $z$ and $x$ observables have no eigenvector in
+  common.
 
 ## What we built
 
-Wishlist item 4 is paid: a measurement of $\hat A$ returns an
+Wishlist item 4 is paid. A measurement of $\hat A$ returns an
 eigenvalue $\lambda_i$ with probability $|c_i|^2$ and leaves the
-system in the eigenvector $|a_i\rangle$ — a projection onto a
-definite direction, renormalized. Applying the operator to the state
-is a different thing, a step in a computation, not a measurement.
-The three experiments of the first post are three instances of the
-projection rule.
+system in the eigenvector $|a_i\rangle$: the state is projected onto
+that definite direction and renormalized. For a non-degenerate outcome
+this follows from repetition and the previous post; for a degenerate
+one, the projection onto a subspace is an extra postulate. Applying
+the operator to a state is a different operation: it is part of a
+calculation, not a measurement. The three experiments of the first
+post are three cases of the projection rule.
 
 ## Onward
 
 Next stop: the qubit and the Bloch sphere. The spin operator along an
-arbitrary direction $\hat n$ turns out to be
-$\hat n \cdot \vec\sigma$, built from the three Pauli matrices — from
-which the first post's $\langle \sigma \rangle = \cos\theta$ follows
-in one line, and a two-dimensional complex state space acquires the
-geometry of an ordinary sphere.
+arbitrary direction $\hat n$ is $\hat n \cdot \vec\sigma$, built from
+the three Pauli matrices. From it the first post's
+$\langle \sigma \rangle = \cos\theta$ follows in one line, and the
+two-dimensional complex state space gets the geometry of an ordinary
+sphere.
 
 ## References
 
@@ -143,3 +160,9 @@ geometry of an ordinary sphere.
   II, §10 (Russian ed. pp. 52–53): a measurement of a real dynamical
   variable leaves the system in an eigenstate belonging to the
   measured eigenvalue.
+- G. Lüders. Über die Zustandsänderung durch den Meßprozeß. *Annalen
+  der Physik* 8 (1951), 322–328; English translation by K. A.
+  Kirkpatrick, [Concerning the state-change due to the measurement
+  process](https://arxiv.org/abs/quant-ph/0403007), *Annalen der Physik*
+  15 (2006), 663–670 — the projection rule for degenerate outcomes, and
+  why von Neumann's earlier proposal is rejected.
