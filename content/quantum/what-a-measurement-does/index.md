@@ -58,8 +58,8 @@ misconception", to this point.
 ## Measurement
 
 When each outcome belongs to one eigenvector, the state after a
-measurement follows from what the earlier posts established, in three
-steps.
+measurement follows in three steps, from what the earlier posts
+established and one assumption, made in step 2.
 
 1. The outcomes are the eigenvalues, and the outcome $\lambda_i$ has
    probability $|c_i|^2$, by the Born rule.
