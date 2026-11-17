@@ -246,9 +246,17 @@ The first post's three experiments are three cases of this definition.
   $\sigma_z$ again finds the coefficient $1$ on that eigenvector and
   returns the same value with probability one. This is the fact the
   definition was built from, so here it only checks itself.
-- *Flipping negates.* The apparatus turned upside down measures
-  $-\sigma_z$, whose definite states are the same two vectors with
-  the outcomes exchanged.
+- *Flipping negates.* The
+  [first post](/quantum/the-apparatus-and-the-arrow/#experiment-two-flipping-the-apparatus-negates-the-answer)
+  found that the apparatus turned upside down has the same definite
+  states, $|u\rangle$ and $|d\rangle$, with the outcomes exchanged. By
+  the spectral decomposition its operator is
+  $(-1)|u\rangle\langle u| + (+1)|d\rangle\langle d| = -\sigma_z$, so by
+  point 1 its measurement is the same pair of projectors with the
+  numbers exchanged. After the upright apparatus has returned $+1$, the
+  state is $|u\rangle$, and the flipped one returns $-1$ with
+  probability $\langle u | \hat P_u | u \rangle = 1$: the answer is
+  negated, with no randomness.
 - *A new axis erases the old answer.* Measure the spin along $x$ in
   the state $|u\rangle = \frac{1}{\sqrt 2}|r\rangle + \frac{1}{\sqrt 2}|l\rangle$:
   the outcome is $\pm 1$ with probability $\frac12$ each, and the
