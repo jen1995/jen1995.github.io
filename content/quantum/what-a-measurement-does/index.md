@@ -281,9 +281,8 @@ old one. So a measurement does apply an operator, but it is the
 projector, not $\hat A$. This does not contradict the
 [first section](#applying-the-operator-of-an-observable-is-not-measuring),
 which showed on the spin that $\sigma_z|r\rangle$ is not the state after
-a measurement. What a measurement applies is a projector, not the
-operator of the observable, and the two are different operators even
-though both are built from the same eigenbasis. A measurement uses one of the
+a measurement. The projectors and $\hat A$ are built from the same
+eigenbasis, but they use it differently. A measurement uses one of the
 projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
 them at once, each weighted by its outcome:
 
