@@ -184,22 +184,32 @@ label of the projector $\hat P_i$. One random choice of $i$ gives both
 results, the number $\lambda_i$ in the window of the apparatus and the
 projector $\hat P_i$ applied to the state.
 
-### The rule
+### The definition
 
-Put together, this is the mathematical definition of a measurement:
+Put together, this is the mathematical definition of a measurement. It
+has three levels: the measurement itself, the measurement in a given
+state, and one run of the apparatus.
 
-> **Measurement** (ideal, no degenerate eigenvalues). An ideal
-> measurement of the observable $\hat A = \sum_i \lambda_i \hat P_i$ is
-> given by the projectors $\hat P_i = |a_i\rangle\langle a_i|$, one for
-> each outcome, which satisfy
-> $$\hat P_i \hat P_j = \delta_{ij}\, \hat P_i , \qquad \sum_i \hat P_i = \hat I .$$
-> In the state $|\psi\rangle$ it gives, with probability
-> $p_i = \langle \psi | \hat P_i | \psi \rangle$, two results: the
-> number $\lambda_i$ and the new state
-> $\hat P_i |\psi\rangle / \sqrt{p_i}$.
+> **Measurement** (ideal, no degenerate eigenvalues).
+>
+> 1. **The measurement itself** is the set of projectors
+>    $\hat P_i = |a_i\rangle\langle a_i|$ of the observable
+>    $\hat A = \sum_i \lambda_i \hat P_i$, one for each outcome, with
+>    $\hat P_i \hat P_j = \delta_{ij}\, \hat P_i$ and
+>    $\sum_i \hat P_i = \hat I$. It depends only on the observable, that
+>    is, on the apparatus.
+> 2. **In a given state** $|\psi\rangle$ the measurement is a probability
+>    distribution over the pairs (number, new state): the pair
+>    $\big(\lambda_i,\ \hat P_i |\psi\rangle / \sqrt{p_i}\big)$ comes
+>    with the probability $p_i = \langle \psi | \hat P_i | \psi \rangle$.
+> 3. **One run** of the apparatus is one draw from this distribution:
+>    one $i$, which gives both the number $\lambda_i$ in the window and
+>    the new state.
 
-Every part of the definition has appeared above. The first condition is
-the repetition of the answer. The second is the
+![The three levels of a measurement of σ_z in the state 0.8|u⟩ + 0.6|d⟩: the measurement itself is the projectors of σ_z; in this state it is a distribution over the pairs (+1, |u⟩) with probability 0.64 and (−1, |d⟩) with probability 0.36; one run is one draw, here +1 with the new state |u⟩](measurement_levels.png)
+
+Every part of the definition has appeared above. The first condition of
+point 1 is the repetition of the answer. The second is the
 [resolution of identity](/quantum/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
 of *States Are Vectors*, and it makes the probabilities add up to one:
 $\sum_i \langle \psi | \hat P_i | \psi \rangle = \langle \psi | \psi \rangle = 1$.
@@ -234,10 +244,10 @@ $|\psi\rangle$ is the average, $\sum_i \lambda_i |c_i|^2$.
 
 Not every real measurement is ideal. A detector that absorbs a photon
 leaves no photon to measure again, so there is no second answer to
-compare. For such a measurement the part of the box about the new state
-does not apply; measurements of this kind need a more general
-description, by a set of operators with one operator per outcome, which
-this road does not need. The part about the number still holds: the
+compare. For such a measurement the new state in point 2 is not defined by the
+projectors; measurements of this kind need a more general description,
+by a set of operators with one operator per outcome, which this road
+does not need. The numbers and their probabilities still hold: the
 outcomes and their probabilities come from the Born rule, which was
 derived from averages. An average comes from many measurements, each on
 a fresh system prepared in the same state, and it does not matter
@@ -245,13 +255,13 @@ whether each of them is ideal.
 
 ### The three experiments
 
-The first post's three experiments are three cases of this rule.
+The first post's three experiments are three cases of this definition.
 
 - *Repetition confirms.* After a $z$ measurement the state is
   $|u\rangle$ or $|d\rangle$, an eigenvector of $\sigma_z$. Measuring
   $\sigma_z$ again finds the coefficient $1$ on that eigenvector and
-  returns the same value with probability one. This is the fact the rule
-  was built from, so here the rule only checks itself.
+  returns the same value with probability one. This is the fact the
+  definition was built from, so here it only checks itself.
 - *Flipping negates.* The apparatus turned upside down measures
   $-\sigma_z$, whose definite states are the same two vectors with
   the outcomes exchanged.
@@ -275,7 +285,7 @@ answer does not say where in that subspace. The probability of
 $\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
 eigenvectors. For the state, the standard answer is an extra postulate,
 the **Lüders rule**: the state is projected onto that subspace and
-renormalized. In the language of the box nothing changes except the
+renormalized. In the definition nothing changes except the
 projectors. There is one projector per distinct eigenvalue, onto its
 whole subspace,
 
@@ -283,14 +293,14 @@ $$
 \hat P_\lambda = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| ,
 $$
 
-and the two conditions of the box still hold for these projectors. With
-them, the box is the definition of an ideal measurement in general:
+and the two conditions of point 1 still hold for these projectors. With
+them, the definition covers every ideal measurement:
 the outcome $\lambda$ comes with probability
 $p_\lambda = \langle \psi | \hat P_\lambda | \psi \rangle$, and the new
 state is $\hat P_\lambda |\psi\rangle / \sqrt{p_\lambda}$. Among the
 states in the subspace, this one is the closest to $|\psi\rangle$. For
-a non-degenerate outcome the box follows from the repetition of the
-answer; for a degenerate one it is a postulate.
+a non-degenerate outcome the definition follows from the repetition of
+the answer; for a degenerate one it is a postulate.
 
 ## What we built
 
@@ -350,5 +360,5 @@ sphere.
   §2.2.3, Postulate 3, pp. 84–85: the general description of a
   measurement by a set of measurement operators; §2.2.5, p. 88:
   projective measurements, with the observable written as its spectral
-  decomposition $M = \sum_m m P_m$, which is the rule of this post,
+  decomposition $M = \sum_m m P_m$, which is the definition of this post,
   degenerate outcomes included.
