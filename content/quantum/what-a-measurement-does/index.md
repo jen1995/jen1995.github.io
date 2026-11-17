@@ -230,8 +230,9 @@ $$
 $$
 
 The denominator $\sqrt{p_i}$ is the renormalization, written through the
-probability: since $\hat P_i^\dagger = \hat P_i$ and
-$\hat P_i^2 = \hat P_i$,
+probability. The projector is Hermitian,
+$\hat P_i^\dagger = (|a_i\rangle\langle a_i|)^\dagger = |a_i\rangle\langle a_i| = \hat P_i$,
+and idempotent, $\hat P_i^2 = \hat P_i$, so
 
 $$
 \lVert \hat P_i |\psi\rangle \rVert^2 = \langle \psi | \hat P_i^\dagger \hat P_i | \psi \rangle = \langle \psi | \hat P_i | \psi \rangle = p_i .
@@ -291,9 +292,12 @@ $$
 $$
 
 This vector is not the state after a measurement: the outcome of a
-measurement is random, while $\hat A|\psi\rangle$ is one fixed vector,
-and in general not an eigenvector. Its inner product with
-$|\psi\rangle$ is the average, $\sum_i \lambda_i |c_i|^2$.
+measurement is random, while $\hat A|\psi\rangle$ is one fixed vector, in
+general not an eigenvector, whose inner product with $|\psi\rangle$ is
+the average of all the outcomes,
+$\langle \psi | \hat A | \psi \rangle = \sum_i \lambda_i p_i$. For a
+projector the same inner product is the probability of one outcome,
+$\langle \psi | \hat P_i | \psi \rangle = p_i$.
 
 ### When a measurement is not ideal
 
