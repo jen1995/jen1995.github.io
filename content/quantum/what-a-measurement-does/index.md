@@ -208,10 +208,27 @@ state, and one run of the apparatus.
 
 Most of the definition was derived above: the first condition of point 1
 is the repetition of the answer, and $p_i$ is the average of the
-projector. Two parts are new. The second condition of point 1 is the
+projector. Two parts are new.
+
+The second condition of point 1 is the
 [resolution of identity](/quantum/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
-of *States Are Vectors*, and it makes the probabilities add up to one:
-$\sum_i \langle \psi | \hat P_i | \psi \rangle = \langle \psi | \psi \rangle = 1$.
+of *States Are Vectors*. Any state is the sum of its components along
+the basis vectors, and each component is a projector applied to the
+state:
+
+$$
+|\psi\rangle = \sum_i c_i\, |a_i\rangle = \sum_i |a_i\rangle \langle a_i | \psi \rangle = \Big( \sum_i \hat P_i \Big) |\psi\rangle .
+$$
+
+This holds for every $|\psi\rangle$, so $\sum_i \hat P_i$ leaves every
+vector unchanged: $\sum_i \hat P_i = \hat I$. The condition makes the
+probabilities of all outcomes add up to one, because the state has unit
+length:
+
+$$
+\sum_i p_i = \sum_i \langle \psi | \hat P_i | \psi \rangle = \langle \psi | \Big( \sum_i \hat P_i \Big) | \psi \rangle = \langle \psi | \psi \rangle = 1 .
+$$
+
 The denominator $\sqrt{p_i}$ is the renormalization, written through the
 probability: since $\hat P_i^\dagger = \hat P_i$ and
 $\hat P_i^2 = \hat P_i$,
