@@ -183,6 +183,28 @@ The number and the projector are tied by the spectral decomposition
 $\hat A = \sum_i \lambda_i \hat P_i$: the outcome $\lambda_i$ is the
 label of the projector $\hat P_i$.
 
+The new state comes from applying $\hat P_i$ to the old one: a
+measurement does apply an operator, but it is the projector, not
+$\hat A$. This does not contradict the
+[first section](#applying-is-not-measuring),
+which showed on the spin that $\sigma_z|r\rangle$ is not the state after
+a measurement. The projectors and $\hat A$ are built from the same
+eigenbasis, but they use it differently. A measurement uses one of the
+projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
+them at once, each weighted by its outcome:
+
+$$
+\hat A |\psi\rangle = \sum_i \lambda_i\, \hat P_i |\psi\rangle = \sum_i \lambda_i c_i\, |a_i\rangle .
+$$
+
+This vector is not the state after a measurement: the outcome of a
+measurement is random, while $\hat A|\psi\rangle$ is one fixed vector, in
+general not an eigenvector, whose inner product with $|\psi\rangle$ is
+the average of all the outcomes,
+$\langle \psi | \hat A | \psi \rangle = \sum_i \lambda_i |c_i|^2$. For a
+projector the same inner product is the probability of one outcome,
+$\langle \psi | \hat P_i | \psi \rangle = |c_i|^2$.
+
 ### The definition
 
 Put together, this is the mathematical definition of a measurement. It
@@ -275,31 +297,6 @@ The first post's three experiments are three cases of this definition.
   because the $z$ and $x$ observables have no eigenvector in common:
   no state is definite for both, so the new state of the $x$
   measurement cannot keep the $z$ answer.
-
-<a id="a-projector-not-a"></a>
-### Projecting gives a state, $\hat A$ gives an average
-
-In the definition, the new state comes from applying $\hat P_i$ to the
-old one. So a measurement does apply an operator, but it is the
-projector, not $\hat A$. This does not contradict the
-[first section](#applying-is-not-measuring),
-which showed on the spin that $\sigma_z|r\rangle$ is not the state after
-a measurement. The projectors and $\hat A$ are built from the same
-eigenbasis, but they use it differently. A measurement uses one of the
-projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
-them at once, each weighted by its outcome:
-
-$$
-\hat A |\psi\rangle = \sum_i \lambda_i\, \hat P_i |\psi\rangle = \sum_i \lambda_i c_i\, |a_i\rangle .
-$$
-
-This vector is not the state after a measurement: the outcome of a
-measurement is random, while $\hat A|\psi\rangle$ is one fixed vector, in
-general not an eigenvector, whose inner product with $|\psi\rangle$ is
-the average of all the outcomes,
-$\langle \psi | \hat A | \psi \rangle = \sum_i \lambda_i p_i$. For a
-projector the same inner product is the probability of one outcome,
-$\langle \psi | \hat P_i | \psi \rangle = p_i$.
 
 ### When a measurement is not ideal
 
