@@ -319,9 +319,10 @@ and it does not matter whether each of them is ideal.
 
 ### The degenerate case
 
-If the outcome $\lambda$ is degenerate, the argument for the new state
-stops one step short. The new state is still an eigenvector with the
-eigenvalue $\lambda$, so it lies in the subspace spanned by the
+If the outcome $\lambda$ is degenerate, the argument of
+[What the mathematics must do](#what-the-mathematics-must-do) no longer
+fixes the new state. It still shows that the new state is an
+eigenvector with the eigenvalue $\lambda$, so the new state lies in the subspace spanned by the
 eigenvectors with $\lambda_j = \lambda$, but the repetition of the
 answer does not say where in that subspace. The probability of
 $\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
