@@ -22,12 +22,13 @@ $\langle \psi | \hat A | \psi \rangle$. Two items of the
 are still open. This post answers item 4, *measurement as an operation
 on states*, that is, what a measurement does to the state it is
 performed on. First it separates measuring from applying the operator
-of the observable, since the notation makes the two easy to confuse.
+$\hat A$ of the observable, since the notation makes the two easy to confuse.
 
-## Applying the operator of an observable is not measuring
+<a id="applying-is-not-measuring"></a>
+## Applying $\hat A$ is not measuring it
 
-Applying the operator of an observable to a state is a mathematical
-operation: it returns a vector. A measurement is a physical operation: it returns a number
+Applying the operator $\hat A$ of the measured observable to a state is
+a mathematical operation: it returns a vector. A measurement is a physical operation: it returns a number
 and changes the state.
 The first of the two earlier posts
 [warned](/quantum/heisenbergs-table/#what-the-operator-returns-and-what-the-brackets-mean)
@@ -275,12 +276,13 @@ The first post's three experiments are three cases of this definition.
   no state is definite for both, so the new state of the $x$
   measurement cannot keep the $z$ answer.
 
-### A projector, not the operator of the observable
+<a id="a-projector-not-a"></a>
+### A projector, not $\hat A$
 
 In the definition, the new state comes from applying $\hat P_i$ to the
 old one. So a measurement does apply an operator, but it is the
 projector, not $\hat A$. This does not contradict the
-[first section](#applying-the-operator-of-an-observable-is-not-measuring),
+[first section](#applying-is-not-measuring),
 which showed on the spin that $\sigma_z|r\rangle$ is not the state after
 a measurement. The projectors and $\hat A$ are built from the same
 eigenbasis, but they use it differently. A measurement uses one of the
@@ -355,7 +357,7 @@ experiments to the mathematics.
   the outcome, and the spectral decomposition ties it to the number
   $\lambda_i$. The projectors of all outcomes together are the
   mathematical definition of an ideal measurement.
-- **The difference from the operator of the observable.** A measurement
+- **The difference from applying $\hat A$.** A measurement
   applies one projector, chosen at random; applying $\hat A$ is a step
   in computing the average.
 - **The degenerate case.** The projection onto a subspace is an extra
