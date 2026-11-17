@@ -327,23 +327,25 @@ eigenvectors with $\lambda_j = \lambda$, but the repetition of the
 answer does not say where in that subspace. The probability of
 $\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
 eigenvectors. For the state, the standard answer is an extra postulate,
-the **Lüders rule**: the state is projected onto that subspace and
-renormalized. In the definition nothing changes except the
-projectors. There is one projector per distinct eigenvalue, onto its
-whole subspace,
+the **Lüders rule**: the new state is the projection of $|\psi\rangle$
+onto that subspace, renormalized,
 
 $$
-\hat P_\lambda = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| ,
+|\psi\rangle \;\longmapsto\; \frac{\hat P_\lambda |\psi\rangle}{\lVert \hat P_\lambda |\psi\rangle \rVert}, \qquad \hat P_\lambda = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| .
 $$
 
-and the two conditions of point 1 still hold for these projectors. With
-them, the definition covers every ideal measurement:
-the outcome $\lambda$ comes with probability
+Among the states in the subspace, this one is the closest to
+$|\psi\rangle$.
+
+In the definition, nothing changes except the projectors: there is one
+projector $\hat P_\lambda$ per distinct eigenvalue, onto its whole
+subspace, and the two conditions of point 1 still hold for these
+projectors. The outcome $\lambda$ comes with the probability
 $p_\lambda = \langle \psi | \hat P_\lambda | \psi \rangle$, and the new
-state is $\hat P_\lambda |\psi\rangle / \sqrt{p_\lambda}$. Among the
-states in the subspace, this one is the closest to $|\psi\rangle$. For
-a non-degenerate outcome the definition follows from the repetition of
-the answer; for a degenerate one it is a postulate.
+state is $\hat P_\lambda |\psi\rangle / \sqrt{p_\lambda}$. So the
+definition covers every ideal measurement. For a non-degenerate outcome
+it follows from the repetition of the answer; for a degenerate one it
+is a postulate.
 
 ## What we built
 
