@@ -276,8 +276,9 @@ The first post's three experiments are three cases of this definition.
 
 ### A projector, not the operator of the observable
 
-In the definition, the new state is obtained by applying an operator to
-the old one, the projector $\hat P_i$, but not $\hat A$. This does not contradict the
+In the definition, the new state comes from applying $\hat P_i$ to the
+old one. So a measurement does apply an operator, but it is the
+projector, not $\hat A$. This does not contradict the
 [first section](#applying-the-operator-of-an-observable-is-not-measuring),
 which showed on the spin that $\sigma_z|r\rangle$ is not the state after
 a measurement. What a measurement applies is a projector, not the
