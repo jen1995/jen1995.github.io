@@ -308,9 +308,16 @@ detector or by the polarizer.
 ![Top: an ideal measurement of the spin leaves the electron in a new state, and a second measurement repeats the answer. Bottom: a polarizer with a photon detector behind it absorbs the photon either way, so there is no new state, but over many fresh photons the frequencies of click and no click still give the probabilities](nonideal.png)
 
 For such a measurement the new state in point 2 is not defined by the
-projectors. Measurements of this kind need a more general description,
-by a set of operators with one operator per outcome, which this road
-does not need.
+projectors. Measurements of this kind are called **generalized
+measurements**. They are described by a set of *measurement operators*
+$\hat M_m$, one for each outcome, which need not be projectors. When
+only the probabilities of the outcomes matter, the description reduces
+to a [POVM](https://en.wikipedia.org/wiki/POVM), a *positive
+operator-valued measure*. This road does not need them. Nielsen and
+Chuang give the general postulate in §2.2.3 and POVMs in §2.2.6, and
+their Box 2.5 discusses exactly this situation: a photon destroyed by
+the measurement of its position, so that the measurement cannot be
+repeated.
 
 The numbers and their probabilities still hold, because they come from
 the Born rule, which was derived from averages. An average comes from
@@ -400,7 +407,9 @@ sphere.
 - M. A. Nielsen, I. L. Chuang. *Quantum Computation and Quantum
   Information*, 10th anniversary ed. Cambridge University Press, 2010 —
   §2.2.3, Postulate 3, pp. 84–85: the general description of a
-  measurement by a set of measurement operators; §2.2.5, p. 88:
+  measurement by a set of measurement operators; §2.2.6, p. 90: POVM
+  measurements; Box 2.5, p. 91: projective measurements are repeatable,
+  and a measurement that destroys a photon is not; §2.2.5, p. 88:
   projective measurements, with the observable written as its spectral
   decomposition $M = \sum_m m P_m$, which is the definition of this post,
   degenerate outcomes included.
