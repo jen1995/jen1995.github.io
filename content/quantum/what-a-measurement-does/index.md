@@ -186,18 +186,35 @@ projector $\hat P_i$ applied to the state.
 
 ### The rule
 
-Put together:
+Put together, this is the mathematical definition of a measurement:
 
-> **Measurement** (ideal, no degenerate eigenvalues). A measurement of
-> the observable $\hat A$ in the state
-> $|\psi\rangle = \sum_i c_i|a_i\rangle$ has two results: a number, one
-> of the eigenvalues $\lambda_i$, which comes out with probability
-> $|c_i|^2$; and a new state, the definite state $|a_i\rangle$ of that
-> eigenvalue.
+> **Measurement** (ideal, no degenerate eigenvalues). An ideal
+> measurement of the observable $\hat A = \sum_i \lambda_i \hat P_i$ is
+> given by the projectors $\hat P_i = |a_i\rangle\langle a_i|$, one for
+> each outcome, which satisfy
+> $$\hat P_i \hat P_j = \delta_{ij}\, \hat P_i , \qquad \sum_i \hat P_i = \hat I .$$
+> In the state $|\psi\rangle$ it gives, with probability
+> $p_i = \langle \psi | \hat P_i | \psi \rangle$, two results: the
+> number $\lambda_i$ and the new state
+> $\hat P_i |\psi\rangle / \sqrt{p_i}$.
 
-The new state in the rule is obtained by applying an operator to the
-old one, the projector $\hat P_i$, but not $\hat A$. This does not
-contradict the
+Every part of the definition has appeared above. The first condition is
+the repetition of the answer. The second is the
+[resolution of identity](/quantum/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
+of *States Are Vectors*, and it makes the probabilities add up to one:
+$\sum_i \langle \psi | \hat P_i | \psi \rangle = \langle \psi | \psi \rangle = 1$.
+The denominator $\sqrt{p_i}$ is the renormalization: since
+$\hat P_i^\dagger = \hat P_i$ and $\hat P_i^2 = \hat P_i$,
+
+$$
+\lVert \hat P_i |\psi\rangle \rVert^2 = \langle \psi | \hat P_i^\dagger \hat P_i | \psi \rangle = \langle \psi | \hat P_i | \psi \rangle = p_i .
+$$
+
+In the eigenbasis, $p_i = |c_i|^2$, and the new state is
+$\frac{c_i}{|c_i|}|a_i\rangle$, the definite state $|a_i\rangle$.
+
+The new state is obtained by applying an operator to the old one, the
+projector $\hat P_i$, but not $\hat A$. This does not contradict the
 [first section](#applying-the-operator-of-an-observable-is-not-measuring),
 which showed on the spin that $\sigma_z|r\rangle$ is not the state after
 a measurement. What a measurement applies is a projector, not the
@@ -258,15 +275,22 @@ answer does not say where in that subspace. The probability of
 $\lambda$ is still determined: it is the sum of $|c_j|^2$ over those
 eigenvectors. For the state, the standard answer is an extra postulate,
 the **Lüders rule**: the state is projected onto that subspace and
-renormalized,
+renormalized. In the language of the box nothing changes except the
+projectors. There is one projector per distinct eigenvalue, onto its
+whole subspace,
 
 $$
-|\psi\rangle \;\longmapsto\; \frac{\hat P |\psi\rangle}{\lVert \hat P |\psi\rangle \rVert}, \qquad \hat P = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| .
+\hat P_\lambda = \sum_{j:\, \lambda_j = \lambda} |a_j\rangle\langle a_j| ,
 $$
 
-Among the states in the subspace, this one is the closest to
-$|\psi\rangle$, and for a non-degenerate outcome the rule reduces to
-the box above.
+and the two conditions of the box still hold for these projectors. With
+them, the box is the definition of an ideal measurement in general:
+the outcome $\lambda$ comes with probability
+$p_\lambda = \langle \psi | \hat P_\lambda | \psi \rangle$, and the new
+state is $\hat P_\lambda |\psi\rangle / \sqrt{p_\lambda}$. Among the
+states in the subspace, this one is the closest to $|\psi\rangle$. For
+a non-degenerate outcome the box follows from the repetition of the
+answer; for a degenerate one it is a postulate.
 
 ## What we built
 
@@ -283,7 +307,8 @@ experiments to the mathematics.
 - **The construction.** The projector $\hat P_i$, followed by
   renormalization. It is idempotent, its average is the probability of
   the outcome, and the spectral decomposition ties it to the number
-  $\lambda_i$.
+  $\lambda_i$. The projectors of all outcomes together are the
+  mathematical definition of an ideal measurement.
 - **The difference from the operator of the observable.** A measurement
   applies one projector, chosen at random; applying $\hat A$ is a step
   in computing the average.
