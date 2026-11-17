@@ -365,6 +365,8 @@ and the count $n^2$ is derived in Shankar's chapter on hydrogen (see the
 [references](#references)). The hydrogen post at the end of this road
 comes back to all of this.
 
+![Left: the levels n = 1, 2, 3 of hydrogen with their 1, 4 and 9 states, one dot per basis vector, grouped by l and labelled by m; the energy alone does not single out a dot, the triple n, l, m does. Right: in a magnetic field the level n = 2 splits by m into three levels, with one state at m = +1, two at m = 0 (2s and 2p) and one at m = −1; schematic, without spin](hydrogen_degeneracy.png)
+
 ## What we built
 
 Wishlist item 4 is paid, by the same road as the operators: from the
