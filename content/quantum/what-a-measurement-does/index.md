@@ -1,7 +1,7 @@
 ---
 title: "What a Measurement Does"
-date: 2026-11-01
-draft: true
+date: 2026-11-17
+draft: false
 tags: ["quantum", "math"]
 summary: "Item 4 of the first post's wishlist: applying an operator to a state is not measuring, and a measurement projects the state onto a definite state, an eigenvector of the observable chosen with the Born probability. For an ideal measurement and a non-degenerate outcome this follows from the repetition of the answer; for a degenerate one it is an extra postulate, the Lüders rule. The post then reads the three experiments of the first post in this language."
 math: true
