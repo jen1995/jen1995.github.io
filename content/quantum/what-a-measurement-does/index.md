@@ -136,8 +136,15 @@ $|a_i\rangle$, up to a
 
 Which operation turns $|\psi\rangle$ into $|a_i\rangle$? The projector
 $\hat P_i = |a_i\rangle\langle a_i|$ keeps the component of the state
-along $|a_i\rangle$ and removes the rest. The result is shorter than a
-state, and renormalization brings it back to unit length:
+along $|a_i\rangle$ and removes the rest: with
+$\langle a_i | \psi \rangle = c_i$,
+
+$$
+\hat P_i |\psi\rangle = |a_i\rangle \langle a_i | \psi \rangle = c_i\, |a_i\rangle .
+$$
+
+The result is shorter than a state, and renormalization brings it back
+to unit length:
 
 $$
 |\psi\rangle \;\longmapsto\; \frac{\hat P_i |\psi\rangle}{\lVert \hat P_i |\psi\rangle \rVert} = \frac{c_i\, |a_i\rangle}{|c_i|} = \frac{c_i}{|c_i|}\, |a_i\rangle .
@@ -166,14 +173,11 @@ can follow.
 The probability of the outcome is the average of the projector,
 computed the same way as the average of $\sigma_z$ in the first section:
 apply the operator, then take the inner product with $|\psi\rangle$.
-With $\langle a_i | \psi \rangle = c_i$ and
-$\langle \psi | a_i \rangle = c_i^*$,
+The operator was applied above, $\hat P_i |\psi\rangle = c_i |a_i\rangle$,
+and with $\langle \psi | a_i \rangle = c_i^*$,
 
 $$
-\begin{aligned}
-\hat P_i |\psi\rangle &= |a_i\rangle \langle a_i | \psi \rangle = c_i\, |a_i\rangle , \\
-\langle \psi | \hat P_i | \psi \rangle &= c_i\, \langle \psi | a_i \rangle = c_i\, c_i^* = |c_i|^2 ,
-\end{aligned}
+\langle \psi | \hat P_i | \psi \rangle = c_i\, \langle \psi | a_i \rangle = c_i\, c_i^* = |c_i|^2 ,
 $$
 
 as in the
@@ -183,9 +187,8 @@ The number and the projector are tied by the spectral decomposition
 $\hat A = \sum_i \lambda_i \hat P_i$: the outcome $\lambda_i$ is the
 label of the projector $\hat P_i$.
 
-The new state comes from applying $\hat P_i$ to the old one: a
-measurement does apply an operator, but it is the projector, not
-$\hat A$. This does not contradict the
+So a measurement does apply an operator to the state, but it is the
+projector, not $\hat A$. This does not contradict the
 [first section](#applying-is-not-measuring),
 which showed on the spin that $\sigma_z|r\rangle$ is not the state after
 a measurement. The projectors and $\hat A$ are built from the same
@@ -202,8 +205,8 @@ measurement is random, while $\hat A|\psi\rangle$ is one fixed vector, in
 general not an eigenvector, whose inner product with $|\psi\rangle$ is
 the average of all the outcomes,
 $\langle \psi | \hat A | \psi \rangle = \sum_i \lambda_i |c_i|^2$. For a
-projector the same inner product is the probability of one outcome,
-$\langle \psi | \hat P_i | \psi \rangle = |c_i|^2$.
+projector the same inner product is, as computed above, the probability
+of one outcome, $|c_i|^2$.
 
 ### The definition
 
