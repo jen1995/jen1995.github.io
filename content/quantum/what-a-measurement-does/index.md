@@ -357,8 +357,13 @@ quantum numbers $n$, $l$ and $m$, belong to one basis vector: the
 degeneracy is gone. Such a set of quantities is called a *complete set
 of commuting observables*. The degeneracy can also be removed
 physically: a magnetic field splits the energy level into several, and
-the spectral line splits with it, which is the Zeeman effect. The
-hydrogen post at the end of this road comes back to this.
+the spectral line splits with it, which is the
+[Zeeman effect](https://en.wikipedia.org/wiki/Zeeman_effect). The levels
+of hydrogen and their quantum numbers are explained in Feynman's
+[lecture on the hydrogen atom](https://www.feynmanlectures.caltech.edu/III_19.html),
+and the count $n^2$ is derived in Shankar's chapter on hydrogen (see the
+[references](#references)). The hydrogen post at the end of this road
+comes back to all of this.
 
 ## What we built
 
@@ -412,7 +417,9 @@ sphere.
 - R. Shankar. *Principles of Quantum Mechanics*, 2nd ed. Plenum, 1994 —
   chapter 4, §4.1, p. 116: Postulate III, the measurement yields one of
   the eigenvalues and changes the state to the eigenvector, with a
-  footnote that this is an ideal measurement.
+  footnote that this is an ideal measurement; chapter 13, "The Hydrogen
+  Atom", §13.1, p. 355, Eq. (13.1.18): the degeneracy $n^2$ of the
+  hydrogen levels.
 - M. A. Nielsen, I. L. Chuang. *Quantum Computation and Quantum
   Information*, 10th anniversary ed. Cambridge University Press, 2010 —
   §2.2.3, Postulate 3, pp. 84–85: the general description of a
@@ -422,3 +429,7 @@ sphere.
   projective measurements, with the observable written as its spectral
   decomposition $M = \sum_m m P_m$, which is the definition of this post,
   degenerate outcomes included.
+- R. P. Feynman, R. B. Leighton, M. Sands. *The Feynman Lectures on
+  Physics*, vol. III, chapter 19,
+  ["The Hydrogen Atom and the Periodic Table"](https://www.feynmanlectures.caltech.edu/III_19.html)
+  — the levels of hydrogen and their quantum numbers.
