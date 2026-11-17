@@ -202,8 +202,7 @@ $$
 $$
 
 This is one fixed vector, not a randomly chosen eigenvector, so it is
-not the state after a measurement. Its inner product with $|\psi\rangle$
-is the average, $\sum_i \lambda_i |c_i|^2$.
+not the state after a measurement.
 
 ### The definition
 
