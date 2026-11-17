@@ -203,15 +203,9 @@ $$
 
 This vector is not the state after a measurement. The outcome of a
 measurement is random, while $\hat A|\psi\rangle$ is one fixed vector,
-and in general it is not an eigenvector. What it gives is the average:
-its inner product with $|\psi\rangle$ is the average of all the
-outcomes,
-
-$$
-\langle \psi | \hat A | \psi \rangle = \sum_i \lambda_i |c_i|^2 .
-$$
-
-For a projector the same inner product gives the probability of one
+and in general it is not an eigenvector. Its inner product with
+$|\psi\rangle$ gives the average of all the outcomes,
+$\sum_i \lambda_i |c_i|^2$. For a projector the same inner product gives the probability of one
 outcome, $|c_i|^2$, as computed above.
 
 ### The definition
