@@ -395,9 +395,10 @@ experiments to the mathematics.
 Next stop: the qubit and the Bloch sphere. The spin operator along an
 arbitrary direction $\hat n$ is $\hat n \cdot \vec\sigma$, built from
 the three Pauli matrices. From it the first post's
-$\langle \sigma \rangle = \cos\theta$ follows in one line, and the
-two-dimensional complex state space gets the geometry of an ordinary
-sphere.
+$\langle \sigma \rangle = \cos\theta$ follows in one line. And the
+states of the spin, the unit vectors of $\mathbb C^2$ taken up to a
+[global phase](/quantum/states-are-vectors/#global-phase), turn out to
+form an ordinary sphere.
 
 ## References
 
