@@ -161,7 +161,16 @@ The longest post; notes §9–13 + the classical interlude.
      promised since Heisenberg's Table). Schrödinger's cat as the closing
      section: an entangled atom+cat state; the cat alone is a mixture, not
      a superposition (post 50's "superposition is not a mixture");
-     decoherence as the bridge to quantum computing. Verify the 1935
+     decoherence as the bridge to quantum computing.
+     Also (2026-11-17): a parity measurement of two qubits ("are they
+     equal?") as the degenerate case of post 52 at work. The outcome +1
+     belongs to the subspace spanned by |00⟩, |11⟩; by the Lüders rule
+     ½(|00⟩+|01⟩+|10⟩+|11⟩) becomes (|00⟩+|11⟩)/√2: a measurement that
+     creates entanglement. The same idea underlies syndrome measurements
+     in quantum error correction (and it is the Lüders rule, not von
+     Neumann's mixture, that makes them work). If experiments are cited
+     (parity measurements on superconducting qubits), find and verify the
+     papers first. Verify the 1935
      history (EPR; Schrödinger's cat paper and "Verschränkung") against
      sources before writing it.
 - Order of dependence: 3 needs 1 (n·σ) and 52 (measurement); 2 is
