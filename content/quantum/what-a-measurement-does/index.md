@@ -142,8 +142,8 @@ $$
 |\psi\rangle \;\longmapsto\; \frac{\hat P_i |\psi\rangle}{\lVert \hat P_i |\psi\rangle \rVert} = \frac{c_i\, |a_i\rangle}{|c_i|} = \frac{c_i}{|c_i|}\, |a_i\rangle .
 $$
 
-The result is a unit factor times $|a_i\rangle$, which is the same
-physical state.
+This is a unit factor times $|a_i\rangle$, which is the same physical
+state.
 
 ![Measurement as projection: the state |ψ⟩ lies on the unit circle; its projections onto the axes, c1|a1⟩ and c2|a2⟩ (dashed), lie inside it, and renormalized they return to the circle as the unit vectors |a1⟩ and |a2⟩ (bold), the states after the outcomes λ1 and λ2; the probabilities are c1² = 0.64 and c2² = 0.36](measurement_projection.png)
 
@@ -180,9 +180,7 @@ as in the
 
 The number and the projector are tied by the spectral decomposition
 $\hat A = \sum_i \lambda_i \hat P_i$: the outcome $\lambda_i$ is the
-label of the projector $\hat P_i$. One random choice of $i$ gives both
-results, the number $\lambda_i$ in the window of the apparatus and the
-projector $\hat P_i$ applied to the state.
+label of the projector $\hat P_i$.
 
 ### The definition
 
@@ -208,50 +206,19 @@ state, and one run of the apparatus.
 
 ![The three levels of a measurement of σ_z in the state 0.8|u⟩ + 0.6|d⟩: the measurement itself is the projectors of σ_z; in this state it is a distribution over the pairs (+1, |u⟩) with probability 0.64 and (−1, |d⟩) with probability 0.36; one run is one draw, here +1 with the new state |u⟩](measurement_levels.png)
 
-Every part of the definition has appeared above. The first condition of
-point 1 is the repetition of the answer. The second is the
+Most of the definition was derived above: the first condition of point 1
+is the repetition of the answer, and $p_i$ is the average of the
+projector. Two parts are new. The second condition of point 1 is the
 [resolution of identity](/quantum/states-are-vectors/#coordinates-and-a-formula-for-the-identity-operator)
 of *States Are Vectors*, and it makes the probabilities add up to one:
 $\sum_i \langle \psi | \hat P_i | \psi \rangle = \langle \psi | \psi \rangle = 1$.
-The denominator $\sqrt{p_i}$ is the renormalization: since
-$\hat P_i^\dagger = \hat P_i$ and $\hat P_i^2 = \hat P_i$,
+The denominator $\sqrt{p_i}$ is the renormalization, written through the
+probability: since $\hat P_i^\dagger = \hat P_i$ and
+$\hat P_i^2 = \hat P_i$,
 
 $$
 \lVert \hat P_i |\psi\rangle \rVert^2 = \langle \psi | \hat P_i^\dagger \hat P_i | \psi \rangle = \langle \psi | \hat P_i | \psi \rangle = p_i .
 $$
-
-In the eigenbasis, $p_i = |c_i|^2$, and the new state is
-$\frac{c_i}{|c_i|}|a_i\rangle$, the definite state $|a_i\rangle$.
-
-The new state is obtained by applying an operator to the old one, the
-projector $\hat P_i$, but not $\hat A$. This does not contradict the
-[first section](#applying-the-operator-of-an-observable-is-not-measuring),
-which showed on the spin that $\sigma_z|r\rangle$ is not the state after
-a measurement. What a measurement applies is a projector, not the
-operator of the observable, and the two are different operators even
-though both are built from the same eigenbasis. A measurement uses one of the
-projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
-them at once, each weighted by its outcome:
-
-$$
-\hat A |\psi\rangle = \sum_i \lambda_i\, \hat P_i |\psi\rangle = \sum_i \lambda_i c_i\, |a_i\rangle .
-$$
-
-This vector is not the state after a measurement: the outcome of a
-measurement is random, while $\hat A|\psi\rangle$ is one fixed vector,
-and in general not an eigenvector. Its inner product with
-$|\psi\rangle$ is the average, $\sum_i \lambda_i |c_i|^2$.
-
-Not every real measurement is ideal. A detector that absorbs a photon
-leaves no photon to measure again, so there is no second answer to
-compare. For such a measurement the new state in point 2 is not defined by the
-projectors; measurements of this kind need a more general description,
-by a set of operators with one operator per outcome, which this road
-does not need. The numbers and their probabilities still hold: the
-outcomes and their probabilities come from the Born rule, which was
-derived from averages. An average comes from many measurements, each on
-a fresh system prepared in the same state, and it does not matter
-whether each of them is ideal.
 
 ### The three experiments
 
@@ -274,6 +241,39 @@ The first post's three experiments are three cases of this definition.
   probability $\frac12$. The erasure of the first post is the
   statement that the $z$ and $x$ observables have no eigenvector in
   common.
+
+### A projector, not the operator of the observable
+
+In the definition, the new state is obtained by applying an operator to
+the old one, the projector $\hat P_i$, but not $\hat A$. This does not contradict the
+[first section](#applying-the-operator-of-an-observable-is-not-measuring),
+which showed on the spin that $\sigma_z|r\rangle$ is not the state after
+a measurement. What a measurement applies is a projector, not the
+operator of the observable, and the two are different operators even
+though both are built from the same eigenbasis. A measurement uses one of the
+projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
+them at once, each weighted by its outcome:
+
+$$
+\hat A |\psi\rangle = \sum_i \lambda_i\, \hat P_i |\psi\rangle = \sum_i \lambda_i c_i\, |a_i\rangle .
+$$
+
+This vector is not the state after a measurement: the outcome of a
+measurement is random, while $\hat A|\psi\rangle$ is one fixed vector,
+and in general not an eigenvector. Its inner product with
+$|\psi\rangle$ is the average, $\sum_i \lambda_i |c_i|^2$.
+
+### When a measurement is not ideal
+
+Not every real measurement is ideal. A detector that absorbs a photon
+leaves no photon to measure again, so there is no second answer to
+compare. For such a measurement the new state in point 2 is not defined by the
+projectors; measurements of this kind need a more general description,
+by a set of operators with one operator per outcome, which this road
+does not need. The numbers and their probabilities still hold: they
+come from the Born rule, which was derived from averages. An average comes from many measurements, each on
+a fresh system prepared in the same state, and it does not matter
+whether each of them is ideal.
 
 ### The degenerate case
 
