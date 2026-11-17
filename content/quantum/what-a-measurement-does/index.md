@@ -185,15 +185,16 @@ as in the
 
 The number and the projector are tied by the spectral decomposition
 $\hat A = \sum_i \lambda_i \hat P_i$: the outcome $\lambda_i$ is the
-label of the projector $\hat P_i$.
+label of the projector $\hat P_i$. So the random choice of the number,
+which the first requirement asks for, also chooses the projector.
 
 So a measurement does apply an operator to the state, but it is the
 projector, not $\hat A$. This does not contradict the
 [first section](#applying-is-not-measuring),
 which showed on the spin that $\sigma_z|r\rangle$ is not the state after
 a measurement. The projectors and $\hat A$ are built from the same
-eigenbasis, but they use it differently. A measurement uses one of the
-projectors $\hat P_i$, chosen at random. Applying $\hat A$ uses all of
+eigenbasis, but they use it differently. A measurement uses one
+projector, the one that the random outcome selects. Applying $\hat A$ uses all of
 them at once, each weighted by its outcome:
 
 $$
