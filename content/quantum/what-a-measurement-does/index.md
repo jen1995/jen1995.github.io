@@ -347,6 +347,19 @@ definition covers every ideal measurement. For a non-degenerate outcome
 it follows from the repetition of the answer; for a degenerate one it
 is a postulate.
 
+**An example: hydrogen.** In the hydrogen atom the energy of the level
+with number $n$ belongs to $n^2$ independent states, so an energy
+measurement alone leaves the state undetermined inside that subspace.
+In practice one measures two more quantities together with the energy:
+the square of the angular momentum and its projection on one axis. The
+three have a common eigenbasis, and the three outcomes together, the
+quantum numbers $n$, $l$ and $m$, belong to one basis vector: the
+degeneracy is gone. Such a set of quantities is called a *complete set
+of commuting observables*. The degeneracy can also be removed
+physically: a magnetic field splits the energy level into several, and
+the spectral line splits with it, which is the Zeeman effect. The
+hydrogen post at the end of this road comes back to this.
+
 ## What we built
 
 Wishlist item 4 is paid, by the same road as the operators: from the
