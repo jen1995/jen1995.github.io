@@ -277,7 +277,7 @@ The first post's three experiments are three cases of this definition.
   measurement cannot keep the $z$ answer.
 
 <a id="a-projector-not-a"></a>
-### A projector, not $\hat A$
+### Projecting gives a state, $\hat A$ gives an average
 
 In the definition, the new state comes from applying $\hat P_i$ to the
 old one. So a measurement does apply an operator, but it is the
