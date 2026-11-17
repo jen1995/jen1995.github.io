@@ -303,6 +303,23 @@ the energy representation. Superpositions, time evolution as rotating
 phases, revivals. Notebook: **nb-box** — eigenmodes, |ψ|² animations,
 measurement collapse simulation.
 
+The Born rule on a line goes here (text and born_density.png parked in
+drafts/quantum/what-a-measurement-does/). Remark for it, from the
+2026-11-17 discussion: write the probability as a measure on the set of
+outcomes, μ_ψ(B) = ⟨ψ|P̂_B|ψ⟩ = ∫_B |ψ(x)|² dx. On a line a single point
+has probability zero, so only sets of outcomes make sense; in the
+discrete case P̂_B = Σ_{λ_i ∈ B} P̂_i and nothing new happens, which is
+why post 52 does not need this language. For position, P̂_B multiplies
+ψ(x) by the indicator 1_B(x) (link the cell states of the delta post).
+The family P̂_B is the projection-valued measure of von Neumann's
+spectral theorem (post 51's table names the theorem). The same remark
+answers "what is the state after a position measurement": |x⟩ is not
+normalizable, so a real measurement of position has finite resolution,
+and the state becomes P̂_B ψ / ‖P̂_B ψ‖, the definition of post 52 with
+an interval in place of a point. Also say plainly that the distribution
+lives on the outcomes, depends on both the state and the observable, and
+that |ψ(x)|² is the density only for position.
+
 ## QM-7. Tunneling (problem #2)
 
 Finite well as the warm-up (bound states, transcendental equation), then
