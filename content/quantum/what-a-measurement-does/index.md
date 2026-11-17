@@ -308,14 +308,8 @@ detector or by the polarizer.
 ![Top: an ideal measurement of the spin leaves the electron in a new state, and a second measurement repeats the answer. Bottom: a polarizer with a photon detector behind it absorbs the photon either way, so there is no new state, but over many fresh photons the frequencies of click and no click still give the probabilities](nonideal.png)
 
 For such a measurement the new state in point 2 is not defined by the
-projectors. Measurements of this kind are called **generalized
-measurements**. They are described by a set of *measurement operators*
-$\hat M_m$, one for each outcome, which need not be projectors. When
-only the probabilities of the outcomes matter, the description reduces
-to a [POVM](https://en.wikipedia.org/wiki/POVM), a *positive
-operator-valued measure*. This road does not need them; they are
-described in [Nielsen and Chuang](#references), together with this very
-example of a photon that cannot be measured twice.
+projectors. Such measurements are called *generalized measurements*; this road
+does not need them, and [Nielsen and Chuang](#references) describe them.
 
 The numbers and their probabilities still hold, because they come from
 the Born rule, which was derived from averages. An average comes from
