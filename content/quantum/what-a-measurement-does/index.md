@@ -257,15 +257,22 @@ The first post's three experiments are three cases of this definition.
   state is $|u\rangle$, and the flipped one returns $-1$ with
   probability $\langle u | \hat P_u | u \rangle = 1$: the answer is
   negated, with no randomness.
-- *A new axis erases the old answer.* Measure the spin along $x$ in
-  the state $|u\rangle = \frac{1}{\sqrt 2}|r\rangle + \frac{1}{\sqrt 2}|l\rangle$:
-  the outcome is $\pm 1$ with probability $\frac12$ each, and the
-  state becomes $|r\rangle$ or $|l\rangle$. Measure along $z$ once
-  more: $|r\rangle$ and $|l\rangle$ are each half $|u\rangle$ and half
-  $|d\rangle$, so the old certainty is gone, and either answer has
-  probability $\frac12$. The erasure of the first post is the
-  statement that the $z$ and $x$ observables have no eigenvector in
-  common.
+- *A new axis erases the old answer.* Start in $|u\rangle$, where a $z$
+  measurement gives $+1$ with probability one. Now measure along $x$.
+  By point 1 this measurement is the pair of projectors
+  $\hat P_r = |r\rangle\langle r|$ and $\hat P_l = |l\rangle\langle l|$,
+  and by point 2 its outcomes in $|u\rangle$ have the probabilities
+  $\langle u | \hat P_r | u \rangle = |\langle r | u \rangle|^2 = \tfrac12$
+  and $\langle u | \hat P_l | u \rangle = \tfrac12$. One run leaves the
+  state in $|r\rangle$ or $|l\rangle$. Measure along $z$ again: in
+  $|r\rangle$ the outcome $+1$ now has the probability
+  $\langle r | \hat P_u | r \rangle = |\langle u | r \rangle|^2 = \tfrac12$,
+  and the same holds in $|l\rangle$. Before the $x$ measurement this
+  probability was $1$; the projection onto $|r\rangle$ or $|l\rangle$
+  replaced the state, and the old certainty went with it. This happens
+  because the $z$ and $x$ observables have no eigenvector in common:
+  no state is definite for both, so the new state of the $x$
+  measurement cannot keep the $z$ answer.
 
 ### A projector, not the operator of the observable
 
