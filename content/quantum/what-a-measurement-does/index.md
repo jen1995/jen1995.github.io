@@ -308,8 +308,9 @@ detector or by the polarizer.
 ![Top: an ideal measurement of the spin leaves the electron in a new state, and a second measurement repeats the answer. Bottom: a polarizer with a photon detector behind it absorbs the photon either way, so there is no new state, but over many fresh photons the frequencies of click and no click still give the probabilities](nonideal.png)
 
 For such a measurement the new state in point 2 is not defined by the
-projectors. Such measurements are called *generalized measurements*; this road
-does not need them, and [Nielsen and Chuang](#references) describe them.
+projectors. A more general theory, of *generalized measurements*, covers
+it; this road does not need that theory, and
+[Nielsen and Chuang](#references) describe it.
 
 The numbers and their probabilities still hold, because they come from
 the Born rule, which was derived from averages. An average comes from
