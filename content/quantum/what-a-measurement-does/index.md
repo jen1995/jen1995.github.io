@@ -305,13 +305,21 @@ $\langle \psi | \hat P_i | \psi \rangle = p_i$.
 
 Not every real measurement is ideal. A detector that absorbs a photon
 leaves no photon to measure again, so there is no second answer to
-compare. For such a measurement the new state in point 2 is not defined by the
-projectors; measurements of this kind need a more general description,
+compare. Put a polarizer in front of the detector, and the outcome is
+"click" or "no click"; in both cases the photon is gone, absorbed by the
+detector or by the polarizer.
+
+![Top: an ideal measurement of the spin leaves the electron in a new state, and a second measurement repeats the answer. Bottom: a polarizer with a photon detector behind it absorbs the photon either way, so there is no new state, but over many fresh photons the frequencies of click and no click still give the probabilities](nonideal.png)
+
+For such a measurement the new state in point 2 is not defined by the
+projectors. Measurements of this kind need a more general description,
 by a set of operators with one operator per outcome, which this road
-does not need. The numbers and their probabilities still hold: they
-come from the Born rule, which was derived from averages. An average comes from many measurements, each on
-a fresh system prepared in the same state, and it does not matter
-whether each of them is ideal.
+does not need.
+
+The numbers and their probabilities still hold, because they come from
+the Born rule, which was derived from averages. An average comes from
+many measurements, each on a fresh system prepared in the same state,
+and it does not matter whether each of them is ideal.
 
 ### The degenerate case
 
