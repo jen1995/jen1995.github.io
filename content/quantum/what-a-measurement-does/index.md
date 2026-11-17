@@ -195,8 +195,9 @@ Put together:
 > $|c_i|^2$; and a new state, the definite state $|a_i\rangle$ of that
 > eigenvalue.
 
-The rule applies an operator to the state, but not $\hat A$. This does
-not contradict the
+The new state in the rule is obtained by applying an operator to the
+old one, the projector $\hat P_i$, but not $\hat A$. This does not
+contradict the
 [first section](#applying-the-operator-of-an-observable-is-not-measuring),
 which showed on the spin that $\sigma_z|r\rangle$ is not the state after
 a measurement. What a measurement applies is a projector, not the
