@@ -313,11 +313,9 @@ measurements**. They are described by a set of *measurement operators*
 $\hat M_m$, one for each outcome, which need not be projectors. When
 only the probabilities of the outcomes matter, the description reduces
 to a [POVM](https://en.wikipedia.org/wiki/POVM), a *positive
-operator-valued measure*. This road does not need them. Nielsen and
-Chuang give the general postulate in §2.2.3 and POVMs in §2.2.6, and
-their Box 2.5 discusses exactly this situation: a photon destroyed by
-the measurement of its position, so that the measurement cannot be
-repeated.
+operator-valued measure*. This road does not need them; they are
+described in [Nielsen and Chuang](#references), together with this very
+example of a photon that cannot be measured twice.
 
 The numbers and their probabilities still hold, because they come from
 the Born rule, which was derived from averages. An average comes from
